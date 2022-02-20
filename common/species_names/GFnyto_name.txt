@@ -1,0 +1,20 @@
+﻿nyto= {
+		nyto={
+		language = "l_simp_chinese"
+		name = "涅托"
+		plural = "异构体"
+		home_planet = "父亲"
+		home_system = "余烬黯然"
+		name_list = "GFNYTO01"
+		}
+}
+eild= {
+	eild={
+	language = "l_simp_chinese"
+	name = "广域性坍缩辐射感染者"
+	plural = "广域性坍缩辐射感染者"
+	home_planet = "父亲"
+	home_system = "余烬黯然"
+	name_list = "GFNYTO02"
+	}
+}

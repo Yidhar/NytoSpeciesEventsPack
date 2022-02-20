@@ -1,0 +1,11 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_evt_GFnyto_lost_contact"
+		texturefile = "gfx/event_pictures/evt_GFnyto_lost_contact.dds"
+		alwaystransparent = yes
+	}
+	sprite = {
+		name = "pc_GFnyto_portal_star.dds"
+		textureFile = "gfx/portraits/environments/pc_GFnyto_portal_star.dds"
+	}
+}

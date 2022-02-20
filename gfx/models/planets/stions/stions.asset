@@ -1,0 +1,4 @@
+entity = {
+	name = "stions_entity"
+	pdxmesh = "stions_mesh"
+}

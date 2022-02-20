@@ -1,0 +1,87 @@
+#能量
+weapon_component_template = {
+	key = "tech_GF_nyto_mobile_city_energy_S"
+	size = small
+	icon = "GFX_ship_part_GFnyto_mobile_city_energy"
+	icon_frame = 1
+	power = -75
+	modifier = {ship_hull_add = 300}	
+	component_set = "tech_GF_nyto_mobile_city_energy"
+	damage = {
+		min = 0
+		max = 0
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 300
+			GF_nyto_collapse_liquid=1
+		}		
+		upkeep = {
+			energy = 1
+			consumer_goods = 1
+			GF_nyto_collapse_liquid=0.03
+		}
+		produces = {energy = 4}
+	}
+	prerequisites = { "tech_GF_nyto_mobile_city_1" }
+	size_restriction = { GFnyto_mobile_city }
+}
+#矿石
+weapon_component_template = {
+	key = "tech_GF_nyto_mobile_city_minerals_S"
+	size = small
+	icon = "GFX_ship_part_GFnyto_mobile_city_minerals"
+	icon_frame = 1
+	power = -75
+	modifier = {ship_hull_add = 300}	
+	component_set = "tech_GF_nyto_mobile_city_minerals"
+	damage = {
+		min = 0
+		max = 0
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 300
+			GF_nyto_collapse_liquid=1
+		}		
+		upkeep = {
+			energy = 1
+			consumer_goods = 1
+			GF_nyto_collapse_liquid=0.03
+		}
+		produces = {minerals = 4}
+	}
+	prerequisites = { "tech_GF_nyto_mobile_city_1" }
+	size_restriction = { GFnyto_mobile_city }
+}
+#食物
+weapon_component_template = {
+	key = "tech_GF_nyto_mobile_city_food_S"
+	size = small
+	icon = "GFX_ship_part_GFnyto_mobile_city_food"
+	icon_frame = 1
+	power = -75
+	modifier = {ship_hull_add = 300}	
+	component_set = "tech_GF_nyto_mobile_city_food"
+	damage = {
+		min = 0
+		max = 0
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 300
+			GF_nyto_collapse_liquid=1
+		}		
+		upkeep = {
+			energy = 1
+			consumer_goods = 1
+			GF_nyto_collapse_liquid=0.03
+		}
+		produces = {food = 6}
+	}
+	prerequisites = { "tech_GF_nyto_mobile_city_1" }
+	size_restriction = { GFnyto_mobile_city }
+}

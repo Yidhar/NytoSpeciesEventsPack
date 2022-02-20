@@ -1,0 +1,180 @@
+#90wish，建筑、职业、事件
+civic_GF_nyto_90wish = {
+	icon = "gfx/interface/icons/governments/civics/GF_nyto_90wish.dds"
+	potential = {
+		authority = {
+			value = auth_GF_paradeus
+		}
+	}
+	#	possible = {
+	#		species = {value=nyto}
+	#		ethics = {value=ethic_authoritarian}
+	#	}
+	possible = {
+		species = {
+			value = nyto
+		}
+		#		ethics = {value = ethic_fanatic_authoritarian}
+	}
+	modifier = {
+		all_technology_research_speed = 0.2
+		country_trade_fee = -0.2
+	}
+	modification = yes
+	random_weight = {
+		base = 5
+	}
+}
+
+#相位技师，建筑、职业、事件
+civic_GF_nyto_phase_technician = {
+	icon = "gfx/interface/icons/governments/civics/GF_nyto_phase_technician.dds"
+	potential = {
+		authority = {
+			value = auth_GF_paradeus
+		}
+	}
+	possible = {
+		species = {
+			value = nyto
+		}
+		civics = {
+			value = civic_GF_nyto_90wish
+		}
+	}
+	modifier = {
+		country_megastructure_build_cap_add = 1
+	}
+	modification = yes
+	random_weight = {
+		base = 5
+	}
+}
+
+#星河远征，建筑、职业、事件
+civic_GF_nyto_forward_base = {
+	icon = "gfx/interface/icons/governments/civics/GF_nyto_forward_base.dds"
+	potential = {
+		authority = {
+			value = auth_GF_paradeus
+		}
+	}
+	modification = no
+	possible = {
+		species_class = {
+			value = nyto
+		}
+		civics = {
+			NOT = {
+				value = civic_GF_nyoto_armor_train
+			}			
+		}
+		ethics = {
+			OR = {
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+		}
+	}
+	modifier = {
+		colony_start_num_pops_add = 1
+		pc_GF_nyto_embers_gloomy_habitability = -0.1
+	}
+	modification = yes
+	random_weight = {
+		base = 5
+	}
+}
+
+#特种作战指挥部，建筑、职业、事件
+civic_GF_nyto_special_operations_command = {
+	icon = "gfx/interface/icons/governments/civics/GF_nyto_Special_operations_Command.dds"
+	potential = {
+		authority = {
+			value = auth_GF_paradeus
+		}
+	}
+	modification = no
+	possible = {
+		species = {
+			value = nyto
+		}
+	}
+	modifier = {
+		intel_decryption_add = 10
+		envoys_add = 1
+	}
+	modification = yes
+	random_weight = {
+		base = 5
+	}
+}
+
+#科技牧师，建筑、职业、事件
+civic_GF_nyto_technology_minister = {
+	icon = "gfx/interface/icons/governments/civics/GF_nyto_technology_minister.dds"
+	potential = {
+		authority = {
+			value = auth_GF_paradeus
+		}
+	}
+	possible = {
+		species = {
+			value = nyto
+		}
+		civics = {
+			value = civic_GF_nyto_90wish
+		}
+	}
+	modifier = {
+		num_tech_alternatives_add = 1
+	}
+	modification = yes
+	random_weight = {
+		base = 5
+	}
+}
+
+#铁道纵横
+civic_GF_nyoto_armor_train={
+	icon = "gfx/interface/icons/governments/civics/civic_GF_nyoto_armor_train.dds"
+	potential = {
+		authority = {
+			value = auth_GF_paradeus
+		}
+	}
+	possible = {
+		civics = {
+			NOT = {
+				value = civic_GF_nyto_forward_base
+			}
+		}
+	}
+	modifier = {
+		planet_army_build_time_mult = -0.05
+		pop_defense_armies_add = 1
+		planet_pops_organics_upkeep_mult = -0.05
+	}
+	random_weight = {
+		base = 5
+	}
+	modification = no
+}
+
+#昙花共生
+civic_Gf_nyto_tanhua_pluse ={
+	potential = {
+		authority = {
+			value = auth_GF_paradeus
+		}
+	}
+	
+	modifier = {
+		leader_age = -20
+	}
+
+	random_weight = {
+		base = 5
+	}
+	modification = no
+}

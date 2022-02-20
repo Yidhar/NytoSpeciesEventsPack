@@ -1,0 +1,162 @@
+#成立遗迹署
+special_project = {
+	key = "GF_NYTO_PARADEUS_COLONY_1"
+	event_chain = "GFnyto_paradeus_pioneer_chain"
+	cost = 2000
+	tech_department = society_technology
+	abort_trigger = {
+		has_resource = {
+			type = energy
+			amount >= 1000
+		}
+	}
+	picture = GFX_evt_nyto_unknown_civilization_202055_1_1
+	event_scope = planet_event
+	on_start = {
+		add_resource = {
+			energy = -1000
+		}
+	}
+	on_success = {		
+		planet_event = {
+			id = gfnytorelics.1
+		}
+	}
+	on_fail = {
+	}
+}
+
+#搜索科学家
+special_project = {
+	key = "GF_NYTO_PARADEUS_COLONY_2"
+	event_chain = "GFnyto_paradeus_pioneer_chain"
+	cost = 10000
+	tech_department = physics_technology
+	picture = GFX_evt_nyto_unknown_civilization_202055_2_1
+	event_scope = planet_event
+	on_success = {
+		planet_event = {
+			id = gfnytorelics.2
+		}
+	}
+	on_fail = {
+	}
+}
+
+#清理遗迹群
+special_project = {
+	key = "GF_NYTO_PARADEUS_COLONY_3"
+	event_chain = "GFnyto_paradeus_pioneer_chain"
+	cost = 10000
+	tech_department = engineering_technology
+	picture = GFX_evt_nyto_unknown_civilization_202055_3_1
+	event_scope = planet_event
+	on_success = {
+		planet_event = {
+			id = gfnytorelics.3
+		}
+	}
+	on_fail = {
+	}
+}
+
+#基因链
+special_project = {
+	key = "GF_NYTO_PARADEUS_COLONY_4"
+	event_chain = "GFnyto_paradeus_pioneer_chain"
+	cost = 10000
+	tech_department = society_technology
+	picture = GFX_evt_nyto_unknown_civilization_202055_4_1
+	event_scope = planet_event
+	on_success = {
+		planet_event = {
+			id = gfnytorelics.4
+		}
+	}
+	on_fail = {
+	}
+}
+
+#清理遗迹群
+special_project = {
+	key = "GF_NYTO_PARADEUS_COLONY_5"
+	event_chain = "GFnyto_paradeus_pioneer_chain"
+	cost = 10000
+	tech_department = engineering_technology
+	picture = GFX_evt_nyto_unknown_civilization_202055_5_1
+	event_scope = planet_event
+	on_success = {
+		planet_event = {
+			id = gfnytorelics.5
+		}
+	}
+	on_fail = {
+	}
+}
+
+#踏入锡安
+special_project = {
+	key = "GF_NYTO_PARADEUS_COLONY_6"
+	event_chain = "GFnyto_paradeus_pioneer_chain"
+	days_to_research = 360
+	picture = GFX_evt_nyto_unknown_civilization_202055_6_1
+	event_scope = planet_event
+	on_success = {
+		planet_event = {
+			id = gfnytorelics.6
+		}
+	}
+	on_fail = {
+	}
+}
+
+#改进穿梭引擎1
+#GF_NYTO_PARADEUS_shuttle_engine_1
+special_project = {
+	key = "GF_NYTO_PARADEUS_shuttle_engine_1"
+	cost = 10000
+	tech_department = physics_technology
+	picture = GFX_evt_nyto_shuttle_engine
+	event_scope = ship_event
+	on_success = {
+		owner = {
+			set_country_flag = GF_NYTO_PARADEUS_shuttle_engine_1
+		}
+	}
+	on_fail = {
+	}
+}
+
+#改进穿梭引擎2
+#GF_NYTO_PARADEUS_shuttle_engine_2
+special_project = {
+	key = "GF_NYTO_PARADEUS_shuttle_engine_2"
+	cost = 10000
+	tech_department = physics_technology
+	picture = GFX_evt_nyto_shuttle_engine
+	event_scope = ship_event
+	on_success = {
+		owner = {
+			set_country_flag = GF_NYTO_PARADEUS_shuttle_engine_2
+		}
+	}
+	on_fail = {
+	}
+}
+
+#改进穿梭引擎3
+#GF_NYTO_PARADEUS_shuttle_engine_3
+special_project = {
+	key = "GF_NYTO_PARADEUS_shuttle_engine_3"
+	cost = 10000
+	tech_department = physics_technology
+	picture = GFX_evt_nyto_shuttle_engine
+	event_scope = ship_event
+	on_success = {
+		owner = {
+			set_country_flag = GF_NYTO_PARADEUS_shuttle_engine_3
+		}
+	}
+	on_fail = {
+	}
+}

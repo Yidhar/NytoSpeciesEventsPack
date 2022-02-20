@@ -1,0 +1,3 @@
+NGameplay ={
+	PLANET_COMBAT_WIDTH_FROM_SIZE			= 1 # Extra combat width per tile
+}

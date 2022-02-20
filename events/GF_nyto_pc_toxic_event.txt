@@ -1,0 +1,71 @@
+namespace = GFnytopctoxic
+
+#区划选择器
+planet_event = {
+	id = GFnytopctoxic.20
+	title = GFnytopctoxic.20.name
+	desc = GFnytopctoxic.20.desc
+	picture = GFX_evt_GFnyto_find_close_ruin_project
+	show_sound = relic_activation_cybrex_war_forge
+	location = root
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			remove_district = district_GF_nyto_pc_toxic_underground_industrial_area
+			remove_district = district_GF_nyto_pc_toxic_underground_research_institute
+			remove_district = district_GF_nyto_pc_toxic_underground_shelters
+		}
+	}
+	#民用工业区划
+	option = {
+		name = GFnytopctoxic.20.d
+		set_planet_flag = GFnyto_district_consumer_good
+		add_district = district_GF_nyto_pc_toxic_consumer_good
+		add_district = district_GF_nyto_pc_toxic_consumer_good
+	}
+	#军用工业区划
+	option = {
+		name = GFnytopctoxic.20.e
+		set_planet_flag = GFnyto_district_alloy
+		add_district = district_GF_nyto_pc_toxic_alloy
+		add_district = district_GF_nyto_pc_toxic_alloy
+	}
+	#战略资源精炼区划
+	option = {
+		name = GFnytopctoxic.20.f
+		set_planet_flag = GFnyto_district_refine
+		add_district = district_GF_nyto_pc_toxic_refine
+		add_district = district_GF_nyto_pc_toxic_refine
+	}
+	#科学研究区划
+	option = {
+		name = GFnytopctoxic.20.g
+		set_planet_flag = GFnyto_district_science
+		add_district = district_GF_nyto_pc_toxic_science
+		add_district = district_GF_nyto_pc_toxic_science
+	}
+	#行政管理区划
+	option = {
+		name = GFnytopctoxic.20.h
+		set_planet_flag = GFnyto_district_administration
+		add_district = district_GF_nyto_pc_toxic_administration
+		add_district = district_GF_nyto_pc_toxic_administration
+	}
+	#休闲娱乐区划
+	option = {
+		name = GFnytopctoxic.20.i
+		set_planet_flag = GFnyto_district_leisure
+		add_district = district_GF_nyto_pc_toxic_leisure
+		add_district = district_GF_nyto_pc_toxic_leisure
+	}
+	#商业贸易区划
+	option = {
+		name = GFnytopctoxic.20.j
+		set_planet_flag = GFnyto_district_trade
+		add_district = district_GF_nyto_pc_toxic_trade
+		add_district = district_GF_nyto_pc_toxic_trade
+	}
+}
+
+
+#星系摧毁事件

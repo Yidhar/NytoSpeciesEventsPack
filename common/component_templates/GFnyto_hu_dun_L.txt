@@ -1,0 +1,242 @@
+#L
+#LV1
+utility_component_template = {
+	key = "tech_GFnyto_force_shield_L_1"
+	size = large
+	icon = "GFX_ship_part_GFnyto_force_shield1"
+	icon_frame = 1
+	power = -260
+	modifier = {
+		ship_shield_add = 4380
+	}
+	component_set = "tech_GFnyto_force_shield_1"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 70
+			GF_nyto_collapse_liquid = 7
+		}
+		upkeep = {
+			GF_nyto_collapse_liquid = 0.128
+		}
+	}
+	prerequisites = {
+		"tech_GFnyto_force_shield1"
+	}
+	upgrades_to = tech_GFnyto_force_shield_L_2
+}
+
+#LV2
+utility_component_template = {
+	key = "tech_GFnyto_force_shield_L_2"
+	size = large
+	icon = "GFX_ship_part_GFnyto_force_shield2"
+	icon_frame = 1
+	power = -340
+	modifier = {
+		ship_shield_add = 6010
+	}
+	component_set = "tech_GFnyto_force_shield_2"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 96
+			GF_nyto_collapse_liquid = 9.6
+		}
+		upkeep = {
+			GF_nyto_collapse_liquid = 0.188
+		}
+	}
+	prerequisites = {
+		"tech_GFnyto_force_shield2"
+	}
+	upgrades_to = tech_GFnyto_force_shield_L_3
+}
+
+#LV3
+utility_component_template = {
+	key = "tech_GFnyto_force_shield_L_3"
+	size = large
+	icon = "GFX_ship_part_GFnyto_force_shield3"
+	icon_frame = 1
+	power = -420
+	modifier = {
+		ship_shield_add = 8760
+	}
+	component_set = "tech_GFnyto_force_shield_3"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 122
+			GF_nyto_collapse_liquid = 12.2
+		}
+		upkeep = {
+			GF_nyto_collapse_liquid = 0.264
+		}
+	}
+	prerequisites = {
+		"tech_GFnyto_force_shield3"
+	}
+}
+
+#M
+#LV1
+utility_component_template = {
+	key = "tech_GFnyto_force_shield_M_1"
+	size = medium
+	icon = "GFX_ship_part_GFnyto_force_shield1"
+	icon_frame = 1
+	power = -130
+	modifier = {
+		ship_shield_add = 1575
+	}
+	component_set = "tech_GFnyto_force_shield_1"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 38
+			GF_nyto_collapse_liquid = 3.8
+		}
+		upkeep = {
+			GF_nyto_collapse_liquid = 0.076
+		}
+	}
+	prerequisites = {
+		"tech_GFnyto_force_shield1"
+	}
+	upgrades_to = tech_GFnyto_force_shield_M_2
+}
+
+#LV2
+utility_component_template = {
+	key = "tech_GFnyto_force_shield_M_2"
+	size = medium
+	icon = "GFX_ship_part_GFnyto_force_shield2"
+	icon_frame = 1
+	power = -170
+	modifier = {
+		ship_shield_add = 4825
+	}
+	component_set = "tech_GFnyto_force_shield_2"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 62
+			GF_nyto_collapse_liquid = 6.2
+		}
+		upkeep = {
+			GF_nyto_collapse_liquid = 0.124
+		}
+	}
+	prerequisites = {
+		"tech_GFnyto_force_shield2"
+	}
+	upgrades_to = tech_GFnyto_force_shield_M_3
+}
+
+#LV3
+utility_component_template = {
+	key = "tech_GFnyto_force_shield_M_3"
+	size = medium
+	icon = "GFX_ship_part_GFnyto_force_shield3"
+	icon_frame = 1
+	power = -210
+	modifier = {
+		ship_shield_add = 6115
+	}
+	component_set = "tech_GFnyto_force_shield_3"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 94
+			GF_nyto_collapse_liquid = 9.4
+		}
+		upkeep = {
+			GF_nyto_collapse_liquid = 0.188
+		}
+	}
+	prerequisites = {
+		"tech_GFnyto_force_shield3"
+	}
+}
+
+#s
+#LV1
+utility_component_template = {
+	key = "tech_GFnyto_force_shield_S_1"
+	size = small
+	icon = "GFX_ship_part_GFnyto_force_shield1"
+	icon_frame = 1
+	power = -65
+	modifier = {
+		ship_shield_add = 330
+	}
+	component_set = "tech_GFnyto_force_shield_1"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 21
+			GF_nyto_collapse_liquid = 2.1
+		}
+		upkeep = {
+			GF_nyto_collapse_liquid = 0.042
+		}
+	}
+	prerequisites = {
+		"tech_GFnyto_force_shield1"
+	}
+	upgrades_to = tech_GFnyto_force_shield_S_2
+}
+
+#LV2
+utility_component_template = {
+	key = "tech_GFnyto_force_shield_S_2"
+	size = small
+	icon = "GFX_ship_part_GFnyto_force_shield2"
+	icon_frame = 1
+	power = -85
+	modifier = {
+		ship_shield_add = 635
+	}
+	component_set = "tech_GFnyto_force_shield_2"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 34
+			GF_nyto_collapse_liquid = 3.4
+		}
+		upkeep = {
+			GF_nyto_collapse_liquid = 0.068
+		}
+	}
+	prerequisites = {
+		"tech_GFnyto_force_shield2"
+	}
+	upgrades_to = tech_GFnyto_force_shield_S_3
+}
+
+#LV3
+utility_component_template = {
+	key = "tech_GFnyto_force_shield_S_3"
+	size = small
+	icon = "GFX_ship_part_GFnyto_force_shield3"
+	icon_frame = 1
+	power = -105
+	modifier = {
+		ship_shield_add = 1460
+	}
+	component_set = "tech_GFnyto_force_shield_3"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 51
+			GF_nyto_collapse_liquid = 5.1
+		}
+		upkeep = {
+			GF_nyto_collapse_liquid = 0.102
+		}
+	}
+	prerequisites = {
+		"tech_GFnyto_force_shield3"
+	}
+}

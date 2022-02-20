@@ -1,0 +1,7 @@
+objectTypes = {
+	pdxmesh = {
+		name = "SANGVIS_FERRI_flag_ship_mesh"
+		file = "gfx/models/ships/flag_ship/Archon_destroyer.mesh"
+		scale = 1.0
+	}
+}

@@ -1,0 +1,225 @@
+#狡猾飞弹 
+#L
+weapon_component_template = {
+	key = "GF_Nyto_missile_l_weapon"
+	size = large
+	type = missile
+	icon = "GFX_ship_part_GFNyto_missile_weapon"
+	icon_frame = 1
+	power = -100
+	valid_for_country = {
+		has_edict = GFnyto_rbq
+	}	
+	component_set = "GF_Nyto_missile_weapon"
+	projectile_gfx = "large_missile"
+	tags = {
+		weapon_type_kinetic
+        weapon_type_explosive
+	}
+	ai_tags = {
+		weapon_role_anti_armor
+	}
+	damage = {
+		min = -99999999
+		max = -999999999
+	}
+	windup = {
+		min = -999
+		max = -999
+	}	
+	total_fire_time = 0
+	missile_speed = 20
+	missile_evasion = 1
+	missile_health = 300
+	missile_armor = 300
+	missile_shield = 100
+	missile_retarget_range = 200
+	range = 120
+	accuracy = 1
+	tracking = 0.1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 120
+			GF_nyto_collapse_liquid = 10
+		}
+		upkeep = {
+			alloys = 0.5
+			GF_nyto_collapse_liquid = 0.1
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+	ship_modifier = {
+		ship_hull_add = 5000
+	}
+}
+
+#m
+weapon_component_template = {
+	key = "GF_Nyto_missile_m_weapon"
+	size = medium
+	type = missile
+	icon = "GFX_ship_part_GFNyto_missile_weapon"
+	icon_frame = 1
+	power = -100
+	valid_for_country = {
+		has_edict = GFnyto_rbq
+	}	
+	component_set = "GF_Nyto_missile_weapon"
+	projectile_gfx = "swarmer_missiles_02"
+	tags = {
+		weapon_type_kinetic
+        weapon_type_explosive
+	}
+	ai_tags = {
+		weapon_role_anti_armor
+	}
+	damage = {
+		min = -99999999
+		max = -999999999
+	}
+	windup = {
+		min = -999
+		max = -999
+	}
+	
+	total_fire_time = 0
+	missile_speed = 20
+	missile_evasion = 1
+	missile_health = 300
+	missile_armor = 300
+	missile_shield = 100
+	missile_retarget_range = 200
+	range = 500
+	accuracy = 1
+	tracking = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 120
+			GF_nyto_collapse_liquid = 10
+		}
+		upkeep = {
+			alloys = 0.5
+			GF_nyto_collapse_liquid = 0.1
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+	ship_modifier = {
+		ship_hull_add = 2500
+	}
+}
+
+#s
+weapon_component_template = {
+	key = "GF_Nyto_missile_s_weapon"
+	size = small
+	type = missile
+	icon = "GFX_ship_part_GFNyto_missile_weapon"
+	icon_frame = 1
+	power = -100
+	valid_for_country = {
+		has_edict = GFnyto_rbq
+	}	
+	component_set = "GF_Nyto_missile_weapon"
+	projectile_gfx = "swarmer_missiles_02"
+	tags = {
+		weapon_type_kinetic
+        weapon_type_explosive
+	}
+	ai_tags = {
+		weapon_role_anti_armor
+	}
+	damage = {
+		min = -99999999
+		max = -999999999
+	}
+	windup = {
+		min = -999
+		max = -999
+	}
+	
+	total_fire_time = 0
+	missile_speed = 30
+	missile_evasion = 1
+	missile_health = 300
+	missile_armor = 300
+	missile_shield = 100
+	missile_retarget_range = 200
+	range = 500
+	accuracy = 1
+	tracking = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 120
+			GF_nyto_collapse_liquid = 10
+		}
+		upkeep = {
+			alloys = 0.5
+			GF_nyto_collapse_liquid = 0.1
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+	ship_modifier = {
+		ship_hull_add = 1000
+	}
+}
+
+#弱保软
+weapon_component_template = {
+	key = "GF_Nyto_missile_x_weapon"
+	size = extra_large
+	type = missile
+	icon = "GFX_ship_part_GFNyto_missile_weapon"
+	icon_frame = 1
+	power = -114514
+	prerequisites = {"tech_GFnyto_RBR"}
+	component_set = "GF_Nyto_missile_x_weapon"
+	projectile_gfx = "large_torpedo_03"
+	tags = {
+		weapon_type_kinetic
+        weapon_type_explosive
+	}
+	ai_tags = {
+		weapon_role_anti_armor
+	}
+	damage = {
+		min = -999999999999999999
+		max = 999999999999999999
+	}
+	windup = {
+		min = -999999999999999999
+		max = -999999999999999999
+	}
+	total_fire_time = 0
+	missile_speed = 30
+	missile_evasion = 1
+	missile_health = 1000
+	missile_armor = 3000
+	missile_shield = 3000
+	missile_retarget_range = 200
+	range = 500
+	accuracy = 1
+	tracking = 0.1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1145141
+			GF_nyto_collapse_liquid = 191981
+		}
+		upkeep = {
+			alloys = 0.5
+			GF_nyto_collapse_liquid = 0.1
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}

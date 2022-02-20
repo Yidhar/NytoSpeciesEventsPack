@@ -1,0 +1,16 @@
+objectTypes = {
+	pdxmesh = {
+		name = "shiledship_mesh"
+		file = "gfx/models/ships/shiledship/shiledship.mesh"
+		scale = 1
+
+		meshsettings = {
+			name = "ScifiTerraformerHull_ScifiTerraformerBlue_0Shape"
+			index = 0
+			texture_diffuse = "ScifiTerraformerBlueAlbedo.dds"
+			texture_normal = "ScifiTerraformerNormal.dds"
+			texture_specular = "ScifiTerraformerPBRSpecular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

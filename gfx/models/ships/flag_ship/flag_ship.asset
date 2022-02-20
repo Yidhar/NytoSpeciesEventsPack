@@ -1,0 +1,43 @@
+entity = {
+	name = "SANGVIS_FERRI_flag_ship_entity"
+	pdxmesh = "SANGVIS_FERRI_flag_ship_mesh"
+	scale = 1.0
+
+	default_state = "idle"
+
+	state = { name = "idle"
+	start_event = {trigger_once = yes sound = { soundeffect = "amb_battleship_hum" } }
+	start_event = { trigger_once = yes sound = { soundeffect = "amb_battleship_bass" } }
+	}
+	state = {
+	name = "moving"
+	event = { trigger_once = yes sound = { soundeffect = "moving_out_battleship" } }
+	}
+	state = {
+		name = "death"
+		event={ time = 0 node = "target_locator_1" particle = "avian_01_large_ship_explosion_particle" }
+		event={ time = 0 node = "target_locator_2" particle = "avian_01_large_ship_explosion_particle" }
+		event={ time = 0 node = "target_locator_3" particle = "avian_01_large_ship_explosion_particle" }
+		event={ time = 0 node = "target_locator_4" particle = "avian_01_large_ship_explosion_particle" }
+		event={ time = 0 node = "target_locator_5" particle = "avian_01_large_ship_explosion_particle" }
+		event={ time = 0 node = "target_locator_6" particle = "avian_01_large_ship_explosion_particle" }
+		event={ time = 0 node = "target_locator_7" particle = "avian_01_large_ship_explosion_particle" }
+		event={ time = 0 node = "target_locator_8" particle = "ship_burn_particle" }
+		event={ time = 1.5 node = "L01" particle = "avian_01_large_ship_explosion_particle" }
+		event={ time = 1.5 node = "L01" particle = "ship_burn_particle" }
+		event={ time = 0.75 node = "L02" particle = "avian_01_large_ship_explosion_particle" }
+		event={ time = 0.75 node = "L02" particle = "ship_burn_particle" }
+		event={ time = 1.25 node = "L03" particle = "avian_01_large_ship_explosion_particle" }
+		event={ time = 1.25 node = "L03" particle = "ship_burn_particle" }
+		event={ time = 1.75 node = "L04" particle = "avian_01_large_ship_explosion_particle" }
+		event={ time = 1.75 node = "L04" particle = "ship_burn_particle" }
+		event={ time = 1.5 node = "L05" particle = "avian_01_large_ship_explosion_particle" }
+		event={ time = 1.5 node = "L05" particle = "ship_burn_particle" }
+		event={ time = 0.75 node = "L06" particle = "avian_01_large_ship_explosion_particle" }
+		event={ time = 0.75 node = "L06" particle = "ship_burn_particle" }
+	}
+	game_data = {
+		size = 50
+	}
+
+}

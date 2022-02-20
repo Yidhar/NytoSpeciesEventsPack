@@ -1,0 +1,28 @@
+﻿l_simp_chinese:
+#################################
+GFnyto_defense_eild_attack_project:0 "整修古代隔离墙"
+GFnyto_defense_eild_attack_project_DESC:0 "虽然这些高大厚重的墙壁能够阻挡ELID-infected侵袭我们在地表的城市，但毕竟也是距今600多年前的人类文明留下的遗产，有必要进行一次大型修缮工作来让我们重新获得对ELID作战的优势。"
+GFnyto_find_close_ruin_project:0 "寻找关闭遗迹的方法"
+GFnyto_find_close_ruin_project_DESC:0 "通过对新发现的小型遗迹进行研究或许能找到关停其他遗迹的方法。"
+GFnyto_close_ruin_project:0 "关停遗迹"
+GFnyto_close_ruin_project_DESC:0 "派遣突击小队深入原爆点关闭正在泄露坍缩液的遗迹。"
+
+study_GF_nyto_eild_army_project:0 "ELID感染者脑电波研究"
+study_GF_nyto_eild_army_project_DESC:0 "根据ELID感染者研究基地最新的发现，ELID-infected的高攻击性可能与它们独特的脑电波有关。通过研究ELID-infected脑电波，或许能够找到安抚ELID-infected的方法。"
+defense_colony_GF_nyto_eild_attack_project:0 "清理殖民地污染源"
+defense_colony_GF_nyto_eild_attack_project_DESC:0 "由于我们使用了浓度更高的坍缩液进行轰炸，清理起殖民地的污染源会更加地麻烦。"
+
+GF_NYTO_PARADEUS_COLONY_1:0 "成立遗迹部门"
+GF_NYTO_PARADEUS_COLONY_1_DESC:0 "人类纪元留下的遗迹群资料是宝贵的，我们确实应当考虑科学家们的提议。拨款成立一个独立的负责遗迹考古发掘工作的部门。为了探寻自身与前文明的秘密。也为了未来不在发生通古斯和北兰岛一样的事件。为了致敬前人类文明最伟大的遗迹部门，我们觉得将我们的新部门命名为 “遗迹署”，向先驱者致敬。"
+
+GF_NYTO_PARADEUS_COLONY_2:0 "重返诺德豪森"
+GF_NYTO_PARADEUS_COLONY_2_DESC:0 "得益于我们的科学家在伊热夫斯克地下的研究解读，我们的工程师认为也许找到了遗迹信号的关键线索。我们的团队回到第一遗迹-诺德豪森遗迹中，通过对模拟系统以及所发现的原先论文《遗迹量子引力机制下的自动控制原理》的解读。我们的工程师们认为遗迹的信号是需要外界的输入的，也许在我们监听遗迹的同时，遗迹也在监听我们也说不定。"
+
+GF_NYTO_PARADEUS_COLONY_3:0 "结构解密"
+GF_NYTO_PARADEUS_COLONY_3_DESC:0 "OKB-117号遗迹残留的数据晶体存储遗迹文明部分建筑的原子列阵信息，通过解密我们将掌握遗迹建筑的核心技术。"
+GF_NYTO_PARADEUS_COLONY_4:0 "基因链"
+GF_NYTO_PARADEUS_COLONY_4_DESC:0 "人类纪元遗留的资料表明，完整基因链配对是激活遗迹的密钥。我们需要改善我们种族的基因链配对，提高遗迹亲和性。"
+GF_NYTO_PARADEUS_COLONY_5:0 "OGAS主机"
+GF_NYTO_PARADEUS_COLONY_5_DESC:0 "这是一项史无前例的工程，每个[Root.Owner.GetSpeciesNamePlural]都开始融入一个巨大的OGAS网络，这将带来一股无法想象的力量。"
+GF_NYTO_PARADEUS_COLONY_6:0 "踏入锡安"
+GF_NYTO_PARADEUS_COLONY_6_DESC:0 "锡安是一个维持着完全永恒状态的子宇宙，链接着任何时间、任何维度。它不仅是我们的故土，而且是我们永恒的归宿。现在，我们踏上回家的路了。"

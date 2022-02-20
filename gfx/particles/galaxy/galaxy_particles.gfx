@@ -1,0 +1,34 @@
+objectTypes = {
+	pdxparticle = {
+		name = "galaxy_particle"
+		type = "galaxy_particle"
+		scale = 5.0
+	}	
+	pdxparticle = {
+		name = "nyto_black_hole_particle"
+		type = "nyto_black_hole_file"
+		
+		scale = 3.0
+	}
+	pdxparticle = {
+		name = "GFnyto_generic_big_2_5_exhaust_circle_idle"
+		type = "generic_big_exhaust_idle_circle_file"
+		scale = 25
+	}
+	pdxparticle = {
+		name = "GFnyto_generic_big_3_exhaust_circle_moving"
+		type = "generic_big_exhaust_circle_moving_effect_file"
+		scale = 30
+	}
+	pdxparticle = {
+		name = "GFnyto_planet_shield_effect"
+		type = "planet_shield_effect"
+		
+		scale = 5
+	}
+	# pdxparticle = {
+	# 	name = "Alessia"
+	# 	type = "Alessia"		
+	# 	scale = 5
+	# }
+}

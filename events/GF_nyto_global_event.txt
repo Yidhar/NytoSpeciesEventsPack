@@ -1,0 +1,593 @@
+namespace = GFnyto_global
+#领袖招募1
+country_event = {
+	id = GFnyto_global.10
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		from = {
+			species = {
+				has_trait = trait_GF_nyto_ogas_agreement
+			}
+		}
+	}
+	immediate = {
+		from = {
+			if = {
+				limit = {
+					leader_class = admiral
+				}
+				add_trait = leader_admiral_trait_GF_nyto_ogas_agreement
+				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement
+				break = yes
+			}
+			if = {
+				limit = {
+					leader_class = general
+				}
+				add_trait = leader_general_trait_GF_nyto_ogas_agreement
+				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement
+				break = yes
+			}
+			if = {
+				limit = {
+					leader_class = governor
+				}
+				add_trait = leader_governor_trait_GF_nyto_ogas_agreement
+				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement
+				break = yes
+			}
+			if = {
+				limit = {
+					leader_class = scientist
+				}
+				add_trait = leader_scientist_trait_GF_nyto_ogas_agreement
+				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement
+				break = yes
+			}
+			if = {
+				limit = {
+					leader_class = ruler
+				}
+				add_trait = leader_trait_GF_nyto_ogas_agreement
+				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement
+				break = yes
+			}
+		}
+	}
+}
+
+#领袖招募1
+country_event = {
+	id = GFnyto_global.11
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		from = {
+			species = {
+				has_trait = trait_GF_nyto_ogas_agreement_plus
+			}
+		}
+	}
+	immediate = {
+		from = {
+			if = {
+				limit = {
+					leader_class = admiral
+				}
+				add_trait = leader_admiral_trait_GF_nyto_ogas_agreement_plus
+				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
+				break = yes
+			}
+			if = {
+				limit = {
+					leader_class = general
+				}
+				add_trait = leader_general_trait_GF_nyto_ogas_agreement_plus
+				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
+				break = yes
+			}
+			if = {
+				limit = {
+					leader_class = governor
+				}
+				add_trait = leader_governor_trait_GF_nyto_ogas_agreement_plus
+				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
+				break = yes
+			}
+			if = {
+				limit = {
+					leader_class = scientist
+				}
+				add_trait = leader_scientist_trait_GF_nyto_ogas_agreement_plus
+				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
+				break = yes
+			}
+			if = {
+				limit = {
+					leader_class = ruler
+				}
+				add_trait = leader_trait_GF_nyto_ogas_agreement_plus
+				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
+				break = yes
+			}
+		}
+	}
+}
+
+#领袖招募1
+country_event = {
+	id = GFnyto_global.12
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		from = {
+			species = {
+				has_trait = trait_GF_nyto_noussphere
+			}
+		}
+	}
+	immediate = {
+		from = {
+			if = {
+				limit = {
+					leader_class = admiral
+				}
+				add_trait = leader_admiral_trait_GF_nyto_noussphere
+				add_ruler_trait = leader_trait_GF_nyto_noussphere
+				break = yes
+			}
+			if = {
+				limit = {
+					leader_class = general
+				}
+				add_trait = leader_general_trait_GF_nyto_noussphere
+				add_ruler_trait = leader_trait_GF_nyto_noussphere
+				break = yes
+			}
+			if = {
+				limit = {
+					leader_class = governor
+				}
+				add_trait = leader_governor_trait_GF_nyto_noussphere
+				add_ruler_trait = leader_trait_GF_nyto_noussphere
+				break = yes
+			}
+			if = {
+				limit = {
+					leader_class = scientist
+				}
+				add_trait = leader_scientist_trait_GF_nyto_noussphere
+				add_ruler_trait = leader_trait_GF_nyto_noussphere
+				break = yes
+			}
+			if = {
+				limit = {
+					leader_class = ruler
+				}
+				add_trait = leader_trait_GF_nyto_noussphere
+				add_ruler_trait = leader_trait_GF_nyto_noussphere
+				break = yes
+			}
+		}
+	}
+}
+
+#认知灌注
+country_event = {
+	id = GFnyto_global.21
+	desc = GFnyto_global.21.desc
+	picture = GFX_evt_mining_station
+	is_triggered_only = yes
+	immediate = {
+		export_resource_income_to_variable = {
+			resource = GF_nyto_training_key
+			variable = has_training_key_num
+		}
+		random_owned_leader = {
+			limit = {
+				species = {
+					is_species_class = nyto
+				}
+				NOT = {
+					has_leader_flag = GFnyot_leader_select
+				}
+			}
+			set_leader_flag = GFnyot_leader_select
+			save_global_event_target_as = GFnyot_leader_select_1
+		}
+		random_owned_leader = {
+			limit = {
+				species = {
+					is_species_class = nyto
+				}
+				NOT = {
+					has_leader_flag = GFnyot_leader_select
+				}
+			}
+			set_leader_flag = GFnyot_leader_select
+			save_global_event_target_as = GFnyot_leader_select_2
+		}
+		random_owned_leader = {
+			limit = {
+				species = {
+					is_species_class = nyto
+				}
+				NOT = {
+					has_leader_flag = GFnyot_leader_select
+				}
+			}
+			set_leader_flag = GFnyot_leader_select
+			save_global_event_target_as = GFnyot_leader_select_3
+		}
+		random_owned_leader = {
+			limit = {
+				species = {
+					is_species_class = nyto
+				}
+				NOT = {
+					has_leader_flag = GFnyot_leader_select
+				}
+			}
+			set_leader_flag = GFnyot_leader_select
+			save_global_event_target_as = GFnyot_leader_select_4
+		}
+	}
+	option = {
+		name = GFnyto_global.2.1
+		trigger = {
+			exists = event_target:GFnyot_leader_select_1
+		}
+		every_owned_leader = {
+			remove_leader_flag = GFnyot_leader_select
+		}
+		event_target:GFnyot_leader_select_1 = {
+			leader_event = {
+				id = GFnyto_global.3
+			}
+		}
+	}
+	option = {
+		name = GFnyto_global.2.2
+		trigger = {
+			exists = event_target:GFnyot_leader_select_2
+		}
+		every_owned_leader = {
+			remove_leader_flag = GFnyot_leader_select
+		}
+		event_target:GFnyot_leader_select_2 = {
+			leader_event = {
+				id = GFnyto_global.3
+			}
+		}
+	}
+	option = {
+		name = GFnyto_global.2.3
+		trigger = {
+			exists = event_target:GFnyot_leader_select_3
+		}
+		every_owned_leader = {
+			remove_leader_flag = GFnyot_leader_select
+		}
+		event_target:GFnyot_leader_select_3 = {
+			leader_event = {
+				id = GFnyto_global.3
+			}
+		}
+	}
+	option = {
+		name = GFnyto_global.2.4
+		trigger = {
+			exists = event_target:GFnyot_leader_select_4
+		}
+		event_target:GFnyot_leader_select_4 = {
+			add_trait = leader_admiral_trait_GF_nyto_ogas_agreement_plus
+		}
+		every_owned_leader = {
+			remove_leader_flag = GFnyot_leader_select
+		}
+		event_target:GFnyot_leader_select_4 = {
+			leader_event = {
+				id = GFnyto_global.3
+			}
+		}
+	}
+	option = {
+		trigger = {
+			exists = event_target:GFnyot_leader_select_1
+			exists = event_target:GFnyot_leader_select_2
+			exists = event_target:GFnyot_leader_select_3
+			exists = event_target:GFnyot_leader_select_4
+		}
+		name = GFnyto_global.2.NEXT		#下一页刷新
+		clear_global_event_target = GFnyot_leader_select_1
+		clear_global_event_target = GFnyot_leader_select_2
+		clear_global_event_target = GFnyot_leader_select_3
+		clear_global_event_target = GFnyot_leader_select_4
+		country_event = {
+			id = GFnyto_global.21
+		}
+	}
+	option = {
+		name = GFnyto_global.2.exists
+		every_owned_leader = {
+			remove_leader_flag = GFnyot_leader_select
+		}
+		clear_global_event_target = GFnyot_leader_select_1
+		clear_global_event_target = GFnyot_leader_select_2
+		clear_global_event_target = GFnyot_leader_select_3
+		clear_global_event_target = GFnyot_leader_select_4
+	}
+}
+
+leader_event = {
+	id = GFnyto_global.3
+	desc = GFnyto_global.3_desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = owner
+		room = enclave_curator_room
+	}
+	option = {
+		name = GFnyto_global.3.a
+		allow = {
+			owner = {
+				has_resource = {
+					type = GF_nyto_training_key
+					amount >= 10
+				}
+			}
+		}
+		owner = {
+			add_resource = {
+				GF_nyto_training_key = -10
+			}
+		}
+		add_experience = 1000
+		leader_event = {
+			id = GFnyto_global.3
+		}
+	}
+	option = {
+		name = GFnyto_global.3.b
+		allow = {
+			owner = {
+				has_resource = {
+					type = GF_nyto_training_key
+					amount >= 50
+				}
+			}
+		}
+		owner = {
+			add_resource = {
+				GF_nyto_training_key = -50
+			}
+		}
+		add_experience = 5000
+		leader_event = {
+			id = GFnyto_global.3
+		}
+	}
+	option = {
+		name = GFnyto_global.3.c
+		allow = {
+			owner = {
+				has_resource = {
+					type = GF_nyto_training_key
+					amount >= 100
+				}
+			}
+		}
+		owner = {
+			add_resource = {
+				GF_nyto_training_key = -100
+			}
+		}
+		add_experience = 10000
+		leader_event = {
+			id = GFnyto_global.3
+		}
+	}
+	option = {
+		name = GFnyto_global.3.e
+		allow = {
+			owner = {
+				has_resource = {
+					type = GF_nyto_training_key
+					amount >= 200
+				}
+			}
+		}
+		owner = {
+			add_resource = {
+				GF_nyto_training_key = 200
+			}
+		}
+		add_experience = 20000
+		leader_event = {
+			id = GFnyto_global.3
+		}
+	}
+	option = {
+		name = GFnyto_global.3.d
+		break = yes
+	}
+}
+
+#替换地块
+planet_event = {
+	id = GFnyto_global.4
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		owner = {
+			has_authority = auth_GF_paradeus
+		}
+		owner_main_species = {
+			has_trait = trait_GFnyto_tanhua
+		}
+	}
+	immediate = {
+		add_deposit = d_GFnyto_tanhua
+	}
+}
+
+#年检通用延迟事件
+country_event = {
+	id = GFnyto_global.9999
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_authority = auth_GF_paradeus
+	}
+	immediate = {
+		if = {
+			limit = {
+				any_owned_planet = {
+					has_building = building_GFnyto_Elids
+					num_assigned_jobs = {
+						job = GFnyto_collapse_changer
+						value > 0
+					}
+				}
+			}
+			country_event = {
+				id = GFnyto_global.9
+				days = 25
+			}
+		}
+		if = {
+			limit = {
+				has_origin = origin_GF_nyto_the_last_light
+				NOT = {
+					has_country_flag = hide_GFnytoeild52
+				}
+			}
+			home_planet = {
+				planet_event = {
+					id = GFnytoeild.51
+					days = 64
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = hide_GFnytoeild52
+				has_origin = origin_GF_nyto_the_last_light
+			}
+			home_planet = {
+				planet_event = {
+					id = GFnytoeild.52
+					days = 64
+				}
+			}
+		}
+	}
+}
+
+#每次花期时 击杀一个昙花种植者
+planet_event = {
+	id = GFnyto_global.5
+	picture = GFX_evt_GFnyto_global.5
+	is_triggered_only = yes
+	hide_window = no
+	title = GFnyto_global.5
+	desc = GFnyto_global.5.desc
+	trigger = {
+		owner = {
+			has_civic = civic_Gf_nyto_tanhua_pluse
+		}
+		num_assigned_jobs = {
+			job = GFnyto_Epiphyllum_job
+			value > 0
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				num_assigned_jobs = {
+					job = GFnyto_Epiphyllum_job
+					value > 0
+				}
+			}
+			save_event_target_as = GFnyto_random_plante
+			random_owned_pop = {
+				limit = {
+					has_job = GFnyto_Epiphyllum_job
+				}
+				kill_pop = yes
+			}
+		}
+	}
+	option = {
+		name = "GFnyto_global.5a"
+	}
+	option = {
+		name = "GFnyto_global.5b"
+		custom_tooltip = GFnyto_global.5b.desc
+		owner = {
+			set_country_flag = GFnyto_global.5_hide
+		}
+	}
+}
+
+planet_event = {
+	id = GFnyto_global.6
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		owner = {
+			has_civic = civic_Gf_nyto_tanhua_pluse
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				num_assigned_jobs = {
+					job = GFnyto_Epiphyllum_job
+					value > 0
+				}
+			}
+			random_owned_pop = {
+				limit = {
+					has_job = GFnyto_Epiphyllum_job
+				}
+				kill_pop = yes
+			}
+		}
+	}
+}
+
+#每年击杀三个受洗者岗 转换成一个eild人口 延期 25d
+country_event = {
+	id = GFnyto_global.9
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		any_owned_planet = {
+			has_building = building_GFnyto_Elids
+			num_assigned_jobs = {
+				job = GFnyto_collapse_changer
+				value > 0
+			}
+		}
+	}
+	immediate = {
+		every_owned_planet = {
+			while = {
+				count = 3
+				random_owned_pop = {
+					limit = {
+						has_job = GFnyto_collapse_changer
+					}
+					kill_pop = yes
+				}
+			}
+			create_pop = {
+				species = event_target:GFnyto_ELID_infected
+				ethos = owner
+			}
+		}
+	}
+}

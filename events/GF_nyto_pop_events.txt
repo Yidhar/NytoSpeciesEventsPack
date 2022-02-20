@@ -1,0 +1,74 @@
+namespace = GFnytopop
+#生成EILD人口代码
+country_event = {
+	id = GFnytopop.1
+	hide_window = yes
+#	is_triggered_only = yes
+	trigger = {
+#		has_building = building_GFnyto_collapse_change_center
+		exists = owner
+		owner = {has_authority = auth_GF_paradeus}
+		NOT = {
+			owner = {has_ascension_perk = ap_GF_nyto_conquer_hell}
+		}
+#		num_assigned_jobs = {
+#			job = GFnyto_collapse_changer
+#			value >= 1
+#		}
+	}
+	mean_time_to_happen = {years = 1}
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				num_pops > 0
+				is_planet_class = pc_GF_nyto_devil_furnace
+				is_planet_class = pc_GF_nyto_embers_gloomy
+			}
+			create_species = {
+				name = "ELID-infected"
+				class = "LITHOID"
+				portrait = "GFnyto_eild"
+				traits = {trait =trait_GF_nyto_loyal_ELID_infected}
+				traits = {trait =trait_latent_psionic}
+				traits = {trait =trait_nerve_stapled}
+				effect = {save_event_target_as = GFnyto_ELID_infected}
+			}
+			create_pop = {species = last_created}
+			create_pop = {species = last_created}
+			create_pop = {species = last_created}
+			last_created_pop = { set_citizenship_type = { type = citizenship_limited } }
+		}
+#		planet_event = {id = GFnytopop.2}
+	}
+}
+planet_event = {
+	id = GFnytopop.2
+	hide_window = yes
+	is_triggered_only = yes
+#	mean_time_to_happen = {years = 1}
+	trigger = {
+		has_building = building_GFnyto_collapse_change_center
+		NOT = {
+			owner = {
+				has_ascension_perk = ap_GF_nyto_conquer_hell
+			}
+		}
+	}
+	immediate = {		
+		while = {
+			count = 1
+			random_owned_pop = {
+				limit = {
+					is_planet_class = pc_GF_nyto_embers_gloomy
+					is_planet_class = pc_GF_nyto_devil_furnace
+				}
+				root = {
+					create_pop = {
+						species = event_target:GFnyto_ELID_infected
+						ethos = root.owner
+					}
+				}
+			}
+		}
+	}
+}

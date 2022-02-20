@@ -1,0 +1,43 @@
+﻿l_simp_chinese:
+GFnyto_megastructure_collapse_reactor_01:0 "坍缩堆构架"
+GFnyto_megastructure_collapse_reactor_01_desc:0 "这座巨型空间站将整个行星包裹起来变成反应堆，支持着内部进行的剧烈坍缩-逆坍缩过程。"
+GFnyto_megastructure_collapse_reactor_01_DESC:0 "这座巨型空间站将整个行星包裹起来变成反应堆，支持着内部进行的剧烈坍缩-逆坍缩过程。"
+GFnyto_megastructure_collapse_reactor_02:0 "局部坍缩堆"
+GFnyto_megastructure_collapse_reactor_02_desc:0 "这座巨型空间站将整个行星包裹起来变成反应堆，支持着内部进行的剧烈坍缩-逆坍缩过程。"
+GFnyto_megastructure_collapse_reactor_02_DESC:0 "这座巨型空间站将整个行星包裹起来变成反应堆，支持着内部进行的剧烈坍缩-逆坍缩过程。"
+GFnyto_megastructure_collapse_reactor_03:0 "局部坍缩堆"
+GFnyto_megastructure_collapse_reactor_03_desc:0 "这座巨型空间站将整个行星包裹起来变成反应堆，支持着内部进行的剧烈坍缩-逆坍缩过程。"
+GFnyto_megastructure_collapse_reactor_03_DESC:0 "这座巨型空间站将整个行星包裹起来变成反应堆，支持着内部进行的剧烈坍缩-逆坍缩过程。"
+GFnyto_megastructure_collapse_reactor_04:0 "局部坍缩堆"
+GFnyto_megastructure_collapse_reactor_04_desc:0 "这座巨型空间站将整个行星包裹起来变成反应堆，支持着内部进行的剧烈坍缩-逆坍缩过程。"
+GFnyto_megastructure_collapse_reactor_04_DESC:0 "这座巨型空间站将整个行星包裹起来变成反应堆，支持着内部进行的剧烈坍缩-逆坍缩过程。"
+GFnyto_megastructure_collapse_reactor_05:0 "完全坍缩堆"
+GFnyto_megastructure_collapse_reactor_05_desc:0 "这座巨型空间站将整个行星包裹起来变成反应堆，支持着内部进行的剧烈坍缩-逆坍缩过程。"
+GFnyto_megastructure_collapse_reactor_05_DESC:0 "这座巨型空间站将整个行星包裹起来变成反应堆，支持着内部进行的剧烈坍缩-逆坍缩过程。"
+GFnyto_megastructure_collapse_reactor_ruined:0 "恒星塌缩器基址"
+GFnyto_megastructure_collapse_reactor_ruined_DESC:0 "此施工场地可以未来用于恒星级塌缩器的建造"
+GFnyto_megastructure_collapse_reactor_ruined_MEGASTRUCTURE_DETAILS:0 "这座巨型设施将对这个星系中质量最大的星体进行塌缩反应，来持续产出坍塌粒子"
+GFnyto_megastructure_collapse_reactor_restored:0 "恒星塌缩器"
+GFnyto_megastructure_collapse_reactor_restored_DESC:0 "这座巨型环状设施使用高能能量场环绕恒星，切断恒星内部物质的分子效应力，实时一场巨大的塌缩过程。"
+GFnytopctoxic.20.name:0 "春天唤醒!：生态重构[Root.GetName]"
+GFnytopctoxic.20.desc:0 "我们终于清理掉了地面宜居区的所有非宜居塌缩粒子浓度的地段，并对整个星球生态实施改造，我们无异于完成了一次星球重构
+计划，在清理了大量的坍塌粒子辐射源后整个星球的活力都在逐步恢复，部分漂浮在平流层的污染会在星球大气运动下逐渐消失。\n现在：选择您的废弃城市改建项目"
+
+
+
+
+GFnytopctoxic.20.a:0 "坍缩堆区划£energy£"
+GFnytopctoxic.20.b:0 "采矿区划£minerals£"
+GFnytopctoxic.20.c:0 "农业区划£food£"
+GFnytopctoxic.20.d:0 "民用工业区划£consumer_goods£"
+GFnytopctoxic.20.e:0 "军用工业区划£alloys£"
+GFnytopctoxic.20.f:0 "战略资源精炼区划£volatile_motes£、£exotic_gases£、£rare_crystals£"
+GFnytopctoxic.20.g:0 "科学研究区划£physics£、£society£、£engineering£"
+GFnytopctoxic.20.h:0 "行政管理区划£mod_country_admin_cap_add£"
+GFnytopctoxic.20.i:0 "休闲娱乐区划£unity£、£amenities£"
+GFnytopctoxic.20.j:0 "商业贸易区划£trade_value£"
+
+GFnytopctoxic.21.name:0 "§Y远古坍缩堆§!：已覆盖[Root.GetName]"
+GFnytopctoxic.21.desc:0 "这座远古巨型空间站将整个行星包裹起来变成反应堆，支持着内部进行的剧烈坍缩-逆坍缩过程。"
+GFnytopctoxic.21.a:0 "在废墟中崛起!"
+

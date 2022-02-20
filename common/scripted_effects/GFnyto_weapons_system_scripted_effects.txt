@@ -1,0 +1,249 @@
+@Nyto_h_weapons_buff_level = 0
+GFnyto_weapons_system = {
+	if = {
+		limit = {
+			any_owned_ship = {
+				has_component = GF_Nyto_p_weapon1
+			}
+		}
+		fleet_event = {
+			id = gf_nyto_weapons.2
+			days = 5
+		}
+		#日检1
+	}
+	if = {
+		limit = {
+			any_owned_ship = {
+				has_component = GF_Nyto_h_weapon2
+			}
+		}
+		fleet_event = {
+			id = gf_nyto_weapons.3
+		}
+		#日检2
+	}
+	if = {
+		limit = {
+			any_owned_ship = {
+				OR = {
+					has_component = GF_Nyto_m_weapon2
+					has_component = GF_Nyto_s_weapon2
+				}
+			}
+		}
+		fleet_event = {
+			id = gf_nyto_weapons.5
+		}
+		#日检3
+	}
+	
+##############护盾#################
+	if = {
+		limit = {
+			any_owned_ship = {
+				OR = {
+					has_component = tech_GFnyto_force_shield_L_3
+					has_component = tech_GFnyto_force_shield_M_3
+					has_component = tech_GFnyto_force_shield_S_3
+				}
+			}
+		}
+		fleet_event = {
+			id = gf_nyto_weapons.8
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_ship = {
+				OR = {
+					has_component = tech_GFnyto_force_shield_L_2
+					has_component = tech_GFnyto_force_shield_M_2
+					has_component = tech_GFnyto_force_shield_S_2
+				}
+			}
+		}
+		fleet_event = {
+			id = gf_nyto_weapons.9
+		}
+	}
+	else_if = {
+		limit = { 
+			any_owned_ship = {
+				OR = {
+					has_component = tech_GFnyto_force_shield_L_1
+					has_component = tech_GFnyto_force_shield_M_1
+					has_component = tech_GFnyto_force_shield_S_1
+				}
+			}
+		}
+		fleet_event = {
+			id = gf_nyto_weapons.10
+			days = 1
+		}
+	}
+#########护盾END############	
+	if = {
+		limit = { 
+			any_owned_ship = {
+				has_component = GF_Nyto_p_weapon2
+			}
+		}
+		fromfromfrom = {
+			set_fleet_flag = GF_Nyto_p_weapon2_system
+		}
+	}
+	every_owned_ship = {
+		##############武器#################
+		if = {
+			limit = {
+				has_component = GF_Nyto_x_weapon2
+				has_component = GF_Nyto_l_weapon1
+			}
+			fleet = {
+				export_modifier_to_variable = {
+					modifier = weapon_type_energy_weapon_fire_rate_mult
+					variable = gf_nyto_fire_rate
+				}
+				export_modifier_to_variable = {
+					modifier = weapon_type_energy_weapon_damage_mult
+					variable = gf_nyto_damg
+				}
+			}
+			ship_event = {
+				id = gf_nyto_weapons.7
+			}
+		}
+		#############特殊舰船###########
+		if = {
+			limit = {
+				is_ship_size = GFnyto_shiled_ship
+			}
+			export_modifier_to_variable = {
+				modifier = ship_shield_mult
+				variable = GFnyto_shiled_ship_hp
+			}
+			fleet = {
+				remove_modifier = GF_nyoto_shield_ship
+				add_modifier = {
+					modifier = GF_nyoto_shield_ship
+					multiplier = prev.GFnyto_shiled_ship_hp
+					days = -1
+				}
+			}
+			fleet = {
+				set_fleet_flag = Gf_nyto_shield_ship_repi
+			}
+			
+		}
+	}
+	solar_system = {
+		every_fleet_in_system = {
+			limit = {
+				NOT = {
+					has_fleet_flag = gf_nyto_h_weapons
+				}
+			}
+			every_owned_ship = {
+				limit = {
+					has_component = GF_Nyto_h_weapon1
+				}
+				fleet = {
+					change_variable = {
+						which = Nyto_h_weapons_buff_level
+						value = 1
+					}
+				}
+			}
+			fleet_event = {
+				id = gf_nyto_weapons.4
+				days = 1
+			}
+		}
+	}
+	#通用日检初始化
+	fleet_event = {
+		id = gf_nyto_weapons.8001
+	}
+}
+
+add_light_modifer = {
+	if = {
+		limit = {
+			NOT = {
+				has_fleet_flag = light_cd
+			}
+		}
+		set_timed_fleet_flag = {
+			flag = light_cd
+			days = 6
+		}
+		add_modifier = {
+			modifier = gfnyto_light_weapons
+			days = 6
+		}
+	}
+	if = {
+		limit = {
+			is_in_combat = yes
+		}
+		fleet_event = {
+			id = gf_nyto_weapons.2
+			days = 1
+		}
+	}
+}
+
+add_h_weapon_modifer = {
+	if = {
+		limit = {
+			NOT = {
+				has_fleet_flag = h_weapon_modifer_cd
+			}
+		}
+		set_timed_fleet_flag = {
+			flag = h_weapon_modifer_cd
+			days = 5
+		}
+		add_modifier = {
+			modifier = gfnyto_h_weapons
+			days = 3
+		}
+	}
+	if = {
+		limit = {
+			is_in_combat = yes
+		}
+		fleet_event = {
+			id = gf_nyto_weapons.301
+			days = 1
+		}
+	}
+}
+
+add_ms_weapon_modifer = {
+	if = {
+		limit = {
+			NOT = {
+				has_fleet_flag = ms_weapon_modifer_cd
+			}
+		}
+		set_timed_fleet_flag = {
+			flag = ms_weapon_modifer_cd
+			days = 20
+		}
+		add_modifier = {
+			modifier = gfnyto_ms_weapons2
+			days = 8
+		}
+	}
+	if = {
+		limit = {
+			is_in_combat = yes
+		}
+		fleet_event = {
+			id = gf_nyto_weapons.5
+			days = 1
+		}
+	}
+}

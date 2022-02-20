@@ -1,0 +1,189 @@
+#能量
+weapon_component_template = {
+	key = "tech_GF_nyto_mobile_city_energy_L"
+	size = large
+	icon = "GFX_ship_part_GFnyto_mobile_city_energy"
+	icon_frame = 1
+	power = -300
+	modifier = {ship_hull_add = 1400}	
+	component_set = "tech_GF_nyto_mobile_city_energy"
+	damage = {
+		min = 0
+		max = 0
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 700
+			GF_nyto_collapse_liquid=3
+		}		
+		upkeep = {
+			energy = 3
+			consumer_goods = 1.5
+			GF_nyto_collapse_liquid=0.07
+		}
+		produces = {energy = 12}
+	}
+	prerequisites = { "tech_GF_nyto_mobile_city_3" }
+	size_restriction = { GFnyto_mobile_city }
+}
+#矿石
+weapon_component_template = {
+	key = "tech_GF_nyto_mobile_city_minerals_L"
+	size = large
+	icon = "GFX_ship_part_GFnyto_mobile_city_minerals"
+	icon_frame = 1
+	power = -300
+	modifier = {ship_hull_add = 1400}	
+	component_set = "tech_GF_nyto_mobile_city_minerals"
+	damage = {
+		min = 0
+		max = 0
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 700
+			GF_nyto_collapse_liquid=3
+		}		
+		upkeep = {
+			energy = 3
+			consumer_goods = 1.5
+			GF_nyto_collapse_liquid=0.07
+		}
+		produces = {minerals = 12}
+	}
+	prerequisites = { "tech_GF_nyto_mobile_city_3" }
+	size_restriction = { GFnyto_mobile_city }
+}
+#食物
+weapon_component_template = {
+	key = "tech_GF_nyto_mobile_city_food_L"
+	size = large
+	icon = "GFX_ship_part_GFnyto_mobile_city_food"
+	icon_frame = 1
+	power = -300
+	modifier = {ship_hull_add = 1400}	
+	component_set = "tech_GF_nyto_mobile_city_food"
+	damage = {
+		min = 0
+		max = 0
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 700
+			GF_nyto_collapse_liquid=3
+		}		
+		upkeep = {
+			energy = 3
+			consumer_goods = 1.5
+			GF_nyto_collapse_liquid=0.07
+		}
+		produces = {food = 18}
+	}
+	prerequisites = { "tech_GF_nyto_mobile_city_3" }
+	size_restriction = { GFnyto_mobile_city }
+}
+
+#合金
+weapon_component_template = {
+	key = "tech_GF_nyto_mobile_city_alloys_L"
+	size = large
+	icon = "GFX_ship_part_GFnyto_mobile_city_alloys"
+	icon_frame = 1
+	power = -300
+	modifier = {ship_hull_add = 1400}	
+	component_set = "tech_GF_nyto_mobile_city_alloys"
+	damage = {
+		min = 0
+		max = 0
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 600
+			volatile_motes=50
+			GF_nyto_collapse_liquid=3
+		}		
+		upkeep = {
+			minerals = 30
+			energy = 5
+			volatile_motes=1
+			consumer_goods = 2.5
+			GF_nyto_collapse_liquid=0.06
+		}
+		produces = {alloys = 9}
+	}
+	prerequisites = { "tech_GF_nyto_mobile_city_3" }
+	size_restriction = { GFnyto_mobile_city }
+}
+#消费品
+weapon_component_template = {
+	key = "tech_GF_nyto_mobile_city_consumer_goods_L"
+	size = large
+	icon = "GFX_ship_part_GFnyto_mobile_city_consumer_goods"
+	icon_frame = 1
+	power = -300
+	modifier = {ship_hull_add = 1400}	
+	component_set = "tech_GF_nyto_mobile_city_consumer_goods"
+	damage = {
+		min = 0
+		max = 0
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 600
+			rare_crystals=50
+			GF_nyto_collapse_liquid=3
+		}		
+		upkeep = {
+			minerals = 30
+			energy = 5
+			rare_crystals=1
+			consumer_goods = 2.5
+			GF_nyto_collapse_liquid=0.06
+		}
+		produces = {alloys = 18}
+	}
+	prerequisites = { "tech_GF_nyto_mobile_city_3" }
+	size_restriction = { GFnyto_mobile_city }
+}
+#科研
+weapon_component_template = {
+	key = "tech_GF_nyto_mobile_city_research_L"
+	size = large
+	icon = "GFX_ship_part_GFnyto_mobile_city_research"
+	icon_frame = 1
+	power = -300
+	modifier = {ship_hull_add = 1400}	
+	component_set = "tech_GF_nyto_mobile_city_research"
+	damage = {
+		min = 0
+		max = 0
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 600
+			exotic_gases=50
+			GF_nyto_collapse_liquid=3
+		}		
+		upkeep = {
+			minerals = 30
+			energy = 5
+			volatile_motes=1
+			exotic_gases = 12.5
+			GF_nyto_collapse_liquid=0.06
+		}
+		produces = {
+			physics_research = 12
+			society_research = 12
+			engineering_research = 12
+		}
+	}
+	prerequisites = { "tech_GF_nyto_mobile_city_3" }
+	size_restriction = { GFnyto_mobile_city }
+}
+

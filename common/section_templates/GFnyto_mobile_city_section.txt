@@ -1,0 +1,784 @@
+#移动城市LV1
+ship_section_template={
+	key="GFnyto_mobile_city_1"				#ID,不能重复
+	ship_size=GFnyto_mobile_city								#所属类别
+	fits_on_slot=core 								#是哪个区段？
+	should_draw_components= yes
+	entity = SR3_entity			#区段模型
+	icon = "GFX_ship_part_core_bow"					#图标
+	icon_frame=1	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "large_gun_01"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "large_gun_02"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "small_turret"
+		locatorname = "large_gun_03"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_04"
+		template = "small_turret"
+		locatorname = "large_gun_04"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_05"
+		template = "small_turret"
+		locatorname = "large_gun_05"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_06"
+		template = "small_turret"
+		locatorname = "large_gun_06"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_07"
+		template = "small_turret"
+		locatorname = "large_gun_07"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_08"
+		template = "small_turret"
+		locatorname = "large_gun_08"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_09"
+		template = "small_turret"
+		locatorname = "large_gun_09"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_10"
+		template = "small_turret"
+		locatorname = "large_gun_10"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_11"
+		template = "small_turret"
+		locatorname = "large_gun_11"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_12"
+		template = "small_turret"
+		locatorname = "large_gun_12"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_13"
+		template = "small_turret"
+		locatorname = "large_gun_13"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_14"
+		template = "small_turret"
+		locatorname = "large_gun_04"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_15"
+		template = "small_turret"
+		locatorname = "large_gun_03"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_16"
+		template = "small_turret"
+		locatorname = "large_gun_02"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_17"
+		template = "small_turret"
+		locatorname = "large_gun_01"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_18"
+		template = "small_turret"
+		locatorname = "large_gun_05"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_19"
+		template = "small_turret"
+		locatorname = "large_gun_06"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_20"
+		template = "small_turret"
+		locatorname = "large_gun_07"
+	}
+	resources = {
+		category = ship_components
+		cost = {GF_nyto_dark_star_core = 40}
+	}
+	small_utility_slots = 20	
+	aux_utility_slots = 5						#防御槽位的简略写法
+	ai_weight = {weight=1}
+	prerequisites = {"tech_GF_nyto_mobile_city_1"}
+}
+#移动城市LV2
+ship_section_template={
+	key="GFnyto_mobile_city_2"				#ID,不能重复
+	ship_size=GFnyto_mobile_city								#所属类别
+	fits_on_slot=core 								#是哪个区段？
+	should_draw_components= yes
+	entity = SR3_entity	
+	icon = "GFX_ship_part_core_mid"
+	icon_frame=1
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "large_gun_01"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "large_gun_02"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		template = "medium_turret"
+		locatorname = "large_gun_03"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		template = "medium_turret"
+		locatorname = "large_gun_04"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_05"
+		template = "medium_turret"
+		locatorname = "large_gun_05"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_06"
+		template = "medium_turret"
+		locatorname = "large_gun_06"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_07"
+		template = "medium_turret"
+		locatorname = "large_gun_07"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_08"
+		template = "medium_turret"
+		locatorname = "large_gun_08"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_09"
+		template = "medium_turret"
+		locatorname = "large_gun_09"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_10"
+		template = "medium_turret"
+		locatorname = "large_gun_10"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_11"
+		template = "medium_turret"
+		locatorname = "large_gun_11"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_12"
+		template = "medium_turret"
+		locatorname = "large_gun_12"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_13"
+		template = "medium_turret"
+		locatorname = "large_gun_13"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_14"
+		template = "medium_turret"
+		locatorname = "large_gun_01"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_15"
+		template = "medium_turret"
+		locatorname = "large_gun_02"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_16"
+		template = "medium_turret"
+		locatorname = "large_gun_03"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_17"
+		template = "medium_turret"
+		locatorname = "large_gun_04"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_18"
+		template = "medium_turret"
+		locatorname = "large_gun_05"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_19"
+		template = "medium_turret"
+		locatorname = "large_gun_06"
+	}	
+	component_slot = {
+		name = "MEDIUM_GUN_20"
+		template = "medium_turret"
+		locatorname = "large_gun_07"
+	}	
+	resources = {
+		category = ship_components
+		cost = {GF_nyto_dark_star_core = 60}
+	}
+	medium_utility_slots = 20	
+	aux_utility_slots = 5							#防御槽位的简略写法
+	ai_weight = {weight=1}
+	prerequisites = {"tech_GF_nyto_mobile_city_2"}
+}
+#移动城市LV3
+ship_section_template={
+	key="GFnyto_mobile_city_3"				#ID,不能重复
+	ship_size=GFnyto_mobile_city									#所属类别
+	fits_on_slot=core 								#是哪个区段？
+	should_draw_components= yes
+	entity = SR3_entity	
+	icon = "GFX_ship_part_core_stern"
+	icon_frame=1
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "large_gun_01"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "large_gun_02"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "large_turret"
+		locatorname = "large_gun_03"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_04"
+		template = "large_turret"
+		locatorname = "large_gun_04"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_05"
+		template = "large_turret"
+		locatorname = "large_gun_05"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_06"
+		template = "large_turret"
+		locatorname = "large_gun_06"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_07"
+		template = "large_turret"
+		locatorname = "large_gun_07"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_08"
+		template = "large_turret"
+		locatorname = "large_gun_08"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_09"
+		template = "large_turret"
+		locatorname = "large_gun_09"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_10"
+		template = "large_turret"
+		locatorname = "large_gun_10"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_11"
+		template = "large_turret"
+		locatorname = "large_gun_11"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_12"
+		template = "large_turret"
+		locatorname = "large_gun_12"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_13"
+		template = "large_turret"
+		locatorname = "large_gun_13"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_14"
+		template = "large_turret"
+		locatorname = "large_gun_01"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_15"
+		template = "large_turret"
+		locatorname = "large_gun_01"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_16"
+		template = "large_turret"
+		locatorname = "large_gun_02"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_17"
+		template = "large_turret"
+		locatorname = "large_gun_03"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_18"
+		template = "large_turret"
+		locatorname = "large_gun_04"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_19"
+		template = "large_turret"
+		locatorname = "large_gun_05"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_20"
+		template = "large_turret"
+		locatorname = "large_gun_06"
+	}
+	resources = {
+		category = ship_components
+		cost = {GF_nyto_dark_star_core = 80}
+	}
+	large_utility_slots = 20	
+	aux_utility_slots = 5							#防御槽位的简略写法
+	ai_weight = {weight=1}
+	prerequisites = {"tech_GF_nyto_mobile_city_3"}
+}
+#移动城市LV4-机械巨兽
+ship_section_template={
+	key="GFnyto_mobile_city_4"				#ID,不能重复
+	ship_size=GFnyto_mobile_city									#所属类别
+	fits_on_slot=core 								#是哪个区段？
+	should_draw_components= yes
+	entity = SR3_entity	
+	icon = "GFX_ship_part_core_stern"
+	icon_frame=1
+	component_slot={								#武器位
+		name = "T_LARGE_01"						#名称，单个区段内不能相同
+		template = "invisible_titanic_fixed"	#槽位所述
+		locatorname = "large_gun_03"					#位点名称，就是模型的武器发射位置
+	}	
+	component_slot={								#武器位
+		name = "W_LARGE_02"						#名称，单个区段内不能相同
+		template = "invisible_planet_killer_fixed"	#槽位所述
+		locatorname = "large_gun_03"					#位点名称，就是模型的武器发射位置
+	}	
+	component_slot={								#武器位
+		name = "EXTRA_LARGE_03"						#名称，单个区段内不能相同
+		template = "invisible_extra_large_fixed"	#槽位所述
+		locatorname = "large_gun_03"					#位点名称，就是模型的武器发射位置
+	}	
+	component_slot={								#武器位
+		name = "EXTRA_LARGE_04"						#名称，单个区段内不能相同
+		template = "invisible_extra_large_fixed"	#槽位所述
+		locatorname = "large_gun_04"					#位点名称，就是模型的武器发射位置
+	}		
+	component_slot={								#武器位
+		name = "EXTRA_LARGE_05"						#名称，单个区段内不能相同
+		template = "invisible_extra_large_fixed"	#槽位所述
+		locatorname = "large_gun_05"					#位点名称，就是模型的武器发射位置
+	}	
+	component_slot={								#武器位
+		name = "EXTRA_LARGE_06"						#名称，单个区段内不能相同
+		template = "invisible_extra_large_fixed"	#槽位所述
+		locatorname = "large_gun_01"					#位点名称，就是模型的武器发射位置
+	}	
+	component_slot={								#武器位
+		name = "EXTRA_LARGE_07"						#名称，单个区段内不能相同
+		template = "invisible_extra_large_fixed"	#槽位所述
+		locatorname = "large_gun_02"					#位点名称，就是模型的武器发射位置
+	}	
+	component_slot={								#武器位
+		name = "EXTRA_LARGE_08"						#名称，单个区段内不能相同
+		template = "invisible_extra_large_fixed"	#槽位所述
+		locatorname = "large_gun_04"					#位点名称，就是模型的武器发射位置
+	}		
+	component_slot={								#武器位
+		name = "EXTRA_LARGE_09"						#名称，单个区段内不能相同
+		template = "invisible_extra_large_fixed"	#槽位所述
+		locatorname = "large_gun_01"					#位点名称，就是模型的武器发射位置
+	}	
+	component_slot={								#武器位
+		name = "EXTRA_LARGE_10"						#名称，单个区段内不能相同
+		template = "invisible_extra_large_fixed"	#槽位所述
+		locatorname = "large_gun_02"					#位点名称，就是模型的武器发射位置
+	}	
+	component_slot={								#武器位
+		name = "EXTRA_LARGE_11"						#名称，单个区段内不能相同
+		template = "invisible_extra_large_fixed"	#槽位所述
+		locatorname = "large_gun_03"					#位点名称，就是模型的武器发射位置
+	}	
+	component_slot={								#武器位
+		name = "EXTRA_LARGE_12"						#名称，单个区段内不能相同
+		template = "invisible_extra_large_fixed"	#槽位所述
+		locatorname = "large_gun_03"					#位点名称，就是模型的武器发射位置
+	}	
+	component_slot={								#武器位
+		name = "EXTRA_LARGE_13"						#名称，单个区段内不能相同
+		template = "invisible_extra_large_fixed"	#槽位所述
+		locatorname = "large_gun_04"					#位点名称，就是模型的武器发射位置
+	}	
+	component_slot={								#武器位
+		name = "EXTRA_LARGE_14"						#名称，单个区段内不能相同
+		template = "invisible_extra_large_fixed"	#槽位所述
+		locatorname = "large_gun_05"					#位点名称，就是模型的武器发射位置
+	}	
+	component_slot={								#武器位
+		name = "EXTRA_LARGE_15"						#名称，单个区段内不能相同
+		template = "invisible_extra_large_fixed"	#槽位所述
+		locatorname = "large_gun_06"					#位点名称，就是模型的武器发射位置
+	}	
+	component_slot={								#武器位
+		name = "EXTRA_LARGE_16"						#名称，单个区段内不能相同
+		template = "invisible_extra_large_fixed"	#槽位所述
+		locatorname = "large_gun_07"					#位点名称，就是模型的武器发射位置
+	}	
+	component_slot={								#武器位
+		name = "EXTRA_LARGE_17"						#名称，单个区段内不能相同
+		template = "invisible_extra_large_fixed"	#槽位所述
+		locatorname = "large_gun_08"					#位点名称，就是模型的武器发射位置
+	}	
+	component_slot={								#武器位
+		name = "EXTRA_LARGE_18"						#名称，单个区段内不能相同
+		template = "invisible_extra_large_fixed"	#槽位所述
+		locatorname = "large_gun_09"					#位点名称，就是模型的武器发射位置
+	}	
+	component_slot={								#武器位
+		name = "EXTRA_LARGE_19"						#名称，单个区段内不能相同
+		template = "invisible_extra_large_fixed"	#槽位所述
+		locatorname = "large_gun_10"					#位点名称，就是模型的武器发射位置
+	}	
+	component_slot={								#武器位
+		name = "EXTRA_LARGE_20"						#名称，单个区段内不能相同
+		template = "invisible_extra_large_fixed"	#槽位所述
+		locatorname = "large_gun_11"					#位点名称，就是模型的武器发射位置
+	}
+	component_slot={								#武器位
+		name = "EXTRA_LARGE_21"						#名称，单个区段内不能相同
+		template = "invisible_extra_large_fixed"	#槽位所述
+		locatorname = "large_gun_12"					#位点名称，就是模型的武器发射位置
+	}
+	component_slot={								#武器位
+		name = "EXTRA_LARGE_22"						#名称，单个区段内不能相同
+		template = "invisible_extra_large_fixed"	#槽位所述
+		locatorname = "large_gun_13"					#位点名称，就是模型的武器发射位置
+	}
+	resources = {
+		category = ship_components
+		cost = {GF_nyto_dark_star_core = 80}
+	}
+	large_utility_slots = 20	
+	aux_utility_slots = 5							#防御槽位的简略写法
+	ai_weight = {weight=1}
+	prerequisites = {
+	#		"tech_GF_nyto_mobile_city_3"
+		"tech_GFnyto_war_theory_c1"
+	}
+	
+}
+#母舰核心
+ship_section_template={
+	key="GFnyto_mather_ship_core"
+	ship_size= GFnyto_mather_ship									#所属类别
+	fits_on_slot= core 								#是哪个区段？
+	should_draw_components= no
+	entity = Gayr_entity
+	icon = "GFX_ship_part_core_stern"
+	icon_frame=1
+	component_slot = {
+		name = "T_LARGE_01"
+		template = invisible_titanic_fixed
+		locatorname = target_locator_1
+	}
+	component_slot = {
+		name = "T_LARGE_02"
+		template = invisible_titanic_fixed
+		locatorname = target_locator_2
+	}
+	component_slot = {
+		name = "T_LARGE_03"
+		template = invisible_titanic_fixed
+		locatorname = target_locator_3
+	}
+	component_slot = {
+		name = "T_LARGE_04"
+		template = invisible_titanic_fixed
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "W_LARGE_01"
+		template = invisible_planet_killer_fixed
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "X_LARGE_01"
+		template = invisible_extra_large_fixed
+		locatorname = target_locator_1
+	}
+	component_slot = {
+		name = "X_LARGE_02"
+		template = invisible_extra_large_fixed
+		locatorname = target_locator_2
+	}
+	component_slot = {
+		name = "X_LARGE_03"
+		template = invisible_extra_large_fixed
+		locatorname = target_locator_3
+	}
+	component_slot = {
+		name = "X_LARGE_04"
+		template = invisible_extra_large_fixed
+		locatorname = target_locator_4
+	}
+	component_slot = {
+		name = "X_LARGE_05"
+		template = invisible_extra_large_fixed
+		locatorname = target_locator_5
+	}
+	component_slot = {
+		name = "X_LARGE_06"
+		template = invisible_extra_large_fixed
+		locatorname = target_locator_6
+	}
+	component_slot = {
+		name = "X_LARGE_07"
+		template = invisible_extra_large_fixed
+		locatorname = explosion_locator1
+	}
+	component_slot = {
+		name = "X_LARGE_08"
+		template = invisible_extra_large_fixed
+		locatorname = explosion_locator2
+	}
+	component_slot = {
+		name = "X_LARGE_09"
+		template = invisible_extra_large_fixed
+		locatorname = explosion_locator3
+	}
+	component_slot = {
+		name = "X_LARGE_10"
+		template = invisible_extra_large_fixed
+		locatorname = explosion_locator4
+	}
+	component_slot = {
+		name = "X_LARGE_11"
+		template = invisible_extra_large_fixed
+		locatorname = explosion_locator5
+	}
+	component_slot = {
+		name = "X_LARGE_12"
+		template = invisible_extra_large_fixed
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "X_LARGE_13"
+		template = invisible_extra_large_fixed
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "H_LARGE_01"
+		template = large_strike_craft
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "H_LARGE_02"
+		template = large_strike_craft
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "H_LARGE_03"
+		template = large_strike_craft
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "H_LARGE_04"
+		template = large_strike_craft
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "H_LARGE_05"
+		template = large_strike_craft
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "H_LARGE_06"
+		template = large_strike_craft
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "H_LARGE_07"
+		template = large_strike_craft
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "H_LARGE_08"
+		template = large_strike_craft
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "H_LARGE_09"
+		template = large_strike_craft
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "H_LARGE_10"
+		template = large_strike_craft
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "L_LARGE_01"
+		template = invisible_large_turret
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "L_LARGE_02"
+		template = invisible_large_turret
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "L_LARGE_03"
+		template = invisible_large_turret
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "L_LARGE_04"
+		template = invisible_large_turret
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "L_LARGE_05"
+		template = invisible_large_turret
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "L_LARGE_06"
+		template = invisible_large_turret
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "L_LARGE_07"
+		template = invisible_large_turret
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "L_LARGE_08"
+		template = invisible_large_turret
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "L_LARGE_09"
+		template = invisible_large_turret
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "L_LARGE_10"
+		template = invisible_large_turret
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "L_LARGE_11"
+		template = invisible_large_turret
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "L_LARGE_12"
+		template = invisible_large_turret
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "L_LARGE_13"
+		template = invisible_large_turret
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "L_LARGE_14"
+		template = invisible_large_turret
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "L_LARGE_15"
+		template = invisible_large_turret
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "L_LARGE_16"
+		template = invisible_large_turret
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "L_LARGE_17"
+		template = invisible_large_turret
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "L_LARGE_18"
+		template = invisible_large_turret
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "L_LARGE_19"
+		template = invisible_large_turret
+		locatorname = explosion_locator6
+	}
+	component_slot = {
+		name = "L_LARGE_20"
+		template = invisible_large_turret
+		locatorname = explosion_locator6
+	}
+	aux_utility_slots = 0
+	large_utility_slots = 0
+}
+#光环船核心
+ship_section_template={
+	key="GFnyto_flag_ship_core"
+	ship_size = GFnyto_flags
+	fits_on_slot= core 							
+	should_draw_components= no
+	entity = mech_entity
+	icon = "GFX_ship_part_core_stern"
+	icon_frame=1
+	component_slot = {
+		name = EXTRA_LARGE_01
+		template = invisible_point_defence_turret
+		locatorname = explosion_locator_01
+	}
+}
+#盾舰核心
+ship_section_template={
+	key = "GFnyto_shiledship_core"
+	entity = "shiledship_entity"
+	ship_size = GFnyto_shiled_ship
+	fits_on_slot = mid
+	should_draw_components = yes
+	icon = "GFX_ship_part_core_stern"
+	icon_frame = 1
+	resources = {
+		category = ships
+		cost = {
+			alloys = 1000
+			minerals = 2000
+		}
+		upkeep = {
+			energy = 200
+		}
+		upkeep = {
+			trigger = {
+				fleet = {
+					is_in_combat = yes
+				}				
+			}
+			energy = 800
+		}
+	}	
+	large_utility_slots = 20
+	aux_utility_slots = 3
+	ai_weight = {weight=1}
+}

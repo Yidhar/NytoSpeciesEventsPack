@@ -1,0 +1,61 @@
+entity = {
+	name = "shiledship_entity"
+	pdxmesh = "shiledship_mesh"
+	scale = 0.5
+
+	default_state = idle
+	state = {
+		name = idle
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_02" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_03" } }
+		start_event = { node = "Engine_Large_01" particle = "GFnyto_generic_big_2_5_exhaust_circle_idle" keep_particle = yes trigger_once = yes }
+
+	}
+	state = {
+		name = "moving"
+		event = { trigger_once = yes sound = { soundeffect = "moving_out_battleship" } }
+		event = { time = 0.0 node = "Engine_Large_01" entity = "GFnyto_planet_shield_effect_entity" trigger_once = yes  }
+		start_event = {  node = "Engine_Large_01" particle = "GFnyto_planet_shield_effect"  keep_particle = yes trigger_once = yes }
+		start_event = { node = "Engine_Large_01" particle = GFnyto_generic_big_3_exhaust_circle_moving keep_particle = yes trigger_once = yes }
+		
+	}
+
+	state = {
+		name = "death"
+		event = { time = 0 node = "target_locator_1" particle = "avian_01_large_ship_explosion_particle" }
+		event = { time = 0 node = "target_locator_1" particle = "ship_explosion_particle" }
+		event = { time = 0 node = "target_locator_2" particle = "avian_01_large_ship_explosion_particle" }
+		event = { time = 0 node = "target_locator_2" particle = "ship_explosion_particle" }
+		event = { time = 0 node = "target_locator_3" particle = "avian_01_large_ship_explosion_particle" }
+		event = { time = 0 node = "target_locator_4" particle = "avian_01_large_ship_explosion_particle" }
+		event = { time = 0 node = "target_locator_5" particle = "avian_01_large_ship_explosion_particle" }
+		event = { time = 0 node = "target_locator_6" particle = "ship_explosion_particle" }	
+	}
+
+}
+
+entity = {
+	name = "GFnyto_planet_shield_effect_entity"
+	pdxmesh = "planet_shield_effect_mesh"
+	
+	#get_state_from_parent = no
+	
+	default_state = "moving"
+	state = { name = "moving" state_time = 5
+	#	start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+	#	start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+		start_event = { node = root particle = "planet_shield_effect" keep_particle = yes trigger_once = yes }
+	}
+	
+	game_data = { 
+		bloom_factor = 1.2 
+		uv_animation_speed 		= 2
+		uv_animation_direction 	= { 0.0 -0.02 }
+	}
+	
+	locator = { name = "root" position = { 0 0 0 } }
+	
+	scale = 23
+	
+}

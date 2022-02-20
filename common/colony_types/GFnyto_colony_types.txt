@@ -1,0 +1,101 @@
+# #铸造型星球
+# col_GF_nyto_pc_toxic_alloy_plural = {
+# 	icon = 1
+# 	potential = {has_planet_flag = GFnyto_district_alloy}
+# 	planet_modifier = {
+# 		planet_districts_cost_mult = -0.25
+# 		planet_metallurgists_upkeep_mult = -0.2
+# 	}
+# 	weight_modifier = {base = 0}
+# }
+# #工业型星球
+# GF_nyto_pc_toxic_consumer_good_plural = {
+# 	icon = 6
+# 	potential = {has_planet_flag = GFnyto_district_consumer_good}
+# 	planet_modifier = {
+# 		planet_districts_cost_mult = -0.25
+# 		planet_artisans_upkeep_mult = -0.2
+# 	}
+# 	weight_modifier = {base = 0}
+# }
+# #发电型星球
+# GF_nyto_pc_toxic_energy_plural = {
+# 	icon = 4
+# 	potential = {has_planet_flag = GFnyto_district_energy}
+# 	planet_modifier = {
+# 		planet_districts_cost_mult = -0.25
+# 		planet_technician_produces_mult = 0.25
+# 	}
+# 	weight_modifier = {base = 0}
+# }
+# #农业型星球
+# col_GF_nyto_pc_toxic_food_plural = {
+# 	icon = 3
+# 	potential = {has_planet_flag = GFnyto_district_food}
+# 	planet_modifier = {
+# 		planet_districts_cost_mult = -0.25
+# 		planet_farmers_produces_mult = 0.25
+# 	}
+# 	weight_modifier = {base = 0}
+# }
+# #存储型星球
+# col_GF_nyto_pc_toxic_house_plural = {
+# 	icon = 1
+# 	potential = {has_planet_flag = GFnyto_district_house}
+# 	planet_modifier = {
+# 		planet_districts_cost_mult = -0.25
+# 	}
+# 	weight_modifier = {base = 0}
+# }
+# #休闲型星球
+# GF_nyto_pc_toxic_leisure_plural = {
+# 	icon = 14
+# 	potential = {has_planet_flag = GFnyto_district_leisure}
+# 	planet_modifier = {
+# 	    planet_districts_cost_mult = -0.25
+# 		pop_happiness = 0.10
+# 	}
+# 	weight_modifier = {base = 0}
+# }
+# #采矿型星球
+# col_GF_nyto_pc_toxic_mineral_plural = {
+# 	icon = 2
+# 	potential = {has_planet_flag = GFnyto_district_mineral}
+# 	planet_modifier = {
+# 		planet_districts_cost_mult = -0.25
+# 		planet_miners_produces_mult = 0.25
+# 	}
+# 	weight_modifier = {base = 0}
+# }
+# #精炼型星球
+# GF_nyto_pc_toxic_refine_plural = {
+# 	icon = 7
+# 	potential = {has_planet_flag = GFnyto_district_refine}
+# 	planet_modifier = {
+# 		planet_districts_cost_mult = -0.25
+# 		planet_refiners_upkeep_mult = -0.2
+# 		planet_translucers_upkeep_mult = -0.2
+# 		planet_chemists_upkeep_mult = -0.2
+# 	}
+# 	weight_modifier = {base = 0}
+# }
+# #研究型星球
+# col_GF_nyto_pc_toxic_science_plural = {
+# 	icon = 8
+# 	potential = {has_planet_flag = GFnyto_district_science}
+# 	planet_modifier = {
+# 		planet_jobs_engineering_research_produces_mult = 0.15
+# 		planet_jobs_physics_research_produces_mult = 0.15
+# 		planet_jobs_society_research_produces_mult = 0.15
+# 		planet_districts_cost_mult = -0.25
+# 		planet_researchers_upkeep_mult = -0.2
+# 	}
+# 	weight_modifier = {base = 0}
+# }
+# #贸易型星球
+# col_GF_nyto_pc_toxic_trade_plural = {
+# 	icon = 1
+# 	potential = {has_planet_flag = GFnyto_district_trade}
+# 	planet_modifier = {trade_value_mult = 0.2}
+# 	weight_modifier = {base = 0}
+# }

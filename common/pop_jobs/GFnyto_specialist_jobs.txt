@@ -1,0 +1,584 @@
+#坍缩粒子研究人员
+GFnyto_collapse_particle_researcher = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_job_GFnyto_collapse_particle_researcher
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+	resources = {
+		category = planet_researchers
+		produces = {
+			trigger = {
+				NAND = {
+					planet = {
+						has_building = building_GFnyto_collapse_exploit_plant_2
+					}
+					owner = {
+						has_technology = tech_GF_nyto_algorithm
+					}
+				}
+			}
+			GF_nyto_collapse_liquid = 3
+			physics_research = 4
+			society_research = 4
+			engineering_research = 4
+		}
+		upkeep = {
+			trigger = {
+				NAND = {
+					planet = {
+						has_building = building_GFnyto_collapse_exploit_plant_2
+					}
+					owner = {
+						has_technology = tech_GF_nyto_algorithm
+					}
+				}
+			}
+			consumer_goods = 2
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_building = building_GFnyto_collapse_exploit_plant_2
+				}
+				owner = {
+					has_technology = tech_GF_nyto_algorithm
+				}
+			}
+			GF_nyto_collapse_liquid = 4
+			physics_research = 6
+			society_research = 6
+			engineering_research = 6
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_building = building_GFnyto_collapse_exploit_plant_2
+				}
+				owner = {
+					has_technology = tech_GF_nyto_algorithm
+				}
+			}
+			consumer_goods = 2
+			GF_nyto_training_key = 1
+		}
+	}
+	weight = {
+		weight = 5
+	}
+}
+
+#受洗者
+GFnyto_collapse_changer = {
+	category = purge
+	condition_string = SPECIALIST_JOB_TRIGGER
+	is_capped_by_modifier = no
+	building_icon = building_job_GFnyto_collapse_changer
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	possible = {
+		owner = {
+			has_authority = auth_GF_paradeus
+		}
+		species = {
+			AND = {
+				NOT = {
+					is_species_class = nyto
+				}
+				NOT = {
+					is_species_class = NYTO
+				}
+				NOT = {
+					is_species_class = eild
+				}
+				NOT = {
+					is_species_class = EILD
+				}
+			}
+		}
+		planet = {
+			has_building = building_GFnyto_Elids
+		}
+	}
+	resources = {
+		category = planet_researchers
+		produces = {
+		}
+		upkeep = {
+			GF_nyto_collapse_liquid = 0.1
+		}
+	}
+	weight = {
+		weight = 999
+	}
+}
+
+###
+#白骑士
+GFnyto_white_knight = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_precinct_house
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+	pop_modifier = {
+		pop_defense_armies_add = 1
+	}
+	planet_modifier = {
+		planet_crime_add = -10
+		planet_stability_add = 1
+	}
+	country_modifier = {
+		country_admin_cap_add = 20
+	}
+	resources = {
+		category = buffer
+		produces = {
+			unity = 5
+			influence = 0.1
+		}
+		upkeep = {
+			energy = 2
+			consumer_goods = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			planet = {
+				is_planet_class = pc_GFnyto_portal_star
+			}
+		}
+		modifier = {
+			planet_stability_add = 2
+		}
+	}
+	triggered_country_modifier = {
+		modifier = {
+			country_naval_cap_add = 20
+		}
+	}
+	weight = {
+		weight = 5
+	}
+}
+
+#相位技师
+GFnyto_phase_technician = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_power_plant
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+	resources = {
+		category = planet_technician
+		produces = {
+			energy = 60
+			engineering_research = 5
+		}
+		upkeep = {
+			consumer_goods = 3
+			GF_nyto_collapse_liquid = 10
+		}
+	}
+	weight = {
+		weight = 5
+	}
+}
+
+#科技牧师
+GFnyto_technology_minister = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_research_lab_1
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+	resources = {
+		category = planet_researchers
+		produces = {
+			physics_research = 10
+			engineering_research = 10
+			society_research = 10
+			unity = 5
+		}
+		upkeep = {
+			consumer_goods = 2
+		}
+	}
+	weight = {
+		weight = 5
+	}
+}
+
+#开拓者
+GFnyto_explorer = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_colony_shelter
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+	resources = {
+		category = planet_researchers
+		produces = {
+			energy = 10
+			minerals = 10
+			alloys = 5
+		}
+		upkeep = {
+			consumer_goods = 6
+			food = 5
+		}
+	}
+	weight = {
+		weight = 999
+	}
+}
+
+#算法工程师
+GFnyto_algorithm = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_GFnyto_algorithm
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	possible = {
+		is_species_class = nyto
+	}
+	resources = {
+		category = buffer
+		produces = {
+			GF_nyto_training_key = 3
+		}
+		upkeep = {
+			consumer_goods = 5
+			rare_crystals = 3
+			exotic_gases = 3
+		}
+	}
+	weight = {
+		weight = 5
+	}
+}
+
+#架构师
+GFnyto_framework = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_GFnytp_framework_core
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	resources = {
+		category = planet_jobs_productive
+		produces = {
+			GF_nyto_new_fire_control_unit = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_building = building_GFnytp_framework_core2
+				}
+			}
+			GF_nyto_new_fire_control_unit = 1
+		}
+		upkeep = {
+			alloys = 5
+			energy = 5
+			GF_nyto_training_key = 1
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_building = building_GFnytp_framework_core2
+				}
+			}
+			alloys = 1
+			energy = 1
+			GF_nyto_training_key = 1
+		}
+	}
+	possible = {
+		is_species_class = nyto
+	}
+	weight = {
+		weight = 5
+	}
+}
+
+#逆向坍塌操作员
+GFnyto_collapse_particle_rar = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_GFnytp_framework_core
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			minerals = 5
+			alloys = 5
+			consumer_goods = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					colony_type = col_foundry
+					has_planetary_ascension_tier >= 1
+				}			
+			}
+			alloys = 2
+		}
+		produces = {
+			trigger = {
+				planet = {
+					colony_type = col_foundry
+					has_planetary_ascension_tier >= 2
+				}			
+			}
+			alloys = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					colony_type = col_foundry
+					has_planetary_ascension_tier >= 3
+				}			
+			}
+			alloys = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					colony_type = col_foundry
+					has_planetary_ascension_tier >= 4
+				}			
+			}
+			alloys = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					colony_type = col_foundry
+					has_planetary_ascension_tier >= 5
+				}			
+			}
+			alloys = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					colony_type = col_foundry
+					has_planetary_ascension_tier >= 6
+				}			
+			}
+			alloys = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					colony_type = col_foundry
+					has_planetary_ascension_tier >= 7
+				}			
+			}
+			alloys = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					colony_type = col_foundry
+					has_planetary_ascension_tier >= 8
+				}			
+			}
+			alloys = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					colony_type = col_foundry
+					has_planetary_ascension_tier >= 9
+				}			
+			}
+			alloys = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					colony_type = col_foundry
+					has_planetary_ascension_tier >= 10
+				}			
+			}
+			alloys = 1
+		}
+		upkeep = {
+			GF_nyto_collapse_liquid = 4
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					colony_type = col_foundry
+				}			
+			}
+			GF_nyto_collapse_liquid = 1
+		}
+	}
+	planet_modifier = {
+		pop_environment_tolerance = -0.01
+	}
+	triggered_planet_modifier = {
+		potential = {
+			planet = {
+				has_building = building_GFnyto_dimensional_fabricator2
+			}
+		}
+		pop_environment_tolerance = -0.01
+	}
+	possible = {
+		is_species_class = nyto
+	}
+	weight = {
+		weight = 5
+	}
+}
+
+#物质压缩员
+GFnyto_collapse_particle_zip = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_GFnytp_framework_core
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	resources = {
+		category = planet_researchers
+		produces = {
+			GF_nyto_collapse_liquid = 5
+		}
+		produces = {
+			trigger = {
+				planet = {
+					AND = {
+						habitability = {
+							who = owner_main_species
+							value <= 0.5
+						}
+					}
+				}
+			}
+			GF_nyto_collapse_liquid = 0.5
+		}
+		produces = {
+			trigger = {
+				planet = {
+					AND = {
+						habitability = {
+							who = owner_main_species
+							value <= 0.3
+						}
+					}
+				}
+			}
+			GF_nyto_collapse_liquid = 1
+		}
+		upkeep = {
+			energy = 40
+			minerals = 10
+			alloys = 10
+		}
+	}
+	planet_modifier = {
+		pop_environment_tolerance = -0.01
+	}
+	triggered_planet_modifier = {
+		potential = {
+			planet = {
+				has_building = building_GFnyto_nourishment_center2
+			}
+		}
+		pop_environment_tolerance = -0.01
+	}
+	possible = {
+		is_species_class = nyto
+	}
+	weight = {
+		weight = 5
+	}
+}
+
+#昙花种植者
+GFnyto_Epiphyllum_job = {
+	category = worker
+	condition_string = SPECIALIST_JOB_TRIGGER
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	possible = {
+		is_species_class = nyto
+	}
+	resources = {
+		category = planet_farmers
+		produces = {
+			trigger = {
+				exists = owner
+			}
+			food = 7
+			GF_nyto_collapse_liquid = 2
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_civic = civic_Gf_nyto_tanhua_pluse
+				}
+			}
+			GF_nyto_collapse_liquid = 3
+			food = 2
+		}
+	}
+	weight = {
+		weight = 5
+	}
+}

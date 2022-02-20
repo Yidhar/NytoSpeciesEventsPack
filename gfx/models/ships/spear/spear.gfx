@@ -1,0 +1,15 @@
+objectTypes = {
+	pdxmesh = {
+		name = "spear_of_adun_mesh"
+		file = "gfx/models/ships/spear/spear.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle"			type = "spear_idle_animation" }
+	}	
+
+	pdxmesh = {
+		name = "spear_frame_mesh"
+		file = "gfx/models/ships/spear/empty.mesh"
+		scale = 1.0
+	}
+}

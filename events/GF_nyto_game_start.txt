@@ -1,0 +1,421 @@
+namespace = GFnytostart
+#普通起源，送资源、送自主电脑科技、送二段灵飞、送一段机飞、生成首都遗迹
+country_event = {
+	id = GFnytostart.0
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		owner = {
+			has_origin = origin_GF_nyto_the_last_light
+		}
+	}
+	immediate = {
+		set_global_flag = has_NYTO_mod
+	}
+}
+
+country_event = {
+	id = GFnytostart.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		owner = {
+			has_origin = origin_GF_nyto_the_last_light
+		}
+		is_ai = no
+	}
+	immediate = {
+		begin_event_chain = {
+			event_chain = "GFnyto_paradeus_pioneer_chain"
+			target = this
+		}
+		capital_scope = {
+			create_archaeological_site = site_nyto_unknown_civilization_202055
+			solar_system = {
+				save_event_target_as = GFnyto_scope
+			}
+		}
+		every_system = {
+			limit = {
+				distance = {
+					source = event_target:GFnyto_scope
+					max_jumps = 1
+				}
+			}
+			random_system_planet = {
+				limit = {
+					OR = {
+						is_planet_class = pc_desert
+						is_planet_class = pc_arid
+						is_planet_class = pc_savannah
+						is_planet_class = pc_tundra
+						is_planet_class = pc_alpine
+						is_planet_class = pc_continental
+						is_planet_class = pc_tropical
+						is_planet_class = pc_ocean
+						is_planet_class = pc_arctic
+						is_planet_class = pc_barren
+					}
+				}
+					change_pc = pc_nuked
+					change_planet_size = 10		
+					while = {
+						count = 20
+						reroll_deposits = yes
+					}
+				
+			}
+		}
+		home_planet = {
+			planet_event = {
+				id = GFnytoeild.1
+			}
+			planet_event = {
+				id = GFnyto_other_event.1
+				days = 7200
+			}
+			save_event_target_as = set_pc_GF_nyto_embers_gloomy
+			while = {
+				limit = {
+					has_district = district_city
+				}
+				remove_district = district_city
+			}
+			while = {
+				limit = {
+					has_district = district_farming
+				}
+				remove_district = district_farming
+			}
+			while = {
+				limit = {
+					has_district = district_mining
+				}
+				remove_district = district_mining
+			}
+			while = {
+				limit = {
+					has_district = district_industrial
+				}
+				remove_district = district_industrial
+			}
+			while = {
+				limit = {
+					has_district = district_generator
+				}
+				remove_district = district_generator
+			}
+			remove_building = building_foundry_1
+			remove_building = building_factory_1
+			remove_building = building_research_lab_1
+			add_building = building_GFnyto_transportation_hub
+			add_building = building_GFnyto_collapse_exploit_plant_1
+			add_district = district_GF_nyto_pc_toxic_underground_shelters
+			add_district = district_GF_nyto_pc_toxic_underground_shelters
+			add_district = district_GF_nyto_pc_toxic_underground_industrial_area
+			add_district = district_GF_nyto_pc_toxic_underground_research_institute
+			add_deposit = d_GFnyto_ancient_city_zone
+			add_deposit = d_GFnyto_ancient_industry_zone
+			while = {
+				count = 10
+				create_pop = {
+					species = root
+				}
+			}
+			if = {
+				limit = {
+					root = {
+						has_civic = civic_GF_nyto_forward_base
+					}
+				}
+				create_army = {
+					name = "远征军"
+					owner = root
+					species = root
+					type = "GF_nyto_machine_assault_2"
+				}
+				create_army = {
+					name = "远征军"
+					owner = root
+					species = root
+					type = "GF_nyto_machine_assault_2"
+				}
+				root = {
+					add_modifier = {
+						modifier = GF_nyto_forward_base
+						years = 5
+					}
+				}									
+			}
+			if = {
+				limit = { 
+					root = {
+						has_civic = civic_GF_nyoto_armor_train
+					}				
+				}
+				while = {
+					count = 2
+					create_army = {
+						name = "装甲列车"
+						owner = root
+						species = root
+						type = GF_nyto_armor_train
+					}
+				}	
+				root = {
+					every_owned_fleet = {
+						limit = {
+							is_ship_class = shipclass_military
+						}
+						delete_fleet = this
+					}
+				}			
+			}
+			
+		}
+		give_technology = {
+			message = no
+			tech = tech_combat_computers_3
+		}
+		if = {
+			limit = {  	
+				has_civic = civic_GF_nyto_special_operations_command											
+			}		 
+			give_technology = {
+				message = no
+				tech = tech_GF_nyto_white_knight
+			}
+					
+		}
+	}
+}
+
+
+#开场白
+# country_event = {
+# 	id = GFnytostart.100
+# 	title = "GFnytostart.100.name"
+# 	desc = "GFnytostart.100.desc"
+# 	picture = GFX_evt_GFnyto_game_start
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		OR = {
+# 			owner = {
+# 				has_origin = origin_GF_nyto_the_last_light
+# 			}
+# 			owner = {
+# 				has_origin = origin_GF_nyto_the_beginning_of_exile
+# 			}
+# 		}
+# 	}
+# 	immediate = {
+# 	}
+# }
+
+#AI加强
+country_event = {
+	id = GFnytostart.110
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		owner = {
+			has_authority = auth_GF_paradeus
+			has_origin = origin_GF_nyto_the_last_light
+			is_ai = yes
+		}
+	}
+	immediate = {
+		add_modifier = {
+			modifier = GFnyto_set_up_heritage_department
+		}
+		give_technology = {
+			tech = tech_GF_nyto_super_ai_o
+		}
+		random_owned_planet = {
+			planet_event = {
+				id = gfnytorelics.1
+			}
+			planet_event = {
+				id = gfnytorelics.2
+			}
+			planet_event = {
+				id = gfnytorelics.3
+			}
+			planet_event = {
+				id = gfnytorelics.4
+			}
+			planet_event = {
+				id = gfnytorelics.5
+			}
+			planet_event = {
+				id = gfnytorelics.6
+			}
+		}
+	}
+}
+
+#玩家以天灾起源游戏时生成涅托堕落
+country_event = {
+	id = GFnytostart.1000
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_origin = origin_GF_nyto_the_beginning_of_exile
+	}
+	immediate = {
+		if = {
+			limit = {
+				any_system = {
+					NOR = {
+						exists = space_owner
+						has_star_flag = hostile_system
+						has_star_flag = guardian
+						has_star_flag = enclave
+						has_star_flag = primitive_system
+					}
+					any_system_planet = {
+						habitable_planet = yes
+						has_anomaly = no
+						is_colony = no
+						is_capital = no
+						NOR = {
+							exists = owner
+							exists = controller
+						}
+					}
+				}
+			}
+			random_system = {
+				limit = {
+					NOR = {
+						exists = space_owner
+						has_star_flag = hostile_system
+						has_star_flag = guardian
+						has_star_flag = enclave
+						has_star_flag = primitive_system
+					}
+					any_system_planet = {
+						habitable_planet = yes
+						has_anomaly = no
+						is_colony = no
+						is_capital = no
+						NOR = {
+							exists = owner
+							exists = controller
+						}
+					}
+				}
+				random_system_planet = {
+					change_pc = pc_GF_nyto_embers_gloomy
+					set_planet_flag = GFnyto_district_energy
+					set_planet_flag = GFnyto_district_mineral
+					set_planet_flag = GFnyto_district_food
+					set_planet_flag = GFnyto_district_consumer_good
+					set_planet_flag = GFnyto_district_alloy
+					set_planet_flag = GFnyto_district_refine
+					set_planet_flag = GFnyto_district_science
+					set_planet_flag = GFnyto_district_administration
+					set_planet_flag = GFnyto_district_leisure
+					set_planet_flag = GFnyto_district_trade
+					#					add_deposit	= d_GFnyto_geocentric_zone
+					add_deposit = d_GFnyto_black_zone
+					limit = {
+						habitable_planet = yes
+						has_owner = no
+						is_capital = no
+					}
+					save_event_target_as = colonized_planet
+					#					surveyed = {
+					#						set_surveyed = no
+					#  						surveyor = root
+					#    				}
+					prevent_anomaly = yes
+					create_species = {
+						name = "NAME_GFnyto_fallen_empire_species"
+						plural = "NAME_GFnyto_fallen_empire_species_many"
+						class = "nyto"
+						portrait = "GFnyto_nyto"
+						traits = {
+							trait = trait_GF_nyto_the_last_light
+							trait = trait_GF_nyto_ogas_agreement
+							trait = trait_GF_nyto_collapse_radiation_adaptation
+							trait = trait_psionic
+							trait = trait_cybernetic
+						}
+						immortal = yes
+						effect = {
+							save_global_event_target_as = GFnyto_fallen_empire_species
+						}
+					}
+					create_country = {
+						authority = "auth_GF_paradeus"
+						origin = "origin_GF_nyto_fallen_empire"
+						name = "守墓人"
+						name_list = "GFNYTO01"
+						species = event_target:GFnyto_fallen_empire_species
+						type = fallen_empire
+						ethos = {
+							ethic = ethic_paradeus_antecedentnyto
+						}
+						civics = {
+							civic = civic_GF_nyto_90wish
+							civic = civic_GF_nyto_technology_minister
+						}
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "GFnyto"
+								file = "flag_GF_nyto_flags_00.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "00_solid.dds"
+							}
+							colors = {
+								"dark_grey"
+								"black"
+								"null"
+								"null"
+							}
+						}
+						exclude_day_zero_contact = root
+						effect = {
+							save_global_event_target_as = GFnyto_fallen_empire_country
+							create_leader = {
+								class = ruler
+								species = event_target:GFnyto_fallen_empire_species
+								name = random
+							}
+						}
+					}
+					set_owner = last_created_country
+					set_capital = yes
+					while = {
+						count = 200
+						create_pop = {
+							species = event_target:GFnyto_fallen_empire_species
+						}
+					}
+					solar_system = {
+						create_starbase = {
+							size = starbase_citadel
+							module = shipyard
+							owner = event_target:GFnyto_fallen_empire_country
+						}
+					}
+					add_awakened_fallen_empire_fleet = yes
+					root = {
+						country_event = {
+							id = GFnytobloodywar.1
+							days = 10
+						}
+					}
+				}
+				last_created_country = {
+					set_graphical_culture = fallen_empire_02
+				}
+			}
+		}
+	}
+}

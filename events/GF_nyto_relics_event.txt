@@ -1,0 +1,181 @@
+namespace = gfnytoparadeusancrel
+#首都遗迹阶段1
+fleet_event = {
+	id = gfnytoparadeusancrel.2001
+	title = "gfnytoparadeusancrel.2001.name"
+	desc = "gfnytoparadeusancrel.2001.desc"
+	picture = GFX_evt_nyto_unknown_civilization_202055_1
+	show_sound = event_door_opening
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	option = {
+		name = "gfnytoparadeusancrel.2001.a"
+		owner = {
+			add_resource = {
+				minor_artifacts = 20
+			}
+			enable_special_project = {
+				name = "GF_NYTO_PARADEUS_COLONY_1"
+				location = home_planet
+				owner = root.owner
+			}
+		}
+	}
+}
+
+#首都遗迹阶段2
+fleet_event = {
+	id = gfnytoparadeusancrel.2002
+	title = "gfnytoparadeusancrel.2002.name"
+	desc = "gfnytoparadeusancrel.2002.desc"
+	picture = GFX_evt_nyto_unknown_civilization_202055_2
+	show_sound = event_psionic
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	option = {
+		name = "gfnytoparadeusancrel.2002.a"
+		owner = {
+			enable_special_project = {
+				name = "GF_NYTO_PARADEUS_COLONY_2"
+				location = home_planet
+				owner = root.owner
+			}
+		}
+	}
+}
+
+#首都遗迹阶段3
+fleet_event = {
+	id = gfnytoparadeusancrel.2003
+	title = "gfnytoparadeusancrel.2003.name"
+	desc = "gfnytoparadeusancrel.2003.desc"
+	picture = GFX_evt_nyto_unknown_civilization_202055_3
+	show_sound = event_ringworld_build_complete
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	#	after = {from = { set_site_progress_locked = no }}
+	option = {
+		name = "gfnytoparadeusancrel.2003.a"
+		owner = {
+			add_resource = {
+				minor_artifacts = 5
+			}
+			enable_special_project = {
+				name = "GF_NYTO_PARADEUS_COLONY_3"
+				location = home_planet
+				owner = root.owner
+			}
+		}
+	}
+}
+
+#首都遗迹阶段4
+fleet_event = {
+	id = gfnytoparadeusancrel.2004
+	title = "gfnytoparadeusancrel.2004.name"
+	desc = "gfnytoparadeusancrel.2004.desc"
+	picture = GFX_evt_nyto_unknown_civilization_202055_4
+	show_sound = event_life_support_fail
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	#	after = {from = { set_site_progress_locked = no }}
+	option = {
+		name = "gfnytoparadeusancrel.2004.a"
+		owner = {
+			add_resource = {
+				minor_artifacts = 1
+			}
+			enable_special_project = {
+				name = "GF_NYTO_PARADEUS_COLONY_4"
+				location = home_planet
+				owner = root.owner
+			}
+		}
+	}
+}
+
+#首都遗迹阶段5
+fleet_event = {
+	id = gfnytoparadeusancrel.2005
+	title = "gfnytoparadeusancrel.2005.name"
+	desc = "gfnytoparadeusancrel.2005.desc"
+	picture = GFX_evt_nyto_unknown_civilization_202055_5
+	show_sound = event_structural_collapse
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	#	after = {from = { set_site_progress_locked = no }}
+	option = {
+		name = "gfnytoparadeusancrel.2005.a"
+		owner = {
+			add_resource = {
+				minor_artifacts = 1
+			}
+			enable_special_project = {
+				name = "GF_NYTO_PARADEUS_COLONY_5"
+				location = home_planet
+				owner = root.owner
+			}
+		}
+	}
+}
+
+#首都遗迹阶段6
+fleet_event = {
+	id = gfnytoparadeusancrel.2006
+	title = "gfnytoparadeusancrel.2006.name"
+	desc = "gfnytoparadeusancrel.2006.desc"
+	picture = GFX_evt_nyto_unknown_civilization_202055_6
+	show_sound = event_ringworld_build_complete
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	#	after = {from = { set_site_progress_locked = no }}
+	option = {
+		name = "gfnytoparadeusancrel.2006.a"
+		owner = {
+			add_resource = {
+				minor_artifacts = 10
+			}
+			enable_special_project = {
+				name = "GF_NYTO_PARADEUS_COLONY_6"
+				location = home_planet
+				owner = root.owner
+			}
+		}
+	}
+}

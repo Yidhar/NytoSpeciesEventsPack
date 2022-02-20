@@ -1,0 +1,16 @@
+namespace = GFnytomth
+#花期
+planet_event = {
+	id = GFnytomth.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR={
+			is_planet_class=pc_GF_nyto_devil_furnace
+			is_planet_class=pc_GF_nyto_embers_gloomy
+		}
+		owner = {has_authority = auth_GF_paradeus}
+		num_pops > 0
+	}
+	immediate = {add_modifier = {modifier = GFnyto_flower_period months = 2}}
+}
