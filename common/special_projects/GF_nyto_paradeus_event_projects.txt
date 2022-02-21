@@ -4,12 +4,6 @@ special_project = {
 	event_chain = "GFnyto_paradeus_pioneer_chain"
 	cost = 2000
 	tech_department = society_technology
-	abort_trigger = {
-		has_resource = {
-			type = energy
-			amount >= 1000
-		}
-	}
 	picture = GFX_evt_nyto_unknown_civilization_202055_1_1
 	event_scope = planet_event
 	on_start = {
@@ -26,7 +20,7 @@ special_project = {
 	}
 }
 
-#搜索科学家
+#重返诺德豪森
 special_project = {
 	key = "GF_NYTO_PARADEUS_COLONY_2"
 	event_chain = "GFnyto_paradeus_pioneer_chain"
@@ -60,7 +54,7 @@ special_project = {
 	}
 }
 
-#基因链
+#信号解密
 special_project = {
 	key = "GF_NYTO_PARADEUS_COLONY_4"
 	event_chain = "GFnyto_paradeus_pioneer_chain"

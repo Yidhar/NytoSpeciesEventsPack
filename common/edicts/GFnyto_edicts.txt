@@ -28,4 +28,7 @@ GFnyto_rbq ={
 			set_country_flag = GFnyto_rbq			
 		}
 	}
+	modifier = {
+		ship_archeaological_site_clues_add = 999
+	}
 }
