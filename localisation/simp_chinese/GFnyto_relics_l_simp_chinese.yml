@@ -22,9 +22,9 @@ gfnytorelics.2.desc:0 "我们在诺德豪森遗迹中复刻了伊热夫斯克地
 gfnytorelics.2.a:0 "很好，准备解读工作"
 txt_gfnytorelics2_a:0 "遗迹下一阶段已经解锁。"
 
-gfnytoparadeusancrel.2003.name:0 "我编不动啦"
-gfnytoparadeusancrel.2003.desc:0 "我编不动啦"
-
+gfnytoparadeusancrel.2003.name:0 "信号解码"
+gfnytoparadeusancrel.2003.desc:0 "该死的，我们在对信号的解读上陷入了困境，我们完全没有办法将其与某种有意义的东西相关联起来，虽然我们确实捕获到了，但是其作用目的还是一头雾水，第一遗迹的信号究竟是有什么意义，遗迹在持续向外发送什么？我们都不得而至，研究一筹莫展。\n\n我们找到了突破点！在我们对遗迹信号进行数学建模分析时，我们发现其模型与我们所知的OGAS系统及其相似。对其分析需要进行溯源，我们需要一台当初用来完成自动化系统的三进制计算机。恰好我们知道在哪里能找到！Сетунь"
+gfnytoparadeusancrel.2003.a:0 "有点老，不知道拍一拍还能不能用"
 gfnytoparadeusancrel.2004.name:0 "我编不动啦"
 gfnytoparadeusancrel.2004.desc:0 "我编不动啦"
 
@@ -36,7 +36,7 @@ gfnytoparadeusancrel.2006.desc:0 "我编不动啦"
 
 
 
-gfnytoparadeusancrel.2003.a:0 "这些远古建筑是怎么被装进这些小盒子里的？"
+
 gfnytoparadeusancrel.2004.a:0 "人类纪元的三女神计划。"
 gfnytoparadeusancrel.2005.a:0 "距离遗迹的启动仅一步之遥。"
 gfnytoparadeusancrel.2006.a:0 "现实世界层面的探索告一段落了。"

@@ -20,10 +20,12 @@ fleet_event = {
 			add_resource = {
 				minor_artifacts = 20
 			}
-			enable_special_project = {
-				name = "GF_NYTO_PARADEUS_COLONY_1"
-				location = home_planet
-				owner = root.owner
+			home_planet = {
+				enable_special_project = {
+					name = "GF_NYTO_PARADEUS_COLONY_1"
+					location = this
+					owner = root.owner
+				}
 			}
 		}
 	}
@@ -71,7 +73,6 @@ fleet_event = {
 			set_site_progress_locked = yes
 		}
 	}
-	#	after = {from = { set_site_progress_locked = no }}
 	option = {
 		name = "gfnytoparadeusancrel.2003.a"
 		owner = {
@@ -102,7 +103,6 @@ fleet_event = {
 			set_site_progress_locked = yes
 		}
 	}
-	#	after = {from = { set_site_progress_locked = no }}
 	option = {
 		name = "gfnytoparadeusancrel.2004.a"
 		owner = {
@@ -133,7 +133,6 @@ fleet_event = {
 			set_site_progress_locked = yes
 		}
 	}
-	#	after = {from = { set_site_progress_locked = no }}
 	option = {
 		name = "gfnytoparadeusancrel.2005.a"
 		owner = {
@@ -164,7 +163,6 @@ fleet_event = {
 			set_site_progress_locked = yes
 		}
 	}
-	#	after = {from = { set_site_progress_locked = no }}
 	option = {
 		name = "gfnytoparadeusancrel.2006.a"
 		owner = {
