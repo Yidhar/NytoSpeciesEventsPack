@@ -4,9 +4,14 @@ trait_GF_nyto_the_last_light= {
     cost = 0
 	sorting_priority = 20
 	potential_crossbreeding_chance = 0#潜在杂交概率
-	initial = no#是否初始特质，指是否开局可选
-	randomized = no#是否随机特质（指生成ai时是否会有此特性）
-	modification = no
+	initial = no #是否初始特质，指是否开局可选
+	randomized = no #是否随机特质（指生成ai时是否会有此特性）
+	species_possible_remove = {
+		always = no
+	}
+	species_potential_add = {
+		always = no
+	}
 	immortal_leaders = no
 	improves_leaders = yes#是否会影响领袖
 	advanced_trait=no#是否高级特质
@@ -28,12 +33,17 @@ trait_GF_nyto_ogas_agreement= {
 	potential_crossbreeding_chance = 0#潜在杂交概率
 	initial = no#是否初始特质，指是否开局可选
 	randomized = no#是否随机特质（指生成ai时是否会有此特性）
-	modification =  no
+	species_possible_remove = {
+		always = no
+	}
+	species_potential_add = {
+		always = no
+	}
 	immortal_leaders = no
 	improves_leaders = yes#是否会影响领袖
 	advanced_trait=no#是否高级特质
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_ogas_agreement.dds"
-	allowed_archetypes = {NYTO LITHOID MACHINE}#物种限制（涅托）
+	allowed_archetypes = {NYTO}#物种限制（涅托）
     modifier = {
 		planet_jobs_produces_mult = -0.2
 		country_unity_produces_mult = -0.3
@@ -50,7 +60,12 @@ trait_GF_nyto_ogas_agreement_plus= {
 	potential_crossbreeding_chance = 0#潜在杂交概率
 	initial = no#是否初始特质，指是否开局可选
 	randomized = no#是否随机特质（指生成ai时是否会有此特性）
-	modification = no
+	species_potential_remove = {
+		always = yes
+	}
+	species_potential_add = {
+		always = no
+	}
 	immortal_leaders = no
 	improves_leaders = yes#是否会影响领袖
 	advanced_trait= yes#是否高级特质
@@ -75,7 +90,13 @@ trait_GF_nyto_noussphere = {
 	randomized = no #是否随机特质（指生成ai时是否会有此特性）
 	improves_leaders = yes #是否会影响领袖
 	advanced_trait= yes #是否高级特质
-	allowed_archetypes = {NYTO LITHOID MACHINE}#物种限制（涅托）
+	allowed_archetypes = {NYTO }#物种限制（涅托）
+	species_potential_remove = {
+		always = yes
+	}
+	species_potential_add = {
+		always = no
+	}
 	modifier = {
 		planet_jobs_produces_mult = 0.15
 		all_technology_research_speed = 0.5
@@ -97,6 +118,9 @@ trait_GFnyto_tanhua = {
 	cost = 4
 	sorting_priority = 20
 	potential_crossbreeding_chance = 0#潜在杂交概率
+	species_possible_remove = {
+		always = no
+	}
 	randomized = no#是否随机特质（指生成ai时是否会有此特性）
 	improves_leaders = no #是否会影响领袖
 	advanced_trait= no #是否高级特质
@@ -116,6 +140,12 @@ trait_GF_nyto_collapse_radiation_adaptation= {
 	immortal_leaders = no
 	improves_leaders = no#是否会影响领袖
 	advanced_trait=no#是否高级特质
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_collapse_radiation_adaptation.dds"
 	allowed_archetypes = {NYTO}#物种限制（涅托）
     modifier = {
@@ -134,6 +164,12 @@ trait_GF_nyto_loyal_ELID_infected= {
 	randomized = no#是否随机特质（指生成ai时是否会有此特性）
 	improves_leaders = no#是否会影响领袖
 	advanced_trait= no#是否高级特质
+	species_possible_remove = {
+		always = no
+	}
+	species_potential_add = {
+		always = no
+	}
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_consciousness_integration.dds"
 	allowed_archetypes = { EILD }
 	modifier = {
@@ -155,7 +191,12 @@ trait_GF_nyto_savage_origin= {
 	cost = 0
 	potential_crossbreeding_chance = 0#潜在杂交概率
 	initial = no#是否初始特质，指是否开局可选
-	modification = no # 可否修改
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
 	randomized = no#是否随机特质（指生成ai时是否会有此特性）
 	improves_leaders = yes#是否会影响领袖
 	advanced_trait= no#是否高级特质
@@ -174,7 +215,12 @@ trait_GF_nyto_gluttony= {
 	cost = 0
 	potential_crossbreeding_chance = 0#潜在杂交概率
 	initial = no#是否初始特质，指是否开局可选
-	modification = no # 可否修改
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
 	randomized = no#是否随机特质（指生成ai时是否会有此特性）
 	improves_leaders = yes#是否会影响领袖
 	advanced_trait= no#是否高级特质
@@ -186,8 +232,13 @@ trait_GF_nyto_gluttony= {
 trait_GF_nyto_lust= {
 	cost = 0
 	potential_crossbreeding_chance = 0#潜在杂交概率
-	initial = no#是否初始特质，指是否开局可选
-	modification = no # 可否修改
+	initial = no#是否初始特质，指是否开局可选	
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
 	randomized = no#是否随机特质（指生成ai时是否会有此特性）
 	improves_leaders = yes#是否会影响领袖
 	advanced_trait= no#是否高级特质
@@ -200,7 +251,12 @@ trait_GF_nyto_greedy= {
 	cost = 0
 	potential_crossbreeding_chance = 0#潜在杂交概率
 	initial = no#是否初始特质，指是否开局可选
-	modification = no # 可否修改
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
 	randomized = no#是否随机特质（指生成ai时是否会有此特性）
 	improves_leaders = yes#是否会影响领袖
 	advanced_trait= no#是否高级特质
@@ -213,7 +269,12 @@ trait_GF_nyto_arrogant= {
 	cost = 0
 	potential_crossbreeding_chance = 0#潜在杂交概率
 	initial = no#是否初始特质，指是否开局可选
-	modification = no # 可否修改
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
 	randomized = no#是否随机特质（指生成ai时是否会有此特性）
 	improves_leaders = yes#是否会影响领袖
 	advanced_trait= no#是否高级特质
@@ -226,7 +287,12 @@ trait_GF_nyto_laziness= {
 	cost = 0
 	potential_crossbreeding_chance = 0#潜在杂交概率
 	initial = no#是否初始特质，指是否开局可选
-	modification = no # 可否修改
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
 	randomized = no#是否随机特质（指生成ai时是否会有此特性）
 	improves_leaders = yes#是否会影响领袖
 	advanced_trait= no#是否高级特质
@@ -239,7 +305,12 @@ trait_GF_nyto_anger= {
 	cost = 0
 	potential_crossbreeding_chance = 0#潜在杂交概率
 	initial = no#是否初始特质，指是否开局可选
-	modification = no # 可否修改
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
 	randomized = no#是否随机特质（指生成ai时是否会有此特性）
 	improves_leaders = yes#是否会影响领袖
 	advanced_trait= no#是否高级特质
@@ -255,7 +326,12 @@ trait_GF_nyto_envy= {
 	cost = 0
 	potential_crossbreeding_chance = 0#潜在杂交概率
 	initial = no#是否初始特质，指是否开局可选
-	modification = no # 可否修改
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
 	randomized = no#是否随机特质（指生成ai时是否会有此特性）
 	improves_leaders = yes#是否会影响领袖
 	advanced_trait= no#是否高级特质
@@ -272,9 +348,9 @@ trait_GF_nyto_envy= {
 trait_GF_nyto_underground_dweller= {
 	cost = 2
 	potential_crossbreeding_chance = 0#潜在杂交概率
-	initial = yes#是否初始特质，指是否开局可选
-	randomized = yes#是否随机特质（指生成ai时是否会有此特性）
-	improves_leaders = yes#是否会影响领袖
+	initial = yes #是否初始特质，指是否开局可选
+	randomized = yes #是否随机特质（指生成ai时是否会有此特性）
+	improves_leaders = yes #是否会影响领袖
 	advanced_trait= no#是否高级特质
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_underground_dweller.dds"
 	allowed_archetypes = {NYTO}
@@ -289,10 +365,10 @@ trait_GF_nyto_underground_dweller= {
 trait_GF_nyto_anti_stress_drugs= {
 	cost = 2
 	potential_crossbreeding_chance = 0#潜在杂交概率
-	initial = yes#是否初始特质，指是否开局可选
-	randomized = yes#是否随机特质（指生成ai时是否会有此特性）
-	improves_leaders = yes#是否会影响领袖
-	advanced_trait= no#是否高级特质
+	initial = yes #是否初始特质，指是否开局可选
+	randomized = yes #是否随机特质（指生成ai时是否会有此特性）
+	improves_leaders = yes #是否会影响领袖
+	advanced_trait= no #是否高级特质
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_anti_stress_drugs.dds"
 	allowed_archetypes = {NYTO}
 	modifier = {

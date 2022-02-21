@@ -7,7 +7,6 @@ nyto= {
 	portrait_modding = yes	
 	possible = {authority = {value = auth_GF_paradeus}}
 	portraits = {"GFnyto_nyto"}
-#	non_randomized_portraits = {"GFnyto_crisis"}
 	leader_age_min = 5
 	leader_age_max = 50
 	graphical_culture = humanoid_01
@@ -24,7 +23,6 @@ nyto= {
 			physics_research = 0.5
 			society_research = 0.5
 			engineering_research = 0.5
-			unity = 1
 			GF_nyto_dark_star_core = 0.01
 		}
 		produces = {

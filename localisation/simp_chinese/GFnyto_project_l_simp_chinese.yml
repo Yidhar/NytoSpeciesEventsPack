@@ -18,11 +18,14 @@ GF_NYTO_PARADEUS_COLONY_1_DESC:0 "人类纪元留下的遗迹群资料是宝贵�
 GF_NYTO_PARADEUS_COLONY_2:0 "重返诺德豪森"
 GF_NYTO_PARADEUS_COLONY_2_DESC:0 "得益于我们的科学家在伊热夫斯克地下的研究解读，我们的工程师认为也许找到了遗迹信号的关键线索。我们的团队回到第一遗迹-诺德豪森遗迹中，通过对模拟系统以及所发现的原先论文《遗迹量子引力机制下的自动控制原理》的解读。我们的工程师们认为遗迹的信号是需要外界的输入的，也许在我们监听遗迹的同时，遗迹也在监听我们也说不定。"
 
-GF_NYTO_PARADEUS_COLONY_3:0 "信号解密"
-GF_NYTO_PARADEUS_COLONY_3_DESC:0 "OKB-117号遗迹残留的数据晶体存储遗迹文明部分建筑的原子列阵信息，通过解密我们将掌握遗迹建筑的核心技术。"
-GF_NYTO_PARADEUS_COLONY_4:0 "基因链"
-GF_NYTO_PARADEUS_COLONY_4_DESC:0 "人类纪元遗留的资料表明，完整基因链配对是激活遗迹的密钥。我们需要改善我们种族的基因链配对，提高遗迹亲和性。"
-GF_NYTO_PARADEUS_COLONY_5:0 "OGAS主机"
-GF_NYTO_PARADEUS_COLONY_5_DESC:0 "这是一项史无前例的工程，每个[Root.Owner.GetSpeciesNamePlural]都开始融入一个巨大的OGAS网络，这将带来一股无法想象的力量。"
-GF_NYTO_PARADEUS_COLONY_6:0 "踏入锡安"
-GF_NYTO_PARADEUS_COLONY_6_DESC:0 "锡安是一个维持着完全永恒状态的子宇宙，链接着任何时间、任何维度。它不仅是我们的故土，而且是我们永恒的归宿。现在，我们踏上回家的路了。"
+GF_NYTO_PARADEUS_COLONY_3:0 "修复Сетунь"
+GF_NYTO_PARADEUS_COLONY_3_DESC:0 "Сетунь是前苏联时期的第一台三进制计算器，他与塔巴沙尔-β部署在一起组成了一个“海星”节点，根据档案记载.三进制计算机对于遗迹设施有着特殊的作用，在前苏联的遗迹武器开发中，首次部署在这里的Сетунь引起了从第一遗迹中拆除设施的共鸣。在三进制计算机的驱动下，遗迹设施开始了自我修复，并以一种不明方式吞噬了周边的物资。"
+
+GF_NYTO_PARADEUS_COLONY_4:0 "自动化生命维持系统"
+GF_NYTO_PARADEUS_COLONY_4_DESC:0 "每个[Root.Owner.GetSpeciesNamePlural]"
+
+GF_NYTO_PARADEUS_COLONY_5:0 "90wish"
+GF_NYTO_PARADEUS_COLONY_5_DESC:0 "我编不动啦"
+
+GF_NYTO_PARADEUS_COLONY_6:0 "OGAS意识体"
+GF_NYTO_PARADEUS_COLONY_6_DESC:0 "我编不动啦"

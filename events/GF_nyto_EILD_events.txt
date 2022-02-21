@@ -639,14 +639,14 @@ planet_event = {
 		}
 		create_country = {
 			name = "EILD"
-			type = faction
+			type = faction			
 			auto_delete = no
 			effect = {
 				establish_communications_no_message = root.owner
 				establish_contact = {
 					who = root.owner
 					location = root.solar_system
-				}
+				}				
 				save_global_event_target_as = EILD_country
 				create_species = {
 					name = "EILD"

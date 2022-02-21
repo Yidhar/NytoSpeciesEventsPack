@@ -25,41 +25,51 @@ txt_gfnytorelics2_a:0 "遗迹下一阶段已经解锁。"
 gfnytoparadeusancrel.2003.name:0 "信号解码"
 gfnytoparadeusancrel.2003.desc:0 "该死的，我们在对信号的解读上陷入了困境，我们完全没有办法将其与某种有意义的东西相关联起来，虽然我们确实捕获到了，但是其作用目的还是一头雾水，第一遗迹的信号究竟是有什么意义，遗迹在持续向外发送什么？我们都不得而至，研究一筹莫展。\n\n我们找到了突破点！在我们对遗迹信号进行数学建模分析时，我们发现其模型与我们所知的OGAS系统及其相似。对其分析需要进行溯源，我们需要一台当初用来完成自动化系统的三进制计算机。恰好我们知道在哪里能找到！Сетунь"
 gfnytoparadeusancrel.2003.a:0 "有点老，不知道拍一拍还能不能用"
-gfnytoparadeusancrel.2004.name:0 "我编不动啦"
-gfnytoparadeusancrel.2004.desc:0 "我编不动啦"
 
-gfnytoparadeusancrel.2005.name:0 "我编不动啦"
-gfnytoparadeusancrel.2005.desc:0 "我编不动啦"
-
-gfnytoparadeusancrel.2006.name:0 "我编不动啦"
-gfnytoparadeusancrel.2006.desc:0 "我编不动啦"
-
-
-
-
-gfnytoparadeusancrel.2004.a:0 "人类纪元的三女神计划。"
-gfnytoparadeusancrel.2005.a:0 "距离遗迹的启动仅一步之遥。"
-gfnytoparadeusancrel.2006.a:0 "现实世界层面的探索告一段落了。"
-
-
-
-
-gfnytorelics.3.name:0 "结构解密"
+gfnytorelics.3.name:0 "修复Сетунь"
 gfnytorelics.3.desc:0 "我们深刻认识了遗迹文明的建筑结构，尽管仅仅只是众多遗迹科技的冰山一角。很快我们就可以复刻这些远古建筑。"
+
 gfnytorelics.3.a:0 "奇妙"
 txt_gfnytorelics3_a:0 "我们对逆向坍缩现象有了更深的理解。遗迹下一阶段已经解锁。"
 
-gfnytorelics.4.name:0 "遗迹亲和"
-gfnytorelics.4.desc:0 "令人诧异的是，完整的基因链配对极大幅度地扩展了我们的虚识空间。曾经我们佩戴脑抑制器牺牲OGAS性能，防止OGAS在全力运算时损伤大脑。但是现在OGAS可以解除限制，解放全部算力了。"
-gfnytorelics.4.a:0 "进展神速。"
-txt_gfnytorelics4_a:0 "我们对基因修饰有了更深的理解。遗迹下一阶段已经解锁。"
+gfnytoparadeusancrel.2004.name:0 "OGAS"
+gfnytoparadeusancrel.2004.desc:0 "我编不动啦"
+gfnytoparadeusancrel.2004.a:0 "我编不动啦"
 
-gfnytorelics.5.name:0 "OGAS主机"
-gfnytorelics.5.desc:0 "如果说一个文明能够将所有的意识都集群交流，通过同一种方法共通思想，那么将带来的会是巨大的超越能力，任何有价值的想法都能被立刻实现。而现在的我们，能够做到。"
-gfnytorelics.5.a:0 "我们开始触碰真相了。"
-txt_gfnytorelics5_a:0 "我们对机体修饰有了更深的理解。遗迹下一阶段已经解锁。"
+gfnytorelics.4.name:0 "链接失败"
+gfnytorelics.4.desc:0 "我编不动啦"
+gfnytorelics.4.a:0 "我编不动啦"
+txt_gfnytorelics4_a:0 "我编不动啦"
 
-gfnytorelics.6.name:0 "谎言"
-gfnytorelics.6.desc:0 "通过搜索残留在锡安的信息流，遗迹文明——或者说我们——OGAS的主人，它们曾经试图创造出一个永恒的理想乡，永远也不会死亡的宇宙。依我们目前掌握的证据来看，它们失败了，锡安并没有维持住永恒状态。现在锡安成为了一座的巨型陵墓，归宿是个骗局，一切早已湮灭。"
-gfnytorelics.6.a:0 "不应该如此..."
+gfnytoparadeusancrel.2005.name:0 "缺少的部分"
+gfnytoparadeusancrel.2005.desc:0 "我编不动啦"
+gfnytoparadeusancrel.2005.a:0 "我编不动啦"
+
+gfnytorelics.5.name:0 "90Lab"
+gfnytorelics.5.desc:0 "我编不动啦"
+gfnytorelics.5.a:0 "我编不动啦"
+txt_gfnytorelics5_a:0 "我编不动啦"
+
+gfnytoparadeusancrel.2006.name:0 "伊莱莎&露尼西娅"
+gfnytoparadeusancrel.2006.desc:0 "我编不动啦"
+gfnytoparadeusancrel.2006.a:0 "我编不动啦"
+
+gfnytorelics.6.name:0 ""
+gfnytorelics.6.desc:0 "我编不动啦"
+
+gfnytorelics.6.a:0 "我编不动啦..."
 txt_gfnytorelics6_a:0 "新的飞升已经可以进行。"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
