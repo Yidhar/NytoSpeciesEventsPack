@@ -32,3 +32,28 @@ GFnyto_rbq ={
 		ship_archeaological_site_clues_add = 999
 	}
 }
+#领袖换装
+GF_nyto_leader_change = {
+	icon = "GFX_edict_type_time"
+	length = 0
+	potential = {
+		OR = {
+			has_country_flag = GFnyto_leader_Yegor
+			has_country_flag = GFnyto_leader_Dandelion
+			has_country_flag = GFnyto_leader_Lycoris
+		}
+	}
+	resources = {
+		category = rare_edicts
+	}
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = GFnyto_leader.2
+			}
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
