@@ -14,6 +14,7 @@ ap_GF_nyto_resurrection= {
 		custom_tooltip = {
 			fail_text = "Failed_to_complete_the_capital_ruins"
 			has_country_flag = GFnyto_has_done_zion_event_chain
+			has_ascension_perk = ap_GF_nyto_noussphere
 		}
 	}
 	
@@ -88,7 +89,7 @@ ap_GF_nyto_noussphere ={
 	}	
 	possible = {
 		OR = {
-			num_ascension_perk_slots >= 2
+			has_country_flag = GFnyto_has_ap_GF_nyto_noussphere
 			is_ai = yes
 		}		
 	}

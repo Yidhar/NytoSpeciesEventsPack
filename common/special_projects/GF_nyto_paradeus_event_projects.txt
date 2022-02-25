@@ -37,7 +37,7 @@ special_project = {
 	}
 }
 
-#清理遗迹群
+#修复Сетунь
 special_project = {
 	key = "GF_NYTO_PARADEUS_COLONY_3"
 	event_chain = "GFnyto_paradeus_pioneer_chain"
@@ -54,7 +54,7 @@ special_project = {
 	}
 }
 
-#清理遗迹群
+#OGAS
 special_project = {
 	key = "GF_NYTO_PARADEUS_COLONY_5"
 	event_chain = "GFnyto_paradeus_pioneer_chain"
@@ -71,7 +71,7 @@ special_project = {
 	}
 }
 
-#踏入锡安
+#摘除脑抑制器
 special_project = {
 	key = "GF_NYTO_PARADEUS_COLONY_6"
 	event_chain = "GFnyto_paradeus_pioneer_chain"
@@ -87,53 +87,3 @@ special_project = {
 	}
 }
 
-#改进穿梭引擎1
-#GF_NYTO_PARADEUS_shuttle_engine_1
-special_project = {
-	key = "GF_NYTO_PARADEUS_shuttle_engine_1"
-	cost = 10000
-	tech_department = physics_technology
-	picture = GFX_evt_nyto_shuttle_engine
-	event_scope = ship_event
-	on_success = {
-		owner = {
-			set_country_flag = GF_NYTO_PARADEUS_shuttle_engine_1
-		}
-	}
-	on_fail = {
-	}
-}
-
-#改进穿梭引擎2
-#GF_NYTO_PARADEUS_shuttle_engine_2
-special_project = {
-	key = "GF_NYTO_PARADEUS_shuttle_engine_2"
-	cost = 10000
-	tech_department = physics_technology
-	picture = GFX_evt_nyto_shuttle_engine
-	event_scope = ship_event
-	on_success = {
-		owner = {
-			set_country_flag = GF_NYTO_PARADEUS_shuttle_engine_2
-		}
-	}
-	on_fail = {
-	}
-}
-
-#改进穿梭引擎3
-#GF_NYTO_PARADEUS_shuttle_engine_3
-special_project = {
-	key = "GF_NYTO_PARADEUS_shuttle_engine_3"
-	cost = 10000
-	tech_department = physics_technology
-	picture = GFX_evt_nyto_shuttle_engine
-	event_scope = ship_event
-	on_success = {
-		owner = {
-			set_country_flag = GF_NYTO_PARADEUS_shuttle_engine_3
-		}
-	}
-	on_fail = {
-	}
-}

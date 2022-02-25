@@ -155,6 +155,7 @@ building_GFnyto_forward_base = {
 	ai_weight = {
 		weight = 100
 	}
+
 }
 
 #交通枢纽
@@ -170,6 +171,7 @@ building_GFnyto_transportation_hub = {
 	base_cap_amount = 1
 	planet_modifier = {
 		job_bureaucrat_add = 4
+		job_GFnyto_white_knight_add = 2
 		planet_jobs_produces_mult = 0.1
 		army_health = 0.2
 	}

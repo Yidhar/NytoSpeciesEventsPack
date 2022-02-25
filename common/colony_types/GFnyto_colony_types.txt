@@ -1,33 +1,58 @@
-# #铸造型星球
-# col_GF_nyto_pc_toxic_alloy_plural = {
-# 	icon = 1
-# 	potential = {has_planet_flag = GFnyto_district_alloy}
-# 	planet_modifier = {
-# 		planet_districts_cost_mult = -0.25
-# 		planet_metallurgists_upkeep_mult = -0.2
-# 	}
-# 	weight_modifier = {base = 0}
-# }
-# #工业型星球
-# GF_nyto_pc_toxic_consumer_good_plural = {
-# 	icon = 6
-# 	potential = {has_planet_flag = GFnyto_district_consumer_good}
-# 	planet_modifier = {
-# 		planet_districts_cost_mult = -0.25
-# 		planet_artisans_upkeep_mult = -0.2
-# 	}
-# 	weight_modifier = {base = 0}
-# }
-# #发电型星球
-# GF_nyto_pc_toxic_energy_plural = {
-# 	icon = 4
-# 	potential = {has_planet_flag = GFnyto_district_energy}
-# 	planet_modifier = {
-# 		planet_districts_cost_mult = -0.25
-# 		planet_technician_produces_mult = 0.25
-# 	}
-# 	weight_modifier = {base = 0}
-# }
+#逆向塌缩工业星球
+col_GF_nyto_pc_toxic_alloy_plural = {
+	icon = GFX_colony_type_foundry
+	potential = {
+		OR = {
+			is_planet_class = pc_GF_nyto_embers_gloomy
+			is_planet_class = pc_GF_nyto_devil_furnace
+		}
+	}
+	planet_modifier = {
+		planet_district_GF_nyto_pc_toxic_alloy_build_speed_mult = 0.25
+		planet_metallurgists_upkeep_mult = -0.2
+	}
+	weight_modifier = {
+		base = 0
+	}
+}
+
+#塌缩工业星球
+col_GF_nyto_pc_toxic_consumer_good_plural = {
+	icon = GFX_colony_type_foundry
+	potential = {
+		OR = {
+			is_planet_class = pc_GF_nyto_embers_gloomy
+			is_planet_class = pc_GF_nyto_devil_furnace
+		}
+	}
+	planet_modifier = {
+		planet_jobs_GF_nyto_collapse_liquid_produces_mult = 0.35
+	}
+	weight_modifier = {
+		base = 0
+	}
+}
+
+#密钥基地
+col_GF_nyto_pc_toxic_energy_plural = {
+	icon = GFX_colony_type_research
+	potential = {
+		OR = {
+			is_planet_class = pc_GF_nyto_embers_gloomy
+			is_planet_class = pc_GF_nyto_devil_furnace
+		}
+	}
+	planet_modifier = {
+		planet_jobs_upkeep_mult = -0.1
+	}
+	planet_modifier = {
+		custom_tooltip = "col_GF_nyto_pc_toxic_energy_plural_a"
+	}
+	weight_modifier = {
+		base = 0
+	}
+}
+
 # #农业型星球
 # col_GF_nyto_pc_toxic_food_plural = {
 # 	icon = 3

@@ -36,6 +36,13 @@ trait_GF_nyto_ogas_agreement= {
 	species_possible_remove = {
 		always = no
 	}
+	species_possible_merge_remove = {
+		OR = {
+			has_trait = trait_GF_nyto_noussphere
+			has_trait = trait_GF_nyto_ogas_agreement_plus
+		}
+		
+	}
 	species_potential_add = {
 		always = no
 	}
@@ -62,6 +69,12 @@ trait_GF_nyto_ogas_agreement_plus= {
 	randomized = no#是否随机特质（指生成ai时是否会有此特性）
 	species_potential_remove = {
 		always = yes
+	}
+	species_possible_merge_add = {
+		OR = {
+			has_trait = trait_GF_nyto_ogas_agreement
+			has_trait = trait_GF_nyto_noussphere
+		}
 	}
 	species_potential_add = {
 		always = no
@@ -92,7 +105,7 @@ trait_GF_nyto_noussphere = {
 	advanced_trait= yes #是否高级特质
 	allowed_archetypes = {NYTO }#物种限制（涅托）
 	species_potential_remove = {
-		always = yes
+		always = no
 	}
 	species_potential_add = {
 		always = no

@@ -162,6 +162,7 @@ building_GFnyto_fe_dome = {
 	category = amenity
 	base_cap_amount = 1	
 	country_modifier = {
+		ship_starting_experience_add = 999999
 		all_technology_research_speed = 1
 		country_naval_cap_mult = 2
 	}	

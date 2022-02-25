@@ -30,13 +30,13 @@ tech_GF_nyto_collapse_stability_2= {
 #坍缩粒子解析
 tech_GF_nyto_Inverse_collapse_1= {
 	icon = tech_GF_nyto_Inverse_collapse_1
-	cost = 10000
+	cost = 6000
 	area = physics
-	tier = 5
+	tier = 3
 	is_rare = yes
 	category = {field_manipulation}
 	prerequisites = { "tech_GF_nyto_collapse_stability_2" }
-	weight = 0
+	weight = 100
 	modifier = {planet_jobs_produces_mult = 0.25}
 	potential = {has_authority = auth_GF_paradeus}
 	prereqfor_desc = {
@@ -45,24 +45,18 @@ tech_GF_nyto_Inverse_collapse_1= {
 			desc = "坍塌液是一种以[紊乱运动]方式行进的粒子波，高速穿透物质后呈[量子隐态]，穿透过程辐射频率高，组成成分不同，可观测到的仅有底夸克与光子。"
 		}
 	}
-	weight_modifier = {
-		modifier = {
-			weight= 75
-			has_country_flag = can_research_tech_GF_nyto_Inverse_collapse
-		}
-	}
 	ai_weight = {weight = 5}
 }
 #逆向坍缩
 tech_GF_nyto_Inverse_collapse_2 = {
 	icon = tech_GF_nyto_Inverse_collapse_2
-	cost = 20000
+	cost = 10000
 	area = physics
-	tier = 5
+	tier = 4
 	is_rare = yes
 	category = {field_manipulation}
 	prerequisites = { "tech_GF_nyto_Inverse_collapse_1" }
-	weight = 5
+	weight = 85
 	modifier = {planet_jobs_produces_mult = 0.25}
 	potential = {has_authority = auth_GF_paradeus}
 	prereqfor_desc = {
@@ -71,48 +65,26 @@ tech_GF_nyto_Inverse_collapse_2 = {
 			desc = "坍塌物质在吸收同频率光子后其内构中大量电子跃迁到高能轨道，过程中能量传递产生高温，物质进入活跃的流状并根据物质建立模型开始回归有序排列以及恢复引斥力。"
 		}
 	}
-	weight_modifier = {
-		modifier = {
-			factor = 20
-			has_country_flag = can_research_tech_GF_nyto_Inverse_collapse
-		}
-		modifier = {
-			factor = 40
-			has_country_flag = can_research_tech_GF_nyto_Inverse_collapse
-			has_technology = tech_GF_nyto_Inverse_collapse_1
-		}
-	}
 	ai_weight = {weight = 5}
 }
 #坍塌粒子稳定化
 tech_GF_nyto_Stabiliz={
 	icon = tech_GF_nyto_Inverse_collapse_1
-	cost = 25000
+	cost = 12500
 	area = physics
 	tier = 5
 	is_rare = yes
 	category = {field_manipulation}
 	prerequisites = { "tech_GF_nyto_Inverse_collapse_2" }
-	weight = 5
+	weight = 50
 	modifier = {planet_jobs_produces_mult = 0.25}
 	potential = {has_authority = auth_GF_paradeus}
-	weight_modifier = {
-		modifier = {
-			factor = 15
-			has_country_flag = can_research_tech_GF_nyto_Inverse_collapse
-		}
-		modifier = {
-			factor = 30
-			has_country_flag = can_research_tech_GF_nyto_Inverse_collapse
-			has_technology = tech_GF_nyto_Inverse_collapse_2
-		}
-	}
-	ai_weight = {weight = 5}
+	ai_weight = {weight = 999}
 }
 #古代技术储存
 tech_GF_nyto_storage_of_ancient_technology = {
 	icon = tech_GF_nyto_shuttle_engine
-	cost = 30000
+	cost = 20000
 	area = physics
 	tier = 5
 	is_rare = yes

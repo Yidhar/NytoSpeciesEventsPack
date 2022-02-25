@@ -16,6 +16,13 @@ GFnyto_training_key ={
 }
 GFnyto_rbq ={
 	length = -1
+	unity_cost_mult = 1
+	resources = {
+		category = edicts
+		upkeep = {
+			unity = 0
+		}
+	}
 	icon = GFX_edict_fund
 	show_tech_unlock_if = {
 		always = yes
