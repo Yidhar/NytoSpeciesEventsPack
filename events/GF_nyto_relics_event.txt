@@ -98,23 +98,8 @@ fleet_event = {
 	location = from
 	archaeology = yes
 	is_triggered_only = yes
-	immediate = {
-		from = {
-			set_site_progress_locked = yes
-		}
-	}
 	option = {
 		name = "gfnytoparadeusancrel.2004.a"
-		owner = {
-			add_resource = {
-				minor_artifacts = 1
-			}
-			enable_special_project = {
-				name = "GF_NYTO_PARADEUS_COLONY_4"
-				location = home_planet
-				owner = root.owner
-			}
-		}
 	}
 }
 

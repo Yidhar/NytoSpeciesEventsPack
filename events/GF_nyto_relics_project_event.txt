@@ -33,7 +33,7 @@ planet_event = {
 	}
 }
 
-#尝试激活遗迹
+#信号反馈
 planet_event = {
 	id = gfnytorelics.2
 	title = "gfnytorelics.2.name"
@@ -55,7 +55,7 @@ planet_event = {
 	}
 }
 
-#结构解密
+#节点启动
 planet_event = {
 	id = gfnytorelics.3
 	title = "gfnytorelics.3.name"
@@ -90,7 +90,7 @@ planet_event = {
 	}
 }
 
-#基因链
+#
 planet_event = {
 	id = gfnytorelics.4
 	title = "gfnytorelics.4.name"
@@ -230,7 +230,7 @@ planet_event = {
 	}
 }
 
-#主机系统
+#
 planet_event = {
 	id = gfnytorelics.5
 	title = "gfnytorelics.5.name"
@@ -268,7 +268,7 @@ planet_event = {
 	}
 }
 
-#谎言
+#
 planet_event = {
 	id = gfnytorelics.6
 	title = "gfnytorelics.6.name"

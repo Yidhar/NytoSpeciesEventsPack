@@ -54,23 +54,6 @@ special_project = {
 	}
 }
 
-#信号解密
-special_project = {
-	key = "GF_NYTO_PARADEUS_COLONY_4"
-	event_chain = "GFnyto_paradeus_pioneer_chain"
-	cost = 10000
-	tech_department = society_technology
-	picture = GFX_evt_nyto_unknown_civilization_202055_4_1
-	event_scope = planet_event
-	on_success = {
-		planet_event = {
-			id = gfnytorelics.4
-		}
-	}
-	on_fail = {
-	}
-}
-
 #清理遗迹群
 special_project = {
 	key = "GF_NYTO_PARADEUS_COLONY_5"
