@@ -1362,14 +1362,16 @@ event = {
 	}
 	option = {
 		name = GFnytoeild.46a
-		every_owned_pop = {
-			kill_pop = yes
-		}
-		create_pop = {
-			species = owner_main_species
-		}
-		set_owner = event_target:EILD_country
-		set_planet_name = "寄了"
+		fromfrom = {
+			every_owned_pop = {
+				kill_pop = yes
+			}
+			create_pop = {
+				species = event_target:ELID_species
+			}
+			set_owner = event_target:EILD_country
+			set_planet_name = "寄了"
+		}					
 	}
 }
 
