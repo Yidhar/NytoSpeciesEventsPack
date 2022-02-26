@@ -57,13 +57,12 @@ country_event = {
 						is_planet_class = pc_barren
 					}
 				}
-					change_pc = pc_nuked
-					change_planet_size = 10		
-					while = {
-						count = 20
-						reroll_deposits = yes
-					}
-				
+				change_pc = pc_nuked
+				change_planet_size = 10
+				while = {
+					count = 20
+					reroll_deposits = yes
+				}
 			}
 		}
 		home_planet = {
@@ -145,13 +144,13 @@ country_event = {
 						modifier = GF_nyto_forward_base
 						years = 5
 					}
-				}									
+				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					root = {
 						has_civic = civic_GF_nyoto_armor_train
-					}				
+					}
 				}
 				while = {
 					count = 2
@@ -161,7 +160,7 @@ country_event = {
 						species = root
 						type = GF_nyto_armor_train
 					}
-				}	
+				}
 				root = {
 					every_owned_fleet = {
 						limit = {
@@ -169,27 +168,24 @@ country_event = {
 						}
 						delete_fleet = this
 					}
-				}			
+				}
 			}
-			
 		}
 		give_technology = {
 			message = no
 			tech = tech_combat_computers_3
 		}
 		if = {
-			limit = {  	
-				has_civic = civic_GF_nyto_special_operations_command											
-			}		 
+			limit = {
+				has_civic = civic_GF_nyto_special_operations_command
+			}
 			give_technology = {
 				message = no
 				tech = tech_GF_nyto_white_knight
 			}
-					
 		}
 	}
 }
-
 
 #开场白
 # country_event = {
@@ -211,45 +207,46 @@ country_event = {
 # 	immediate = {
 # 	}
 # }
-
 #AI加强
 country_event = {
 	id = GFnytostart.110
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		owner = {
-			has_authority = auth_GF_paradeus
-			has_origin = origin_GF_nyto_the_last_light
-			is_ai = yes
-		}
+		is_ai = yes
 	}
 	immediate = {
+		if = {
+			limit = {
+				has_authority = auth_GF_paradeus
+				has_origin = origin_GF_nyto_the_last_light
+			}
+			add_modifier = {
+				modifier = GFnyto_set_up_heritage_department
+			}
+			give_technology = {
+				tech = tech_GF_nyto_super_ai_o
+			}
+			random_owned_planet = {
+				planet_event = {
+					id = gfnytorelics.1
+				}
+				planet_event = {
+					id = gfnytorelics.2
+				}
+				planet_event = {
+					id = gfnytorelics.3
+				}
+				planet_event = {
+					id = gfnytorelics.5
+				}
+				planet_event = {
+					id = gfnytorelics.6
+				}
+			}
+		}
 		add_modifier = {
-			modifier = GFnyto_set_up_heritage_department
-		}
-		give_technology = {
-			tech = tech_GF_nyto_super_ai_o
-		}
-		random_owned_planet = {
-			planet_event = {
-				id = gfnytorelics.1
-			}
-			planet_event = {
-				id = gfnytorelics.2
-			}
-			planet_event = {
-				id = gfnytorelics.3
-			}
-			planet_event = {
-				id = gfnytorelics.4
-			}
-			planet_event = {
-				id = gfnytorelics.5
-			}
-			planet_event = {
-				id = gfnytorelics.6
-			}
+			modifier = GF_nyto_ai_rbq
 		}
 	}
 }

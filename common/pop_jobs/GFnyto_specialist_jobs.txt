@@ -152,9 +152,14 @@ GFnyto_white_knight = {
 		planet_crime_add = -20
 	}
 	resources = {
-		category = buffer
+		category = armies
 		produces = {
-			unity = 5
+			unity = 10
+		}
+	}
+	resources = {
+		category = buffer
+		produces = {			
 			influence = 0.1
 		}
 		upkeep = {
@@ -744,25 +749,97 @@ GFnyto_collapse_particle_zip = {
 		produces = {
 			trigger = {
 				planet = {
-					AND = {
-						habitability = {
-							who = owner_main_species
-							value <= 0.5
-						}
-					}
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
 				}
 			}
-			GF_nyto_collapse_liquid = 0.5
+			GF_nyto_collapse_liquid = 1
 		}
 		produces = {
 			trigger = {
 				planet = {
-					AND = {
-						habitability = {
-							who = owner_main_species
-							value <= 0.3
-						}
-					}
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
+					has_planetary_ascension_tier >= 1
+				}
+			}
+			GF_nyto_collapse_liquid = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
+					has_planetary_ascension_tier >= 2
+				}
+			}
+			GF_nyto_collapse_liquid = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
+					has_planetary_ascension_tier >= 3
+				}
+			}
+			GF_nyto_collapse_liquid = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
+					has_planetary_ascension_tier >= 4
+				}
+			}
+			GF_nyto_collapse_liquid = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
+					has_planetary_ascension_tier >= 5
+				}
+			}
+			GF_nyto_collapse_liquid = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
+					has_planetary_ascension_tier >= 6
+				}
+			}
+			GF_nyto_collapse_liquid = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
+					has_planetary_ascension_tier >= 7
+				}
+			}
+			GF_nyto_collapse_liquid = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
+					has_planetary_ascension_tier >= 8
+				}
+			}
+			GF_nyto_collapse_liquid = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
+					has_planetary_ascension_tier >= 9
+				}
+			}
+			GF_nyto_collapse_liquid = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
+					has_planetary_ascension_tier >= 10
 				}
 			}
 			GF_nyto_collapse_liquid = 1
@@ -771,6 +848,116 @@ GFnyto_collapse_particle_zip = {
 			energy = 40
 			minerals = 10
 			alloys = 10
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
+					has_planetary_ascension_tier >= 1
+				}
+			}
+			energy = 4
+			minerals = 1
+			alloys = 1
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
+					has_planetary_ascension_tier >= 2
+				}
+			}
+			energy = 4
+			minerals = 1
+			alloys = 1
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
+					has_planetary_ascension_tier >= 3
+				}
+			}
+			energy = 4
+			minerals = 1
+			alloys = 1
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
+					has_planetary_ascension_tier >= 4
+				}
+			}
+			energy = 4
+			minerals = 1
+			alloys = 1
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
+					has_planetary_ascension_tier >= 5
+				}
+			}
+			energy = 4
+			minerals = 1
+			alloys = 1
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
+					has_planetary_ascension_tier >= 6
+				}
+			}
+			energy = 4
+			minerals = 1
+			alloys = 1
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
+					has_planetary_ascension_tier >= 7
+				}
+			}
+			energy = 4
+			minerals = 1
+			alloys = 1
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
+					has_planetary_ascension_tier >= 8
+				}
+			}
+			energy = 4
+			minerals = 1
+			alloys = 1
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
+					has_planetary_ascension_tier >= 9
+				}
+			}
+			energy = 4
+			minerals = 1
+			alloys = 1
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
+					has_planetary_ascension_tier >= 10
+				}
+			}
+			energy = 4
+			minerals = 1
+			alloys = 1
 		}
 	}
 	planet_modifier = {

@@ -10,11 +10,10 @@ origin_GF_nyto_the_last_light= {
 	description = "the_last_light"
 	traits = {
 		trait = trait_GF_nyto_the_last_light
-	#		trait = trait_GF_nyto_ogas_agreement
 		trait = trait_GF_nyto_collapse_radiation_adaptation
 	}
 	initializers = {
-		custom_starting_init_05
+		sol_system_initializer
 	}
 	advanced_start = yes
 	random_weight = {base = 5}

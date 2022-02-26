@@ -192,3 +192,7 @@ GF_nyto_p_weapon_system={
 	ship_tracking_add = -99999999
 	ship_weapon_damage = -999999999999
 }
+#ai保护
+GF_nyto_ai_rbq ={
+	country_base_GF_nyto_collapse_liquid_produces_add = 1000
+}

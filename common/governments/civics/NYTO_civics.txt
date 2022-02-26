@@ -1,30 +1,25 @@
-#90wish，建筑、职业、事件
-civic_GF_nyto_90wish = {
-	icon = "gfx/interface/icons/governments/civics/GF_nyto_90wish.dds"
-	potential = {
-		authority = {
-			value = auth_GF_paradeus
-		}
-	}
-	#	possible = {
-	#		species = {value=nyto}
-	#		ethics = {value=ethic_authoritarian}
-	#	}
-	possible = {
-		species = {
-			value = nyto
-		}
-		#		ethics = {value = ethic_fanatic_authoritarian}
-	}
-	modifier = {
-		all_technology_research_speed = 0.2
-		country_trade_fee = -0.2
-	}
-	modification = yes
-	random_weight = {
-		base = 5
-	}
-}
+# #90wish，建筑、职业、事件
+# civic_GF_nyto_90wish = {
+# 	icon = "gfx/interface/icons/governments/civics/GF_nyto_90wish.dds"
+# 	potential = {
+# 		authority = {
+# 			value = auth_GF_paradeus
+# 		}
+# 	}
+# 	possible = {
+# 		species_class = {
+# 			value = nyto
+# 		}
+# 	}
+# 	modifier = {
+# 		all_technology_research_speed = 0.2
+# 		country_trade_fee = -0.2
+# 	}
+# 	modification = yes
+# 	random_weight = {
+# 		base = 5
+# 	}
+# }
 
 #相位技师，建筑、职业、事件
 civic_GF_nyto_phase_technician = {
@@ -34,17 +29,15 @@ civic_GF_nyto_phase_technician = {
 			value = auth_GF_paradeus
 		}
 	}
+	pickable_at_start = no
 	possible = {
-		species = {
+		species_class = {
 			value = nyto
-		}
-		civics = {
-			value = civic_GF_nyto_90wish
 		}
 	}
 	modifier = {
 		country_megastructure_build_cap_add = 1
-	}
+	}	
 	modification = yes
 	random_weight = {
 		base = 5
@@ -96,13 +89,14 @@ civic_GF_nyto_special_operations_command = {
 	}
 	modification = no
 	possible = {
-		species = {
+		species_class = {
 			value = nyto
 		}
 	}
 	modifier = {
 		intel_decryption_add = 10
 		envoys_add = 1
+		job_GFnyto_white_knight_per_pop = 10
 	}
 	modification = yes
 	random_weight = {
@@ -110,7 +104,7 @@ civic_GF_nyto_special_operations_command = {
 	}
 }
 
-#科技牧师，建筑、职业、事件
+#科技牧师 限定唯心
 civic_GF_nyto_technology_minister = {
 	icon = "gfx/interface/icons/governments/civics/GF_nyto_technology_minister.dds"
 	potential = {
@@ -119,11 +113,14 @@ civic_GF_nyto_technology_minister = {
 		}
 	}
 	possible = {
-		species = {
+		species_class = {
 			value = nyto
 		}
-		civics = {
-			value = civic_GF_nyto_90wish
+		ethics = {
+			OR = {
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
 		}
 	}
 	modifier = {

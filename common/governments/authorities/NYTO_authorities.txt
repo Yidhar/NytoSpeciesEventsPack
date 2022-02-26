@@ -2,7 +2,6 @@ auth_GF_paradeus = {
 	machine_empire = yes #是否是机械帝国
 	has_heir = no #继承人
 	uses_mandates= no #是否使用承诺
-	has_agendas= yes #是否使用议程
 	max_election_candidates=4 #最大候选人槽位
 	election_term_years=10 #选举年限
 	election_term_variance=5 #选举年限的上下浮动区间
@@ -16,8 +15,6 @@ auth_GF_paradeus = {
 	has_agendas = yes #议程
 	valid_for_released_vassal = yes #能否放出这样政体的附庸
 	possible = {
-		ethics = {
-		}
 		species_archetype = {
 			value = NYTO
 		}

@@ -28,9 +28,15 @@ district_GF_nyto_pc_toxic_house= {
 	planet_modifier = {
 		planet_housing_add = 100
 		planet_max_buildings_add = 1
-		job_GFnyto_white_knight_add = 6
 		job_bureaucrat_add = 2
-
+	}
+	triggered_planet_modifier ={
+		potential ={
+			owner = {
+				has_civic = civic_GF_nyto_special_operations_command
+			}
+		}
+		job_GFnyto_white_knight_add = 4
 	}
 	ai_weight = {
 		weight = 0
