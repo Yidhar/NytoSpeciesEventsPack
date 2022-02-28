@@ -122,6 +122,9 @@ tech_alicen_shiled ={
 	area =physics
 	tier = 4
 	category = {field_manipulation}
+	potential = {
+		has_authority = auth_GF_paradeus
+	}
 	prerequisites = { tech_battleships }
 	weight = 50
 }

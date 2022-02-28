@@ -182,5 +182,6 @@ on_army_killed_in_combat ={
 on_planet_transfer ={
 	events = {
 		GFnyto_global.4
+		GFnyto_global.15
 	}
 }

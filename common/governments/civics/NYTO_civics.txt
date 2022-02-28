@@ -96,8 +96,9 @@ civic_GF_nyto_special_operations_command = {
 	modifier = {
 		intel_decryption_add = 10
 		envoys_add = 1
-		job_GFnyto_white_knight_per_pop = 10
-	}
+		job_GFnyto_white_knight_per_pop = 0.1
+	}	
+	
 	modification = yes
 	random_weight = {
 		base = 5

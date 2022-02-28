@@ -483,6 +483,10 @@ country_event = {
 				}
 			}
 		}
+		country_event = {
+			id = GFnyto_global.14
+			days = 150
+		}
 	}
 }
 
@@ -588,6 +592,211 @@ country_event = {
 				species = event_target:GFnyto_ELID_infected
 				ethos = owner
 			}
+		}
+	}
+}
+
+
+#每年塌缩辐射污染度计算
+country_event = {
+	id = GFnyto_global.14
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_authority = auth_GF_paradeus
+	}
+	immediate = {
+		every_owned_planet = {
+			#初始星球恢复力
+			set_variable = {
+				which = planet_size
+				value = trigger:planet_size
+			}
+			#岗位污染度产出
+			if = {
+				limit = {
+					any_owned_pop = {
+						OR = {
+							has_job = GFnyto_Epiphyllum_job
+							has_job = GFnyto_collapse_particle_rar
+							has_job = GFnyto_collapse_particle_zip
+						}
+					}
+				}
+				export_trigger_value_to_variable = {
+					trigger = num_assigned_jobs
+					parameters = {
+						job = GFnyto_Epiphyllum_job
+					}
+					variable = Epiphyllum_job_num
+				}
+				export_trigger_value_to_variable = {
+					trigger = num_assigned_jobs
+					parameters = {
+						job = GFnyto_collapse_particle_rar
+					}
+					variable = collapse_particle_rar_num
+				}
+				export_trigger_value_to_variable = {
+					trigger = num_assigned_jobs
+					parameters = {
+						job = GFnyto_collapse_particle_zip
+					}
+					variable = collapse_particle_zip_num
+				}
+				multiply_variable = {
+					which = Epiphyllum_job_num
+					value = -0.25
+				}
+				multiply_variable = {
+					which = collapse_particle_rar_num
+					value = 2
+				}
+				multiply_variable = {
+					which = collapse_particle_zip_num
+					value = 2
+				}
+			}
+			# 星球恢复力衰减
+			if = {
+				limit = {
+					check_variable = {
+						which = GFnyto_plante_wrlv
+						value >= 30
+					}
+				}
+				set_variable = {
+					which = planet_size_down
+					value = GFnyto_plante_wrlv
+				}
+				change_variable = {
+					which = planet_size_down
+					value = -100
+				}
+				multiply_variable = {
+					which = planet_size_down
+					value = -0.015
+				}
+				multiply_variable = {
+					which = planet_size
+					value = planet_size_down
+				}
+			}
+			#中和塔提供的净化力
+			if = {
+				limit = {
+					has_building = building_GFnyto_affluence_center
+				}
+				export_trigger_value_to_variable = {
+					trigger = num_buildings
+					parameters = {
+						type = building_GFnyto_affluence_center
+					}
+					variable = has_affluence_num
+				}
+				set_variable = {
+					which = affluence_center_purify
+					value = has_affluence_num
+				}
+				multiply_variable = {
+					which = affluence_center_purify
+					value = 5
+				}
+			}
+			#计算污染度
+			if = {
+				limit = {
+					NOR = {
+						is_planet_class = pc_GF_nyto_embers_gloomy
+						is_planet_class = pc_GF_nyto_devil_furnace
+					}
+				}
+				subtract_variable = {
+					which = GFnyto_plante_wrlv
+					value = planet_size
+				}
+			}
+			subtract_variable = {
+				which = GFnyto_plante_wrlv
+				value = affluence_center_purify
+			}
+			change_variable = {
+				which = GFnyto_plante_wrlv
+				value = collapse_particle_zip_num
+			}
+			change_variable = {
+				which = GFnyto_plante_wrlv
+				value = collapse_particle_rar_num
+			}
+			change_variable = {
+				which = GFnyto_plante_wrlv
+				value = Epiphyllum_job_num
+			}
+			#刷新buff
+			if = {
+				limit = {
+					is_planet_class = pc_GF_nyto_embers_gloomy
+				}
+				remove_modifier = GF_nyto_Radiation2
+				add_modifier = {
+					modifier = GF_nyto_Radiation2
+					multiplier = GFnyto_plante_wrlv
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						is_planet_class = pc_GF_nyto_embers_gloomy
+						is_planet_class = pc_GFnyto_portal_star
+						is_planet_class = pc_GF_nyto_devil_furnace
+					}
+				}
+				remove_modifier = GF_nyto_Radiation
+				add_modifier = {
+					modifier = GF_nyto_Radiation
+					multiplier = GFnyto_plante_wrlv
+				}
+			}
+			#非塌缩星球 污染度到底200时 转变为塌缩星球
+			if = {
+				limit = {
+					check_variable = {
+						which = GFnyto_plante_wrlv
+						value >= 200
+					}
+					NOR = {
+						is_planet_class = pc_GF_nyto_embers_gloomy
+						is_planet_class = pc_GF_nyto_devil_furnace
+						is_planet_class = pc_GFnyto_portal_star
+					}
+				}
+				change_pc = pc_GF_nyto_embers_gloomy
+			}
+		}
+	}
+}
+
+#获得新球时初始话污染度
+planet_event = {
+	id = GFnyto_global.15
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		this = {
+			is_planet_class = pc_GF_nyto_embers_gloomy
+			NOT = {
+				has_modifier = GF_nyto_Radiation2
+			}
+		}
+	}
+	immediate = {
+		set_variable = {
+			which = GFnyto_plante_wrlv
+			value = 50
+		}
+		add_modifier = {
+			modifier = GF_nyto_Radiation2
+			multiplier = GFnyto_plante_wrlv
 		}
 	}
 }

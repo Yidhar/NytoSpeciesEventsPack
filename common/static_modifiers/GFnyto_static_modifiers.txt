@@ -196,3 +196,12 @@ GF_nyto_p_weapon_system={
 GF_nyto_ai_rbq ={
 	country_base_GF_nyto_collapse_liquid_produces_add = 1000
 }
+#塌缩辐射污染
+GF_nyto_Radiation ={	
+	icon = "gfx/interface/icons/planet_modifiers/GF_nyto_Radiation.dds"
+	pop_environment_tolerance=-0.01
+}
+GF_nyto_Radiation2 ={	
+	icon = "gfx/interface/icons/planet_modifiers/GF_nyto_Radiation.dds"
+	pop_environment_tolerance=-0.002
+}

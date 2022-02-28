@@ -73,6 +73,14 @@ country_event = {
 				id = GFnyto_other_event.1
 				days = 7200
 			}
+			set_variable = {
+				which = GFnyto_plante_wrlv
+				value = 50
+			}
+			add_modifier = {
+				modifier = GF_nyto_Radiation2
+				multiplier = GFnyto_plante_wrlv
+			}
 			save_event_target_as = set_pc_GF_nyto_embers_gloomy
 			while = {
 				limit = {
