@@ -73,9 +73,9 @@ ap_GF_nyto_imba = {
 		factor = 100
 	}
 	on_enabled = {
-		country_event = {
-			id = GFnyto_ascension_perk.669
-		}
+		# country_event = {
+		# 	id = GFnyto_ascension_perk.669
+		# }
 	}
 }
 

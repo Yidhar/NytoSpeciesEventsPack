@@ -42,7 +42,6 @@ country_event = {
 		change_government = {
 			civics = {
 				civic = civic_GF_nyto_see_angel
-				civic = civic_GF_nyto_90wish
 			}
 		}
 		add_modifier = {
@@ -355,18 +354,11 @@ country_event = {
 			every_owned_ship = {
 				if = {
 					limit = {
-						NOT = {
-							has_ship_flag = gfnyto_ship_combat_ing
-						}
 						has_ship_flag = is_Lamentations_ship
 					}
 					add_modifier = {
 						modifier = gfnyto_ship_start_buff
 						days = 3
-					}
-					set_timed_ship_flag = {
-						flag = gfnyto_ship_combat_ing
-						days = 5
 					}
 					fromfromfrom = {
 						add_modifier = {

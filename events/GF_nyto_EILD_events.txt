@@ -480,6 +480,7 @@ planet_event = {
 				value = 1.1
 			}
 		}
+		#如果携带昙花国策则击杀一pop
 		if = {
 			limit = {
 				owner = {
@@ -504,6 +505,52 @@ planet_event = {
 			}
 			planet_event = {
 				id = GFnyto_global.6
+			}
+		}
+		#导出昙花job数量 产生高额污染度
+		if = {
+			limit = {
+				num_assigned_jobs = {
+					job = GFnyto_Epiphyllum_job
+					value > 0
+				}
+			}
+			export_trigger_value_to_variable = {
+				trigger = num_assigned_jobs
+				parameters = {
+					job = GFnyto_Epiphyllum_job
+				}
+				variable = Epiphyllum_job_num
+			}
+			multiply_variable = {
+				which = Epiphyllum_job_num
+				value = 5
+			}
+			change_variable = {
+				which = GFnyto_plante_wrlv
+				value = Epiphyllum_job_num
+			}
+			if = {
+				limit = { 
+					NOT = {
+						is_planet_class = pc_GF_nyto_embers_gloomy
+					}
+				}
+				remove_modifier = GF_nyto_Radiation
+				add_modifier = {
+					modifier = GF_nyto_Radiation
+					multiplier = GFnyto_plante_wrlv
+				}
+			}
+			else_if = {
+				limit = {
+					is_planet_class = pc_GF_nyto_embers_gloomy
+				}
+				remove_modifier = GF_nyto_Radiation2
+				add_modifier = {
+					modifier = GF_nyto_Radiation2
+					multiplier = GFnyto_plante_wrlv
+				}
 			}
 		}
 	}

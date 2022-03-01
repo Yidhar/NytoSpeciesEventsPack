@@ -464,7 +464,16 @@ country_event = {
 					has_country_flag = hide_GFnytoeild52
 				}
 			}
-			home_planet = {
+			every_owned_planet = {
+				limit = {
+					OR = {
+						is_homeworld = yes
+						num_assigned_jobs = {
+							job = GFnyto_Epiphyllum_job
+							value > 1
+						}
+					}
+				}
 				planet_event = {
 					id = GFnytoeild.51
 					days = 64
@@ -476,7 +485,16 @@ country_event = {
 				has_country_flag = hide_GFnytoeild52
 				has_origin = origin_GF_nyto_the_last_light
 			}
-			home_planet = {
+			every_owned_planet = {
+				limit = {
+					OR = {
+						is_homeworld = yes
+						num_assigned_jobs = {
+							job = GFnyto_Epiphyllum_job
+							value > 1
+						}
+					}
+				}
 				planet_event = {
 					id = GFnytoeild.52
 					days = 64
@@ -596,8 +614,7 @@ country_event = {
 	}
 }
 
-
-#每年塌缩辐射污染度计算
+#每年塌缩辐射污染度计算 #不包含昙花
 country_event = {
 	id = GFnyto_global.14
 	is_triggered_only = yes
@@ -615,13 +632,16 @@ country_event = {
 			#岗位污染度产出
 			if = {
 				limit = {
-					any_owned_pop = {
+					OR ={
+						any_owned_pop = {
 						OR = {
-							has_job = GFnyto_Epiphyllum_job
 							has_job = GFnyto_collapse_particle_rar
-							has_job = GFnyto_collapse_particle_zip
+							has_job = GFnyto_collapse_particle_zip							
 						}
+						is_variable_set = GFnyto_plante_wrlv
 					}
+					}
+					
 				}
 				export_trigger_value_to_variable = {
 					trigger = num_assigned_jobs
@@ -737,6 +757,12 @@ country_event = {
 				limit = {
 					is_planet_class = pc_GF_nyto_embers_gloomy
 				}
+				if = {
+					limit = {
+						has_modifier = GF_nyto_Radiation
+					}
+					remove_modifier = GF_nyto_Radiation
+				}
 				remove_modifier = GF_nyto_Radiation2
 				add_modifier = {
 					modifier = GF_nyto_Radiation2
@@ -768,9 +794,16 @@ country_event = {
 						is_planet_class = pc_GF_nyto_embers_gloomy
 						is_planet_class = pc_GF_nyto_devil_furnace
 						is_planet_class = pc_GFnyto_portal_star
+						is_planet_class = pc_ringworld_habitable
+						is_planet_class = pc_ringworld_tech
 					}
 				}
 				change_pc = pc_GF_nyto_embers_gloomy
+				remove_modifier = GF_nyto_Radiation
+				add_modifier = {
+					modifier = GF_nyto_Radiation2
+					multiplier = GFnyto_plante_wrlv
+				}
 			}
 		}
 	}
