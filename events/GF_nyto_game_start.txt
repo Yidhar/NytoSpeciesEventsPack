@@ -77,32 +77,17 @@ country_event = {
 			while = {
 				limit = {
 					has_district = district_city
-				}
-				remove_district = district_city
-			}
-			while = {
-				limit = {
 					has_district = district_farming
-				}
-				remove_district = district_farming
-			}
-			while = {
-				limit = {
 					has_district = district_mining
-				}
-				remove_district = district_mining
-			}
-			while = {
-				limit = {
 					has_district = district_industrial
-				}
-				remove_district = district_industrial
-			}
-			while = {
-				limit = {
 					has_district = district_generator
 				}
+				remove_district = district_city
+				remove_district = district_farming
+				remove_district = district_mining
+				remove_district = district_industrial
 				remove_district = district_generator
+
 			}
 			remove_building = building_foundry_1
 			remove_building = building_factory_1
@@ -127,17 +112,14 @@ country_event = {
 						has_civic = civic_GF_nyto_forward_base
 					}
 				}
-				create_army = {
-					name = "远征军"
-					owner = root
-					species = root
-					type = "GF_nyto_machine_assault_2"
-				}
-				create_army = {
-					name = "远征军"
-					owner = root
-					species = root
-					type = "GF_nyto_machine_assault_2"
+				while = {
+					count = 4
+					create_army = {
+						name = "远征军"
+						owner = root
+						species = root
+						type = "GF_nyto_machine_assault_2"
+					}
 				}
 				root = {
 					add_modifier = {
@@ -252,167 +234,167 @@ country_event = {
 }
 
 #玩家以天灾起源游戏时生成涅托堕落
-country_event = {
-	id = GFnytostart.1000
-	hide_window = yes
-	is_triggered_only = yes
-	fire_only_once = yes
-	trigger = {
-		has_origin = origin_GF_nyto_the_beginning_of_exile
-	}
-	immediate = {
-		if = {
-			limit = {
-				any_system = {
-					NOR = {
-						exists = space_owner
-						has_star_flag = hostile_system
-						has_star_flag = guardian
-						has_star_flag = enclave
-						has_star_flag = primitive_system
-					}
-					any_system_planet = {
-						habitable_planet = yes
-						has_anomaly = no
-						is_colony = no
-						is_capital = no
-						NOR = {
-							exists = owner
-							exists = controller
-						}
-					}
-				}
-			}
-			random_system = {
-				limit = {
-					NOR = {
-						exists = space_owner
-						has_star_flag = hostile_system
-						has_star_flag = guardian
-						has_star_flag = enclave
-						has_star_flag = primitive_system
-					}
-					any_system_planet = {
-						habitable_planet = yes
-						has_anomaly = no
-						is_colony = no
-						is_capital = no
-						NOR = {
-							exists = owner
-							exists = controller
-						}
-					}
-				}
-				random_system_planet = {
-					change_pc = pc_GF_nyto_embers_gloomy
-					set_planet_flag = GFnyto_district_energy
-					set_planet_flag = GFnyto_district_mineral
-					set_planet_flag = GFnyto_district_food
-					set_planet_flag = GFnyto_district_consumer_good
-					set_planet_flag = GFnyto_district_alloy
-					set_planet_flag = GFnyto_district_refine
-					set_planet_flag = GFnyto_district_science
-					set_planet_flag = GFnyto_district_administration
-					set_planet_flag = GFnyto_district_leisure
-					set_planet_flag = GFnyto_district_trade
-					#					add_deposit	= d_GFnyto_geocentric_zone
-					add_deposit = d_GFnyto_black_zone
-					limit = {
-						habitable_planet = yes
-						has_owner = no
-						is_capital = no
-					}
-					save_event_target_as = colonized_planet
-					#					surveyed = {
-					#						set_surveyed = no
-					#  						surveyor = root
-					#    				}
-					prevent_anomaly = yes
-					create_species = {
-						name = "NAME_GFnyto_fallen_empire_species"
-						plural = "NAME_GFnyto_fallen_empire_species_many"
-						class = "nyto"
-						portrait = "GFnyto_nyto"
-						traits = {
-							trait = trait_GF_nyto_the_last_light
-							trait = trait_GF_nyto_ogas_agreement
-							trait = trait_GF_nyto_collapse_radiation_adaptation
-							trait = trait_psionic
-							trait = trait_cybernetic
-						}
-						immortal = yes
-						effect = {
-							save_global_event_target_as = GFnyto_fallen_empire_species
-						}
-					}
-					create_country = {
-						authority = "auth_GF_paradeus"
-						origin = "origin_GF_nyto_fallen_empire"
-						name = "守墓人"
-						name_list = "GFNYTO01"
-						species = event_target:GFnyto_fallen_empire_species
-						type = fallen_empire
-						ethos = {
-							ethic = ethic_paradeus_antecedentnyto
-						}
-						civics = {
-							civic = civic_GF_nyto_90wish
-							civic = civic_GF_nyto_technology_minister
-						}
-						auto_delete = no
-						flag = {
-							icon = {
-								category = "GFnyto"
-								file = "flag_GF_nyto_flags_00.dds"
-							}
-							background = {
-								category = "backgrounds"
-								file = "00_solid.dds"
-							}
-							colors = {
-								"dark_grey"
-								"black"
-								"null"
-								"null"
-							}
-						}
-						exclude_day_zero_contact = root
-						effect = {
-							save_global_event_target_as = GFnyto_fallen_empire_country
-							create_leader = {
-								class = ruler
-								species = event_target:GFnyto_fallen_empire_species
-								name = random
-							}
-						}
-					}
-					set_owner = last_created_country
-					set_capital = yes
-					while = {
-						count = 200
-						create_pop = {
-							species = event_target:GFnyto_fallen_empire_species
-						}
-					}
-					solar_system = {
-						create_starbase = {
-							size = starbase_citadel
-							module = shipyard
-							owner = event_target:GFnyto_fallen_empire_country
-						}
-					}
-					add_awakened_fallen_empire_fleet = yes
-					root = {
-						country_event = {
-							id = GFnytobloodywar.1
-							days = 10
-						}
-					}
-				}
-				last_created_country = {
-					set_graphical_culture = fallen_empire_02
-				}
-			}
-		}
-	}
-}
+# country_event = {
+# 	id = GFnytostart.1000
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	trigger = {
+# 		has_origin = origin_GF_nyto_the_beginning_of_exile
+# 	}
+# 	immediate = {
+# 		if = {
+# 			limit = {
+# 				any_system = {
+# 					NOR = {
+# 						exists = space_owner
+# 						has_star_flag = hostile_system
+# 						has_star_flag = guardian
+# 						has_star_flag = enclave
+# 						has_star_flag = primitive_system
+# 					}
+# 					any_system_planet = {
+# 						habitable_planet = yes
+# 						has_anomaly = no
+# 						is_colony = no
+# 						is_capital = no
+# 						NOR = {
+# 							exists = owner
+# 							exists = controller
+# 						}
+# 					}
+# 				}
+# 			}
+# 			random_system = {
+# 				limit = {
+# 					NOR = {
+# 						exists = space_owner
+# 						has_star_flag = hostile_system
+# 						has_star_flag = guardian
+# 						has_star_flag = enclave
+# 						has_star_flag = primitive_system
+# 					}
+# 					any_system_planet = {
+# 						habitable_planet = yes
+# 						has_anomaly = no
+# 						is_colony = no
+# 						is_capital = no
+# 						NOR = {
+# 							exists = owner
+# 							exists = controller
+# 						}
+# 					}
+# 				}
+# 				random_system_planet = {
+# 					change_pc = pc_GF_nyto_embers_gloomy
+# 					set_planet_flag = GFnyto_district_energy
+# 					set_planet_flag = GFnyto_district_mineral
+# 					set_planet_flag = GFnyto_district_food
+# 					set_planet_flag = GFnyto_district_consumer_good
+# 					set_planet_flag = GFnyto_district_alloy
+# 					set_planet_flag = GFnyto_district_refine
+# 					set_planet_flag = GFnyto_district_science
+# 					set_planet_flag = GFnyto_district_administration
+# 					set_planet_flag = GFnyto_district_leisure
+# 					set_planet_flag = GFnyto_district_trade
+# 					#					add_deposit	= d_GFnyto_geocentric_zone
+# 					add_deposit = d_GFnyto_black_zone
+# 					limit = {
+# 						habitable_planet = yes
+# 						has_owner = no
+# 						is_capital = no
+# 					}
+# 					save_event_target_as = colonized_planet
+# 					#					surveyed = {
+# 					#						set_surveyed = no
+# 					#  						surveyor = root
+# 					#    				}
+# 					prevent_anomaly = yes
+# 					create_species = {
+# 						name = "NAME_GFnyto_fallen_empire_species"
+# 						plural = "NAME_GFnyto_fallen_empire_species_many"
+# 						class = "nyto"
+# 						portrait = "GFnyto_nyto"
+# 						traits = {
+# 							trait = trait_GF_nyto_the_last_light
+# 							trait = trait_GF_nyto_ogas_agreement
+# 							trait = trait_GF_nyto_collapse_radiation_adaptation
+# 							trait = trait_psionic
+# 							trait = trait_cybernetic
+# 						}
+# 						immortal = yes
+# 						effect = {
+# 							save_global_event_target_as = GFnyto_fallen_empire_species
+# 						}
+# 					}
+# 					create_country = {
+# 						authority = "auth_GF_paradeus"
+# 						origin = "origin_GF_nyto_fallen_empire"
+# 						name = "守墓人"
+# 						name_list = "GFNYTO01"
+# 						species = event_target:GFnyto_fallen_empire_species
+# 						type = fallen_empire
+# 						ethos = {
+# 							ethic = ethic_paradeus_antecedentnyto
+# 						}
+# 						civics = {
+# 							civic = civic_GF_nyto_90wish
+# 							civic = civic_GF_nyto_technology_minister
+# 						}
+# 						auto_delete = no
+# 						flag = {
+# 							icon = {
+# 								category = "GFnyto"
+# 								file = "flag_GF_nyto_flags_00.dds"
+# 							}
+# 							background = {
+# 								category = "backgrounds"
+# 								file = "00_solid.dds"
+# 							}
+# 							colors = {
+# 								"dark_grey"
+# 								"black"
+# 								"null"
+# 								"null"
+# 							}
+# 						}
+# 						exclude_day_zero_contact = root
+# 						effect = {
+# 							save_global_event_target_as = GFnyto_fallen_empire_country
+# 							create_leader = {
+# 								class = ruler
+# 								species = event_target:GFnyto_fallen_empire_species
+# 								name = random
+# 							}
+# 						}
+# 					}
+# 					set_owner = last_created_country
+# 					set_capital = yes
+# 					while = {
+# 						count = 200
+# 						create_pop = {
+# 							species = event_target:GFnyto_fallen_empire_species
+# 						}
+# 					}
+# 					solar_system = {
+# 						create_starbase = {
+# 							size = starbase_citadel
+# 							module = shipyard
+# 							owner = event_target:GFnyto_fallen_empire_country
+# 						}
+# 					}
+# 					add_awakened_fallen_empire_fleet = yes
+# 					root = {
+# 						country_event = {
+# 							id = GFnytobloodywar.1
+# 							days = 10
+# 						}
+# 					}
+# 				}
+# 				last_created_country = {
+# 					set_graphical_culture = fallen_empire_02
+# 				}
+# 			}
+# 		}
+# 	}
+# }

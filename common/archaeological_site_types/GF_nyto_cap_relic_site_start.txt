@@ -50,3 +50,48 @@ site_nyto_unknown_civilization_202055 = {
 	}
 	on_roll_failed = {from = {standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }}}
 }
+#第二段坟
+site_nyto_unknown_civilization_3 ={
+	desc = "site_nyto_unknown_civilization_2_desc"
+	picture = GFX_evt_nyto_unknown_civilization_202055
+	stages = 5#阶段
+	max_instances = 2
+	weight = 0
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+	visible = {
+		owner = {has_authority = auth_GF_paradeus}
+	}
+	stage = {
+		difficulty = 5
+		icon = "How to revert Stellaris to a previous version."
+		event = gfnytoparadeusancrel.301
+	}
+	stage = {
+		difficulty = 6
+		icon = "How to revert Stellaris to a previous version."
+		event = gfnytoparadeusancrel.302
+	}
+	stage = {
+		difficulty = 7
+		icon = "How to revert Stellaris to a previous version."
+		event = gfnytoparadeusancrel.303
+	}
+	stage = {
+		difficulty = 8
+		icon = "How to revert Stellaris to a previous version."
+		event = gfnytoparadeusancrel.304
+	}
+	stage = {
+		difficulty = 9
+		icon = "How to revert Stellaris to a previous version."
+		event = gfnytoparadeusancrel.305
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}

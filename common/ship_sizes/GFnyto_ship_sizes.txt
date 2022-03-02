@@ -28,7 +28,7 @@ GFnyto_flags = {
 #母舰
 GFnyto_mather_ship ={
 	formation_priority =  @corvette_formation_priority
-	entity =  null
+	entity =  Gayr_frame_entity
 	max_speed = 20
 	acceleration = 0.1
 	rotation_speed = 0.1

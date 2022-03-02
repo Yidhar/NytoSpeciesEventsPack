@@ -348,6 +348,7 @@ leader_event = {
 		leader_event = {
 			id = GFnyto_global.3
 		}
+		is_dialog_only = yes
 	}
 	option = {
 		name = GFnyto_global.3.b
@@ -368,6 +369,7 @@ leader_event = {
 		leader_event = {
 			id = GFnyto_global.3
 		}
+		is_dialog_only = yes
 	}
 	option = {
 		name = GFnyto_global.3.c
@@ -388,6 +390,7 @@ leader_event = {
 		leader_event = {
 			id = GFnyto_global.3
 		}
+		is_dialog_only = yes
 	}
 	option = {
 		name = GFnyto_global.3.e
@@ -408,6 +411,7 @@ leader_event = {
 		leader_event = {
 			id = GFnyto_global.3
 		}
+		is_dialog_only = yes
 	}
 	option = {
 		name = GFnyto_global.3.d
@@ -624,6 +628,19 @@ country_event = {
 	}
 	immediate = {
 		every_owned_planet = {
+			limit = {
+				OR = {
+					num_assigned_jobs = {
+						job = GFnyto_collapse_particle_rar
+						value > 0
+					}
+					num_assigned_jobs = {
+						job = GFnyto_collapse_particle_zip
+						value > 0
+					}
+					is_variable_set = GFnyto_plante_wrlv
+				}
+			}
 			#初始星球恢复力
 			set_variable = {
 				which = planet_size
@@ -632,16 +649,15 @@ country_event = {
 			#岗位污染度产出
 			if = {
 				limit = {
-					OR ={
+					OR = {
 						any_owned_pop = {
-						OR = {
-							has_job = GFnyto_collapse_particle_rar
-							has_job = GFnyto_collapse_particle_zip							
+							OR = {
+								has_job = GFnyto_collapse_particle_rar
+								has_job = GFnyto_collapse_particle_zip
+							}
 						}
 						is_variable_set = GFnyto_plante_wrlv
 					}
-					}
-					
 				}
 				export_trigger_value_to_variable = {
 					trigger = num_assigned_jobs
@@ -729,17 +745,52 @@ country_event = {
 					NOR = {
 						is_planet_class = pc_GF_nyto_embers_gloomy
 						is_planet_class = pc_GF_nyto_devil_furnace
+						check_variable = {
+							which = GFnyto_plante_wrlv
+							value > 0
+						}
 					}
 				}
-				subtract_variable = {
-					which = GFnyto_plante_wrlv
-					value = planet_size
+				if = {
+					limit = {
+						check_variable_arithmetic = {
+							subtract = planet_size
+							which = GFnyto_plante_wrlv
+							value < 0
+						}
+					}
+					set_variable = {
+						which = GFnyto_plante_wrlv
+						value = 0
+					}
+				}
+				else = {
+					subtract_variable = {
+						which = GFnyto_plante_wrlv
+						value = planet_size
+					}
 				}
 			}
-			subtract_variable = {
-				which = GFnyto_plante_wrlv
-				value = affluence_center_purify
+			#星球自我恢复不会将污染度减少到0以下		
+			if = {
+				limit = {
+					check_variable_arithmetic = {
+						subtract = affluence_center_purify
+						which = GFnyto_plante_wrlv
+						value < -5
+					}
+				}
+				set_variable = {
+					which = GFnyto_plante_wrlv
+					value = -5
+				}
 			}
+			else = {
+				subtract_variable = {
+					which = GFnyto_plante_wrlv
+					value = affluence_center_purify
+				}
+			}#中和塔不会将污染度降低到-5以下
 			change_variable = {
 				which = GFnyto_plante_wrlv
 				value = collapse_particle_zip_num

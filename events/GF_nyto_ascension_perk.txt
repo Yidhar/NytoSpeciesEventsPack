@@ -354,11 +354,18 @@ country_event = {
 			every_owned_ship = {
 				if = {
 					limit = {
+						NOT = {
+							has_ship_flag = gfnyto_ship_combat_ing
+						}
 						has_ship_flag = is_Lamentations_ship
 					}
 					add_modifier = {
 						modifier = gfnyto_ship_start_buff
 						days = 3
+					}
+					set_timed_ship_flag = {
+						flag = gfnyto_ship_combat_ing
+						days = 1
 					}
 					fromfromfrom = {
 						add_modifier = {

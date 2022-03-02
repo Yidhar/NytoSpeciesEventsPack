@@ -43,7 +43,7 @@ ship_design = {
 		}
 		component = {
 			slot = "X_LARGE_05"
-			template = GF_Nyto_x_weapon2
+			template = GF_Nyto_x_weapon1
 		}
 		component = {
 			slot = "X_LARGE_06"
@@ -183,19 +183,19 @@ ship_design = {
 		}
 		component = {
 			slot = "L_LARGE_17"
-			template = GF_Nyto_l_weapon1
+			template = GF_Nyto_l_weapon2
 		}
 		component = {
 			slot = "L_LARGE_18"
-			template = GF_Nyto_l_weapon1
+			template = GF_Nyto_l_weapon2
 		}
 		component = {
 			slot = "L_LARGE_19"
-			template = GF_Nyto_l_weapon1
+			template = GF_Nyto_l_weapon2
 		}
 		component = {
 			slot = "L_LARGE_20"
-			template = GF_Nyto_l_weapon1
+			template = GF_Nyto_l_weapon2
 		}
 	}
 	
