@@ -13,8 +13,7 @@ objectTypes={
 	}	
 	pdxparticle = {
 		name = "GF_nyto_T_weapon_hit_effect"
-		type = "neutron_torpedoes_hit_effect"
-		
+		type = "GF_nyto_T_weapon_file"		
 		scale = 20
 	}
 	pdxparticle = {
@@ -22,12 +21,6 @@ objectTypes={
 		type = "projectile_shield_hit_effect"
 		
 		scale = 20
-	}
-	pdxparticle = {
-		name = "GF_nyto_T_weapon_muzzle_particle"
-		type = "GF_nyto_T_weapon_file"
-		
-		scale = 50
 	}
 	pdxparticle = {
 		name = "GF_nyto_T_weapon_idle_particle"

@@ -158,7 +158,7 @@ gfnyto_LsScepter_damage_modifer={
 	weapon_type_LsScepter_weapon_fire_rate_mult = -1000
 }
 gfnyto_shield_system_sheil_debuff ={
-	weapon_type_kinetic_weapon_damage_mult = 1
+	weapon_type_kinetic_weapon_damage_mult = -1
 }
 #缺少训练密钥
 GF_nyto_training_key_deficit ={
@@ -208,4 +208,8 @@ GF_nyto_Radiation2 ={
 #圣歌风琴
 GF_nyto_l_weapon2_soon ={
 	weapon_type_son_weapon_fire_rate_mult = 0.5	
+}
+#终末辉光
+GF_nyto_T_weapon2_damgabuff = {
+	weapon_type_prism_weapon_damage_mult = 1
 }

@@ -1,12 +1,10 @@
 Standing_painting_01 = {
 	potential = {
 		from = {
-			AND = {
-				has_country_flag = Gf_nyto_portrait_01
-				NOT = {
-					has_country_flag = Gf_nyto_portrait_01_Lost
-				}
-			}			
+			has_country_flag = Gf_nyto_portrait_01
+			NOT = {
+				has_country_flag = Gf_nyto_portrait_01_Lost
+			}		
 		}
 	}
 	allow = {

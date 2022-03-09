@@ -54,9 +54,9 @@ entity = {
 ###################
 entity = {
 	name = "GF_nyto_T_weapon_hit_hp_entity"
-	cull_radius = 10
+	cull_radius = 1
 	
-	state = { name = "explode_med_hp" state_time = 5 looping = no
+	state = { name = "explode_med_hp" state_time = 0 looping = no
 		event = { time = 0.0 particle = "GF_nyto_T_weapon_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
 		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } } 
 	}
@@ -65,11 +65,10 @@ entity = {
 
 entity = {
 	name = "GF_nyto_T_weapon_shield_hit_entity"
-	cull_radius = 10
+	cull_radius = 1
 	
-	state = { name = "explode_med_hp" state_time = 5 looping = no
-		event = { time = 0.0 particle = "neutron_torpedoes_hit_effect" }
-		event = { time = 0.0 particle = "GF_nyto_T_weapon_shield_hit_effect" sound = { soundeffect = shield_hit } }
+	state = { name = "explode_med_hp" state_time = 0 looping = no
+		event = { time = 0.0 particle = "GF_nyto_T_weapon_hit_effect" }		
 		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
 	}
 	default_state = "explode_med_hp"
@@ -77,12 +76,20 @@ entity = {
 
 entity = {
 	name = "GF_nyto_T_weapon_muzzle_entity"
-	cull_radius = 10
+	cull_radius = 1
 	
 	default_state = "idle"
-	state = { name = "idle" state_time = 7 looping = no
-		event = { time = 0 particle = "GF_nyto_T_weapon_muzzle_particle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } } 
+	state = { name = "idle" state_time = 7.0 looping = no
+		event = { time = 0 particle = "titan_laser_muzzle_particle" keep_particle = yes }
+		
+		event = { trigger_once = yes  sound = { soundeffect = titan_laser_fire_01 } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_titan_laser_fire_01" } }
+		
+		event = { trigger_once = yes sound = { soundeffect = "titan_laser_fire_02" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_titan_laser_fire_02" } }
+		
+		event = { trigger_once = yes sound = { soundeffect = "titan_laser_fire_03" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_titan_laser_fire_03" } }
 	}
 
 }
@@ -93,12 +100,6 @@ entity = {
 	
 	default_state = idle
 	state = { name = "idle"
-		event = { time = 0 particle = "GF_nyto_T_weapon_idle_particle" keep_particle = yes }		
-		event = { time = 0 particle = "GF_nyto_T_weapon_idle_particle" keep_particle = yes }	
-		event = { time = 0 particle = "GF_nyto_T_weapon_idle_particle" keep_particle = yes }	
-		event = { time = 0 particle = "GF_nyto_T_weapon_idle_particle" keep_particle = yes }	
-		event = { time = 0 particle = "GF_nyto_T_weapon_idle_particle" keep_particle = yes }	
-		event = { time = 0 particle = "GF_nyto_T_weapon_idle_particle" keep_particle = yes }	
 	}
 }
 

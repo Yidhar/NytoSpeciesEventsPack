@@ -10,10 +10,8 @@ tech_GF_nyto_super_ai_o= {
 	#	weight = 5
 	#	modifier = {NYTO_species_trait_points_add = 2}
 	potential = {
-		AND = {
-			has_authority = auth_GF_paradeus
-			is_ai = yes
-		}
+		has_authority = auth_GF_paradeus
+		is_ai = yes
 	}
 	prereqfor_desc = {
 		custom = {

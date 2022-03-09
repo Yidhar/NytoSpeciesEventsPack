@@ -45,7 +45,7 @@ tech_GF_nyto_godenergy_desc:0 "来自锡安的远古技术"
  tech_GF_nyto_sm:0 "火力引导标记"
  tech_GF_nyto_sm_desc:0 "有时火控雷达不一定靠普，于是我们要用最耀眼的光束来标记集火目标"
  tech_alicen_shiled:0 "联合立场技术"
- tech_alicen_shiled_desc:0 "为我们的战舰提供护盾"
+ tech_alicen_shiled_desc:0 "§W立场支援舰§!:交战时根据护盾循环层数*基数提供全舰队的额外护盾"
 #工程
 tech_GF_nyto_robomodding_points_1:0 "OGAS兼容"
 tech_GF_nyto_robomodding_points_1_desc:0 "在不损伤宿主大脑的情况下进一步解放欧加斯算力。"

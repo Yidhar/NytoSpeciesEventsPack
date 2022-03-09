@@ -9,3 +9,4 @@ weapon_type_keto
 weapon_type_Akso
 weapon_type_LsScepter
 weapon_type_son
+weapon_type_prism
