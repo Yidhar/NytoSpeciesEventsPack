@@ -228,10 +228,10 @@ ship_event = {
 			if = {
 				limit = { 
 					fleet = { has_fleet_flag = has_GF_Nyto_T_weapon2 }
-					check_variable_arithmetic = { modulo = 10 which = Gfnyto_combat_days value = 0 }
+					check_variable_arithmetic = { modulo = 8 which = Gfnyto_combat_days value = 0 }
 				}
-				change_variable = { which = GF_Nyto_T_weapon2_fire_num value = 1 }		
-				multiply_variable = {
+				change_variable = { which = GF_Nyto_T_weapon2_fire_num value = 1 }
+				set_variable = {
 					which = GF_Nyto_T_weapon2_damag_mult
 					value = GF_Nyto_T_weapon2_fire_num
 				}									
