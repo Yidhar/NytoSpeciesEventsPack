@@ -300,7 +300,7 @@ weapon_component_template = {
 	
 		component_set = "GF_Nyto_l_weapon2"
 		projectile_gfx = "GF_nyto_titan_laser2" #remake 充能光束
-		tags = { weapon_type_energy weapon_type_explosive }
+		tags = { weapon_type_energy  weapon_type_son }
 		ai_tags = { weapon_role_anti_hull  }
 	
 		resources = {
@@ -314,6 +314,10 @@ weapon_component_template = {
 				alloys = 1.2
 				GF_nyto_new_fire_control_unit =0.05
 				GF_nyto_collapse_liquid = 0.1
+			}
+			upkeep = {
+				energy = 1
+				multiplier = fleet.GF_nyto_l_weapon2_soon_mult
 			}
 		}		
 }

@@ -193,46 +193,44 @@ country_event = {
 	desc = "gfnytoparadeusancrel.30102.desc"
 	is_triggered_only = yes
 	diplomatic = yes
-	diplomatic_title = "信号接入"
+	custom_gui = NEW_GUI
 	picture_event_data = {
-		room = no_video_feed_room
+		room = no_room
+		portrait = owner
+	}
+	immediate = {
+		set_country_flag = Gf_nyto_portrait_02
 	}
 	option = {
 		name = gfnytoparadeusancrel.30102.a
 		response_text = gfnytoparadeusancrel.30102.a.response
 		is_dialog_only = yes
-	}
-	option = {
-		name = gfnytoparadeusancrel.30102.b		
-		response_text = gfnytoparadeusancrel.30102.b.response
-		is_dialog_only = yes
-	}
-	option = {
-		name = gfnytoparadeusancrel.30102.c
-		response_text = gfnytoparadeusancrel.30102.a.response
-		is_dialog_only = yes
-	}
-	option = {
-		name = gfnytoparadeusancrel.30102.d
-		response_text = gfnytoparadeusancrel.30102.d.response
-		is_dialog_only = yes
-	}
-	option = {
-		name = gfnytoparadeusancrel.30102.e
-		response_text = gfnytoparadeusancrel.30102.e.response
-		is_dialog_only = yes
-		set_country_flag = GFnyto_event_flag
-	}
-	abort_trigger = {
-			has_country_flag = GFnyto_event_flag			
-	}
-	abort_effect = {
-		country_event = {
-			id = gfnytoparadeusancrel.30103
+		custom_gui = inv_OPTION
+		hidden_effect = {
+			change_variable = {
+				which = GF_nyto_TXT
+				value = 1
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = GF_nyto_TXT
+						value = 2
+					}
+				}
+				remove_country_flag = Gf_nyto_portrait_02
+				set_country_flag = Gf_nyto_portrait_02_Lost
+			}
 		}
-		remove_country_flag = GFnyto_event_flag	
+	}
+	after = {
+		hidden_effect = {
+			clear_variable = GF_nyto_TXT
+			remove_country_flag = Gf_nyto_portrait_02
+		}
 	}
 }
+
 country_event = {
 	id = gfnytoparadeusancrel.30103
 	title = gfnytoparadeusancrel.30103.name
@@ -247,12 +245,12 @@ country_event = {
 	option = {
 		name = gfnytoparadeusancrel.30103.a
 		response_text = "gfnytoparadeusancrel.30103.a.response"
-		set_country_flag = 	GFnyto_event_flag	
-
+		set_country_flag = GFnyto_event_flag
+		is_dialog_only = yes
 	}
 	option = {
 		allow = {
-			has_country_flag = GFnyto_event_flag	
+			has_country_flag = GFnyto_event_flag
 		}
 		name = gfnytoparadeusancrel.30103.b
 		response_text = gfnytoparadeusancrel.30103.b.response

@@ -11,6 +11,7 @@ planet_event = {
 	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
+			change_planet_size = 10
 			remove_district = district_GF_nyto_pc_toxic_underground_industrial_area
 			remove_district = district_GF_nyto_pc_toxic_underground_research_institute
 			remove_district = district_GF_nyto_pc_toxic_underground_shelters

@@ -1,26 +1,13 @@
 @Nyto_h_weapons_buff_level = 0
 GFnyto_weapons_system = {
 	if = {
-		limit = {
-			any_owned_ship = {
-				has_component = GF_Nyto_p_weapon1
-			}
-		}
-		fleet_event = {
-			id = gf_nyto_weapons.2
-			days = 5
-		}
+		limit = { any_owned_ship = { has_component = GF_Nyto_p_weapon1 } }
+		fleet_event = { id = gf_nyto_weapons.2 days = 5 }
 		#日检1
 	}
 	if = {
-		limit = {
-			any_owned_ship = {
-				has_component = GF_Nyto_h_weapon2
-			}
-		}
-		fleet_event = {
-			id = gf_nyto_weapons.3
-		}
+		limit = { any_owned_ship = { has_component = GF_Nyto_h_weapon2 } }
+		fleet_event = { id = gf_nyto_weapons.3 }
 		#日检2
 	}
 	if = {
@@ -32,9 +19,7 @@ GFnyto_weapons_system = {
 				}
 			}
 		}
-		fleet_event = {
-			id = gf_nyto_weapons.5
-		}
+		fleet_event = { id = gf_nyto_weapons.5 }
 		#日检3
 	}
 	
@@ -49,9 +34,7 @@ GFnyto_weapons_system = {
 				}
 			}
 		}
-		fleet_event = {
-			id = gf_nyto_weapons.8
-		}
+		fleet_event = { id = gf_nyto_weapons.8 }
 	}
 	else_if = {
 		limit = {
@@ -63,9 +46,7 @@ GFnyto_weapons_system = {
 				}
 			}
 		}
-		fleet_event = {
-			id = gf_nyto_weapons.9
-		}
+		fleet_event = { id = gf_nyto_weapons.9 }
 	}
 	else_if = {
 		limit = { 
@@ -77,10 +58,7 @@ GFnyto_weapons_system = {
 				}
 			}
 		}
-		fleet_event = {
-			id = gf_nyto_weapons.10
-			days = 1
-		}
+		fleet_event = { id = gf_nyto_weapons.10 days = 1 }
 	}
 #########护盾END############	
 	if = {

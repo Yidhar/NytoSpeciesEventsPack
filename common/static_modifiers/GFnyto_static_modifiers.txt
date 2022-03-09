@@ -205,3 +205,7 @@ GF_nyto_Radiation2 ={
 	icon = "gfx/interface/icons/planet_modifiers/GF_nyto_Radiation.dds"
 	pop_environment_tolerance=-0.002
 }
+#圣歌风琴
+GF_nyto_l_weapon2_soon ={
+	weapon_type_son_weapon_fire_rate_mult = 0.5	
+}

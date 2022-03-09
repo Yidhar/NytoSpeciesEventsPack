@@ -492,9 +492,6 @@ district_GF_nyto_pc_toxic_science = {
 			GF_nyto_collapse_liquid=2
 		}
 	}	
-	planet_modifier = {
-		job_GFnyto_collapse_particle_researcher_add = 5
-	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -508,7 +505,7 @@ district_GF_nyto_pc_toxic_science = {
 			owner = {NOT={has_valid_civic = civic_GF_nyto_technology_minister}}
 		}
 		modifier = {
-			job_researcher_add = 20
+			job_GFnyto_collapse_particle_researcher_add = 20
 		}
 	}
 	ai_weight = {

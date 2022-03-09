@@ -1,0 +1,157 @@
+Standing_painting_01 = {
+	potential = {
+		from = {
+			AND = {
+				has_country_flag = Gf_nyto_portrait_01
+				NOT = {
+					has_country_flag = Gf_nyto_portrait_01_Lost
+				}
+			}			
+		}
+	}
+	allow = {
+	}
+	effect = {
+	}
+}
+
+Lost_Standing_painting_01 = {
+	potential = {
+		from = {
+			AND = {
+				has_country_flag = Gf_nyto_portrait_01_Lost
+				NOT = {
+					has_country_flag = Gf_nyto_portrait_01
+				}
+			}			
+		}
+	}
+	allow = {
+	}
+	effect = {
+	}
+}
+
+Standing_painting_02 = {
+	potential = {
+		from = {
+			AND = {
+				has_country_flag = Gf_nyto_portrait_02
+				NOT = {
+					has_country_flag = Gf_nyto_portrait_02_Lost
+				}
+			}			
+		}
+	}
+	allow = {
+	}
+	effect = {
+	}
+}
+
+Lost_Standing_painting_02 = {
+	potential = {
+		from = {
+			AND = {
+				has_country_flag = Gf_nyto_portrait_02_Lost
+				NOT = {
+					has_country_flag = Gf_nyto_portrait_02
+				}
+			}			
+		}
+	}
+	allow = {
+	}
+	effect = {
+	}
+}
+
+#小头像窗体
+small_patinting_window_effect = {
+	potential = {
+		from = {
+			NOT = {
+				has_country_flag = small_patinting_window_hide
+			}
+		}
+	}
+	allow = {
+	}
+	effect = {
+	}
+}
+
+#小头像
+small_painting_effct = {
+	potential = {
+	}
+	allow = {
+	}
+	effect = {
+	}
+}
+
+GF_nyto_opt01 = {
+	potential = {
+		from = {
+			has_country_flag = GF_nyto_opt01
+		}
+	}
+	allow = {
+	}
+	effect = {
+		from = {
+			country_event = {
+				id = gfnytoparadeusancrel.30103
+			}
+		}
+	}
+}
+
+GF_nyto_opt02 = {
+	potential = {
+		from = {
+			has_country_flag = GF_nyto_opt02
+		}
+	}
+	allow = {
+	}
+	effect = {
+	}
+}
+
+GF_nyto_opt03 = {
+	potential = {
+		from = {
+			has_country_flag = GF_nyto_opt03
+		}
+	}
+	allow = {
+	}
+	effect = {
+	}
+}
+
+GF_nyto_opt04 = {
+	potential = {
+		from = {
+			has_country_flag = GF_nyto_opt04
+		}
+	}
+	allow = {
+	}
+	effect = {
+	}
+}
+
+GF_nyto_TXT_NAME = {
+	potential = {
+	}
+	allow = {
+		hidden_trigger = {
+			always = no
+		}
+	}
+	effect = {
+	}
+}

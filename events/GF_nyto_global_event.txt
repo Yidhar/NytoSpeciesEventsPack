@@ -601,6 +601,12 @@ country_event = {
 	}
 	immediate = {
 		every_owned_planet = {
+			limit = {
+				num_assigned_jobs = {
+					job = GFnyto_collapse_changer
+					value > 0
+				}
+			}
 			while = {
 				count = 3
 				random_owned_pop = {

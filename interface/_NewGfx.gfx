@@ -1,0 +1,65 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_bg"
+		textureFile = "gfx/NewGui/bg.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	spriteType = {
+		name = "GFX_portrait"
+		textureFile = "gfx/NewGui/portrait.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}	
+	spriteType = {
+		name = "GFX_portrait01_1"
+		textureFile = "gfx/NewGui/portrait01_1.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	spriteType = {
+		name = "GFX_portrai2"
+		textureFile = "gfx/NewGui/GFnyto_nyto_basic.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	spriteType = {
+		name = "GFX_portrai2_1"
+		textureFile = "gfx/NewGui/GFnyto_nyto_basic_1.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	spriteType = {
+		name = "GFX_small_portrait_window"
+		textureFile = "gfx/NewGui/portrait_window.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	spriteType = {
+		name = "GFX_small_portrait"
+		textureFile = "gfx/NewGui/small_portrait.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	spriteType = {
+		name = "GFX_skip"
+		textureFile = "gfx/NewGui/skip.dds"
+	}
+	spriteType = {
+		name = "GFX_text_bg"
+		textureFile = "gfx/NewGui/text_bg.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	spriteType = {
+		name = "GFX_new_option"
+		texturefile = "gfx/NewGui/options.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		# animation = {
+		# 	animationmaskfile = "gfx/interface/buttons/button_452_animated_mask.dds"
+		# 	animationtexturefile = "gfx/interface/buttons/button_452_animated_texture.dds"
+		# 	animationrotation = 180.0
+		# 	animationlooping = yes
+		# 	animationtime = 180.0
+		# 	animationdelay = 0.0
+		# 	animationblendmode = "overlay"       #add, multiply, overlay
+		# 	animationtype = "scrolling"      #scrolling, rotating, pulsing
+		# 	animationrotationoffset = { x = 0.0 y = 0.0 }
+		# 	animationtexturescale = { x = 1.0 y = 1.0 }
+		# 	animationframes = { 1 2 3 }
+		# }
+	}
+}

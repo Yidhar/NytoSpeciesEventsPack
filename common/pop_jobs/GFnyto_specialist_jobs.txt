@@ -40,7 +40,7 @@ GFnyto_collapse_particle_researcher = {
 					}
 				}
 			}
-			consumer_goods = 2
+			consumer_goods = 1
 		}
 		produces = {
 			trigger = {
@@ -51,10 +51,10 @@ GFnyto_collapse_particle_researcher = {
 					has_technology = tech_GF_nyto_algorithm
 				}
 			}
-			GF_nyto_collapse_liquid = 4
-			physics_research = 6
-			society_research = 6
-			engineering_research = 6
+			GF_nyto_collapse_liquid = 6
+			physics_research = 8
+			society_research = 8
+			engineering_research = 8
 		}
 		upkeep = {
 			trigger = {
@@ -416,8 +416,7 @@ GFnyto_collapse_particle_rar = {
 	possible = {
 		NOT = {
 			is_species_class = eild
-		}
-		
+		}		
 	}
 	weight = {
 		weight = 5
@@ -449,7 +448,7 @@ GFnyto_collapse_particle_zip = {
 			multiplier = planet.trigger:has_planetary_ascension_tier
 		}
 		produces = {
-			GF_nyto_collapse_liquid = 0.5
+			GF_nyto_collapse_liquid = 0.05
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 		upkeep = {
@@ -469,7 +468,7 @@ GFnyto_collapse_particle_zip = {
 			multiplier = planet.trigger:has_planetary_ascension_tier
 		}
 		upkeep = {
-			energy = 1
+			energy = 0.1
 			minerals = -0.01
 			alloys = -0.005
 			multiplier = planet.GFnyto_plante_wrlv

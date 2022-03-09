@@ -214,8 +214,10 @@ GF_Nyto_x_weapon2_DESC:0 "能够发射等离子光束对目标进行攻击。§B
 GF_Nyto_l_weapon1:0 "灵蛇权杖"
 GF_Nyto_l_weapon1_DESC:0 "舰载等离子光束发射器，在携带阿克索之皿时自身会失去伤害，为阿克索之皿提供高额加成"
 #圣歌风琴 L
+weapon_type_son:0 "圣歌风琴"
 GF_Nyto_l_weapon2:0 "圣歌风琴"
-GF_Nyto_l_weapon2_DESC:0 " 攻击速度随战斗时间提高"
+GF_Nyto_l_weapon2_DESC:0 "§B黄昏奏鸣曲§!§Y该武器在战斗中随着战斗时间攻击速度将成倍提高§! "
+mod_weapon_type_son_weapon_fire_rate_mult:0 "圣歌风琴射速提升"
 weapon_type_nytowith:0 "§B苍白收割者§!"
 GF_Nyto_m_weapon1:0 "苍白收割者"
 GF_Nyto_s_weapon1:0 "苍白收割者"

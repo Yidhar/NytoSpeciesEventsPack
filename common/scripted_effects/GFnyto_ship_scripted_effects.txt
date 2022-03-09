@@ -11,6 +11,7 @@ creat_nyto_ship ={
 			uses_naval_capacity = no
 			spawn_debris = no
 			is_boss = yes
+			can_disband = no
 		}
 		effect = {
 			set_location = event_target:HomePlanet
@@ -24,7 +25,7 @@ creat_nyto_ship ={
 					set_ship_flag = is_Lamentations_ship
 				}
 			}
-			
+			set_fleet_flag = is_Lamentations_fleet			
 		}
 	}
 }
