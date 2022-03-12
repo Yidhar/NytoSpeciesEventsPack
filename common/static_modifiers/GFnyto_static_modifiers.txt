@@ -184,7 +184,7 @@ GF_nyto_forward_base ={
 }
 #额外护盾
 GF_nyoto_shield_ship ={
-	ship_shield_add = 1752000
+	ship_shield_add = 87600
 }
 #沉默
 GF_nyto_p_weapon_system={

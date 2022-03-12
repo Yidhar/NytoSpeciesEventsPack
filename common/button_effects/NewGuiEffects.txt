@@ -82,6 +82,24 @@ small_patinting_window_effect = {
 #小头像
 small_painting_effct = {
 	potential = {
+		from = {
+			NOT = {
+				has_country_flag = small_painting_effct_hide
+			}
+		}
+	}
+	allow = {
+	}
+	effect = {
+	}
+}
+small_painting_effct2 = {
+	potential = {
+		from = {
+			NOT = {
+				has_country_flag = small_painting_effct2_hide
+			}
+		}
 	}
 	allow = {
 	}
@@ -151,5 +169,19 @@ GF_nyto_TXT_NAME = {
 		}
 	}
 	effect = {
+	}
+}
+
+GF_GUi_BG= {
+	potential = {
+		from = {
+			has_country_flag = GUI_BG_1
+		}
+	}
+	allow = {
+		
+	}
+	effect = {
+		
 	}
 }

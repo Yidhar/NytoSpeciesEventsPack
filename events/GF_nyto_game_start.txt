@@ -1,5 +1,5 @@
 namespace = GFnytostart
-#普通起源，送资源、送自主电脑科技、送二段灵飞、送一段机飞、生成首都遗迹
+#普通起源,送资源、送自主电脑科技、送二段灵飞、送一段机飞、生成首都遗迹
 country_event = {
 	id = GFnytostart.0
 	hide_window = yes

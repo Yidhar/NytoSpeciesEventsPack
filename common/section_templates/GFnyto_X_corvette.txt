@@ -8,9 +8,9 @@ ship_section_template={
 	icon="GFX_ship_part_core_mid"					#图标
 	icon_frame=1
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_01"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_01"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "explosion_locator_01"					#位点名称，就是模型的武器发射位置
+		locatorname = "explosion_locator_01"					#位点名称,就是模型的武器发射位置
 	}			
 #	small_utility_slots = 3
 	aux_utility_slots = 4

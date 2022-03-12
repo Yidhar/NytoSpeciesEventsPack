@@ -158,3 +158,15 @@ entity = {
 	}
 	default_state = "explode_med_hp"
 }
+
+entity = {
+	name = "GF_nyto_titan_laser2_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		start_event = { particle = "GFnyto_fe02_titan_laser_hit_effect" keep_particle = yes sound = { soundeffect = titan_laser_hit } }
+		#start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}

@@ -1,12 +1,12 @@
 ﻿l_simp_chinese:
 
 civic_GF_nyto_90wish:0 "90wish"
-civic_GF_nyto_90wish_desc:0 "隶属于国防部的科研组织，通常情况下其他国家禁止的实验项目在90wish都是被允许进行的。允许建造具有§PX§!槽的护卫舰."
+civic_GF_nyto_90wish_desc:0 "隶属于国防部的科研组织,通常情况下其他国家禁止的实验项目在90wish都是被允许进行的。允许建造具有§PX§!槽的护卫舰."
 #civic_GF_nyto_90wish_text:0 ""
 
 civic_GF_nyto_forward_base:0 "星河远征"
-civic_GF_nyto_forward_base_desc:0 "长夜终尽!摆脱母星恶劣的环境后，我们最重要的事情就是找到新的殖民地！\n每次新征服一个星球时 获得5年限时建筑 前进营地\n开局时获得为期5年的“远征”国家修正"
-#civic_GF_nyto_forward_base_text:0 "允许在非§G余烬黯然星球§!和非§R恶魔熔炉星球§!建造建筑§Y前进基地§!，增加专家职业§Y开拓者§!。"
+civic_GF_nyto_forward_base_desc:0 "长夜终尽!摆脱母星恶劣的环境后,我们最重要的事情就是找到新的殖民地！\n每次新征服一个星球时 获得5年限时建筑 前进营地\n开局时获得为期5年的“远征”国家修正"
+#civic_GF_nyto_forward_base_text:0 "允许在非§G余烬黯然星球§!和非§R恶魔熔炉星球§!建造建筑§Y前进基地§!,增加专家职业§Y开拓者§!。"
 
 civic_GF_nyto_phase_technician:0 "相位技师"
 civic_GF_nyto_phase_technician_desc:0 "将§G余烬黯然星球§!和非§R恶魔熔炉星球§!的£job£§Y技工§!替换为£job£§Y相位技师§!。§Y相位技师§!可以产出更多的§Y能量币§!£energy£和§Y工程学点数§!£engineering£。"
@@ -21,7 +21,7 @@ civic_GF_nyto_technology_minister_desc:0 "将§G余烬黯然星球§!和非§R�
 #civic_GF_nyto_technology_minister_text:0 "将§G余烬黯然星球§!和非§R恶魔熔炉星球§!的§Y科研人员§!替换为§Y科技牧师§!。"
 
 civic_GF_nyto_see_angel:0 "看见天使"
-civic_GF_nyto_see_angel_desc:0 "§R我盲目地大发雷霆，剪去大姐的羽翼，砍下三妹的头颅。大姐把我砍成两段，害我只剩下双腿。她全身残破不堪，在我消失后仍持续守护着我们的秘密。§!"
+civic_GF_nyto_see_angel_desc:0 "§R我盲目地大发雷霆,剪去大姐的羽翼,砍下三妹的头颅。大姐把我砍成两段,害我只剩下双腿。她全身残破不堪,在我消失后仍持续守护着我们的秘密。§!"
 civic_GF_nyto_war:0 "战争"
 civic_GF_nyto_war_desc:0 "§R所有国家舰船射速-50%§!"
 civic_GF_nyto_famine:0 "饥荒"
@@ -33,7 +33,7 @@ civic_GF_nyto_death_desc:0 "§R所有国家人口增速-50%§!"
 GF_nyto_see_angel:0 "§R饥荒§! 人口停止增长 \n§R战争§! 和平不能维持 \n§R瘟疫§! 人口不能迁移 \n§R死亡§! 人口自动死亡"
 
  civic_GF_nyoto_armor_train:0 "铁道纵横"
- civic_GF_nyoto_armor_train_desc:0 "在与ELID漫长的对抗中，该国家建立了大量完备的轨道网络，并拥有数支完备的轨道机动部队\n使用该国策开局会拥有额外的装甲列车部队"
+ civic_GF_nyoto_armor_train_desc:0 "在与ELID漫长的对抗中,该国家建立了大量完备的轨道网络,并拥有数支完备的轨道机动部队\n使用该国策开局会拥有额外的装甲列车部队"
 
  civic_Gf_nyto_tanhua_pluse:0 "昙花共生"
  civic_Gf_nyto_tanhua_pluse_desc:0 "该国家以昙花为生,和这些美丽的花朵融为一体。\n▇▇上的花朵颜色总有些不对劲\n昙花种植区将额外提供1$job_GFnyto_Epiphyllum_job$"

@@ -199,7 +199,13 @@ country_event = {
 		portrait = owner
 	}
 	immediate = {
-		set_country_flag = Gf_nyto_portrait_02
+		set_country_flag = GUI_BG_1
+		set_country_flag = Gf_nyto_portrait_02_Lost
+		set_country_flag = small_painting_effct_hide
+		hidden_effect = {
+			clear_variable = GF_nyto_TXT
+			remove_country_flag = Gf_nyto_portrait_02
+		}
 	}
 	option = {
 		name = gfnytoparadeusancrel.30102.a
@@ -207,27 +213,94 @@ country_event = {
 		is_dialog_only = yes
 		custom_gui = inv_OPTION
 		hidden_effect = {
+			remove_country_flag = small_painting_effct_hide
 			change_variable = {
 				which = GF_nyto_TXT
 				value = 1
 			}
 			if = {
+				limit = { 
+					check_variable = {
+						which = GF_nyto_TXT
+						value = 1
+					}
+				}
+				remove_country_flag = Gf_nyto_portrait_02_Lost
+				set_country_flag = Gf_nyto_portrait_02
+				remove_country_flag = small_painting_effct_hide
+				set_country_flag = small_painting_effct2_hide
+			}
+			if = {
 				limit = {
 					check_variable = {
 						which = GF_nyto_TXT
-						value = 2
+						value = 3
 					}
 				}
-				remove_country_flag = Gf_nyto_portrait_02
 				set_country_flag = Gf_nyto_portrait_02_Lost
+				remove_country_flag = Gf_nyto_portrait_02
+				set_country_flag = small_painting_effct_hide
+				remove_country_flag = small_painting_effct2_hide
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = GF_nyto_TXT
+						value = 4
+					}
+				}
+				remove_country_flag = Gf_nyto_portrait_02_Lost
+				set_country_flag = Gf_nyto_portrait_02
+				remove_country_flag = small_patinting_window_hide
+				set_country_flag = small_painting_effct2_hide				
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = GF_nyto_TXT
+						value = 5
+					}
+				}
+				set_country_flag = GF_nyto_opt01
+				set_country_flag = GF_nyto_opt02
+				set_country_flag = GF_nyto_opt03
+				set_country_flag = GF_nyto_opt04
+				set_country_flag = GF_nyto_opt_01_01
+				set_country_flag = GF_nyto_opt_02_01
+				set_country_flag = GF_nyto_opt_03_01
+				set_country_flag = GF_nyto_opt_04_01
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = GF_nyto_TXT
+						value = 7
+					}
+				}
+				remove_country_flag = GF_nyto_opt01
+				remove_country_flag = GF_nyto_opt02
+				remove_country_flag = GF_nyto_opt03
+				remove_country_flag = GF_nyto_opt04
 			}
 		}
 	}
-	after = {
-		hidden_effect = {
-			clear_variable = GF_nyto_TXT
-			remove_country_flag = Gf_nyto_portrait_02
+	option = {
+		custom_gui = "NEW_OPTION"
+		name = degultopt
+		default_hide_option = yes
+		country_event = {
+			id = gfnytoparadeusancrel.30103
 		}
+		remove_country_flag = GUI_BG_1
+		remove_country_flag = GF_nyto_opt01
+		remove_country_flag = GF_nyto_opt02
+		remove_country_flag = GF_nyto_opt03
+		remove_country_flag = GF_nyto_opt04
+		remove_country_flag = GF_nyto_opt01
+		remove_country_flag = GF_nyto_opt02
+		remove_country_flag = GF_nyto_opt03
+		remove_country_flag = GF_nyto_opt04
+		remove_country_flag = small_painting_effct2_hide
 	}
 }
 

@@ -353,8 +353,8 @@ projectile_gfx_beam = {
 	#common for all types of projectiles
 	name = "GF_nyto_titan_laser2"
 	color = { 0.03	 	1.0 	0.047	 	0.5 }
-	hit_entity = "titan_laser_hit_entity"
-	shield_hit_entity = "titan_laser_shield_hit_entity"
+	hit_entity = "GF_nyto_titan_laser2_hit_entity"
+	shield_hit_entity = "GF_nyto_titan_laser2_hit_entity"
 	muzzle_flash_entity = "titan_laser_muzzle_entity"
 	windup_entity = "titan_laser_windup_entity"
 	

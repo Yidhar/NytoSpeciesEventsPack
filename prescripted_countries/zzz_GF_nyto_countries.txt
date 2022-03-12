@@ -1,4 +1,4 @@
-"帕拉蒂斯"={
+"~帕拉蒂斯"={
 #	key="帕拉蒂斯"
 	ship_prefix=""
 	species={

@@ -231,7 +231,7 @@ country_event = {
 		destroy_country = yes
 	}
 }
-#每年人口结算，每年杀死3个涅托人口
+#每年人口结算,每年杀死3个涅托人口
 country_event = {
 	id = GFnytocrisis.12
 	hide_window = yes

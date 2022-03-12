@@ -1,4 +1,4 @@
-# #90wish，建筑、职业、事件
+# #90wish,建筑、职业、事件
 # civic_GF_nyto_90wish = {
 # 	icon = "gfx/interface/icons/governments/civics/GF_nyto_90wish.dds"
 # 	potential = {
@@ -21,7 +21,7 @@
 # 	}
 # }
 
-#相位技师，建筑、职业、事件
+#相位技师,建筑、职业、事件
 civic_GF_nyto_phase_technician = {
 	icon = "gfx/interface/icons/governments/civics/GF_nyto_phase_technician.dds"
 	potential = {
@@ -44,7 +44,7 @@ civic_GF_nyto_phase_technician = {
 	}
 }
 
-#星河远征，建筑、职业、事件
+#星河远征,建筑、职业、事件
 civic_GF_nyto_forward_base = {
 	icon = "gfx/interface/icons/governments/civics/GF_nyto_forward_base.dds"
 	potential = {
@@ -79,7 +79,7 @@ civic_GF_nyto_forward_base = {
 	}
 }
 
-#特种作战指挥部，建筑、职业、事件
+#特种作战指挥部,建筑、职业、事件
 civic_GF_nyto_special_operations_command = {
 	icon = "gfx/interface/icons/governments/civics/GF_nyto_Special_operations_Command.dds"
 	potential = {

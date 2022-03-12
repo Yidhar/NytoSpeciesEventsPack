@@ -5,6 +5,11 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
 	spriteType = {
+		name = "GFX_room"
+		textureFile = "gfx/NewGui/room.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	spriteType = {
 		name = "GFX_portrait"
 		textureFile = "gfx/NewGui/portrait.dds"
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
@@ -32,6 +37,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_small_portrait"
 		textureFile = "gfx/NewGui/small_portrait.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	spriteType = {
+		name = "GFX_small_portrait2"
+		textureFile = "gfx/NewGui/unknow.dds"
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
 	spriteType = {

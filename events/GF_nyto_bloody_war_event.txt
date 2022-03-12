@@ -100,7 +100,7 @@ country_event = {
 		country_event = { id = GFnytobloodywar.11 }
 	}
 }
-#发送消息，准备战争
+#发送消息,准备战争
 country_event = {
 	id = GFnytobloodywar.11
 	title = "TRANSMISSION"

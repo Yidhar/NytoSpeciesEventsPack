@@ -18,6 +18,42 @@ defind_txt ={
 		}
 		localization_key = GF_nyto_TXT_NAME_02
 	}
+	text = {
+		trigger = {
+			check_variable = {
+				which = GF_nyto_TXT
+				value = 2
+			}
+		}
+		localization_key = GF_nyto_TXT_NAME_03
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				which = GF_nyto_TXT
+				value = 3
+			}
+		}
+		localization_key = GF_nyto_TXT_NAME_04
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				which = GF_nyto_TXT
+				value = 4
+			}
+		}
+		localization_key = GF_nyto_TXT_NAME_05
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				which = GF_nyto_TXT
+				value = 5
+			}
+		}
+		localization_key = GF_nyto_TXT_NAME_06
+	}
 }
 defind_txt ={
 	name = GF_nyto_gla_event_faill
@@ -47,6 +83,33 @@ defind_txt ={
 			}
 		}
 		localization_key = GF_nyto_faill_03
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				which = GF_nyto_TXT
+				value = 3
+			}
+		}
+		localization_key = GF_nyto_faill_04
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				which = GF_nyto_TXT
+				value = 4
+			}
+		}
+		localization_key = GF_nyto_faill_05
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				which = GF_nyto_TXT
+				value = 5
+			}
+		}
+		localization_key = GF_nyto_faill_06
 	}
 }
 #4个按钮

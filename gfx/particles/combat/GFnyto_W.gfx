@@ -52,4 +52,10 @@ objectTypes={
 		
 		scale = 5
 	}
+	pdxparticle = {
+		name = "GFnyto_fe02_titan_laser_hit_effect"
+		type = "fe02_titan_laser_hit_effect"
+		
+		scale = 0.6
+	}
 }

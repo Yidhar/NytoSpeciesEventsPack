@@ -33,9 +33,9 @@ wg_GFnyto_bloody_war = {
 	potential = {always = yes}
 	possible = {always = yes}
 	set_defender_wargoal = wg_end_threat_ae	
-	defender_default = no	#如果没有及时选择战争目标，守军将获得这个战争目标。如果将多个war目标设置为defender default，则选择文件中编写脚本的第一个目标。
+	defender_default = no	#如果没有及时选择战争目标,守军将获得这个战争目标。如果将多个war目标设置为defender default,则选择文件中编写脚本的第一个目标。
 	threat_multiplier = 1.0 #影响征服系统和行星所产生的威胁
-	hide_if_no_cb = yes #如果国家没有必要的CB，隐藏这个战争目标
+	hide_if_no_cb = yes #如果国家没有必要的CB,隐藏这个战争目标
 	cede_claims = yes	#放弃和平要求？
 	show_claims_in_description = yes # Default no
 	ai_weight = {weight = 0}

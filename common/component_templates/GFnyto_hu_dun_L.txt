@@ -9,6 +9,9 @@ utility_component_template = {
 	modifier = {
 		ship_shield_add = 4380
 	}
+	ship_modifier = {
+		custom_tooltip = "GFnyto_force_shield_modif1"
+	}
 	component_set = "tech_GFnyto_force_shield_1"
 	resources = {
 		category = ship_components
@@ -35,6 +38,9 @@ utility_component_template = {
 	power = -340
 	modifier = {
 		ship_shield_add = 6010
+	}
+	ship_modifier = {
+		custom_tooltip = "GFnyto_force_shield_modif2"
 	}
 	component_set = "tech_GFnyto_force_shield_2"
 	resources = {
@@ -63,6 +69,9 @@ utility_component_template = {
 	modifier = {
 		ship_shield_add = 8760
 	}
+	ship_modifier = {
+		custom_tooltip = "GFnyto_force_shield_modif3"
+	}
 	component_set = "tech_GFnyto_force_shield_3"
 	resources = {
 		category = ship_components
@@ -89,6 +98,9 @@ utility_component_template = {
 	power = -130
 	modifier = {
 		ship_shield_add = 1575
+	}
+	ship_modifier = {
+		custom_tooltip = "GFnyto_force_shield_modif1"
 	}
 	component_set = "tech_GFnyto_force_shield_1"
 	resources = {
@@ -117,6 +129,9 @@ utility_component_template = {
 	modifier = {
 		ship_shield_add = 4825
 	}
+	ship_modifier = {
+		custom_tooltip = "GFnyto_force_shield_modif2"
+	}
 	component_set = "tech_GFnyto_force_shield_2"
 	resources = {
 		category = ship_components
@@ -143,6 +158,9 @@ utility_component_template = {
 	power = -210
 	modifier = {
 		ship_shield_add = 6115
+	}
+	ship_modifier = {
+		custom_tooltip = "GFnyto_force_shield_modif3"
 	}
 	component_set = "tech_GFnyto_force_shield_3"
 	resources = {
@@ -171,6 +189,9 @@ utility_component_template = {
 	modifier = {
 		ship_shield_add = 330
 	}
+	ship_modifier = {
+		custom_tooltip = "GFnyto_force_shield_modif1"
+	}
 	component_set = "tech_GFnyto_force_shield_1"
 	resources = {
 		category = ship_components
@@ -198,6 +219,9 @@ utility_component_template = {
 	modifier = {
 		ship_shield_add = 635
 	}
+	ship_modifier = {
+		custom_tooltip = "GFnyto_force_shield_modif2"
+	}
 	component_set = "tech_GFnyto_force_shield_2"
 	resources = {
 		category = ship_components
@@ -224,6 +248,9 @@ utility_component_template = {
 	power = -105
 	modifier = {
 		ship_shield_add = 1460
+	}
+	ship_modifier = {
+		custom_tooltip = "GFnyto_force_shield_modif3"
 	}
 	component_set = "tech_GFnyto_force_shield_3"
 	resources = {

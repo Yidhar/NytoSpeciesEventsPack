@@ -1,17 +1,17 @@
 ﻿l_simp_chinese:
 GFnyto_war_theory.1.name:0 "新的海军学说"
-GFnyto_war_theory.1.desc:0 "我们的海军经验积累到一定程度了，现在可以选择一类海军学说来作为舰队的作战准则。（注：所有玩家能使用的科技都可以在科技池中刷出，这里的选项只是让一些晚出现的科技能够被提前研发。）"
+GFnyto_war_theory.1.desc:0 "我们的海军经验积累到一定程度了,现在可以选择一类海军学说来作为舰队的作战准则。（注：所有玩家能使用的科技都可以在科技池中刷出,这里的选项只是让一些晚出现的科技能够被提前研发。）"
 
 GFnyto_war_theory.1.a:0 "机动偷家学说"
 GFnyto_war_theory.1.b:0 "优势射程学说"
 GFnyto_war_theory.1.c:0 "决战兵器学说"
 GFnyto_war_theory.1.d:0 "舰海突击学说"
-GFnyto_war_theory.1.e:0 "海军怎么能够用陆军马鹿的学说？你们要知耻，知耻啊！"
+GFnyto_war_theory.1.e:0 "海军怎么能够用陆军马鹿的学说？你们要知耻,知耻啊！"
 
-GFnyto_war_theory_A:0 "机动偷家学说注重在敌人后方作战，瘫痪敌人工业星球从而赢得战争。"
-GFnyto_war_theory_B:0 "优势射程学说注重发挥射程优势，在敌人接近之前尽可能杀伤敌舰从而赢得战争。"
-GFnyto_war_theory_C:0 "决战兵器学说注重数量少但强大的决战舰船进行舰队决战，尽可能减少自身损失，从而赢得战争"
-GFnyto_war_theory_D:0 "舰海突击学说注重发挥数量优势，利用自身工业优势拖垮敌人从而赢得战争。"
+GFnyto_war_theory_A:0 "机动偷家学说注重在敌人后方作战,瘫痪敌人工业星球从而赢得战争。"
+GFnyto_war_theory_B:0 "优势射程学说注重发挥射程优势,在敌人接近之前尽可能杀伤敌舰从而赢得战争。"
+GFnyto_war_theory_C:0 "决战兵器学说注重数量少但强大的决战舰船进行舰队决战,尽可能减少自身损失,从而赢得战争"
+GFnyto_war_theory_D:0 "舰海突击学说注重发挥数量优势,利用自身工业优势拖垮敌人从而赢得战争。"
 
 tech_GFnyto_war_theory_a1:0 "战场救火队"
 tech_GFnyto_war_theory_a1_desc:0 ""

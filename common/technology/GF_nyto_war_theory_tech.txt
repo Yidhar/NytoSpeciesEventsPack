@@ -119,7 +119,7 @@ tech_GFnyto_war_theory_c1 = {
 	prereqfor_desc = {
 		custom = {
 			title = "解锁移动城市区段类型：机械巨兽"
-			desc = "移动城市可以安装20个X槽位的武器，代价是不能安装资源生产类部件。"
+			desc = "移动城市可以安装20个X槽位的武器,代价是不能安装资源生产类部件。"
 		}
 	}
 	potential = {has_authority = auth_GF_paradeus}		
@@ -269,7 +269,7 @@ tech_GFnyto_war_theory_e3 = {
 	prereqfor_desc = {
 		custom = {
 			title = "解锁泰坦区段类型：空母核心、空母舰尾"
-			desc = "泰坦核心区段和泰坦舰尾区段可以安装h槽位的武器，而且浮游炮只能安装在泰坦。"
+			desc = "泰坦核心区段和泰坦舰尾区段可以安装h槽位的武器,而且浮游炮只能安装在泰坦。"
 		}
 	}
 	potential = {has_authority = auth_GF_paradeus}		

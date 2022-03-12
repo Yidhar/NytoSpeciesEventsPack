@@ -131,7 +131,7 @@ GFnyto_shiled_ship ={
 		}
 	}
 	can_disable = yes
-	required_component_set = "power_core" #右侧的部件设定，下同
+	required_component_set = "power_core" #右侧的部件设定,下同
     required_component_set = "ftl_components"
     required_component_set = "thruster_components"
     required_component_set = "sensor_components"

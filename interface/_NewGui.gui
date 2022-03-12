@@ -14,13 +14,7 @@ guiTypes = {
 		iconType = { name = "hex_bg" spriteType = "GFX_hex_bg" position = { x = -10000 y = -14000 } alwaysTransparent = yes }
 		iconType = { name = "empire_header_line" quadTextureSprite = "GFX_line_long" position = { x = 60000 y = 22000 } alwaysTransparent = yes }
 
-		buttonType = {
-			name = "close"
-			quadTextureSprite = "GFX_skip"
-			position = { x= 1280 y = 50 }
-			shortcut = "ESCAPE"
-			clicksound = "back_click"
-		}
+	
 
 		# Custom header
 		instantTextBoxType = {
@@ -78,9 +72,21 @@ guiTypes = {
 			iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
 			instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
 		}
-	
-		### 文本框 ###
-	
+		#背景
+		effectButtonType = {
+			name = GF_nyto_gl_bg
+			position = {x = 0 y = 53 }
+			quadTextureSprite = GFX_room
+			effect = GF_GUi_BG
+		}
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_skip"
+			position = { x= 1280 y = 50 }
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+		}
+		### 文本框 ###		
 		containerWindowType = {
 			name = "EVENT_DIPLO"
 			position = { x = 0 y = 557 }
@@ -172,6 +178,13 @@ guiTypes = {
 			quadTextureSprite = GFX_small_portrait
 			effect = small_painting_effct
 		}
+		#小窗头像2
+		effectButtonType = {
+			name = small_painting2
+			position = { x = 76 y = 643 }
+			quadTextureSprite = GFX_small_portrait2
+			effect = small_painting_effct2
+		}
 		#opt*4
 		effectButtonType = {
 			name = GFnyto_GUI_options01
@@ -203,7 +216,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_new_option" 
 			effect = GF_nyto_opt04
 			font = "cg_16b"
-			text = "GFnyto_GUI_options04_OPTION_TEXT"
+			text = "GFnyto_GUI_options04_TEXT"
 		}
 		#name
 		effectButtonType = {

@@ -362,114 +362,114 @@ ship_section_template={
 	icon = "GFX_ship_part_core_stern"
 	icon_frame=1
 	component_slot={								#武器位
-		name = "T_LARGE_01"						#名称，单个区段内不能相同
+		name = "T_LARGE_01"						#名称,单个区段内不能相同
 		template = "invisible_titanic_fixed"	#槽位所述
-		locatorname = "large_gun_03"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_03"					#位点名称,就是模型的武器发射位置
 	}	
 	component_slot={								#武器位
-		name = "W_LARGE_02"						#名称，单个区段内不能相同
+		name = "W_LARGE_02"						#名称,单个区段内不能相同
 		template = "invisible_planet_killer_fixed"	#槽位所述
-		locatorname = "large_gun_03"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_03"					#位点名称,就是模型的武器发射位置
 	}	
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_03"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_03"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "large_gun_03"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_03"					#位点名称,就是模型的武器发射位置
 	}	
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_04"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_04"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "large_gun_04"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_04"					#位点名称,就是模型的武器发射位置
 	}		
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_05"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_05"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "large_gun_05"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_05"					#位点名称,就是模型的武器发射位置
 	}	
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_06"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_06"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "large_gun_01"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_01"					#位点名称,就是模型的武器发射位置
 	}	
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_07"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_07"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "large_gun_02"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_02"					#位点名称,就是模型的武器发射位置
 	}	
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_08"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_08"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "large_gun_04"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_04"					#位点名称,就是模型的武器发射位置
 	}		
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_09"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_09"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "large_gun_01"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_01"					#位点名称,就是模型的武器发射位置
 	}	
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_10"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_10"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "large_gun_02"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_02"					#位点名称,就是模型的武器发射位置
 	}	
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_11"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_11"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "large_gun_03"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_03"					#位点名称,就是模型的武器发射位置
 	}	
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_12"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_12"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "large_gun_03"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_03"					#位点名称,就是模型的武器发射位置
 	}	
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_13"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_13"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "large_gun_04"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_04"					#位点名称,就是模型的武器发射位置
 	}	
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_14"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_14"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "large_gun_05"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_05"					#位点名称,就是模型的武器发射位置
 	}	
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_15"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_15"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "large_gun_06"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_06"					#位点名称,就是模型的武器发射位置
 	}	
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_16"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_16"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "large_gun_07"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_07"					#位点名称,就是模型的武器发射位置
 	}	
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_17"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_17"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "large_gun_08"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_08"					#位点名称,就是模型的武器发射位置
 	}	
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_18"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_18"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "large_gun_09"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_09"					#位点名称,就是模型的武器发射位置
 	}	
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_19"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_19"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "large_gun_10"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_10"					#位点名称,就是模型的武器发射位置
 	}	
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_20"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_20"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "large_gun_11"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_11"					#位点名称,就是模型的武器发射位置
 	}
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_21"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_21"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "large_gun_12"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_12"					#位点名称,就是模型的武器发射位置
 	}
 	component_slot={								#武器位
-		name = "EXTRA_LARGE_22"						#名称，单个区段内不能相同
+		name = "EXTRA_LARGE_22"						#名称,单个区段内不能相同
 		template = "invisible_extra_large_fixed"	#槽位所述
-		locatorname = "large_gun_13"					#位点名称，就是模型的武器发射位置
+		locatorname = "large_gun_13"					#位点名称,就是模型的武器发射位置
 	}
 	resources = {
 		category = ship_components

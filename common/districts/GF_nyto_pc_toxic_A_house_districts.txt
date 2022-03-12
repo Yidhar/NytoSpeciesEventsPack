@@ -238,7 +238,6 @@ district_GFnyto_pc_Epiphyllum = {
 	}
 	planet_modifier = {		
 		job_GFnyto_Epiphyllum_job_add = 2
-		pop_environment_tolerance = -0.05
 	}
 	triggered_planet_modifier = {
 		potential = {

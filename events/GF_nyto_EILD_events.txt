@@ -352,7 +352,7 @@ planet_event = {
 	}
 }
 
-# 特殊项目4完成，创建EILD附属种族
+# 特殊项目4完成,创建EILD附属种族
 planet_event = {
 	id = GFnytoeild.35
 	title = "PROJECT_COMPLETE"

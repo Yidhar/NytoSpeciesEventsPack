@@ -13,7 +13,7 @@ tech_GFnyto_accelerating_coil1= {
 	prereqfor_desc = {
 		custom = {
 			title = "解锁泰坦舰首区段类型：空母舰首"
-			desc = "可以安装歼星武器，使泰坦能够进行对行星毁灭打击。"
+			desc = "可以安装歼星武器,使泰坦能够进行对行星毁灭打击。"
 		}
 	}
 	potential = {has_authority = auth_GF_paradeus}
@@ -353,7 +353,7 @@ tech_GF_nyto_sm ={
 	ai_weight = {weight =  50}
 }
 tech_GFnyto_RBR = {
-	cost = 1145141919810
+	cost = 0
 	area = society
 	tier = 1
 	weight_modifier = {

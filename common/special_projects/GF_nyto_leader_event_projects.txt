@@ -1,4 +1,4 @@
-#特殊项目，人造神明
+#特殊项目,人造神明
 special_project = {
 	key = "GFnyto_god_created_by_us"
 	cost = 1000

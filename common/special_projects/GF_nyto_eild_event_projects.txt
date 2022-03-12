@@ -1,4 +1,4 @@
-#特殊项目，用来修复隔离墙
+#特殊项目,用来修复隔离墙
 special_project = {
 	key = "GFnyto_defense_eild_attack_project"
 	event_chain = "GFnyto_eild_attack_chain"
@@ -16,7 +16,7 @@ special_project = {
 	}
 }
 
-#特殊项目，修正大型路基炮台
+#特殊项目,修正大型路基炮台
 special_project = {
 	key = GFnyto_defense_eild_attack_Land_base_station
 	event_chain = "GFnyto_eild_attack_chain"
@@ -48,7 +48,7 @@ special_project = {
 	}
 }
 
-#特殊项目，用来解锁关停遗迹方案
+#特殊项目,用来解锁关停遗迹方案
 special_project = {
 	key = "GFnyto_find_close_ruin_project"
 	event_chain = "GFnyto_eild_attack_chain"
@@ -66,7 +66,7 @@ special_project = {
 	}
 }
 
-#特殊项目，用来关停遗迹
+#特殊项目,用来关停遗迹
 special_project = {
 	key = "GFnyto_close_ruin_project"
 	event_chain = "GFnyto_eild_attack_chain"
@@ -87,7 +87,7 @@ special_project = {
 	}
 }
 
-#特殊项目，用来解锁EILD军团
+#特殊项目,用来解锁EILD军团
 special_project = {
 	key = "study_GF_nyto_eild_army_project"
 	event_chain = "GFnyto_eild_attack_chain"
@@ -107,7 +107,7 @@ special_project = {
 	}
 }
 
-#特殊项目，用来清除殖民地EILD地块
+#特殊项目,用来清除殖民地EILD地块
 special_project = {
 	key = "defense_colony_GF_nyto_eild_attack_project"
 	event_chain = "GFnyto_colony_eild_attack_chain"

@@ -519,7 +519,7 @@ GFnyto_Epiphyllum_job = {
 			trigger = {
 				is_variable_set = GFnyto_plante_wrlv
 			}
-			GF_nyto_collapse_liquid = 1
+			GF_nyto_collapse_liquid = 0.1
 			food = 0.05
 			multiplier = planet.GFnyto_plante_wrlv
 		}

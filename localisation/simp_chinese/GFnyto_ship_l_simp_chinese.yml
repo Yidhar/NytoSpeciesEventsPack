@@ -10,7 +10,7 @@ GFnyto_L_cruiser_argo_puppis:0 "船尾座"
 GFnyto_X_corvette:0 "装甲猎人"
 
 GFnyto_mobile_city:0 "移动城市"
-GFnyto_mobile_city_desc:0 "一座可以移动的城市。既可以装载生产模块，也可以进行战斗改装。"
+GFnyto_mobile_city_desc:0 "一座可以移动的城市。既可以装载生产模块,也可以进行战斗改装。"
 GFnyto_mobile_city_1:0 "小型移动城市"
 GFnyto_mobile_city_2:0 "中型移动城市"
 GFnyto_mobile_city_3:0 "大型移动城市"
