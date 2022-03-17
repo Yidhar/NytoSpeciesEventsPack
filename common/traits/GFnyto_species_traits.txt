@@ -149,7 +149,6 @@ trait_GF_nyto_collapse_radiation_adaptation= {
 	potential_crossbreeding_chance = 0#潜在杂交概率
 	initial = no#是否初始特质,指是否开局可选
 	randomized = no#是否随机特质（指生成ai时是否会有此特性）
-	modification = no
 	immortal_leaders = no
 	improves_leaders = no#是否会影响领袖
 	advanced_trait=no#是否高级特质

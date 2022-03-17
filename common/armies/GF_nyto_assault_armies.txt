@@ -48,7 +48,7 @@ GF_nyto_white_knight= {
 	collateral_damage = 0.5
 	war_exhaustion = 1.0
 	time = 120
-	has_species = no
+	has_species = yes
 	icon = GFX_army_type_primitive
 	resources = {
 		category = armies
@@ -56,8 +56,24 @@ GF_nyto_white_knight= {
 		upkeep = {energy = 1}
 	}
 	potential = {owner = {has_authority = auth_GF_paradeus}}
-	prerequisites = { "tech_GF_nyto_white_knight" }
 }
+GF_nyto_white_knight2= {
+	damage = 5.0
+	health = 5.0
+	has_morale = yes
+	morale = 5.0
+	morale_damage = 5
+	collateral_damage = 0.5
+	war_exhaustion = 1.0
+	has_species = yes
+	icon = GFX_army_type_primitive
+	is_pop_spawned = yes
+	spawn_chance = {
+		factor = 1
+	}
+	potential = {owner = {has_authority = auth_GF_paradeus has_civic = civic_GF_nyto_special_operations_command  }}
+}
+
 #战争修女
 GF_nyto_war_nuns= {
 	damage = 2
@@ -131,6 +147,7 @@ GF_nyto_armor_train= {
 		planet = {has_building = building_GFnyto_transportation_hub}
 	}
 }
+
 #海军陆战队
 GF_nyto_marine_corps = {
 	defensive = yes

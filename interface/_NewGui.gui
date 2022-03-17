@@ -79,6 +79,12 @@ guiTypes = {
 			quadTextureSprite = GFX_room
 			effect = GF_GUi_BG
 		}
+		effectButtonType = {
+			name = GF_nyto_gl_bg2
+			position = {x = 0 y = 53 }
+			quadTextureSprite = GFX_room2
+			effect = GF_GUi_BG2
+		}
 		buttonType = {
 			name = "close"
 			quadTextureSprite = "GFX_skip"

@@ -6,16 +6,18 @@ decision_pc_GF_nyto_embers_gloomy_project = {
 	resources = {
 		category = decisions
 		cost = {
-			GF_nyto_collapse_liquid=100
-			influence=50
-			alloys=1000
-			}
+			GF_nyto_collapse_liquid = 100
+			influence = 50
+			alloys = 1000
+		}
 	}
 	potential = {
 		is_planet_class = pc_GF_nyto_embers_gloomy
 		habitable_structure = no
 		exists = owner
-		owner = { has_technology = tech_climate_restoration }
+		owner = {
+			has_technology = tech_climate_restoration
+		}
 		NOT = {
 			has_planet_flag = GFnyto_Spring_wakes_up
 		}
@@ -34,41 +36,55 @@ decision_pc_GF_nyto_embers_gloomy_project = {
 			}
 			set_planet_flag = GFnyto_Spring_wakes_up
 			if = {
-				limit = { is_homeworld = yes  }
+				limit = {
+					is_homeworld = yes
+				}
 				planet_event = {
-					id = GFnytopctoxic.20			
-				} 
+					id = GFnytopctoxic.20
+				}
 			}
 			planet_event = {
-				id = GFnytopctoxic.20			
+				id = GFnytopctoxic.20
 			}
 			if = {
-				limit = { planet_size > 20 is_homeworld = no }
+				limit = {
+					planet_size > 20
+					is_homeworld = no
+				}
 				planet_event = {
-					id = GFnytopctoxic.20			
-				} 
+					id = GFnytopctoxic.20
+				}
 			}
 		}
 	}
-	ai_weight = {weight = 5}
+	ai_weight = {
+		weight = 5
+	}
 }
-
 
 #恶魔熔炉星球
 decision_pc_GF_nyto_devil_furnace_project = {
 	owned_planets_only = yes
-	icon = decision_pc_GF_nyto_devil_furnace_project 
+	icon = decision_pc_GF_nyto_devil_furnace_project
 	enactment_time = 720
 	resources = {
 		category = decisions
-		cost = {GF_nyto_collapse_liquid=10000}
+		cost = {
+			GF_nyto_collapse_liquid = 10000
+		}
 	}
-	allow = {NOT = { has_planet_flag  = pc_GF_nyto_done }}
+	allow = {
+		NOT = {
+			has_planet_flag = pc_GF_nyto_done
+		}
+	}
 	potential = {
 		is_planet_class = pc_GF_nyto_embers_gloomy
 		habitable_structure = no
 		exists = owner
-		owner = { has_ascension_perk = ap_GF_nyto_conquer_hell }
+		owner = {
+			has_ascension_perk = ap_GF_nyto_conquer_hell
+		}
 	}
 	effect = {
 		change_pc = pc_GF_nyto_devil_furnace
@@ -79,7 +95,9 @@ decision_pc_GF_nyto_devil_furnace_project = {
 			}
 		}
 	}
-	ai_weight = {weight = 5}
+	ai_weight = {
+		weight = 5
+	}
 }
 
 #建立行星轨道防御系统
@@ -90,13 +108,17 @@ decision_GFnyto_planetary_defense = {
 	resources = {
 		category = decisions
 		cost = {
-			GF_nyto_collapse_liquid=10
-			alloys=100
+			GF_nyto_collapse_liquid = 10
+			alloys = 100
 		}
 	}
 	potential = {
-		NOT = {has_modifier = GFnyto_planetary_defense_ready}
-		owner = {has_authority = auth_GF_paradeus}
+		NOT = {
+			has_modifier = GFnyto_planetary_defense_ready
+		}
+		owner = {
+			has_authority = auth_GF_paradeus
+		}
 		habitable_structure = no
 		exists = owner
 	}
@@ -104,10 +126,14 @@ decision_GFnyto_planetary_defense = {
 		custom_tooltip = decision_GFnyto_planetary_defense_effects
 		add_deposit = d_GFnyto_planetary_orbit_defense_zone
 		add_deposit = d_GFnyto_planetary_surface_defense_zone
-		add_modifier = {modifier = GFnyto_planetary_defense_ready}
+		add_modifier = {
+			modifier = GFnyto_planetary_defense_ready
+		}
 		set_planet_flag = has_GFnyto_planetary_defense
 	}
-	ai_weight = {weight = 100 }
+	ai_weight = {
+		weight = 100
+	}
 }
 
 #心智载入
@@ -118,9 +144,15 @@ decision_GFnyto_pop_load = {
 	icon = decision_GFnyto_pop_load
 	resources = {
 		category = decisions
-		cost = {GF_nyto_dark_star_core  = 10 }
+		cost = {
+			GF_nyto_dark_star_core = 10
+		}
 	}
-	potential = {owner = {has_authority = auth_GF_paradeus}}	
+	potential = {
+		owner = {
+			has_authority = auth_GF_paradeus
+		}
+	}
 	effect = {
 		custom_tooltip = decision_GFnyto_pop_load_effect
 		hidden_effect = {
@@ -130,17 +162,17 @@ decision_GFnyto_pop_load = {
 					species = owner_main_species
 					ethos = root.owner
 				}
-			}			
+			}
 		}
 	}
 	ai_weight = {
 		weight = 20
-		modifier = { 
+		modifier = {
 			factor = 0
 			AND = {
 				free_housing < 1
-				free_jobs < 1	
-			}			
+				free_jobs < 1
+			}
 		}
 		modifier = {
 			factor = 50
@@ -155,14 +187,28 @@ decision_GFnyto_boom = {
 	owned_planets_only = yes
 	icon = decision_GFnyto_boom
 	potential = {
-		owner = {has_authority = auth_GF_paradeus}
+		owner = {
+			has_authority = auth_GF_paradeus
+		}
 		OR = {
-			solar_system = {has_megastructure = GFnyto_megastructure_collapse_reactor_01}
-			solar_system = {has_megastructure = GFnyto_megastructure_collapse_reactor_02}
-			solar_system = {has_megastructure = GFnyto_megastructure_collapse_reactor_03}
-			solar_system = {has_megastructure = GFnyto_megastructure_collapse_reactor_04}
-			solar_system = {has_megastructure = GFnyto_megastructure_collapse_reactor_05}
-			solar_system = {has_megastructure = GFnyto_megastructure_collapse_reactor_restored}
+			solar_system = {
+				has_megastructure = GFnyto_megastructure_collapse_reactor_01
+			}
+			solar_system = {
+				has_megastructure = GFnyto_megastructure_collapse_reactor_02
+			}
+			solar_system = {
+				has_megastructure = GFnyto_megastructure_collapse_reactor_03
+			}
+			solar_system = {
+				has_megastructure = GFnyto_megastructure_collapse_reactor_04
+			}
+			solar_system = {
+				has_megastructure = GFnyto_megastructure_collapse_reactor_05
+			}
+			solar_system = {
+				has_megastructure = GFnyto_megastructure_collapse_reactor_restored
+			}
 		}
 	}
 	effect = {
@@ -171,13 +217,22 @@ decision_GFnyto_boom = {
 			solar_system = {
 				set_star_class = sc_black_hole
 				every_system_planet = {
-					limit = {NOT = {is_planet = star}}
-					set_planet_size = 0				
+					limit = {
+						NOT = {
+							is_planet = star
+						}
+					}
+					change_pc = pc_broken
+					destroy_colony = yes
 				}
-				every_fleet_in_system = {destroy_fleet = fleet}
-				every_system_megastructure = {remove_megastructure = this}
+				every_fleet_in_system = {
+					destroy_fleet = fleet
+				}
+				every_system_megastructure = {
+					remove_megastructure = this
+				}
 			}
-		}				
+		}
 	}
 }
 
@@ -187,12 +242,19 @@ decision_GFnyto_yaosai = {
 	owned_planets_only = yes
 	icon = decision_GFnyto_planetary_defense
 	potential = {
-		owner = {has_authority = auth_GF_paradeus}
-		NOT = {
-			has_planet_flag = GF_nyto_yaosai
+		owner = {
+			has_authority = auth_GF_paradeus
+		}
+		OR = {
+			NOT = {
+				has_planet_flag = GF_nyto_yaosai
+			}
+			owner = {
+				has_civic = civic_GF_nyoto_armor_train
+			}
 		}
 	}
-	effect = { 
+	effect = {
 		custom_tooltip = decision_GFnyto_yaosai_desc1
 		set_planet_flag = GF_nyto_yaosai
 		create_army = {
@@ -205,7 +267,7 @@ decision_GFnyto_yaosai = {
 		category = decisions
 		cost = {
 			unity = 500
-			influence =  50
+			influence = 50
 		}
 	}
 }
@@ -222,7 +284,7 @@ decision_GFnyto_EILD_hunting = {
 			value > 5
 		}
 	}
-	effect = { 
+	effect = {
 		planet_event = {
 			id = GFnytoeild.54
 		}

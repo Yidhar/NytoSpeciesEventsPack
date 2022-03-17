@@ -13,12 +13,11 @@ civic_GF_nyto_phase_technician_desc:0 "将§G余烬黯然星球§!和非§R恶�
 #civic_GF_nyto_phase_technician_text:0 "将§G余烬黯然星球§!和非§R恶魔熔炉星球§!的§Y技工§!替换为§Y相位技师§!。"
 
 civic_GF_nyto_special_operations_command:0 "特战司"
-civic_GF_nyto_special_operations_command_desc:0 "将§G余烬黯然星球§!和非§R恶魔熔炉星球§!的£job£§Y官僚§!替换为£job£§Y白骑士§!。§Y白骑士§!可以产出£mod_country_admin_cap_add£并减少£crime£§Y犯罪度§!\n并且初始拥有白骑士陆军科研"
+civic_GF_nyto_special_operations_command_desc:0 "每个人生来就是为了战斗的胜利.每一场失败都没有人是无辜的\n允许人口生成£job£§Y白骑士§!陆军。"
 civic_GF_nyto_special_operations_command_text:0 ""
 
 civic_GF_nyto_technology_minister:0 "科技牧师"
-civic_GF_nyto_technology_minister_desc:0 "将§G余烬黯然星球§!和非§R恶魔熔炉星球§!的£job£§Y科研人员§!替换为£job£§Y科技牧师§!。§Y科技牧师§!可以产出更多的§Y物理学点数§!£physics£§Y生物学点数§!£society£§Y工程学点数§!£engineering£和§Y凝聚力§!£unity£§Y舒适度§!£amenities£。"
-#civic_GF_nyto_technology_minister_text:0 "将§G余烬黯然星球§!和非§R恶魔熔炉星球§!的§Y科研人员§!替换为§Y科技牧师§!。"
+civic_GF_nyto_technology_minister_desc:0 "将§G余烬黯然星球§!和非§R恶魔熔炉星球§!的£job£§Y科研人员§!替换为£job£§Y科技牧师§!。§Y科技牧师§!可以产出更多的§Y物理学点数§!£physics£§Y生物学点数§!£society£§Y工程学点数§!£engineering£和§Y凝聚力§!£unity£§Y舒适度§!£amenities£。""
 
 civic_GF_nyto_see_angel:0 "看见天使"
 civic_GF_nyto_see_angel_desc:0 "§R我盲目地大发雷霆,剪去大姐的羽翼,砍下三妹的头颅。大姐把我砍成两段,害我只剩下双腿。她全身残破不堪,在我消失后仍持续守护着我们的秘密。§!"
@@ -32,8 +31,13 @@ civic_GF_nyto_death:0 "死亡"
 civic_GF_nyto_death_desc:0 "§R所有国家人口增速-50%§!"
 GF_nyto_see_angel:0 "§R饥荒§! 人口停止增长 \n§R战争§! 和平不能维持 \n§R瘟疫§! 人口不能迁移 \n§R死亡§! 人口自动死亡"
 
- civic_GF_nyoto_armor_train:0 "铁道纵横"
- civic_GF_nyoto_armor_train_desc:0 "在与ELID漫长的对抗中,该国家建立了大量完备的轨道网络,并拥有数支完备的轨道机动部队\n使用该国策开局会拥有额外的装甲列车部队"
+ civic_GF_nyoto_armor_train:0 "永恒国度"
+civic_GF_nyoto_armor_train_desc:0 "人是没有安全感的生物,无论什么样的钢铁防线在这无边宇宙中都显得过于渺小\n§R允许无限制建造永固要塞§!"
+mod_armies_energy_upkeep_mult:0 "陆军$energy$维护费用:"
 
  civic_Gf_nyto_tanhua_pluse:0 "昙花共生"
- civic_Gf_nyto_tanhua_pluse_desc:0 "该国家以昙花为生,和这些美丽的花朵融为一体。\n▇▇上的花朵颜色总有些不对劲\n昙花种植区将额外提供1$job_GFnyto_Epiphyllum_job$"
+ civic_Gf_nyto_tanhua_pluse_desc:0 "妖艳的花朵在人们的身上肆意绽放\n昙花种植区将额外提供1$job_GFnyto_Epiphyllum_job$"
+
+civic_GF_nyto_reup:0 "高效回收"
+civic_GF_nyto_reup_desc:0 "我们必须利用好我们手头上的每一份资源,才有可能迎来曙光\n§R成功防御ELID入侵将获得额外资源§!"
+mod_planet_jobs_consumer_goods_upkeep_mult:0 "岗位$consumer_goods$维护费用:"

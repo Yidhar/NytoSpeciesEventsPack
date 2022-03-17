@@ -7,7 +7,6 @@ building_GFnyto_affluence_center = {
 		owner = {
 			has_authority = auth_GF_paradeus
 		}
-		is_planet_class = pc_GF_nyto_embers_gloomy
 	}
 	category = manufacturing
 	resources = {
@@ -27,9 +26,6 @@ building_GFnyto_affluence_center = {
 	}
 	planet_modifier = {
 		pop_environment_tolerance = 0.05
-	}
-	prerequisites = {
-		"tech_GF_nyto_storage_of_ancient_technology"
 	}
 }
 
@@ -54,6 +50,12 @@ building_GFnyto_class_4_singularity = {
 			minerals = 50
 			alloys = 10
 			GF_nyto_collapse_liquid = 5
+		}
+		upkeep = {
+			trigger = {
+				is_variable_set = GFnyto_plante_wrlv
+			}
+			energy = 0.1
 		}
 	}
 	planet_modifier = {
@@ -166,7 +168,6 @@ building_GFnyto_fe_stronghold = {
 	planet_modifier = {
 		job_GFnyto_white_knight_add = 5
 		planet_orbital_bombardment_damage = -0.3
-		pop_defense_armies_add = 10
 	}
 	resources = {
 		category = planet_buildings

@@ -416,7 +416,7 @@ planet_event = {
 }
 
 #花期
-planet_event = {
+country_event = {
 	id = GFnytoeild.51
 	title = GFnytoeild.51.name
 	desc = GFnytoeild.51.desc
@@ -424,132 +424,153 @@ planet_event = {
 	is_triggered_only = yes
 	picture = GFX_evt_GFnyto_global.5
 	trigger = {
-		owner = {
-			has_origin = origin_GF_nyto_the_last_light
-			NOT = {
-				has_country_flag = hide_GFnytoeild52
-			}
+		NOT = {
+			has_country_flag = hide_GFnytoeild52
 		}
-	}
-	pre_triggers = {
-		is_homeworld = yes
 	}
 	immediate = {
-		add_modifier = {
-			modifier = GFnyto_flower_period
-			days = 60
-		}
-		if = {
+		every_owned_planet = {
 			limit = {
-				check_variable = {
-					which = GFnyto_Eild_level
-					value > 5
-				}
-				check_variable = {
-					which = GFnyto_Eild_level
-					value < 100
-				}
-			}
-			multiply_variable = {
-				which = GFnyto_Eild_level
-				value = 1.3
-			}
-			round_variable = GFnyto_Eild_level
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = GFnyto_Eild_level
-					value <= 5
-				}
-			}
-			change_variable = {
-				which = GFnyto_Eild_level
-				value = 1
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = GFnyto_Eild_level
-					value >= 100
-				}
-			}
-			multiply_variable = {
-				which = GFnyto_Eild_level
-				value = 1.1
-			}
-		}
-		#如果携带昙花国策则击杀一pop
-		if = {
-			limit = {
-				owner = {
-					NOT = {
-						has_country_flag = GFnyto_global.5_hide
+				NAND = {
+					num_assigned_jobs = {
+						job = GFnyto_Epiphyllum_job
+						value < 1
 					}
-					has_authority = auth_GF_paradeus
-					has_civic = civic_Gf_nyto_tanhua_pluse
+					check_variable = {
+						which = GFnyto_plante_wrlv
+						value < 100
+					}
+					NOT = {
+						has_planet_flag = GF_nyto_eild_attack_begin
+					}
+				}
+				OR = {
+					NOT = {
+						has_planet_flag = GFnyto_no_tanhua
+					}
+					num_assigned_jobs = {
+						job = GFnyto_Epiphyllum_job
+						value > 1
+					}
+					has_planet_flag = GF_nyto_eild_attack_begin
 				}
 			}
-			planet_event = {
-				id = GFnyto_global.5
-			}
-		}
-		else_if = {
-			limit = {
-				owner = {
-					has_country_flag = GFnyto_global.5_hide
-					has_authority = auth_GF_paradeus
-					has_civic = civic_Gf_nyto_tanhua_pluse
-				}
-			}
-			planet_event = {
-				id = GFnyto_global.6
-			}
-		}
-		#导出昙花job数量 产生高额污染度
-		if = {
-			limit = {
-				num_assigned_jobs = {
-					job = GFnyto_Epiphyllum_job
-					value > 0
-				}
-			}
-			export_trigger_value_to_variable = {
-				trigger = num_assigned_jobs
-				parameters = {
-					job = GFnyto_Epiphyllum_job
-				}
-				variable = Epiphyllum_job_num
-			}
-			multiply_variable = {
-				which = Epiphyllum_job_num
-				value = 5
-			}
-			change_variable = {
-				which = GFnyto_plante_wrlv
-				value = Epiphyllum_job_num
+			add_modifier = {
+				modifier = GFnyto_flower_period
+				days = 31
 			}
 			if = {
-				limit = { 
-					NOT = {
-						is_planet_class = pc_GF_nyto_embers_gloomy
+				limit = {
+					check_variable = {
+						which = GFnyto_Eild_level
+						value > 5
+					}
+					check_variable = {
+						which = GFnyto_Eild_level
+						value < 100
 					}
 				}
-				remove_modifier = GF_nyto_Radiation
-				add_modifier = {
-					modifier = GF_nyto_Radiation
-					multiplier = GFnyto_plante_wrlv
+				multiply_variable = {
+					which = GFnyto_Eild_level
+					value = 1.3
+				}
+				round_variable = GFnyto_Eild_level
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = GFnyto_Eild_level
+						value <= 5
+					}
+				}
+				change_variable = {
+					which = GFnyto_Eild_level
+					value = 1
 				}
 			}
 			else_if = {
 				limit = {
-					is_planet_class = pc_GF_nyto_embers_gloomy
+					check_variable = {
+						which = GFnyto_Eild_level
+						value >= 100
+					}
 				}
-				remove_modifier = GF_nyto_Radiation2
-				add_modifier = {
-					modifier = GF_nyto_Radiation2
-					multiplier = GFnyto_plante_wrlv
+				multiply_variable = {
+					which = GFnyto_Eild_level
+					value = 1.1
+				}
+			}
+			#如果携带昙花国策则击杀一pop
+			if = {
+				limit = {
+					owner = {
+						NOT = {
+							has_country_flag = GFnyto_global.5_hide
+						}
+						has_authority = auth_GF_paradeus
+						has_civic = civic_Gf_nyto_tanhua_pluse
+					}
+				}
+				planet_event = {
+					id = GFnyto_global.5
+				}
+			}
+			else_if = {
+				limit = {
+					owner = {
+						has_country_flag = GFnyto_global.5_hide
+						has_authority = auth_GF_paradeus
+						has_civic = civic_Gf_nyto_tanhua_pluse
+					}
+				}
+				planet_event = {
+					id = GFnyto_global.6
+				}
+			}
+			#导出昙花job数量 产生高额污染度
+			if = {
+				limit = {
+					num_assigned_jobs = {
+						job = GFnyto_Epiphyllum_job
+						value > 0
+					}
+				}
+				export_trigger_value_to_variable = {
+					trigger = num_assigned_jobs
+					parameters = {
+						job = GFnyto_Epiphyllum_job
+					}
+					variable = Epiphyllum_job_num
+				}
+				multiply_variable = {
+					which = Epiphyllum_job_num
+					value = 5
+				}
+				change_variable = {
+					which = GFnyto_plante_wrlv
+					value = Epiphyllum_job_num
+				}
+				if = {
+					limit = {
+						NOT = {
+							is_planet_class = pc_GF_nyto_embers_gloomy
+						}
+					}
+					remove_modifier = GF_nyto_Radiation
+					add_modifier = {
+						modifier = GF_nyto_Radiation
+						multiplier = GFnyto_plante_wrlv
+					}
+				}
+				else_if = {
+					limit = {
+						is_planet_class = pc_GF_nyto_embers_gloomy
+					}
+					remove_modifier = GF_nyto_Radiation2
+					add_modifier = {
+						modifier = GF_nyto_Radiation2
+						multiplier = GFnyto_plante_wrlv
+					}
 				}
 			}
 		}
@@ -566,7 +587,7 @@ planet_event = {
 }
 
 #隐藏窗口花期
-planet_event = {
+country_event = {
 	id = GFnytoeild.52
 	message_desc = GFnytoeild.51.message
 	hide_window = yes
@@ -574,83 +595,153 @@ planet_event = {
 	picture = GFX_evt_GFnyto_global.5
 	trigger = {
 		owner = {
-			has_origin = origin_GF_nyto_the_last_light
 			has_country_flag = hide_GFnytoeild52
 		}
 	}
-	pre_triggers = {
-		is_homeworld = yes
-	}
 	immediate = {
-		add_modifier = {
-			modifier = GFnyto_flower_period
-			days = 60
-		}
-		if = {
+		every_owned_planet = {
 			limit = {
-				check_variable = {
-					which = GFnyto_Eild_level
-					value > 5
-				}
-				check_variable = {
-					which = GFnyto_Eild_level
-					value < 100
-				}
-			}
-			multiply_variable = {
-				which = GFnyto_Eild_level
-				value = 1.3
-			}
-			round_variable = GFnyto_Eild_level
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = GFnyto_Eild_level
-					value <= 5
-				}
-			}
-			change_variable = {
-				which = GFnyto_Eild_level
-				value = 1
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = GFnyto_Eild_level
-					value >= 100
-				}
-			}
-			multiply_variable = {
-				which = GFnyto_Eild_level
-				value = 1.1
-			}
-		}
-		if = {
-			limit = {
-				owner = {
-					NOT = {
-						has_country_flag = GFnyto_global.5_hide
+				NAND = {
+					num_assigned_jobs = {
+						job = GFnyto_Epiphyllum_job
+						value < 1
 					}
-					has_authority = auth_GF_paradeus
-					has_civic = civic_Gf_nyto_tanhua_pluse
+					check_variable = {
+						which = GFnyto_plante_wrlv
+						value < 100
+					}
+					NOT = {
+						has_planet_flag = GF_nyto_eild_attack_begin
+					}
+				}
+				OR = {
+					NOT = {
+						has_planet_flag = GFnyto_no_tanhua
+					}
+					num_assigned_jobs = {
+						job = GFnyto_Epiphyllum_job
+						value > 1
+					}
+					has_planet_flag = GF_nyto_eild_attack_begin
 				}
 			}
-			planet_event = {
-				id = GFnyto_global.5
+			add_modifier = {
+				modifier = GFnyto_flower_period
+				days = 31
 			}
-		}
-		else_if = {
-			limit = {
-				owner = {
-					has_country_flag = GFnyto_global.5_hide
-					has_authority = auth_GF_paradeus
-					has_civic = civic_Gf_nyto_tanhua_pluse
+			if = {
+				limit = {
+					check_variable = {
+						which = GFnyto_Eild_level
+						value > 5
+					}
+					check_variable = {
+						which = GFnyto_Eild_level
+						value < 100
+					}
+				}
+				multiply_variable = {
+					which = GFnyto_Eild_level
+					value = 1.3
+				}
+				round_variable = GFnyto_Eild_level
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = GFnyto_Eild_level
+						value <= 5
+					}
+				}
+				change_variable = {
+					which = GFnyto_Eild_level
+					value = 1
 				}
 			}
-			planet_event = {
-				id = GFnyto_global.6
+			else_if = {
+				limit = {
+					check_variable = {
+						which = GFnyto_Eild_level
+						value >= 100
+					}
+				}
+				multiply_variable = {
+					which = GFnyto_Eild_level
+					value = 1.1
+				}
+			}
+			#如果携带昙花国策则击杀一pop
+			if = {
+				limit = {
+					owner = {
+						NOT = {
+							has_country_flag = GFnyto_global.5_hide
+						}
+						has_authority = auth_GF_paradeus
+						has_civic = civic_Gf_nyto_tanhua_pluse
+					}
+				}
+				planet_event = {
+					id = GFnyto_global.5
+				}
+			}
+			else_if = {
+				limit = {
+					owner = {
+						has_country_flag = GFnyto_global.5_hide
+						has_authority = auth_GF_paradeus
+						has_civic = civic_Gf_nyto_tanhua_pluse
+					}
+				}
+				planet_event = {
+					id = GFnyto_global.6
+				}
+			}
+			#导出昙花job数量 产生高额污染度
+			if = {
+				limit = {
+					num_assigned_jobs = {
+						job = GFnyto_Epiphyllum_job
+						value > 0
+					}
+				}
+				export_trigger_value_to_variable = {
+					trigger = num_assigned_jobs
+					parameters = {
+						job = GFnyto_Epiphyllum_job
+					}
+					variable = Epiphyllum_job_num
+				}
+				multiply_variable = {
+					which = Epiphyllum_job_num
+					value = 5
+				}
+				change_variable = {
+					which = GFnyto_plante_wrlv
+					value = Epiphyllum_job_num
+				}
+				if = {
+					limit = {
+						NOT = {
+							is_planet_class = pc_GF_nyto_embers_gloomy
+						}
+					}
+					remove_modifier = GF_nyto_Radiation
+					add_modifier = {
+						modifier = GF_nyto_Radiation
+						multiplier = GFnyto_plante_wrlv
+					}
+				}
+				else_if = {
+					limit = {
+						is_planet_class = pc_GF_nyto_embers_gloomy
+					}
+					remove_modifier = GF_nyto_Radiation2
+					add_modifier = {
+						modifier = GF_nyto_Radiation2
+						multiplier = GFnyto_plante_wrlv
+					}
+				}
 			}
 		}
 	}
@@ -686,14 +777,14 @@ planet_event = {
 		}
 		create_country = {
 			name = "EILD"
-			type = faction			
+			type = faction
 			auto_delete = no
 			effect = {
 				establish_communications_no_message = root.owner
 				establish_contact = {
 					who = root.owner
 					location = root.solar_system
-				}				
+				}
 				save_global_event_target_as = EILD_country
 				create_species = {
 					name = "EILD"
@@ -727,18 +818,28 @@ planet_event = {
 	show_sound = event_ground_battle
 	is_triggered_only = yes
 	trigger = {
-		has_planet_flag = GF_nyto_eild_attack_begin
+		OR = {
+			has_planet_flag = GF_nyto_eild_attack_begin
+			has_planet_flag = GFnyto_colony_eild_attack_begin
+		}
 	}
 	immediate = {
 		event_target:EILD_country = {
-			change_variable = {
-				which = Elidlevel
-				value = 1
-			}
-			remove_modifier = GF_nyto_Elid_level
-			add_modifier = {
-				modifier = GF_nyto_Elid_level
-				multiplier = Elidlevel
+			if = {
+				limit = {
+					prev = {
+						is_homeworld = yes
+					}
+				}
+				change_variable = {
+					which = Elidlevel
+					value = 1
+				}
+				remove_modifier = GF_nyto_Elid_level
+				add_modifier = {
+					modifier = GF_nyto_Elid_level
+					multiplier = Elidlevel
+				}
 			}
 			if = {
 				limit = {
@@ -752,6 +853,14 @@ planet_event = {
 					prevprev = {
 						planet_event = {
 							id = GFnytoeild.59
+						}
+						every_planet_army = {
+							limit = {
+								owner = {
+									is_country = event_target:EILD_country
+								}
+							}
+							remove_army = yes
 						}
 					}
 				}
@@ -963,17 +1072,40 @@ event = {
 	option = {
 		name = GFnytoeild.44ab
 		root = {
-			add_resource = {
-				minerals = 300
-				mult = fromfrom.GFnyto_Eild_level
+			if = {
+				limit = {
+					has_civic = civic_GF_nyto_reup
+				}
+				add_resource = {
+					minerals = 600
+					mult = fromfrom.GFnyto_Eild_level
+				}
+				add_resource = {
+					GF_nyto_collapse_liquid = 40
+					mult = fromfrom.GFnyto_Eild_level
+				}
+				add_resource = {
+					unity = 400
+					mult = fromfrom.GFnyto_Eild_level
+				}
+				add_resource = {
+					energy = 200
+					mult = fromfrom.GFnyto_Eild_level
+				}
 			}
-			add_resource = {
-				GF_nyto_collapse_liquid = 20
-				mult = fromfrom.GFnyto_Eild_level
-			}
-			add_resource = {
-				unity = 200
-				mult = fromfrom.GFnyto_Eild_level
+			else = {
+				add_resource = {
+					minerals = 300
+					mult = fromfrom.GFnyto_Eild_level
+				}
+				add_resource = {
+					GF_nyto_collapse_liquid = 20
+					mult = fromfrom.GFnyto_Eild_level
+				}
+				add_resource = {
+					unity = 200
+					mult = fromfrom.GFnyto_Eild_level
+				}
 			}
 		}
 		hidden_effect = {
@@ -1274,22 +1406,44 @@ event = {
 			remove_country_flag = GFnyto_Eild_hunting_M
 			remove_country_flag = GFnyto_Eild_hunting_L
 		}
-		
 	}
 	option = {
 		name = GFnytoeild.58a
 		root = {
-			add_resource = {
-				minerals = 150
-				mult = fromfrom.GFnyto_Eild_level
+			if = {
+				limit = {
+					has_civic = civic_GF_nyto_reup
+				}
+				add_resource = {
+					minerals = 300
+					mult = fromfrom.GFnyto_Eild_level
+				}
+				add_resource = {
+					GF_nyto_collapse_liquid = 20
+					mult = fromfrom.GFnyto_Eild_level
+				}
+				add_resource = {
+					unity = 200
+					mult = fromfrom.GFnyto_Eild_level
+				}
+				add_resource = {
+					energy = 50
+					mult = fromfrom.GFnyto_Eild_level
+				}
 			}
-			add_resource = {
-				GF_nyto_collapse_liquid = 10
-				mult = fromfrom.GFnyto_Eild_level
-			}
-			add_resource = {
-				unity = 100
-				mult = fromfrom.GFnyto_Eild_level
+			else = {
+				add_resource = {
+					minerals = 150
+					mult = fromfrom.GFnyto_Eild_level
+				}
+				add_resource = {
+					GF_nyto_collapse_liquid = 10
+					mult = fromfrom.GFnyto_Eild_level
+				}
+				add_resource = {
+					unity = 100
+					mult = fromfrom.GFnyto_Eild_level
+				}
 			}
 			hidden_effect = {
 				fromfrom = {
@@ -1418,7 +1572,7 @@ event = {
 			}
 			set_owner = event_target:EILD_country
 			set_planet_name = "寄了"
-		}					
+		}
 	}
 }
 
@@ -1492,10 +1646,19 @@ planet_event = {
 	}
 	immediate = {
 		set_planet_flag = GFnyto_colony_eild_attack_begin
+		set_variable = {
+			which = GFnyto_Eild_level
+			value = 5
+		}
 		add_deposit = d_GFnyto_black_zone
 		add_modifier = {
 			modifier = "GFnyto_eild_attack"
 			days = -1
+		}
+		planet_event = {
+			id = GFnytoeild.44
+			days = 360
+			random = 80
 		}
 	}
 	option = {

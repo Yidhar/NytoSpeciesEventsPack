@@ -211,5 +211,5 @@ GF_nyto_l_weapon2_soon ={
 }
 #终末辉光
 GF_nyto_T_weapon2_damgabuff = {
-	weapon_type_prism_weapon_damage_mult = 1
+	weapon_type_prism_weapon_damage_mult = 1	
 }

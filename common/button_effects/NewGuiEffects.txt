@@ -117,9 +117,10 @@ GF_nyto_opt01 = {
 	}
 	effect = {
 		from = {
-			country_event = {
-				id = gfnytoparadeusancrel.30103
-			}
+			remove_ui_opt = yes
+			set_country_flag = user_GF_nyto_opt01
+			change_variable = {which = GF_nyto_TXT value = 1 }
+			set_country_flag = GUI_BG_1
 		}
 	}
 }
@@ -133,18 +134,31 @@ GF_nyto_opt02 = {
 	allow = {
 	}
 	effect = {
+		from = {
+			remove_ui_opt = yes
+			set_country_flag = user_GF_nyto_opt02
+			change_variable = {which = GF_nyto_TXT value = 1 }
+			set_country_flag = GUI_BG_1
+			set_country_flag = GF_nyto_ui_y
+		}
 	}
 }
 
 GF_nyto_opt03 = {
 	potential = {
 		from = {
-			has_country_flag = GF_nyto_opt03
+			has_country_flag = GF_nyto_opt03			
 		}
 	}
 	allow = {
 	}
 	effect = {
+		from = {
+			remove_ui_opt = yes
+			set_country_flag = user_GF_nyto_opt03
+			change_variable = {which = GF_nyto_TXT value = 1 }
+			set_country_flag = GUI_BG_1
+		}
 	}
 }
 
@@ -157,6 +171,12 @@ GF_nyto_opt04 = {
 	allow = {
 	}
 	effect = {
+		from = {			
+			remove_ui_opt = yes
+			set_country_flag = user_GF_nyto_opt04
+			change_variable = {which = GF_nyto_TXT value = 1 }
+			set_country_flag = GUI_BG_1
+		}
 	}
 }
 
@@ -176,6 +196,19 @@ GF_GUi_BG= {
 	potential = {
 		from = {
 			has_country_flag = GUI_BG_1
+		}
+	}
+	allow = {
+		
+	}
+	effect = {
+		
+	}
+}
+GF_GUi_BG2= {
+	potential = {
+		from = {
+			has_country_flag = GUI_BG_2
 		}
 	}
 	allow = {

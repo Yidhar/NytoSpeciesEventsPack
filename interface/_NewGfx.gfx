@@ -10,6 +10,11 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
 	spriteType = {
+		name = "GFX_room2"
+		textureFile = "gfx/NewGui/room2.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	spriteType = {
 		name = "GFX_portrait"
 		textureFile = "gfx/NewGui/portrait.dds"
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"

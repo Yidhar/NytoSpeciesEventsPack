@@ -22,27 +22,27 @@
 # }
 
 #相位技师,建筑、职业、事件
-civic_GF_nyto_phase_technician = {
-	icon = "gfx/interface/icons/governments/civics/GF_nyto_phase_technician.dds"
-	potential = {
-		authority = {
-			value = auth_GF_paradeus
-		}
-	}
-	pickable_at_start = no
-	possible = {
-		species_class = {
-			value = nyto
-		}
-	}
-	modifier = {
-		country_megastructure_build_cap_add = 1
-	}	
-	modification = yes
-	random_weight = {
-		base = 5
-	}
-}
+# civic_GF_nyto_phase_technician = {
+# 	icon = "gfx/interface/icons/governments/civics/GF_nyto_phase_technician.dds"
+# 	potential = {
+# 		authority = {
+# 			value = auth_GF_paradeus
+# 		}
+# 	}
+# 	pickable_at_start = no
+# 	possible = {
+# 		species_class = {
+# 			value = nyto
+# 		}
+# 	}
+# 	modifier = {
+# 		country_megastructure_build_cap_add = 1
+# 	}	
+# 	modification = yes
+# 	random_weight = {
+# 		base = 5
+# 	}
+# }
 
 #星河远征,建筑、职业、事件
 civic_GF_nyto_forward_base = {
@@ -96,7 +96,6 @@ civic_GF_nyto_special_operations_command = {
 	modifier = {
 		intel_decryption_add = 10
 		envoys_add = 1
-		job_GFnyto_white_knight_per_pop = 0.1
 	}	
 	
 	modification = yes
@@ -106,34 +105,34 @@ civic_GF_nyto_special_operations_command = {
 }
 
 #科技牧师 限定唯心
-civic_GF_nyto_technology_minister = {
-	icon = "gfx/interface/icons/governments/civics/GF_nyto_technology_minister.dds"
-	potential = {
-		authority = {
-			value = auth_GF_paradeus
-		}
-	}
-	possible = {
-		species_class = {
-			value = nyto
-		}
-		ethics = {
-			OR = {
-				value = ethic_spiritualist
-				value = ethic_fanatic_spiritualist
-			}
-		}
-	}
-	modifier = {
-		num_tech_alternatives_add = 1
-	}
-	modification = yes
-	random_weight = {
-		base = 5
-	}
-}
+# civic_GF_nyto_technology_minister = {
+# 	icon = "gfx/interface/icons/governments/civics/GF_nyto_technology_minister.dds"
+# 	potential = {
+# 		authority = {
+# 			value = auth_GF_paradeus
+# 		}
+# 	}
+# 	possible = {
+# 		species_class = {
+# 			value = nyto
+# 		}
+# 		ethics = {
+# 			OR = {
+# 				value = ethic_spiritualist
+# 				value = ethic_fanatic_spiritualist
+# 			}
+# 		}
+# 	}
+# 	modifier = {
+# 		num_tech_alternatives_add = 1
+# 	}
+# 	modification = yes
+# 	random_weight = {
+# 		base = 5
+# 	}
+# }
 
-#铁道纵横
+#永恒国度
 civic_GF_nyoto_armor_train={
 	icon = "gfx/interface/icons/governments/civics/civic_GF_nyoto_armor_train.dds"
 	potential = {
@@ -147,12 +146,23 @@ civic_GF_nyoto_armor_train={
 				value = civic_GF_nyto_forward_base
 			}
 		}
+		ethics = {
+			NOT = {
+				value = ethic_fanatic_xenophile
+			}
+			NOT = {
+				value =ethic_xenophile
+			}
+		}
 	}
 	modifier = {
-		planet_army_build_time_mult = -0.05
-		pop_defense_armies_add = 1
-		planet_pops_organics_upkeep_mult = -0.05
+		planet_army_build_time_mult = -0.1
+		armies_energy_upkeep_mult = -0.5
+		empire_size_systems_mult = 0.6
+		SHIP_HOME_TERRITORY_FIRE_RATE_MULT = 2
+		shipclass_starbase_build_cost_mult = 2
 	}
+	
 	random_weight = {
 		base = 5
 	}
@@ -175,4 +185,18 @@ civic_Gf_nyto_tanhua_pluse ={
 		base = 5
 	}
 	modification = no
+}
+
+#高效回收
+civic_GF_nyto_reup = {
+	potential = {
+		authority = {
+			value = auth_GF_paradeus
+		}
+	}
+	modifier = {
+		pop_amenities_usage_mult = -0.5
+		planet_pops_consumer_goods_upkeep_mult = -0.5		
+		planet_jobs_consumer_goods_upkeep_mult = -0.5	
+	}
 }

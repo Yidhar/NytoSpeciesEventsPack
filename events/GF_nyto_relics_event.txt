@@ -208,16 +208,21 @@ country_event = {
 		}
 	}
 	option = {
+		allow = {
+			NOR = {
+				has_country_flag = GF_nyto_opt01
+				has_country_flag = GF_nyto_opt02
+				has_country_flag = GF_nyto_opt03
+				has_country_flag = GF_nyto_opt04
+			}
+		}
 		name = gfnytoparadeusancrel.30102.a
 		response_text = gfnytoparadeusancrel.30102.a.response
 		is_dialog_only = yes
 		custom_gui = inv_OPTION
 		hidden_effect = {
 			remove_country_flag = small_painting_effct_hide
-			change_variable = {
-				which = GF_nyto_TXT
-				value = 1
-			}
+			change_variable = {which = GF_nyto_TXT value = 1 }
 			if = {
 				limit = { 
 					check_variable = {
@@ -261,6 +266,8 @@ country_event = {
 						value = 5
 					}
 				}
+				remove_country_flag = GUI_BG_1
+				set_country_flag = GUI_BG_2
 				set_country_flag = GF_nyto_opt01
 				set_country_flag = GF_nyto_opt02
 				set_country_flag = GF_nyto_opt03
@@ -276,11 +283,19 @@ country_event = {
 						which = GF_nyto_TXT
 						value = 7
 					}
+					NOT = {
+						has_country_flag = GF_nyto_ui_y
+					}
 				}
-				remove_country_flag = GF_nyto_opt01
-				remove_country_flag = GF_nyto_opt02
-				remove_country_flag = GF_nyto_opt03
-				remove_country_flag = GF_nyto_opt04
+				subtract_variable = {
+					which = GF_nyto_TXT
+					value = 2
+				}
+				remove_country_flag = GUI_BG_1
+				set_country_flag = GF_nyto_opt01
+				set_country_flag = GF_nyto_opt02
+				set_country_flag = GF_nyto_opt03
+				set_country_flag = GF_nyto_opt04
 			}
 		}
 	}
@@ -292,10 +307,6 @@ country_event = {
 			id = gfnytoparadeusancrel.30103
 		}
 		remove_country_flag = GUI_BG_1
-		remove_country_flag = GF_nyto_opt01
-		remove_country_flag = GF_nyto_opt02
-		remove_country_flag = GF_nyto_opt03
-		remove_country_flag = GF_nyto_opt04
 		remove_country_flag = GF_nyto_opt01
 		remove_country_flag = GF_nyto_opt02
 		remove_country_flag = GF_nyto_opt03

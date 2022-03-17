@@ -113,7 +113,7 @@ country_event = {
 					}
 				}
 				while = {
-					count = 4
+					count = 8
 					create_army = {
 						name = "远征军"
 						owner = root

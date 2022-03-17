@@ -11,10 +11,11 @@ planet_event = {
 	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
-			change_planet_size = 10
+			change_planet_size = 5
 			remove_district = district_GF_nyto_pc_toxic_underground_industrial_area
 			remove_district = district_GF_nyto_pc_toxic_underground_research_institute
 			remove_district = district_GF_nyto_pc_toxic_underground_shelters
+			set_planet_flag = GFnyto_no_tanhua
 		}
 	}
 	#民用工业区划
@@ -44,13 +45,6 @@ planet_event = {
 		set_planet_flag = GFnyto_district_science
 		add_district = district_GF_nyto_pc_toxic_science
 		add_district = district_GF_nyto_pc_toxic_science
-	}
-	#行政管理区划
-	option = {
-		name = GFnytopctoxic.20.h
-		set_planet_flag = GFnyto_district_administration
-		add_district = district_GF_nyto_pc_toxic_administration
-		add_district = district_GF_nyto_pc_toxic_administration
 	}
 	#休闲娱乐区划
 	option = {
