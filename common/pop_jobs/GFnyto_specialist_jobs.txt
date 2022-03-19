@@ -24,10 +24,15 @@ GFnyto_collapse_particle_researcher = {
 		}
 		produces = {
 			trigger = {
-				planet = {
-					has_building = building_GFnyto_collapse_exploit_plant_2
-					has_building = building_GFnyto_algorithm
-				}		
+				OR = {
+					planet = {
+						has_building = building_GFnyto_collapse_exploit_plant_2
+						has_building = building_GFnyto_algorithm
+					}
+					owner = {
+						is_ai = yes
+					}
+				}
 			}
 			GF_nyto_collapse_liquid = 6
 			physics_research = 8
@@ -38,7 +43,7 @@ GFnyto_collapse_particle_researcher = {
 			trigger = {
 				planet = {
 					is_variable_set = GFnyto_plante_wrlv
-				}				
+				}
 			}
 			physics_research = 0.01
 			society_research = 0.01
@@ -50,7 +55,7 @@ GFnyto_collapse_particle_researcher = {
 				planet = {
 					has_building = building_GFnyto_collapse_exploit_plant_2
 					has_building = building_GFnyto_algorithm
-				}				
+				}
 			}
 			consumer_goods = 2
 			GF_nyto_training_key = 0.2
@@ -59,7 +64,7 @@ GFnyto_collapse_particle_researcher = {
 			trigger = {
 				planet = {
 					is_variable_set = GFnyto_plante_wrlv
-				}				
+				}
 			}
 			consumer_goods = 0.002
 			multiplier = planet.GFnyto_plante_wrlv
@@ -141,7 +146,7 @@ GFnyto_white_knight = {
 	}
 	resources = {
 		category = planet_jobs
-		produces = {			
+		produces = {
 			influence = 0.1
 			unity = 10
 		}
@@ -276,7 +281,6 @@ GFnyto_algorithm = {
 			GF_nyto_training_key = 0.5
 			multiplier = planet.trigger:has_planetary_ascension_tier
 		}
-	
 		upkeep = {
 			consumer_goods = 5
 			rare_crystals = 3
@@ -286,8 +290,8 @@ GFnyto_algorithm = {
 			trigger = {
 				planet = {
 					colony_type = col_GF_nyto_pc_toxic_energy_plural
-				}				
-			}			
+				}
+			}
 			consumer_goods = 1
 			rare_crystals = 0.5
 			exotic_gases = 0.5
@@ -382,14 +386,14 @@ GFnyto_collapse_particle_rar = {
 			multiplier = planet.trigger:has_planetary_ascension_tier
 		}
 		upkeep = {
-			consumer_goods  = 0.01
+			consumer_goods = 0.01
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
 	possible = {
 		NOT = {
 			is_species_class = eild
-		}		
+		}
 	}
 	weight = {
 		weight = 5
@@ -449,7 +453,7 @@ GFnyto_collapse_particle_zip = {
 	possible = {
 		NOT = {
 			is_species_class = eild
-		}		
+		}
 	}
 	weight = {
 		weight = 5
@@ -491,7 +495,7 @@ GFnyto_Epiphyllum_job = {
 			trigger = {
 				planet = {
 					is_variable_set = GFnyto_plante_wrlv
-				}				
+				}
 			}
 			GF_nyto_collapse_liquid = 0.1
 			food = 0.05

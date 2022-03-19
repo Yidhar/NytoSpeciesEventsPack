@@ -80,11 +80,21 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 30
 			GF_nyto_new_fire_control_unit = 20
 			GF_nyto_collapse_liquid = 200
 		}
 		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			GF_nyto_collapse_liquid = 10
 			GF_nyto_new_fire_control_unit = 5
 		}
@@ -169,11 +179,21 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 30
 			GF_nyto_new_fire_control_unit = 20
 			GF_nyto_collapse_liquid = 200
 		}
 		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			GF_nyto_collapse_liquid = 10
 			GF_nyto_new_fire_control_unit = 5
 		}
@@ -224,11 +244,21 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 30
 			GF_nyto_new_fire_control_unit = 20
 			GF_nyto_collapse_liquid = 200
 		}
 		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			GF_nyto_collapse_liquid = 10
 			GF_nyto_new_fire_control_unit = 5
 		}
@@ -252,11 +282,21 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 30
 			GF_nyto_new_fire_control_unit = 20
 			GF_nyto_collapse_liquid = 200
 		}
 		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			GF_nyto_collapse_liquid = 10
 			GF_nyto_new_fire_control_unit = 5
 		}
@@ -309,11 +349,21 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 30
 			GF_nyto_new_fire_control_unit = 20
 			GF_nyto_collapse_liquid = 200
 		}
 		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			GF_nyto_collapse_liquid = 10
 			GF_nyto_new_fire_control_unit = 5
 		}
@@ -364,11 +414,21 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 20
 			GF_nyto_new_fire_control_unit = 5
 			GF_nyto_collapse_liquid = 0.2
 		}
 		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			GF_nyto_new_fire_control_unit = 1
 		}
 	}
@@ -402,11 +462,21 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 30
 			GF_nyto_new_fire_control_unit = 5
 			GF_nyto_collapse_liquid = 0.3
 		}
 		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			GF_nyto_new_fire_control_unit = 1
 		}
 	}
