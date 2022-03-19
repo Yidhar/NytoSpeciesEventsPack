@@ -9,7 +9,7 @@ nyto= {
 	portraits = {"GFnyto_nyto"}
 	leader_age_min = 5
 	leader_age_max = 50
-	graphical_culture = humanoid_01
+	graphical_culture = mammalian_01
 	move_pop_sound_effect = "robot_pops_move"
 	resources = {
 		category = planet_pops
@@ -47,16 +47,6 @@ nyto_machine= {
 	portrait_modding = yes
 	leader_age_min = 2
 	leader_age_max = 10
-#	custom_portraits = {
-#		randomized = {NOT = { has_global_flag = game_started }}
-#		portraits = {"GFnyto_nyto"}
-#	}
-#	custom_portraits = {
-#		randomized = {NOT = { has_global_flag = game_started }}
-#		randomized = {AND = {has_lithoids = yes}}
-#		playable = {AND = {has_lithoids = yes}}
-#		portraits = {"GFnyto_nyto"}
-#	}
 	custom_portraits = {portraits = {"GFnyto_nyto"}}
 	graphical_culture = mammalian_01
 	move_pop_sound_effect = "robot_pops_move"

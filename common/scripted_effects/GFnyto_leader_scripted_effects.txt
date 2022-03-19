@@ -126,3 +126,72 @@ creat_nyto_leader = {
 		}
 	}
 }
+
+random_6_leader = {
+	random_owned_leader = {
+		limit = {
+			NOT = {
+				has_leader_flag = GFnyot_leader_select
+			}
+			has_skill < 10
+			leader_class = $leader_class$
+		}
+		set_leader_flag = GFnyot_leader_select
+		save_global_event_target_as = GFnyot_leader_select_1
+	}
+	random_owned_leader = {
+		limit = {
+			NOT = {
+				has_leader_flag = GFnyot_leader_select
+			}
+			has_skill < 10
+			leader_class = $leader_class$
+		}
+		set_leader_flag = GFnyot_leader_select
+		save_global_event_target_as = GFnyot_leader_select_2
+	}
+	random_owned_leader = {
+		limit = {
+			NOT = {
+				has_leader_flag = GFnyot_leader_select
+			}
+			has_skill < 10
+			leader_class = $leader_class$
+		}
+		set_leader_flag = GFnyot_leader_select
+		save_global_event_target_as = GFnyot_leader_select_3
+	}
+	random_owned_leader = {
+		limit = {
+			NOT = {
+				has_leader_flag = GFnyot_leader_select
+			}
+			has_skill < 10
+			leader_class = $leader_class$
+		}
+		set_leader_flag = GFnyot_leader_select
+		save_global_event_target_as = GFnyot_leader_select_4
+	}
+	random_owned_leader = {
+		limit = {
+			NOT = {
+				has_leader_flag = GFnyot_leader_select
+			}
+			has_skill < 10
+			leader_class = $leader_class$
+		}
+		set_leader_flag = GFnyot_leader_select
+		save_global_event_target_as = GFnyot_leader_select_5
+	}
+	random_owned_leader = {
+		limit = {
+			NOT = {
+				has_leader_flag = GFnyot_leader_select
+			}
+			has_skill < 10
+			leader_class = $leader_class$
+		}
+		set_leader_flag = GFnyot_leader_select
+		save_global_event_target_as = GFnyot_leader_select_6
+	}
+}

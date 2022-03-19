@@ -21,6 +21,14 @@ col_GF_nyto_pc_toxic_alloy_plural = {
 			}
 		}
 	}
+	weight_modifier = {
+		add = 100
+		modifier = {
+			owner = {
+				is_ai = yes
+			}
+		}
+	}
 }
 
 #塌缩工业星球
@@ -85,7 +93,12 @@ col_GF_nyto_speed_planet_wrlv ={
 	}
 	weight_modifier = {
 		base = 0
+		modifier = {
+			add = 500
+			is_planet_class = pc_habitat
+		}
 	}
+
 }
 
 #战略资源中枢
@@ -101,7 +114,10 @@ col_Gf_nyto_xiyou_rss = {
 		planet_refiners_produces_mult = 0.15
 	}
 	weight_modifier = {
-		base = 0
+		add = 20
+		modifier = {
+			is_planet_class = pc_habitat
+		}
 	}
 }
 

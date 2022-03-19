@@ -31,7 +31,7 @@ utility_component_template = {
 		shipclass_starbase
 	}
 	ai_weight = {
-		weight = 5
+		weight = 500
 	}
 	upgrades_to = GF_nyto_godenergy
 }
@@ -61,7 +61,7 @@ utility_component_template = {
 		
 	}
 	ai_weight = {
-		weight = 5
+		weight = 500
 	}
 	#	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
 	prerequisites = {
@@ -117,7 +117,7 @@ utility_component_template = {
 		ship_ftl_jumpdrive_range_mult = 2
 	}
 	ai_weight = {
-		weight = 10
+		weight = 600
 	}
 	prerequisites = {
 		"tech_GF_nyto_Deep_space"
@@ -185,6 +185,9 @@ utility_component_template = {
 	prerequisites = {
 		tech_GF_nyto_bright_poetry
 	}
+	ai_weight = {
+		weight = 600
+	}
 }
 
 #曙光
@@ -233,6 +236,9 @@ utility_component_template = {
 	component_set = thruster_components
 	prerequisites = {
 		tech_GF_nyto_light_thruster
+	}
+	ai_weight = {
+		weight = 600
 	}
 }
 
@@ -288,6 +294,9 @@ utility_component_template = {
 	prerequisites = {
 		tech_GF_nyto_Beacon
 	}
+	ai_weight = {
+		weight = 600
+	}
 }
 
 #无尽能源2
@@ -333,6 +342,9 @@ utility_component_template = {
 	prerequisites = {
 		tech_GF_nyto_godenergy
 	}
+	ai_weight = {
+		weight = 600
+	}
 }
 
 #附加运算模块-护航
@@ -364,6 +376,13 @@ utility_component_template = {
 	prerequisites = {
 		"tech_GFnyto_additional_arithmetic_module"
 	}
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 60
+			is_ship_size = titan
+		}
+	}
 }
 
 #附加运算模块-支援
@@ -394,6 +413,13 @@ utility_component_template = {
 	ship_behavior = "GFnyto_ship_behaviors3"
 	prerequisites = {
 		"tech_GFnyto_additional_arithmetic_module"
+	}
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 60
+			is_ship_size = battleship
+		}
 	}
 }
 

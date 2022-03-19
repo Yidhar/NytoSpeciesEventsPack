@@ -32,15 +32,6 @@ district_GF_nyto_pc_toxic_underground_shelters= {
 		planet_max_buildings_add = 1
 		job_technician_add = 1		
 	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {has_valid_civic = civic_GF_nyto_phase_technician}
-		}
-		modifier = {
-			job_GFnyto_phase_technician_add = 1
-		}
-	}
 	triggered_planet_modifier ={
 		potential ={
 			owner = {
@@ -50,7 +41,7 @@ district_GF_nyto_pc_toxic_underground_shelters= {
 		job_GFnyto_white_knight_add = 1
 	}
 	ai_weight = {
-		weight = 0
+		weight = 10
 		modifier = {
 			weight = 1000
 			free_housing < 10
@@ -89,7 +80,7 @@ district_GF_nyto_pc_toxic_underground_industrial_area= {
 		job_artisan_add = 2
 	}
 	ai_weight = {
-		weight = 0
+		weight = 20
 		modifier = {
 			weight = 1000
 			owner = {
@@ -128,30 +119,14 @@ district_GF_nyto_pc_toxic_underground_research_institute = {
 			energy = 2
 		}
 	}	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {has_valid_civic = civic_GF_nyto_technology_minister}
-		}
-		modifier = {job_GFnyto_technology_minister_add = 2}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {NOT={has_valid_civic = civic_GF_nyto_technology_minister}}
-		}
-		modifier = {
-			job_GFnyto_collapse_particle_researcher_add = 4
-		}
-	}
 	ai_weight = {
-		weight = 0
+		weight = 10
 		modifier = {
 			weight = 1000
 			owner = {
 				has_monthly_income = {
 					resource = consumer_goods
-					value > 10
+					value > 2
 				}
 			}
 		}

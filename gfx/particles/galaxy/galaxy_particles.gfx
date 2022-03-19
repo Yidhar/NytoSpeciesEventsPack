@@ -26,9 +26,9 @@ objectTypes = {
 		
 		scale = 5
 	}
-	# pdxparticle = {
-	# 	name = "Alessia"
-	# 	type = "Alessia"		
-	# 	scale = 5
-	# }
+	pdxparticle = {
+		name = "GF_nyto_baclround"
+		type = "GF_nyto_baclround"		
+		scale = 0.1
+	}
 }

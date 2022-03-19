@@ -13,7 +13,7 @@ gov_civic_GF_nyto_technology_church:0 "科技教会"
 gov_civic_GF_nyto_war_church:0 "战争教会"
 gov_civic_GF_nyto_mechanical_church:0 "机械教会"
 gov_civic_GF_nyto_starsea_crusade:0 "星海十字军"
-
+GF_nyto_warrior:0 "帕拉蒂斯"
 personality_GFnyto_think_tank_guard:0 "闷声发大财"
 personality_GFnyto_think_tank_guard_desc:0 "比起征服世界,这个帝国更喜欢种田。你只有一种情况会和这个帝国兵戎相见,那就是你打扰它种田的时候。"
 personality_GFnyto_disaster:0 "天灾"

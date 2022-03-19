@@ -19,6 +19,9 @@ utility_component_template = {
 		}		
 	}
 	prerequisites = {"tech_GF_nyto_armor_piercing_bullet"}
+	ai_weight = {
+		weight = 50
+	}
 }
 #高爆弹
 utility_component_template = {
@@ -37,6 +40,9 @@ utility_component_template = {
 		}		
 	}
 	prerequisites = {"tech_GF_nyto_high_explosive_bomb"}
+	ai_weight = {
+		weight = 50
+	}
 }
 #空投仓
 utility_component_template = {
@@ -93,10 +99,18 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 100
 			GF_nyto_new_fire_control_unit =1
 			GF_nyto_collapse_liquid=1
 		}		
 	}
 	prerequisites = {"tech_GFnyto_war_theory_b1"}
+	ai_weight = {
+		weight = 100
+	}
 }

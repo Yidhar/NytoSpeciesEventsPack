@@ -35,6 +35,19 @@ building_GFnyto_collapse_exploit_plant_1 = {
 	}
 	ai_weight = {
 		weight = 5
+		modifier = {
+			factor = 200
+			owner = {
+				has_monthly_income = {
+					resource = physics_research
+					value < 10000
+				}
+				has_monthly_income = {
+					resource = consumer_goods
+					value > 50
+				}
+			}
+		}
 	}
 }
 
@@ -75,6 +88,19 @@ building_GFnyto_collapse_exploit_plant_2 = {
 	}
 	ai_weight = {
 		weight = 5
+		modifier = {
+			factor = 200
+			owner = {
+				has_monthly_income = {
+					resource = physics_research
+					value < 10000
+				}
+				has_monthly_income = {
+					resource = consumer_goods
+					value > 50
+				}
+			}
+		}
 	}
 }
 
@@ -96,7 +122,7 @@ building_GFnyto_collapse_change_center = {
 		has_upgraded_capital = yes
 	}
 	planet_modifier = {
-		planet_pop_assembly_organic_add = 6
+		planet_pop_assembly_organic_add = 6		
 	}
 	resources = {
 		category = planet_buildings
@@ -118,6 +144,10 @@ building_GFnyto_collapse_change_center = {
 	}
 	ai_weight = {
 		weight = 5
+		modifier = {
+			factor = 20
+			always = yes
+		}
 	}
 	prerequisites = {
 		"tech_GF_nyto_collapse_stability"
@@ -183,7 +213,6 @@ building_GFnyto_forward_base = {
 	ai_weight = {
 		weight = 100
 	}
-
 }
 
 #交通枢纽
@@ -221,7 +250,7 @@ building_GFnyto_transportation_hub = {
 		}
 	}
 	ai_weight = {
-		weight = 10
+		weight = 999
 	}
 }
 
@@ -283,7 +312,7 @@ building_GFnyto_heritage_department = {
 		}
 	}
 	ai_weight = {
-		weight = 40
+		weight = 500
 	}
 }
 
@@ -323,7 +352,7 @@ building_GFnyto_algorithm = {
 		tech_GF_nyto_algorithm
 	}
 	ai_weight = {
-		weight = 50
+		weight = 0
 	}
 }
 
@@ -360,7 +389,7 @@ building_GFnytp_framework_core = {
 		}
 	}
 	ai_weight = {
-		weight = 50
+		weight = 0
 	}
 	upgrades = {
 		building_GFnytp_framework_core2
@@ -402,7 +431,7 @@ building_GFnytp_framework_core2 = {
 		}
 	}
 	ai_weight = {
-		weight = 50
+		weight = 0
 	}
 	prerequisites = {
 		tech_GFnyto_framework2
@@ -483,6 +512,18 @@ building_GFnyto_nourishment_center2 = {
 	prerequisites = {
 		"tech_GFnyto_tansuo2"
 	}
+	ai_weight = {
+		base = 5
+		modifier = {
+			factor = 20
+			owner = {
+				has_monthly_income = {
+					resource = GF_nyto_collapse_liquid
+					value < 100
+				}
+			}
+		}
+	}
 }
 
 #逆向坍塌反应釜
@@ -559,8 +600,19 @@ building_GFnyto_dimensional_fabricator2 = {
 	prerequisites = {
 		"tech_GFnyto_tansuo2"
 	}
+	ai_weight = {
+		base = 999
+		modifier = {
+			subtract = 999
+			owner = {
+				has_monthly_income = {
+					resource = GF_nyto_collapse_liquid
+					value < 100
+				}
+			}
+		}
+	}
 }
-
 
 #受洗中心
 building_GFnyto_Elids = {
@@ -589,5 +641,25 @@ building_GFnyto_Elids = {
 	}
 	prerequisites = {
 		tech_GF_nyto_EILD_brain_wave
+	}
+	ai_weight = {
+		base = 0
+		modifier = {
+			add = 100
+			if = {
+				limit = {
+					any_owned_pop = {
+						species = {
+							NOT = {
+								is_species = NYTO
+							}
+							NOT = {
+								is_species = EILD
+							}
+						}
+					}
+				 }
+			}
+		}
 	}
 }

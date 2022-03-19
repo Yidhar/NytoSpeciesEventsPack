@@ -6,6 +6,11 @@ decision_pc_GF_nyto_embers_gloomy_project = {
 	resources = {
 		category = decisions
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
 			GF_nyto_collapse_liquid = 100
 			influence = 50
 			alloys = 1000
@@ -58,7 +63,10 @@ decision_pc_GF_nyto_embers_gloomy_project = {
 		}
 	}
 	ai_weight = {
-		weight = 5
+		weight = 1000
+		modifier = {
+			always = yes
+		}
 	}
 }
 
@@ -132,7 +140,10 @@ decision_GFnyto_planetary_defense = {
 		set_planet_flag = has_GFnyto_planetary_defense
 	}
 	ai_weight = {
-		weight = 100
+		weight = 10000
+		modifier = {
+			always = yes
+		}
 	}
 }
 
@@ -175,8 +186,8 @@ decision_GFnyto_pop_load = {
 			}
 		}
 		modifier = {
-			factor = 50
-			free_jobs > 5
+			weight = 100
+			free_jobs > 3
 		}
 	}
 }
@@ -233,6 +244,9 @@ decision_GFnyto_boom = {
 				}
 			}
 		}
+	}
+	ai_weight = {
+		weight = 0
 	}
 }
 

@@ -42,11 +42,21 @@ strike_craft_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 170
 			GF_nyto_new_fire_control_unit = 2
 			GF_nyto_collapse_liquid = 20
 		}
 		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			energy = 0.5
 			alloys = 0.5
 			GF_nyto_new_fire_control_unit = 0.05
@@ -54,7 +64,7 @@ strike_craft_component_template = {
 		}
 	}
 	ai_weight = {
-		weight = 1
+		weight = 20
 	}
 }
 
@@ -91,18 +101,28 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 1000
 			GF_nyto_new_fire_control_unit = 10
 			GF_nyto_collapse_liquid = 100
 		}
 		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 10
 			GF_nyto_new_fire_control_unit = 0.1
 			GF_nyto_collapse_liquid = 10
 		}
 	}
 	ai_weight = {
-		weight = 1
+		weight = 100
 	}
 }
 
@@ -144,15 +164,28 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 200
 			GF_nyto_new_fire_control_unit = 30
 			GF_nyto_collapse_liquid = 60
 		}
 		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 1.2
 			GF_nyto_new_fire_control_unit = 1
 			GF_nyto_collapse_liquid = 0.1
 		}
+	}
+	ai_weight = {
+		weight = 100
 	}
 }
 
@@ -207,6 +240,9 @@ weapon_component_template = {
 			GF_nyto_collapse_liquid = 0.1
 		}
 	}
+	ai_weight = {
+		weight = 0
+	}
 }
 
 #厄琉息斯秘仪 X 
@@ -249,15 +285,28 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 200
 			GF_nyto_new_fire_control_unit = 5
 			GF_nyto_collapse_liquid = 60
 		}
 		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 1.2
 			GF_nyto_new_fire_control_unit = 0.1
 			GF_nyto_collapse_liquid = 0.1
 		}
+	}
+	ai_weight = {
+		weight = 200
 	}
 }
 
@@ -311,6 +360,9 @@ weapon_component_template = {
 			GF_nyto_collapse_liquid = 0.1
 		}
 	}
+	ai_weight = {
+		weight = 0
+	}
 }
 
 #灵蛇权杖 L
@@ -363,6 +415,9 @@ weapon_component_template = {
 			GF_nyto_collapse_liquid = 0.1
 		}
 	}
+	ai_weight = {
+		weight = 0
+	}
 }
 
 #圣歌风琴 L
@@ -406,11 +461,21 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 200
 			GF_nyto_new_fire_control_unit = 2
 			GF_nyto_collapse_liquid = 80
 		}
 		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 1.2
 			GF_nyto_new_fire_control_unit = 0.05
 			GF_nyto_collapse_liquid = 0.1
@@ -419,6 +484,9 @@ weapon_component_template = {
 			energy = 1
 			multiplier = ship.Gfnyto_combat_days
 		}
+	}
+	ai_weight = {
+		weight = 200
 	}
 }
 
@@ -464,11 +532,21 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 120
 			GF_nyto_new_fire_control_unit = 2
 			GF_nyto_collapse_liquid = 60
 		}
 		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 0.75
 			GF_nyto_new_fire_control_unit = 0.1
 			GF_nyto_collapse_liquid = 0.1
@@ -520,11 +598,21 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 120
 			GF_nyto_new_fire_control_unit = 1
 			GF_nyto_collapse_liquid = 40
 		}
 		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 0.5
 			GF_nyto_new_fire_control_unit = 0.05
 			GF_nyto_collapse_liquid = 0.1
@@ -575,12 +663,22 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 30
 			GF_nyto_new_fire_control_unit = 1.5
 			GF_nyto_collapse_liquid = 40
 			energy = 50
 		}
 		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 0.5
 			GF_nyto_collapse_liquid = 0.4
 			GF_nyto_new_fire_control_unit = 0.02
@@ -588,7 +686,7 @@ weapon_component_template = {
 		}
 	}
 	ai_weight = {
-		weight = 10
+		weight = 50
 	}
 }
 
@@ -632,19 +730,29 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 30
 			GF_nyto_new_fire_control_unit = 0.5
 			GF_nyto_collapse_liquid = 20
 			energy = 10
 		}
 		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 0.5
 			GF_nyto_collapse_liquid = 0.01
 			energy = 1
 		}
 	}
 	ai_weight = {
-		weight = 10
+		weight = 50
 	}
 }
 
@@ -694,6 +802,11 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 120
 			GF_nyto_new_fire_control_unit = 0.5
 			GF_nyto_collapse_liquid = 10
@@ -811,18 +924,28 @@ strike_craft_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 300
 			GF_nyto_collapse_liquid = 5
 			GF_nyto_new_fire_control_unit = 2
 		}
 		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			energy = 0.5
 			alloys = 0.5
 			GF_nyto_collapse_liquid = 1
 		}
 	}
 	ai_weight = {
-		weight = 1
+		weight = 75
 	}
 }
 
@@ -872,6 +995,11 @@ strike_craft_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 120
 			GF_nyto_collapse_liquid = 5
 			GF_nyto_new_fire_control_unit = 2
@@ -882,7 +1010,7 @@ strike_craft_component_template = {
 		}
 	}
 	ai_weight = {
-		weight = 1
+		weight = 50
 	}
 }
 
@@ -926,12 +1054,22 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 30
 			GF_nyto_collapse_liquid = 2
 			energy = 10
 			GF_nyto_new_fire_control_unit = 1
 		}
 		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 0.5
 			GF_nyto_collapse_liquid = 0.1
 			GF_nyto_new_fire_control_unit = 0.01
@@ -940,6 +1078,12 @@ weapon_component_template = {
 	}
 	ai_weight = {
 		weight = 10
+	}
+	ai_weight = {		
+		modifier = {
+			add = 100
+			is_ship_size = corvette
+		}
 	}
 }
 
@@ -982,11 +1126,21 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 10
 			GF_nyto_collapse_liquid = 1
 			GF_nyto_new_fire_control_unit = 1
 		}
 		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
 			alloys = 0.5
 			GF_nyto_collapse_liquid = 0.1
 			GF_nyto_new_fire_control_unit = 0.02
@@ -994,6 +1148,16 @@ weapon_component_template = {
 		}
 	}
 	ai_weight = {
-		weight = 10
+		weight = 30
+	}
+	ai_weight = {		
+		modifier = {
+			add = 200
+			OR = {
+				is_ship_size = titan
+				is_ship_size = battleship
+			}
+			
+		}
 	}
 }

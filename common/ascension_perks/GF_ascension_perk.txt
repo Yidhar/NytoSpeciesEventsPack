@@ -23,7 +23,7 @@ ap_GF_nyto_resurrection= {
 			id = GFnyto_ascension_perk.3
 		}
 	}
-	ai_weight = {factor = 100}
+	ai_weight = {factor = 500}
 }
 ###天灾飞升###
 #征服地狱
@@ -102,7 +102,7 @@ ap_GF_nyto_noussphere ={
 		}
 	}
 	ai_weight = {
-		factor = 999
+		factor = 500
 	}
 }
 

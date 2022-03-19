@@ -10,7 +10,7 @@ building_GFnyto_affluence_center = {
 	}
 	category = manufacturing
 	resources = {
-		category = planet_buildings		
+		category = planet_buildings
 		cost = {
 			minerals = @b3_minerals
 		}
@@ -22,7 +22,6 @@ building_GFnyto_affluence_center = {
 			energy = 0.2
 			multiplier = planet.GFnyto_plante_wrlv
 		}
-
 	}
 	planet_modifier = {
 		pop_environment_tolerance = 0.05
@@ -63,6 +62,18 @@ building_GFnyto_class_4_singularity = {
 	}
 	prerequisites = {
 		"tech_GF_nyto_storage_of_ancient_technology"
+	}
+	ai_weight = {
+		base = 10
+		modifier = {
+			factor = 10
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < 1000
+				}
+			}
+		}
 	}
 }
 
@@ -153,6 +164,9 @@ building_GFnyto_fe_dome = {
 	prerequisites = {
 		"tech_GF_nyto_storage_of_ancient_technology"
 	}
+	ai_weight = {
+		weight = 999
+	}
 }
 
 #轨道堡垒
@@ -184,5 +198,12 @@ building_GFnyto_fe_stronghold = {
 	}
 	prerequisites = {
 		"tech_GF_nyto_storage_of_ancient_technology"
+	}
+	ai_weight = {
+		base = 5
+		modifier = {
+			factor = 20
+			planet_crime > 20
+		}
 	}
 }
