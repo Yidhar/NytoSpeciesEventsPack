@@ -198,7 +198,11 @@ spriteTypes = {
 		textureFile = "gfx/interface/icons/ship_parts/暂时没用的/PP.dds"
 	}
 	spriteType = {
-		name = GF_nyto_Electronic_Warfare
+		name = GFX_nyto_Electronic_Warfare
 		textureFile = "gfx/interface/icons/ship_parts/GF_nyto_Electronic_Warfare.dds"
+	}
+	spriteType = {
+		name = GFX_nyto_weapon_beacon_sop
+		textureFile = "gfx/interface/icons/ship_parts/GF_nyto_weapon_Beacon.dds"
 	}
 }

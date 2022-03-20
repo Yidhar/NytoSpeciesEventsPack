@@ -445,3 +445,18 @@ ship_event = {
 }
 
 ############################################
+
+
+fleet_event = {
+	id = gf_nyto_weapons.12
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_ship = {
+			export_modifier_to_variable = {
+				modifier = weapon_type_Electronic_weapon_damage_mult
+				variable = Electronic_num
+			}
+		}
+	}
+}

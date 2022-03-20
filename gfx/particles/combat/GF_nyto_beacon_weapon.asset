@@ -1,0 +1,72 @@
+particle={
+	name="weapon_beacon_effect"
+	subsystem={
+		name="Force"
+		max_amount=300
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=no
+		hide=no
+		texture={
+			file="gfx/particles/muzzle_big_stripes_2.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=255
+			y={ 0 255 }
+			z={ 0 255 }
+			alpha={ 50,fade_in_out_flairs 15 }
+		}
+		position={
+			x=0
+			y=0
+			z=0
+		}
+		start=0
+		duration=-1
+		emitter_yaw=0
+		emitter_pitch=0
+		velocity_pitch=-60
+		velocity_yaw=180
+		velocity={ 100 0 }
+		life=2
+		emission=500
+		size=10
+		particle_yaw=90
+		particle_pitch=0
+		rotation=35
+	}
+	animation={
+		name="fade_in_out_flairs"
+		start=0
+		duration=1
+		repeat=yes
+		minValue=0
+		maxValue=1
+		curve={
+			0 0 0.10882 0.34375 0.32353 0.94531 0.68235 0.5 0.87353 0.13281 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0 0 0 
+		}
+		direction={
+			0 1 0 
+		}
+		local_force=yes
+		yaw=0
+		division=16
+		amount=5
+	}
+}

@@ -58,4 +58,8 @@ objectTypes={
 		
 		scale = 0.6
 	}
+	pdxparticle ={
+		name = "weapon_beacon_effect"
+		type = "weapon_beacon_effect"
+	}
 }

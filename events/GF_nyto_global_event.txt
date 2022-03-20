@@ -625,7 +625,9 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				has_country_flag = hide_GFnytoeild52
+				NOT = {
+					has_country_flag = hide_GFnytoeild52
+				}				
 			}
 			country_event = {
 				id = GFnytoeild.51

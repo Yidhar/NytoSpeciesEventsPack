@@ -196,7 +196,12 @@ component_set = {
 	icon_frame = 1
 }
 component_set = {
-	key = GF_nyto_Electronic_Warfare
-	icon = GF_nyto_Electronic_Warfare
+	key = GF_nyto_Electronic_Warfare_sop
+	icon = GFX_nyto_Electronic_Warfare
+	icon_frame = 1
+}
+component_set = {
+	key = GF_nyto_weapon_beacon_sop
+	icon = GFX_nyto_weapon_beacon_sop
 	icon_frame = 1
 }

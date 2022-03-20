@@ -1196,13 +1196,13 @@ weapon_component_template = {
 #电子对抗
 weapon_component_template = {
 	key = "GF_nyto_Electronic_Warfare"
-	hidden = yes
 	size = small
 	entity =invisible_turret_entity
-	icon = "GF_nyto_Electronic_Warfare"
+	icon = "GFX_nyto_Electronic_Warfare"
 	icon_frame = 1
-	power = -100
-	component_set = "GF_nyto_Electronic_Warfare"
+	power = -10
+	projectile_gfx = "Electronic"
+	component_set = "GF_nyto_Electronic_Warfare_sop"
 	tags = {
 		weapon_type_Electronic
 	}
@@ -1214,13 +1214,14 @@ weapon_component_template = {
 		max = -1
 	}
 	windup = {
-		min = 0
-		max = 0
+		min = 10
+		max = 10
 	}
+	total_fire_time = 10
 	ship_modifier = {
 		weapon_type_Electronic_weapon_damage_mult = 1
+		custom_tooltip = " "
 	}
-	total_fire_time = 0
 	range = 500
 	accuracy = 1
 	tracking = 1
@@ -1245,5 +1246,305 @@ weapon_component_template = {
 			GF_nyto_new_fire_control_unit = 0.05
 			energy = 1
 		}
+	}
+	hidden = yes
+	ai_weight = {
+		weight = 0
+	}
+}
+weapon_component_template = {
+	key = "GF_nyto_Electronic_Warfare_m"
+	size = medium
+	entity =invisible_turret_entity
+	icon = "GFX_nyto_Electronic_Warfare"
+	icon_frame = 1
+	power = -15
+	projectile_gfx = "Electronic"
+	component_set = "GF_nyto_Electronic_Warfare_sop"
+	tags = {
+		weapon_type_Electronic
+	}
+	ai_tags = {
+		weapon_role_artillery
+	}
+	damage = {
+		min = 1
+		max = -1
+	}
+	windup = {
+		min = 20
+		max = 20
+	}
+	total_fire_time = 20
+	ship_modifier = {
+		weapon_type_Electronic_weapon_damage_mult = 2
+		custom_tooltip = " "
+	}
+	
+	range = 500
+	accuracy = 1
+	tracking = 1
+	resources = {
+		category = ship_components
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
+			alloys = 10
+			GF_nyto_new_fire_control_unit = 5
+		}
+		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
+			alloys = 0.1
+			GF_nyto_new_fire_control_unit = 0.05
+			energy = 1
+		}
+	}
+	hidden = yes
+	ai_weight = {
+		weight = 0
+	}
+}
+weapon_component_template = {
+	key = "GF_nyto_Electronic_Warfare_L"
+	size = large
+	entity =invisible_turret_entity
+	icon = "GFX_nyto_Electronic_Warfare"
+	icon_frame = 1
+	power = -45
+	projectile_gfx = "Electronic"
+	component_set = "GF_nyto_Electronic_Warfare_sop"
+	tags = {
+		weapon_type_Electronic
+	}
+	ai_tags = {
+		weapon_role_artillery
+	}
+	damage = {
+		min = 1
+		max = -1
+	}
+	windup = {
+		min = 30
+		max = 30
+	}
+	total_fire_time = 30
+	ship_modifier = {
+		weapon_type_Electronic_weapon_damage_mult = 3
+		custom_tooltip = " "
+	}
+	
+	range = 500
+	accuracy = 1
+	tracking = 1
+	resources = {
+		category = ship_components
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
+			alloys = 10
+			GF_nyto_new_fire_control_unit = 5
+		}
+		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
+			alloys = 0.1
+			GF_nyto_new_fire_control_unit = 0.05
+			energy = 1
+		}
+	}
+	hidden = yes
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#支援信标
+weapon_component_template = {
+	key = "GF_nyto_beacon"
+	hidden = yes
+	size = small
+	entity =invisible_turret_entity
+	icon = "GFX_nyto_weapon_beacon_sop"
+	icon_frame = 1
+	power = -30
+	projectile_gfx = "Electronic"
+	component_set = "GF_nyto_weapon_beacon_sop"
+	tags = {
+		weapon_type_beacon
+	}
+	ai_tags = {
+		weapon_role_artillery
+	}
+	damage = {
+		min = 1
+		max = -1
+	}
+	windup = {
+		min = 150
+		max = 150
+	}
+	total_fire_time = 150
+	ship_modifier = {
+		weapon_type_beacon_weapon_damage_mult = 0.5
+		custom_tooltip = " "
+	}
+	range = 500
+	accuracy = 1
+	tracking = 1
+	resources = {
+		category = ship_components
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
+			alloys = 10
+			GF_nyto_new_fire_control_unit = 5
+		}
+		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
+			alloys = 0.1
+			GF_nyto_new_fire_control_unit = 0.05
+			energy = 1
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+weapon_component_template = {
+	key = "GF_nyto_beacon_m"
+	size = medium
+	entity =invisible_turret_entity
+	icon = "GFX_nyto_weapon_beacon_sop"
+	icon_frame = 1
+	power = -45
+	projectile_gfx = "Electronic"
+	component_set = "GF_nyto_weapon_beacon_sop"
+	tags = {
+		weapon_type_beacon
+	}
+	ai_tags = {
+		weapon_role_artillery
+	}
+	damage = {
+		min = 1
+		max = -1
+	}
+	windup = {
+		min = 150
+		max = 150
+	}
+	total_fire_time = 150
+	ship_modifier = {
+		weapon_type_beacon_weapon_damage_mult = 0.7
+		custom_tooltip = " "
+	}
+	
+	range = 500
+	accuracy = 1
+	tracking = 1
+	resources = {
+		category = ship_components
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
+			alloys = 10
+			GF_nyto_new_fire_control_unit = 5
+		}
+		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
+			alloys = 0.1
+			GF_nyto_new_fire_control_unit = 0.05
+			energy = 1
+		}
+	}
+	hidden = yes
+	ai_weight = {
+		weight = 0
+	}
+}
+weapon_component_template = {
+	key = "GF_nyto_beacon_l"
+	size = large
+	entity =invisible_turret_entity
+	icon = "GFX_nyto_weapon_beacon_sop"
+	icon_frame = 1
+	power = -100
+	projectile_gfx = "Electronic"
+	component_set = "GF_nyto_weapon_beacon_sop"
+	tags = {
+		weapon_type_beacon
+	}
+	ai_tags = {
+		weapon_role_artillery
+	}
+	damage = {
+		min = 1
+		max = -1
+	}
+	windup = {
+		min = 150
+		max = 150
+	}
+	total_fire_time = 150
+	ship_modifier = {
+		weapon_type_beacon_weapon_damage_mult = 1
+		custom_tooltip = " "
+	}
+	
+	range = 500
+	accuracy = 1
+	tracking = 1
+	resources = {
+		category = ship_components
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
+			alloys = 10
+			GF_nyto_new_fire_control_unit = 5
+		}
+		upkeep = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}				
+			}
+			alloys = 0.1
+			GF_nyto_new_fire_control_unit = 0.05
+			energy = 1
+		}
+	}
+	hidden = yes
+	ai_weight = {
+		weight = 0
 	}
 }
