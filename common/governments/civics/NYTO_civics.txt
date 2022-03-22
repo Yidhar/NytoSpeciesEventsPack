@@ -200,3 +200,11 @@ civic_GF_nyto_reup = {
 		planet_jobs_consumer_goods_upkeep_mult = -0.5	
 	}
 }
+
+#苦难之心
+#受难者 所有国家关系-1000
+#轨道轰炸伤害增加50%
+#初始拥有塌缩液抛射轰炸
+#首都初始为地狱熔炉
+
+
