@@ -58,10 +58,9 @@ GF_nyto_white_knight= {
 	potential = {owner = {has_authority = auth_GF_paradeus}}
 }
 GF_nyto_white_knight2= {
-	damage = 5.0
-	health = 5.0
-	has_morale = yes
-	morale = 5.0
+	damage = 2.5
+	health = 2.5
+	has_morale = no
 	morale_damage = 5
 	collateral_damage = 0.5
 	war_exhaustion = 1.0

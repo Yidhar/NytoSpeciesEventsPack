@@ -4,4 +4,15 @@ objectTypes = {
 		file = "gfx/models/ships/flag_ship/Archon_destroyer.mesh"
 		scale = 1.0
 	}
+	pdxmesh ={
+		name = "SANGVIS_FERRI_locator_mesh"
+		file = "gfx/models/ships/flag_ship/Archon_destroyer_locator.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "_00_0_0Shape"
+			index = 0
+			shader = "collision"
+		}
+	}
 }

@@ -170,3 +170,15 @@ entity = {
 	}
 	state = { name = "stop" state_time = 0.5 looping = no }
 }
+
+#信标
+entity = {
+	name = Electronic_hit
+	cull_radius = 1.0
+	default_state = idle
+	state = { name = idle
+		start_event = {
+			particle = weapon_beacon_effect trigger_once = yes sound = { soundeffect = titan_laser_hit }
+		}
+	}
+}

@@ -61,5 +61,6 @@ objectTypes={
 	pdxparticle ={
 		name = "weapon_beacon_effect"
 		type = "weapon_beacon_effect"
+		scale = 5
 	}
 }

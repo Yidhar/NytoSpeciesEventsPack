@@ -20,8 +20,8 @@ weapon_component_template = {
 		weapon_role_anti_armor
 	}
 	damage = {
-		min = -99999999
-		max = -999999999
+		min = -9999999
+		max = -99999999
 	}
 	windup = {
 		min = -999
@@ -77,8 +77,8 @@ weapon_component_template = {
 		weapon_role_anti_armor
 	}
 	damage = {
-		min = -99999999
-		max = -999999999
+		min = -9999999
+		max = -99999999
 	}
 	windup = {
 		min = -999
@@ -135,8 +135,8 @@ weapon_component_template = {
 		weapon_role_anti_armor
 	}
 	damage = {
-		min = -99999999
-		max = -999999999
+		min = -9999999
+		max = -99999999
 	}
 	windup = {
 		min = -999

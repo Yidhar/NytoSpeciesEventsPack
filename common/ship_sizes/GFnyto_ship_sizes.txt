@@ -63,4 +63,50 @@ GFnyto_mather_ship ={
 		 always = no
 	 }	
 	 num_target_locators = 6
- }	
+}	
+
+#指挥舰
+GFnyto_Command_ship={
+	formation_priority =  @corvette_formation_priority
+	entity = SANGVIS_FERRI_frame_entity
+	max_speed = 20
+	acceleration = 0.2
+	rotation_speed = 0.05
+	collision_radius = @corvette_formation_priority
+	max_hitpoints = 50000
+	modifier = {
+		ship_evasion_add = -0.5
+		ship_armor_add = 70000
+		ship_shield_add = 20000
+	}
+	empire_limit = {
+		base = 4
+	}
+	section_slots = {
+		"bow" = { locator = part2 }
+		"core" = { locator = part2 }
+		"stern"  = { locator = part2 }
+	}
+	size_multiplier = 32
+	fleet_slot_size = 0
+	class = shipclass_military
+	base_buildtime = 3600
+	can_have_federation_design = yes
+	enable_default_design = yes
+	construction_type = starbase_shipyard
+	required_component_set = "power_core"
+    required_component_set = "ftl_components"
+    required_component_set = "thruster_components"
+    required_component_set = "sensor_components"
+    required_component_set = "combat_computers"
+	required_component_set = "ship_aura_components"
+	default_behavior = GFnyto_ship_behaviors3
+	combat_disengage_chance = -0.9
+	possible_country = {
+		has_authority = auth_GF_paradeus
+	}
+	prerequisites = {
+		
+	}
+	num_target_locators = 8
+}

@@ -513,7 +513,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_1" }
 	component_set = "thruster_components"
-	size_restriction = {  GFnyto_shiled_ship }
+	size_restriction = {  GFnyto_Command_ship GFnyto_shiled_ship  GFnyto_Command_ship }
 	upgrades_to = "SHIP_THRUSTER_2"
 
 	ai_weight = {
@@ -540,7 +540,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_2" }
 	component_set = "thruster_components"
-	size_restriction = {  GFnyto_shiled_ship }
+	size_restriction = {  GFnyto_Command_ship GFnyto_shiled_ship }
 	upgrades_to = "BATTLESHIP_SHIP_THRUSTER_3"
 
 	ai_weight = {
@@ -566,7 +566,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_3" }
 	component_set = "thruster_components"
-	size_restriction = { GFnyto_shiled_ship }
+	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship }
 	upgrades_to = "BATTLESHIP_SHIP_THRUSTER_4"
 
 	ai_weight = {
@@ -592,7 +592,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_4" }
 	component_set = "thruster_components"
-	size_restriction = { GFnyto_shiled_ship }
+	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship }
 	upgrades_to = "SHIP_THRUSTER_5"
 
 	ai_weight = {
@@ -619,7 +619,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fission_power" }
 	component_set = "power_core"
-	size_restriction = { GFnyto_shiled_ship }
+	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship }
 	upgrades_to = "BATTLESHIP_FUSION_REACTOR"
 
 	ai_weight = {
@@ -645,7 +645,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fusion_power" }
 	component_set = "power_core"
-	size_restriction = { GFnyto_shiled_ship }
+	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship }
 	upgrades_to = "BATTLESHIP_COLD_FUSION_REACTOR"
 
 	ai_weight = {
@@ -672,7 +672,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_cold_fusion_power" }
 	component_set = "power_core"
-	size_restriction = { GFnyto_shiled_ship }
+	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship }
 	upgrades_to = "BATTLESHIP_ANTIMATTER_REACTOR"
 
 	ai_weight = {
@@ -699,7 +699,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_antimatter_power" }
 	component_set = "power_core"
-	size_restriction = { GFnyto_shiled_ship }
+	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship }
 	upgrades_to = "BATTLESHIP_ZERO_POINT_REACTOR"
 
 	ai_weight = {

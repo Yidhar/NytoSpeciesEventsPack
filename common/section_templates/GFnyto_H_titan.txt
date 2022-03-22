@@ -124,3 +124,155 @@ ship_section_template={
 	ai_weight = {weight=1}
 	prerequisites = {"tech_GFnyto_war_theory_e3"}
 }
+
+
+#舰首
+ship_section_template = {
+	key = "GF_nyto_Command_ship_bow"
+	ship_size = GFnyto_Command_ship
+	fits_on_slot = bow
+	should_draw_components = yes
+	entity = SANGVIS_FERRI_flag_ship_entity
+	icon = GFX_ship_part_core_bow
+	icon_frame = 1
+	component_slot = {
+		name = "L01"
+		template = invisible_large_turret
+		locatorname = "L05"
+	}
+	component_slot = {
+		name = "L02"
+		template = invisible_large_turret
+		locatorname = "L06"
+	}
+	component_slot = {
+		name = "L03"
+		template = invisible_large_turret
+		locatorname = "L07"
+	}
+	component_slot = {
+		name = "L04"
+		template = invisible_large_turret
+		locatorname = "L08"
+	}
+	large_utility_slots = 4
+}
+#中段
+ship_section_template ={
+	key = GF_nyto_Command_ship_midm
+	ship_size = GFnyto_Command_ship
+	fits_on_slot = core
+	should_draw_components = yes
+	entity = SANGVIS_FERRI_locator_entity
+	icon = GFX_ship_part_core_bow
+	icon_frame = 1
+	component_slot = {
+		name = "ex01"
+		template = invisible_extra_large_fixed
+		locatorname = "L01"
+	}
+	component_slot = {
+		name = "ex02"
+		template = invisible_extra_large_fixed
+		locatorname = "L02"
+	}
+	component_slot = {
+		name = "L05"
+		template = invisible_large_turret
+		locatorname = "L03"
+	}
+	component_slot = {
+		name = "L06"
+		template = invisible_large_turret
+		locatorname = "L04"
+	}
+	component_slot = {
+		name = "L07"
+		template = invisible_large_turret
+		locatorname = "L09"
+	}
+	component_slot = {
+		name = "L8"
+		template = invisible_large_turret
+		locatorname = "L010"
+	}
+	component_slot = {
+		name = "ex03"
+		template = invisible_extra_large_fixed
+		locatorname = "L015"
+	}
+	component_slot = {
+		name = "ex04"
+		template = invisible_extra_large_fixed
+		locatorname = "L016"
+	}
+	component_slot = {
+		name = "missle_01"
+		template = invisible_missile_fixed
+		locatorname = "missile_01"
+	}
+	component_slot = {
+		name = "missle_02"
+		template = invisible_missile_fixed
+		locatorname = "missile_02"
+	}
+	large_utility_slots = 8
+	aux_utility_slots = 4
+}
+#舰尾
+ship_section_template={
+	key = GF_nyto_Command_ship_stern
+	ship_size = GFnyto_Command_ship
+	fits_on_slot = stern
+	should_draw_components = yes
+	entity = SANGVIS_FERRI_locator_entity
+	icon = GFX_ship_part_core_bow
+	icon_frame = 1
+	component_slot = {
+		name = "L8"
+		template = invisible_large_turret
+		locatorname = "L011"
+	}
+	component_slot = {
+		name = "L9"
+		template = invisible_large_turret
+		locatorname = "L012"
+	}
+	component_slot = {
+		name = "L010"
+		template = invisible_large_turret
+		locatorname = "L013"
+	}
+	component_slot = {
+		name = "L011"
+		template = invisible_large_turret
+		locatorname = "L014"
+	}
+	component_slot = {
+		name = "L012"
+		template = invisible_large_turret
+		locatorname = "L017"
+	}
+	component_slot = {
+		name = "L013"
+		template = invisible_large_turret
+		locatorname = "L018"
+	}
+	component_slot = {
+		name = "L014"
+		template = invisible_large_turret
+		locatorname = "L019"
+	}
+	component_slot = {
+		name = "L015"
+		template = invisible_large_turret
+		locatorname = "L020"
+	}
+	component_slot = {
+		name = "T01"
+		template = invisible_titanic_fixed
+		locatorname = "T_01"
+	}
+	large_utility_slots = 4
+	aux_utility_slots = 2
+}

@@ -25,14 +25,6 @@ nyto= {
 			engineering_research = 0.5
 			GF_nyto_dark_star_core = 0.01
 		}
-		produces = {
-			trigger = {
-				owner = {
-					has_ascension_perk = ap_GF_nyto_noussphere
-				}				
-			}
-			GF_nyto_mental_fragments = 0.01
-		}
 	}
 	trait = "trait_GF_nyto_ogas_agreement"
 }

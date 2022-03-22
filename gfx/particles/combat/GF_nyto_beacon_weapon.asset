@@ -2,7 +2,7 @@ particle={
 	name="weapon_beacon_effect"
 	subsystem={
 		name="Force"
-		max_amount=300
+		max_amount=100
 		slave_particles=0
 		sort="depth"
 		emitter_type="point"
@@ -12,45 +12,58 @@ particle={
 		billboard=no
 		hide=no
 		texture={
-			file="gfx/particles/muzzle_big_stripes_2.dds"
+			file="gfx/particles/flare_wide_medium.dds"
 			x=1
 			y=1
 			shader="ParticleAdditive"
 		}
 		color={
 			x=255
-			y={ 0 255 }
-			z={ 0 255 }
-			alpha={ 50,fade_in_out_flairs 15 }
+			y=0
+			z=0
+			alpha=10,size_ani
 		}
 		position={
-			x=0
-			y=0
+			x=42
+			y=50
 			z=0
 		}
 		start=0
-		duration=-1
+		duration=1
 		emitter_yaw=0
 		emitter_pitch=0
-		velocity_pitch=-60
+		velocity_pitch=-130
 		velocity_yaw=180
-		velocity={ 100 0 }
-		life=2
-		emission=500
-		size=10
-		particle_yaw=90
-		particle_pitch=0
-		rotation=35
+		velocity={ 100,ani2 0 }
+		life=1
+		emission=50
+		size=50,size_ani
+		particle_yaw=0
+		particle_pitch=40
+		rotation=0
 	}
 	animation={
-		name="fade_in_out_flairs"
+		name="size_ani"
 		start=0
 		duration=1
 		repeat=yes
 		minValue=0
+		maxValue=1.5
+		curve={
+			0 0 0.10588 0.44531 0.30294 1 0.55 0.60938 0.8 0.07813 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="ani2"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
 		maxValue=1
 		curve={
-			0 0 0.10882 0.34375 0.32353 0.94531 0.68235 0.5 0.87353 0.13281 1 0 
+			0 0 0.20588 1 0.37647 1 0.52353 0.39844 1 0 
 		}
 		op="MUL"
 		time="life"

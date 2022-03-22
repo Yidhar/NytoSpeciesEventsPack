@@ -124,8 +124,8 @@ projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "Electronic"
 	color = { 1.0	1.0		1.0		1.0 }
-	# hit_entity = "GF_nyto_T_weapon_hit_hp_entity"
-	# shield_hit_entity = "GF_nyto_T_weapon_hit_hp_entity"
+	hit_entity = "Electronic_hit"
+	shield_hit_entity = "Electronic_hit"
 	# muzzle_flash_entity = "GF_nyto_T_weapon_muzzle_entity"
 	# windup_entity = "titan_laser_windup_entity"
 	#ballistic specific

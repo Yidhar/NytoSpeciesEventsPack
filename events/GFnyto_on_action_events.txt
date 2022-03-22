@@ -87,7 +87,7 @@ planet_event = {
 	immediate = {
 		every_fleet_in_orbit = {
 			every_owned_ship = {
-				reduce_hp_percent = 3
+				reduce_hp_percent = 0.5
 			}			
 			owner = {
 				country_event = {
