@@ -1,72 +1,50 @@
 particle={
 	name="weapon_beacon_effect"
 	subsystem={
-		name="Force"
-		max_amount=100
+		name="super_laser"
+		max_amount=8000
 		slave_particles=0
-		sort="depth"
 		emitter_type="point"
 		invert=no
 		trail=no
 		local_space=yes
-		billboard=no
+		billboard=yes
 		hide=no
 		texture={
-			file="gfx/particles/flare_wide_medium.dds"
+			file="gfx/particles/cloud.dds"
 			x=1
 			y=1
 			shader="ParticleAdditive"
 		}
 		color={
 			x=255
-			y=0
-			z=0
-			alpha=10,size_ani
+			y=100
+			z=100
+			alpha=100,alpha_fade
 		}
 		position={
-			x=42
+			x=50
 			y=50
-			z=0
 		}
-		start=0
 		duration=1
-		emitter_yaw=0
-		emitter_pitch=0
-		velocity_pitch=-130
-		velocity_yaw=180
-		velocity={ 100,ani2 0 }
-		life=1
-		emission=50
-		size=50,size_ani
-		particle_yaw=0
-		particle_pitch=40
-		rotation=0
+		velocity_pitch=-44.7
+		velocity={ 30 30 }
+		life=5
+		emission=8000
+		size=1
 	}
 	animation={
-		name="size_ani"
-		start=0
-		duration=1
-		repeat=yes
-		minValue=0
-		maxValue=1.5
-		curve={
-			0 0 0.10588 0.44531 0.30294 1 0.55 0.60938 0.8 0.07813 1 0 
-		}
-		op="MUL"
-		time="life"
-	}
-	animation={
-		name="ani2"
+		name="alpha_fade"
 		start=0
 		duration=1
 		repeat=no
 		minValue=0
 		maxValue=1
 		curve={
-			0 0 0.20588 1 0.37647 1 0.52353 0.39844 1 0 
+			0 0 0.39706 0.28906 0.62941 0.89063 1 1 
 		}
 		op="MUL"
-		time="life"
+		time="life_abs"
 	}
 	force={
 		type="planar"

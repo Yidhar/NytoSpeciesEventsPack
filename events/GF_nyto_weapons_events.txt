@@ -211,6 +211,16 @@ fleet_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	immediate = {
+		queue_actions = {
+			move_to = star
+			find_closest_planet = {
+				found_planet = { 
+					destroy_planet = {
+						target = this.star
+					}
+				}
+			}
+		}
 	}
 }
 
