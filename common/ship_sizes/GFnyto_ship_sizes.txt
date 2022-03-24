@@ -103,7 +103,7 @@ GFnyto_Command_ship={
 	default_behavior = GFnyto_ship_behaviors3
 	combat_disengage_chance = -0.9
 	possible_country = {
-		has_authority = auth_GF_paradeus
+		always = no
 	}
 	prerequisites = {
 		

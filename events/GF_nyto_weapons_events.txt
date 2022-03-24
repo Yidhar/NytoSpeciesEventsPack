@@ -14,7 +14,7 @@ country_event = {
 	}
 	immediate = {
 		fromfrom = {
-			GFnyto_weapons_system = yes
+			GFnyto_weapons_system = yes			
 		}
 		#脚本初始化
 	}

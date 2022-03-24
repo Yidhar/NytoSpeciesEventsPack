@@ -124,6 +124,11 @@ building_GFnyto_collapse_change_center = {
 	planet_modifier = {
 		planet_pop_assembly_organic_add = 6		
 	}
+	triggered_planet_modifier = {
+		potential = {
+			
+		}
+	}
 	resources = {
 		category = planet_buildings
 		cost = {

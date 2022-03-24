@@ -54,8 +54,7 @@ tech_GF_nyto_repeatable_soc_100 = {
 		has_country_flag = has_nyto_Ex_shield_flag
 	}
 	modifier = {
-		country_admin_cap_mult = 0.05
-		country_resource_max_add = 10000
+		country_resource_max_add = 50000
 		deposit_blockers_cost_mult = -0.05
 		planet_jobs_produces_mult = 0.1
 		planet_decision_enact_speed_mult = 0.1
