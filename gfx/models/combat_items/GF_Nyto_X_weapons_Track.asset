@@ -110,17 +110,6 @@ entity = {
 	default_state = idle
 	state = { name = "idle"
 		event = { time = 0 particle = "GF_nyto_sm2_weapon_idle_particle" keep_particle = yes }		
-		event = { time = 0 particle = "GF_nyto_sm2_weapon_idle_particle" keep_particle = yes }	
-		event = { time = 0 particle = "GF_nyto_sm2_weapon_idle_particle" keep_particle = yes }	
-		event = { time = 0 particle = "GF_nyto_sm2_weapon_idle_particle" keep_particle = yes }	
-		event = { time = 0 particle = "GF_nyto_sm2_weapon_idle_particle" keep_particle = yes }	
-		event = { time = 0 particle = "GF_nyto_sm2_weapon_idle_particle" keep_particle = yes }	
-		event = { time = 0 particle = "GF_nyto_sm2_weapon_idle_particle" keep_particle = yes }		
-		event = { time = 0 particle = "GF_nyto_sm2_weapon_idle_particle" keep_particle = yes }	
-		event = { time = 0 particle = "GF_nyto_sm2_weapon_idle_particle" keep_particle = yes }	
-		event = { time = 0 particle = "GF_nyto_sm2_weapon_idle_particle" keep_particle = yes }	
-		event = { time = 0 particle = "GF_nyto_sm2_weapon_idle_particle" keep_particle = yes }	
-		event = { time = 0 particle = "GF_nyto_sm2_weapon_idle_particle" keep_particle = yes }	
 	}
 }
 

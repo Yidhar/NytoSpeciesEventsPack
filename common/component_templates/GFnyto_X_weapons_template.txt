@@ -8,8 +8,8 @@ weapon_component_template = {
 	icon_frame = 1
 	power = -100
 	valid_for_country = {
-		has_edict = GFnyto_rbq
-	}	
+		has_edict = GFnyto_rbq		
+	}		
 	component_set = "GF_Nyto_missile_weapon"
 	projectile_gfx = "large_missile"
 	tags = {

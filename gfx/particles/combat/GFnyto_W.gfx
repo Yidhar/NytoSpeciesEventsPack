@@ -32,7 +32,7 @@ objectTypes={
 		name = "GF_nyto_sm2_weapon_idle_particle"
 		type = "neutron_torpedoes_idle_file"
 		
-		scale = 5.0
+		scale = 1.0
 	}
 	pdxparticle = {
 		name = "GF_nyto_sm2_weapon_muzzle_particle"
@@ -44,7 +44,7 @@ objectTypes={
 		name = "GF_nyto_sm_weapon_hit_effect"
 		type = "neutron_torpedoes_hit_effect"
 		
-		scale = 5
+		scale = 1
 	}
 	pdxparticle = {
 		name = "GF_nyto_sm_weapon_shield_hit_effect"
