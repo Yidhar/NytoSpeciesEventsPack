@@ -1,0 +1,36 @@
+entity = {
+	name = "error_entity"
+	pdxmesh = star_eater_01_mesh
+	scale = 2
+	default_state = idle 
+	locator = {
+		name = partice1
+		position = {
+			0 10 0
+		}
+	}
+	state = {
+		name = idle  animation = open looping = yes
+		event = { time = 0	id = "beam_start"  }		
+		event = { time = 0.0 node = "effect_core" particle = "necroid_01_colossus_core_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_01" particle = "nemesis_01_ship_light_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_02" particle = "nemesis_01_ship_light_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_03" particle = "nemesis_01_ship_light_effect" keep_particle = yes trigger_once = yes }
+		start_event = {
+			node = "partice1" particle = weapon_beacon_fire_effect keep_particle = yes trigger_once = yes
+		}
+
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_star_eater_idle_hum" stop_on_state_change = yes } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_star_eater_idle_pulsating" stop_on_state_change = yes } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_star_eater_open_energy" stop_on_state_change = yes } }
+	}
+	attach = {
+		locator = ""
+		name = error_entity2
+		
+	}
+}
+
+entity = {
+	name =  "error_entity2"
+}
