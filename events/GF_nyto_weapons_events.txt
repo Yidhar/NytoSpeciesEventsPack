@@ -14,7 +14,7 @@ country_event = {
 	}
 	immediate = {
 		fromfrom = {
-			GFnyto_weapons_system = yes			
+			GFnyto_weapons_system = yes						
 		}
 		#脚本初始化
 	}
@@ -221,6 +221,65 @@ fleet_event = {
 				}
 			}
 		}
+	}
+}
+
+#引导信标
+country_event = {
+	id = gf_nyto_weapons.12
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_megastructure = {
+			limit = {
+				is_megastructure_type = GFnyto_beacon_weapon_02
+			}
+			event_target:is_Gfnyto_command_ship= {
+				change_variable = {
+					which = has_GFnyto_beacon_weapon_02
+					value = 1
+				}
+			}
+			solar_system = {
+				spawn_megastructure = {
+					name = "GFnyto_beacon_weapon_03"
+					type = GFnyto_beacon_weapon_03
+					owner = root
+					coords_from = prev					
+				}
+			}			
+			delete_megastructure = this
+		}
+		event_target:is_Gfnyto_command_ship = {
+			GF_nyto_beacon_weapon_damage_lock =yes
+			add_modifier = {
+				modifier = GF_nyto_beacon_count_buff
+				multiplier = GF_nyto_beacon_damag_lv
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gf_nyto_weapons.13
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_megastructure = {
+			limit = {
+				is_megastructure_type = GFnyto_beacon_weapon_03
+			}
+			solar_system = {
+				spawn_megastructure = {
+					name = "GFnyto_beacon_weapon_02"
+					type = GFnyto_beacon_weapon_02
+					owner = root
+					coords_from = prev					
+				}
+			}			
+			delete_megastructure = this
+		}
+
 	}
 }
 
@@ -450,23 +509,35 @@ ship_event = {
 			remove_modifier = GF_nyoto_shield_ship
 			remove_modifier = GF_nyto_l_weapon2_soon	
 			remove_modifier = GF_nyto_T_weapon2_damgabuff		
-		}
+			if = {
+				limit = { has_ship_flag = is_Gfnyto_command_ship  }
+				clear_variable = has_GFnyto_beacon_weapon_02
+				remove_modifier = GF_nyto_beacon_count_buff
+				remove_ship_flag = is_Gfnyto_command_ship
+				owner = {
+					country_event = {
+						id = gf_nyto_weapons.13
+						days = 1
+					}
+				}
+			}		
+		}	
 	}
 }
 
 ############################################
 
 
-fleet_event = {
-	id = gf_nyto_weapons.12
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		every_owned_ship = {
-			export_modifier_to_variable = {
-				modifier = weapon_type_Electronic_weapon_damage_mult
-				variable = Electronic_num
-			}
-		}
-	}
-}
+# fleet_event = {
+# 	id = gf_nyto_weapons.12
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	immediate = {
+# 		every_owned_ship = {
+# 			export_modifier_to_variable = {
+# 				modifier = weapon_type_Electronic_weapon_damage_mult
+# 				variable = Electronic_num
+# 			}
+# 		}
+# 	}
+# }

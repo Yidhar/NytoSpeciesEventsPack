@@ -213,3 +213,6 @@ GF_nyto_l_weapon2_soon ={
 GF_nyto_T_weapon2_damgabuff = {
 	weapon_type_prism_weapon_damage_mult = 1	
 }
+GF_nyto_beacon_count_buff ={
+	weapon_type_beacon_weapon_damage_mult = 10000
+}

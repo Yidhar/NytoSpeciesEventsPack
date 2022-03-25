@@ -164,12 +164,8 @@ entity = {
 entity = {
 	name = Electronic_hit
 	default_state = idle
-	state = { name = "explode_med_hp" state_time = 5.0 looping = no
-		event = { time = 0.0 particle = "weapon_beacon_effect" }
-	}
-	state = { name = "explode_med_shield" state_time = 0.8 looping = no
-		event = { time = 0.0 particle = "weapon_beacon_effect" }
+	state = { name = "explode_med_hp"  looping = no
+		event = { time = 0.0 particle = "weapon_beacon_effect"  }
 	}
 	default_state = "explode_med_hp"
-	
 }

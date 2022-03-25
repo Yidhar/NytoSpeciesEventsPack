@@ -155,6 +155,12 @@ ship_section_template = {
 		template = invisible_point_defence_turret
 		locatorname = "L08"
 	}
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = 1000			
+		}
+	}
 	large_utility_slots = 4
 }
 #中段
@@ -218,6 +224,12 @@ ship_section_template ={
 	}
 	large_utility_slots = 8
 	aux_utility_slots = 2
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = 1000			
+		}
+	}
 }
 #舰尾
 ship_section_template={
@@ -272,6 +284,12 @@ ship_section_template={
 		name = "T01"
 		template = invisible_titanic_fixed
 		locatorname = "T_01"
+	}
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = 1000			
+		}
 	}
 	large_utility_slots = 4
 	aux_utility_slots = 2

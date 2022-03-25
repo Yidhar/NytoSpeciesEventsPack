@@ -153,3 +153,23 @@ tech_GFnyto_star_tasuo={
 		custom_tooltip = "tech_GFnyto_star_tasuo_desc"
 	}
 }
+
+#指挥舰
+tech_template_GFnyto_Command_ship ={
+	cost = 50000
+	area = engineering
+	category = {
+		voidcraft
+	}
+	tier = 5
+	weight = 20
+	ai_weight = {
+		weight = 50
+	}
+	potential = {
+		has_authority = auth_GF_paradeus
+	}
+	prerequisites = {
+		tech_titans
+	}
+}
