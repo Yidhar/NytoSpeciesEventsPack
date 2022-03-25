@@ -28,6 +28,7 @@ GFnyto_flags = {
 #母舰
 GFnyto_mather_ship ={
 	formation_priority =  @corvette_formation_priority
+	icon = ship_size_military_16
 	entity =  Gayr_frame_entity
 	max_speed = 20
 	acceleration = 0.1
@@ -68,6 +69,7 @@ GFnyto_mather_ship ={
 #指挥舰
 GFnyto_Command_ship={
 	formation_priority =  @corvette_formation_priority
+	icon = ship_size_military_16
 	entity = SANGVIS_FERRI_frame_entity
 	max_speed = 20
 	acceleration = 0.2
@@ -80,14 +82,20 @@ GFnyto_Command_ship={
 		ship_shield_add = 20000
 	}
 	empire_limit = {
-		base = 4
+		base = 1
+		max = 4
+		naval_cap_div = 2000
+		show = {
+			is_scope_valid = yes
+			has_technology = tech_titans
+		}
 	}
 	section_slots = {
 		"bow" = { locator = part2 }
 		"core" = { locator = part2 }
 		"stern"  = { locator = part2 }
 	}
-	size_multiplier = 32
+	size_multiplier = 64
 	fleet_slot_size = 0
 	class = shipclass_military
 	base_buildtime = 3600
@@ -101,12 +109,67 @@ GFnyto_Command_ship={
     required_component_set = "combat_computers"
 	required_component_set = "ship_aura_components"
 	default_behavior = GFnyto_ship_behaviors3
+	enable_3dview_in_ship_browser  =yes
 	combat_disengage_chance = -0.9
+	potential_construction = {
+		OR = {
+			is_scope_type = starbase
+			AND = {
+				is_scope_type = megastructure
+				OR = {
+					is_megastructure_type = mega_shipyard_3
+					is_megastructure_type = mega_shipyard_restored
+					is_megastructure_type = StarForge
+					is_megastructure_type = exe_black_hole_restore
+				}
+			}
+		}
+	}	
+	possible_construction = {
+		custom_tooltip = {
+			fail_text = starbase_citadel_trigger
+			OR = {
+				AND = {
+					is_scope_type = megastructure
+					OR = {
+						is_megastructure_type = mega_shipyard_3
+						is_megastructure_type = mega_shipyard_restored
+						is_megastructure_type = StarForge
+						is_megastructure_type = exe_black_hole_restore
+					}
+				}
+				AND = {
+					is_scope_type = starbase
+					has_starbase_size >= starbase_citadel
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = starbase_titan_yards_trigger
+			OR = {
+				AND = {
+					is_scope_type = megastructure
+					OR = {
+						is_megastructure_type = mega_shipyard_3
+						is_megastructure_type = mega_shipyard_restored
+						is_megastructure_type = StarForge
+						is_megastructure_type = exe_black_hole_restore
+					}
+				}
+				AND = {
+					is_scope_type = starbase
+					has_starbase_building = titan_yards
+				}
+			}
+		}
+	}
 	possible_country = {
-		always = no
+		has_authority = auth_GF_paradeus
 	}
 	prerequisites = {
-		
+		tech_titans
 	}
 	num_target_locators = 8
 }
+
+#主力舰 不做了

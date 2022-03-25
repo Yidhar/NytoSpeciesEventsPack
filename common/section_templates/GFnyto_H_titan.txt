@@ -137,22 +137,22 @@ ship_section_template = {
 	icon_frame = 1
 	component_slot = {
 		name = "L01"
-		template = invisible_large_turret
+		template = invisible_point_defence_turret
 		locatorname = "L05"
 	}
 	component_slot = {
 		name = "L02"
-		template = invisible_large_turret
+		template = invisible_point_defence_turret
 		locatorname = "L06"
 	}
 	component_slot = {
 		name = "L03"
-		template = invisible_large_turret
+		template = invisible_point_defence_turret
 		locatorname = "L07"
 	}
 	component_slot = {
 		name = "L04"
-		template = invisible_large_turret
+		template = invisible_point_defence_turret
 		locatorname = "L08"
 	}
 	large_utility_slots = 4
@@ -168,7 +168,7 @@ ship_section_template ={
 	icon_frame = 1
 	component_slot = {
 		name = "ex01"
-		template = invisible_extra_large_fixed
+		template = invisible_titanic_fixed
 		locatorname = "L01"
 	}
 	component_slot = {
@@ -178,22 +178,22 @@ ship_section_template ={
 	}
 	component_slot = {
 		name = "L05"
-		template = invisible_large_turret
+		template = invisible_point_defence_turret
 		locatorname = "L03"
 	}
 	component_slot = {
 		name = "L06"
-		template = invisible_large_turret
+		template = invisible_point_defence_turret
 		locatorname = "L04"
 	}
 	component_slot = {
 		name = "L07"
-		template = invisible_large_turret
+		template = invisible_point_defence_turret
 		locatorname = "L09"
 	}
 	component_slot = {
 		name = "L8"
-		template = invisible_large_turret
+		template = invisible_point_defence_turret
 		locatorname = "L010"
 	}
 	component_slot = {
@@ -203,7 +203,7 @@ ship_section_template ={
 	}
 	component_slot = {
 		name = "ex04"
-		template = invisible_extra_large_fixed
+		template = invisible_titanic_fixed
 		locatorname = "L016"
 	}
 	component_slot = {
@@ -217,7 +217,7 @@ ship_section_template ={
 		locatorname = "missile_02"
 	}
 	large_utility_slots = 8
-	aux_utility_slots = 4
+	aux_utility_slots = 2
 }
 #舰尾
 ship_section_template={
@@ -230,42 +230,42 @@ ship_section_template={
 	icon_frame = 1
 	component_slot = {
 		name = "L8"
-		template = invisible_large_turret
+		template = invisible_point_defence_turret
 		locatorname = "L011"
 	}
 	component_slot = {
 		name = "L9"
-		template = invisible_large_turret
+		template = invisible_point_defence_turret
 		locatorname = "L012"
 	}
 	component_slot = {
 		name = "L010"
-		template = invisible_large_turret
+		template = invisible_point_defence_turret
 		locatorname = "L013"
 	}
 	component_slot = {
 		name = "L011"
-		template = invisible_large_turret
+		template = invisible_point_defence_turret
 		locatorname = "L014"
 	}
 	component_slot = {
 		name = "L012"
-		template = invisible_large_turret
+		template = invisible_point_defence_turret
 		locatorname = "L017"
 	}
 	component_slot = {
 		name = "L013"
-		template = invisible_large_turret
+		template = invisible_point_defence_turret
 		locatorname = "L018"
 	}
 	component_slot = {
 		name = "L014"
-		template = invisible_large_turret
+		template = invisible_point_defence_turret
 		locatorname = "L019"
 	}
 	component_slot = {
 		name = "L015"
-		template = invisible_large_turret
+		template = invisible_point_defence_turret
 		locatorname = "L020"
 	}
 	component_slot = {
