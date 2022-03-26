@@ -215,4 +215,5 @@ GF_nyto_T_weapon2_damgabuff = {
 }
 GF_nyto_beacon_count_buff ={
 	weapon_type_beacon_weapon_damage_mult = 10000
+	weapon_type_beacon_weapon_fire_rate_mult = 0.01
 }

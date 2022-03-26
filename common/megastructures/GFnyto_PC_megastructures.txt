@@ -101,7 +101,7 @@ GFnyto_megastructure_collapse_reactor_restored = {
 			engineering_research = 1000
 		}
 		upkeep = {
-			energy = 2000
+			energy = 1000
 		}
 	}
 	upgrade_from = {
@@ -263,5 +263,11 @@ GFnyto_beacon_weapon_03 ={
 	}
 	potential = {
 		always = no
+	}
+	resources = {
+		category = megastructures
+		upkeep = {
+			energy = 500
+		}
 	}
 }

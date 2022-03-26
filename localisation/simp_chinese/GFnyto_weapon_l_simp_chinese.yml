@@ -277,5 +277,6 @@ GF_nyto_weapon_beacon_sop_DESC:0 "支援信标可以呼叫一定范围内的远�
 GF_nyto_beacon:0 "支援信标"
 GF_nyto_beacon_m:0 "支援信标"
 GF_nyto_beacon_l:0 "支援信标"
-GF_nyto_beacon_modif: "§b该武器用作引导战略武器打击目标,如果你没有部署火力节点的.该武器则无任何用处§!"
-mod_weapon_type_beacon_weapon_damage_mult:0 "§r武器节点瞄准中§!"
+GF_nyto_beacon_modif: "§B该武器用作引导战略武器打击目标,如果你没有部署火力节点的.该武器则无任何用处§!"
+mod_weapon_type_beacon_weapon_damage_mult:0 "§R武器节点瞄准中§!"
+mod_weapon_type_beacon_weapon_fire_rate_mult:0 "§R节点火力聚焦§!"
