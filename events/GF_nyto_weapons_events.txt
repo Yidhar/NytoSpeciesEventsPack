@@ -232,7 +232,10 @@ country_event = {
 	immediate = {
 		every_owned_megastructure = {
 			limit = {
-				is_megastructure_type = GFnyto_beacon_weapon_02
+				OR = {
+					is_megastructure_type = GFnyto_beacon_weapon_02
+					is_megastructure_type = GFnyto_beacon_weapon_03
+				}				
 			}
 			event_target:is_Gfnyto_command_ship= {
 				change_variable = {
@@ -240,15 +243,20 @@ country_event = {
 					value = 1
 				}
 			}
-			solar_system = {
-				spawn_megastructure = {
-					name = "GFnyto_beacon_weapon_03"
-					type = GFnyto_beacon_weapon_03
-					owner = root
-					coords_from = prev					
+			if = {
+				limit = {
+					is_megastructure_type = GFnyto_beacon_weapon_02
 				}
-			}			
-			delete_megastructure = this
+				delete_megastructure = this
+				solar_system = {
+					spawn_megastructure = {
+						name = "超视界支援武器节点 ：激活"
+						type = GFnyto_beacon_weapon_03
+						owner = root
+						coords_from = system_star			
+					}
+				}
+			}						
 		}
 		event_target:is_Gfnyto_command_ship = {
 			GF_nyto_beacon_weapon_damage_lock =yes
@@ -271,7 +279,7 @@ country_event = {
 			}
 			solar_system = {
 				spawn_megastructure = {
-					name = "GFnyto_beacon_weapon_02"
+					name = "超视界支援武器节点 ：待机"
 					type = GFnyto_beacon_weapon_02
 					owner = root
 					coords_from = prev					
@@ -280,6 +288,52 @@ country_event = {
 			delete_megastructure = this
 		}
 
+	}
+}
+
+country_event = {
+	id = gf_nyto_weapons.14
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		from = {
+			is_megastructure_type = GFnyto_beacon_weapon_03
+		}
+	}
+	immediate = {
+		from.solar_system = {
+			spawn_megastructure = {
+				name = "超视界支援武器节点 ：待机"
+				type = GFnyto_beacon_weapon_02
+				owner = root
+				coords_from = prev.from					
+			}			
+		}
+		from = {
+			delete_megastructure = this
+		}
+	}
+}
+
+event = {
+	id = gf_nyto_weapons.15
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		from = {
+			is_megastructure_type = GFnyto_beacon_weapon_03
+		}
+	}
+	immediate = {		
+		spawn_megastructure = {
+			name = "超视界支援武器节点 ：待机"
+			type = GFnyto_beacon_weapon_02
+			owner = root
+			coords_from = from				
+		}					
+		from = {
+			delete_megastructure = this
+		}
 	}
 }
 
@@ -482,7 +536,19 @@ ship_event = {
 					multiplier = GFnyto_shield_system_weapon_debuff
 				}
 				clear_variable = GFnyto_shield_system_weapon_debuff
-			}
+			}		
+			if = {
+				limit = { 
+					exists = event_target:is_Gfnyto_command_ship
+					owner = {
+						has_country_flag = is_open_fire_beacon
+					}
+				}
+				owner = {
+					remove_country_flag = is_open_fire_beacon
+					country_event = { id = gf_nyto_weapons.13 days = 1 }
+				}
+			}	
 			ship_event = { id = gf_nyto_weapons.8001 days = 1 }
 		}
 		if = {
@@ -508,36 +574,50 @@ ship_event = {
 			remove_modifier = gfnyto_LsScepter_damage_modifer
 			remove_modifier = GF_nyoto_shield_ship
 			remove_modifier = GF_nyto_l_weapon2_soon	
-			remove_modifier = GF_nyto_T_weapon2_damgabuff		
-			if = {
-				limit = { has_ship_flag = is_Gfnyto_command_ship  }
-				clear_variable = has_GFnyto_beacon_weapon_02
-				remove_modifier = GF_nyto_beacon_count_buff
-				remove_ship_flag = is_Gfnyto_command_ship
-				owner = {
-					country_event = {
-						id = gf_nyto_weapons.13
-						days = 1
-					}
-				}
-			}		
+			remove_modifier = GF_nyto_T_weapon2_damgabuff	
 		}	
 	}
 }
 
-############################################
-
-
-# fleet_event = {
-# 	id = gf_nyto_weapons.12
-# 	hide_window = yes
-# 	is_triggered_only = yes
-# 	immediate = {
-# 		every_owned_ship = {
-# 			export_modifier_to_variable = {
-# 				modifier = weapon_type_Electronic_weapon_damage_mult
-# 				variable = Electronic_num
-# 			}
-# 		}
-# 	}
-# }
+##############指挥舰检测##############################
+ship_event = {
+	id = gf_nyto_weapons.8002
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		if = {
+			limit = {
+				is_in_combat = no
+				has_ship_flag = is_Gfnyto_command_ship
+				owner = { has_country_flag = is_open_fire_beacon }
+			}
+			clear_variable = has_GFnyto_beacon_weapon_02
+			remove_modifier = GF_nyto_beacon_count_buff
+			remove_ship_flag = is_Gfnyto_command_ship
+			event_target:is_Gfnyto_command_ship = {
+				if = {
+					limit = { is_in_combat = no }
+					clear_global_event_target = is_Gfnyto_command_ship
+					owner = {
+						remove_country_flag = is_open_fire_beacon
+						country_event = { id = gf_nyto_weapons.13 days = 1 }
+					}
+				}
+			}	
+		}
+		else_if = {
+			limit = { 
+				is_in_combat = yes
+				has_ship_flag = is_Gfnyto_command_ship
+				owner = { has_country_flag = is_open_fire_beacon }
+			}
+			GF_nyto_beacon_weapon_damage_lock =yes
+			remove_modifier = GF_nyto_beacon_count_buff
+			add_modifier = {
+				modifier = GF_nyto_beacon_count_buff
+				multiplier = GF_nyto_beacon_damag_lv
+			}
+			ship_event = { id = gf_nyto_weapons.8002 days = 1 }
+		}
+	}
+}

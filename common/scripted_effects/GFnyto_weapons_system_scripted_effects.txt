@@ -168,23 +168,29 @@ GFnyto_weapons_system = {
 				days = 1
 			}
 		}
-		random_fleet_in_system = {
-			random_owned_ship = {
+		random_ship_in_system = {
+			limit = {
+				NOT = {
+					has_ship_flag = is_Gfnyto_command_ship
+				}
+				is_ship_size = GFnyto_Command_ship
+				has_component = GF_nyto_beacon
+			}
+			set_ship_flag = is_Gfnyto_command_ship
+			ship_event = {
+				id = gf_nyto_weapons.8002
+				days = 2
+			}
+			save_global_event_target_as = is_Gfnyto_command_ship
+			owner = {
 				if = {
-					limit = {
-						NOT = {
-							has_ship_flag = is_Gfnyto_command_ship
-						}
-					}
-					set_ship_flag = is_Gfnyto_command_ship
-					save_event_target_as = is_Gfnyto_command_ship
-					owner = {
-						country_event = {
-							id = gf_nyto_weapons.12
-							days = 1
-						}
-					}
-				}								
+					limit = { NOT = { has_country_flag = is_open_fire_beacon } }
+					set_country_flag = is_open_fire_beacon									
+					country_event = {
+						id = gf_nyto_weapons.12
+						days = 1
+					}	
+				}
 			}
 		}
 	}
