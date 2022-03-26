@@ -185,3 +185,23 @@ on_planet_transfer ={
 		GFnyto_global.15
 	}
 }
+
+# Executed when a megastructure has a new owner
+# this = new owner
+# from = megastructure
+# fromfrom = old owner (if existing)
+on_megastructure_change_owner = {
+	events = {
+		gf_nyto_weapons.14
+	}
+}
+
+# Executed when a megastructure is rendered ownerless
+# this = solar system containing megastructure
+# from = megastructure
+# fromfrom = old owner (if existing)
+on_megastructure_ownerless = {
+	events = {
+		gf_nyto_weapons.15
+	}
+}

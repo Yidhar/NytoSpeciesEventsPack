@@ -291,7 +291,7 @@ country_event = {
 	}
 }
 
-country_event = {
+event = {
 	id = gf_nyto_weapons.14
 	hide_window = yes
 	is_triggered_only = yes
