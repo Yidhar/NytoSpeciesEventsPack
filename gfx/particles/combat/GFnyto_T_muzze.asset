@@ -23,7 +23,7 @@ particle={
 			x=240
 			y=170
 			z=120
-			alpha={ 20,fade_in_out_flairs 15 }
+			alpha={ 50,fade_in_out_flairs 15 }
 		}
 		position={
 			y=-300
@@ -68,7 +68,7 @@ particle={
 			x=240
 			y=150
 			z=100
-			alpha={ 50,fade_in_out_flairs 15 }
+			alpha={ 100,fade_in_out_flairs 15 }
 		}
 		position={
 			x=0
@@ -112,7 +112,7 @@ particle={
 			x=240
 			y=150
 			z=100
-			alpha=50,fade_in_out_flairs
+			alpha=100,fade_in_out_flairs
 		}
 		position={
 			x=0
@@ -157,7 +157,7 @@ particle={
 			x=240
 			y=200
 			z=150
-			alpha=50,shock_fade
+			alpha=100,shock_fade
 		}
 		position={
 			x=0
@@ -199,7 +199,7 @@ particle={
 			x=240
 			y=220
 			z=200
-			alpha={ 51,fade_in_out_flairs 15 }
+			alpha={102,fade_in_out_flairs 15 }
 		}
 		position={
 			x=0
