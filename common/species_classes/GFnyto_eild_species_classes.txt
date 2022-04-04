@@ -10,4 +10,10 @@ eild= {
 	leader_age_max = 50
 	graphical_culture = humanoid_01
 	move_pop_sound_effect = "robot_pops_move"
+	resources = {
+		category = planet_pops
+		upkeep = {
+			GF_nyto_collapse_liquid = 0.1
+		}
+	}
 }

@@ -44,3 +44,5 @@ GFnyto_global.23.desc:0 "当前选择领袖:\n[Root.GetName]\n当前等级:[Root
 GFnyto_global.5b.desc:0 "不再提示该事件"
  edict_GFnyto_rbq:0 "启用狡猾武器"
  edict_GFnyto_rbq_desc:0 "承认自己是RBQ你就可以启用一套强力(?)的狡猾武器"
+ personality_GF_nyto_warrior:0 "战争国度"
+ personality_GF_nyto_warrior_desc:0 "一切为了帕拉蒂斯"

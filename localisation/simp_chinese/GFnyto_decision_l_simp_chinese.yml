@@ -35,7 +35,7 @@ decision_GFnyto_boom_effects_short:2 "360天后该恒星系及范围内的巨构
 decision_GFnyto_boom_desc:1 "过载坍缩反应堆来炸毁这个恒星系。"
 
 decision_GFnyto_boom_effect:0 "§R摧毁这个星系内所有恒星、舰队、巨构建筑§!"
-decision_GFnyto_pop_load_effect:0 "为该星球增加5个涅托人口"
+decision_GFnyto_pop_load_effect:0 "为该星球增加10个涅托人口"
 
  decision_GFnyto_yaosai:0 "要塞化计划"
  decision_GFnyto_yaosai_desc:0 "打造一个永恒钢铁要塞星球"

@@ -12,9 +12,6 @@ origin_GF_nyto_the_last_light= {
 		trait = trait_GF_nyto_the_last_light
 		trait = trait_GF_nyto_collapse_radiation_adaptation
 	}
-	initializers = {
-		sol_system_initializer
-	}
 	advanced_start = yes
 	random_weight = {base = 5}
 }

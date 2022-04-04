@@ -176,7 +176,7 @@ GF_nyto_new_fire_control_unit_deficit ={
 #ELIDdengji
 GF_nyto_Elid_level ={
 	army_damage_mult = 0.05
-	army_health = 0.01
+	army_health = 0.02
 }
 GF_nyto_forward_base ={
 	icon = "gfx/interface/icons/modifiers/GFnyto_gestalt.dds"
@@ -215,5 +215,4 @@ GF_nyto_T_weapon2_damgabuff = {
 }
 GF_nyto_beacon_count_buff ={
 	weapon_type_beacon_weapon_damage_mult = 10000
-	weapon_type_beacon_weapon_fire_rate_mult = 0.01
 }

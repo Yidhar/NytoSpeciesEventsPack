@@ -24,3 +24,13 @@ is_kuat_faction_empire = {
 		is_country_type = ag_kuat_invasion_country
 	}
 }
+
+is_cg_country ={
+	OR = {
+		has_country_flag = carnalism_flag
+		has_country_flag = asceticism_flag
+		has_country_flag = parasite_mind_flag
+		has_country_flag = lust_skynet_flag
+		has_country_flag = abstinence_flag
+	}
+}

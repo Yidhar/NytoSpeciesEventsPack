@@ -9,9 +9,11 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			
 			GF_nyto_collapse_liquid = 100
 		}
 		upkeep = {
+			
 			GF_nyto_collapse_liquid = 10
 		}
 	}
@@ -29,6 +31,7 @@ utility_component_template = {
 		shipclass_transport
 		shipclass_military_special
 		shipclass_starbase
+		shipclass_military_station
 	}
 	ai_weight = {
 		weight = 500
@@ -46,6 +49,7 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
+			
 			alloys = 24
 			GF_nyto_collapse_liquid = 2.4
 		}
@@ -80,21 +84,13 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			trigger = {
-				owner = {
-					is_ai = no
-				}				
-			}
+			
 			alloys = 30
 			GF_nyto_new_fire_control_unit = 20
 			GF_nyto_collapse_liquid = 200
 		}
 		upkeep = {
-			trigger = {
-				owner = {
-					is_ai = no
-				}				
-			}
+			
 			GF_nyto_collapse_liquid = 10
 			GF_nyto_new_fire_control_unit = 5
 		}
@@ -179,21 +175,13 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			trigger = {
-				owner = {
-					is_ai = no
-				}				
-			}
+			
 			alloys = 30
 			GF_nyto_new_fire_control_unit = 20
 			GF_nyto_collapse_liquid = 200
 		}
 		upkeep = {
-			trigger = {
-				owner = {
-					is_ai = no
-				}				
-			}
+			
 			GF_nyto_collapse_liquid = 10
 			GF_nyto_new_fire_control_unit = 5
 		}
@@ -244,21 +232,13 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			trigger = {
-				owner = {
-					is_ai = no
-				}				
-			}
+			
 			alloys = 30
 			GF_nyto_new_fire_control_unit = 20
 			GF_nyto_collapse_liquid = 200
 		}
 		upkeep = {
-			trigger = {
-				owner = {
-					is_ai = no
-				}				
-			}
+			
 			GF_nyto_collapse_liquid = 10
 			GF_nyto_new_fire_control_unit = 5
 		}
@@ -282,21 +262,13 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			trigger = {
-				owner = {
-					is_ai = no
-				}				
-			}
+			
 			alloys = 30
 			GF_nyto_new_fire_control_unit = 20
 			GF_nyto_collapse_liquid = 200
 		}
 		upkeep = {
-			trigger = {
-				owner = {
-					is_ai = no
-				}				
-			}
+			
 			GF_nyto_collapse_liquid = 10
 			GF_nyto_new_fire_control_unit = 5
 		}
@@ -349,21 +321,13 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			trigger = {
-				owner = {
-					is_ai = no
-				}				
-			}
+			
 			alloys = 30
 			GF_nyto_new_fire_control_unit = 20
 			GF_nyto_collapse_liquid = 200
 		}
 		upkeep = {
-			trigger = {
-				owner = {
-					is_ai = no
-				}				
-			}
+			
 			GF_nyto_collapse_liquid = 10
 			GF_nyto_new_fire_control_unit = 5
 		}
@@ -414,21 +378,13 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			trigger = {
-				owner = {
-					is_ai = no
-				}				
-			}
+			
 			alloys = 20
 			GF_nyto_new_fire_control_unit = 5
 			GF_nyto_collapse_liquid = 0.2
 		}
 		upkeep = {
-			trigger = {
-				owner = {
-					is_ai = no
-				}				
-			}
+			
 			GF_nyto_new_fire_control_unit = 1
 		}
 	}
@@ -462,21 +418,13 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			trigger = {
-				owner = {
-					is_ai = no
-				}				
-			}
+			
 			alloys = 30
 			GF_nyto_new_fire_control_unit = 5
 			GF_nyto_collapse_liquid = 0.3
 		}
 		upkeep = {
-			trigger = {
-				owner = {
-					is_ai = no
-				}				
-			}
+			
 			GF_nyto_new_fire_control_unit = 1
 		}
 	}
@@ -513,7 +461,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_1" }
 	component_set = "thruster_components"
-	size_restriction = {  GFnyto_Command_ship GFnyto_shiled_ship  GFnyto_Command_ship }
+	size_restriction = {  GFnyto_Command_ship GFnyto_shiled_ship  GF_nyto_super_battelship }
 	upgrades_to = "SHIP_THRUSTER_2"
 
 	ai_weight = {
@@ -540,7 +488,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_2" }
 	component_set = "thruster_components"
-	size_restriction = {  GFnyto_Command_ship GFnyto_shiled_ship }
+	size_restriction = {  GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship}
 	upgrades_to = "BATTLESHIP_SHIP_THRUSTER_3"
 
 	ai_weight = {
@@ -566,7 +514,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_3" }
 	component_set = "thruster_components"
-	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship }
+	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship}
 	upgrades_to = "BATTLESHIP_SHIP_THRUSTER_4"
 
 	ai_weight = {
@@ -592,7 +540,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_4" }
 	component_set = "thruster_components"
-	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship }
+	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship}
 	upgrades_to = "SHIP_THRUSTER_5"
 
 	ai_weight = {
@@ -619,7 +567,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fission_power" }
 	component_set = "power_core"
-	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship }
+	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship}
 	upgrades_to = "BATTLESHIP_FUSION_REACTOR"
 
 	ai_weight = {
@@ -645,7 +593,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fusion_power" }
 	component_set = "power_core"
-	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship }
+	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship}
 	upgrades_to = "BATTLESHIP_COLD_FUSION_REACTOR"
 
 	ai_weight = {
@@ -672,7 +620,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_cold_fusion_power" }
 	component_set = "power_core"
-	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship }
+	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship}
 	upgrades_to = "BATTLESHIP_ANTIMATTER_REACTOR"
 
 	ai_weight = {
@@ -699,7 +647,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_antimatter_power" }
 	component_set = "power_core"
-	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship }
+	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship}
 	upgrades_to = "BATTLESHIP_ZERO_POINT_REACTOR"
 
 	ai_weight = {

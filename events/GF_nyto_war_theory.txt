@@ -91,16 +91,43 @@ planet_event = {
 	trigger = {
 		from = {
 			has_authority = auth_GF_paradeus
-			has_civic = civic_GF_nyto_forward_base
+			OR = {
+				has_civic = civic_GF_nyto_forward_base
+				has_civic = civic_GF_nyto_Vengeance_Crusade
+			}			
 		}
 	}
 	immediate = {
-		this = {
-			add_building = building_GFnyto_forward_base
-			planet_event = {
-				id = GFnyto_war_theory.2.a
-				days = 1800
+		this = {		
+			if = {
+				limit = { 
+					owner = {
+						NOT = {
+							has_civic = civic_GF_nyto_Vengeance_Crusade
+						}
+					}
+				}
+				add_building = building_GFnyto_forward_base
+				planet_event = {
+					id = GFnyto_war_theory.2.a
+					days = 1800
+				}
 			}
+			else_if = {
+				limit = {  owner = { has_civic = civic_GF_nyto_Vengeance_Crusade } }
+				add_building = building_GFnyto_forward_base2
+				if = {
+					limit = { 
+						NOT = { is_planet_class = pc_GF_nyto_embers_gloomy }
+						NOT = { is_planet_class = pc_nuked }
+						NOT = { is_planet_class = pc_habitat }
+						NOT = { is_planet_class = pc_ringworld_habitable }
+						NOT = { is_planet_class = pc_ringworld_seam }
+						NOT = { is_planet_class = pc_ringworld_tech }
+					}
+					change_pc = pc_GF_nyto_embers_gloomy											
+				}
+			}			
 		}
 	}
 }
@@ -110,5 +137,39 @@ planet_event = {
 	is_triggered_only = yes
 	immediate = {
 		remove_building = building_GFnyto_forward_base
+	}
+}
+
+planet_event = {
+	id = GFnyto_war_theory.3
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		from = {
+			has_civic = civic_GF_nyto_heart_of_suffering
+		}
+	}
+	immediate = {
+		if = { limit = { from = { NOT = { has_civic = civic_GF_nyto_Vengeance_Crusade } } }
+			export_trigger_value_to_variable = {
+				trigger = num_pops
+				variable = planet_has_pops
+			}
+			multiply_variable = {
+				which = planet_has_pops
+				value = 0.5
+			}
+			while = {
+				count = planet_has_pops
+				random_owned_pop = {
+					change_species = event_target:GFnyto_ELID_infected
+				}
+			}
+		}
+		if = { limit = { from = {  has_civic = civic_GF_nyto_Vengeance_Crusade  } }
+			every_owned_pop = {
+				change_species = event_target:GFnyto_ELID_infected
+			}
+		}
 	}
 }

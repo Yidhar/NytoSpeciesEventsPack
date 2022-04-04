@@ -19,7 +19,6 @@ trait_GF_nyto_the_last_light= {
 	allowed_archetypes = {NYTO}#物种限制（涅托）
     # 设置效果
     modifier = {
-		pop_growth_speed = 1
 		planet_jobs_engineering_research_produces_mult = 0.15
 		planet_jobs_physics_research_produces_mult = 0.15
 		planet_jobs_society_research_produces_mult = 0.15
@@ -54,7 +53,7 @@ trait_GF_nyto_ogas_agreement= {
     modifier = {
 		planet_jobs_produces_mult = -0.2
 		country_unity_produces_mult = -0.3
-		all_technology_research_speed = 0.5
+		all_technology_research_speed = 0.3
 	}
 	slave_cost = {energy = 50}
 }
@@ -83,12 +82,12 @@ trait_GF_nyto_ogas_agreement_plus= {
 	improves_leaders = yes#是否会影响领袖
 	advanced_trait= yes#是否高级特质
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_OGAS_system.dds"
-	allowed_archetypes = {NYTO LITHOID MACHINE}#物种限制（涅托）
+	allowed_archetypes = {NYTO}#物种限制（涅托）
     modifier = {
-		all_technology_research_speed = 1
-		planet_jobs_engineering_research_produces_mult = 1
-		planet_jobs_physics_research_produces_mult = 1
-		planet_jobs_society_research_produces_mult = 1
+		all_technology_research_speed = 0.5
+		planet_jobs_engineering_research_produces_mult = 0.3
+		planet_jobs_physics_research_produces_mult = 0.3
+		planet_jobs_society_research_produces_mult = 0.3
 	}
 	slave_cost = {energy = 50}
 }

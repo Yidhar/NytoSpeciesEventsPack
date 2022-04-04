@@ -23,7 +23,7 @@ building_GFnyto_collapse_exploit_plant_1 = {
 			trigger = {
 				is_variable_set = GFnyto_plante_wrlv
 			}
-			energy = 0.1
+			energy = 0.2
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
@@ -33,22 +33,18 @@ building_GFnyto_collapse_exploit_plant_1 = {
 	prerequisites = {
 		"tech_GF_nyto_collapse_stability"
 	}
-	ai_weight = {
-		weight = 5
-		modifier = {
-			factor = 200
+	ai_resource_production = {
+		trigger = {
 			owner = {
-				has_monthly_income = {
-					resource = physics_research
-					value < 10000
-				}
-				has_monthly_income = {
-					resource = consumer_goods
-					value > 50
-				}
+				has_authority = auth_GF_paradeus
 			}
+			
 		}
+		physics_research = 999
+		society_research = 999
+		engineering_research = 999
 	}
+	exempt_from_ai_planet_specialization = yes
 }
 
 building_GFnyto_collapse_exploit_plant_2 = {
@@ -79,28 +75,22 @@ building_GFnyto_collapse_exploit_plant_2 = {
 			trigger = {
 				is_variable_set = GFnyto_plante_wrlv
 			}
-			energy = 0.1
+			energy = 0.2
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
 	prerequisites = {
 		"tech_GF_nyto_collapse_stability_2"
 	}
-	ai_weight = {
-		weight = 5
-		modifier = {
-			factor = 200
+	ai_resource_production = {
+		trigger = {
 			owner = {
-				has_monthly_income = {
-					resource = physics_research
-					value < 10000
-				}
-				has_monthly_income = {
-					resource = consumer_goods
-					value > 50
-				}
-			}
+				has_authority = auth_GF_paradeus
+			}			
 		}
+		physics_research = 999
+		society_research = 999
+		engineering_research = 999
 	}
 }
 
@@ -122,12 +112,17 @@ building_GFnyto_collapse_change_center = {
 		has_upgraded_capital = yes
 	}
 	planet_modifier = {
-		planet_pop_assembly_organic_add = 6		
+		planet_pop_assembly_organic_add = 5	
 	}
-	triggered_planet_modifier = {
-		potential = {
-			
+	ai_resource_production = {
+		trigger = { 
+			always = yes
 		}
+		alloys = 10000
+		minerals = 10000
+		rare_crystals = 10000
+		exotic_gases = 10000
+		volatile_motes = 1000
 	}
 	resources = {
 		category = planet_buildings
@@ -138,12 +133,13 @@ building_GFnyto_collapse_change_center = {
 			energy = 5
 			alloys = 10
 			food = 20
+			GF_nyto_dark_star_core = 0.5
 		}
 		upkeep = {
 			trigger = {
 				is_variable_set = GFnyto_plante_wrlv
 			}
-			energy = 0.1
+			energy = 0.2
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
@@ -154,6 +150,7 @@ building_GFnyto_collapse_change_center = {
 			always = yes
 		}
 	}
+	exempt_from_ai_planet_specialization = yes
 	prerequisites = {
 		"tech_GF_nyto_collapse_stability"
 	}
@@ -211,7 +208,69 @@ building_GFnyto_forward_base = {
 			trigger = {
 				is_variable_set = GFnyto_plante_wrlv
 			}
-			energy = 0.1
+			energy = 0.2
+			multiplier = planet.GFnyto_plante_wrlv
+		}
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+building_GFnyto_forward_base2 = {
+	icon = building_GFnyto_forward_base
+	base_buildtime = 360
+	category = resource
+	base_cap_amount = 1
+	can_build = no
+	potential = {
+		owner = {
+			has_authority = auth_GF_paradeus
+			has_civic = civic_GF_nyto_forward_base
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			is_capital = no
+		}
+		text = building_GFnyto_forward_base_desc1
+	}
+	triggered_desc = {
+		trigger = {
+			is_capital = yes
+		}
+		text = building_GFnyto_forward_base_desc2
+	}
+	planet_modifier = {
+		job_GFnyto_explorer_add = 5
+		planet_housing_add = 10
+		planet_stability_add = 10
+		planet_crime_add = -10
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_capital = no
+		}
+		modifier = {
+			pop_happiness = -0.1
+			job_soldier_add = 3
+		}
+	}
+	country_modifier = {
+		starbase_shipyard_build_speed_mult = 0.05
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+		upkeep = {
+			energy = 2
+		}
+		upkeep = {
+			trigger = {
+				is_variable_set = GFnyto_plante_wrlv
+			}
+			energy = 0.2
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
@@ -250,13 +309,28 @@ building_GFnyto_transportation_hub = {
 			trigger = {
 				is_variable_set = GFnyto_plante_wrlv
 			}
-			energy = 0.1
+			energy = 0.2
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
 	ai_weight = {
 		weight = 999
 	}
+	country_modifier = {
+		country_resource_max_add = 100000
+	}
+	ai_resource_production = {
+		trigger = { 
+			always = yes
+		}
+		alloys = 10000
+		minerals = 10000
+		rare_crystals = 10000
+		exotic_gases = 10000
+		volatile_motes = 1000
+
+	}
+	exempt_from_ai_planet_specialization = yes
 }
 
 #遗迹署
@@ -296,7 +370,7 @@ building_GFnyto_heritage_department = {
 			trigger = {
 				is_variable_set = GFnyto_plante_wrlv
 			}
-			energy = 0.1
+			energy = 0.2
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
@@ -349,7 +423,7 @@ building_GFnyto_algorithm = {
 			trigger = {
 				is_variable_set = GFnyto_plante_wrlv
 			}
-			energy = 0.1
+			energy = 0.2
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
@@ -389,7 +463,7 @@ building_GFnytp_framework_core = {
 			trigger = {
 				is_variable_set = GFnyto_plante_wrlv
 			}
-			energy = 0.1
+			energy = 0.2
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
@@ -431,7 +505,7 @@ building_GFnytp_framework_core2 = {
 			trigger = {
 				is_variable_set = GFnyto_plante_wrlv
 			}
-			energy = 0.1
+			energy = 0.2
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
@@ -468,7 +542,7 @@ building_GFnyto_nourishment_center = {
 			trigger = {
 				is_variable_set = GFnyto_plante_wrlv
 			}
-			energy = 0.1
+			energy = 0.2
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
@@ -507,7 +581,7 @@ building_GFnyto_nourishment_center2 = {
 			trigger = {
 				is_variable_set = GFnyto_plante_wrlv
 			}
-			energy = 0.1
+			energy = 0.2
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
@@ -556,7 +630,7 @@ building_GFnyto_dimensional_fabricator = {
 			trigger = {
 				is_variable_set = GFnyto_plante_wrlv
 			}
-			energy = 0.1
+			energy = 0.2
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
@@ -568,6 +642,11 @@ building_GFnyto_dimensional_fabricator = {
 	}
 	upgrades = {
 		building_GFnyto_dimensional_fabricator2
+	}
+	ai_resource_production = {
+		trigger = { always = yes }
+		alloys = 1000
+		minerals = 1000
 	}
 }
 
@@ -595,7 +674,7 @@ building_GFnyto_dimensional_fabricator2 = {
 			trigger = {
 				is_variable_set = GFnyto_plante_wrlv
 			}
-			energy = 0.1
+			energy = 0.2
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
@@ -640,7 +719,7 @@ building_GFnyto_Elids = {
 			trigger = {
 				is_variable_set = GFnyto_plante_wrlv
 			}
-			energy = 0.1
+			energy = 0.2
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
@@ -665,6 +744,31 @@ building_GFnyto_Elids = {
 					}
 				 }
 			}
+		}
+	}
+}
+
+#塌缩粒子聚合塔
+building_GFnyto_collapse_tower ={
+	base_buildtime = @b3_time
+	can_build = yes
+	can_demolish = yes
+	category = resource
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+		produces = {
+			GF_nyto_collapse_liquid = 0.5
+			multiplier = planet.GFnyto_plante_wrlv
+		}
+		produces = {
+			GF_nyto_collapse_liquid = 10
+		}
+		upkeep = {
+			energy = 0.1
+			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
 }

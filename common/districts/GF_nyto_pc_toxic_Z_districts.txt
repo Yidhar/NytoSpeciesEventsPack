@@ -32,14 +32,6 @@ district_GF_nyto_pc_toxic_underground_shelters= {
 		planet_max_buildings_add = 1
 		job_technician_add = 1		
 	}
-	triggered_planet_modifier ={
-		potential ={
-			owner = {
-				has_civic = civic_GF_nyto_special_operations_command
-			}
-		}
-		job_GFnyto_white_knight_add = 1
-	}
 	ai_weight = {
 		weight = 10
 		modifier = {

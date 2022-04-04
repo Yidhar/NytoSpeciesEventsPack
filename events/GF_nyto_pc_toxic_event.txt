@@ -24,6 +24,18 @@ planet_event = {
 		set_planet_flag = GFnyto_district_consumer_good
 		add_district = district_GF_nyto_pc_toxic_consumer_good
 		add_district = district_GF_nyto_pc_toxic_consumer_good
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				owner = {
+					OR = {
+						resource_income_compare = { resource = minerals value > 100 }
+						resource_income_compare = { resource = consumer_goods value < 100 }
+					}
+				}
+			}
+		}
 	}
 	#军用工业区划
 	option = {
@@ -31,13 +43,47 @@ planet_event = {
 		set_planet_flag = GFnyto_district_alloy
 		add_district = district_GF_nyto_pc_toxic_alloy
 		add_district = district_GF_nyto_pc_toxic_alloy
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				owner = {
+					resource_income_compare = { resource = minerals value > 100 }
+					resource_income_compare = { resource = consumer_goods value > 50 }
+				}
+			}
+		}
 	}
 	#战略资源精炼区划
 	option = {
+		allow = {
+			owner = {
+				NOT = {
+					any_owned_planet = {
+						has_planet_flag = refine_cd
+					}
+				}
+			}
+			
+		}
 		name = GFnytopctoxic.20.f
 		set_planet_flag = GFnyto_district_refine
 		add_district = district_GF_nyto_pc_toxic_refine
 		add_district = district_GF_nyto_pc_toxic_refine
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 50
+				owner = {					
+					any_owned_planet = { NOT = { has_planet_flag = refine_cd } } 
+					OR = {
+						resource_income_compare = { resource = rare_crystals value < 50 }
+						resource_income_compare = { resource = exotic_gases value < 50 }
+						resource_income_compare = { resource = volatile_motes value < 50 }
+					}																								
+				}
+			}
+		}
 	}
 	#科学研究区划
 	option = {
@@ -45,20 +91,50 @@ planet_event = {
 		set_planet_flag = GFnyto_district_science
 		add_district = district_GF_nyto_pc_toxic_science
 		add_district = district_GF_nyto_pc_toxic_science
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 5
+				owner = {
+					OR = {
+						has_monthly_income ={ resource = physics_research value < 100000  }
+						has_monthly_income ={ resource = society_research value < 100000  }
+						has_monthly_income ={ resource = engineering_research value < 100000  }
+					}
+					resource_income_compare ={ resource = exotic_gases value > 10  }
+				}
+			}
+			modifier = {
+				factor = 50
+				is_homeworld = yes
+			}
+		}
 	}
-	#休闲娱乐区划
+	#塌缩液区划
 	option = {
 		name = GFnytopctoxic.20.i
 		set_planet_flag = GFnyto_district_leisure
 		add_district = district_GF_nyto_pc_toxic_leisure
 		add_district = district_GF_nyto_pc_toxic_leisure
+		ai_chance = {
+			factor = 0
+		}
 	}
-	#商业贸易区划
+	#舰容区划
 	option = {
 		name = GFnytopctoxic.20.j
 		set_planet_flag = GFnyto_district_trade
 		add_district = district_GF_nyto_pc_toxic_trade
 		add_district = district_GF_nyto_pc_toxic_trade
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 10
+				owner = {
+					used_naval_capacity_percent = 0.8
+				}				
+			}
+		}
 	}
 }
 

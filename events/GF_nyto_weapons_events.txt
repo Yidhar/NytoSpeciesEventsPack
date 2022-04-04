@@ -139,19 +139,6 @@ fleet_event = {
 		fromfromfromfrom = {
 			set_fleet_flag = GFnyto_shiled_system_LV3_fleet
 		}
-		export_modifier_to_variable = {
-			modifier = weapon_type_kinetic_weapon_damage_mult
-			variable = GFnyto_shield_system_weapon_up
-		}
-		multiply_variable = {
-			which = GFnyto_shield_system_weapon_up
-			value = 0.9
-		}
-		add_modifier = {
-			modifier = gfnyto_shield_system_sheil_debuff
-			multiplier = GFnyto_shield_system_weapon_up
-		}
-		clear_variable = GFnyto_shield_system_weapon_up
 	}
 }
 
@@ -164,19 +151,6 @@ fleet_event = {
 		fromfromfromfrom = {
 			set_fleet_flag = GFnyto_shiled_system_LV2_fleet
 		}
-		export_modifier_to_variable = {
-			modifier = weapon_type_kinetic_weapon_damage_mult
-			variable = GFnyto_shield_system_weapon_up
-		}
-		multiply_variable = {
-			which = GFnyto_shield_system_weapon_up
-			value = 0.8
-		}
-		add_modifier = {
-			modifier = gfnyto_shield_system_sheil_debuff
-			multiplier = GFnyto_shield_system_weapon_up
-		}
-		clear_variable = GFnyto_shield_system_weapon_up
 	}
 }
 
@@ -189,19 +163,6 @@ fleet_event = {
 		fromfromfromfrom = {
 			set_fleet_flag = GFnyto_shiled_system_LV1_fleet
 		}
-		export_modifier_to_variable = {
-			modifier = weapon_type_kinetic_weapon_damage_mult
-			variable = GFnyto_shield_system_weapon_up
-		}
-		multiply_variable = {
-			which = GFnyto_shield_system_weapon_up
-			value = 0.6
-		}
-		add_modifier = {
-			modifier = gfnyto_shield_system_sheil_debuff
-			multiplier = GFnyto_shield_system_weapon_up
-		}
-		clear_variable = GFnyto_shield_system_weapon_up
 	}
 }
 

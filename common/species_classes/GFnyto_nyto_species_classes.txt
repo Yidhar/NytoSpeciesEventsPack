@@ -1,7 +1,6 @@
 nyto= {
 	archetype = NYTO
 	randomized = yes
-	#robotic = no
 	gender = no
 	use_climate_preference = no
 	portrait_modding = yes	

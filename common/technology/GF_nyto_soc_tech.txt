@@ -11,19 +11,6 @@ tech_GF_nyto_EILD_brain_wave = {
 	ai_weight = {factor = 0}
 	
 }
-# 白骑士
-tech_GF_nyto_white_knight = {
-	icon = tech_GF_nyto_white_knight
-	cost = 40000
-	area = society
-	category = { biology }
-	tier = 4
-	is_rare = yes
-	prerequisites = { "tech_GF_nyto_biomechanics" }
-	weight = 5
-	potential = { has_authority = auth_GF_paradeus }	
-	ai_weight = {factor = 3}
-}
 # 战争修女
 tech_GF_nyto_war_nuns = {
 	icon = tech_GF_nyto_war_nuns

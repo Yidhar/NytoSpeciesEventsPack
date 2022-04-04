@@ -2,7 +2,10 @@ gfnyto_collapse_liquid= {
 	trigger = {
 		owner = {
 			has_authority = auth_GF_paradeus
-			has_technology = tech_GF_nyto_collapse_stability_bomb
+			OR = {
+				has_technology = tech_GF_nyto_collapse_stability_bomb
+				has_civic = civic_GF_nyto_heart_of_suffering
+			}			
 		}
 	}
 	default = yes
@@ -36,7 +39,10 @@ gfnyto_trade_blockade= {
 	trigger = {
 		owner = {
 			has_authority = auth_GF_paradeus
-			has_technology = tech_GFnyto_war_theory_e2
+			OR = {
+				has_technology = tech_GFnyto_war_theory_e2
+				has_civic = civic_GF_nyto_heart_of_suffering
+			}			
 		}
 	}
 

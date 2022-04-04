@@ -41,3 +41,11 @@ mod_armies_energy_upkeep_mult:0 "陆军$energy$维护费用:"
 civic_GF_nyto_reup:0 "高效回收"
 civic_GF_nyto_reup_desc:0 "我们必须利用好我们手头上的每一份资源,才有可能迎来曙光\n§R成功防御ELID入侵将获得额外资源§!"
 mod_planet_jobs_consumer_goods_upkeep_mult:0 "岗位$consumer_goods$维护费用:"
+
+civic_GF_nyto_heart_of_suffering:0 "苦难之心"
+civic_GF_nyto_heart_of_suffering_desc:0 "轻声呼唤我的名字吧,用泉水来把我饮饱吧,你那无垠的,难言的心是否会回应呢"
+civic_GF_nyto_heart_of_suffering_modif:0 "开局直接获得ELID人口并不再触发ELID入侵事件,每次征服新的星球时会将半数人口转换为ELID。\n若携带星河远征国策将在开局时替换为复仇远征\n§R将无法使用春天唤醒决议§!"
+
+civic_GF_nyto_Vengeance_Crusade:0 "复仇远征"
+civic_GF_nyto_Vengeance_Crusade_desc:0 "愿神明终于一日能宽恕我,愿我能相称于这顶王冠"
+civic_GF_nyto_Vengeance_Crusade_modif:0 "§R前进营地将不再有时限,并且额外提供些许buff\n不允许任何人口生长\n初始解锁塌缩液抛射与贸易封锁轰炸类型§!"

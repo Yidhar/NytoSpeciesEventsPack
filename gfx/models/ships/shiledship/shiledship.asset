@@ -1,7 +1,7 @@
 entity = {
 	name = "shiledship_entity"
 	pdxmesh = "shiledship_mesh"
-	scale = 0.5
+	scale = 0.25
 
 	default_state = idle
 	state = {

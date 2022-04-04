@@ -22,6 +22,9 @@ planet_event = {
 	trigger = {
 		owner = {
 			has_origin = origin_GF_nyto_the_last_light
+			NOT = {
+				has_civic = civic_GF_nyto_heart_of_suffering
+			}
 		}
 	}
 	immediate = {
@@ -393,6 +396,7 @@ planet_event = {
 		event_target:GFnyto_ELID_infected = {
 			set_citizenship_type = {
 				type = citizenship_limited
+				country = root.owner
 			}
 		}
 	}
@@ -1588,7 +1592,6 @@ planet_event = {
 		is_capital = yes
 	}
 	trigger = {
-		has_planet_flag = GF_nyto_eild_attack_begin
 		controller = {
 			is_country = event_target:EILD_country
 		}

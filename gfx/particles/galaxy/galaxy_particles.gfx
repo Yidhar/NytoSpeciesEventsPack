@@ -16,6 +16,11 @@ objectTypes = {
 		scale = 25
 	}
 	pdxparticle = {
+		name = "GFnyto_generic_1_exhaust_circle_long_moving"
+		type = "generic_exhaust_circle_long_moving_effect_file"
+		scale = 3
+	}
+	pdxparticle = {
 		name = "GFnyto_generic_big_3_exhaust_circle_moving"
 		type = "generic_big_exhaust_circle_moving_effect_file"
 		scale = 30
@@ -30,5 +35,15 @@ objectTypes = {
 		name = "GF_nyto_baclround"
 		type = "GF_nyto_baclround"		
 		scale = 0.1
+	}
+	pdxparticle = {
+		name = "GF_star_explosion_1_file"
+		type = "GF_star_explosion_1_file"		
+		scale = 15
+	}
+	pdxparticle = {
+		name = "GF_weapon_effect"
+		type = "GF_weapon_effect"		
+		scale = 1
 	}
 }

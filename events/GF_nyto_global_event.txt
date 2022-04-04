@@ -766,6 +766,10 @@ country_event = {
 						job = GFnyto_collapse_particle_zip
 						value > 0
 					}
+					num_assigned_jobs = {
+						job = GFnyto_collapse_particle_researcher
+						value > 0
+					}
 					is_variable_set = GFnyto_plante_wrlv
 				}
 			}
@@ -782,6 +786,7 @@ country_event = {
 							OR = {
 								has_job = GFnyto_collapse_particle_rar
 								has_job = GFnyto_collapse_particle_zip
+								has_job = GFnyto_collapse_particle_researcher
 							}
 						}
 						is_variable_set = GFnyto_plante_wrlv
@@ -808,6 +813,13 @@ country_event = {
 					}
 					variable = collapse_particle_zip_num
 				}
+				export_trigger_value_to_variable = {
+					trigger = num_assigned_jobs
+					parameters = {
+						job = GFnyto_collapse_particle_researcher
+					}
+					variable = GFnyto_collapse_particle_researcher_num
+				}				
 				multiply_variable = {
 					which = Epiphyllum_job_num
 					value = -0.25
@@ -864,7 +876,7 @@ country_event = {
 				}
 				multiply_variable = {
 					which = affluence_center_purify
-					value = 5
+					value = 10
 				}
 			}
 			#计算污染度
@@ -931,6 +943,10 @@ country_event = {
 			change_variable = {
 				which = GFnyto_plante_wrlv
 				value = Epiphyllum_job_num
+			}
+			change_variable = {
+				which = GFnyto_plante_wrlv
+				value = GFnyto_collapse_particle_researcher_num
 			}
 			if = {
 				limit = {
@@ -1025,3 +1041,6 @@ planet_event = {
 		}
 	}
 }
+
+
+#征服新球时

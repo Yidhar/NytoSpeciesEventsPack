@@ -160,27 +160,12 @@ planet_event = {
 	is_triggered_only = yes
 	trigger = {
 		has_orbital_bombardment_stance = gfnyto_trade_blockade
-		from = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		this = {
-			NOT = {
-				has_modifier = gfnyto_trade_blockade
-			}
-		}
-		NOT = {
-			has_modifier = gfnyto_trade_blockade
-		}
-		habitable_planet = yes
 	}	
-	immediate = {
+	immediate = {	
+		remove_modifier = gfnyto_trade_blockade
 		add_modifier = {
 			modifier = gfnyto_trade_blockade
-			days = 30
+			days = 60
 		}
 	}
 }

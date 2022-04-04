@@ -125,12 +125,12 @@ tech_GFnyto_tansuo2={
 	cost = 30000
 	area = engineering
 	category = { voidcraft }
-	tier = 3
+	tier = 5
 	weight = 50
 	potential = {has_authority = auth_GF_paradeus}
 	ai_weight = {weight = 2}
 	prerequisites = {
-		tech_GF_nyto_Inverse_collapse_2
+		tech_GFnyto_tansuo
 	}
 }
 
@@ -170,6 +170,46 @@ tech_template_GFnyto_Command_ship ={
 		has_authority = auth_GF_paradeus
 	}
 	prerequisites = {
+		tech_template_GFnyto_cv_batellship
+	}
+}
+#航空战列舰
+tech_template_GFnyto_cv_batellship ={
+	cost = 50000
+	area = engineering
+	icon = tech_GF_nyto_Inverse_collapse_2
+	category = {
+		voidcraft
+	}
+	tier = 5
+	weight = 20
+	ai_weight = {
+		weight = 50
+	}
+	potential = {
+		has_authority = auth_GF_paradeus
+	}
+	prerequisites = {
 		tech_titans
+	}
+}
+#永恒要塞
+tech_template_stions_fortress ={
+	cost = 50000
+	area = engineering
+	icon = tech_GF_nyto_Inverse_collapse_2
+	category = {
+		voidcraft
+	}
+	tier = 5
+	weight = 20
+	ai_weight = {
+		weight = 50
+	}
+	potential = {
+		has_authority = auth_GF_paradeus
+	}
+	prerequisites = {
+		tech_mega_engineering
 	}
 }

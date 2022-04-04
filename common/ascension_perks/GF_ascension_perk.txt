@@ -19,9 +19,32 @@ ap_GF_nyto_resurrection= {
 	}
 	
 	on_enabled = {
-		country_event = {
-			id = GFnyto_ascension_perk.3
-		}
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				country_event = {
+					id = GFnyto_ascension_perk.3
+				}
+			}
+			if = {
+				limit = { is_ai = yes }
+				give_technology = {
+					tech = "tech_GF_nyto_Deep_space"
+				}
+				give_technology = {
+					tech = tech_GF_nyto_light_thruster
+				}
+				give_technology = {
+					tech = tech_GF_nyto_Beacon
+				}
+				give_technology = {
+					tech = tech_GF_nyto_bright_poetry
+				}
+				give_technology = {
+					tech = tech_GF_nyto_godenergy
+				}			
+			}	
+		}	
 	}
 	ai_weight = {factor = 500}
 }
@@ -57,10 +80,15 @@ ap_GF_nyto_imba = {
 		}
 	}
 	possible = {
-		custom_tooltip = {
-			fail_text = "ap_GF_nyto_imba_limit"
-			has_country_flag = GF_nyto_complete_research			
-		}		
+		OR = {
+			custom_tooltip = {
+				fail_text = "ap_GF_nyto_imba_limit"
+				has_country_flag = GF_nyto_complete_research			
+			}	
+			hidden_trigger = {
+				is_ai = yes
+			}			
+		}			
 	}
 	modifier = {
 		country_megastructure_build_cap_add = 5
@@ -70,7 +98,7 @@ ap_GF_nyto_imba = {
 		planet_decision_enact_speed_mult = 1
 	}
 	ai_weight = {
-		factor = 100
+		factor = 0
 	}
 	on_enabled = {
 		# country_event = {

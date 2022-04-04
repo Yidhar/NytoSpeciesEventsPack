@@ -16,3 +16,10 @@ triggered_GFnyto_disaster2 = {
 	}
 	opinion = {base = -1000}
 }
+triggered_GFnyto_disaster3 = {
+	trigger = {
+		has_civic = civic_GF_nyto_heart_of_suffering
+		FROM = { has_authority = auth_GF_paradeus}
+	}
+	opinion = {base = -1000}
+}

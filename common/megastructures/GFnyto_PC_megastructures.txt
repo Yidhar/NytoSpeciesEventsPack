@@ -271,3 +271,102 @@ GFnyto_beacon_weapon_03 ={
 		}
 	}
 }
+
+#永恒要塞建造基址
+GFnyto_stions_fortress_base ={
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	place_entity_on_planet_plane = no
+	build_outside_gravity_well = yes
+	build_time = 1080
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 2500
+			unity = 500
+		}
+	}
+	construction_blocks_others = no
+	construction_blocked_by_others = no
+
+	potential = {
+		has_technology = tech_gateway_construction
+	}
+
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system"
+			NOT = {
+				any_system_planet = {
+					is_surveyed = {
+						who = prev.from
+						status = no
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			from = { has_technology = tech_template_stions_fortress }
+		}
+	}
+	upgrade_desc = "建造永恒要塞"
+}
+
+GFnyto_stions_fortress_up={
+	entity = stions_entity
+	construction_entity = stions_entity
+	build_time = 2080
+	resources = {
+		category = megastructures
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			alloys = 10000
+		}
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = yes
+				}
+			}
+			alloys = 2000
+		}
+	}
+	upgrade_from = {
+		GFnyto_stions_fortress_base
+	}
+	on_build_complete = {
+		create_fleet = {
+			effect = {				
+				set_owner = from
+				set_location = fromfrom
+				create_ship = {
+					name = "永恒要塞"
+					random_existing_design = GFnyto_stions_fortress
+				}
+			}
+		}
+		delete_megastructure = fromfrom
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 100
+			owner = {
+				has_country_resource = {
+					type = alloys
+					amount > 10000
+				}
+			}
+			
+		}
+	}
+}

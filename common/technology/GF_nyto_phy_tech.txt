@@ -37,7 +37,7 @@ tech_GF_nyto_Inverse_collapse_1= {
 	category = {field_manipulation}
 	prerequisites = { "tech_GF_nyto_collapse_stability_2" }
 	weight = 100
-	modifier = {planet_jobs_produces_mult = 0.25}
+	modifier = {planet_jobs_produces_mult = 0.1}
 	potential = {has_authority = auth_GF_paradeus}
 	prereqfor_desc = {
 		custom = {
@@ -57,7 +57,7 @@ tech_GF_nyto_Inverse_collapse_2 = {
 	category = {field_manipulation}
 	prerequisites = { "tech_GF_nyto_Inverse_collapse_1" }
 	weight = 85
-	modifier = {planet_jobs_produces_mult = 0.25}
+	modifier = {planet_jobs_produces_mult = 0.1}
 	potential = {has_authority = auth_GF_paradeus}
 	prereqfor_desc = {
 		custom = {
@@ -77,7 +77,7 @@ tech_GF_nyto_Stabiliz={
 	category = {field_manipulation}
 	prerequisites = { "tech_GF_nyto_Inverse_collapse_2" }
 	weight = 50
-	modifier = {planet_jobs_produces_mult = 0.25}
+	modifier = {planet_jobs_produces_mult = 0.1}
 	potential = {has_authority = auth_GF_paradeus}
 	ai_weight = {weight = 999}
 }
@@ -105,7 +105,7 @@ tech_GF_nyto_RAR = {
 	category = {field_manipulation}
 	prerequisites = { "tech_GF_nyto_storage_of_ancient_technology" }
 	weight = 5
-	modifier = {planet_jobs_produces_mult = 0.25}
+	modifier = {planet_jobs_produces_mult = 0.1}
 	potential = {has_authority = auth_GF_paradeus}
 	weight_modifier = {
 		modifier = {

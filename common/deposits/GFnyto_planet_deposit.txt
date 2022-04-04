@@ -22,10 +22,20 @@ d_GFnyto_ancient_city_zone = {
 		job_farmer_add = 2
 		planet_housing_add = 5
 	}
+
 	resources = {
 		category = armies
 		produces = {
 			food = 20
+		}
+		produces = {
+			trigger = {
+				owner = {
+					is_ai = yes
+				}
+			}
+			food = 50
+			consumer_goods = 50
 		}
 	}
 	drop_weight = {weight = 0}

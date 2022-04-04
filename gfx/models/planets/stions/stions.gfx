@@ -31,4 +31,10 @@ objectTypes = {
 			shader = "PdxMeshShip"
 		}
 	}
+	
+	pdxmesh = {
+		name = "stions_locator_mesh"
+		file = "gfx/models/planets/stions/stions_locator.mesh"
+		scale = 1.0
+	}
 }

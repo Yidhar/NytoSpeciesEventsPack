@@ -8,6 +8,7 @@ district_GF_nyto_pc_toxic_house= {
 	potential = {
 		has_planet_flag = GFnyto_Spring_wakes_up
 	}
+	exempt_from_ai_planet_specialization = yes
 	conversion_ratio = 1
 	convert_to = {
 		district_city
@@ -31,13 +32,18 @@ district_GF_nyto_pc_toxic_house= {
 		job_GFnyto_white_knight_add = 1	
 		planet_amenities_add = 25
 	}	
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = 1000
-			free_housing < 10
+	ai_resource_production = {
+		trigger = { 
+			OR = {
+				free_housing < 1
+				free_amenities < 5
+			}						
 		}
+		alloys = 1000000
+		energy = 1000000
+		food = 1000000
 	}
+	
 }
 #发电区划
 district_GF_nyto_pc_toxic_energy = {
@@ -49,18 +55,12 @@ district_GF_nyto_pc_toxic_energy = {
 	potential = {
 		has_planet_flag = GFnyto_Spring_wakes_up
 	}
-	conversion_ratio = 1
-	convert_to = {
-		district_city
-		district_nexus
-		district_hive
-	}
 	resources = {
 		category = planet_districts
 		cost = {
 			minerals = 2000
 			rare_crystals=100
-			}			
+		}			
 		upkeep = {
 			rare_crystals=2
 			GF_nyto_collapse_liquid=2
@@ -70,17 +70,17 @@ district_GF_nyto_pc_toxic_energy = {
 		planet_housing_add =10
 		job_GFnyto_phase_technician_add = 10		
 	}
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = 1000
+	ai_resource_production ={
+		trigger = {
 			owner = {
-				has_monthly_income = {
+				has_authority = auth_GF_paradeus
+				resource_income_compare = {
 					resource = energy
-					value < 100
+					value < 10000
 				}
-			}
+			}			
 		}
+		energy = 999999
 	}
 }
 #矿物区划
@@ -255,6 +255,10 @@ district_GFnyto_pc_Epiphyllum = {
 			}
 		}
 	}
+	ai_resource_production = {
+		trigger = { always = yes }
+		food = 999999
+	}
 }
 
 
@@ -325,8 +329,26 @@ district_GF_nyto_pc_toxic_consumer_good= {
 			}
 	}
 	planet_modifier = {
-		planet_housing_add =10
+		planet_housing_add =10		
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				NOT = {
+					has_civic = civic_crafters
+				}
+				
+			}
+		}
 		job_artisan_add = 10
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				has_civic = civic_crafters
+			}
+		}
+		job_artificer_add = 10
 	}
 	ai_weight = {
 		weight = 0
@@ -376,35 +398,18 @@ district_GF_nyto_pc_toxic_refine = {
 		job_gas_refiner_add = 2
 		job_translucer_add = 2
 	}
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = 1000
+	ai_resource_production = {
+		trigger = {
 			owner = {
-				has_monthly_income = {
-					resource = volatile_motes
-					value < 0
-				}
+				OR = {
+					resource_income_compare = { resource = rare_crystals value < 50 }
+					resource_income_compare = { resource = exotic_gases value < 50 }
+					resource_income_compare = { resource = volatile_motes value < 50 }
+				}				
 			}
 		}
-		modifier = {
-			weight = 1000
-			owner = {
-				has_monthly_income = {
-					resource = exotic_gases
-					value < 0
-				}
-			}
-		}
-		modifier = {
-			weight = 1000
-			owner = {
-				has_monthly_income = {
-					resource = rare_crystals
-					value < 0
-				}
-			}
-		}
+		energy = 10000
+		alloys = 10000
 	}
 }
 #塌缩工业区划
@@ -438,6 +443,15 @@ district_GF_nyto_pc_toxic_leisure= {
 		planet_housing_add =10
 		job_GFnyto_collapse_particle_zip_add = 10
 	}
+	ai_weight = {
+		weight = 0
+	}
+	ai_resource_production = {
+		trigger = {
+			always = yes
+		}
+		energy = -100
+	}
 }
 #科研区划
 district_GF_nyto_pc_toxic_science = {
@@ -469,6 +483,17 @@ district_GF_nyto_pc_toxic_science = {
 	planet_modifier = {
 		planet_housing_add =10
 		job_GFnyto_collapse_particle_researcher_add = 10
+	}
+	ai_resource_production = {
+		trigger = {
+			owner = {
+				has_authority = auth_GF_paradeus
+			}
+			
+		}
+		physics_research = 9999
+		society_research = 9999
+		engineering_research = 9999
 	}
 }
 #地面指挥中心

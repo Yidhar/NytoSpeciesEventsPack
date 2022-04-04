@@ -15,7 +15,7 @@ building_GFnyto_affluence_center = {
 			minerals = @b3_minerals
 		}
 		produces = {
-			GF_nyto_collapse_liquid = 0.1
+			GF_nyto_collapse_liquid = 1
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 		upkeep = {
@@ -110,6 +110,20 @@ building_GFnyto_nano_forge = {
 	prerequisites = {
 		"tech_GF_nyto_storage_of_ancient_technology"
 	}
+	ai_resource_production = {
+		trigger = { 
+			always = yes
+		}
+		energy = 100
+		alloys = 100
+		minerals = 100
+		rare_crystals = 100
+		exotic_gases = 100
+		volatile_motes = 100
+		GF_nyto_training_key = 100
+		GF_nyto_new_fire_control_unit = 100
+	}
+	exempt_from_ai_planet_specialization = yes
 }
 
 #Сетунь Ω 计算机中枢
@@ -167,6 +181,20 @@ building_GFnyto_fe_dome = {
 	ai_weight = {
 		weight = 999
 	}
+	ai_resource_production = {
+		trigger = { 
+			always = yes
+		}
+		energy = 100
+		alloys = 100
+		minerals = 100
+		rare_crystals = 100
+		exotic_gases = 100
+		volatile_motes = 100
+		GF_nyto_training_key = 100
+		GF_nyto_new_fire_control_unit = 100
+	}
+	exempt_from_ai_planet_specialization = yes
 }
 
 #轨道堡垒
@@ -199,11 +227,10 @@ building_GFnyto_fe_stronghold = {
 	prerequisites = {
 		"tech_GF_nyto_storage_of_ancient_technology"
 	}
-	ai_weight = {
-		base = 5
-		modifier = {
-			factor = 20
-			planet_crime > 20
+	ai_resource_production = {
+		trigger = { 
+			always = yes
 		}
+		unity = 9999999
 	}
 }

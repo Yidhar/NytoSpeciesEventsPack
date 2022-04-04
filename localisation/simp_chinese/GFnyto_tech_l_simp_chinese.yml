@@ -77,6 +77,9 @@ tech_GF_nyto_algorithm_desc:0 "算法是不会骗你的,因为算法不会就是
  tech_GFnyto_star_tasuo_desc:0 "§H解锁巨型结构：§!恒星塌缩器"
 tech_template_GFnyto_Command_ship:0 "指挥中枢"
 tech_template_GFnyto_Command_ship_desc:0 "指挥舰是帝国的最高舰船水准，是当之无愧的舰队集群核心。拥有多项功能搭载了数座巨型炮塔，火力充沛"
+tech_template_GFnyto_cv_batellship:0 "航空战列舰"
+tech_template_GFnyto_cv_batellship_desc: "帝国在原有的主力舰基础上进行了进一步的大型化，搭载了更大的巨炮和更多的机库"
+GFnyto_stions_fortress:0 "永恒要塞"
 #生物
 tech_GF_nyto_collapse_stability_bomb:0 "坍缩液稳定技术"
 tech_GF_nyto_collapse_stability_bomb_desc:0 "坍塌液晶格是一种稳定的磁-光囚禁阱装置。最外层为两端金属遮罩及透明材质的外壳,中层在人形眼中为空且围绕内层外侧存在一圈长条状细杆,内层为透明材质的隔离层并有着分别位于其上下两端的共八条呈辐射对称的外延管状物。中层和内层实际上是旋转磁场装置,使得囚禁阱的中心电磁场始终难以为零。"

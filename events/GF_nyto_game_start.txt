@@ -9,6 +9,15 @@ country_event = {
 	}
 	immediate = {
 		set_global_flag = has_NYTO_mod
+		if = {
+			limit = { is_ai = yes }
+			give_technology = {
+				tech = tech_GFnyto_tansuo
+			}
+			give_technology ={
+				tech = tech_GFnyto_tansuo2
+			}
+		}
 	}
 }
 
@@ -32,11 +41,30 @@ country_event = {
 				save_event_target_as = GFnyto_scope
 			}
 		}
+		#宜居保底
 		every_system = {
 			limit = {
-				distance = {
-					source = event_target:GFnyto_scope
-					max_jumps = 1
+				if = {
+					limit = { 
+						prev = {
+							is_ai = no
+						}
+					}
+					distance = {
+						source = event_target:GFnyto_scope					
+						max_jumps = 1
+					}
+				}
+				if = {
+					limit = { 
+						prev = {
+							is_ai = yes
+						}
+					}
+					distance = {
+						source = event_target:GFnyto_scope					
+						max_jumps = 3
+					}
 				}
 			}
 			random_system_planet = {
@@ -71,6 +99,7 @@ country_event = {
 				days = 7200
 			}
 			save_event_target_as = set_pc_GF_nyto_embers_gloomy
+			#删除区划
 			while = {
 				limit = {
 					has_district = district_city
@@ -84,13 +113,13 @@ country_event = {
 				remove_district = district_mining
 				remove_district = district_industrial
 				remove_district = district_generator
-
 			}
 			remove_building = building_foundry_1
 			remove_building = building_factory_1
 			remove_building = building_research_lab_1
 			add_building = building_GFnyto_transportation_hub
 			add_building = building_GFnyto_collapse_exploit_plant_1
+			add_building = building_GFnyto_collapse_tower
 			add_district = district_GF_nyto_pc_toxic_underground_shelters
 			add_district = district_GF_nyto_pc_toxic_underground_shelters
 			add_district = district_GF_nyto_pc_toxic_underground_industrial_area
@@ -155,37 +184,42 @@ country_event = {
 			tech = tech_combat_computers_3
 		}
 		if = {
-			limit = {
-				has_civic = civic_GF_nyto_special_operations_command
-			}
-			give_technology = {
-				message = no
-				tech = tech_GF_nyto_white_knight
+			limit = { has_civic = civic_GF_nyto_heart_of_suffering }
+			if = {				
+				limit = { has_civic = civic_GF_nyto_forward_base  }
+				owner = {
+					force_remove_civic = civic_GF_nyto_forward_base
+					force_add_civic = civic_GF_nyto_Vengeance_Crusade
+				}
+				home_planet = {
+					create_species = {
+						name = "ELID-infected"
+						class = "eild"
+						portrait = "GFnyto_eild"
+						traits = {
+							trait = trait_GF_nyto_loyal_ELID_infected
+							trait = trait_latent_psionic
+							trait = trait_nerve_stapled
+						}
+						effect = {
+							set_species_homeworld = prev
+							save_global_event_target_as = GFnyto_ELID_infected					
+						}
+					}
+					while = {
+						count = 10
+						create_pop = {
+							species = event_target:GFnyto_ELID_infected
+						}
+					}
+				}
+				event_target:GFnyto_ELID_infected = { set_citizenship_type = { type = citizenship_limited country = root } }				
 			}
 		}
+
 	}
 }
 
-#开场白
-# country_event = {
-# 	id = GFnytostart.100
-# 	title = "GFnytostart.100.name"
-# 	desc = "GFnytostart.100.desc"
-# 	picture = GFX_evt_GFnyto_game_start
-# 	is_triggered_only = yes
-# 	trigger = {
-# 		OR = {
-# 			owner = {
-# 				has_origin = origin_GF_nyto_the_last_light
-# 			}
-# 			owner = {
-# 				has_origin = origin_GF_nyto_the_beginning_of_exile
-# 			}
-# 		}
-# 	}
-# 	immediate = {
-# 	}
-# }
 #AI加强
 country_event = {
 	id = GFnytostart.110
@@ -224,9 +258,17 @@ country_event = {
 				}
 			}
 		}
-		add_modifier = {
-			modifier = GF_nyto_ai_rbq
+		if = {
+			limit = { 
+				NOT = {
+					has_authority = auth_GF_paradeus
+				}				
+			}
+			add_modifier = {
+				modifier = GF_nyto_ai_rbq
+			}
 		}
+		
 	}
 }
 
