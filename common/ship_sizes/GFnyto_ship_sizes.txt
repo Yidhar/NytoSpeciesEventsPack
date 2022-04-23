@@ -93,6 +93,7 @@ GFnyto_Command_ship={
 	section_slots = {
 		"bow" = { locator = part2 }
 		"core" = { locator = part2 }
+		"core2" = { locator = part2 }
 		"stern"  = { locator = part2 }
 	}
 	size_multiplier = 64
@@ -198,10 +199,10 @@ GF_nyto_super_battelship ={
 		"core" = { locator = part2 }
 		"stern"  = { locator = part2 }
 	}
-	size_multiplier = 32
+	size_multiplier = 16
 	fleet_slot_size = 32
 	class = shipclass_military
-	base_buildtime = 3600
+	base_buildtime = 1800
 	can_have_federation_design = no
 	enable_default_design = yes
 	construction_type = starbase_shipyard
@@ -219,6 +220,7 @@ GF_nyto_super_battelship ={
 			AND = {
 				is_scope_type = megastructure
 				OR = {
+					is_megastructure_type = GFnyto_habitat_02
 					is_megastructure_type = mega_shipyard_3
 					is_megastructure_type = mega_shipyard_restored
 					is_megastructure_type = StarForge
@@ -234,6 +236,7 @@ GF_nyto_super_battelship ={
 				AND = {
 					is_scope_type = megastructure
 					OR = {
+						is_megastructure_type = GFnyto_habitat_02
 						is_megastructure_type = mega_shipyard_3
 						is_megastructure_type = mega_shipyard_restored
 						is_megastructure_type = StarForge
@@ -252,6 +255,7 @@ GF_nyto_super_battelship ={
 				AND = {
 					is_scope_type = megastructure
 					OR = {
+						is_megastructure_type = GFnyto_habitat_02
 						is_megastructure_type = mega_shipyard_3
 						is_megastructure_type = mega_shipyard_restored
 						is_megastructure_type = StarForge
@@ -269,7 +273,7 @@ GF_nyto_super_battelship ={
 		has_authority = auth_GF_paradeus
 	}
 	prerequisites = {
-		tech_template_GFnyto_Command_ship
+		tech_template_GFnyto_cv_batellship
 	}
 	num_target_locators = 10
 	resources = {
@@ -287,7 +291,7 @@ GF_nyto_super_battelship ={
 #要塞 
 GFnyto_stions_fortress ={
 	formation_priority =  @corvette_formation_priority
-	entity = stions_entity
+	entity = stions_frame
 	max_speed = 0
 	max_hitpoints = 200000
 	collision_radius = @corvette_formation_priority
@@ -311,7 +315,7 @@ GFnyto_stions_fortress ={
 	potential_country = {
 		has_authority = auth_GF_paradeus
 	}
-	num_target_locators = 24
+	num_target_locators = 8
 	prerequisites = {
 		tech_titans
 	}

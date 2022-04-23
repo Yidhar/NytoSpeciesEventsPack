@@ -125,7 +125,11 @@ planet_event = {
 						NOT = { is_planet_class = pc_ringworld_seam }
 						NOT = { is_planet_class = pc_ringworld_tech }
 					}
-					change_pc = pc_GF_nyto_embers_gloomy											
+					random = {
+						chance = 0.05
+						change_pc = pc_GF_nyto_devil_furnace
+						set_planet_flag = GFnyto_Spring_wakes_up
+					}								
 				}
 			}			
 		}

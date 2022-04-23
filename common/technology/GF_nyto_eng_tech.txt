@@ -39,32 +39,6 @@ tech_GF_nyto_mobile_city_1= {
 	potential = {has_authority = auth_GF_paradeus}
 	ai_weight = {weight = 2}
 }
-#移动城市LV2
-tech_GF_nyto_mobile_city_2 = {
-	icon = tech_GF_nyto_mobile_city_2
-	cost = 20000
-	area = engineering
-	tier = 2
-	category = { voidcraft }
-	prerequisites = { "tech_GF_nyto_mobile_city_1" }
-	weight = 5
-	modifier = {}
-	potential = {has_authority = auth_GF_paradeus}
-	ai_weight = {weight = 2}
-}
-#移动城市LV3
-tech_GF_nyto_mobile_city_3 = {
-	icon = tech_GF_nyto_mobile_city_3
-	cost = 30000
-	area = engineering
-	tier = 3
-	category = { voidcraft }
-	prerequisites = { "tech_GF_nyto_mobile_city_2" }
-	weight = 5
-	modifier = {}
-	potential = {has_authority = auth_GF_paradeus}
-	ai_weight = {weight = 2}
-}
 #算法工程
 tech_GF_nyto_algorithm ={ 
 	cost = 30000
@@ -177,7 +151,6 @@ tech_template_GFnyto_Command_ship ={
 tech_template_GFnyto_cv_batellship ={
 	cost = 50000
 	area = engineering
-	icon = tech_GF_nyto_Inverse_collapse_2
 	category = {
 		voidcraft
 	}
@@ -197,7 +170,6 @@ tech_template_GFnyto_cv_batellship ={
 tech_template_stions_fortress ={
 	cost = 50000
 	area = engineering
-	icon = tech_GF_nyto_Inverse_collapse_2
 	category = {
 		voidcraft
 	}
@@ -211,5 +183,19 @@ tech_template_stions_fortress ={
 	}
 	prerequisites = {
 		tech_mega_engineering
+	}
+}
+#轨道卫星城
+tech_template_GF_nyto_orbit_stions ={
+	cost = 50000
+	area = engineering
+	category = { voidcraft }
+	tier = 5
+	weight = 20
+	ai_weight = { weight = 50 	}
+	potential = { has_authority = auth_GF_paradeus 	}
+	prerequisites = { tech_habitat_1 }	
+	modifier = {
+		custom_tooltip = "tech_template_GF_nyto_orbit_stions_desc"
 	}
 }

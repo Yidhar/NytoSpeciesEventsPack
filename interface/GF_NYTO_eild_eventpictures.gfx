@@ -118,6 +118,12 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_GFnyto_megastructure_habitat"
+		textureFile = "gfx/interface/planetview/GFnyto_habitat_02.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 }
 #学说
 spriteTypes = {	

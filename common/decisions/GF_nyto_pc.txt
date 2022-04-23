@@ -22,10 +22,14 @@ decision_pc_GF_nyto_embers_gloomy_project = {
 		exists = owner
 		owner = {
 			has_technology = tech_climate_restoration
+			NOT = {
+				has_civic = civic_GF_nyto_heart_of_suffering
+			}
 		}
 		NOT = {
 			has_planet_flag = GFnyto_Spring_wakes_up
 		}
+		
 	}
 	effect = {
 		custom_tooltip = decision_pc_GF_nyto_embers_gloomy_project_effects
@@ -203,6 +207,9 @@ decision_GFnyto_pop_load = {
 	potential = {
 		owner = {
 			has_authority = auth_GF_paradeus
+			NOT = {
+				has_civic = civic_GF_nyto_heart_of_suffering
+			}
 		}
 	}
 	effect = {
@@ -229,7 +236,7 @@ decision_GFnyto_pop_load = {
 					}
 				}
 				while = {
-					count = 2
+					count = 5
 					create_pop = {
 						species = owner_main_species
 						ethos = root.owner
@@ -261,26 +268,9 @@ decision_GFnyto_boom = {
 		owner = {
 			has_authority = auth_GF_paradeus
 		}
-		OR = {
-			solar_system = {
-				has_megastructure = GFnyto_megastructure_collapse_reactor_01
-			}
-			solar_system = {
-				has_megastructure = GFnyto_megastructure_collapse_reactor_02
-			}
-			solar_system = {
-				has_megastructure = GFnyto_megastructure_collapse_reactor_03
-			}
-			solar_system = {
-				has_megastructure = GFnyto_megastructure_collapse_reactor_04
-			}
-			solar_system = {
-				has_megastructure = GFnyto_megastructure_collapse_reactor_05
-			}
-			solar_system = {
-				has_megastructure = GFnyto_megastructure_collapse_reactor_restored
-			}
-		}
+		solar_system = {
+			has_megastructure = GFnyto_megastructure_collapse_reactor_restored
+		}		
 	}
 	effect = {
 		custom_tooltip = decision_GFnyto_boom_effect
@@ -368,5 +358,73 @@ decision_GFnyto_EILD_hunting = {
 		cost = {
 			unity = 200
 		}
+	}
+}
+
+#停止人口组装
+decision_GFnyto_enact_population_control = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_politics
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 250
+		}
+	}
+
+	potential = {
+		owner = {
+			NOT = { has_policy_flag = population_controls_not_allowed }
+			is_regular_empire = yes
+		}
+		NOT = { has_modifier = planet_population_control }
+	}
+
+	effect = {
+		add_modifier = { modifier = "planet_population_control" days = -1 }
+		IF = {
+			limit = {
+				has_modifier = planet_food_boost
+			}
+			remove_modifier = planet_food_boost
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = { # don't enable if you have free housing and no city districts left to build
+			factor = 0
+			OR = {
+				free_housing > 0
+				num_free_districts = {
+					type = any
+					value > 0
+				}
+				has_building_construction = yes #Added since they're probably building housing
+			}
+		}
+	}
+}
+#恢复人口组装
+decision_GFnyto_end_population_control ={
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_politics
+
+	resources = {
+		category = decisions
+	}
+
+	potential = {
+		has_modifier = planet_population_control
+	}
+
+	effect = {
+		remove_modifier = "planet_population_control"
+	}
+	ai_weight = {
+		weight = 0
 	}
 }

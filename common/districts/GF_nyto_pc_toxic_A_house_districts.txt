@@ -1,8 +1,8 @@
 #城市区划
-district_GF_nyto_pc_toxic_house= {
+district_GF_nyto_pc_toxic_house = {
 	base_buildtime = 720
 	is_capped_by_modifier = no
-	show_on_uncolonized= {
+	show_on_uncolonized = {
 		has_planet_flag = GFnyto_Spring_wakes_up
 	}
 	potential = {
@@ -18,59 +18,63 @@ district_GF_nyto_pc_toxic_house= {
 	resources = {
 		category = planet_districts
 		cost = {
-			GF_nyto_collapse_liquid=100
-			minerals = 2000
-			}			
+			GF_nyto_collapse_liquid = 100
+		}
 		upkeep = {
-			GF_nyto_collapse_liquid=1
-			energy=10
+			GF_nyto_collapse_liquid = 1
+			energy = 10
 		}
 	}
 	planet_modifier = {
 		planet_housing_add = 30
 		planet_max_buildings_add = 1
-		job_GFnyto_white_knight_add = 1	
+		job_GFnyto_white_knight_add = 1
 		planet_amenities_add = 25
-	}	
+	}
 	ai_resource_production = {
-		trigger = { 
+		trigger = {
 			OR = {
 				free_housing < 1
 				free_amenities < 5
-			}						
+			}
 		}
 		alloys = 1000000
 		energy = 1000000
 		food = 1000000
 	}
-	
 }
+
 #发电区划
 district_GF_nyto_pc_toxic_energy = {
 	base_buildtime = 720
 	is_capped_by_modifier = no
-	show_on_uncolonized= {
-		has_planet_flag = GFnyto_Spring_wakes_up
+	show_on_uncolonized = {
+		OR = {
+			has_planet_flag = GFnyto_Spring_wakes_up
+			is_planet_class = pc_GFnytp_habitis
+		}
 	}
 	potential = {
-		has_planet_flag = GFnyto_Spring_wakes_up
+		OR = {
+			has_planet_flag = GFnyto_Spring_wakes_up
+			is_planet_class = pc_GFnytp_habitis
+		}
 	}
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = 2000
-			rare_crystals=100
-		}			
+			minerals = 1000
+		}
 		upkeep = {
-			rare_crystals=2
-			GF_nyto_collapse_liquid=2
+			rare_crystals = 2
+			GF_nyto_collapse_liquid = 2
 		}
 	}
 	planet_modifier = {
-		planet_housing_add =10
-		job_GFnyto_phase_technician_add = 10		
+		planet_housing_add = 10
+		job_GFnyto_phase_technician_add = 10
 	}
-	ai_resource_production ={
+	ai_resource_production = {
 		trigger = {
 			owner = {
 				has_authority = auth_GF_paradeus
@@ -78,17 +82,21 @@ district_GF_nyto_pc_toxic_energy = {
 					resource = energy
 					value < 10000
 				}
-			}			
+			}
 		}
 		energy = 999999
 	}
 }
+
 #矿物区划
 district_GF_nyto_pc_toxic_mineral = {
 	base_buildtime = 720
 	is_capped_by_modifier = no
-	show_on_uncolonized= {
-		has_planet_flag = GFnyto_Spring_wakes_up
+	show_on_uncolonized = {
+		OR = {
+			has_planet_flag = GFnyto_Spring_wakes_up
+			is_planet_class = pc_GFnytp_habitis
+		}
 		NOT = {
 			has_planet_flag = GFnyto_district_alloy
 		}
@@ -108,16 +116,15 @@ district_GF_nyto_pc_toxic_mineral = {
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = 2000
-			volatile_motes=100
-			}			
-		upkeep = {
-			volatile_motes=2
-			GF_nyto_collapse_liquid=2
+			minerals = 1000
 		}
-	}	
+		upkeep = {
+			volatile_motes = 2
+			GF_nyto_collapse_liquid = 2
+		}
+	}
 	planet_modifier = {
-		planet_housing_add =10
+		planet_housing_add = 10
 		job_miner_add = 10
 	}
 	ai_weight = {
@@ -163,8 +170,7 @@ district_GF_nyto_pc_toxic_food = {
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = 2000
-			volatile_motes = 100
+			minerals = 1000
 		}
 		upkeep = {
 			volatile_motes = 2
@@ -172,7 +178,7 @@ district_GF_nyto_pc_toxic_food = {
 		}
 	}
 	planet_modifier = {
-		planet_housing_add =10
+		planet_housing_add = 10
 		job_farmer_add = 10
 	}
 	ai_weight = {
@@ -189,7 +195,6 @@ district_GF_nyto_pc_toxic_food = {
 	}
 }
 
-
 #昙花区划
 district_GFnyto_pc_Epiphyllum = {
 	base_buildtime = 240
@@ -198,6 +203,9 @@ district_GFnyto_pc_Epiphyllum = {
 		exists = owner
 		owner_main_species = {
 			has_trait = trait_GFnyto_tanhua
+		}
+		NOT = {
+			is_planet_class = pc_GFnytp_habitis
 		}
 	}
 	potential = {
@@ -218,7 +226,7 @@ district_GFnyto_pc_Epiphyllum = {
 			minerals = 300
 		}
 	}
-	planet_modifier = {		
+	planet_modifier = {
 		planet_housing_add = 5
 		job_GFnyto_Epiphyllum_job_add = 3
 	}
@@ -236,7 +244,6 @@ district_GFnyto_pc_Epiphyllum = {
 		potential = {
 			planet = {
 				has_planet_flag = GFnyto_Spring_wakes_up
-				
 			}
 		}
 		modifier = {
@@ -256,22 +263,29 @@ district_GFnyto_pc_Epiphyllum = {
 		}
 	}
 	ai_resource_production = {
-		trigger = { always = yes }
+		trigger = {
+			always = yes
+		}
 		food = 999999
 	}
 }
-
 
 ###########可选区划################
 #逆向塌缩区划  （会取消矿物区划 和消费品区划）
 district_GF_nyto_pc_toxic_alloy = {
 	base_buildtime = 720
 	is_capped_by_modifier = no
-	show_on_uncolonized= {
-		has_planet_flag = GFnyto_district_alloy
+	show_on_uncolonized = {
+		or = {
+			has_planet_flag = GFnyto_district_alloy
+			is_planet_class = pc_GFnytp_habitis
+		}
 	}
 	potential = {
-		has_planet_flag = GFnyto_district_alloy
+		or = {
+			has_planet_flag = GFnyto_district_alloy
+			is_planet_class = pc_GFnytp_habitis
+		}
 	}
 	conversion_ratio = 1
 	convert_to = {
@@ -282,24 +296,25 @@ district_GF_nyto_pc_toxic_alloy = {
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = 2000
-			volatile_motes=100
-			}			
+			minerals = 1000
+			volatile_motes = 50
+		}
 		upkeep = {
-			volatile_motes=2
-			GF_nyto_collapse_liquid=2
+			volatile_motes = 2
+			GF_nyto_collapse_liquid = 2
 		}
 	}
 	planet_modifier = {
-		planet_housing_add =10
+		planet_housing_add = 10
 		job_GFnyto_collapse_particle_rar_add = 10
 	}
 }
+
 #消费品区划
-district_GF_nyto_pc_toxic_consumer_good= {
+district_GF_nyto_pc_toxic_consumer_good = {
 	base_buildtime = 720
 	is_capped_by_modifier = no
-	show_on_uncolonized= {
+	show_on_uncolonized = {
 		has_planet_flag = GFnyto_district_consumer_good
 		NOT = {
 			has_planet_flag = GFnyto_district_alloy
@@ -320,16 +335,16 @@ district_GF_nyto_pc_toxic_consumer_good= {
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = 2000
-			rare_crystals=100
-			}			
+			minerals = 1000
+			rare_crystals = 50
+		}
 		upkeep = {
-			rare_crystals=2
-			GF_nyto_collapse_liquid=2
-			}
+			rare_crystals = 2
+			GF_nyto_collapse_liquid = 2
+		}
 	}
 	planet_modifier = {
-		planet_housing_add =10		
+		planet_housing_add = 10
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -337,7 +352,6 @@ district_GF_nyto_pc_toxic_consumer_good= {
 				NOT = {
 					has_civic = civic_crafters
 				}
-				
 			}
 		}
 		job_artisan_add = 10
@@ -363,17 +377,22 @@ district_GF_nyto_pc_toxic_consumer_good= {
 		}
 	}
 }
+
 #精炼区划
 district_GF_nyto_pc_toxic_refine = {
 	base_buildtime = 720
 	is_capped_by_modifier = no
-	show_on_uncolonized= {
-
-		has_planet_flag = GFnyto_district_refine
+	show_on_uncolonized = {
+		OR = {
+			has_planet_flag = GFnyto_district_refine
+			is_planet_class = pc_GFnytp_habitis
+		}
 	}
 	potential = {
-
-		has_planet_flag = GFnyto_district_refine
+		OR = {
+			has_planet_flag = GFnyto_district_refine
+			is_planet_class = pc_GFnytp_habitis
+		}
 	}
 	conversion_ratio = 1
 	convert_to = {
@@ -384,16 +403,16 @@ district_GF_nyto_pc_toxic_refine = {
 	resources = {
 		category = planet_districts
 		cost = {
-			GF_nyto_collapse_liquid = 300
-			minerals = 3000
-			}			
+			GF_nyto_collapse_liquid = 1000
+			minerals = 1000
+		}
 		upkeep = {
 			GF_nyto_collapse_liquid = 3
 			energy = 6
 		}
-	}	
+	}
 	planet_modifier = {
-		planet_housing_add =10
+		planet_housing_add = 10
 		job_chemist_add = 2
 		job_gas_refiner_add = 2
 		job_translucer_add = 2
@@ -402,21 +421,31 @@ district_GF_nyto_pc_toxic_refine = {
 		trigger = {
 			owner = {
 				OR = {
-					resource_income_compare = { resource = rare_crystals value < 50 }
-					resource_income_compare = { resource = exotic_gases value < 50 }
-					resource_income_compare = { resource = volatile_motes value < 50 }
-				}				
+					resource_income_compare = {
+						resource = rare_crystals
+						value < 50
+					}
+					resource_income_compare = {
+						resource = exotic_gases
+						value < 50
+					}
+					resource_income_compare = {
+						resource = volatile_motes
+						value < 50
+					}
+				}
 			}
 		}
 		energy = 10000
 		alloys = 10000
 	}
 }
+
 #塌缩工业区划
-district_GF_nyto_pc_toxic_leisure= {
+district_GF_nyto_pc_toxic_leisure = {
 	base_buildtime = 720
 	is_capped_by_modifier = no
-	show_on_uncolonized= {
+	show_on_uncolonized = {
 		has_planet_flag = GFnyto_district_leisure
 	}
 	potential = {
@@ -431,16 +460,16 @@ district_GF_nyto_pc_toxic_leisure= {
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = 2000
-			exotic_gases = 100
-			}			
+			minerals = 1000
+			exotic_gases = 50
+		}
 		upkeep = {
 			exotic_gases = 2
-			GF_nyto_collapse_liquid=2
+			GF_nyto_collapse_liquid = 2
 		}
 	}
 	planet_modifier = {
-		planet_housing_add =10
+		planet_housing_add = 10
 		job_GFnyto_collapse_particle_zip_add = 10
 	}
 	ai_weight = {
@@ -453,15 +482,22 @@ district_GF_nyto_pc_toxic_leisure= {
 		energy = -100
 	}
 }
+
 #科研区划
 district_GF_nyto_pc_toxic_science = {
 	base_buildtime = 720
 	is_capped_by_modifier = no
-	show_on_uncolonized= {
-		has_planet_flag = GFnyto_district_science
+	show_on_uncolonized = {
+		OR = {
+			has_planet_flag = GFnyto_district_science
+			is_planet_class = pc_GFnytp_habitis
+		}
 	}
 	potential = {
-		has_planet_flag = GFnyto_district_science
+		OR = {
+			has_planet_flag = GFnyto_district_science
+			is_planet_class = pc_GFnytp_habitis
+		}
 	}
 	conversion_ratio = 1
 	convert_to = {
@@ -472,16 +508,16 @@ district_GF_nyto_pc_toxic_science = {
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = 2000
-			exotic_gases=100
-			}			
-		upkeep = {
-			exotic_gases=2
-			GF_nyto_collapse_liquid=2
+			minerals = 1000
+			exotic_gases = 50
 		}
-	}	
+		upkeep = {
+			exotic_gases = 2
+			GF_nyto_collapse_liquid = 2
+		}
+	}
 	planet_modifier = {
-		planet_housing_add =10
+		planet_housing_add = 10
 		job_GFnyto_collapse_particle_researcher_add = 10
 	}
 	ai_resource_production = {
@@ -489,18 +525,18 @@ district_GF_nyto_pc_toxic_science = {
 			owner = {
 				has_authority = auth_GF_paradeus
 			}
-			
 		}
 		physics_research = 9999
 		society_research = 9999
 		engineering_research = 9999
 	}
 }
+
 #地面指挥中心
 district_GF_nyto_pc_toxic_trade = {
 	base_buildtime = 720
 	is_capped_by_modifier = no
-	show_on_uncolonized= {
+	show_on_uncolonized = {
 		has_planet_flag = GFnyto_district_trade
 	}
 	potential = {
@@ -515,17 +551,16 @@ district_GF_nyto_pc_toxic_trade = {
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = 2000
-			rare_crystals=100
-			}			
-		upkeep = {
-			rare_crystals=2
-			GF_nyto_collapse_liquid=2
+			minerals = 1000
+			rare_crystals = 50
 		}
-	}	
+		upkeep = {
+			rare_crystals = 2
+			GF_nyto_collapse_liquid = 2
+		}
+	}
 	planet_modifier = {
-		planet_housing_add =10
+		planet_housing_add = 10
 		job_GFnyto_white_knight_add = 10
 	}
-
 }

@@ -16,15 +16,15 @@ decision_GFnyto_planetary_defense_effects:1 "为行星添加行星轨道防御�
 decision_GFnyto_planetary_defense_effects_short:2 "为行星添加行星轨道防御系统和行星地表防御系统。"
 decision_GFnyto_planetary_defense_desc:1 "停留在这个星球轨道上的敌方舰队会不断受到伤害。"
 
-decision_GFnyto_stop_pop_increase:0 "停止涅托人口增长"
-decision_GFnyto_stop_pop_increase_effects:1 "停止涅托人口增长,同时产生战略资源§Y暗星内核§! £GF_nyto_dark_star_core£"
-decision_GFnyto_stop_pop_increase_effects_short:2 "停止涅托人口增长,同时产生战略资源§Y暗星内核§! £GF_nyto_dark_star_core£"
-decision_GFnyto_stop_pop_increase_desc:1 "新的涅托心智不会载入到机体里,而是存储到暗星内核中。"
+decision_GFnyto_enact_population_control:0 "停止人口增长"
+decision_GFnyto_enact_population_control_effects:1 "停止人口增长,同时产生战略资源§Y暗星内核§! £GF_nyto_dark_star_core£"
+decision_GFnyto_enact_population_control_effects_short:2 "停止人口增长,同时产生战略资源§Y暗星内核§! £GF_nyto_dark_star_core£"
+decision_GFnyto_enact_population_control_desc:0 "新的涅托心智不会载入到机体里,而是存储到暗星内核中。"
 
-decision_GFnyto_continue_pop_increase:0 "继续涅托人口增长"
-decision_GFnyto_continue_pop_increase_effects:1 "继续涅托人口增长,不再产生战略资源§Y暗星内核§! £GF_nyto_dark_star_core£"
-decision_GFnyto_continue_pop_increase_effects_short:2 "继续涅托人口增长,不再产生战略资源§Y暗星内核§! £GF_nyto_dark_star_core£"
-decision_GFnyto_continue_pop_increase_desc:1 "继续涅托人口增长"
+decision_GFnyto_end_population_control:0 "继续人口增长"
+decision_GFnyto_end_population_control_effects:1 "继续人口增长,不再产生战略资源§Y暗星内核§! £GF_nyto_dark_star_core£"
+decision_GFnyto_end_population_control_effects_short:2 "继续人口增长,不再产生战略资源§Y暗星内核§! £GF_nyto_dark_star_core£"
+decision_GFnyto_end_population_control_desc:0 "继续涅托人口增长,不再产生战略资源§Y暗星内核§! £GF_nyto_dark_star_core£"
 
 decision_GFnyto_pop_load:0 "心智载入"
 decision_GFnyto_pop_load_desc:1 "将库存的涅托心智载入到机体中"

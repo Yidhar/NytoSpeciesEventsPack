@@ -1,6 +1,0 @@
-Gf_nyto_pop_hapins ={
-	base = num_pop
-	modifier ={
-		subtract = 0.1
-	}
-}

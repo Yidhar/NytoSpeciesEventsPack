@@ -25,7 +25,6 @@ GF_nyto_warrior ={
 
 	military_spending = 3 #军费
 	colony_spending = 3
-
 	federation_acceptance = 0 #-10 联邦
 	nap_acceptance = 0
 	commercial_pact_acceptance = -20

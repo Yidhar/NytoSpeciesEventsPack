@@ -73,8 +73,9 @@ civic_GF_nyto_forward_base = {
 		}
 	}
 	modifier = {
-		colony_start_num_pops_add = 1
-		pc_GF_nyto_embers_gloomy_habitability = -0.1
+		colony_start_num_pops_add = 2
+		armies_upkeep_mult = -0.5
+		country_war_exhaustion_mult = -0.5
 	}
 	modification = yes
 	random_weight = {
@@ -230,6 +231,7 @@ civic_GF_nyto_heart_of_suffering = {
 	modifier = {
 		ship_orbital_bombardment_mult = 0.5
 		planet_crime_add = -100
+		country_resettlement_cost_mult = -1
 	}
 	modification = no
 	description = "civic_GF_nyto_heart_of_suffering_modif"	
@@ -251,6 +253,7 @@ civic_GF_nyto_Vengeance_Crusade ={
 		pop_growth_speed = -1000
 		pop_happiness = -0.5	
 		ship_orbital_bombardment_mult = 0.5	
+		country_war_exhaustion_mult = -1
 	}
 	description = "civic_GF_nyto_Vengeance_Crusade_modif"
 }

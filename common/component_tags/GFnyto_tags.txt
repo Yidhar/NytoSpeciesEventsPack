@@ -12,3 +12,4 @@ weapon_type_son
 weapon_type_prism
 weapon_type_Electronic
 weapon_type_beacon
+weapon_type_aoe

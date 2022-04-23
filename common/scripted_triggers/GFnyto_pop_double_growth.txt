@@ -11,6 +11,9 @@ is_organic_species = {
 			is_archetype = UNITED_FLEET
 			is_archetype = NANITES_CROP
 			is_archetype = NYTO
+			is_archetype = EILD
+			is_archetype = Magical_Bitch
+			is_archetype = Magical_Girl
 		}
 	}
 }

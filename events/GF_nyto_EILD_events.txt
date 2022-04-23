@@ -328,6 +328,14 @@ planet_event = {
 		name = NYTORECEIVE
 		remove_modifier = "GFnyto_eild_attack"
 		remove_planet_flag = GF_nyto_eild_attack_begin
+		if = {
+			limit = {
+				controller = {
+					is_country = event_target:EILD_country
+				}
+			}
+			set_controller = root
+		}
 		add_modifier = {
 			modifier = "GFnyto_eild_attack_end"
 			years = 10
@@ -770,6 +778,7 @@ planet_event = {
 	}
 	trigger = {
 		owner = {
+			is_ai = no
 			has_origin = origin_GF_nyto_the_last_light
 		}
 	}
@@ -858,14 +867,11 @@ planet_event = {
 						planet_event = {
 							id = GFnytoeild.59
 						}
-						every_planet_army = {
-							limit = {
-								owner = {
-									is_country = event_target:EILD_country
-								}
+						event_target:EILD_country = {
+							every_owned_army = {
+								remove_army = yes
 							}
-							remove_army = yes
-						}
+						}																	
 					}
 				}
 			}
@@ -1506,6 +1512,9 @@ event = {
 		fromfrom = {
 			is_capital = yes
 			has_planet_flag = GF_nyto_eild_attack_begin
+			NOT = {
+				has_planet_flag = GF_nyto_GG
+			}
 		}
 	}
 	immediate = {
@@ -1545,7 +1554,11 @@ event = {
 				}
 			}
 		}
+		default_hide_option = yes
 		name = "GFnytoeild.45a"
+		ai_chance = {
+			factor = 99999			
+		}
 	}
 }
 

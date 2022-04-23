@@ -16,6 +16,7 @@ leader_admiral_trait_GF_nyto_ogas_agreement = {
 #心识领域
 leader_admiral_trait_GF_nyto_noussphere={
 	cost = 0
+	randomized = no
 	requires_traits={trait_GF_nyto_noussphere}
 	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_noussphere.dds"
 	modifier = {
@@ -30,6 +31,7 @@ leader_admiral_trait_GF_nyto_noussphere={
 #OGAS_2
 leader_admiral_trait_GF_nyto_ogas_agreement_plus= {
 	cost = 0
+	randomized = no
 	requires_traits={trait_GF_nyto_ogas_agreement_plus}
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_OGAS_system.dds"	
 	modifier = {
@@ -59,6 +61,7 @@ leader_general_trait_GF_nyto_ogas_agreement= {
 }
 leader_general_trait_GF_nyto_noussphere={
 	cost = 0
+	randomized = no
 	requires_traits={trait_GF_nyto_noussphere}
 	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_noussphere.dds"
 	modifier = {
@@ -74,6 +77,7 @@ leader_general_trait_GF_nyto_noussphere={
 #OGAS_2
 leader_general_trait_GF_nyto_ogas_agreement_plus= {
 	cost = 0
+	randomized = no
 	requires_traits={trait_GF_nyto_ogas_agreement_plus}
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_OGAS_system.dds"
 	modifier = {
@@ -104,6 +108,7 @@ leader_scientist_trait_GF_nyto_ogas_agreement= {
 }
 leader_scientist_trait_GF_nyto_noussphere={
 	cost = 0
+	randomized = no
 	requires_traits={ trait_GF_nyto_noussphere }
 	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_noussphere.dds"
 	modifier = {
@@ -119,6 +124,7 @@ leader_scientist_trait_GF_nyto_noussphere={
 #OGAS_2
 leader_scientist_trait_GF_nyto_ogas_agreement_plus= {
 	cost = 0
+	randomized = no
 	requires_traits={trait_GF_nyto_ogas_agreement_plus} #拥有哪个特质的人口可以生成带有这个特质的领袖 
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_OGAS_system.dds"
 	modifier = {
@@ -150,6 +156,7 @@ leader_governor_trait_GF_nyto_ogas_agreement= {
 
 leader_governor_trait_GF_nyto_noussphere={
 	cost = 0
+	randomized = no
 	requires_traits={trait_GF_nyto_noussphere}
 	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_noussphere.dds"
 	modifier = {
@@ -166,6 +173,7 @@ leader_governor_trait_GF_nyto_noussphere={
 #OGAS_2
 leader_governor_trait_GF_nyto_ogas_agreement_plus= {
 	cost = 0
+	randomized = no
 	requires_traits={trait_GF_nyto_ogas_agreement_plus} #拥有哪个特质的人口可以生成带有这个特质的领袖 
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_OGAS_system.dds"
 	modifier = {
@@ -185,6 +193,7 @@ leader_governor_trait_GF_nyto_ogas_agreement_plus= {
 #OGAS_1
 leader_trait_GF_nyto_ogas_agreement = {
 	cost = 0
+	randomized = no
 	requires_traits={trait_GF_nyto_ogas_agreement}
 	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_ogas_agreement.dds"
 	modifier = {planet_jobs_produces_mult = 0.1   }
@@ -195,6 +204,7 @@ leader_trait_GF_nyto_ogas_agreement = {
 }
 leader_trait_GF_nyto_noussphere={
 	cost = 0
+	randomized = no
 	requires_traits={trait_GF_nyto_noussphere}
 	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_noussphere.dds"
 	modifier = {planet_jobs_produces_mult = 0.15   }
@@ -206,6 +216,7 @@ leader_trait_GF_nyto_noussphere={
 #OGAS_2
 leader_trait_GF_nyto_ogas_agreement_plus= {
 	cost = 0
+	randomized = no
 	requires_traits={trait_GF_nyto_ogas_agreement_plus}
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_OGAS_system.dds"
 	modifier = {planet_jobs_produces_mult = 0.2}

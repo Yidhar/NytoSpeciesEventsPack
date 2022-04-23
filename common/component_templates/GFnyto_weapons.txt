@@ -153,8 +153,7 @@ weapon_component_template = {
 			GF_nyto_new_fire_control_unit = 30
 			GF_nyto_collapse_liquid = 60
 		}
-		upkeep = {
-			
+		upkeep = {			
 			alloys = 1.2
 			GF_nyto_new_fire_control_unit = 1
 			GF_nyto_collapse_liquid = 0.1
@@ -211,11 +210,14 @@ weapon_component_template = {
 			GF_nyto_new_fire_control_unit = 15
 			GF_nyto_collapse_liquid = 60
 		}
-		upkeep = {
-			
+		upkeep = {		
 			alloys = 1.2
 			GF_nyto_new_fire_control_unit = 5
 			GF_nyto_collapse_liquid = 0.1
+		}
+		upkeep = {
+			energy = 1
+			multiplier = ship.GF_nyto_t_damage
 		}
 	}
 	ai_weight = {
@@ -353,7 +355,7 @@ weapon_component_template = {
 	}
 	total_fire_time = 10
 	range = 160
-	accuracy = 0.5
+	accuracy = 0.8
 	tracking = 0
 	power = -150	#耗能	
 	prerequisites = {
@@ -444,8 +446,8 @@ weapon_component_template = {
 			GF_nyto_collapse_liquid = 0.1
 		}
 		upkeep = {
-			energy = 1
-			multiplier = ship.Gfnyto_combat_days
+			energy = 10
+			multiplier = ship.GF_nyto_combat_days
 		}
 	}
 	ai_weight = {
@@ -500,11 +502,14 @@ weapon_component_template = {
 			GF_nyto_new_fire_control_unit = 2
 			GF_nyto_collapse_liquid = 60
 		}
-		upkeep = {
-			
+		upkeep = {			
 			alloys = 0.75
 			GF_nyto_new_fire_control_unit = 0.1
 			GF_nyto_collapse_liquid = 0.1
+		}
+		upkeep = {
+			energy = 1
+			multiplier = GF_nyto_kill_num
 		}
 	}
 	ai_weight = {
@@ -670,11 +675,6 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			trigger = {
-				owner = {
-					is_ai = no
-				}
-			}	
 			alloys = 30
 			GF_nyto_new_fire_control_unit = 0.5
 			GF_nyto_collapse_liquid = 20
@@ -700,15 +700,18 @@ weapon_component_template = {
 weapon_component_template = {
 	key = "GF_Nyto_missile_g_weapon1"
 	size = torpedo
-	type = missile
+	type = instant
 	icon = "GFX_ship_part_g_weapons1"
 	icon_frame = 1
 	power = -100
 	prerequisites = {
 		"tech_GF_nyto_G"
 	}
+	ship_modifier = {
+		custom_tooltip = "GF_Nyto_missile_g_weapon1_modif"
+	}
 	component_set = "GF_Nyto_g_weapon1"
-	projectile_gfx = "swarmer_missiles_02"
+	projectile_gfx = "GF_large_torpedo_03"
 	tags = {
 		weapon_type_explosive
 	}
@@ -716,33 +719,23 @@ weapon_component_template = {
 		weapon_role_anti_armor
 	}
 	damage = {
-		min = 500
-		max = 1300
+		min = 400
+		max = 400
 	}
 	windup = {
 		min = 2
 		max = 20
 	}
-	total_fire_time = 260
-	range = 180
-	accuracy = 1
-	tracking = 0.25
+	total_fire_time = 50
+	range = 220
 	shield_damage  = 1
 	armor_penetration = 0.25
-	hull_damage = 1.2
-	missile_speed = 25
-	missile_evasion = 0.3
-	missile_health = 300
-	missile_armor = 300
-	missile_shield = 100
-	missile_retarget_range = 50
-	range = 200
+	prio_projectile = yes
 	accuracy = 1
 	tracking = 1
 	resources = {
 		category = ship_components
-		cost = {
-			
+		cost = {			
 			alloys = 120
 			GF_nyto_new_fire_control_unit = 0.5
 			GF_nyto_collapse_liquid = 10
@@ -761,15 +754,18 @@ weapon_component_template = {
 weapon_component_template = {
 	key = "GF_Nyto_missile_g_weapon2"
 	size = torpedo
-	type = missile
+	type = point_defence
 	icon = "GFX_ship_part_g_weapons2"
 	icon_frame = 1
 	power = -35
 	prerequisites = {
 		"tech_GF_nyto_G"
 	}
+	ship_modifier = {
+		custom_tooltip = "GF_Nyto_missile_g_weapon1_modif"
+	}
 	component_set = "GF_Nyto_g_weapon2"
-	projectile_gfx = "swarmer_missiles_02"
+	projectile_gfx = "GF_large_torpedo_03"
 	tags = {
 		weapon_type_explosive
 		weapon_type_point_defense
@@ -779,23 +775,15 @@ weapon_component_template = {
 		weapon_role_anti_hull
 	}
 	damage = {
-		min = 10
-		max = 20
+		min = 50
+		max = 200
 	}
 	windup = {
 		min = 2
 		max = 20
 	}
 	total_fire_time = 0
-	range = 60
-	accuracy = 1
-	tracking = 0.25
-	missile_speed = 25
-	missile_evasion = 10
-	missile_health = 300
-	missile_armor = 300
-	missile_shield = 100
-	missile_retarget_range = 50
+	prio_projectile = yes
 	range = 200
 	accuracy = 1
 	tracking = 1
@@ -836,7 +824,7 @@ strike_craft_component_template = {
 		weapon_role_anti_hull
 	}
 	count = 6	#舰载机初始数量
-	regeneration_per_day = 1	#每天生产的舰载机数量
+	regeneration_per_day = 0.1	#每天生产的舰载机数量
 	launch_time = 2	#装填时间
 	damage = {
 		min = 23
@@ -902,7 +890,7 @@ strike_craft_component_template = {
 		weapon_role_point_defense
 	}
 	count = 6	#舰载机初始数量
-	regeneration_per_day = 1	#每天生产的舰载机数量
+	regeneration_per_day = 0.5	#每天生产的舰载机数量
 	launch_time = 1	#装填时间	
 	damage = {
 		min = 8

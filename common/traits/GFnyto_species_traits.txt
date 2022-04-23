@@ -22,6 +22,7 @@ trait_GF_nyto_the_last_light= {
 		planet_jobs_engineering_research_produces_mult = 0.15
 		planet_jobs_physics_research_produces_mult = 0.15
 		planet_jobs_society_research_produces_mult = 0.15
+		NYTO_pop_growth_speed = 0.2
 	}
 	slave_cost = {energy = 50}
 }
@@ -29,16 +30,15 @@ trait_GF_nyto_the_last_light= {
 trait_GF_nyto_ogas_agreement= {
     cost = 0
 	sorting_priority = 20
-	potential_crossbreeding_chance = 0#潜在杂交概率
+	potential_crossbreeding_chance = 1 #潜在杂交概率
 	initial = no#是否初始特质,指是否开局可选
 	randomized = no#是否随机特质（指生成ai时是否会有此特性）
 	species_possible_remove = {
 		always = no
 	}
 	species_possible_merge_remove = {
-		OR = {
-			has_trait = trait_GF_nyto_noussphere
-			has_trait = trait_GF_nyto_ogas_agreement_plus
+		owner = {
+			has_ascension_perk = ap_GF_nyto_noussphere
 		}
 		
 	}
@@ -63,9 +63,9 @@ trait_GF_nyto_ogas_agreement= {
 trait_GF_nyto_ogas_agreement_plus= {
     cost = 0
 	sorting_priority = 20
-	potential_crossbreeding_chance = 0#潜在杂交概率
-	initial = no#是否初始特质,指是否开局可选
-	randomized = no#是否随机特质（指生成ai时是否会有此特性）
+	potential_crossbreeding_chance = 4
+	initial = no #是否初始特质,指是否开局可选
+	randomized = no #是否随机特质（指生成ai时是否会有此特性）
 	species_potential_remove = {
 		always = yes
 	}
@@ -97,7 +97,7 @@ trait_GF_nyto_noussphere = {
 	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_noussphere.dds"
 	cost = 0
 	sorting_priority = 20
-	potential_crossbreeding_chance = 0#潜在杂交概率
+	potential_crossbreeding_chance = 5
 	initial = no #是否初始特质,指是否开局可选
 	randomized = no #是否随机特质（指生成ai时是否会有此特性）
 	improves_leaders = yes #是否会影响领袖
@@ -217,8 +217,6 @@ trait_GF_nyto_savage_origin= {
 		pc_GF_nyto_devil_furnace_habitability = 11
 		pc_GF_nyto_embers_gloomy_habitability = 11
 		pc_nuked_habitability = 1
-	#		pop_growth_speed = -10
-	#		pop_assembly_speed = -10
 	}
 }
 #暴食
@@ -436,6 +434,9 @@ trait_GF_nyto_ingenious = {
 		pop_growth_speed = -0.2
 	}
 	slave_cost = {energy = 50}
+	opposites = {
+		trait_GF_nyto_natural_physicists
+	}
 }
 
 #不稳定精神体
@@ -502,71 +503,13 @@ trait_GF_nyto_natural_physicists = {
 		pop_housing_usage_mult = -0.15
 		country_trust_growth = 0.25		
 	}
+	opposites = {
+		trait_GF_nyto_ingenious
+	}
 }
 
-# trait_GF_nyto_natural_sociologists = {
-# 	cost = 1
-# 	potential_crossbreeding_chance = 1.0
-# 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_natural_sociologists.dds"
-# 	allowed_archetypes = {NYTO}
-# 	modifier = {planet_jobs_society_research_produces_mult = 0.15}
-# }
-# trait_GF_nyto_talented = {
-# 	cost = 1
-# 	potential_crossbreeding_chance = 1.0
-# 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_talented.dds"
-# 	allowed_archetypes = {NYTO}
-# 	modifier = {leader_skill_levels = 1}
-# }
-# trait_GF_nyto_quick_learners = {
-# 	cost = 1
-# 	potential_crossbreeding_chance = 1.0
-# 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_quick_learners.dds"
-# 	allowed_archetypes = {NYTO}
-# 	modifier = {species_leader_exp_gain = 0.25}
-# }
-# trait_GF_nyto_traditional = {
-# 	cost = 1
-# 	potential_crossbreeding_chance = 1.0
-# 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_traditional.dds"
-# 	allowed_archetypes = {NYTO}
-# 	modifier = {planet_jobs_unity_produces_mult = 0.1}
-# }
-# trait_GF_nyto_docile = {
-# 	cost = 2
-# 	potential_crossbreeding_chance = 1.0
-# 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_docile.dds"
-# 	allowed_archetypes = {NYTO}
-# 	modifier = {species_empire_size_mult = -0.10}
-# }
-# trait_GF_nyto_nomadic = {
-# 	cost = 1
-# 	potential_crossbreeding_chance = 1.0
-# 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_nomadic.dds"
-# 	allowed_archetypes = {NYTO}
-# 	modifier = {
-# 		pop_growth_from_immigration = 0.15
-# 		pop_resettlement_cost_mult = -0.25
-# 	}
-# }
-# trait_GF_nyto_communal = {
-# 	cost = 1
-# 	potential_crossbreeding_chance = 1.0
-# 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_communal.dds"
-# 	allowed_archetypes = {NYTO}
-# 	modifier = {pop_housing_usage_mult = -0.1}
-# }
-# trait_GF_nyto_resilient = {
-# 	cost = 1
-# 	potential_crossbreeding_chance = 1.0
-# 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_resilient.dds"
-# 	allowed_archetypes = {NYTO}
-# 	modifier = {army_defense_damage_mult = 0.5}
-# }
-# trait_GF_nyto_conservational = {
-# 	cost = 1
-# 	potential_crossbreeding_chance = 1.0
-# 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_conservational.dds"
-# 	allowed_archetypes = {NYTO}
-# 	modifier = {planet_pops_consumer_goods_upkeep_mult = -0.10}
-# }
+#缺陷的科研模块
+trait_GF_nyto_week_research ={
+	cost = -3
+	potential_crossbreeding_chance = 1.0
+}

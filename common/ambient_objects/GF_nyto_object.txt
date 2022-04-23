@@ -1,0 +1,6 @@
+ambient_object = {
+	name = "GF_nyto_aoe_object"
+	entity = "GF_nyto_aoe_entity"
+	selectable = no
+	show_name = no
+}

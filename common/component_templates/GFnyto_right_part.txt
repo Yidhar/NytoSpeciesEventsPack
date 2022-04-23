@@ -41,7 +41,7 @@ utility_component_template = {
 
 #穿梭引擎
 utility_component_template = {
-	key = "tech_GF_nyto_shuttle_engine"
+	key = "GF_nyto_shuttle_engine"
 	size = small
 	icon = "GFX_ship_part_GFnyto_shuttle_engine"
 	icon_frame = 1
@@ -363,7 +363,7 @@ utility_component_template = {
 
 #附加运算模块-护航
 utility_component_template = {
-	key = "tech_GFnyto_additional_arithmetic_module2"
+	key = "GFnyto_additional_arithmetic_module2"
 	size = small
 	icon = "GFX_ship_part_GFnyto_additional_arithmetic_module2"
 	icon_frame = 1
@@ -403,7 +403,7 @@ utility_component_template = {
 
 #附加运算模块-支援
 utility_component_template = {
-	key = "tech_GFnyto_additional_arithmetic_module3"
+	key = "GFnyto_additional_arithmetic_module3"
 	size = small
 	icon = "GFX_ship_part_GFnyto_additional_arithmetic_module3"
 	icon_frame = 1
@@ -461,7 +461,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_1" }
 	component_set = "thruster_components"
-	size_restriction = {  GFnyto_Command_ship GFnyto_shiled_ship  GF_nyto_super_battelship }
+	size_restriction = {  GFnyto_Command_ship GFnyto_shiled_ship  GF_nyto_super_battelship GFnyto_mobile_city}
 	upgrades_to = "SHIP_THRUSTER_2"
 
 	ai_weight = {
@@ -488,7 +488,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_2" }
 	component_set = "thruster_components"
-	size_restriction = {  GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship}
+	size_restriction = {  GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship GFnyto_mobile_city}
 	upgrades_to = "BATTLESHIP_SHIP_THRUSTER_3"
 
 	ai_weight = {
@@ -514,7 +514,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_3" }
 	component_set = "thruster_components"
-	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship}
+	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship GFnyto_mobile_city}
 	upgrades_to = "BATTLESHIP_SHIP_THRUSTER_4"
 
 	ai_weight = {
@@ -540,7 +540,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_4" }
 	component_set = "thruster_components"
-	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship}
+	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship GFnyto_mobile_city}
 	upgrades_to = "SHIP_THRUSTER_5"
 
 	ai_weight = {
@@ -567,7 +567,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fission_power" }
 	component_set = "power_core"
-	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship}
+	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship GFnyto_mobile_city}
 	upgrades_to = "BATTLESHIP_FUSION_REACTOR"
 
 	ai_weight = {
@@ -593,7 +593,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fusion_power" }
 	component_set = "power_core"
-	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship}
+	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship GFnyto_mobile_city}
 	upgrades_to = "BATTLESHIP_COLD_FUSION_REACTOR"
 
 	ai_weight = {
@@ -620,7 +620,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_cold_fusion_power" }
 	component_set = "power_core"
-	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship}
+	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship GFnyto_mobile_city}
 	upgrades_to = "BATTLESHIP_ANTIMATTER_REACTOR"
 
 	ai_weight = {
@@ -647,7 +647,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_antimatter_power" }
 	component_set = "power_core"
-	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship}
+	size_restriction = { GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship GFnyto_mobile_city}
 	upgrades_to = "BATTLESHIP_ZERO_POINT_REACTOR"
 
 	ai_weight = {

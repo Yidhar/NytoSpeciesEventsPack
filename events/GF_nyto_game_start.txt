@@ -117,9 +117,10 @@ country_event = {
 			remove_building = building_foundry_1
 			remove_building = building_factory_1
 			remove_building = building_research_lab_1
-			add_building = building_GFnyto_transportation_hub
-			add_building = building_GFnyto_collapse_exploit_plant_1
-			add_building = building_GFnyto_collapse_tower
+			if = {
+				limit ={ owner ={ is_ai = no } }
+				add_building = building_GFnyto_collapse_tower
+			}			
 			add_district = district_GF_nyto_pc_toxic_underground_shelters
 			add_district = district_GF_nyto_pc_toxic_underground_shelters
 			add_district = district_GF_nyto_pc_toxic_underground_industrial_area
@@ -132,91 +133,11 @@ country_event = {
 					species = root
 				}
 			}
-			if = {
-				limit = {
-					root = {
-						has_civic = civic_GF_nyto_forward_base
-					}
-				}
-				while = {
-					count = 8
-					create_army = {
-						name = "远征军"
-						owner = root
-						species = root
-						type = "GF_nyto_machine_assault_2"
-					}
-				}
-				root = {
-					add_modifier = {
-						modifier = GF_nyto_forward_base
-						years = 5
-					}
-				}
-			}
-			if = {
-				limit = {
-					root = {
-						has_civic = civic_GF_nyoto_armor_train
-					}
-				}
-				while = {
-					count = 2
-					create_army = {
-						name = "装甲列车"
-						owner = root
-						species = root
-						type = GF_nyto_armor_train
-					}
-				}
-				root = {
-					every_owned_fleet = {
-						limit = {
-							is_ship_class = shipclass_military
-						}
-						delete_fleet = this
-					}
-				}
-			}
 		}
 		give_technology = {
 			message = no
 			tech = tech_combat_computers_3
 		}
-		if = {
-			limit = { has_civic = civic_GF_nyto_heart_of_suffering }
-			if = {				
-				limit = { has_civic = civic_GF_nyto_forward_base  }
-				owner = {
-					force_remove_civic = civic_GF_nyto_forward_base
-					force_add_civic = civic_GF_nyto_Vengeance_Crusade
-				}
-				home_planet = {
-					create_species = {
-						name = "ELID-infected"
-						class = "eild"
-						portrait = "GFnyto_eild"
-						traits = {
-							trait = trait_GF_nyto_loyal_ELID_infected
-							trait = trait_latent_psionic
-							trait = trait_nerve_stapled
-						}
-						effect = {
-							set_species_homeworld = prev
-							save_global_event_target_as = GFnyto_ELID_infected					
-						}
-					}
-					while = {
-						count = 10
-						create_pop = {
-							species = event_target:GFnyto_ELID_infected
-						}
-					}
-				}
-				event_target:GFnyto_ELID_infected = { set_citizenship_type = { type = citizenship_limited country = root } }				
-			}
-		}
-
 	}
 }
 
@@ -272,6 +193,115 @@ country_event = {
 	}
 }
 
+
+country_event = {
+	id = GFnytostart.2
+	hide_window = yes
+	trigger = {
+		has_authority = auth_GF_paradeus
+	}
+	is_triggered_only = yes
+	immediate = {
+		home_planet = {
+			if = {
+				limit = {
+					root = {
+						has_civic = civic_GF_nyto_forward_base
+					}
+				}
+				while = {
+					count = 8
+					create_army = {
+						name = "远征军"
+						owner = root
+						species = root
+						type = "GF_nyto_machine_assault_2"
+					}
+				}
+			}
+			if = {
+				limit = {
+					root = {
+						has_civic = civic_GF_nyoto_armor_train
+					}
+				}
+				while = {
+					count = 2
+					create_army = {
+						name = "装甲列车"
+						owner = root
+						species = root
+						type = GF_nyto_armor_train
+					}
+				}
+				root = {
+					every_owned_fleet = {
+						limit = {
+							is_ship_class = shipclass_military
+						}
+						delete_fleet = this
+					}
+				}
+			}
+			add_building = building_GFnyto_transportation_hub
+			add_building = building_GFnyto_collapse_exploit_plant_1
+		}
+		if = {
+			limit = { has_civic = civic_GF_nyto_heart_of_suffering }
+			if = {				
+				limit = { has_civic = civic_GF_nyto_forward_base  }
+				force_remove_civic = civic_GF_nyto_forward_base
+				force_add_civic = civic_GF_nyto_Vengeance_Crusade
+				every_owned_fleet = {
+					while = {
+						count = 17
+						create_ship = {
+							name = random
+							random_existing_design = corvette
+						}
+					}
+				}	
+
+			}
+			home_planet = {
+				create_species = {
+					name = "ELID-infected"
+					class = "eild"
+					portrait = "GFnyto_eild"
+					traits = {
+						trait = trait_GF_nyto_loyal_ELID_infected
+						trait = trait_latent_psionic
+					}
+					effect = {
+						set_species_homeworld = prev
+						save_global_event_target_as = GFnyto_ELID_infected					
+					}
+				}
+				while = {
+					count = 10
+					create_pop = {
+						species = event_target:GFnyto_ELID_infected
+					}
+				}
+			}
+			event_target:GFnyto_ELID_infected = { set_citizenship_type = { type = citizenship_limited country = root } }		
+		}
+		if = {
+			limit = { has_civic = civic_GF_nyto_forward_base }
+			add_modifier = {
+				modifier = GF_nyto_forward_base
+				years = 5
+			}
+		}
+		else_if = {
+			limit = { has_civic = civic_GF_nyto_Vengeance_Crusade }
+			add_modifier = {
+				modifier = GF_nyto_forward_base
+				days = -1
+			}
+		}
+	}
+}
 #玩家以天灾起源游戏时生成涅托堕落
 # country_event = {
 # 	id = GFnytostart.1000

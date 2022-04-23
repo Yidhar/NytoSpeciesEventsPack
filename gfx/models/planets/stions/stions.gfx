@@ -31,9 +31,32 @@ objectTypes = {
 			shader = "PdxMeshShip"
 		}
 	}
-	
+}
+objectTypes = { 
 	pdxmesh = {
-		name = "stions_locator_mesh"
+		name = "station_frame_mesh"
+		file = "gfx/models/planets/stions/station_frame.mesh"
+		scale = 1.0
+	}
+}
+
+objectTypes = { #护盾层
+	pdxmesh = {
+		name = "station_shield_mesh"
+		file = "gfx/models/planets/stions/station_shield.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "shieldShape"
+			index = 0
+			texture_diffuse = "station_shield.dds"
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+		}
+	}
+}
+objectTypes ={ #定位器
+	pdxmesh = {
+		name = "station_locator_mesh"
 		file = "gfx/models/planets/stions/stions_locator.mesh"
 		scale = 1.0
 	}

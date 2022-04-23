@@ -1,127 +1,128 @@
 #防弹插板
 component_set = {
-	key = "tech_GFnyto_body_armor_1"
+	key = "GFnyto_body_armor_1"
 	icon = "GFX_ship_part_GFnyto_body_armor1"
 	icon_frame = 1	
 }
 component_set = {
-	key = "tech_GFnyto_body_armor_2"
+	key = "GFnyto_body_armor_2"
 	icon = "GFX_ship_part_GFnyto_body_armor2"
 	icon_frame = 1	
 }
 component_set = {
-	key = "tech_GFnyto_body_armor_3"
+	key = "GFnyto_body_armor_3"
 	icon = "GFX_ship_part_GFnyto_body_armor3"
 	icon_frame = 1	
 }
 #力场盾
 component_set = {
-	key = "tech_GFnyto_force_shield_1"
+	key = "GFnyto_force_shield_1"
 	icon = "GFX_ship_part_GFnyto_force_shield1"
 	icon_frame = 1	
 }
 component_set = {
-	key = "tech_GFnyto_force_shield_2"
+	key = "GFnyto_force_shield_2"
 	icon = "GFX_ship_part_GFnyto_force_shield2"
 	icon_frame = 1	
 }
 component_set = {
-	key = "tech_GFnyto_force_shield_3"
+	key = "GFnyto_force_shield_3"
 	icon = "GFX_ship_part_GFnyto_force_shield3"
 	icon_frame = 1	
 }
 #H武器
 component_set = {
-	key = "tech_GFnyto_accelerating_coil1"
+	key = "GFnyto_accelerating_coil1"
 	icon = "GFX_ship_part_GFnyto_accelerating_coil"
 	icon_frame = 1	
 }
 component_set = {
-	key = "tech_GFnyto_accelerating_coil2"
+	key = "GFnyto_accelerating_coil2"
 	icon = "GFX_ship_part_GFnyto_accelerating_coi2"
 	icon_frame = 1	
 }
 #W武器
 component_set = {
-	key = "tech_GFnyto_accelerating_coil3"
+	key = "GFnyto_accelerating_coil3"
 	icon = "GFX_ship_part_GFnyto_accelerating_coil"
 	icon_frame = 1	
 }
 #电脑
 component_set = {
-	key = "tech_GFnyto_additional_arithmetic_module1"
+	key = "GFnyto_additional_arithmetic_module1"
 	icon = "GFX_ship_part_GFnyto_additional_arithmetic_module1"
 	icon_frame = 1	
 }
 component_set = {
-	key = "tech_GFnyto_additional_arithmetic_module2"
+	key = "GFnyto_additional_arithmetic_module2"
 	icon = "GFX_ship_part_GFnyto_additional_arithmetic_module2"
 	icon_frame = 1	
 }
 component_set = {
-	key = "tech_GFnyto_additional_arithmetic_module3"
+	key = "GFnyto_additional_arithmetic_module3"
 	icon = "GFX_ship_part_GFnyto_additional_arithmetic_module3"
 	icon_frame = 1	
 }
 #移动城市1
 component_set = {
-	key = "tech_GF_nyto_mobile_city_energy"
+	key = "GF_nyto_mobile_city_energy"
 	icon = "GFX_ship_part_GFnyto_mobile_city_energy"
 	icon_frame = 1	
 }
 component_set = {
-	key = "tech_GF_nyto_mobile_city_minerals"
+	key = "GF_nyto_mobile_city_minerals"
 	icon = "GFX_ship_part_GFnyto_mobile_city_minerals"
 	icon_frame = 1	
 }
 component_set = {
-	key = "tech_GF_nyto_mobile_city_food"
+	key = "GF_nyto_mobile_city_food"
 	icon = "GFX_ship_part_GFnyto_mobile_city_food"
 	icon_frame = 1	
 }
 #移动城市2
 component_set = {
-	key = "tech_GF_nyto_mobile_city_alloys"
+	key = "GF_nyto_mobile_city_alloys"
 	icon = "GFX_ship_part_GFnyto_mobile_city_alloys"
 	icon_frame = 1	
 }
 component_set = {
-	key = "tech_GF_nyto_mobile_city_consumer_goods"
+	key = "GF_nyto_mobile_city_consumer_goods"
 	icon = "GFX_ship_part_GFnyto_mobile_city_consumer_goods"
 	icon_frame = 1	
 }
 component_set = {
-	key = "tech_GF_nyto_mobile_city_research"
+	key = "GF_nyto_mobile_city_research"
 	icon = "GFX_ship_part_GFnyto_mobile_city_research"
 	icon_frame = 1	
 }
+
 #穿甲弹
 component_set = {
-	key = "tech_GF_nyto_armor_piercing_bullet"
+	key = "GF_nyto_armor_piercing_bullet"
 	icon = "GFX_ship_part_GFnyto_armor_piercing_bullet"
 	icon_frame = 1	
 }
 #高爆弹
 component_set = {
-	key = "tech_GF_nyto_high_explosive_bomb"
+	key = "GF_nyto_high_explosive_bomb"
 	icon = "GFX_ship_part_GFnyto_high_explosive_bomb"
 	icon_frame = 1	
 }
 #空投仓
 component_set = {
-	key = "tech_GF_nyto_marine_corps"
+	key = "GF_nyto_marine_corps"
 	icon = "GFX_ship_part_GFnyto_marine_corps"
 	icon_frame = 1	
 }
 #伤害控制小组
 component_set = {
-	key = "tech_GF_nyto_injury_control_team"
+	key = "GF_nyto_injury_control_team"
 	icon = "GFX_ship_part_GFnyto_injury_control_team"
 	icon_frame = 1	
 }
 #侦察机
 component_set = {
-	key = "tech_GF_nyto_reconnaissance_aircraft"
+	key = "GF_nyto_reconnaissance_aircraft"
 	icon = "GFX_ship_part_GFnyto_reconnaissance_aircraft"
 	icon_frame = 1	
 }

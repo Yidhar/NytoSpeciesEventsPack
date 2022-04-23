@@ -10,6 +10,9 @@ GFnyto_collapse_particle_researcher = {
 	}
 	possible = {
 		complex_specialist_job_check_trigger = yes
+		NOT = {
+			is_species_class = eild
+		}
 	}
 	resources = {
 		category = planet_researchers
@@ -364,7 +367,7 @@ GFnyto_framework = {
 
 #逆向坍塌操作员
 GFnyto_collapse_particle_rar = {
-	category = specialist
+	category = worker
 	condition_string = SPECIALIST_JOB_TRIGGER
 	building_icon = building_GFnytp_framework_core
 	possible_pre_triggers = {
@@ -412,11 +415,6 @@ GFnyto_collapse_particle_rar = {
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
-	possible = {
-		NOT = {
-			is_species_class = eild
-		}
-	}
 	weight = {
 		weight = 5
 	}
@@ -424,7 +422,7 @@ GFnyto_collapse_particle_rar = {
 
 #物质压缩员
 GFnyto_collapse_particle_zip = {
-	category = specialist
+	category = worker
 	condition_string = SPECIALIST_JOB_TRIGGER
 	building_icon = building_GFnytp_framework_core
 	possible_pre_triggers = {
@@ -435,7 +433,7 @@ GFnyto_collapse_particle_zip = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			GF_nyto_collapse_liquid = 5
+			GF_nyto_collapse_liquid = 6
 		}
 		produces = {
 			trigger = {
@@ -451,9 +449,9 @@ GFnyto_collapse_particle_zip = {
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 		upkeep = {
-			energy = 30
-			minerals = 10
-			alloys = 10
+			energy = 10
+			minerals = 5
+			alloys = 1
 		}
 		upkeep = {
 			trigger = {
@@ -461,7 +459,7 @@ GFnyto_collapse_particle_zip = {
 					colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
 				}
 			}
-			energy = 4
+			energy = 1
 			minerals = 1
 			alloys = 1
 			multiplier = planet.trigger:has_planetary_ascension_tier
@@ -470,11 +468,6 @@ GFnyto_collapse_particle_zip = {
 			energy = 0.1
 			consumer_goods = 0.01
 			multiplier = planet.GFnyto_plante_wrlv
-		}
-	}
-	possible = {
-		NOT = {
-			is_species_class = eild
 		}
 	}
 	weight = {

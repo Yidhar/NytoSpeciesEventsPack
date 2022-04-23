@@ -1,4 +1,4 @@
-GFnyto_training_key ={
+GFnyto_training_key = {
 	length = 0
 	icon = GFX_edict_fund
 	show_tech_unlock_if = {
@@ -14,7 +14,8 @@ GFnyto_training_key ={
 		}
 	}
 }
-GFnyto_rbq ={
+
+GFnyto_rbq = {
 	length = -1
 	unity_cost_mult = 1
 	resources = {
@@ -32,10 +33,11 @@ GFnyto_rbq ={
 	}
 	effect = {
 		owner = {
-			set_country_flag = GFnyto_rbq			
+			set_country_flag = GFnyto_rbq
 		}
 	}
 }
+
 #领袖换装
 GF_nyto_leader_change = {
 	icon = "GFX_edict_type_time"
@@ -59,5 +61,83 @@ GF_nyto_leader_change = {
 	}
 	ai_weight = {
 		weight = 0
+	}
+}
+
+#自动居住站
+GF_nyto_auto_habitat = {
+	icon = "GFX_edict_type_time"
+	length = -1	
+	resources = {
+		category = edicts
+		upkeep = {
+			trigger = {
+				is_ai = no
+			}
+			alloys = 50
+			multiplier = value:Gf_nyto_habitat_cost
+		}
+	}
+	potential = {
+		has_authority = auth_GF_paradeus
+		OR = {
+			has_technology = tech_habitat_1
+			has_civic = civic_diadochi
+			has_civic = civic_great_khans_legacy
+			has_country_flag = democratic_khanate_flag
+		}
+		OR = {
+			AND = {
+				is_ai = yes
+				num_owned_planets > 50 
+			}			
+		}
+	}
+	effect = {
+		random_system_within_border = {
+			every_system_planet = {
+				limit = {
+					NOT = {
+						has_anomaly = yes
+					}
+					NOR = {
+						has_planet_flag = megastructure
+						has_planet_flag = has_megastructure
+						solar_system = {
+							has_star_flag = ring_world_built
+						}
+						is_planet_class = pc_ringworld_habitable
+						is_planet_class = pc_ringworld_habitable_damaged
+						is_planet_class = pc_ringworld_tech
+						is_planet_class = pc_ringworld_tech_damaged
+						is_planet_class = pc_ringworld_seam
+						is_planet_class = pc_ringworld_seam_damaged
+						is_planet_class = pc_habitat
+					}
+					NOR = {
+						is_asteroid = yes
+						is_moon = yes
+					}
+					is_star = no
+				}
+				save_event_target_as = give_this_planet
+				solar_system = {
+					spawn_megastructure = {
+						type = GFnyto_habitat_01
+						owner = root
+						planet = event_target:give_this_planet
+						coords_from = event_target:give_this_planet
+					}
+				}
+				set_planet_flag = has_megastructure
+			}
+		}
+	}
+	ai_weight = {
+		weight = 999
+		modifier = {
+			factor = 0 
+			num_owned_planets > 50 
+		}
 	}
 }

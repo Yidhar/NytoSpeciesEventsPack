@@ -22,7 +22,7 @@ entity = {
 		event = { trigger_once = yes sound = { soundeffect = "distance_adv_kinectic_hit" } }
 	}
 	default_state = "explode_med_hp"
-	scale = 20
+	scale = 1
 }
 ########shield##########
 entity = {
@@ -168,4 +168,36 @@ entity = {
 		event = { time = 0.0 particle = "weapon_beacon_effect"  }
 	}
 	default_state = "explode_med_hp"
+}
+
+#导弹
+entity = {
+	name = "GF_torpedo_03_large_entity"
+	pdxmesh = "arthropoid_01_missile_mesh"
+	
+	default_state = idle
+	state = { name = "idle" animation = "idle"
+		event = { time = 0 node = exhaust particle = "large_torpedo_idle_particle" keep_particle = yes }
+		event = { time = 0 node = exhaust particle = "large_torpedo_03_idle_flame_particle" keep_particle = yes }
+		event = { time = 0 node = exhaust particle = "large_torpedo_idle_particle" keep_particle = yes }
+		event = { time = 0 node = exhaust particle = "large_torpedo_03_idle_flame_particle" keep_particle = yes }
+		event = { time = 0 node = exhaust particle = "large_torpedo_idle_particle" keep_particle = yes }
+		event = { time = 0 node = exhaust particle = "large_torpedo_03_idle_flame_particle" keep_particle = yes }
+		event = { time = 0 node = exhaust particle = "large_torpedo_idle_particle" keep_particle = yes }
+		event = { time = 0 node = exhaust particle = "large_torpedo_03_idle_flame_particle" keep_particle = yes }
+		event = { time = 0 node = exhaust particle = "large_torpedo_idle_particle" keep_particle = yes }
+		event = { time = 0 node = exhaust particle = "large_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	scale = 2
+}
+
+entity = {
+	name = "GF_nyto_aoe_entity"
+	default_state = idle
+	state = { name = "idle"
+		event = {
+			time =  0 node = root particle = GF_star_explosion_3_file keep_particle = no
+		}
+	}
+	scale = 10
 }

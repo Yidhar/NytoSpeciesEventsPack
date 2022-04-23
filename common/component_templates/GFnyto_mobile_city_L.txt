@@ -1,189 +1,205 @@
-#能量
+#电
 weapon_component_template = {
-	key = "tech_GF_nyto_mobile_city_energy_L"
+	key = "GF_nyto_mobile_city_energy_L"
 	size = large
 	icon = "GFX_ship_part_GFnyto_mobile_city_energy"
 	icon_frame = 1
 	power = -300
-	modifier = {ship_hull_add = 1400}	
-	component_set = "tech_GF_nyto_mobile_city_energy"
+	modifier = {ship_shield_add = 1400}	
+	component_set = "GF_nyto_mobile_city_energy"
 	damage = {
 		min = 0
 		max = 0
 	}
+	ship_modifier = {
+		custom_tooltip = "GF_nyto_mobile_city_energy_L_DESC"
+	}
 	resources = {
-		category = ship_components
+		category = planet_technician
 		cost = {
 			minerals = 700
-			GF_nyto_collapse_liquid=3
+			alloys = 300
+			GF_nyto_dark_star_core = 10
 		}		
 		upkeep = {
-			energy = 3
-			consumer_goods = 1.5
-			GF_nyto_collapse_liquid=0.07
+			food = 20
+			GF_nyto_collapse_liquid = 100
 		}
-		produces = {energy = 12}
+		produces = { energy = 200 }
 	}
-	prerequisites = { "tech_GF_nyto_mobile_city_3" }
+	prerequisites = { "tech_GF_nyto_mobile_city_1" }
 	size_restriction = { GFnyto_mobile_city }
 }
 #矿石
 weapon_component_template = {
-	key = "tech_GF_nyto_mobile_city_minerals_L"
+	key = "GF_nyto_mobile_city_minerals_L"
 	size = large
 	icon = "GFX_ship_part_GFnyto_mobile_city_minerals"
 	icon_frame = 1
 	power = -300
-	modifier = {ship_hull_add = 1400}	
-	component_set = "tech_GF_nyto_mobile_city_minerals"
+	component_set = "GF_nyto_mobile_city_minerals"
+	ship_modifier = {
+		custom_tooltip = "GF_nyto_mobile_city_minerals_L_DESC"
+	}
 	damage = {
 		min = 0
 		max = 0
 	}
 	resources = {
-		category = ship_components
+		category = planet_miners
 		cost = {
 			minerals = 700
-			GF_nyto_collapse_liquid=3
+			alloys = 300
+			GF_nyto_dark_star_core = 10
 		}		
 		upkeep = {
-			energy = 3
-			consumer_goods = 1.5
-			GF_nyto_collapse_liquid=0.07
+			food = 20
+			GF_nyto_collapse_liquid = 100
 		}
-		produces = {minerals = 12}
+		produces = { minerals = 200 }
 	}
-	prerequisites = { "tech_GF_nyto_mobile_city_3" }
+	prerequisites = { "tech_GF_nyto_mobile_city_1" }
 	size_restriction = { GFnyto_mobile_city }
 }
 #食物
 weapon_component_template = {
-	key = "tech_GF_nyto_mobile_city_food_L"
+	key = "GF_nyto_mobile_city_food_L"
 	size = large
 	icon = "GFX_ship_part_GFnyto_mobile_city_food"
 	icon_frame = 1
 	power = -300
 	modifier = {ship_hull_add = 1400}	
-	component_set = "tech_GF_nyto_mobile_city_food"
+	ship_modifier = {
+		custom_tooltip = "GF_nyto_mobile_city_food_L_DESC"
+	}
+	component_set = "GF_nyto_mobile_city_food"
 	damage = {
 		min = 0
 		max = 0
 	}
 	resources = {
-		category = ship_components
+		category = planet_farmers
 		cost = {
 			minerals = 700
-			GF_nyto_collapse_liquid=3
+			alloys = 300
+			GF_nyto_dark_star_core = 10
 		}		
 		upkeep = {
-			energy = 3
-			consumer_goods = 1.5
-			GF_nyto_collapse_liquid=0.07
+			food = 20
+			GF_nyto_collapse_liquid = 100
 		}
-		produces = {food = 18}
+		produces = {food = 360}
 	}
-	prerequisites = { "tech_GF_nyto_mobile_city_3" }
+	prerequisites = { "tech_GF_nyto_mobile_city_1" }
 	size_restriction = { GFnyto_mobile_city }
 }
 
 #合金
 weapon_component_template = {
-	key = "tech_GF_nyto_mobile_city_alloys_L"
+	key = "GF_nyto_mobile_city_alloys_L"
 	size = large
 	icon = "GFX_ship_part_GFnyto_mobile_city_alloys"
 	icon_frame = 1
 	power = -300
 	modifier = {ship_hull_add = 1400}	
-	component_set = "tech_GF_nyto_mobile_city_alloys"
+	ship_modifier = {
+		custom_tooltip = "GF_nyto_mobile_city_alloys_L_DESC"
+	}
+	component_set = "GF_nyto_mobile_city_alloys"
 	damage = {
 		min = 0
 		max = 0
 	}
 	resources = {
-		category = ship_components
+		category = planet_metallurgists
 		cost = {
-			minerals = 600
-			volatile_motes=50
-			GF_nyto_collapse_liquid=3
+			minerals = 1000
+			rare_crystals=10
+			GF_nyto_dark_star_core = 10			 
 		}		
 		upkeep = {
-			minerals = 30
-			energy = 5
-			volatile_motes=1
-			consumer_goods = 2.5
-			GF_nyto_collapse_liquid=0.06
+			food = 20
+			consumer_goods = 10
+			GF_nyto_collapse_liquid = 100
 		}
-		produces = {alloys = 9}
+		produces = {alloys = 100 }
 	}
-	prerequisites = { "tech_GF_nyto_mobile_city_3" }
+	prerequisites = { "tech_GF_nyto_mobile_city_1" }
 	size_restriction = { GFnyto_mobile_city }
 }
 #消费品
 weapon_component_template = {
-	key = "tech_GF_nyto_mobile_city_consumer_goods_L"
+	key = "GF_nyto_mobile_city_consumer_goods_L"
 	size = large
 	icon = "GFX_ship_part_GFnyto_mobile_city_consumer_goods"
 	icon_frame = 1
 	power = -300
 	modifier = {ship_hull_add = 1400}	
-	component_set = "tech_GF_nyto_mobile_city_consumer_goods"
+	ship_modifier = {
+		custom_tooltip = "GF_nyto_mobile_city_consumer_goods_L_DESC"
+	}
+	component_set = "GF_nyto_mobile_city_consumer_goods"
 	damage = {
 		min = 0
 		max = 0
 	}
 	resources = {
-		category = ship_components
+		category = planet_artisans
 		cost = {
-			minerals = 600
-			rare_crystals=50
-			GF_nyto_collapse_liquid=3
+			minerals = 1000
+			rare_crystals=10
+			GF_nyto_dark_star_core = 10			 
 		}		
 		upkeep = {
-			minerals = 30
-			energy = 5
-			rare_crystals=1
-			consumer_goods = 2.5
-			GF_nyto_collapse_liquid=0.06
+			food = 20
+			consumer_goods = 10
+			GF_nyto_collapse_liquid=100
 		}
-		produces = {alloys = 18}
+		produces = { consumer_goods = 100 }
 	}
-	prerequisites = { "tech_GF_nyto_mobile_city_3" }
+	prerequisites = { "tech_GF_nyto_mobile_city_1" }
 	size_restriction = { GFnyto_mobile_city }
 }
 #科研
 weapon_component_template = {
-	key = "tech_GF_nyto_mobile_city_research_L"
+	key = "GF_nyto_mobile_city_research_L"
 	size = large
 	icon = "GFX_ship_part_GFnyto_mobile_city_research"
 	icon_frame = 1
 	power = -300
 	modifier = {ship_hull_add = 1400}	
-	component_set = "tech_GF_nyto_mobile_city_research"
+	ship_modifier = {
+		custom_tooltip = "GF_nyto_mobile_city_research_L_DESC"
+	}
+	component_set = "GF_nyto_mobile_city_research"
 	damage = {
 		min = 0
 		max = 0
 	}
 	resources = {
-		category = ship_components
+		category = planet_researchers
 		cost = {
-			minerals = 600
-			exotic_gases=50
-			GF_nyto_collapse_liquid=3
+			minerals = 1000
+			rare_crystals=10
+			GF_nyto_dark_star_core = 10			 
 		}		
 		upkeep = {
-			minerals = 30
-			energy = 5
-			volatile_motes=1
-			exotic_gases = 12.5
-			GF_nyto_collapse_liquid=0.06
+			food = 20
+			consumer_goods = 10
+			GF_nyto_collapse_liquid= 100
 		}
 		produces = {
-			physics_research = 12
-			society_research = 12
-			engineering_research = 12
+			physics_research = 40
+			society_research = 40
+			engineering_research = 40
 		}
 	}
-	prerequisites = { "tech_GF_nyto_mobile_city_3" }
+	prerequisites = { "tech_GF_nyto_mobile_city_1" }
 	size_restriction = { GFnyto_mobile_city }
 }
 
+#塌缩液
+
+#火控核心
+
+#训练密钥

@@ -1,7 +1,0 @@
-objectTypes = {
-	pdxmesh = {
-		name = "SR3_mesh"
-		file = "gfx/models/ships/SR3/Dreadnought_SR3_ship_section.mesh"
-		scale = 1.0
-	}
-}

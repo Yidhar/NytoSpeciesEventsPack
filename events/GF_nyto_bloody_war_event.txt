@@ -7,10 +7,11 @@ country_event = {
 	immediate = {
 		hidden_effect = {country_event={id=GFnytobloodywar.11 random = 180 days=180}}
 		every_country = {
-			limit = {has_origin =origin_GF_nyto_the_beginning_of_exile}
-			add_awakened_fallen_empire_resources = yes
-			copy_techs_from = {target =event_target:GFnyto_fallen_empire_country}
-		}
+			limit = {
+				has_origin =origin_GF_nyto_the_beginning_of_exile}
+				add_awakened_fallen_empire_resources = yes
+				copy_techs_from = { target =event_target:GFnyto_fallen_empire_country }
+			}
 		every_country = {
 			limit = {NOT={has_origin =origin_GF_nyto_the_beginning_of_exile}}
 		}

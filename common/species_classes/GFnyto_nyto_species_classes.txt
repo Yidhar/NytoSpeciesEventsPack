@@ -22,6 +22,17 @@ nyto= {
 			physics_research = 0.5
 			society_research = 0.5
 			engineering_research = 0.5
+			
+		}
+		produces = {
+			trigger = {
+				planet = { has_modifier = planet_population_control }
+				owner = { is_ai = no }				
+			}
+			GF_nyto_dark_star_core = 0.005
+		}
+		produces = {
+			trigger = { owner = { is_ai = yes } }
 			GF_nyto_dark_star_core = 0.01
 		}
 	}

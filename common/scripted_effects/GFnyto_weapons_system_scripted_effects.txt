@@ -1,290 +1,4 @@
 @Nyto_h_weapons_buff_level = 0
-GFnyto_weapons_system = {
-	if = {
-		limit = {
-			any_owned_ship = {
-				has_component = GF_Nyto_p_weapon1
-			}
-		}
-		fleet_event = {
-			id = gf_nyto_weapons.2
-			days = 5
-		}
-		#日检1
-	}
-	if = {
-		limit = {
-			any_owned_ship = {
-				has_component = GF_Nyto_h_weapon2
-			}
-		}
-		fleet_event = {
-			id = gf_nyto_weapons.3
-		}
-		#日检2
-	}
-	if = {
-		limit = {
-			any_owned_ship = {
-				OR = {
-					has_component = GF_Nyto_m_weapon2
-					has_component = GF_Nyto_s_weapon2
-				}
-			}
-		}
-		fleet_event = {
-			id = gf_nyto_weapons.5
-		}
-		#日检3
-	}
-	if = {
-		limit = {
-			any_owned_ship = {
-				has_component = GF_Nyto_T_weapon2
-			}
-		}
-		set_fleet_flag = has_GF_Nyto_T_weapon2
-		remove_modifier = GF_nyto_T_weapon2_damgabuff
-		add_modifier = {
-			modifier = GF_nyto_T_weapon2_damgabuff
-		}
-	}
-	if = {
-		limit = {
-			any_owned_ship = {
-				OR = {
-					has_component = tech_GFnyto_force_shield_L_3
-					has_component = tech_GFnyto_force_shield_M_3
-					has_component = tech_GFnyto_force_shield_S_3
-				}
-			}
-		}
-		fleet_event = {
-			id = gf_nyto_weapons.8
-		}
-	}
-	else_if = {
-		limit = {
-			any_owned_ship = {
-				OR = {
-					has_component = tech_GFnyto_force_shield_L_2
-					has_component = tech_GFnyto_force_shield_M_2
-					has_component = tech_GFnyto_force_shield_S_2
-				}
-			}
-		}
-		fleet_event = {
-			id = gf_nyto_weapons.9
-		}
-	}
-	else_if = {
-		limit = {
-			any_owned_ship = {
-				OR = {
-					has_component = tech_GFnyto_force_shield_L_1
-					has_component = tech_GFnyto_force_shield_M_1
-					has_component = tech_GFnyto_force_shield_S_1
-				}
-			}
-		}
-		fleet_event = {
-			id = gf_nyto_weapons.10
-			days = 1
-		}
-	}
-	if = {
-		limit = {
-			any_owned_ship = {
-				has_component = GF_Nyto_p_weapon2
-			}
-		}
-		fromfromfrom = {
-			set_fleet_flag = GF_Nyto_p_weapon2_system
-		}
-	}
-	every_owned_ship = {
-		##############武器#################
-		if = {
-			limit = {
-				has_component = GF_Nyto_x_weapon2
-				has_component = GF_Nyto_l_weapon1
-			}
-			fleet = {
-				export_modifier_to_variable = {
-					modifier = weapon_type_energy_weapon_fire_rate_mult
-					variable = gf_nyto_fire_rate
-				}
-				export_modifier_to_variable = {
-					modifier = weapon_type_energy_weapon_damage_mult
-					variable = gf_nyto_damg
-				}
-			}
-			ship_event = {
-				id = gf_nyto_weapons.7
-			}
-		}
-		#############特殊舰船###########
-		if = {
-			limit = {
-				is_ship_size = GFnyto_shiled_ship
-			}
-			export_modifier_to_variable = {
-				modifier = ship_shield_mult
-				variable = GFnyto_shiled_ship_hp
-			}
-			fleet = {
-				remove_modifier = GF_nyoto_shield_ship
-				add_modifier = {
-					modifier = GF_nyoto_shield_ship
-					multiplier = prev.GFnyto_shiled_ship_hp
-					days = -1
-				}
-			}
-			fleet = {
-				set_fleet_flag = Gf_nyto_shield_ship_repi
-			}
-		}
-	}
-	solar_system = {
-		every_fleet_in_system = {
-			limit = {
-				NOT = {
-					has_fleet_flag = gf_nyto_h_weapons
-				}
-			}
-			every_owned_ship = {
-				limit = {
-					has_component = GF_Nyto_h_weapon1
-				}
-				fleet = {
-					change_variable = {
-						which = Nyto_h_weapons_buff_level
-						value = 1
-					}
-				}
-			}
-			fleet_event = {
-				id = gf_nyto_weapons.4
-				days = 1
-			}
-		}
-		random_ship_in_system = {
-			limit = {
-				NOT = {
-					has_ship_flag = is_Gfnyto_command_ship
-				}
-				is_ship_size = GFnyto_Command_ship
-				has_component = GF_nyto_beacon
-			}
-			set_ship_flag = is_Gfnyto_command_ship
-			save_global_event_target_as = is_Gfnyto_command_ship
-			owner = {
-				if = {
-					limit = { NOT = { has_country_flag = is_open_fire_beacon } }
-					set_country_flag = is_open_fire_beacon									
-					country_event = {
-						id = gf_nyto_weapons.12
-						days = 1
-					}	
-				}
-			}
-		}
-	}
-	#通用日检初始化
-	every_owned_ship = {
-		limit = {
-			NOT = {
-				has_ship_flag = loading_ship_effect
-			}
-		}
-		set_ship_flag = loading_ship_effect
-		ship_event = {
-			id = gf_nyto_weapons.8001
-		}
-	}
-}
-
-add_light_modifer = {
-	if = {
-		limit = {
-			NOT = {
-				has_fleet_flag = light_cd
-			}
-		}
-		set_timed_fleet_flag = {
-			flag = light_cd
-			days = 6
-		}
-		add_modifier = {
-			modifier = gfnyto_light_weapons
-			days = 6
-		}
-	}
-	if = {
-		limit = {
-			is_in_combat = yes
-		}
-		fleet_event = {
-			id = gf_nyto_weapons.2
-			days = 1
-		}
-	}
-}
-
-add_h_weapon_modifer = {
-	if = {
-		limit = {
-			NOT = {
-				has_fleet_flag = h_weapon_modifer_cd
-			}
-		}
-		set_timed_fleet_flag = {
-			flag = h_weapon_modifer_cd
-			days = 5
-		}
-		add_modifier = {
-			modifier = gfnyto_h_weapons
-			days = 3
-		}
-	}
-	if = {
-		limit = {
-			is_in_combat = yes
-		}
-		fleet_event = {
-			id = gf_nyto_weapons.301
-			days = 1
-		}
-	}
-}
-
-add_ms_weapon_modifer = {
-	if = {
-		limit = {
-			NOT = {
-				has_fleet_flag = ms_weapon_modifer_cd
-			}
-		}
-		set_timed_fleet_flag = {
-			flag = ms_weapon_modifer_cd
-			days = 20
-		}
-		add_modifier = {
-			modifier = gfnyto_ms_weapons2
-			days = 8
-		}
-	}
-	if = {
-		limit = {
-			is_in_combat = yes
-		}
-		fleet_event = {
-			id = gf_nyto_weapons.5
-			days = 1
-		}
-	}
-}
-
 GF_nyto_beacon_weapon_damage_lock ={
 	set_variable = {
 		which = GF_nyto_beacon_damag_lv
@@ -404,14 +118,8 @@ GF_nyto_beacon_weapon_damage_lock ={
 	}
 	if = {
 		limit = { 
-			check_variable = {
-				which = GF_nyto_damag
-				value < 0
-			}
-			check_variable = {
-				which = GF_nyto_damag
-				value > -1
-			}
+			check_variable = { which = GF_nyto_damag value < 0 }
+			check_variable = { which = GF_nyto_damag value > -1 }
 		}
 		change_variable = {
 			which = GF_nyto_damag
@@ -446,4 +154,268 @@ GF_nyto_beacon_weapon_damage_lock ={
 			value = -1
 		}
 	}
+}#信标伤害固定
+
+
+GF_nyto_weapons_system ={
+	#this = fleet
+	#敌对舰船 FromFromFrom
+	every_owned_ship = {
+		limit = { NOT = { has_ship_flag = GF_nyto_weapons_system_loding } }
+		set_ship_flag = GF_nyto_weapons_system_loding		
+		ship_event = { id = gf_nyto_weapons.8001 } #激活通用日检
+		#增益武器效果
+		if = {
+			limit = { 
+				OR = {
+					has_component = GF_Nyto_m_weapon2 
+					has_component = GF_Nyto_s_weapon2 
+				}				
+			} #夜空引领者
+			fleet = { set_fleet_flag = GF_Nyto_m_weapon2_flag }
+		}#夜空引领者
+		if = {
+			limit = { has_component = GF_Nyto_h_weapon2 } #戈耳工干扰无人机
+			fromfromfrom = { set_fleet_flag = GF_Nyto_h_weapon2_flag }
+		}#戈耳工干扰无人机
+		if = {
+			limit = { has_component = GF_Nyto_p_weapon1 } #光影帷幕
+			set_ship_flag = GF_Nyto_p_weapon1_flag
+		}#光影帷幕
+		if = {
+			limit = { has_component = GF_Nyto_p_weapon1 } #花之锁
+			fromfromfrom = { set_fleet_flag = GF_Nyto_p_weapon1_flag }
+		}#花之锁
+		if = {
+			limit = { has_component = GF_Nyto_x_weapon2 has_component = GF_Nyto_l_weapon1  } #灵蛇权杖&阿克索之皿
+			export_modifier_to_variable = { modifier = weapon_type_energy_weapon_fire_rate_mult variable = gf_nyto_fire_rate }
+			export_modifier_to_variable = { modifier = weapon_type_energy_weapon_damage_mult variable = gf_nyto_damg }
+			add_modifier = { modifier = gfnyto_x_weapon2_fire_rate_modifer multiplier = gf_nyto_fire_rate }
+			add_modifier = { modifier = gfnyto_x_weapon2_weapon_damage_modifer multiplier = gf_nyto_damg }
+			add_modifier = { modifier = gfnyto_LsScepter_damage_modifer }
+			clear_variable = gf_nyto_damg
+			clear_variable = gf_nyto_fire_rate
+		}#灵蛇权杖&阿克索之皿
+		if = {
+			limit = { has_component = GF_Nyto_l_weapon2 } #圣歌风琴
+			set_ship_flag = GF_Nyto_l_weapon2_flag
+		}#圣歌风琴
+		if = {
+			limit = { has_component = GF_Nyto_T_weapon2  }
+			set_ship_flag = GF_Nyto_T_weapon2_flag
+		}#终末辉光
+		if = {
+			limit = { 
+				OR = {
+					has_component = GF_Nyto_missile_g_weapon1 
+					has_component = GF_Nyto_missile_g_weapon2
+				}			
+			}
+			export_modifier_to_variable = {
+				modifier = weapon_type_explosive_weapon_fire_rate_mult
+				variable = GF_nyto_explosive_fire_rate_mult
+			}
+			change_variable = { which = GF_nyto_explosive_fire_rate_mult value = 0.8 }
+			add_modifier = { modifier = GF_nyto_missle_1_buff days = 5 }
+			add_modifier = {
+				modifier = GF_nyto_missle_1_debuff
+				days = -1
+				multiplier = GF_nyto_explosive_fire_rate_mult
+			}
+		}#导弹武器
+		#特殊舰船
+		if = {
+			limit = { is_ship_size = GFnyto_shiled_ship }
+			export_modifier_to_variable = {
+				modifier = ship_shield_mult
+				variable = GF_shield_mult
+			}
+			fleet = {
+				add_modifier = { modifier = GF_nyoto_shield_ship multiplier = prev.GF_shield_mult }
+			}
+		}
+	}
+	#护盾效果
+	if = {
+		limit = { 
+			any_owned_ship = {
+				OR = {
+					has_component = GFnyto_force_shield_L_3
+					has_component = GFnyto_force_shield_M_3
+					has_component = GFnyto_force_shield_S_3
+				}
+			}
+			fromfromfrom = { NOT = { has_fleet_flag = GF_nyto_shield_lv3_flag } }
+		}
+		fromfromfrom = { set_fleet_flag = GF_nyto_shield_lv3 }		
+	} else_if = {
+		limit = { 
+			any_owned_ship = {
+				OR = {
+					has_component = GFnyto_force_shield_L_2
+					has_component = GFnyto_force_shield_M_2
+					has_component = GFnyto_force_shield_S_2
+				}
+			}
+			fromfromfrom = { NOT = { has_fleet_flag = GF_nyto_shield_lv2_flag } }
+		}
+		fromfromfrom = { set_fleet_flag = GF_nyto_shield_lv2 }		
+	} else_if = {
+		limit = { 
+			any_owned_ship = {
+				OR = {
+					has_component = GFnyto_force_shield_L_1
+					has_component = GFnyto_force_shield_M_1
+					has_component = GFnyto_force_shield_S_1
+				}
+			}
+			fromfromfrom = { NOT = { has_fleet_flag = GF_nyto_shield_lv2_flag } }
+		}
+		fromfromfrom = { set_fleet_flag = GF_nyto_shield_lv1 }		
+	}
+	random_owned_ship = {
+		#配件
+		if = {
+			limit = { has_component = GF_Nyto_h_weapon1 }
+			GF_nyto_in_system_weapon = yes 
+		}#刻托级舰载无人机
+		#舰船
+		if = {
+			limit = {
+				is_ship_size = GFnyto_Command_ship
+				solar_system = {
+					NOT = {
+						any_ship_in_system = {
+							is_owned_by = prevprev.owner
+							is_ship_size = GFnyto_Command_ship
+						 	has_ship_flag = is_Command_ship 
+						}
+					}
+				}				
+			}
+			set_ship_flag = is_Command_ship
+			if = {
+				limit = { has_component = GF_nyto_beacon }
+				save_global_event_target_as = is_Gfnyto_command_ship
+				owner = {
+					set_country_flag = is_open_fire_beacon					
+					country_event = { id = gf_nyto_weapons.12 days = 1 }
+				}
+			}
+		} #指挥舰效果
+	}
+}
+
+GF_nyto_shield_effect = {
+	change_variable = {
+		which = GF_nyto_shield_penetration
+		value = $GF_nyto_penetration_down$
+	}
+	add_modifier = { modifier = gfnyto_hudun multiplier = GF_nyto_shield_penetration }
+	multiply_variable = {
+		which = GF_nyto_explosive_damage
+		value = $GF_nyto_explosive_up$
+	}
+	add_modifier = {
+		modifier = gfnyto_hudun_explosive
+		multiplier = GF_nyto_explosive_damage
+	}
+	multiply_variable = {
+		which = GF_nyto_kinetic_damage
+		value = $GF_nyto_kinetic_down$
+	}
+	add_modifier = {
+		modifier = gfnyto_hudun_kinetic
+		multiplier = GF_nyto_kinetic_damage
+	}
+
+}
+
+GF_nyto_in_system_weapon = {
+	#this = ship	
+	if = {
+		limit = {  
+			has_component = GF_Nyto_h_weapon1
+		}
+		solar_system = {
+			every_ship_in_system = {
+				limit = {
+					is_owned_by = prevprev.owner
+					has_component = GF_Nyto_h_weapon1
+				}
+				prevprev.fleet = {
+					change_variable = {
+						which = GF_nyto_h_weapon_num
+						value = 1
+					}
+				}
+			}
+		}
+		fleet = {
+			remove_modifier = gfnyto_h_weapons2
+			add_modifier = {
+				modifier = gfnyto_h_weapons2
+				multiplier = GF_nyto_h_weapon_num
+				days = -1
+			}
+			clear_variable = GF_nyto_h_weapon_num	
+		}
+	} #刻托级舰载无人机
+}   
+
+GF_nyto_remove_effect ={
+	fleet = {
+		if = { limit = { has_fleet_flag = GF_Nyto_m_weapon2_flag }  remove_modifier = gfnyto_ms_weapons2 }
+		if = { limit = { has_fleet_flag = GF_Nyto_h_weapon2_flag }  remove_fleet_flag = GF_Nyto_h_weapon2_flag }
+		if = { limit = { has_fleet_flag = GF_Nyto_p_weapon1_flag } remove_fleet_flag = GF_Nyto_p_weapon1_flah }
+	}
+	if = { limit = { is_variable_set = GF_nyto_combat_days } clear_variable = GF_nyto_combat_days }
+	if = { limit = { has_ship_flag =GF_Nyto_p_weapon1_flag } remove_ship_flag = GF_Nyto_p_weapon1_flag } 
+	if = { 
+		limit = { has_ship_flag = GF_Nyto_l_weapon2_flag  } 
+		remove_ship_flag = GF_Nyto_l_weapon2_flag 
+		clear_variable = GF_nyto_son_frt_up
+		remove_modifier = GF_nyto_l_weapon2_soon
+	}
+	if = {
+		limit = { has_ship_flag = GF_Nyto_T_weapon2_flag }
+		clear_variable = prism_weapon_speed_mult
+		clear_variable = prism_weapon_speed
+		remove_modifier = GF_nyto_T_weapon2_damgabuff
+	}
+	if = {
+		limit = { 
+			fleet = { 
+				OR = {
+					has_fleet_flag = GF_nyto_shield_lv3 
+					has_fleet_flag = GF_nyto_shield_lv2 
+					has_fleet_flag = GF_nyto_shield_lv1 
+				}			 	
+			} 
+		}
+		clear_variable = GF_nyto_shield_penetration
+		clear_variable = GF_nyto_kinetic_damage
+		clear_variable = GF_nyto_explosive_damage
+		remove_modifier = gfnyto_hudun
+	}
+	if = {
+		limit = { is_variable_set = GF_shield_mult } 
+		clear_variable = GF_shield_mult 
+		fleet = { remove_modifier = GF_nyoto_shield_ship }
+	}
+	if = {
+		limit = { 
+			has_ship_flag = GF_nyto_weapons_system_loding
+		}
+		remove_ship_flag = GF_nyto_weapons_system_loding
+	}
+	if = {
+		limit = { has_ship_flag = is_Command_ship }
+		remove_modifier = GF_nyto_beacon_count_buff
+		remove_ship_flag = is_Command_ship
+		clear_variable = GF_nyto_beacon_damag_lv
+		clear_variable = has_GFnyto_beacon_weapon_02
+		clear_variable = GF_nyto_damag
+	}
+	remove_modifier = GF_nyto_missle_1_debuff
 }

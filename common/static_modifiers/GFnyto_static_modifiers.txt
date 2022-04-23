@@ -147,6 +147,12 @@ gfnyto_ms_weapons1={
 gfnyto_hudun={
 	ship_shield_penetration_mult = -1
 }
+gfnyto_hudun_kinetic = {
+	weapon_type_kinetic_weapon_damage_mult = -1
+}
+gfnyto_hudun_explosive ={
+	weapon_type_explosive_weapon_damage_mult = 1
+}
 gfnyto_x_weapon2_fire_rate_modifer={	
 	weapon_type_Akso_weapon_fire_rate_mult = 0.5
 }
@@ -159,6 +165,9 @@ gfnyto_LsScepter_damage_modifer={
 }
 gfnyto_shield_system_sheil_debuff ={
 	weapon_type_kinetic_weapon_damage_mult = -1
+}
+gf_nyto_commind_weapon_buff ={
+	force_disparity_fire_rate_mult = 2
 }
 #缺少训练密钥
 GF_nyto_training_key_deficit ={
@@ -176,11 +185,13 @@ GF_nyto_new_fire_control_unit_deficit ={
 #ELIDdengji
 GF_nyto_Elid_level ={
 	army_damage_mult = 0.05
-	army_health = 0.02
+	army_health = 0.05
 }
 GF_nyto_forward_base ={
 	icon = "gfx/interface/icons/modifiers/GFnyto_gestalt.dds"
 	country_base_alloys_produces_add = 20
+	ship_sensor_range_add = 3
+	ship_speed_mult = 0.5	
 }
 #额外护盾
 GF_nyoto_shield_ship ={
@@ -207,7 +218,7 @@ GF_nyto_Radiation2 ={
 }
 #圣歌风琴
 GF_nyto_l_weapon2_soon ={
-	weapon_type_son_weapon_fire_rate_mult = 0.5	
+	weapon_type_son_weapon_fire_rate_mult = 0.1	
 }
 #终末辉光
 GF_nyto_T_weapon2_damgabuff = {
@@ -215,4 +226,15 @@ GF_nyto_T_weapon2_damgabuff = {
 }
 GF_nyto_beacon_count_buff ={
 	weapon_type_beacon_weapon_damage_mult = 10000
+}
+GF_nyto_aoe_weapon={
+	weapon_type_aoe_weapon_damage_mult = 999999999999999999
+	weapon_type_aoe_weapon_fire_rate_mult = 999999999999999999
+}
+#双蛇仗
+GF_nyto_missle_1_buff ={
+	weapon_type_explosive_weapon_fire_rate_mult = 999999999999999999
+}
+GF_nyto_missle_1_debuff ={
+	weapon_type_explosive_weapon_fire_rate_mult = -1
 }

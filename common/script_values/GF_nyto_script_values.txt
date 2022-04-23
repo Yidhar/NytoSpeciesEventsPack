@@ -1,0 +1,27 @@
+Gf_nyto_habitat_cost ={
+	base = 0
+	complex_trigger_modifier={
+		trigger = count_planet_within_border
+		parameters ={
+			limit = {
+				NOT = { has_anomaly = yes }
+				NOR = {
+					has_planet_flag = megastructure
+					has_planet_flag = has_megastructure
+					solar_system = { has_star_flag = ring_world_built }
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_ringworld_habitable_damaged
+					is_planet_class = pc_ringworld_tech
+					is_planet_class = pc_ringworld_tech_damaged
+					is_planet_class = pc_ringworld_seam
+					is_planet_class = pc_ringworld_seam_damaged
+					is_planet_class = pc_habitat
+				}
+				NOR = { is_asteroid = yes is_moon = yes }
+				is_star = no
+			}
+		}
+		mode = add
+		mult = 1
+	}
+}

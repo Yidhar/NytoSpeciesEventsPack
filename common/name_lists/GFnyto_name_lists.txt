@@ -13,8 +13,9 @@
 		transport = {"装载士"}
 		military_station_small = {"射击士"}
 		ion_cannon = {"重炮士"}
-
-		GFnyto_mobile_city= {"机械巨兽"}
+		GFnyto_Command_ship = { "指挥舰" }
+		GFnyto_shiled_ship = { "立场支援舰" }
+		GFnyto_mobile_city= {"生产单元" "复合单元" "避难所" }		
 	}
 	fleet_names = {
 		random_names = {"枪骑兵舰队" "翼骑兵舰队" "龙骑兵舰队" "骠骑兵舰队" "近卫骑兵舰队" "重装骑兵舰队" "游骑兵舰队""弓骑兵舰队" "先锋骑兵舰队"}

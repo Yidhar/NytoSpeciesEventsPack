@@ -31,9 +31,7 @@ country_event = {
 	hide_window = no
 	is_triggered_only = yes
 	trigger = {
-		owner = {
-			has_ascension_perk = ap_GF_nyto_conquer_hell
-		}
+		owner = { has_ascension_perk = ap_GF_nyto_conquer_hell }
 	}
 	immediate = {
 		#		shift_ethic = "ethic_paradeus_antecedentnyto"

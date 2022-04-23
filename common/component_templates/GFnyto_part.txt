@@ -7,10 +7,9 @@ utility_component_template = {
 	icon_frame = 1
 	power = -10
 	modifier = {
-		ship_shield_penetration_mult = 0.2
-		ship_armor_penetration_mult = 0.2
+		ship_armor_penetration_mult = 0.3
 	}	
-	component_set = "tech_GF_nyto_armor_piercing_bullet"
+	component_set = "GF_nyto_armor_piercing_bullet"
 	resources = {
 		category = ship_components
 		cost = {
@@ -31,7 +30,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = -10
 	modifier = {ship_hull_damage_mult = 0.4}	
-	component_set = "tech_GF_nyto_high_explosive_bomb"
+	component_set = "GF_nyto_high_explosive_bomb"
 	resources = {
 		category = ship_components
 		cost = {
@@ -52,7 +51,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = -10
 	modifier = {ship_hull_add = 1000}	
-	component_set = "tech_GF_nyto_marine_corps"
+	component_set = "GF_nyto_marine_corps"
 	resources = {
 		category = ship_components
 		cost = {
@@ -73,7 +72,7 @@ utility_component_template = {
 		ship_shield_regen_add_perc = 1
 		ship_armor_regen_add_perc = 1
 	}	
-	component_set = "tech_GF_nyto_injury_control_team"
+	component_set = "GF_nyto_injury_control_team"
 	resources = {
 		category = ship_components
 		cost = {
@@ -95,7 +94,7 @@ utility_component_template = {
 		ship_sensor_range_add = 1
 		ship_tracking_add = 15
 	}	
-	component_set = "tech_GF_nyto_reconnaissance_aircraft"
+	component_set = "GF_nyto_reconnaissance_aircraft"
 	resources = {
 		category = ship_components
 		cost = {

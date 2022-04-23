@@ -1,5 +1,5 @@
 particle={
-	name="GF_weapon_effect"
+	name="GF_dragon_fire_effect"
 	subsystem={
 		name="Surface_fire"
 		max_amount=10000
