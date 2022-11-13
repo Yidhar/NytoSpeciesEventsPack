@@ -40,6 +40,7 @@ GFnyto_mather_ship ={
 		ship_ftl_jumpdrive_range_mult = 2
 		ship_shield_add = 10000
 		ship_armor_add = 10000000
+		ships_upkeep_mult = -1
 	}
 	size_multiplier = 0
 	fleet_slot_size = 0
@@ -68,6 +69,7 @@ GFnyto_mather_ship ={
 
 #指挥舰
 GFnyto_Command_ship={
+	graphical_culture = yes
 	formation_priority =  @corvette_formation_priority
 	icon = ship_size_military_16
 	entity = SANGVIS_FERRI_frame_entity
@@ -80,15 +82,6 @@ GFnyto_Command_ship={
 		ship_evasion_add = -0.5
 		ship_armor_add = 70000
 		ship_shield_add = 20000
-	}
-	empire_limit = {
-		base = 1
-		max = 4
-		naval_cap_div = 2000
-		show = {
-			is_scope_valid = yes
-			has_technology = tech_titans
-		}
 	}
 	section_slots = {
 		"bow" = { locator = part2 }
@@ -164,6 +157,13 @@ GFnyto_Command_ship={
 			}
 		}
 	}
+	# possible_country = {
+	# 	check_variable = {
+	# 		which = GFnyto_Command_ship_num
+	# 		value <= 4
+	# 	}
+	# 	custom_tooltip = check_GFnyto_Command_ship_num
+	# }
 	prerequisites = {
 		tech_template_GFnyto_Command_ship
 	}
@@ -178,10 +178,16 @@ GFnyto_Command_ship={
 			alloys = 200
 		}
 	}
+	ai_ship_data = {
+		fraction ={
+			base = 4
+		}
+	}
 }
 
 #主力舰
 GF_nyto_super_battelship ={
+	graphical_culture = yes
 	formation_priority =  @corvette_formation_priority
 	icon = ship_size_military_16
 	entity = battel_ship_cv_frame_entity
@@ -200,7 +206,7 @@ GF_nyto_super_battelship ={
 		"stern"  = { locator = part2 }
 	}
 	size_multiplier = 16
-	fleet_slot_size = 32
+	fleet_slot_size = 8
 	class = shipclass_military
 	base_buildtime = 1800
 	can_have_federation_design = no
@@ -229,49 +235,6 @@ GF_nyto_super_battelship ={
 			}
 		}
 	}	
-	possible_construction = {
-		custom_tooltip = {
-			fail_text = starbase_citadel_trigger
-			OR = {
-				AND = {
-					is_scope_type = megastructure
-					OR = {
-						is_megastructure_type = GFnyto_habitat_02
-						is_megastructure_type = mega_shipyard_3
-						is_megastructure_type = mega_shipyard_restored
-						is_megastructure_type = StarForge
-						is_megastructure_type = exe_black_hole_restore
-					}
-				}
-				AND = {
-					is_scope_type = starbase
-					has_starbase_size >= starbase_citadel
-				}
-			}
-		}
-		custom_tooltip = {
-			fail_text = starbase_titan_yards_trigger
-			OR = {
-				AND = {
-					is_scope_type = megastructure
-					OR = {
-						is_megastructure_type = GFnyto_habitat_02
-						is_megastructure_type = mega_shipyard_3
-						is_megastructure_type = mega_shipyard_restored
-						is_megastructure_type = StarForge
-						is_megastructure_type = exe_black_hole_restore
-					}
-				}
-				AND = {
-					is_scope_type = starbase
-					has_starbase_building = titan_yards
-				}
-			}
-		}
-	}
-	possible_country = {
-		has_authority = auth_GF_paradeus
-	}
 	prerequisites = {
 		tech_template_GFnyto_cv_batellship
 	}
@@ -284,6 +247,11 @@ GF_nyto_super_battelship ={
 		upkeep = {
 			energy = 100
 			alloys = 200
+		}
+	}
+	ai_ship_data = {
+		fraction ={
+			base = 1000
 		}
 	}
 }

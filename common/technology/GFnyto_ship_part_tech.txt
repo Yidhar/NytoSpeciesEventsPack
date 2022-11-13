@@ -16,22 +16,115 @@ tech_GFnyto_accelerating_coil1= {
 			desc = "可以安装歼星武器,使泰坦能够进行对行星毁灭打击。"
 		}
 	}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {
+		has_authority = auth_GF_paradeus
+	}
 	ai_weight = {weight = 5}
 }
-#能源核心
+#能源核心 lv3
 tech_GFnyto_power={
 	icon = tech_GFnyto_power
 	cost = 50000
 	area = physics
 	tier = 5
 	is_rare = yes
+	gateway = power_generation
 	category = {particles}
 	prerequisites = {"tech_zero_point_power"}
 	weight = 5
 	modifier = {}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {
+		OR = {
+			has_authority = auth_GF_paradeus
+			has_country_flag = has_nyto_technology
+		}	
+	}
 	ai_weight = {weight = 5}
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "tech_GFnyto_power_title"
+			desc = "tech_GFnyto_power_desc"
+		}
+	}
+	
+}
+#能源核心 lv2
+tech_GFnyto_power_lv2 ={
+	area = physics
+	cost = @tier3cost2
+	tier = 3
+	category = { particles }
+	ai_update_type = all
+	weight = @tier3weight2
+	gateway = power_generation
+	potential = {
+		OR = {
+			has_authority = auth_GF_paradeus
+			has_country_flag = has_nyto_technology
+		}		
+	}
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "tech_GFnyto_power_lv2_title"
+			desc = "tech_GFnyto_power_lv2_desc"
+		}
+	}
+	prerequisites = {	
+		tech_cold_fusion_power
+	}
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			has_technology = tech_battleships
+		}
+		modifier = {
+			factor = 10
+			has_technology =tech_GF_nyto_Inverse_collapse_2
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+#能源核心 lv1
+tech_GFnyto_power_lv1 = {
+	area = physics
+	cost = 0
+	tier = 1
+	category = { particles }
+	ai_update_type = all
+	potential = {
+		OR = {
+			has_authority = auth_GF_paradeus
+			has_country_flag = has_nyto_technology
+		}	
+	}
+	start_tech = yes
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "tech_GFnyto_power_lv1_title"
+			desc = "tech_GFnyto_power_lv1_desc"
+		}
+	}
+	
 }
 #附加运算模块
 tech_GFnyto_additional_arithmetic_module= {
@@ -113,7 +206,12 @@ tech_GFnyto_force_shield1= {
 	prerequisites = { "tech_GF_nyto_Inverse_collapse_2" }
 	weight = 65
 	modifier = {ship_shield_regen_add_perc = 0.01}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {
+		OR = {
+			has_authority = auth_GF_paradeus
+			has_country_flag = has_nyto_technology
+		}	
+	}
 	ai_weight = {weight = 5}
 }
 tech_GFnyto_force_shield2= {
@@ -126,7 +224,12 @@ tech_GFnyto_force_shield2= {
 	prerequisites = { "tech_GFnyto_force_shield1" }
 	weight = 75
 	modifier = {ship_shield_regen_add_perc = 0.01}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {
+		OR = {
+			has_authority = auth_GF_paradeus
+			has_country_flag = has_nyto_technology
+		}	
+	}
 	ai_weight = {weight = 5}
 }
 tech_GFnyto_force_shield3= {
@@ -139,7 +242,12 @@ tech_GFnyto_force_shield3= {
 	prerequisites = { "tech_GFnyto_force_shield2" }
 	weight = 45
 	modifier = {ship_shield_regen_add_perc = 0.01}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {
+		OR = {
+			has_authority = auth_GF_paradeus
+			has_country_flag = has_nyto_technology
+		}	
+	}
 	ai_weight = {weight = 5}
 }
 #高爆弹
@@ -181,7 +289,6 @@ tech_GF_nyto_reconnaissance_aircraft= {
 	modifier = {}
 	potential = {
 		has_authority = auth_GF_paradeus
-		always = no
 	}
 	weight_modifier = {factor = 4}
 	ai_weight = {weight = 2}
@@ -273,7 +380,7 @@ tech_GF_nyto_x ={
 	category = { voidcraft }
 	weight = 34
 	is_rare = yes
-	prerequisites ={ tech_GF_nyto_RAR }
+	prerequisites ={ tech_GF_nyto_RAR tech_GFnyto_framework }
 	potential = {
 		has_authority = auth_GF_paradeus
 	}
@@ -289,7 +396,7 @@ tech_GF_nyto_H ={
 	weight = 25
 	is_rare = yes
 	category = { voidcraft }
-	prerequisites ={ tech_GF_nyto_RAR }
+	prerequisites ={ tech_GF_nyto_RAR tech_GFnyto_framework}
 	potential = {
 		has_authority = auth_GF_paradeus
 	}
@@ -306,7 +413,7 @@ tech_GF_nyto_P ={
 	weight = 20
 	is_rare = yes
 	category = { voidcraft }
-	prerequisites ={ tech_GF_nyto_RAR }
+	prerequisites ={ tech_GF_nyto_RAR tech_GFnyto_framework}
 	potential = {
 		has_authority = auth_GF_paradeus
 	}
@@ -326,7 +433,7 @@ tech_GF_nyto_G ={
 	weight = 20
 	is_rare = yes
 	category = { voidcraft }
-	prerequisites ={ tech_GF_nyto_RAR }
+	prerequisites ={ tech_GF_nyto_RAR tech_GFnyto_framework}
 	potential = {
 		has_authority = auth_GF_paradeus
 	}
@@ -346,38 +453,9 @@ tech_GF_nyto_sm ={
 	weight = 20
 	is_rare = yes
 	category = { voidcraft }
-	prerequisites ={ tech_GF_nyto_Inverse_collapse_1 }
+	prerequisites ={ tech_GF_nyto_Inverse_collapse_1 tech_GFnyto_framework}
 	potential = {
 		has_authority = auth_GF_paradeus
 	}
 	ai_weight = {weight =  50}
-}
-tech_GFnyto_RBR = {
-	cost = 0
-	area = society
-	tier = 1
-	weight_modifier = {
-		factor = 0.1
-		modifier = {
-			factor = 0
-			always = yes
-		}
-	}
-	start_tech = no
-	category = {
-		voidcraft
-	}
-	potential = {
-		has_authority = auth_GF_paradeus
-		is_ai = no
-	}
-	ai_weight = {
-		weight = 0
-	}
-	prerequisites = {
-		tech_lasers_1
-	}
-	modifier = {
-		custom_tooltip = "既然你诚心诚意的召唤了。那么我应约而至。给与你无上的伟力。"
-	}
 }

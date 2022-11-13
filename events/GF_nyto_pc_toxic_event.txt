@@ -24,6 +24,7 @@ planet_event = {
 		set_planet_flag = GFnyto_district_consumer_good
 		add_district = district_GF_nyto_pc_toxic_consumer_good
 		add_district = district_GF_nyto_pc_toxic_consumer_good
+		
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -110,7 +111,7 @@ planet_event = {
 			}
 		}
 	}
-	#塌缩液区划
+	#坍塌液区划
 	option = {
 		name = GFnytopctoxic.20.i
 		set_planet_flag = GFnyto_district_leisure

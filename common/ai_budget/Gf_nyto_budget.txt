@@ -6,7 +6,7 @@ GF_nyto_collapse_liquid_expenditure_ship ={
 	potential = {
 		always = yes
 	}
-	fraction = {
+	weight = {
 		weight = 2
 	}
 }
@@ -17,7 +17,7 @@ GF_nyto_new_fire_control_unit_expenditure_ship ={
 	potential = {
 		always = yes
 	}
-	fraction = {
+	weight = {
 		weight = 2
 	}
 }
@@ -29,7 +29,7 @@ GF_engery_expenditure_ship = {
 	potential = {
 		has_authority = auth_GF_paradeus
 	}
-	fraction = {
+	weight = {
 		weight = 0.3
 	}
 }
@@ -43,10 +43,11 @@ GF_nyto_collapse_liquid_expenditure_ship_upgrades ={
 	potential = {
 		always = yes
 	}
-	fraction = {
+	weight = {
 		weight = 2
 	}
 }
+
 GF_nyto_new_fire_control_unit_expenditure_ship_upgrades ={
 	resource = GF_nyto_new_fire_control_unit
 	type = expenditure
@@ -54,7 +55,7 @@ GF_nyto_new_fire_control_unit_expenditure_ship_upgrades ={
 	potential = {
 		always = yes
 	}
-	fraction = {
+	weight = {
 		weight = 2
 	}
 }
@@ -66,7 +67,7 @@ GF_engery_expenditure_ship_upgrades = {
 	potential = {
 		has_authority = auth_GF_paradeus
 	}
-	fraction = {
+	weight = {
 		weight = 0.5
 	}
 }
@@ -80,7 +81,7 @@ GF_nyto_collapse_liquid_expenditure_ship_upkeep ={
 	potential = {
 		always = yes
 	}
-	fraction = {
+	weight = {
 		weight = 0.7
 	}
 }
@@ -91,7 +92,7 @@ GF_nyto_new_fire_control_unit_expenditure_ship_upkeep ={
 	potential = {
 		always = yes
 	}
-	fraction = {
+	weight = {
 		weight = 0.7
 	}
 }
@@ -103,7 +104,7 @@ GF_engery_expenditure_ship_upkeep = {
 	potential = {
 		has_authority = auth_GF_paradeus
 	}
-	fraction = {
+	weight = {
 		weight = 0.2
 	}
 }
@@ -119,7 +120,7 @@ GF_nyto_dark_star_core_expenditure_decisions= {
 	potential = {
 		always = yes
 	}
-	fraction = {
+	weight = {
 		weight = 1
 	}
 }
@@ -133,7 +134,7 @@ GF_cg_food_expenditure_decisions = {
 		is_cg_country = yes
 	}
 
-	fraction = {
+	weight = {
 		weight = 0.1
 	}
 
@@ -151,7 +152,7 @@ GF_cg_energy_expenditure_decisions = {
 		is_cg_country = yes
 	}
 
-	fraction = {
+	weight = {
 		weight = 0.1
 	}
 }
@@ -164,7 +165,7 @@ GF_cg_minerals_expenditure_decisions = {
 		is_cg_country = yes
 	}
 
-	fraction = {
+	weight = {
 		weight = 0.1
 	}
 }
@@ -178,7 +179,7 @@ GF_cg_holylight_crystal_expenditure_decisions = {
 		is_cg_country = yes
 	}
 
-	fraction = {
+	weight = {
 		weight = 0.5
 	}
 
@@ -196,11 +197,24 @@ GF_cg_sr_beauty_expenditure_decisions = {
 		is_cg_country = yes
 	}
 
-	fraction = {
+	weight = {
 		weight = 0.2
 	}
 
 	static_min = {
 		base = 100
 	}	
+}
+
+#建筑
+GF_nyto__collapse_liquid_planets_cost ={
+	resource = GF_nyto_collapse_liquid
+	type = expenditure
+	category = planets
+	potential = {
+		has_authority = auth_GF_paradeus
+	}
+	weight = {
+		weight = 0.5
+	}
 }

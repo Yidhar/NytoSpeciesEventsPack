@@ -57,3 +57,35 @@ GFnyto_greena_system = {
 		}
 	}
 }
+
+GF_nyto_end_system ={
+	name = "NAME_GF_nyto_end_system"
+	class = sc_GF_endler
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 250
+	}
+	planet = {
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	init_effect = {
+		create_ambient_object = {
+			type = GF_nyto_ender_system
+			use_3d_location = yes
+			entity_offset = { min = 0 max = 0 }
+			entity_offset_angle = { min = 0 max = 360 }
+			entity_offset_height = { min = 0 max = 0 }
+		}
+		last_created_ambient_object = {
+			set_location = {
+				target = star
+				distance = 50
+			}
+		}
+	}
+}

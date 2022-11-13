@@ -14,13 +14,13 @@ spriteTypes = {
 }
 spriteTypes = {
 	frameAnimatedSpriteType = {	
-	name = "GFX_GF_nyto_the_last_light2"
-	texturefile = "gfx/event_pictures/origins/origin_GF_nyto_the_last_light2.dds"
-	noOfFrames = 30
-	transParencecheck = no
-	animation_rate_fps = 30
-	looping = yes
-	play_on_show = yes
-	alwaystransparent =yes	
+		name = "GFX_GF_nyto_the_last_light2"
+		texturefile = "gfx/event_pictures/origins/origin_GF_nyto_the_last_light2.dds"
+		noOfFrames = 30
+		transParencecheck = no
+		animation_rate_fps = 30
+		looping = yes
+		play_on_show = yes
+		alwaystransparent =yes	
 	}
 }

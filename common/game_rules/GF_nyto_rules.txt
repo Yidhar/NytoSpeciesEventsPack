@@ -18,16 +18,16 @@
 # 			has_building_construction = no
 # 		}
 # 	}
+# # }
+# should_planetary_automate = {
+# 	OR = { 
+# 		free_district_slots > 0 
+# 		free_building_slots > 0 
+# 		free_jobs < 3 
+# 		num_unemployed > 0 
+# 	}
+# 	has_building_construction = no
 # }
-should_planetary_automate = {
-	OR = { 
-		free_district_slots > 0 
-		free_building_slots > 0 
-		free_jobs < 3 
-		num_unemployed > 0 
-	}
-	has_building_construction = no
-}
 
 can_species_be_assembled = {
 	OR = {

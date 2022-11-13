@@ -9,7 +9,7 @@ planet_event = {
 	location = from
 	is_triggered_only = yes
 	immediate = {
-		owner = {
+		solar_system.space_owner = {
 			change_variable = {
 				which = GFnyto_heritage_department_build_count
 				value = 1
@@ -19,14 +19,16 @@ planet_event = {
 	option = {
 		name = "gfnytorelics.1.a"
 		custom_tooltip = txt_gfnytorelics1_a
-		owner = {
-			add_modifier = {
-				modifier = GFnyto_set_up_heritage_department
-			}
-			capital_scope = {
-				add_deposit = d_GFnyto_ancient_ruins_zone
-				archaeological_site = {
-					set_site_progress_locked = no
+		hidden_effect ={
+			solar_system.space_owner= {
+				add_modifier = {
+					modifier = GFnyto_set_up_heritage_department
+				}
+				home_planet = {
+					add_deposit = d_GFnyto_ancient_ruins_zone
+					archaeological_site = {
+						set_site_progress_locked = no
+					}
 				}
 			}
 		}
@@ -45,10 +47,12 @@ planet_event = {
 	option = {
 		name = "gfnytorelics.2.a"
 		custom_tooltip = txt_gfnytorelics2_a
-		owner = {
-			capital_scope = {
-				archaeological_site = {
-					set_site_progress_locked = no
+		hidden_effect ={
+			solar_system.space_owner= {
+				home_planet = {
+					archaeological_site = {
+						set_site_progress_locked = no
+					}
 				}
 			}
 		}
@@ -67,17 +71,12 @@ planet_event = {
 	option = {
 		name = "gfnytorelics.3.a"
 		custom_tooltip = txt_gfnytorelics3_a
-		owner = {
-			capital_scope = {
-				archaeological_site = {
-					set_site_progress_locked = no
-				}
+		hidden_effect ={
+			solar_system.space_owner= {
+				home_planet = { archaeological_site = { set_site_progress_locked = no } }
+				add_tech_progress = { tech = tech_GF_nyto_storage_of_ancient_technology progress = 0.1 }
 			}
-			add_tech_progress = {
-				tech = tech_GF_nyto_storage_of_ancient_technology
-				progress = 0.1
-			}
-		}
+		}		
 	}
 }
 
@@ -93,12 +92,14 @@ planet_event = {
 	option = {
 		name = "gfnytorelics.5.a"
 		custom_tooltip = txt_gfnytorelics5_a
-		owner = {
-			capital_scope = {
-				archaeological_site = {
-					set_site_progress_locked = no
+		hidden_effect ={
+			solar_system.space_owner= {
+				home_planet = {
+					archaeological_site = {
+						set_site_progress_locked = no
+					}
 				}
-			}
+			}		
 		}
 	}
 }
@@ -115,16 +116,19 @@ planet_event = {
 	option = {
 		name = "gfnytorelics.6.a"
 		custom_tooltip = txt_gfnytorelics6_a
-		owner = {
-			set_country_flag = GFnyto_has_done_zion_event_chain
-			set_country_flag = GFnyto_has_ap_GF_nyto_noussphere
-			hidden_effect = {
-				country_event = {
-					id = gfnytorelics.7
-					days = 1800					#5年后
+		hidden_effect = {
+			solar_system.space_owner= {
+				set_country_flag = GFnyto_has_done_zion_event_chain
+				set_country_flag = GFnyto_has_ap_GF_nyto_noussphere
+				hidden_effect = {
+					country_event = {
+						id = gfnytorelics.7
+						days = 1800					#5年后
+					}
 				}
-			}
+			}		
 		}
+		
 	}
 }
 

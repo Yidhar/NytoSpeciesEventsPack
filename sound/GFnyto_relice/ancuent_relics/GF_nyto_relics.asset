@@ -39,3 +39,18 @@ sound = {
 	file = "GFnyto_Elidattack_sound.wav"
 	volume = 1
 }
+sound = {
+	name =  "GFnyto_ELid_win_sound"
+	file = "GF_nyto_twilight.wav"
+	volume = 1
+}
+soundeffect = {
+	name = "GFnyto_ELid_win_sound"
+	volume = 0.5
+	max_audible = 1
+	max_audible_behaviour = fail
+	fade_out = 0.3
+	sounds = {
+		sound = "GFnyto_ELid_win_sound"
+	}
+}

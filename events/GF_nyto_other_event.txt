@@ -14,24 +14,24 @@ planet_event = {
 		}
 	}
 	immediate = {
-#		owner = {
+		owner = {
 			add_resource = {
 				food = 100
-#			}
+			}
 		}
 	}
 	option = {
 		name = "GFnyto_other_event.1.a"
-#		owner = {
+		owner = {
 			add_resource = {
 				food = -100
 			}
-			hidden_effect = {
-				planet_event = {
-					id = GFnyto_other_event.2 days = 10
-				}
+		}
+		hidden_effect = {
+			planet_event = {
+				id = GFnyto_other_event.2 days = 10
 			}
-#		}
+		}
 	}
 	option = {
 		name = "GFnyto_other_event.1.b"

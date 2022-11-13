@@ -44,6 +44,7 @@ decision_pc_GF_nyto_embers_gloomy_project = {
 				entity = "GFnyto_planet03_entity"
 			}
 			set_planet_flag = GFnyto_Spring_wakes_up
+			set_update_modifiers_batch = begin
 			if = {
 				limit = {  
 					owner = {
@@ -89,16 +90,15 @@ decision_pc_GF_nyto_embers_gloomy_project = {
 			}
 			if = {
 				limit = {  owner = { is_ai = no } }
-				if = { limit = { is_homeworld = yes }
+				if = { limit = { is_homeworld = no }
 					planet_event = { id = GFnytopctoxic.20 }
-				}
-				planet_event = { id = GFnytopctoxic.20 }
-				if = {
-					limit = { planet_size > 20 is_homeworld = no }
-					planet_event = { id = GFnytopctoxic.20 }
+					if = {
+						limit = { planet_size > 20 is_homeworld = no }
+						planet_event = { id = GFnytopctoxic.20 }
+					}
 				}
 			}
-
+			set_update_modifiers_batch = end
 		}
 	}
 	ai_weight = {
@@ -208,7 +208,7 @@ decision_GFnyto_pop_load = {
 		owner = {
 			has_authority = auth_GF_paradeus
 			NOT = {
-				has_civic = civic_GF_nyto_heart_of_suffering
+				has_civic = civic_GF_nyto_Vengeance_Crusade
 			}
 		}
 	}
@@ -249,12 +249,22 @@ decision_GFnyto_pop_load = {
 	ai_weight = {
 		weight = 20
 		modifier = {
+			always = yes
+			has_planet_flag = PR_flg_plnt_ASCENDED
+		}
+		modifier = {
 			factor = 2.5
 			free_jobs >= 0
 		}
 		modifier = {
 			factor = 0
 			num_unemployed > 1
+		}
+		modifier = {
+			factor = 1
+			owner = {
+				has_country_flag = PR_flg_cntr_ASCENDED
+			}
 		}
 	}
 }
@@ -426,5 +436,62 @@ decision_GFnyto_end_population_control ={
 	}
 	ai_weight = {
 		weight = 0
+	}
+}
+
+#定向人口迁徙 接收
+decision_GFnyto_autopops = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_politics
+	resources = {
+		category = decisions
+		cost = {
+			unity = 250
+		}
+	}
+	potential = {
+		owner = { has_authority = auth_GF_paradeus }
+		NOT = { has_planet_flag =gfnyto_select_thi_planet }
+	}
+	effect = { 
+		if = {
+			limit = { exists = event_target:GFnyto_select_planet }
+			event_target:GFnyto_select_planet = {
+				remove_planet_flag = gfnyto_select_thi_planet
+			}
+		}
+		set_planet_flag = gfnyto_select_thi_planet
+		save_global_event_target_as = GFnyto_select_planet
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+#定向人口迁徙 输送
+decision_GFnyto_autopops_2 ={
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_politics
+	resources = {
+		category = decisions
+		cost = {
+			unity = 250
+		}
+	}
+	potential = {
+		owner = { has_authority = auth_GF_paradeus }
+		exists = event_target:GFnyto_select_planet
+		num_pops < 100
+	}
+	effect = {
+		every_owned_pop = {
+			resettle_pop = {
+				pop = this
+				planet = event_target:GFnyto_select_planet
+			}
+		}
 	}
 }

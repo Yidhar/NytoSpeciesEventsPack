@@ -1,6 +1,6 @@
 NYTO= {
 	species_trait_points = 4
-	species_max_traits = 8
+	species_max_traits = 10
 }
 EILD= {
 	species_trait_points = 20

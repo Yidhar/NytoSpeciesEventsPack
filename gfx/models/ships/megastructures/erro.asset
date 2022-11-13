@@ -1,59 +1,47 @@
 # 待机
 entity = {
 	name = "error_entity"
-	pdxmesh = star_eater_01_mesh
-	scale = 5
+	scale = 2
 	default_state = idle 
-	locator = {
-		name = partice1
-		position = {
-			0 10 0
-		}
-	}
-	locator = {
-		name = partice2
-		position = {
-			0 1000 0
-		}
-		rotation = {
-			0 0 180
-		}
-	}
 	locator ={
 		name = entity2
 		position ={
-			0 100 0
+			0 650 0
 		}
 	}
-	state = {
-		name = idle  animation = open looping = yes
-		event = { time = 0	id = "beam_start"  }		
-		event = { time = 0.0 node = "effect_core" particle = "necroid_01_colossus_core_effect" keep_particle = yes trigger_once = yes }
-		event = { time = 0 node = "light_locator_01" particle = "nemesis_01_ship_light_effect" keep_particle = yes trigger_once = yes }
-		event = { time = 0 node = "light_locator_02" particle = "nemesis_01_ship_light_effect" keep_particle = yes trigger_once = yes }
-		event = { time = 0 node = "light_locator_03" particle = "nemesis_01_ship_light_effect" keep_particle = yes trigger_once = yes }
-		# start_event = {
-		# 	node = "partice1" particle = weapon_beacon_fire_effect keep_particle = yes trigger_once = yes
-		# }
-		start_event = { trigger_once = yes sound = { soundeffect = "amb_star_eater_idle_hum" stop_on_state_change = yes } }
-		start_event = { trigger_once = yes sound = { soundeffect = "amb_star_eater_idle_pulsating" stop_on_state_change = yes } }
-		start_event = { trigger_once = yes sound = { soundeffect = "amb_star_eater_open_energy" stop_on_state_change = yes } }
+	locator ={
+		name = entity3
+		position = {
+			0 450 0
+		}
+		rotation = {
+			0 -90 0
+		}
+	}
+	locator = {
+		name = entity4
+		position = {
+			0 400 0
+		}
+		rotation = {
+			0 -180 0
+		}
 	}
 	attach = {
 		entity2 = error_entity2	
 	}
-
-	# attach = {
-	# 	partice2 = error_story_entity
-
-	# }
+	attach = {
+		entity3 = weapons_entity
+	}
+	attach = {
+		entity4 = error_entity2
+	}
 }
 
 # 开火
 entity = {
 	name = "error_entity_fire"
-	pdxmesh = star_eater_01_mesh
-	scale = 5
+	scale = 2
 	default_state = idle 
 	locator = {
 		name = partice1
@@ -61,52 +49,50 @@ entity = {
 			0 10 0
 		}
 	}
-	locator = {
-		name = partice2
-		position = {
-			0 700 0
-		}
-		rotation = {
-			0 0 180
-		}
-	}
 	locator ={
 		name = entity2
 		position ={
-			0 100 0
+			0 650 0
 		}
 	}
 	locator ={
 		name = entity3
-		position ={
+		position = {
+			0 450 0
+		}
+		rotation = {
+			0 -90 0
+		}
+	}
+	locator = {
+		name = entity4
+		position = {
 			0 400 0
+		}
+		rotation = {
+			0 -180 0
 		}
 	}
 	state = {
-		name = idle  animation = open looping = yes
-		event = { time = 0	id = "beam_start"  }		
-		event = { time = 0.0 node = "effect_core" particle = "necroid_01_colossus_core_effect" keep_particle = yes trigger_once = yes }
-		event = { time = 0 node = "light_locator_01" particle = "nemesis_01_ship_light_effect" keep_particle = yes trigger_once = yes }
-		event = { time = 0 node = "light_locator_02" particle = "nemesis_01_ship_light_effect" keep_particle = yes trigger_once = yes }
-		event = { time = 0 node = "light_locator_03" particle = "nemesis_01_ship_light_effect" keep_particle = yes trigger_once = yes }
+		name = idle 
 		start_event = {
-			node = "partice1" particle = weapon_beacon_fire_effect keep_particle = yes trigger_once = yes sound = {
-				soundeffect = titan_laser_fire_01
-			}
+			node = "partice1" particle = weapon_beacon_fire_effect keep_particle = yes trigger_once = yes sound = { soundeffect = titan_laser_fire_01 }
 		}
-		start_event = { trigger_once = yes sound = { soundeffect = "amb_star_eater_idle_hum" stop_on_state_change = yes } }
-		start_event = { trigger_once = yes sound = { soundeffect = "amb_star_eater_idle_pulsating" stop_on_state_change = yes } }
-		start_event = { trigger_once = yes sound = { soundeffect = "amb_star_eater_open_energy" stop_on_state_change = yes } }
+		# start_event = {
+		# 	node = "partice1" particle = GFnyto_neutron_planet_laser_hit_effect keep_particle = yes trigger_once = yes sound = { soundeffect = titan_laser_fire_01 }
+		# }
 	}
 	attach = {
 		entity2 = error_entity2	
 	}
 	attach = {
-		entity3 = error_entity3
+		entity3 = weapons_entity
 	}
 	attach = {
-		partice2 = error_story_entity
-
+		entity4 = error_entity2
+	}
+	attach = {
+		partice1 = GF_star_eater_muzzle_windup_entity
 	}
 }
 
@@ -213,7 +199,10 @@ entity = {
 	locator = {
 		name = entity_1
 		position = {
-			0 -200 0
+			0 0 -100
+		}
+		rotation = {
+			0 -90 0
 		}
 	}
 	attach = {
@@ -226,10 +215,62 @@ entity = {
 	locator = {
 		name = entity_1
 		position = {
-			0 -200 0
+			0 0 -100
+		}
+		rotation = {
+			0 -90 0
 		}
 	}
 	attach = {
 		entity_1 = error_entity_fire
 	}
+}
+
+entity = {
+	name = testpop_entity
+	scale = 100
+	locator = {
+		name = entity_1
+		position = {
+			0 0 -100
+		}
+		rotation = {
+			0 -90 0
+		}
+	}
+	default_state = idle
+	state = {  name = idle next_state = idle2
+		event = {
+			time = 0 node = "entity_1" particle = testpop_particle keep_particle = yes 
+		}
+	}
+	state = { name = idle2 next_state = idle
+		event = {
+			time = 0 node = "entity_1" particle = testpop_particle keep_particle = yes 
+		}
+	}
+}
+entity = {
+	name = testpop_entity2
+	scale = 100
+	locator = {
+		name = entity_1
+		position = {
+			0 0 -100
+		}
+		rotation = {
+			0 -90 0
+		}
+	}
+	default_state = idle
+	state = {  name = idle looping = yes
+		event = {
+			time = 0 node = "root" particle = testpop_particle keep_particle = yes 
+		}
+	}
+}
+
+#空模型
+entity = {
+	name =  GF_null_entity
 }

@@ -699,7 +699,8 @@ ship_section_template = {
 #盾舰核心
 ship_section_template = {
 	key = "GFnyto_shiledship_core"
-	entity = "shiledship_entity"
+	# entity = "shiledship_entity"
+	# entity = null_entity
 	ship_size = GFnyto_shiled_ship
 	fits_on_slot = mid
 	should_draw_components = yes

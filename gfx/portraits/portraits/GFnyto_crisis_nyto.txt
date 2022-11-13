@@ -1,5 +1,4 @@
-portraits = 
-{
+portraits = {
 	#GF_nyto00     = {texturefile = "gfx/models/portraits/GFnyto/Nyto07202055.dds"}
 	GFnyto_nyto_black     = {texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_nyto_black.dds"}
 	GFnyto_nyto_white     = {texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_nyto_white.dds"}
@@ -24,8 +23,8 @@ portraits =
 
 	GFnyto_nyto_disaster= {texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_nyto_disaster.dds"}
 
-#	GFnyto_nyto_morridow    		 = {texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_nyto_morridow.dds"}
-#	GFnyto_nyto_morridow_casual     = {texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_nyto_morridow_casual.dds"}
+	#	GFnyto_nyto_morridow    		 = {texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_nyto_morridow.dds"}
+	#	GFnyto_nyto_morridow_casual     = {texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_nyto_morridow_casual.dds"}
 }
 portrait_groups = {
 	GFnyto_nyto= {

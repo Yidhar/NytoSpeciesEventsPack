@@ -5,7 +5,10 @@ building_GFnyto_affluence_center = {
 	can_demolish = yes
 	potential = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			OR = {
+				has_authority = auth_GF_paradeus
+				has_country_flag = has_nyto_technology
+			}		
 		}
 	}
 	category = manufacturing
@@ -15,11 +18,36 @@ building_GFnyto_affluence_center = {
 			minerals = @b3_minerals
 		}
 		produces = {
+			trigger ={
+				check_variable = {
+					which = GFnyto_plante_wrlv
+					value < 100
+				}
+			}
 			GF_nyto_collapse_liquid = 1
 			multiplier = planet.GFnyto_plante_wrlv
 		}
+		produces = {
+			trigger = {
+				check_variable = {
+					which = GFnyto_plante_wrlv
+					value > 100
+				}
+			}
+			GF_nyto_collapse_liquid = 100
+		}
+		produces = {
+			trigger = {
+				check_variable = {
+					which = GFnyto_plante_wrlv
+					value > 100
+				}
+			}
+			GF_nyto_collapse_liquid = 0.05
+			multiplier = planet.GFnyto_plante_wrlv
+		}
 		upkeep = {
-			energy = 0.2
+			energy = 0.5
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}

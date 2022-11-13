@@ -26,6 +26,7 @@ auth_GF_paradeus = {
 		planet_stability_add = 50
 		planet_max_buildings_add = 4
 		num_tech_alternatives_add = 3
+		planet_pops_consumer_goods_upkeep_mult = -0.2
 	}
 	traits = {
 		trait = trait_GF_nyto_collapse_radiation_adaptation

@@ -8,7 +8,7 @@ tech_GF_nyto_robomodding_points_1= {
 	category = { industry }
 	prerequisites = { "tech_GF_nyto_EILD_brain_wave" }
 	weight = 5
-	modifier = {NYTO_species_trait_points_add = 2}
+	modifier = {NYTO_species_trait_points_add = 2 EILD_species_trait_points_add = 2 }
 	potential = {has_authority = auth_GF_paradeus}
 	ai_weight = {weight = 2}
 }
@@ -22,7 +22,7 @@ tech_GF_nyto_robomodding_points_2 = {
 	category = { industry }
 	prerequisites = { "tech_GF_nyto_robomodding_points_1" }
 	weight = 5
-	modifier = {NYTO_species_trait_points_add = 2}
+	modifier = {NYTO_species_trait_points_add = 2 EILD_species_trait_points_add = 2 }
 	potential = {has_authority = auth_GF_paradeus}
 	ai_weight = {weight = 2}
 }
@@ -80,14 +80,16 @@ tech_GFnyto_framework2={
 	}
 }
 
-#塌缩理论
+#坍塌理论
 tech_GFnyto_tansuo={
 	cost = 30000
 	area = engineering
 	category = { voidcraft }
 	tier = 4
 	weight = 50
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {
+		has_authority = auth_GF_paradeus
+	}
 	ai_weight = {weight = 2}
 	prerequisites = {
 		tech_GF_nyto_Inverse_collapse_1
@@ -101,7 +103,9 @@ tech_GFnyto_tansuo2={
 	category = { voidcraft }
 	tier = 5
 	weight = 50
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {
+		has_authority = auth_GF_paradeus
+	}
 	ai_weight = {weight = 2}
 	prerequisites = {
 		tech_GFnyto_tansuo
@@ -110,7 +114,6 @@ tech_GFnyto_tansuo2={
 
 #恒星坍缩器
 tech_GFnyto_star_tasuo={
-	#"§H解锁巨型结构：§!环形世界"
 	cost = 50000
 	area = engineering
 	category = {
@@ -118,7 +121,9 @@ tech_GFnyto_star_tasuo={
 	}
 	tier = 5
 	weight = 50
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {
+		has_authority = auth_GF_paradeus
+	}
 	ai_weight = {weight = 200}
 	prerequisites = {
 		tech_mega_engineering

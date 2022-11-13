@@ -24,16 +24,9 @@ d_GFnyto_ancient_city_zone = {
 	}
 
 	resources = {
-		category = armies
+		category =  planet_deposits
 		produces = {
-			food = 20
-		}
-		produces = {
-			trigger = {
-				owner = {
-					is_ai = yes
-				}
-			}
+			energy = 100
 			food = 50
 			consumer_goods = 50
 		}

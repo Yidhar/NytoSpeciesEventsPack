@@ -5,18 +5,15 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {		
-		has_origin = origin_GF_nyto_the_last_light		
+		has_origin = origin_GF_nyto_the_last_light	
 	}
-	immediate = {
+	immediate = {	
 		set_global_flag = has_NYTO_mod
 		if = {
-			limit = { is_ai = yes }
-			give_technology = {
-				tech = tech_GFnyto_tansuo
+			limit = { 
+				is_ai = no
 			}
-			give_technology ={
-				tech = tech_GFnyto_tansuo2
-			}
+			save_global_event_target_as = is_nyto_country	
 		}
 	}
 }
@@ -26,11 +23,20 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		owner = {
+		owner = {			
 			has_origin = origin_GF_nyto_the_last_light
 		}
 	}
-	immediate = {
+	immediate = {		
+		if = {
+			limit = { 
+				has_ethic = ethic_gestalt_consciousness		
+			}
+			capital_scope = {
+				add_building = building_capital
+				set_capital = yes
+			}
+		}
 		begin_event_chain = {
 			event_chain = "GFnyto_paradeus_pioneer_chain"
 			target = this
@@ -82,12 +88,19 @@ country_event = {
 						is_planet_class = pc_barren
 					}
 				}
-				change_pc = pc_nuked
-				change_planet_size = 10
-				while = {
-					count = 20
-					reroll_deposits = yes
+				if = {
+					limit = { 
+						prevprev = {
+							is_cg_country = yes
+						}				
+					}
+					change_pc = pc_gaia
 				}
+				else = {
+					change_pc = pc_nuked
+				}			
+				change_planet_size = 10
+				reroll_deposits = yes
 			}
 		}
 		home_planet = {
@@ -302,6 +315,7 @@ country_event = {
 		}
 	}
 }
+
 #玩家以天灾起源游戏时生成涅托堕落
 # country_event = {
 # 	id = GFnytostart.1000

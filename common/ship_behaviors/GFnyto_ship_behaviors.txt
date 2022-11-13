@@ -15,10 +15,11 @@ ship_behavior = {
 	
 	desc = "GFnyto_ship_behaviors1_desc"
 }
+
 #护航
 ship_behavior = {
 	name = "GFnyto_ship_behaviors2"
-	preferred_attack_range = max		#max/min/median/12/412..这是攻击时飞船想要保持的目标距离
+	preferred_attack_range = 300		#max/min/median/12/412..这是攻击时飞船想要保持的目标距离
 	
 	formation_distance = max			#当进港/跟船时,尽量保持这一距离到指定位置
 	return_to_formation_distance = 300	#攻击时,如果到指定位置的距离大于此值,飞船将切换到被动模式
@@ -30,14 +31,14 @@ ship_behavior = {
 	combat_target_anchor = root
 
 	attack_move_pattern = stay_at_range
-	passive_move_pattern = stationary
+	passive_move_pattern = charge
 	
 	desc = "GFnyto_ship_behaviors2_desc"
 }
 #支援
 ship_behavior = {
 	name = "GFnyto_ship_behaviors3"
-	preferred_attack_range = max		#max/min/median/12/412..这是攻击时飞船想要保持的目标距离
+	preferred_attack_range = 200		#max/min/median/12/412..这是攻击时飞船想要保持的目标距离
 	
 	formation_distance = median			#当进港/跟船时,尽量保持这一距离到指定位置
 	return_to_formation_distance = 300	#攻击时,如果到指定位置的距离大于此值,飞船将切换到被动模式
@@ -48,8 +49,8 @@ ship_behavior = {
 	
 	combat_target_anchor = root
 
-	attack_move_pattern = stationary
-	passive_move_pattern = stay_at_range
+	attack_move_pattern = stay_at_range
+	passive_move_pattern = stationary
 	
 	desc = "GFnyto_ship_behaviors3_desc"
 }

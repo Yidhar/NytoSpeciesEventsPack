@@ -1,5 +1,4 @@
-portraits = 
-{
+portraits = {
 	GFnyto_EILD_big     = {texturefile = "gfx/models/portraits/GFnyto_eild/GFnyto_EILD_big.dds"}
 	GFnyto_EILD_middle  = {texturefile = "gfx/models/portraits/GFnyto_eild/GFnyto_EILD_middle.dds"}
 	GFnyto_EILD_small   = {texturefile = "gfx/models/portraits/GFnyto_eild/GFnyto_EILD_small.dds"}

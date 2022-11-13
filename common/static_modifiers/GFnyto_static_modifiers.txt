@@ -38,7 +38,7 @@ GFnyto_set_up_heritage_department={
 	icon = "gfx/interface/icons/modifiers/GFnyto_set_up_heritage_department.dds"
 	icon_frame = 1
 	ship_archaeological_site_excavation_speed_mult = 0.5
-	ship_archeaological_site_clues_add = 5
+	ship_archaeological_site_clues_add = 5
 }
 #虚识
 GFnyto_gestalt={
@@ -141,8 +141,8 @@ gfnyto_ms_weapons2={
 	ship_accuracy_mult = 0.2
 }
 gfnyto_ms_weapons1={
-	weapon_type_nytowith_weapon_damage_mult = 0.22
-	weapon_type_nytowith_weapon_fire_rate_mult = 0.22
+	weapon_type_nytowith_weapon_damage_mult = 0.05
+	weapon_type_nytowith_weapon_fire_rate_mult = 0.05
 }
 gfnyto_hudun={
 	ship_shield_penetration_mult = -1
@@ -154,10 +154,10 @@ gfnyto_hudun_explosive ={
 	weapon_type_explosive_weapon_damage_mult = 1
 }
 gfnyto_x_weapon2_fire_rate_modifer={	
-	weapon_type_Akso_weapon_fire_rate_mult = 0.5
+	weapon_type_Akso_weapon_fire_rate_mult = 1.5
 }
 gfnyto_x_weapon2_weapon_damage_modifer={
-	weapon_type_Akso_weapon_damage_mult = 0.5
+	weapon_type_Akso_weapon_damage_mult = 1.5
 }
 gfnyto_LsScepter_damage_modifer={
 	weapon_type_LsScepter_weapon_damage_mult = -1000
@@ -167,7 +167,7 @@ gfnyto_shield_system_sheil_debuff ={
 	weapon_type_kinetic_weapon_damage_mult = -1
 }
 gf_nyto_commind_weapon_buff ={
-	force_disparity_fire_rate_mult = 2
+	force_disparity_fire_rate_mult = 5
 }
 #缺少训练密钥
 GF_nyto_training_key_deficit ={
@@ -182,10 +182,14 @@ GF_nyto_new_fire_control_unit_deficit ={
 	ship_fire_rate_mult = -0.5
 	army_damage_mult = -0.25
 }
-#ELIDdengji
+#ELIDLV
 GF_nyto_Elid_level ={
 	army_damage_mult = 0.05
 	army_health = 0.05
+}
+GF_nyto_Elid_level2 ={
+	army_damage_mult = 0.25
+	army_health = 0.25
 }
 GF_nyto_forward_base ={
 	icon = "gfx/interface/icons/modifiers/GFnyto_gestalt.dds"
@@ -196,6 +200,11 @@ GF_nyto_forward_base ={
 #额外护盾
 GF_nyoto_shield_ship ={
 	ship_shield_add = 87600
+	
+}
+#护盾恢复
+GF_nyto_shield_ship_regen ={
+	ship_shield_regen_add_static = 87600
 }
 #沉默
 GF_nyto_p_weapon_system={
@@ -207,7 +216,7 @@ GF_nyto_p_weapon_system={
 GF_nyto_ai_rbq ={
 	country_base_GF_nyto_collapse_liquid_produces_add = 1000
 }
-#塌缩辐射污染
+#坍塌辐射污染
 GF_nyto_Radiation ={	
 	icon = "gfx/interface/icons/planet_modifiers/GF_nyto_Radiation.dds"
 	pop_environment_tolerance=-0.01
@@ -224,17 +233,40 @@ GF_nyto_l_weapon2_soon ={
 GF_nyto_T_weapon2_damgabuff = {
 	weapon_type_prism_weapon_damage_mult = 1	
 }
-GF_nyto_beacon_count_buff ={
-	weapon_type_beacon_weapon_damage_mult = 10000
-}
-GF_nyto_aoe_weapon={
-	weapon_type_aoe_weapon_damage_mult = 999999999999999999
-	weapon_type_aoe_weapon_fire_rate_mult = 999999999999999999
-}
+# GF_nyto_beacon_count_buff ={
+# 	weapon_type_beacon_weapon_damage_mult = 10000
+# }
+# GF_nyto_aoe_weapon={
+# 	weapon_type_aoe_weapon_damage_mult = 999999999999999999
+# 	weapon_type_aoe_weapon_fire_rate_mult = 999999999999999999
+# }
 #双蛇仗
 GF_nyto_missle_1_buff ={
-	weapon_type_explosive_weapon_fire_rate_mult = 999999999999999999
+	weapon_type_fireworks_weapon_fire_rate_mult = 999999999999999999
 }
 GF_nyto_missle_1_debuff ={
-	weapon_type_explosive_weapon_fire_rate_mult = -1
+	weapon_type_fireworks_weapon_fire_rate_mult = -1
+}
+#恐慌
+GF_nyto_end_years ={
+	ship_weapon_damage = -0.5
+	ship_fire_rate_mult = 0.1
+}
+#游行
+GF_nyto_oper_pop ={
+	icon = "gfx/interface/icons/planet_modifiers/pm_alien_propaganda.dds"
+	icon_frame = 3
+	planet_jobs_upkeep_mult = -0.5
+	planet_jobs_produces_mult = -0.5
+}
+#火炮
+GF_nyto_t_weapon = {
+	weapon_type_kinetic_weapon_damage_mult = 0.1
+	weapon_type_kinetic_weapon_fire_rate_mult = 0.1
+}
+#献祭
+GF_nyto_kill_tanhua ={
+	country_produces_mult = 0.5
+	hide_from_country_list = yes
+	country_minerals_produces_mult = 0.3
 }

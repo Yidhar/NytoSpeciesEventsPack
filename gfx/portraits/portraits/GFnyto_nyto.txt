@@ -1,5 +1,4 @@
-portraits = 
-{
+portraits = {
 	#GF_nyto00     = {texturefile = "gfx/models/portraits/GFnyto/Nyto07202055.dds"}
 	GFnyto_nyto_black     = {texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_nyto_black.dds"}
 	GFnyto_nyto_white     = {texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_nyto_white.dds"}
@@ -24,8 +23,8 @@ portraits =
 
 	GFnyto_nyto_disaster= {texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_nyto_disaster.dds"}
 
-#	GFnyto_nyto_morridow    		 = {texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_nyto_morridow.dds"}
-#	GFnyto_nyto_morridow_casual     = {texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_nyto_morridow_casual.dds"}
+	#	GFnyto_nyto_morridow    		 = {texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_nyto_morridow.dds"}
+	#	GFnyto_nyto_morridow_casual     = {texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_nyto_morridow_casual.dds"}
 
 	GFnyto_Machlian  		 = {texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_Machlian.dds"}
 	GFnyto_Machlian_2    = {texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_Machlian_2.dds"}
@@ -36,6 +35,13 @@ portraits =
 	GFnyto_nyto_Adeline 		 = {texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_nyto_Adeline.dds"}
 	GFnyto_nyto_Eleanor    = {texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_nyto_Eleanor.dds"}
 	GFnyto_nyto_Tie = { texturefile= "gfx/models/portraits/GFnyto_nyto/GFnyto_Tie.dds"}
+	GFnyto_Nimeylan_1 ={  texturefile= "gfx/models/portraits/GFnyto_nyto/GFnyto_Nimeylan_1.dds" }
+	GFnyto_Bramed_1 = {  texturefile= "gfx/models/portraits/GFnyto_nyto/GFnyto_Bramed_1.dds" }
+	GFnyto_Morridow_1 ={ texturefile= "gfx/models/portraits/GFnyto_nyto/GFnyto_Morridow_1.dds" }
+	GFnyto_Morridow_2 ={ texturefile= "gfx/models/portraits/GFnyto_nyto/GFnyto_Morridow_2.dds" }
+	GFnyto_Morridow_3 ={ texturefile= "gfx/models/portraits/GFnyto_nyto/GFnyto_Morridow_3.dds" }
+	GFnyto_Gray_1 = { texturefile= "gfx/models/portraits/GFnyto_nyto/GFnyto_Gray_1.dds"}
+	GFnyto_Narciss_1 ={  texturefile= "gfx/models/portraits/GFnyto_nyto/GFnyto_Narciss_1.dds" }
 }
 portrait_groups = {
 	GFnyto_nyto= {
@@ -58,6 +64,13 @@ portrait_groups = {
 						GFnyto_nyto_lsomer_basic
 #						GFnyto_nyto_morridow
 #						GFnyto_nyto_morridow_casual
+						GFnyto_Nimeylan_1
+						GFnyto_Bramed_1
+						GFnyto_Morridow_1
+						GFnyto_Morridow_2
+						GFnyto_Morridow_3
+						GFnyto_Gray_1
+						GFnyto_Narciss_1
 						GFnyto_nyto_strelet
 						GFnyto_nyto_rodelero
 						GFnyto_nyto_doppelsoldner
@@ -81,6 +94,13 @@ species = { #generic portrait for a species
 pop = { #for a specific pop
 	add = {
 		portraits = {
+			GFnyto_Nimeylan_1
+			GFnyto_Bramed_1
+			GFnyto_Morridow_1
+			GFnyto_Morridow_2
+			GFnyto_Morridow_3
+			GFnyto_Gray_1
+			GFnyto_Narciss_1
 			GFnyto_nyto_basic   
 			GFnyto_nyto_an_1
 			GFnyto_nyto_an_2
@@ -97,6 +117,13 @@ leader = { #scientists, generals, admirals, governor
 		add = {
 			trigger = {leader_class = scientist}
 				portraits = {
+					GFnyto_Nimeylan_1
+					GFnyto_Bramed_1
+					GFnyto_Morridow_1
+					GFnyto_Morridow_2
+					GFnyto_Morridow_3
+					GFnyto_Gray_1
+					GFnyto_Narciss_1					
 					GFnyto_nyto_basic  				
 					GFnyto_nyto_lsomer_basic
 					GFnyto_nyto_nimogen  
@@ -107,11 +134,22 @@ leader = { #scientists, generals, admirals, governor
 					GFnyto_nyto_Adeline
 					GFnyto_nyto_Eleanor
 					GFnyto_nyto_Tie
-					}
+					GFnyto_nyto_an_1
+					GFnyto_nyto_an_2
+					GFnyto_nyto_an_3
+					GFnyto_nyto_an_4
+				}
 		}
 		add = {
 			trigger = {leader_class = general}
 				portraits = {
+					GFnyto_Nimeylan_1
+					GFnyto_Bramed_1
+					GFnyto_Morridow_1
+					GFnyto_Morridow_2
+					GFnyto_Morridow_3
+					GFnyto_Gray_1
+					GFnyto_Narciss_1					
 					GFnyto_nyto_basic  				
 					GFnyto_nyto_lsomer_basic
 					GFnyto_nyto_black
@@ -129,6 +167,13 @@ leader = { #scientists, generals, admirals, governor
 		add = {
 			trigger = {leader_class = admiral}
 				portraits = {
+					GFnyto_Nimeylan_1
+					GFnyto_Bramed_1
+					GFnyto_Morridow_1
+					GFnyto_Morridow_2
+					GFnyto_Morridow_3
+					GFnyto_Gray_1
+					GFnyto_Narciss_1					
 					GFnyto_nyto_basic  				
 					GFnyto_nyto_lsomer_basic
 					GFnyto_nyto_black
@@ -146,6 +191,13 @@ leader = { #scientists, generals, admirals, governor
 		add = {
 			trigger = {leader_class = governor}
 				portraits = {
+					GFnyto_Nimeylan_1
+					GFnyto_Bramed_1
+					GFnyto_Morridow_1
+					GFnyto_Morridow_2
+					GFnyto_Morridow_3
+					GFnyto_Gray_1
+					GFnyto_Narciss_1					
 					GFnyto_nyto_basic    				
 					GFnyto_nyto_lsomer_basic
 					GFnyto_nyto_nimogen  
@@ -161,6 +213,13 @@ leader = { #scientists, generals, admirals, governor
 		add = {
 			trigger = {leader_class = ruler}
 				portraits = {
+					GFnyto_Nimeylan_1
+					GFnyto_Bramed_1
+					GFnyto_Morridow_1
+					GFnyto_Morridow_2
+					GFnyto_Morridow_3
+					GFnyto_Gray_1
+					GFnyto_Narciss_1					
 					GFnyto_nyto_basic    		
 					GFnyto_nyto_lsomer_basic
 					GFnyto_nyto_nimogen  
@@ -176,6 +235,13 @@ leader = { #scientists, generals, admirals, governor
 		add = {
 			trigger = {leader_class = envoy}
 				portraits = {
+					GFnyto_Nimeylan_1
+					GFnyto_Bramed_1
+					GFnyto_Morridow_1
+					GFnyto_Morridow_2
+					GFnyto_Morridow_3
+					GFnyto_Gray_1
+					GFnyto_Narciss_1					
 #					GFnyto_nyto_basic 		
 #					GFnyto_nyto_lsomer_basic
 #					GFnyto_nyto_morridow

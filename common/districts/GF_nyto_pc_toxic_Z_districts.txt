@@ -10,11 +10,9 @@ district_GF_nyto_pc_toxic_underground_shelters= {
 		uses_district_set = GF_nyto_embers_gloomy_world
 		NOT = {has_planet_flag = GFnyto_Spring_wakes_up }
 	}
-	conversion_ratio = 1
+	conversion_ratio = 0.3
 	convert_to = {
-		district_city
-		district_nexus
-		district_hive
+		district_GF_nyto_pc_toxic_house
 	}
 	resources = {
 		category = planet_districts
@@ -52,11 +50,10 @@ district_GF_nyto_pc_toxic_underground_industrial_area= {
 		uses_district_set = GF_nyto_embers_gloomy_world
 		NOT = {has_planet_flag = GFnyto_Spring_wakes_up}
 	}
-	conversion_ratio = 1
+	conversion_ratio = 0.5
 	convert_to = {
-		district_city
-		district_nexus
-		district_hive
+		district_GF_nyto_pc_toxic_consumer_good
+		district_GF_nyto_pc_toxic_leisure
 	}
 	resources = {
 		category = planet_districts
@@ -70,6 +67,13 @@ district_GF_nyto_pc_toxic_underground_industrial_area= {
 	planet_modifier = {
 		job_foundry_add = 2
 		job_artisan_add = 2
+	}
+	ai_resource_production = {
+		trigger = {
+			always = yes
+		}
+		alloys =  100
+		consumer_goods = 100
 	}
 	ai_weight = {
 		weight = 20
@@ -98,9 +102,7 @@ district_GF_nyto_pc_toxic_underground_research_institute = {
 	}
 	conversion_ratio = 1
 	convert_to = {
-		district_city
-		district_nexus
-		district_hive
+		district_GF_nyto_pc_toxic_science
 	}
 	resources = {
 		category = planet_districts

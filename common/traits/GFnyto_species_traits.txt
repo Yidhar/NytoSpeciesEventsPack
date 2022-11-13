@@ -21,8 +21,10 @@ trait_GF_nyto_the_last_light= {
     modifier = {
 		planet_jobs_engineering_research_produces_mult = 0.15
 		planet_jobs_physics_research_produces_mult = 0.15
-		planet_jobs_society_research_produces_mult = 0.15
-		NYTO_pop_growth_speed = 0.2
+		planet_jobs_society_research_produces_mult = 0.15		
+	}
+	growing_modifier = {
+		planet_pop_assembly_organic_mult = 0.2
 	}
 	slave_cost = {energy = 50}
 }
@@ -31,8 +33,8 @@ trait_GF_nyto_ogas_agreement= {
     cost = 0
 	sorting_priority = 20
 	potential_crossbreeding_chance = 1 #潜在杂交概率
-	initial = no#是否初始特质,指是否开局可选
-	randomized = no#是否随机特质（指生成ai时是否会有此特性）
+	initial = no #是否初始特质,指是否开局可选
+	randomized = no #是否随机特质（指生成ai时是否会有此特性）
 	species_possible_remove = {
 		always = no
 	}
@@ -84,7 +86,6 @@ trait_GF_nyto_ogas_agreement_plus= {
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_OGAS_system.dds"
 	allowed_archetypes = {NYTO}#物种限制（涅托）
     modifier = {
-		all_technology_research_speed = 0.5
 		planet_jobs_engineering_research_produces_mult = 0.3
 		planet_jobs_physics_research_produces_mult = 0.3
 		planet_jobs_society_research_produces_mult = 0.3
@@ -92,7 +93,7 @@ trait_GF_nyto_ogas_agreement_plus= {
 	slave_cost = {energy = 50}
 }
 
-#心识解放
+#Noussphere
 trait_GF_nyto_noussphere = {
 	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_noussphere.dds"
 	cost = 0
@@ -111,7 +112,6 @@ trait_GF_nyto_noussphere = {
 	}
 	modifier = {
 		planet_jobs_produces_mult = 0.15
-		all_technology_research_speed = 0.5
 	}
 	slave_cost = {energy = 50}
 }
@@ -127,7 +127,7 @@ trait_GF_nyto_noussphere = {
 #昙花种植者
 trait_GFnyto_tanhua = {
 	icon = "gfx/interface/icons/traits/nyto/trait_GFnyto_tanhua.dds"
-	cost = 4
+	cost = 2
 	sorting_priority = 20
 	potential_crossbreeding_chance = 0#潜在杂交概率
 	species_possible_remove = {
@@ -181,13 +181,15 @@ trait_GF_nyto_loyal_ELID_infected= {
 	species_potential_add = {
 		always = no
 	}
-	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_consciousness_integration.dds"
+	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_loyal_ELID_infected.dds"
 	allowed_archetypes = { EILD }
 	modifier = {
 		pc_GF_nyto_devil_furnace_habitability = 11
 		pc_GF_nyto_embers_gloomy_habitability = 11
 		pc_nuked_habitability = 1
-		planet_jobs_worker_produces_mult = 1
+		# planet_jobs_worker_produces_mult = 1
+		planet_jobs_produces_mult = 0.15
+		planet_jobs_consumer_goods_upkeep_mult = -0.2
 		army_health = 2
 	}
 }
@@ -352,7 +354,7 @@ trait_GF_nyto_envy= {
 
 
 
-###仿石质的可替换特质###
+###普通特质##
 #地底居者
 trait_GF_nyto_underground_dweller= {
 	cost = 2
@@ -388,7 +390,7 @@ trait_GF_nyto_anti_stress_drugs= {
 }
 #细胞重生
 trait_GF_nyto_cell_regeneration= {
-	cost = 4
+	cost = 2
 	potential_crossbreeding_chance = 0#潜在杂交概率
 	initial = yes#是否初始特质,指是否开局可选
 	randomized = yes#是否随机特质（指生成ai时是否会有此特性）
@@ -406,7 +408,7 @@ trait_GF_nyto_cell_regeneration= {
 }
 #硅化表皮
 trait_GF_nyto_silicified_epidermis= {
-	cost = 4
+	cost = 3
 	potential_crossbreeding_chance = 0#潜在杂交概率
 	initial = yes#是否初始特质,指是否开局可选
 	randomized = yes#是否随机特质（指生成ai时是否会有此特性）
@@ -423,15 +425,21 @@ trait_GF_nyto_silicified_epidermis= {
 
 #高度义体化
 trait_GF_nyto_ingenious = {
-	cost = 3
+	cost = 2
+	slave_cost = {
+		energy = 50
+	}
 	potential_crossbreeding_chance = 1.0
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_ingenious.dds"
 	allowed_archetypes = {NYTO}
 	modifier = { 
 		planet_pops_alloys_upkeep_mult = 0.1 
-		army_damage_mult = 0.1
-		army_health = 0.1
-		pop_growth_speed = -0.2
+		army_damage_mult = 0.15
+		army_health = 0.15
+		planet_jobs_minerals_produces_mult = 0.15
+	}
+	growing_modifier = {
+		planet_pop_assembly_organic_mult = -0.25
 	}
 	slave_cost = {energy = 50}
 	opposites = {
@@ -442,6 +450,9 @@ trait_GF_nyto_ingenious = {
 #不稳定精神体
 trait_GF_nyto_industrious = {
 	cost = -2
+	slave_cost = {
+		energy = 50
+	}
 	potential_crossbreeding_chance = 1.0
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_industrious.dds"
 	allowed_archetypes = {NYTO}
@@ -455,6 +466,9 @@ trait_GF_nyto_industrious = {
 #冷淡
 trait_GF_nyto_agrarian = {
 	cost = -1
+	slave_cost = {
+		energy = 30
+	}
 	potential_crossbreeding_chance = 1.0	
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_agrarian.dds"
 	allowed_archetypes = {NYTO}
@@ -467,6 +481,9 @@ trait_GF_nyto_agrarian = {
 #废弃实验体
 trait_GF_nyto_intelligent = {
 	cost = -3
+	slave_cost = {
+		energy = 80
+	}
 	potential_crossbreeding_chance = 1.0
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_intelligent.dds"
 	allowed_archetypes = {NYTO}
@@ -492,7 +509,10 @@ trait_GF_nyto_natural_engineers = {
 
 #高仿生躯体
 trait_GF_nyto_natural_physicists = {
-	cost = 3
+	cost = 2
+	slave_cost = {
+		energy = 50
+	}
 	potential_crossbreeding_chance = 1.0
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_natural_physicists.dds"
 	allowed_archetypes = {NYTO}
@@ -511,5 +531,207 @@ trait_GF_nyto_natural_physicists = {
 #缺陷的科研模块
 trait_GF_nyto_week_research ={
 	cost = -3
+	slave_cost = {
+		energy = 100
+	}
+	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_week_research.dds"
 	potential_crossbreeding_chance = 1.0
+	allowed_archetypes = { NYTO }
+	modifier = {
+		planet_researchers_produces_mult = -0.2
+		planet_jobs_unity_produces_mult = -0.1
+		army_damage_mult = 0.15
+	}
+}
+
+#减免的学习模块
+trait_GF_nyto_modesty ={
+	cost = -2
+	slave_cost = {
+		energy = 50
+	}
+	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_modesty.dds"
+	allowed_archetypes = { NYTO }
+	modifier = {
+		leaders_cost_mult = 0.25
+		planet_jobs_unity_produces_mult = -0.05
+		planet_jobs_worker_produces_mult = 0.05
+	}
+}
+
+#简陋构造
+trait_GF_nyto_Simple_structure ={
+	cost = -2
+	slave_cost = { energy = 50 }
+	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_Simple_structure.dds"
+	allowed_archetypes = { NYTO }
+	modifier = {
+		army_defense_health_mult = -0.15
+		habitability_ceil_add = -0.1
+	}
+	growing_modifier = {
+		planet_pop_assembly_organic_mult = 0.15 
+	}
+}
+
+#低本地存储
+trait_GF_nyto_Low_local_storage = {
+	cost = -3
+	slave_cost = { energy = 80 }
+	allowed_archetypes = { NYTO }
+	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_Low_local_storage.dds"
+	modifier = {
+		planet_jobs_physics_research_produces_mult =-0.15
+		planet_jobs_society_research_produces_mult = -0.15
+		planet_jobs_engineering_research_produces_mult = -0.15		
+	}
+}
+
+#活体适应接口
+trait_GF_nyto_adaptive_interface = {
+	cost = 3
+	slave_cost = {
+		energy = 80
+	}
+	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_adaptive_interface.dds"
+	allowed_archetypes = { NYTO }
+	modifier = {
+		army_health = 0.5
+		armies_upkeep_mult = 0.2
+		planet_jobs_worker_produces_mult = 0.15
+	}
+	opposites = {
+		trait_GF_NYTO_Abstract_interface
+	}
+}
+
+#开源协议
+trait_GF_nyto_Open_source_licenses = {
+	improves_leaders = yes
+	cost = 2
+	slave_cost = {
+		energy = 80
+	}
+	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_Open_source_licenses.dds"
+	allowed_archetypes = {
+		NYTO
+	}
+	modifier = {
+		planet_jobs_produces_mult = 0.05
+		leaders_upkeep_mult = -0.1
+		species_leader_exp_gain = 0.5
+	}
+}
+
+#外置逻辑硬件
+trait_GF_nyto_External_logic_hardware = {
+	cost = 3
+	slave_cost = {
+		energy = 100
+	}
+	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_External_logic_hardware.dds"
+	allowed_archetypes = {
+		NYTO
+	}
+	modifier = {
+		leader_skill_levels = 2
+		species_leader_exp_gain = 0.5
+		planet_jobs_produces_mult = 0.1
+		army_health = -0.05
+		planet_pops_upkeep_mult = 0.05
+	}
+	opposites = {
+		trait_GF_nyto_week_research
+		trait_GF_nyto_modesty
+	}
+}
+#自主学习拓展
+trait_GF_nyto_Self_directed_development = {
+	cost = 4
+	slave_cost = {
+		energy = 100
+	}
+	allowed_archetypes = {
+		NYTO
+	}
+	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_Self_directed_development.dds"
+	modifier = {
+		planet_researchers_produces_mult = 0.25
+		planet_jobs_unity_produces_mult = 0.2
+	}
+	opposites = {
+		trait_GF_nyto_modesty
+		trait_GF_nyto_week_research
+	}
+}
+
+#抽象类接口 
+trait_GF_nyto_Abstract_interface = {
+	cost = 3
+	slave_cost = {
+		energy = 80
+	}
+	allowed_archetypes = {
+		NYTO
+	}
+	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_Abstract_interface.dds"
+	modifier = {
+		planet_jobs_worker_produces_mult = 0.15
+		army_attack_damage_mult = 0.25
+	}
+	opposites = {
+		trait_GF_nyto_adaptive_interface
+	}
+}
+
+#高级特质
+#云端阵列
+trait_GF_nyto_cloud_array = {
+	cost = 4
+	slave_cost = {
+		energy = 100
+	}
+	allowed_archetypes = {
+		NYTO
+	}
+	initial = no
+	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_cloud_array.dds"
+	modifier = {
+		planet_pops_upkeep_mult = 0.15
+		country_produces_mult = 0.2
+		empire_size_mult = -0.3		
+	}
+	opposites = {
+		trait_GF_nyto_Low_local_storage
+		trait_GF_nyto_Simple_structure
+		trait_GF_nyto_modesty
+		trait_GF_nyto_week_research
+	}
+}
+
+#生命自动机
+trait_GF_nyto_Life_life_automata = {
+	cost = 4
+	slave_cost = {
+		energy = 100
+	}
+	allowed_archetypes = {
+		NYTO
+	}
+	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_Life_life_automata.dds"
+	immortal_leaders = yes
+	initial = no
+	modifier = {		
+		planet_colony_development_speed_mult = 1
+		planet_building_build_speed_mult = 0.5
+	}
+	assembling_modifier = {
+		planet_pop_assembly_organic_add = 5
+	}
+	opposites = {
+		trait_GF_nyto_Low_local_storage
+		trait_GF_nyto_Simple_structure
+		trait_GF_nyto_modesty
+		trait_GF_nyto_week_research
+	}
 }

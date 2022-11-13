@@ -14,6 +14,7 @@ country_event = {
 		#		shift_ethic = "ethic_paradeus_antecedentnyto"
 		#		country_add_ethic = "ethic_paradeus_antecedentnyto"
 		set_country_flag = GFnyto_ascension_perk_done
+		
 	}
 	option = {
 		name = "GF_ascension_perk.1.a"
@@ -349,7 +350,7 @@ country_event = {
 	hide_window = yes
 	immediate = {
 		fromfrom = {
-			every_owned_ship = {
+			every_controlled_ship = {
 				if = {
 					limit = {
 						NOT = {
@@ -394,264 +395,267 @@ country_event = {
 	}
 }
 
-#导出人口到变量 更换恒星类型
-country_event = {
-	id = GFnyto_ascension_perk.668
-	is_triggered_only = yes
-	hide_window = yes
-	immediate = {
-		export_trigger_value_to_variable = {
-			trigger = num_pops
-			variable = popnum
-		}
-		#导出帝国人口
-		home_planet = {
-			solar_system = {
-				every_system_planet = {
-					if = {
-						limit = {
-							is_star = yes
-						}
-						prev = {
-							set_star_class = sc_Portal
-						}
-						while = {
-							count = 10
-							create_pop = {
-								species = root.owner
-								ethos = root.owner
-							}
-						}
-						create_colony = {
-							owner = root
-						}
-						set_planet_name = "约西亚圣殿"
-						set_capital = yes
-					}
-					if = {
-						limit = {
-							NOT = {
-								is_planet_class = pc_GFnyto_portal_star
-							}
-						}
-						remove_planet = yes
-					}
-					prev = {
-						every_system_planet = {
-							limit = {
-								is_planet_class = pc_GFnyto_portal_star
-							}
-							save_global_event_target_as = "约西亚圣殿"
-						}
-					}
-				}
-			}
-		}
-		every_owned_megastructure = {
-			if = {
-				limit = {
-					is_megastructure_type = GFnyto_megastructure_collapse_reactor_restored
-				}
-				prev = {
-					change_variable = {
-						which = collapsenum
-						value = 10
-					}
-				}
-				remove_megastructure = this
-			}
-			if = {
-				limit = {
-					is_megastructure_type = GFnyto_megastructure_collapse_reactor_05
-				}
-				prev = {
-					change_variable = {
-						which = collapsenum
-						value = 5
-					}
-				}
-				remove_megastructure = this
-			}
-			if = {
-				limit = {
-					is_megastructure_type = GFnyto_megastructure_collapse_reactor_04
-				}
-				prev = {
-					change_variable = {
-						which = collapsenum
-						value = 4
-					}
-				}
-				remove_megastructure = this
-			}
-			if = {
-				limit = {
-					is_megastructure_type = GFnyto_megastructure_collapse_reactor_03
-				}
-				prev = {
-					change_variable = {
-						which = collapsenum
-						value = 3
-					}
-				}
-				remove_megastructure = this
-			}
-			if = {
-				limit = {
-					is_megastructure_type = GFnyto_megastructure_collapse_reactor_02
-				}
-				prev = {
-					change_variable = {
-						which = collapsenum
-						value = 2
-					}
-				}
-				remove_megastructure = this
-			}
-			if = {
-				limit = {
-					is_megastructure_type = GFnyto_megastructure_collapse_reactor_01
-				}
-				prev = {
-					change_variable = {
-						which = collapsenum
-						value = 1
-					}
-				}
-				remove_megastructure = this
-			}
-		}
-		#遍历巨构 
-		if = {
-			limit = {
-				has_global_flag = z_pr_installed
-				check_variable = {
-					which = PR_var_cntr_MAN
-					value >= 1
-				}
-			}
-			change_variable = {
-				which = popnum
-				value = PR_var_cntr_MAN
-			}
-			set_variable = {
-				which = PR_var_cntr_MAN
-				value = 0
-			}
-		}
-		#人力加持人口
-		divide_variable = {
-			which = popnum
-			value = 100
-		}
-		change_variable = {
-			which = collapsenum
-			value = popnum
-		}
-		#权重相加
-		event_target:约西亚圣殿 = {
-			set_variable = {
-				which = plantbufflevel
-				value = root.collapsenum
-			}
-			change_variable = {
-				which = plantbufflevel
-				value = root.popnum
-			}
-			add_modifier = {
-				modifier = gfnyto_portal_buff
-				multiplier = plantbufflevel
-			}
-		}
-		#添加buff
-		divide_variable = {
-			which = collapsenum
-			value = 10
-		}
-		#巨构权重计数
-		floor_variable = popnum
-		floor_variable = collapsenum
-		#变量取整
-		change_variable = {
-			which = collapsenum
-			value = popnum
-		}
-		floor_variable = collapsenum
-		while = {
-			count = collapsenum
-			random_list = {
-				1 = {
-					event_target:约西亚圣殿 = {
-						add_district = district_GF_nyto_pc_portal_house
-					}
-				}
-				2 = {
-					event_target:约西亚圣殿 = {
-						add_district = district_GF_nyto_pc_portal_science
-					}
-				}
-				2 = {
-					event_target:约西亚圣殿 = {
-						add_district = district_GF_nyto_pc_portal_mineral
-					}
-				}
-				2 = {
-					event_target:约西亚圣殿 = {
-						add_district = district_GF_nyto_pc_portal_alloy
-					}
-				}
-				2 = {
-					event_target:约西亚圣殿 = {
-						add_district = district_GF_nyto_pc_portal_ship
-					}
-				}
-				2 = {
-					event_target:约西亚圣殿 = {
-						add_district = district_GF_nyto_pc_portal_refine
-					}
-				}
-				2 = {
-					event_target:约西亚圣殿 = {
-						add_district = district_GF_nyto_pc_portal_energy
-					}
-				}
-			}
-		}
-		while = {
-			count = 10
-			while = {
-				count = popnum
-				event_target:约西亚圣殿 = {
-					create_pop = {
-						species = root.owner
-					}
-				}
-			}
-		}
-		every_owned_planet = {
-			limit = {
-				is_star = no
-			}
-			remove_planet = yes
-		}
-		owner = {
-			owner_main_species = {
-				set_species_flag = GF_nyto_not_coloniz
-			}
-		}
-		event_target:约西亚圣殿 = {
-			remove_building = building_colony_shelter
-			add_building = building_imperial_capital
-		}
-	}
-}
+# #导出人口到变量 更换恒星类型
+# country_event = {
+# 	id = GFnyto_ascension_perk.668
+# 	is_triggered_only = yes
+# 	hide_window = yes
+# 	immediate = {
+# 		export_trigger_value_to_variable = {
+# 			trigger = num_pops
+# 			variable = popnum
+# 		}
+# 		#导出帝国人口
+# 		home_planet = {
+# 			solar_system = {
+# 				every_system_planet = {
+# 					if = {
+# 						limit = {
+# 							is_star = yes
+# 						}
+# 						prev = {
+# 							set_star_class = sc_Portal
+# 						}
+# 						while = {
+# 							count = 10
+# 							create_pop = {
+# 								species = root.owner
+# 								ethos = root.owner
+# 							}
+# 						}
+# 						create_colony = {
+# 							owner = root
+# 						}
+# 						set_planet_name = "约西亚圣殿"
+# 						set_capital = yes
+# 					}
+# 					if = {
+# 						limit = {
+# 							NOT = {
+# 								is_planet_class = pc_GFnyto_portal_star
+# 							}
+# 						}
+# 						remove_planet = yes
+# 					}
+# 					prev = {
+# 						every_system_planet = {
+# 							limit = {
+# 								is_planet_class = pc_GFnyto_portal_star
+# 							}
+# 							save_global_event_target_as = "约西亚圣殿"
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		every_owned_megastructure = {
+# 			if = {
+# 				limit = {
+# 					is_megastructure_type = GFnyto_megastructure_collapse_reactor_restored
+# 				}
+# 				prev = {
+# 					change_variable = {
+# 						which = collapsenum
+# 						value = 10
+# 					}
+# 				}
+# 				remove_megastructure = this
+# 			}
+# 			if = {
+# 				limit = {
+# 					is_megastructure_type = GFnyto_megastructure_collapse_reactor_05
+# 				}
+# 				prev = {
+# 					change_variable = {
+# 						which = collapsenum
+# 						value = 5
+# 					}
+# 				}
+# 				remove_megastructure = this
+# 			}
+# 			if = {
+# 				limit = {
+# 					is_megastructure_type = GFnyto_megastructure_collapse_reactor_04
+# 				}
+# 				prev = {
+# 					change_variable = {
+# 						which = collapsenum
+# 						value = 4
+# 					}
+# 				}
+# 				remove_megastructure = this
+# 			}
+# 			if = {
+# 				limit = {
+# 					is_megastructure_type = GFnyto_megastructure_collapse_reactor_03
+# 				}
+# 				prev = {
+# 					change_variable = {
+# 						which = collapsenum
+# 						value = 3
+# 					}
+# 				}
+# 				remove_megastructure = this
+# 			}
+# 			if = {
+# 				limit = {
+# 					is_megastructure_type = GFnyto_megastructure_collapse_reactor_02
+# 				}
+# 				prev = {
+# 					change_variable = {
+# 						which = collapsenum
+# 						value = 2
+# 					}
+# 				}
+# 				remove_megastructure = this
+# 			}
+# 			if = {
+# 				limit = {
+# 					is_megastructure_type = GFnyto_megastructure_collapse_reactor_01
+# 				}
+# 				prev = {
+# 					change_variable = {
+# 						which = collapsenum
+# 						value = 1
+# 					}
+# 				}
+# 				remove_megastructure = this
+# 			}
+# 		}
+# 		#遍历巨构 
+# 		if = {
+# 			limit = {
+# 				has_global_flag = z_pr_installed
+# 				check_variable = {
+# 					which = PR_var_cntr_MAN
+# 					value >= 1
+# 				}
+# 			}
+# 			change_variable = {
+# 				which = popnum
+# 				value = PR_var_cntr_MAN
+# 			}
+# 			set_variable = {
+# 				which = PR_var_cntr_MAN
+# 				value = 0
+# 			}
+# 		}
+# 		#人力加持人口
+# 		divide_variable = {
+# 			which = popnum
+# 			value = 100
+# 		}
+# 		change_variable = {
+# 			which = collapsenum
+# 			value = popnum
+# 		}
+# 		#权重相加
+# 		event_target:约西亚圣殿 = {
+# 			set_variable = {
+# 				which = plantbufflevel
+# 				value = root.collapsenum
+# 			}
+# 			change_variable = {
+# 				which = plantbufflevel
+# 				value = root.popnum
+# 			}
+# 			add_modifier = {
+# 				modifier = gfnyto_portal_buff
+# 				multiplier = plantbufflevel
+# 			}
+# 		}
+# 		#添加buff
+# 		divide_variable = {
+# 			which = collapsenum
+# 			value = 10
+# 		}
+# 		#巨构权重计数
+# 		floor_variable = popnum
+# 		floor_variable = collapsenum
+# 		#变量取整
+# 		change_variable = {
+# 			which = collapsenum
+# 			value = popnum
+# 		}
+# 		floor_variable = collapsenum
+# 		while = {
+# 			count = collapsenum
+# 			random_list = {
+# 				1 = {
+# 					event_target:约西亚圣殿 = {
+# 						add_district = district_GF_nyto_pc_portal_house
+# 					}
+# 				}
+# 				2 = {
+# 					event_target:约西亚圣殿 = {
+# 						add_district = district_GF_nyto_pc_portal_science
+# 					}
+# 				}
+# 				2 = {
+# 					event_target:约西亚圣殿 = {
+# 						add_district = district_GF_nyto_pc_portal_mineral
+# 					}
+# 				}
+# 				2 = {
+# 					event_target:约西亚圣殿 = {
+# 						add_district = district_GF_nyto_pc_portal_alloy
+# 					}
+# 				}
+# 				2 = {
+# 					event_target:约西亚圣殿 = {
+# 						add_district = district_GF_nyto_pc_portal_ship
+# 					}
+# 				}
+# 				2 = {
+# 					event_target:约西亚圣殿 = {
+# 						add_district = district_GF_nyto_pc_portal_refine
+# 					}
+# 				}
+# 				2 = {
+# 					event_target:约西亚圣殿 = {
+# 						add_district = district_GF_nyto_pc_portal_energy
+# 					}
+# 				}
+# 			}
+# 		}
+# 		while = {
+# 			count = 10
+# 			while = {
+# 				count = popnum
+# 				event_target:约西亚圣殿 = {
+# 					create_pop = {
+# 						species = root.owner
+# 					}
+# 				}
+# 			}
+# 		}
+# 		every_owned_planet = {
+# 			limit = {
+# 				is_star = no
+# 			}
+# 			remove_planet = yes
+# 		}
+# 		owner = {
+# 			owner_main_species = {
+# 				set_species_flag = GF_nyto_not_coloniz
+# 			}
+# 		}
+# 		event_target:约西亚圣殿 = {
+# 			remove_building = building_colony_shelter
+# 			add_building = building_imperial_capital
+# 		}
+# 	}
+# }
 
 #复制战败国科技
+#This = destroyed country
+#From = optional, destroyer (country)
 country_event = {
 	id = GFnyto_ascension_perk.130
 	is_triggered_only = yes
 	hide_window = yes
 	immediate = {
+		set_update_modifiers_batch = begin
 		this = {
 			save_global_event_target_as = Gfnyto_war_destroyed
 		}
@@ -678,6 +682,7 @@ country_event = {
 				}
 			}
 		}
+		set_update_modifiers_batch = end
 	}
 }
 

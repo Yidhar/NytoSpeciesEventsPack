@@ -1,6 +1,6 @@
 #机械战甲
 GF_nyto_machine_assault_2 = {
-	damage = 3
+	damage = 3.5
 	health = 5
 	has_morale = no
 	morale_damage = 1
@@ -20,7 +20,7 @@ GF_nyto_machine_assault_2 = {
 }
 #巨型战体
 GF_nyto_machine_assault_3 = {
-	damage = 4
+	damage = 5
 	health = 6
 	has_morale = no
 	morale_damage = 1.5
@@ -40,8 +40,8 @@ GF_nyto_machine_assault_3 = {
 }
 #白骑士
 GF_nyto_white_knight= {
-	damage = 5.0
-	health = 5.0
+	damage = 3.0
+	health = 3.0
 	has_morale = yes
 	morale = 5.0
 	morale_damage = 5
@@ -58,8 +58,8 @@ GF_nyto_white_knight= {
 	potential = {owner = {has_authority = auth_GF_paradeus}}
 }
 GF_nyto_white_knight2= {
-	damage = 2.5
-	health = 2.5
+	damage = 2.0
+	health = 2.0
 	has_morale = no
 	morale_damage = 5
 	collateral_damage = 0.5
@@ -120,24 +120,24 @@ GF_nyto_eild_army= {
 #装甲列车
 GF_nyto_armor_train= {
 	defensive = yes
-	damage = 6
-	health = 20
+	damage = 7
+	health = 15
 	has_morale = no
 	morale_damage = 5.0
 	collateral_damage = 1.0
 	war_exhaustion = 0
 	pop_limited = no
 	icon  = GFX_army_type_defensive
-	time = 300
+	time = 280
 	has_species = no
 	resources = {
 		category = armies
 		cost = {
-			alloys = 100
+			alloys = 150
 			GF_nyto_collapse_liquid=10
 		}
 		upkeep = {
-			energy = 5
+			energy = 2
 			GF_nyto_collapse_liquid=0.1
 		}
 	}
@@ -150,8 +150,8 @@ GF_nyto_armor_train= {
 #海军陆战队
 GF_nyto_marine_corps = {
 	defensive = yes
-	damage = 1
-	health = 1
+	damage = 2.0
+	health = 2.0
 	has_morale = yes
 	morale_damage = 1
 	collateral_damage = 1

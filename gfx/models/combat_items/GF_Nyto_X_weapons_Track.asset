@@ -164,10 +164,9 @@ entity = {
 entity = {
 	name = Electronic_hit
 	default_state = idle
-	state = { name = "explode_med_hp"  looping = no
+	state = { name = "idle"  looping = no
 		event = { time = 0.0 particle = "weapon_beacon_effect"  }
 	}
-	default_state = "explode_med_hp"
 }
 
 #导弹
@@ -196,8 +195,23 @@ entity = {
 	default_state = idle
 	state = { name = "idle"
 		event = {
-			time =  0 node = root particle = GF_star_explosion_3_file keep_particle = no
+			time =  0 node = root particle = GF_star_explosion_3_file keep_particle = no sound = {
+				soundeffect = GF_nyto_Elid_attack_lose
+			}
 		}
 	}
 	scale = 10
+}
+
+#激光
+entity = {
+	name = GF_nyto_Laser_weapon_muzzle_entity
+	default_state = idle
+	state = {
+		name = idle state_time = 5.0 looping = no
+		event = { time = 0 particle = "GF_nyto_Laser_weapon" keep_particle = yes  }
+		event = { time = 0 particle = "GF_nyto_Laser_weapon" keep_particle = yes  }
+		event = { time = 0 particle = "GF_nyto_Laser_weapon" keep_particle = yes  }
+		event = { time = 0 particle = "GF_nyto_Laser_weapon" keep_particle = yes  }
+	}
 }

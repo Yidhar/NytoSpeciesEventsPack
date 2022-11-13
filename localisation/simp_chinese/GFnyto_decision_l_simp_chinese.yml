@@ -43,3 +43,8 @@ decision_GFnyto_yaosai_desc1:0 "通过决议将允许建造永固要塞,将我�
 
 decision_GFnyto_EILD_hunting:0 "EILD狩猎"
 decision_GFnyto_EILD_hunting_desc:0 "一味的防守终究不是好方法,我们将重拳出击。主动进攻"
+
+decision_GFnyto_autopops:0 "定向人口迁徙:接收"
+decision_GFnyto_autopops_desc:0 "接收从其他星球迁移而来的人口"
+decision_GFnyto_autopops_2:0 "定向人口迁徙:输送"
+decision_GFnyto_autopops_2_desc:0 "放弃该殖民地转移全部人口"

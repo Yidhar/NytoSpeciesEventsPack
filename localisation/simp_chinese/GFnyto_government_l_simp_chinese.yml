@@ -1,8 +1,8 @@
 ﻿l_simp_chinese:
 #################################
 auth_GF_paradeus:0 "帕拉蒂斯"
-auth_GF_paradeus_desc:0 "尘归于尘,土归于土。"
-BE_APPOINTED_BY_PALADISIDEGUOJIAJIESHAO:0 "只有种族为§H涅托§!时才可以使用的政体。"
+auth_GF_paradeus_desc:0 "Paradise is there, behind that door, in the next\n帕拉蒂斯是一种阶级森严的政体,上级拥有对下级的绝对支配,高等级的涅托可以毫无后果的摘下低级涅托的头颅。这是一个残酷又高效的国家政体."
+BE_APPOINTED_BY_PALADISIDEGUOJIAJIESHAO:0 "过去逐渐远离，未来正在接近吗?"
 TANSUOFUSHE:0 ""
 RT_GPARADEUSF:0 "首席执政官"
 FLAG_CATEGORY_GFnyto:0 "帕拉蒂斯"

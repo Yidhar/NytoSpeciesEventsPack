@@ -68,4 +68,9 @@ objectTypes={
 		type = "weapon_beacon_fire_effect"
 		scale = 15
 	}
+	pdxparticle ={
+		name = GF_nyto_Laser_weapon
+		type = GF_nyto_Laser_weapon
+		scale = 1.0
+	}
 }

@@ -1,5 +1,6 @@
 #纯合金
 GF_nyto_alloy_automation = {
+	category = "planet_automation_designation_construction"
 	available = {
 		has_district = district_GF_nyto_pc_toxic_alloy
 		colony_type = col_GF_nyto_pc_toxic_alloy_plural
@@ -70,6 +71,7 @@ GF_nyto_alloy_automation = {
 
 #合金加科研
 GF_nyto_alloy_and_science_automation = {
+	category = "planet_automation_designation_construction"
 	available = {
 		has_district = district_GF_nyto_pc_toxic_alloy
 		has_district = district_GF_nyto_pc_toxic_science
@@ -145,6 +147,7 @@ GF_nyto_alloy_and_science_automation = {
 
 #合金+密钥
 GF_nyto_algorithm_and_alloy_automation = {
+	category = "planet_automation_designation_construction"
 	available = {
 		colony_type = col_GF_nyto_pc_toxic_energy_plural
 		has_district = district_GF_nyto_pc_toxic_alloy
@@ -204,8 +207,9 @@ GF_nyto_algorithm_and_alloy_automation = {
 	}
 }
 
-#塌缩液+密钥
+#坍塌液+密钥
 GF_nyto_algorithm_and_rar_automation = {
+	category = "planet_automation_designation_construction"
 	available = {
 		colony_type = col_GF_nyto_pc_toxic_consumer_good_plural
 		has_district = district_GF_nyto_pc_toxic_leisure
@@ -267,6 +271,7 @@ GF_nyto_algorithm_and_rar_automation = {
 
 #科研区划+密钥基地
 GF_nyto_science_and_algorithm ={
+	category = "planet_automation_designation_construction"
 	available = {
 		colony_type = col_GF_nyto_pc_toxic_energy_plural
 		has_district = district_GF_nyto_pc_toxic_science
@@ -341,6 +346,7 @@ GF_nyto_science_and_algorithm ={
 
 #不符合任何判断的密钥基地
 GF_nyto_algorithm_no_true ={
+	category = "planet_automation_designation_construction"
 	available = {
 		colony_type = col_GF_nyto_pc_toxic_energy_plural
 	}
@@ -415,6 +421,7 @@ GF_nyto_algorithm_no_true ={
 
 #科研环+火控核心
 GF_nyto_framework_core_automation = {
+	category = "planet_automation_designation_construction"
 	available = {
 		OR = {
 			colony_type = col_ring_research
@@ -487,6 +494,7 @@ GF_nyto_framework_core_automation = {
 
 #发电
 GF_nyto_class_4_automation ={
+	category = "planet_automation_designation_construction"
 	available = {
 		check_variable = {
 			which = GFnyto_plante_wrlv
@@ -522,6 +530,7 @@ GF_nyto_class_4_automation ={
 
 #科研殖民地类型
 GF_nyto_science2_automation ={
+	category = "planet_automation_designation_construction"
 	available = {
 		colony_type = col_GF_nyto_science
 		has_district = district_GF_nyto_pc_toxic_science
@@ -598,6 +607,7 @@ GF_nyto_science2_automation ={
 
 #快速转化 （有昙花区划时）
 GF_nyto_tanhua_automation ={
+	category = "planet_automation_designation_construction"
 	available = {
 		colony_type = col_GF_nyto_speed_planet_wrlv
 	}
@@ -623,6 +633,7 @@ GF_nyto_tanhua_automation ={
 }
 #没有时
 GF_nyto_no_tanhua_automation={
+	category = "planet_automation_designation_construction"
 	available = {
 		colony_type = col_GF_nyto_speed_planet_wrlv
 	}
@@ -649,6 +660,7 @@ GF_nyto_no_tanhua_automation={
 
 #战略资源 (三稀有+火控）
 Gf_nyto_refinery_automation ={
+	category = "planet_automation_designation_construction"
 	available = {
 		colony_type = col_Gf_nyto_xiyou_rss
 		has_district = district_GF_nyto_pc_toxic_refine
@@ -701,6 +713,7 @@ Gf_nyto_refinery_automation ={
 }
 #舰容
 GF_nyto_fleet_automation ={
+	category = "planet_automation_designation_construction"
 	available = {
 		colony_type = col_GF_nyto_nv_fleet
 		has_district = district_GF_nyto_pc_toxic_trade

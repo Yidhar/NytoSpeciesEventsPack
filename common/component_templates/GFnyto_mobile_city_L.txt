@@ -17,13 +17,13 @@ weapon_component_template = {
 	resources = {
 		category = planet_technician
 		cost = {
-			minerals = 700
-			alloys = 300
-			GF_nyto_dark_star_core = 10
+			minerals = 1000
+			alloys = 500
+			GF_nyto_dark_star_core = 5
 		}		
 		upkeep = {
-			food = 20
-			GF_nyto_collapse_liquid = 100
+			food = 100
+			GF_nyto_collapse_liquid = 200
 		}
 		produces = { energy = 200 }
 	}
@@ -48,13 +48,13 @@ weapon_component_template = {
 	resources = {
 		category = planet_miners
 		cost = {
-			minerals = 700
-			alloys = 300
-			GF_nyto_dark_star_core = 10
+			minerals = 1000
+			alloys = 500
+			GF_nyto_dark_star_core = 5
 		}		
 		upkeep = {
-			food = 20
-			GF_nyto_collapse_liquid = 100
+			food = 100
+			GF_nyto_collapse_liquid = 200
 		}
 		produces = { minerals = 200 }
 	}
@@ -80,13 +80,13 @@ weapon_component_template = {
 	resources = {
 		category = planet_farmers
 		cost = {
-			minerals = 700
-			alloys = 300
-			GF_nyto_dark_star_core = 10
+			minerals = 1000
+			alloys = 500
+			GF_nyto_dark_star_core = 5
 		}		
 		upkeep = {
-			food = 20
-			GF_nyto_collapse_liquid = 100
+			food = 100
+			GF_nyto_collapse_liquid = 200
 		}
 		produces = {food = 360}
 	}
@@ -113,14 +113,14 @@ weapon_component_template = {
 	resources = {
 		category = planet_metallurgists
 		cost = {
-			minerals = 1000
+			minerals = 2000
 			rare_crystals=10
-			GF_nyto_dark_star_core = 10			 
+			GF_nyto_dark_star_core = 5			 
 		}		
 		upkeep = {
-			food = 20
-			consumer_goods = 10
-			GF_nyto_collapse_liquid = 100
+			food = 100
+			consumer_goods = 20
+			GF_nyto_collapse_liquid = 200
 		}
 		produces = {alloys = 100 }
 	}
@@ -146,14 +146,14 @@ weapon_component_template = {
 	resources = {
 		category = planet_artisans
 		cost = {
-			minerals = 1000
+			minerals = 2000
 			rare_crystals=10
-			GF_nyto_dark_star_core = 10			 
+			GF_nyto_dark_star_core = 5			 
 		}		
 		upkeep = {
-			food = 20
-			consumer_goods = 10
-			GF_nyto_collapse_liquid=100
+			food = 100
+			minerals = 100
+			GF_nyto_collapse_liquid = 200
 		}
 		produces = { consumer_goods = 100 }
 	}
@@ -179,14 +179,14 @@ weapon_component_template = {
 	resources = {
 		category = planet_researchers
 		cost = {
-			minerals = 1000
+			minerals = 2000
 			rare_crystals=10
-			GF_nyto_dark_star_core = 10			 
+			GF_nyto_dark_star_core = 5			 
 		}		
 		upkeep = {
-			food = 20
-			consumer_goods = 10
-			GF_nyto_collapse_liquid= 100
+			food = 100
+			consumer_goods = 100
+			GF_nyto_collapse_liquid = 200
 		}
 		produces = {
 			physics_research = 40
@@ -198,7 +198,7 @@ weapon_component_template = {
 	size_restriction = { GFnyto_mobile_city }
 }
 
-#塌缩液
+#坍塌液
 
 #火控核心
 

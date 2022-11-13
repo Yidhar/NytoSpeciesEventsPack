@@ -16,4 +16,7 @@ eild= {
 			GF_nyto_collapse_liquid = 0.1
 		}
 	}
+	playable = {
+		always = no
+	}
 }

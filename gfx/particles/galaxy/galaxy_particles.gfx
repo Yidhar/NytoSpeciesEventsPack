@@ -66,4 +66,19 @@ objectTypes = {
 		type = "GF_star_explosion_2_file"		
 		scale = 1
 	}
+	pdxparticle = {
+		name = "testpop_particle"
+		type = "testpopparticle"		
+		scale = 1
+	}	
+	pdxparticle = {
+		name = "nyto_generic_020_exhaust_circle_moving"
+		type = "generic_exhaust_circle_moving_effect_file"
+		scale = 0.02
+	}
+	pdxparticle = {
+		name = "nyto_generic_01_exhaust_circle_moving"
+		type = "generic_exhaust_circle_moving_effect_file"
+		scale = 0.1
+	}
 }

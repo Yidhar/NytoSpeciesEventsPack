@@ -1,4 +1,4 @@
-#防弹插板
+#浮动附加装甲
 component_set = {
 	key = "GFnyto_body_armor_1"
 	icon = "GFX_ship_part_GFnyto_body_armor1"
@@ -27,6 +27,21 @@ component_set = {
 }
 component_set = {
 	key = "GFnyto_force_shield_3"
+	icon = "GFX_ship_part_GFnyto_force_shield3"
+	icon_frame = 1	
+}
+component_set = {
+	key = "GFnyto_force_shield_1_dc"
+	icon = "GFX_ship_part_GFnyto_force_shield1"
+	icon_frame = 1	
+}
+component_set = {
+	key = "GFnyto_force_shield_2_dc"
+	icon = "GFX_ship_part_GFnyto_force_shield2"
+	icon_frame = 1	
+}
+component_set = {
+	key = "GFnyto_force_shield_3_dc"
 	icon = "GFX_ship_part_GFnyto_force_shield3"
 	icon_frame = 1	
 }
@@ -204,5 +219,75 @@ component_set = {
 component_set = {
 	key = GF_nyto_weapon_beacon_sop
 	icon = GFX_nyto_weapon_beacon_sop
+	icon_frame = 1
+}
+component_set = {
+	key = "GF_Nyto_T_weapon1_dc"
+	icon = GFX_ship_part_T_weapons1
+	icon_frame = 1
+}
+component_set = {
+	key = "GF_Nyto_T_weapon2_dc"
+	icon = GFX_ship_part_T_weapons2
+	icon_frame = 1
+}
+component_set = {
+	key = "GF_Nyto_x_weapon1_dc"
+	icon = GFX_ship_part_x_weapons1
+	icon_frame = 1
+}
+component_set = {
+	key = "GF_Nyto_x_weapon2_dc"
+	icon = GFX_ship_part_x_weapons2
+	icon_frame = 1
+}
+component_set = {
+	key = "GF_Nyto_l_weapon1_dc"
+	icon = GFX_ship_part_l_weapons1
+	icon_frame = 1
+}
+component_set = {
+	key = GF_Nyto_l_weapon2_dc
+	icon = GFX_ship_part_l_weapons2
+	icon_frame = 1
+}
+component_set = {
+	key = GF_Nyto_ms_weapon1_dc
+	icon = GFX_ship_part_m_weapons1
+	icon_frame = 1
+}
+component_set = {
+	key = GF_Nyto_ms_weapon2_dc
+	icon = GFX_ship_part_m_weapons2
+	icon_frame = 1
+}
+component_set = {
+	key = GF_Nyto_g_weapon1_dc
+	icon = GFX_ship_part_g_weapons1
+	icon_frame = 1
+}
+component_set = {
+	key = GF_Nyto_g_weapon2_dc
+	icon = GFX_ship_part_g_weapons2
+	icon_frame = 1
+}
+component_set = {
+	key = GF_Nyto_h_weapon1_dc
+	icon = GFX_ship_part_h_weapons1
+	icon_frame = 1
+}
+component_set = {
+	key = GF_Nyto_h_weapon2_dc
+	icon = GFX_ship_part_h_weapons2
+	icon_frame = 1
+}
+component_set = {
+	key = GF_Nyto_p_weapon1_dc
+	icon = GFX_ship_part_p_weapons1
+	icon_frame = 1
+}
+component_set = {
+	key = GF_Nyto_p_weapon2_dc
+	icon = GFX_ship_part_p_weapons2
 	icon_frame = 1
 }

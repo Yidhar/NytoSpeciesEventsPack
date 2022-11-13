@@ -4,3 +4,10 @@ ambient_object = {
 	selectable = no
 	show_name = no
 }
+ambient_object = {
+	name = "GF_nyto_ender_system"
+	entity = map_entity
+	selectable = yes
+	selectable = no
+	show_name = no
+}

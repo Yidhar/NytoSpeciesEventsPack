@@ -44,9 +44,9 @@ GFnyto_collapse_particle_researcher = {
 					is_variable_set = GFnyto_plante_wrlv
 				}
 			}
-			physics_research = 0.01
-			society_research = 0.01
-			engineering_research = 0.01
+			physics_research = 0.005
+			society_research = 0.005
+			engineering_research = 0.005
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 		produces = {
@@ -55,7 +55,7 @@ GFnyto_collapse_particle_researcher = {
 					is_ai = yes
 				}
 			}
-			GF_nyto_collapse_liquid = 3
+			GF_nyto_collapse_liquid = 100
 			GF_nyto_training_key = 3
 			GF_nyto_new_fire_control_unit = 5
 		}
@@ -75,8 +75,16 @@ GFnyto_collapse_particle_researcher = {
 					is_variable_set = GFnyto_plante_wrlv
 				}
 			}
-			GF_nyto_collapse_liquid = 0.002
 			consumer_goods = 0.002
+			multiplier = planet.GFnyto_plante_wrlv
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					is_variable_set = GFnyto_plante_wrlv
+				}
+			}
+			GF_nyto_collapse_liquid = 0.025
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
@@ -85,53 +93,39 @@ GFnyto_collapse_particle_researcher = {
 	}
 }
 
-#受洗者
-GFnyto_collapse_changer = {
-	category = purge
-	condition_string = SPECIALIST_JOB_TRIGGER
-	is_capped_by_modifier = no
-	building_icon = building_job_GFnyto_collapse_changer
-	possible_pre_triggers = {
-		has_owner = yes
-		is_being_purged = no
-		is_being_assimilated = no
-	}
-	possible = {
-		owner = {
-			has_authority = auth_GF_paradeus
-		}
-		species = {
-			AND = {
-				NOT = {
-					is_species_class = nyto
-				}
-				NOT = {
-					is_species_class = NYTO
-				}
-				NOT = {
-					is_species_class = eild
-				}
-				NOT = {
-					is_species_class = EILD
-				}
-			}
-		}
-		planet = {
-			has_building = building_GFnyto_Elids
-		}
-	}
-	resources = {
-		category = planet_researchers
-		produces = {
-		}
-		upkeep = {
-			GF_nyto_collapse_liquid = 0.1
-		}
-	}
-	weight = {
-		weight = 999
-	}
-}
+# #受洗者
+# GFnyto_collapse_changer = {
+# 	category = purge
+# 	condition_string = SPECIALIST_JOB_TRIGGER
+# 	is_capped_by_modifier = no
+# 	building_icon = building_job_GFnyto_collapse_changer
+# 	possible_pre_triggers = {
+# 		has_owner = yes
+# 		is_being_purged = no
+# 		is_being_assimilated = no
+# 	}
+# 	possible = {
+# 		owner = {
+# 			has_authority = auth_GF_paradeus
+# 		}			
+# 		is_species_class = NYTO
+# 		is_species_class = EILD
+# 		planet = {
+# 			has_building = building_GFnyto_Elids
+# 		}
+# 	}
+# 	resources = {
+# 		category = planet_researchers
+# 		produces = {
+# 		}
+# 		upkeep = {
+# 			GF_nyto_collapse_liquid = 0.1
+# 		}
+# 	}
+# 	weight = {
+# 		weight = 999		
+# 	}
+# }
 
 ###
 #白骑士
@@ -174,7 +168,7 @@ GFnyto_white_knight = {
 		modifier = {
 			country_naval_cap_add = 10
 		}
-	}	
+	}
 	weight = {
 		weight = 5
 	}
@@ -260,7 +254,7 @@ GFnyto_explorer = {
 			alloys = 5
 		}
 		upkeep = {
-			consumer_goods = 3
+			consumer_goods = 1
 			food = 2
 		}
 	}
@@ -297,10 +291,11 @@ GFnyto_algorithm = {
 			multiplier = planet.trigger:has_planetary_ascension_tier
 		}
 		upkeep = {
-			consumer_goods = 5
-			rare_crystals = 3
-			exotic_gases = 3
+			consumer_goods = 5			#5矿
+			rare_crystals = 3			#15
+			exotic_gases = 3			#15
 		}
+		#5
 		upkeep = {
 			trigger = {
 				planet = {
@@ -411,6 +406,11 @@ GFnyto_collapse_particle_rar = {
 			multiplier = planet.trigger:has_planetary_ascension_tier
 		}
 		upkeep = {
+			trigger = {
+				planet.owner = {
+					is_ai = no
+				}
+			}
 			consumer_goods = 0.01
 			multiplier = planet.GFnyto_plante_wrlv
 		}
@@ -491,7 +491,6 @@ GFnyto_Epiphyllum_job = {
 				has_civic = civic_GF_nyto_heart_of_suffering
 			}
 		}
-		
 	}
 	resources = {
 		category = planet_farmers
@@ -510,7 +509,7 @@ GFnyto_Epiphyllum_job = {
 				}
 			}
 			GF_nyto_collapse_liquid = 3
-			food = 2
+			food = 7
 		}
 		produces = {
 			trigger = {
@@ -525,5 +524,50 @@ GFnyto_Epiphyllum_job = {
 	}
 	weight = {
 		weight = 5
+	}
+}
+
+overlord_Epiphyllum = {
+	category = worker
+	can_set_priority = no
+	is_capped_by_modifier = yes
+	clothes_texture_index = 1
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_worker_job
+	possible = {
+		is_robotic_species = no
+		NOT = {
+			has_trait = trait_zombie
+		}		#How do you kill that which has no life?
+	}
+	resources = {
+		category = planet_overlord_mortal_initiates
+		produces = {
+			food = 5
+			society_research = 1
+		}
+	}
+	overlord_resources = {
+		category = planet_overlord_mortal_initiates
+		produces = {
+			food = 2
+			GF_nyto_collapse_liquid = 5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_add = 2
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+	weight = {
+		weight = @overlord_job_weight
 	}
 }

@@ -159,27 +159,27 @@ tech_GFnyto_war_theory_c3 = {
 }
 ###舰海突击
 #机械化洪流
-tech_GFnyto_war_theory_d1 = {
-	icon = tech_GFnyto_war_theory_d1
-	cost = 10000
-	area = society
-	tier = 1
-	is_rare = no
-	category = { military_theory }	
-	prerequisites = { "tech_GF_nyto_EILD_brain_wave" }
-	weight = 5
-	modifier = {
-		starbase_shipyard_build_speed_mult = 1
-	}
-	prereqfor_desc = {
-		custom = {
-			title = "解锁护卫舰区段类型：装甲猎人"
-			desc = "护卫舰可以安装1个X槽位的武器。"
-		}
-	}
-	potential = {has_authority = auth_GF_paradeus}		
-	ai_weight = {weight = 5}
-}
+# tech_GFnyto_war_theory_d1 = {
+# 	icon = tech_GFnyto_war_theory_d1
+# 	cost = 10000
+# 	area = society
+# 	tier = 1
+# 	is_rare = no
+# 	category = { military_theory }	
+# 	prerequisites = { "tech_GF_nyto_EILD_brain_wave" }
+# 	weight = 5
+# 	modifier = {
+# 		starbase_shipyard_build_speed_mult = 1
+# 	}
+# 	prereqfor_desc = {
+# 		custom = {
+# 			title = "解锁护卫舰区段类型：装甲猎人"
+# 			desc = "护卫舰可以安装1个X槽位的武器。"
+# 		}
+# 	}
+# 	potential = {has_authority = auth_GF_paradeus}		
+# 	ai_weight = {weight = 5}
+# }
 #优先突破
 tech_GFnyto_war_theory_d2 = {
 	icon = tech_GFnyto_war_theory_d2

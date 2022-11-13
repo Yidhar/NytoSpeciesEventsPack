@@ -87,3 +87,41 @@ special_project = {
 	}
 }
 
+
+#破解信号
+special_project ={
+	key = GF_nyto_dc_evt_01
+	cost = 10000
+	picture = GFX_evt_GF_dc_nyto_10
+	tech_department = engineering_technology
+	event_scope = country_event
+	on_success = {
+		country_event = {
+			id = gfnytoparadeusancrel.4003
+		}
+	}
+}
+
+#未知星域
+special_project ={
+	key = GF_nyto_dc_evt_02
+	event_scope = country_event
+	picture = GFX_evt_GF_dc_nyto_9
+	location = yes
+	timelimit = -1
+	on_success = {
+		
+	}
+}
+
+special_project = {
+	key = GF_nyto_dc_evt_03
+	days_to_research = 1800
+	event_scope = country_event
+	picture = GFX_evt_GF_dc_nyto_14
+	on_success = {
+		country_event = {
+			id = gfnytoparadeusancrel.410
+		}
+	}
+}

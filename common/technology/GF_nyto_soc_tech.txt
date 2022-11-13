@@ -61,7 +61,7 @@ tech_GF_nyto_gene_tailoring = {
 	category = { biology }
 	prerequisites = { "tech_GF_nyto_robomodding_points_1" }
 	weight = 5
-	modifier = {NYTO_species_trait_points_add = 2}
+	modifier = {NYTO_species_trait_points_add = 3}
 	potential = {has_authority = auth_GF_paradeus}
 	ai_weight = {factor = 3}
 }
@@ -76,7 +76,7 @@ tech_GF_nyto_gene_expressions = {
 	is_rare = yes
 	prerequisites = { "tech_GF_nyto_robomodding_points_2" }
 	weight = 5
-	modifier = {NYTO_species_trait_points_add = 2}
+	modifier = {NYTO_species_trait_points_add = 3}
 	potential = {has_authority = auth_GF_paradeus}
 	ai_weight = {factor = 3}
 }

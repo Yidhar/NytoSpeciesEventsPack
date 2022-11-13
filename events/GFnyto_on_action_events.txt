@@ -4,8 +4,7 @@ planet_event = {
 	id = gfnytoaction.1
 	hide_window = yes
 	is_triggered_only = yes
-	trigger = {
-		planet_devastation >= 100
+	trigger = {		
 		has_orbital_bombardment_stance = gfnyto_collapse_liquid
 		from = {
 			OR = {
@@ -17,26 +16,34 @@ planet_event = {
 		habitable_planet = yes
 	}	
 	immediate = {
-		owner = {
-			add_static_war_exhaustion = {
-				attacker = from
-				location = root
-				value_for_planet_destruction = 0.5
+		set_update_modifiers_batch = begin
+		if = {
+			limit = { 
+				planet_devastation >= 95
 			}
-			country_event = { id = gfnytoaction.2 }
+			owner = {
+				add_static_war_exhaustion = {
+					attacker = from
+					location = root
+					value_for_planet_destruction = 0.5
+				}
+				country_event = { id = gfnytoaction.2 }
+			}
+			from = { country_event = { id = gfnytoaction.3 } }
+			change_pc = pc_GF_nyto_embers_gloomy
+			remove_all_buildings = yes
+			reroll_deposits = yes
+			remove_modifier = "natural_beauty"
+			remove_modifier = "atmospheric_aphrodisiac"
+			remove_modifier = "atmospheric_hallucinogen"
+			remove_modifier = "lush_planet"
+			remove_modifier = "dangerous_wildlife"
+			set_planet_flag = gfnyto_collapse_liquid_nuked
+			set_planet_flag = armageddon_nuked
+			every_owned_pop={kill_pop=yes}
+
 		}
-		from = { country_event = { id = gfnytoaction.3 } }
-		change_pc = pc_GF_nyto_embers_gloomy
-		remove_all_buildings = yes
-		reroll_deposits = yes
-		remove_modifier = "natural_beauty"
-		remove_modifier = "atmospheric_aphrodisiac"
-		remove_modifier = "atmospheric_hallucinogen"
-		remove_modifier = "lush_planet"
-		remove_modifier = "dangerous_wildlife"
-		set_planet_flag = gfnyto_collapse_liquid_nuked
-		set_planet_flag = armageddon_nuked
-		every_owned_pop={kill_pop=yes}
+		set_update_modifiers_batch = end
 	}
 }
 country_event = {
@@ -57,7 +64,6 @@ country_event = {
 				days = 10800 # 30 years
 			}
 		}
-		#every_owned_pop={kill_pop=yes}
 	}
 }
 country_event = {
@@ -71,6 +77,16 @@ country_event = {
 	option = {
 		name = EXCELLENT
 		custom_tooltip = bombed_to_tomb_world
+		hidden_effect ={
+			if = {
+				limit = { 
+					has_ascension_perk = ap_become_the_crisis
+				}
+				add_resource ={ 
+					menace = 350
+				}
+			}
+		}
 	}
 }
 #行星轨道防御系统
@@ -86,7 +102,7 @@ planet_event = {
 	}	
 	immediate = {
 		every_fleet_in_orbit = {
-			every_owned_ship = {
+			every_controlled_ship = {
 				reduce_hp_percent = 0.5
 			}			
 			owner = {
@@ -162,10 +178,9 @@ planet_event = {
 		has_orbital_bombardment_stance = gfnyto_trade_blockade
 	}	
 	immediate = {	
-		remove_modifier = gfnyto_trade_blockade
 		add_modifier = {
 			modifier = gfnyto_trade_blockade
-			days = 60
+			days = 1
 		}
 	}
 }

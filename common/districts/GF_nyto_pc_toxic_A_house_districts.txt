@@ -25,12 +25,17 @@ district_GF_nyto_pc_toxic_house = {
 			energy = 10
 		}
 	}
+	conversion_ratio = 0.5
+	convert_to = {
+		district_GF_nyto_pc_toxic_underground_shelters
+	}
 	planet_modifier = {
 		planet_housing_add = 30
 		planet_max_buildings_add = 1
 		job_GFnyto_white_knight_add = 1
 		planet_amenities_add = 25
 	}
+	
 	ai_resource_production = {
 		trigger = {
 			OR = {
@@ -59,6 +64,11 @@ district_GF_nyto_pc_toxic_energy = {
 			has_planet_flag = GFnyto_Spring_wakes_up
 			is_planet_class = pc_GFnytp_habitis
 		}
+	}
+	conversion_ratio = 0.5
+	convert_to = {
+		district_GF_nyto_pc_toxic_underground_shelters
+		
 	}
 	resources = {
 		category = planet_districts
@@ -271,7 +281,7 @@ district_GFnyto_pc_Epiphyllum = {
 }
 
 ###########可选区划################
-#逆向塌缩区划  （会取消矿物区划 和消费品区划）
+#逆向坍塌区划  （会取消矿物区划 和消费品区划）
 district_GF_nyto_pc_toxic_alloy = {
 	base_buildtime = 720
 	is_capped_by_modifier = no
@@ -279,12 +289,20 @@ district_GF_nyto_pc_toxic_alloy = {
 		or = {
 			has_planet_flag = GFnyto_district_alloy
 			is_planet_class = pc_GFnytp_habitis
+			AND = {
+				is_homeworld = yes
+				has_planet_flag = GFnyto_Spring_wakes_up
+			}
 		}
 	}
 	potential = {
 		or = {
 			has_planet_flag = GFnyto_district_alloy
 			is_planet_class = pc_GFnytp_habitis
+			AND = {
+				is_homeworld = yes
+				has_planet_flag = GFnyto_Spring_wakes_up
+			}
 		}
 	}
 	conversion_ratio = 1
@@ -315,16 +333,29 @@ district_GF_nyto_pc_toxic_consumer_good = {
 	base_buildtime = 720
 	is_capped_by_modifier = no
 	show_on_uncolonized = {
-		has_planet_flag = GFnyto_district_consumer_good
-		NOT = {
-			has_planet_flag = GFnyto_district_alloy
+		OR = {
+			AND = {
+				has_planet_flag = GFnyto_district_consumer_good
+				NOT = { has_planet_flag = GFnyto_district_alloy }
+			}
+			AND = {
+				is_homeworld = yes
+				has_planet_flag = GFnyto_Spring_wakes_up
+			}
 		}
 	}
 	potential = {
-		has_planet_flag = GFnyto_district_consumer_good
-		NOT = {
-			has_planet_flag = GFnyto_district_alloy
+		OR = {
+			AND = {
+				has_planet_flag = GFnyto_district_consumer_good
+				NOT = { has_planet_flag = GFnyto_district_alloy }
+			}
+			AND = {
+				is_homeworld = yes
+				has_planet_flag = GFnyto_Spring_wakes_up
+			}
 		}
+
 	}
 	conversion_ratio = 1
 	convert_to = {
@@ -386,12 +417,20 @@ district_GF_nyto_pc_toxic_refine = {
 		OR = {
 			has_planet_flag = GFnyto_district_refine
 			is_planet_class = pc_GFnytp_habitis
+			AND = {
+				is_homeworld = yes
+				has_planet_flag = GFnyto_Spring_wakes_up
+			}
 		}
 	}
 	potential = {
 		OR = {
 			has_planet_flag = GFnyto_district_refine
 			is_planet_class = pc_GFnytp_habitis
+			AND = {
+				is_homeworld = yes
+				has_planet_flag = GFnyto_Spring_wakes_up
+			}
 		}
 	}
 	conversion_ratio = 1
@@ -413,9 +452,9 @@ district_GF_nyto_pc_toxic_refine = {
 	}
 	planet_modifier = {
 		planet_housing_add = 10
-		job_chemist_add = 2
-		job_gas_refiner_add = 2
-		job_translucer_add = 2
+		job_chemist_add = 3
+		job_gas_refiner_add = 3
+		job_translucer_add = 3
 	}
 	ai_resource_production = {
 		trigger = {
@@ -441,21 +480,31 @@ district_GF_nyto_pc_toxic_refine = {
 	}
 }
 
-#塌缩工业区划
+#坍塌工业区划
 district_GF_nyto_pc_toxic_leisure = {
 	base_buildtime = 720
 	is_capped_by_modifier = no
 	show_on_uncolonized = {
-		has_planet_flag = GFnyto_district_leisure
+		OR = {
+			has_planet_flag = GFnyto_district_leisure
+			AND = {
+				is_homeworld = yes
+				has_planet_flag = GFnyto_Spring_wakes_up
+			}
+		}	
 	}
 	potential = {
-		has_planet_flag = GFnyto_district_leisure
+		OR = {
+			has_planet_flag = GFnyto_district_leisure
+			AND = {
+				is_homeworld = yes
+				has_planet_flag = GFnyto_Spring_wakes_up
+			}
+		}	
 	}
-	conversion_ratio = 1
+	conversion_ratio = 0.5
 	convert_to = {
-		district_city
-		district_nexus
-		district_hive
+		district_GF_nyto_pc_toxic_underground_industrial_area
 	}
 	resources = {
 		category = planet_districts
@@ -491,19 +540,25 @@ district_GF_nyto_pc_toxic_science = {
 		OR = {
 			has_planet_flag = GFnyto_district_science
 			is_planet_class = pc_GFnytp_habitis
+			AND = {
+				is_homeworld = yes
+				has_planet_flag = GFnyto_Spring_wakes_up
+			}
 		}
 	}
 	potential = {
 		OR = {
 			has_planet_flag = GFnyto_district_science
 			is_planet_class = pc_GFnytp_habitis
+			AND = {
+				is_homeworld = yes
+				has_planet_flag = GFnyto_Spring_wakes_up
+			}
 		}
 	}
 	conversion_ratio = 1
 	convert_to = {
-		district_city
-		district_nexus
-		district_hive
+		district_GF_nyto_pc_toxic_underground_research_institute
 	}
 	resources = {
 		category = planet_districts
@@ -537,10 +592,23 @@ district_GF_nyto_pc_toxic_trade = {
 	base_buildtime = 720
 	is_capped_by_modifier = no
 	show_on_uncolonized = {
-		has_planet_flag = GFnyto_district_trade
+		OR = {
+			has_planet_flag = GFnyto_district_trade
+			AND = {
+				is_homeworld = yes
+				has_planet_flag = GFnyto_Spring_wakes_up
+			}
+		}
 	}
 	potential = {
-		has_planet_flag = GFnyto_district_trade
+		OR = {
+			has_planet_flag = GFnyto_district_trade
+			AND = {
+				is_homeworld = yes
+				has_planet_flag = GFnyto_Spring_wakes_up
+			}
+		}
+		
 	}
 	conversion_ratio = 1
 	convert_to = {

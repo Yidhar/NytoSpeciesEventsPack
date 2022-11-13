@@ -52,7 +52,6 @@ civic_GF_nyto_forward_base = {
 			value = auth_GF_paradeus
 		}
 	}
-	modification = no
 	possible = {
 		species_class = {
 			value = nyto
@@ -163,6 +162,8 @@ civic_GF_nyoto_armor_train={
 		planet_army_build_time_mult = -0.1
 		armies_energy_upkeep_mult = -0.5
 		empire_size_systems_mult = 0.6
+		army_defense_health_mult = 1
+		army_attack_damage_mult = 0.5
 		SHIP_HOME_TERRITORY_FIRE_RATE_MULT = 2
 		shipclass_starbase_build_cost_mult = 2
 	}
@@ -200,7 +201,7 @@ civic_GF_nyto_reup = {
 	}
 	modifier = {
 		pop_amenities_usage_mult = -0.5
-		planet_pops_consumer_goods_upkeep_mult = -0.5		
+		planet_pops_consumer_goods_upkeep_mult = -0.3		
 		planet_jobs_consumer_goods_upkeep_mult = -0.5	
 	}
 }
@@ -238,7 +239,7 @@ civic_GF_nyto_heart_of_suffering = {
 	
 }
 
-#复仇远征 #初始拥有塌缩液抛射轰炸 #人口无法自然增长
+#复仇远征 #初始拥有坍塌液抛射轰炸 #人口无法自然增长
 civic_GF_nyto_Vengeance_Crusade ={
 	potential = {
 		authority = {

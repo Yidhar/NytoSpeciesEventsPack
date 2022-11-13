@@ -72,6 +72,13 @@ GFnyto_mobile_city = {
 			}
 		}
 	}
+	possible_country = {
+		check_variable = {
+			which = GFnyto_mobile_city_num
+			value <= 3
+		}
+		custom_tooltip = check_GFnyto_mobile_city_num
+	}
 	combat_disengage_chance = 10
 	num_target_locators = 21
 	can_have_federation_design = no
@@ -118,6 +125,21 @@ GFnyto_shiled_ship ={
 	possible_country = {
 		has_authority = auth_GF_paradeus
 	}
+	potential_construction = {
+		OR = {
+			is_scope_type = starbase
+			AND = {
+				is_scope_type = megastructure
+				OR = {
+					is_megastructure_type = GFnyto_habitat_02
+					is_megastructure_type = mega_shipyard_3
+					is_megastructure_type = mega_shipyard_restored
+					is_megastructure_type = StarForge
+					is_megastructure_type = exe_black_hole_restore
+				}
+			}
+		}
+	}	
 	resources = {
 		category = ships
 		cost = {

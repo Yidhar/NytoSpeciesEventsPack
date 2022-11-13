@@ -1,55 +1,136 @@
 ﻿GFNYTO01 = {
+	category = "NYTO"
+	randomized = no
+	alias = "nyto"
 	ship_names = {
-		corvette = {"角斗士""格斗士"}
-		destroyer = {"剑盾士""掷斧士"}
-		cruiser = {"重剑士""巨剑士"}
-		battleship ={"长弓士""石弩士"}
-		titan = {"长枪士""攻城士"}
-		colossus = {"烈焰天使""审判天使"}	
+		corvette = {
+			corvette_ship_01
+			corvette_ship_02
+		}
+		destroyer = {
+			destroyer_01
+			destroyer_02
+		}
+		cruiser = {
+			cruiser_01
+			cruiser_02
+		}
+		battleship ={
+			battleship_01
+			battleship_02
+		}
+		titan = {
+			titan_01
+			titan_02
+		}
+		colossus = {
+			colossus_01
+			colossus_02
+		}	
 		
-		science = {"侦察士"}	
-		colonizer = {"航海士"}	
-		constructor = {"建造士"}
-		transport = {"装载士"}
-		military_station_small = {"射击士"}
-		ion_cannon = {"重炮士"}
-		GFnyto_Command_ship = { "指挥舰" }
-		GFnyto_shiled_ship = { "立场支援舰" }
-		GFnyto_mobile_city= {"生产单元" "复合单元" "避难所" }		
+		science = {
+			science_01
+		}	
+		colonizer = {
+			colonizer_01
+		}	
+		constructor = {
+			constructor_01
+		}
+		transport = {
+			transport_01
+		}
+		military_station_small = {
+			military_station_small_01
+		}
+		ion_cannon = {
+			ion_cannon_01
+		}
+		GFnyto_Command_ship = {
+			GFnyto_Command_ship_01
+		}
+		GFnyto_shiled_ship = {
+			GFnyto_shiled_ship_01
+		}
+		GFnyto_mobile_city= {
+			GFnyto_mobile_city_01
+			GFnyto_mobile_city_02
+			GFnyto_mobile_city_03
+		}		
 	}
 	fleet_names = {
-		random_names = {"枪骑兵舰队" "翼骑兵舰队" "龙骑兵舰队" "骠骑兵舰队" "近卫骑兵舰队" "重装骑兵舰队" "游骑兵舰队""弓骑兵舰队" "先锋骑兵舰队"}
-		sequential_name = "舰队 %C%"
+		# random_names = {"枪骑兵舰队" "翼骑兵舰队" "龙骑兵舰队" "骠骑兵舰队" "近卫骑兵舰队" "重装骑兵舰队" "游骑兵舰队""弓骑兵舰队" "先锋骑兵舰队"}
+		sequential_name = nyto_xxFLEET_ORD
 	}
 	army_names = {
-		defense_army = {sequential_name = "%O% 国民掷弹兵"}		
-		assault_army = {sequential_name = "%O% 突击掷弹兵"}
-		slave_army = {sequential_name = "%O% 冲锋队"}		
-		clone_army = { sequential_name = "%O% 突击掷弹兵"}		
-		robotic_army = {sequential_name = "%O% 装甲掷弹兵"}
-		robotic_defense_army = {sequential_name = "%O% 装甲掷弹兵"}		
-		psionic_army = { sequential_name = "%O% 游骑兵"}		
-		xenomorph_army = {sequential_name = "%O% 冲锋队"}		
-		gene_warrior_army = {sequential_name = "%O% 游骑兵"}
-		occupation_army = {sequential_name = "%O% 国民掷弹兵"}
-		robotic_occupation_army = {sequential_name = "%O% 装甲掷弹兵"}
-		primitive_army = {sequential_name = "Primitive Army %C%"}
+		defense_army = {sequential_name = nyto_xxPLANETARYGUARD_ORD }		
+		assault_army = {sequential_name = nyto_xxEXPEDITIONARYFORCE_ORD }
+		slave_army = {sequential_name = nyto_xxINDENTUREDRIFLES_ORD } 		
+		clone_army = {sequential_name = nyto_xxCLONEARMY_ORD }		
+		robotic_army = {sequential_name = nyto_xxHUNTERKILLERGROUP_ORD}
+		robotic_defense_army = {sequential_name = nyto_xxGROUNDDEFENSEMATRIX_ORD }		
+		psionic_army = { sequential_name = nyto_xxPSICOMMANDO_ORD }		
+		xenomorph_army = { sequential_name = nyto_xxBIOWARFAREDIVISION_ORD }		
+		gene_warrior_army = {sequential_name = nyto_xxPLANETARYGUARD_ORD }
+		occupation_army = { sequential_name = nyto_xxGARRISONFORCE_ORD }
+		robotic_occupation_army = { sequential_name = nyto_xxMECHANIZEDGARRISON_ORD }
+		primitive_army = { sequential_name = nyto_PRIMITIVEARMYxx_SEQ }
 		
-		industrial_army = {sequential_name = "Industrial Army %C%"}
-		postatomic_army = {sequential_name = "Post-Atomic Army %C%"}
-		GF_nyto_armor_train = {sequential_name = "装甲列车"}	
-		GF_nyto_machine_assault_2 = {sequential_name = "%O% 装甲掷弹兵"}
-		GF_nyto_machine_assault_3 = {sequential_name = "%O% 装甲掷弹兵"}
-		GF_nyto_white_knight = {sequential_name = "%O% 骑兵"}
-		GF_nyto_war_nuns = {sequential_name = "%O% 国民掷弹兵"}
-		GF_nyto_eild_army = {sequential_name = "%O% 受洗者"}
-		GF_nyto_marine_corps = {sequential_name = "%O% 海军陆战队"}
+		industrial_army = {  sequential_name = nyto_INDUSTRIALARMYxx_SEQ }
+		postatomic_army = {  sequential_name = nyto_POSTATOMICARMYxx_SEQ}
+
+		GF_nyto_armor_train = {  sequential_name = nyto_xxPLANETARTRAIN1_ORD }	
+		GF_nyto_machine_assault_2 = {  sequential_name = nyto_xxPLANETARTRAIN2ORD }
+		GF_nyto_machine_assault_3 = {  sequential_name = nyto_xxPLANETARTRAIN3_ORD }
+		GF_nyto_white_knight = {  sequential_name = nyto_xxPLANETARTRAIN4_ORD }
+		GF_nyto_war_nuns = {  sequential_name = nyto_xxPLANETARTRAIN5_ORD }
+		GF_nyto_eild_army = {  sequential_name = nyto_xxPLANETARTRAIN6_ORD }
+		GF_nyto_marine_corps = {  sequential_name = nyto_xxPLANETARTRAIN7_ORD }
 	}
-	planet_names = {generic = {names = {"大瑪努他""庫瑞涅""以旬迦別""安提帕底""多利買""吉珥哈列設""米斯利弗瑪音""西拉哈瑪希羅結""伊甸""庇耳拉海萊""吾珥""亞伯什亭"}}}
+	planet_names = {
+		generic = {
+			names = {
+				nyto_planet_01
+				nyto_planet_02
+				nyto_planet_03
+				nyto_planet_04
+				nyto_planet_05
+				nyto_planet_06
+				nyto_planet_07
+				nyto_planet_08
+				nyto_planet_09
+				nyto_planet_10
+				nyto_planet_11
+				nyto_planet_12_ORD
+			}
+		}
+	}
 	character_names = {
 		names1 = {
 			weight = 40
-			full_names = {"尼莫金""墨萝丘丝""丹德莱""安娜""约翰妮""尤莉亚""希尔德""伊洛娜""黑德维希""克里斯蒂娜""约瑟菲妮""朱莉安""卡伦""尤塔""燕妮""玛格达雷娜""萨拉""劳拉""索菲妮""缇""格雷"}
+			full_names = {
+				nyto_full_names_01
+				nyto_full_names_02
+				nyto_full_names_03
+				nyto_full_names_04
+				nyto_full_names_05
+				nyto_full_names_06
+				nyto_full_names_07
+				nyto_full_names_08
+				nyto_full_names_09
+				nyto_full_names_10
+				nyto_full_names_11
+				nyto_full_names_12
+				nyto_full_names_13
+				nyto_full_names_14
+				nyto_full_names_15
+				nyto_full_names_16
+				nyto_full_names_17
+				nyto_full_names_18
+				nyto_full_names_19
+				nyto_full_names_20
+				nyto_full_names_21				
+			}
 			first_names = {}
 			second_names = {}
 		}
@@ -57,53 +138,109 @@
 }
 GFNYTO02 = {
 	ship_names = {
-		corvette = {"角斗士""格斗士"}
-		destroyer = {"剑盾士""掷斧士"}
-		cruiser = {"重剑士""巨剑士"}
-		battleship ={"长弓士""石弩士"}
-		titan = {"长枪士""攻城士"}
-		colossus = {"烈焰天使""审判天使"}	
+		corvette = {
+			corvette_ship_01
+			corvette_ship_02
+		}
+		destroyer = {
+			destroyer_01
+			destroyer_02
+		}
+		cruiser = {
+			cruiser_01
+			cruiser_02
+		}
+		battleship ={
+			battleship_01
+			battleship_02
+		}
+		titan = {
+			titan_01
+			titan_02
+		}
+		colossus = {
+			colossus_01
+			colossus_02
+		}	
 		
-		science = {"侦察士"}	
-		colonizer = {"航海士"}	
-		constructor = {"建造士"}
-		transport = {"装载士"}
-		military_station_small = {"射击士"}
-		ion_cannon = {"重炮士"}
-
-		GFnyto_mobile_city= {"机械巨兽"}
+		science = {
+			science_01
+		}	
+		colonizer = {
+			colonizer_01
+		}	
+		constructor = {
+			constructor_01
+		}
+		transport = {
+			transport_01
+		}
+		military_station_small = {
+			military_station_small_01
+		}
+		ion_cannon = {
+			ion_cannon_01
+		}
+		GFnyto_Command_ship = {
+			GFnyto_Command_ship_01
+		}
+		GFnyto_shiled_ship = {
+			GFnyto_shiled_ship_01
+		}
+		GFnyto_mobile_city= {
+			GFnyto_mobile_city_01
+			GFnyto_mobile_city_02
+			GFnyto_mobile_city_03
+		}		
 	}
 	fleet_names = {
-		random_names = {"枪骑兵舰队" "翼骑兵舰队" "龙骑兵舰队" "骠骑兵舰队" "近卫骑兵舰队" "重装骑兵舰队" "游骑兵舰队""弓骑兵舰队" "先锋骑兵舰队"}
-		sequential_name = "舰队 %C%"
+		# random_names = {"枪骑兵舰队" "翼骑兵舰队" "龙骑兵舰队" "骠骑兵舰队" "近卫骑兵舰队" "重装骑兵舰队" "游骑兵舰队""弓骑兵舰队" "先锋骑兵舰队"}
+		sequential_name = nyto_xxFLEET_ORD
 	}
 	army_names = {
-		defense_army = {sequential_name = "%O% 受洗者"}		
-		assault_army = {sequential_name = "%O% 受洗者"}
-		slave_army = {sequential_name = "%O% 受洗者"}		
-		clone_army = { sequential_name = "%O% 受洗者"}		
-		robotic_army = {sequential_name = "%O% 受洗者"}
-		robotic_defense_army = {sequential_name = "%O% 受洗者"}		
-		psionic_army = { sequential_name = "%O% 受洗者"}		
-		xenomorph_army = {sequential_name = "%O% 受洗者"}		
-		gene_warrior_army = {sequential_name = "%O% 受洗者"}
-		occupation_army = {sequential_name = "%O% 受洗者"}
-		robotic_occupation_army = {sequential_name = "%O% 受洗者"}
-		primitive_army = {sequential_name = "Primitive Army %C%"}
-		industrial_army = {sequential_name = "Industrial Army %C%"}
-		postatomic_army = {sequential_name = "Post-Atomic Army %C%"}
-		industrial_army = {sequential_name = "Industrial Army %C%"}
-		postatomic_army = {sequential_name = "Post-Atomic Army %C%"}
+		defense_army = {sequential_name = "elid_xxPLANETARTRAIN1_ORD"}		
+		assault_army = {sequential_name = "elid_xxPLANETARTRAIN2_ORD"}
+		slave_army = {sequential_name = "elid_xxPLANETARTRAIN3_ORD"}		
+		clone_army = { sequential_name = "elid_xxPLANETARTRAIN4_ORD"}		
+		robotic_army = {sequential_name = "elid_xxPLANETARTRAIN5_ORD"}
+		robotic_defense_army = {sequential_name = "elid_xxPLANETARTRAIN6_ORD"}		
+		psionic_army = { sequential_name = "elid_xxPLANETARTRAIN7_ORD"}		
+		xenomorph_army = {sequential_name = "elid_xxPLANETARTRAIN8_ORD"}		
+		gene_warrior_army = {sequential_name = "elid_xxPLANETARTRAIN9_ORD"}
+		occupation_army = {sequential_name = "elid_xxPLANETARTRAIN10_ORD"}
+		robotic_occupation_army = {sequential_name = "elid_xxPLANETARTRAIN11_ORD"}
+		primitive_army = {sequential_name = "elid_xxPLANETARTRAIN1_ORD"}
+		industrial_army = {sequential_name = "elid_xxPLANETARTRAIN1_ORD"}
+		postatomic_army = {sequential_name = "elid_xxPLANETARTRAIN1_ORD"}
+		industrial_army = {sequential_name = "elid_xxPLANETARTRAIN1_ORD"}
+		postatomic_army = {sequential_name = "elid_xxPLANETARTRAIN1_ORD"}
 
-		GF_nyto_armor_train = {sequential_name = "机械巨兽"}	
-		GF_nyto_machine_assault_2 = {sequential_name = "%O% 装甲掷弹兵"}
-		GF_nyto_machine_assault_3 = {sequential_name = "%O% 装甲掷弹兵"}
-		GF_nyto_white_knight = {sequential_name = "%O% 骑兵"}
-		GF_nyto_war_nuns = {sequential_name = "%O% 国民掷弹兵"}
-		GF_nyto_eild_army = {sequential_name = "%O% 受洗者"}
-		GF_nyto_marine_corps = {sequential_name = "%O% 海军陆战队"}
+		# GF_nyto_armor_train = {sequential_name = "机械巨兽"}	
+		# GF_nyto_machine_assault_2 = {sequential_name = "$O$ 装甲掷弹兵"}
+		# GF_nyto_machine_assault_3 = {sequential_name = "$O$ 装甲掷弹兵"}
+		# GF_nyto_white_knight = {sequential_name = "$O$ 骑兵"}
+		# GF_nyto_war_nuns = {sequential_name = "$O$ 国民掷弹兵"}
+		# GF_nyto_eild_army = {sequential_name = "$O$ 受洗者"}
+		# GF_nyto_marine_corps = {sequential_name = "$O$ 海军陆战队"}
 	}
-	planet_names = {generic = {names = {"大瑪努他""庫瑞涅""以旬迦別""安提帕底""多利買""吉珥哈列設""米斯利弗瑪音""西拉哈瑪希羅結""伊甸""庇耳拉海萊""吾珥""亞伯什亭"}}}
+	planet_names = {
+		generic = {
+			names = {	
+				nyto_planet_01
+				nyto_planet_02
+				nyto_planet_03
+				nyto_planet_04
+				nyto_planet_05
+				nyto_planet_06
+				nyto_planet_07
+				nyto_planet_08
+				nyto_planet_09
+				nyto_planet_10
+				nyto_planet_11
+				nyto_planet_12_ORD
+			}
+		}
+	}
 	character_names = {
 		names1 = {
 			weight = 40

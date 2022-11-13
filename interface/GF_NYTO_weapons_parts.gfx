@@ -1,6 +1,6 @@
 
 spriteTypes = {	
-	#防弹插板
+	#浮动附加装甲
 	spriteType = {
 		name = "GFX_ship_part_GFnyto_body_armor1"
 		texturefile = "gfx/interface/icons/ship_parts/GFX_ship_part_GFnyto_body_armor1.dds"
@@ -49,8 +49,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/ship_parts/computers/GFX_ship_part_GFnyto_additional_arithmetic_module3.dds"
 	}
 	spriteType = {
-		name = "GFX_ship_part_GFnyto_power"
-		texturefile = "gfx/interface/icons/ship_parts/GFX_ship_part_GFnyto_power.dds"
+		name = "GFX_ship_part_GFnyto_power_lv1"
+		texturefile = "gfx/interface/icons/ship_parts/GFnyto_power_lv1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_GFnyto_power_lv2"
+		texturefile = "gfx/interface/icons/ship_parts/GFnyto_power_lv2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_GFnyto_power_lv3"
+		texturefile = "gfx/interface/icons/ship_parts/GFnyto_power_lv3.dds"
 	}
 	#穿梭引擎
 	spriteType = {

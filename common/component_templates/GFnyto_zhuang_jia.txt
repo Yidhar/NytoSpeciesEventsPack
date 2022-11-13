@@ -1,7 +1,7 @@
-#防弹插板
+#浮动附加装甲
 #LV1
 utility_component_template = {
-	key = "tech_GFnyto_body_armor_L_1"
+	key = "GFnyto_body_armor_L_1"
 	size = large
 	#	size_restriction = {cruiser titan}
 	icon = "GFX_ship_part_GFnyto_body_armor1"
@@ -11,7 +11,7 @@ utility_component_template = {
 		ship_armor_add = 1140
 		#		ship_base_speed_mult = 0.3
 	}
-	component_set = "tech_GFnyto_body_armor_1"
+	component_set = "GFnyto_body_armor_1"
 	resources = {
 		category = ship_components
 		cost = {
@@ -27,12 +27,12 @@ utility_component_template = {
 	prerequisites = {
 		"tech_GFnyto_body_armor1"
 	}
-	upgrades_to = tech_GFnyto_body_armor_L_2
+	upgrades_to = GFnyto_body_armor_L_2
 }
 
 #LV2
 utility_component_template = {
-	key = "tech_GFnyto_body_armor_L_2"
+	key = "GFnyto_body_armor_L_2"
 	size = large
 	#	size_restriction = {cruiser titan}
 	icon = "GFX_ship_part_GFnyto_body_armor2"
@@ -42,7 +42,7 @@ utility_component_template = {
 		ship_armor_add = 1860
 		#		ship_base_speed_mult = 0.6
 	}
-	component_set = "tech_GFnyto_body_armor_2"
+	component_set = "GFnyto_body_armor_2"
 	resources = {
 		category = ship_components
 		cost = {
@@ -58,12 +58,12 @@ utility_component_template = {
 	prerequisites = {
 		"tech_GFnyto_body_armor2"
 	}
-	upgrades_to = tech_GFnyto_body_armor_L_3
+	upgrades_to = GFnyto_body_armor_L_3
 }
 
 #LV3
 utility_component_template = {
-	key = "tech_GFnyto_body_armor_L_3"
+	key = "GFnyto_body_armor_L_3"
 	size = large
 	#	size_restriction = {cruiser titan}
 	icon = "GFX_ship_part_GFnyto_body_armor3"
@@ -73,7 +73,7 @@ utility_component_template = {
 		ship_armor_add = 2820
 		#		ship_base_speed_mult = 0.9
 	}
-	component_set = "tech_GFnyto_body_armor_3"
+	component_set = "GFnyto_body_armor_3"
 	resources = {
 		category = ship_components
 		cost = {
@@ -91,10 +91,10 @@ utility_component_template = {
 	}
 }
 
-#防弹插板 M
+#浮动附加装甲 M
 #LV1
 utility_component_template = {
-	key = "tech_GFnyto_body_armor_M_1"
+	key = "GFnyto_body_armor_M_1"
 	size = medium
 	icon = "GFX_ship_part_GFnyto_body_armor1"
 	icon_frame = 1
@@ -103,7 +103,7 @@ utility_component_template = {
 		ship_armor_add = 485
 		#		ship_base_speed_mult = 0.2
 	}
-	component_set = "tech_GFnyto_body_armor_1"
+	component_set = "GFnyto_body_armor_1"
 	resources = {
 		category = ship_components
 		cost = {
@@ -119,12 +119,12 @@ utility_component_template = {
 	prerequisites = {
 		"tech_GFnyto_body_armor1"
 	}
-	upgrades_to = tech_GFnyto_body_armor_M_2
+	upgrades_to = GFnyto_body_armor_M_2
 }
 
 #LV2
 utility_component_template = {
-	key = "tech_GFnyto_body_armor_M_2"
+	key = "GFnyto_body_armor_M_2"
 	size = medium
 	icon = "GFX_ship_part_GFnyto_body_armor2"
 	icon_frame = 1
@@ -133,7 +133,7 @@ utility_component_template = {
 		ship_armor_add = 815
 		#		ship_base_speed_mult = 0.5
 	}
-	component_set = "tech_GFnyto_body_armor_2"
+	component_set = "GFnyto_body_armor_2"
 	resources = {
 		category = ship_components
 		cost = {
@@ -149,12 +149,12 @@ utility_component_template = {
 	prerequisites = {
 		"tech_GFnyto_body_armor2"
 	}
-	upgrades_to = tech_GFnyto_body_armor_M_3
+	upgrades_to = GFnyto_body_armor_M_3
 }
 
 #LV3
 utility_component_template = {
-	key = "tech_GFnyto_body_armor_M_3"
+	key = "GFnyto_body_armor_M_3"
 	size = medium
 	icon = "GFX_ship_part_GFnyto_body_armor3"
 	icon_frame = 1
@@ -163,7 +163,7 @@ utility_component_template = {
 		ship_armor_add = 1265
 		#		ship_base_speed_mult = 0.8
 	}
-	component_set = "tech_GFnyto_body_armor_3"
+	component_set = "GFnyto_body_armor_3"
 	resources = {
 		category = ship_components
 		cost = {
@@ -181,10 +181,10 @@ utility_component_template = {
 	}
 }
 
-#防弹插板 S
+#浮动附加装甲 S
 #LV1
 utility_component_template = {
-	key = "tech_GFnyto_body_armor_S_1"
+	key = "GFnyto_body_armor_S_1"
 	size = small
 	icon = "GFX_ship_part_GFnyto_body_armor1"
 	icon_frame = 1
@@ -192,7 +192,7 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = 190
 	}
-	component_set = "tech_GFnyto_body_armor_1"
+	component_set = "GFnyto_body_armor_1"
 	resources = {
 		category = ship_components
 		cost = {
@@ -208,12 +208,12 @@ utility_component_template = {
 	prerequisites = {
 		"tech_GFnyto_body_armor1"
 	}
-	upgrades_to = tech_GFnyto_body_armor_S_2
+	upgrades_to = GFnyto_body_armor_S_2
 }
 
 #LV2
 utility_component_template = {
-	key = "tech_GFnyto_body_armor_S_2"
+	key = "GFnyto_body_armor_S_2"
 	size = small
 	icon = "GFX_ship_part_GFnyto_body_armor2"
 	icon_frame = 1
@@ -221,7 +221,7 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = 310
 	}
-	component_set = "tech_GFnyto_body_armor_2"
+	component_set = "GFnyto_body_armor_2"
 	resources = {
 		category = ship_components
 		cost = {
@@ -237,12 +237,12 @@ utility_component_template = {
 	prerequisites = {
 		"tech_GFnyto_body_armor2"
 	}
-	upgrades_to = tech_GFnyto_body_armor_S_3
+	upgrades_to = GFnyto_body_armor_S_3
 }
 
 #LV3
 utility_component_template = {
-	key = "tech_GFnyto_body_armor_S_3"
+	key = "GFnyto_body_armor_S_3"
 	size = small
 	icon = "GFX_ship_part_GFnyto_body_armor3"
 	icon_frame = 1
@@ -250,7 +250,7 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = 470
 	}
-	component_set = "tech_GFnyto_body_armor_3"
+	component_set = "GFnyto_body_armor_3"
 	resources = {
 		category = ship_components
 		cost = {

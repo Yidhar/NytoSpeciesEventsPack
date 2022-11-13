@@ -69,6 +69,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = -10
 	modifier = {
+		ship_hull_regen_add_perc = 1
 		ship_shield_regen_add_perc = 1
 		ship_armor_regen_add_perc = 1
 	}	
@@ -76,8 +77,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 100
-			GF_nyto_collapse_liquid=1
+			alloys = 10
+			GF_nyto_collapse_liquid=100
 		}		
 	}
 	prerequisites = {"tech_GF_nyto_injury_control_team"}

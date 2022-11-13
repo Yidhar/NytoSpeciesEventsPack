@@ -9,7 +9,9 @@ tech_GF_nyto_collapse_stability= {
 	prerequisites = { "tech_basic_science_lab_1" }
 	weight = 65
 	modifier = {}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {
+		has_authority = auth_GF_paradeus
+	}
 	weight_modifier = {factor = 4}
 	ai_weight = {weight = 2}
 }
@@ -24,7 +26,9 @@ tech_GF_nyto_collapse_stability_2= {
 	prerequisites = { "tech_GF_nyto_collapse_stability" }
 	weight = 95
 	modifier = {}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {
+		has_authority = auth_GF_paradeus
+	}
 	ai_weight = {weight = 2}
 }
 #坍缩粒子解析
@@ -38,7 +42,9 @@ tech_GF_nyto_Inverse_collapse_1= {
 	prerequisites = { "tech_GF_nyto_collapse_stability_2" }
 	weight = 100
 	modifier = {planet_jobs_produces_mult = 0.1}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {
+		has_authority = auth_GF_paradeus
+	}
 	prereqfor_desc = {
 		custom = {
 			title = "核心科技"
@@ -58,7 +64,9 @@ tech_GF_nyto_Inverse_collapse_2 = {
 	prerequisites = { "tech_GF_nyto_Inverse_collapse_1" }
 	weight = 85
 	modifier = {planet_jobs_produces_mult = 0.1}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {
+		has_authority = auth_GF_paradeus
+	}
 	prereqfor_desc = {
 		custom = {
 			title = "核心科技"
@@ -78,7 +86,9 @@ tech_GF_nyto_Stabiliz={
 	prerequisites = { "tech_GF_nyto_Inverse_collapse_2" }
 	weight = 50
 	modifier = {planet_jobs_produces_mult = 0.1}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {
+		has_authority = auth_GF_paradeus
+	}
 	ai_weight = {weight = 999}
 }
 #古代技术储存
@@ -90,7 +100,7 @@ tech_GF_nyto_storage_of_ancient_technology = {
 	is_rare = yes
 	category = {particles}
 	prerequisites = {}
-	weight = 5
+	weight = 0
 	modifier = {}
 	potential = {has_authority = auth_GF_paradeus}
 	ai_weight = {weight = 5}
@@ -103,13 +113,15 @@ tech_GF_nyto_RAR = {
 	tier = 5
 	is_rare = yes
 	category = {field_manipulation}
-	prerequisites = { "tech_GF_nyto_storage_of_ancient_technology" }
-	weight = 5
+	prerequisites = { "tech_GF_nyto_Stabiliz" }
+	weight = 50
 	modifier = {planet_jobs_produces_mult = 0.1}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {
+		has_authority = auth_GF_paradeus
+	}
 	weight_modifier = {
 		modifier = {
-			weight= 5
+			weight= 100
 			has_country_flag = can_research_tech_GF_nyto_Inverse_collapse
 		}
 	}
@@ -129,20 +141,20 @@ tech_alicen_shiled ={
 	weight = 50
 }
 #超视界武器
-tech_template_beacon_weapon ={
-	cost = 100000
-	area = physics
-	tier = 5
-	category = {
-		field_manipulation
-	}
-	potential = {
-		has_authority = auth_GF_paradeus
-	}
-	prerequisites = {
-		tech_template_GFnyto_Command_ship
-		tech_mega_engineering
-		tech_alicen_shiled
-	}
-	weight = 20
-}
+# tech_template_beacon_weapon ={
+# 	cost = 100000
+# 	area = physics
+# 	tier = 5
+# 	category = {
+# 		field_manipulation
+# 	}
+# 	potential = {
+# 		has_authority = auth_GF_paradeus
+# 	}
+# 	prerequisites = {
+# 		tech_template_GFnyto_Command_ship
+# 		tech_mega_engineering
+# 		tech_alicen_shiled
+# 	}
+# 	weight = 20
+# }

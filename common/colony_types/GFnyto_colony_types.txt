@@ -1,4 +1,4 @@
-#逆向塌缩工业星球
+#逆向坍塌工业星球
 col_GF_nyto_pc_toxic_alloy_plural = {
 	icon = GFX_colony_type_foundry
 	potential = {
@@ -31,7 +31,7 @@ col_GF_nyto_pc_toxic_alloy_plural = {
 	}
 }
 
-#塌缩工业星球
+#坍塌工业星球
 col_GF_nyto_pc_toxic_consumer_good_plural = {
 	icon = GFX_colony_type_foundry
 	potential = {
@@ -111,7 +111,9 @@ col_Gf_nyto_xiyou_rss = {
 		}		
 	}
 	planet_modifier = {
-		planet_refiners_produces_mult = 0.15
+		planet_refiners_produces_mult = 0.2
+		planet_chemists_produces_mult = 0.2
+		planet_translucers_produces_mult = 0.2
 	}
 	weight_modifier = {
 		add = 20
