@@ -969,6 +969,19 @@ planet_event = {
 	}
 }
 
+#EIlD头目
+planet_event={
+	id = GFnytoeild.48
+	title = "GFnytoeild.48.nam"
+	desc = "GFnytoeild.48.desc"
+	picture = "xx"
+	is_triggered_only = yes
+	immediate = {
+		#创建头
+	}
+}
+
+
 #依据危险度循环进攻阶段
 planet_event = {
 	id = GFnytoeild.44

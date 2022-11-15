@@ -41,3 +41,14 @@ GF_nyto_eild_army_3 = {
 		always = no
 	}
 }
+GF_nyto_eild_army_4 ={
+	defensive = no
+	damage = 30
+	morale = 10
+	health = 50
+	has_morale = no
+	icon = GFX_army_type_xenomorph
+	potential = {
+		always = no
+	}
+}
