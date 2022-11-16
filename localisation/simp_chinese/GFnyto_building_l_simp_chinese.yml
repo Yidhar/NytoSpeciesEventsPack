@@ -69,3 +69,4 @@ building_GFnyto_dimensional_fabricator_dc_desc:0 "坍塌物质在吸收同频率
  building_GFnyto_collapse_exploit_plant_2_dc_desc:0 "$building_GFnyto_collapse_exploit_plant_2_desc$"
  building_GFnyto_class_4_singularity_dc:0 "$building_GFnyto_class_4_singularity$"
  building_GFnyto_class_4_singularity_dc_desc:0 "$building_GFnyto_class_4_singularity$"
+ GF_nyto_plante_build_off:0 "该建筑因为污染度过高而无法正常工作"

@@ -116,6 +116,7 @@ building_GFnyto_nano_forge = {
 			has_authority = auth_GF_paradeus
 		}
 	}
+	base_cap_amount = 1
 	category = manufacturing
 	resources = {
 		cost = {

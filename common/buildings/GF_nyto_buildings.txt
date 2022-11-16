@@ -8,7 +8,26 @@ building_GFnyto_collapse_exploit_plant_1 = {
 			has_authority = auth_GF_paradeus
 		}
 	}
-	planet_modifier = {
+	triggered_desc = {
+		trigger = {
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value > 1000
+			}
+		}
+		text = "GF_nyto_plante_build_off"
+	}
+	triggered_planet_modifier = {
+		potential = {
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value > 5
+			}
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value < 1000
+			}
+		}
 		job_GFnyto_collapse_particle_researcher_add = 2
 	}
 	resources = {
@@ -24,18 +43,14 @@ building_GFnyto_collapse_exploit_plant_1 = {
 				is_variable_set = GFnyto_plante_wrlv
 				check_variable = {
 					which = GFnyto_plante_wrlv
-					value > 1000
+					value > 100
 				}
-				years_passed > 50
+				check_variable = {
+					which = GFnyto_plante_wrlv
+					value < 1000
+				}
 			}
-			energy = 0.1
-			multiplier = planet.GFnyto_plante_wrlv
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-			}
-			energy = 0.05
+			energy = 0.07
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
@@ -44,6 +59,12 @@ building_GFnyto_collapse_exploit_plant_1 = {
 	}
 	prerequisites = {
 		"tech_GF_nyto_collapse_stability"
+	}
+	destroy_trigger = {
+		check_variable = {
+			which = GFnyto_plante_wrlv
+			value > 1200
+		}
 	}
 	ai_resource_production = {
 		trigger = {
@@ -71,7 +92,33 @@ building_GFnyto_collapse_exploit_plant_2 = {
 	allow = {
 		has_upgraded_capital = yes
 	}
-	planet_modifier = {
+	trigger = {
+		check_variable = {
+			which = GFnyto_plante_wrlv
+			value > 1200
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value > 1200
+			}
+		}
+		text = "GF_nyto_plante_build_off"
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value > 0
+			}
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value < 1200
+			}
+		}
 		job_GFnyto_collapse_particle_researcher_add = 3
 	}
 	resources = {
@@ -135,7 +182,7 @@ building_GFnyto_collapse_change_center = {
 		has_upgraded_capital = yes
 	}
 	planet_modifier = {
-		planet_pop_assembly_organic_add = 5
+		pop_assembly_speed = 5
 	}
 	ai_resource_production = {
 		trigger = {
@@ -451,6 +498,34 @@ building_GFnyto_algorithm = {
 		}
 	}
 	planet_modifier = {
+		job_GFnyto_algorithm_add = 2
+	}
+	triggered_desc = {
+		trigger = {
+			or = {
+				check_variable = {
+					which = GFnyto_plante_wrlv
+					value > 500
+				}
+				check_variable = {
+					wich = GFnyto_plante_wrlv
+					value < 200
+				}
+			}
+		}
+		text = "GF_nyto_plante_build_off"
+	}
+	triggered_planet_modifier = {
+		potential = {
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value > 200
+			}
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value < 500
+			}
+		}
 		job_GFnyto_algorithm_add = 2
 	}
 	resources = {
