@@ -40,7 +40,9 @@ nyto= {
 	playable = {
 		always = yes
 	}
-	
+	modifier = {
+		pop_growth_speed = -999999
+	}
 	trait = "trait_GF_nyto_ogas_agreement"
 }
 #机械

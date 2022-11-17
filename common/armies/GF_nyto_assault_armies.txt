@@ -43,7 +43,7 @@ GF_nyto_white_knight= {
 	damage = 3.0
 	health = 3.0
 	has_morale = yes
-	morale = 5.0
+	morale = 2.0
 	morale_damage = 5
 	collateral_damage = 0.5
 	war_exhaustion = 1.0
@@ -58,10 +58,10 @@ GF_nyto_white_knight= {
 	potential = {owner = {has_authority = auth_GF_paradeus}}
 }
 GF_nyto_white_knight2= {
-	damage = 2.0
-	health = 2.0
+	damage = 3.0
+	health = 3.0
 	has_morale = no
-	morale_damage = 5
+	morale_damage = 2.0
 	collateral_damage = 0.5
 	war_exhaustion = 1.0
 	has_species = yes
@@ -81,7 +81,7 @@ GF_nyto_war_nuns= {
 	morale_damage = 5
 	collateral_damage = 0.5
 	war_exhaustion = 0
-	time = 10
+	time = 20
 	has_species = no
 	icon = GFX_army_type_primitive
 	resources = {
@@ -120,7 +120,7 @@ GF_nyto_eild_army= {
 #装甲列车
 GF_nyto_armor_train= {
 	defensive = yes
-	damage = 7
+	damage = 15
 	health = 15
 	has_morale = no
 	morale_damage = 5.0
@@ -128,7 +128,7 @@ GF_nyto_armor_train= {
 	war_exhaustion = 0
 	pop_limited = no
 	icon  = GFX_army_type_defensive
-	time = 280
+	time = 360
 	has_species = no
 	resources = {
 		category = armies
@@ -199,3 +199,11 @@ GF_nyto_yaosai={
 		}
 	}
 }
+#陆军单位替换，图标制作。
+
+
+#巨剑士
+
+
+
+#

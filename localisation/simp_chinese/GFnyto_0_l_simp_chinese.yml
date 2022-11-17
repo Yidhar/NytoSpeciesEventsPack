@@ -80,3 +80,5 @@ MESSAGE_GF_nyto_music_1:0 "音乐播放器正在运行"
 MESSAGE_GF_nyto_music_1_TITLE:0 "正在播放音乐,取消通知关闭播放"
 MESSAGE_GF_nyto_music_2:0 "音乐播放器正在运行"
 MESSAGE_GF_nyto_music_2_TITLE:0 "正在播放音乐,取消通知关闭播放"
+
+mod_planet_pops_robotics_alloys_upkeep_mult:0 "机械人口合金£alloys£维护费用增加"

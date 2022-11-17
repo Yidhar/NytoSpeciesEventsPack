@@ -3,7 +3,7 @@
 trait_GF_nyto_the_last_light= {
     cost = 0
 	sorting_priority = 20
-	potential_crossbreeding_chance = 0#潜在杂交概率
+	potential_crossbreeding_chance = 0 #潜在杂交概率
 	initial = no #是否初始特质,指是否开局可选
 	randomized = no #是否随机特质（指生成ai时是否会有此特性）
 	species_possible_remove = {
@@ -13,8 +13,8 @@ trait_GF_nyto_the_last_light= {
 		always = no
 	}
 	immortal_leaders = no
-	improves_leaders = yes#是否会影响领袖
-	advanced_trait=no#是否高级特质
+	improves_leaders = yes #是否会影响领袖
+	advanced_trait=no #是否高级特质
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_the_last_light.dds"
 	allowed_archetypes = {NYTO}#物种限制（涅托）
     # 设置效果
@@ -48,8 +48,8 @@ trait_GF_nyto_ogas_agreement= {
 		always = no
 	}
 	immortal_leaders = no
-	improves_leaders = yes#是否会影响领袖
-	advanced_trait=no#是否高级特质
+	improves_leaders = yes #是否会影响领袖
+	advanced_trait=no #是否高级特质
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_ogas_agreement_plus.dds"
 	allowed_archetypes = {NYTO}#物种限制（涅托）
     modifier = {
@@ -81,8 +81,8 @@ trait_GF_nyto_ogas_agreement_plus= {
 		always = no
 	}
 	immortal_leaders = no
-	improves_leaders = yes#是否会影响领袖
-	advanced_trait= yes#是否高级特质
+	improves_leaders = yes #是否会影响领袖
+	advanced_trait= yes #是否高级特质
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_OGAS_system.dds"
 	allowed_archetypes = {NYTO}#物种限制（涅托）
     modifier = {
@@ -129,11 +129,11 @@ trait_GFnyto_tanhua = {
 	icon = "gfx/interface/icons/traits/nyto/trait_GFnyto_tanhua.dds"
 	cost = 2
 	sorting_priority = 20
-	potential_crossbreeding_chance = 0#潜在杂交概率
+	potential_crossbreeding_chance = 0 #潜在杂交概率
 	species_possible_remove = {
 		always = no
 	}
-	randomized = no#是否随机特质（指生成ai时是否会有此特性）
+	randomized = no #是否随机特质（指生成ai时是否会有此特性）
 	improves_leaders = no #是否会影响领袖
 	advanced_trait= no #是否高级特质
 	allowed_archetypes =  { NYTO }#物种限制（涅托）
@@ -145,12 +145,12 @@ trait_GFnyto_tanhua = {
 trait_GF_nyto_collapse_radiation_adaptation= {
     cost = 0
 	sorting_priority = 20
-	potential_crossbreeding_chance = 0#潜在杂交概率
-	initial = no#是否初始特质,指是否开局可选
-	randomized = no#是否随机特质（指生成ai时是否会有此特性）
+	potential_crossbreeding_chance = 0 #潜在杂交概率
+	initial = no #是否初始特质,指是否开局可选
+	randomized = no #是否随机特质（指生成ai时是否会有此特性）
 	immortal_leaders = no
-	improves_leaders = no#是否会影响领袖
-	advanced_trait=no#是否高级特质
+	improves_leaders = no #是否会影响领袖
+	advanced_trait=no #是否高级特质
 	species_potential_add = {
 		always = no
 	}
@@ -170,11 +170,11 @@ trait_GF_nyto_collapse_radiation_adaptation= {
 #忠诚的ELID-infected
 trait_GF_nyto_loyal_ELID_infected= {
 	cost = 0
-	potential_crossbreeding_chance = 0#潜在杂交概率
-	initial = no#是否初始特质,指是否开局可选
-	randomized = no#是否随机特质（指生成ai时是否会有此特性）
-	improves_leaders = no#是否会影响领袖
-	advanced_trait= no#是否高级特质
+	potential_crossbreeding_chance = 0 #潜在杂交概率
+	initial = no #是否初始特质,指是否开局可选
+	randomized = no #是否随机特质（指生成ai时是否会有此特性）
+	improves_leaders = no #是否会影响领袖
+	advanced_trait= no #是否高级特质
 	species_possible_remove = {
 		always = no
 	}
@@ -202,17 +202,17 @@ trait_GF_nyto_loyal_ELID_infected= {
 #野兽之源
 trait_GF_nyto_savage_origin= {
 	cost = 0
-	potential_crossbreeding_chance = 0#潜在杂交概率
-	initial = no#是否初始特质,指是否开局可选
+	potential_crossbreeding_chance = 0 #潜在杂交概率
+	initial =no #是否初始特质,指是否开局可选
 	species_potential_add = {
 		always = no
 	}
 	species_possible_remove = {
 		always = no
 	}
-	randomized = no#是否随机特质（指生成ai时是否会有此特性）
-	improves_leaders = yes#是否会影响领袖
-	advanced_trait= no#是否高级特质
+	randomized =no #是否随机特质（指生成ai时是否会有此特性）
+	improves_leaders = yes #是否会影响领袖
+	advanced_trait=no #是否高级特质
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_savage_origin.dds"
 	allowed_archetypes = {NYTO}
 	modifier = {
@@ -224,17 +224,17 @@ trait_GF_nyto_savage_origin= {
 #暴食
 trait_GF_nyto_gluttony= {
 	cost = 0
-	potential_crossbreeding_chance = 0#潜在杂交概率
-	initial = no#是否初始特质,指是否开局可选
+	potential_crossbreeding_chance = 0 #潜在杂交概率
+	initial =no #是否初始特质,指是否开局可选
 	species_potential_add = {
 		always = no
 	}
 	species_possible_remove = {
 		always = no
 	}
-	randomized = no#是否随机特质（指生成ai时是否会有此特性）
-	improves_leaders = yes#是否会影响领袖
-	advanced_trait= no#是否高级特质
+	randomized =no #是否随机特质（指生成ai时是否会有此特性）
+	improves_leaders = yes #是否会影响领袖
+	advanced_trait=no #是否高级特质
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_gluttony.dds"
 	allowed_archetypes = {NYTO}
 	modifier = {planet_jobs_food_produces_mult = 1}
@@ -242,17 +242,17 @@ trait_GF_nyto_gluttony= {
 #色欲
 trait_GF_nyto_lust= {
 	cost = 0
-	potential_crossbreeding_chance = 0#潜在杂交概率
-	initial = no#是否初始特质,指是否开局可选	
+	potential_crossbreeding_chance = 0 #潜在杂交概率
+	initial =no #是否初始特质,指是否开局可选	
 	species_potential_add = {
 		always = no
 	}
 	species_possible_remove = {
 		always = no
 	}
-	randomized = no#是否随机特质（指生成ai时是否会有此特性）
-	improves_leaders = yes#是否会影响领袖
-	advanced_trait= no#是否高级特质
+	randomized =no #是否随机特质（指生成ai时是否会有此特性）
+	improves_leaders = yes #是否会影响领袖
+	advanced_trait=no #是否高级特质
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_lust.dds"
 	allowed_archetypes = {NYTO}
 	modifier = {planet_jobs_consumer_goods_produces_mult = 1}
@@ -260,17 +260,17 @@ trait_GF_nyto_lust= {
 #贪婪
 trait_GF_nyto_greedy= {
 	cost = 0
-	potential_crossbreeding_chance = 0#潜在杂交概率
-	initial = no#是否初始特质,指是否开局可选
+	potential_crossbreeding_chance = 0 #潜在杂交概率
+	initial =no #是否初始特质,指是否开局可选
 	species_potential_add = {
 		always = no
 	}
 	species_possible_remove = {
 		always = no
 	}
-	randomized = no#是否随机特质（指生成ai时是否会有此特性）
-	improves_leaders = yes#是否会影响领袖
-	advanced_trait= no#是否高级特质
+	randomized =no #是否随机特质（指生成ai时是否会有此特性）
+	improves_leaders = yes #是否会影响领袖
+	advanced_trait=no #是否高级特质
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_greedy.dds"
 	allowed_archetypes = {NYTO}
 	modifier = {planet_jobs_energy_produces_mult = 1}
@@ -278,17 +278,17 @@ trait_GF_nyto_greedy= {
 #傲慢
 trait_GF_nyto_arrogant= {
 	cost = 0
-	potential_crossbreeding_chance = 0#潜在杂交概率
-	initial = no#是否初始特质,指是否开局可选
+	potential_crossbreeding_chance = 0 #潜在杂交概率
+	initial =no #是否初始特质,指是否开局可选
 	species_potential_add = {
 		always = no
 	}
 	species_possible_remove = {
 		always = no
 	}
-	randomized = no#是否随机特质（指生成ai时是否会有此特性）
-	improves_leaders = yes#是否会影响领袖
-	advanced_trait= no#是否高级特质
+	randomized =no #是否随机特质（指生成ai时是否会有此特性）
+	improves_leaders = yes #是否会影响领袖
+	advanced_trait=no #是否高级特质
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_arrogant.dds"
 	allowed_archetypes = {NYTO}
 	modifier = {planet_researchers_produces_mult = 1}
@@ -296,17 +296,17 @@ trait_GF_nyto_arrogant= {
 #怠惰
 trait_GF_nyto_laziness= {
 	cost = 0
-	potential_crossbreeding_chance = 0#潜在杂交概率
-	initial = no#是否初始特质,指是否开局可选
+	potential_crossbreeding_chance = 0 #潜在杂交概率
+	initial =no #是否初始特质,指是否开局可选
 	species_potential_add = {
 		always = no
 	}
 	species_possible_remove = {
 		always = no
 	}
-	randomized = no#是否随机特质（指生成ai时是否会有此特性）
-	improves_leaders = yes#是否会影响领袖
-	advanced_trait= no#是否高级特质
+	randomized =no #是否随机特质（指生成ai时是否会有此特性）
+	improves_leaders = yes #是否会影响领袖
+	advanced_trait=no #是否高级特质
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_laziness.dds"
 	allowed_archetypes = {NYTO}
 	modifier = {planet_jobs_minerals_produces_mult = 1}
@@ -314,17 +314,17 @@ trait_GF_nyto_laziness= {
 #愤怒
 trait_GF_nyto_anger= {
 	cost = 0
-	potential_crossbreeding_chance = 0#潜在杂交概率
-	initial = no#是否初始特质,指是否开局可选
+	potential_crossbreeding_chance = 0 #潜在杂交概率
+	initial =no #是否初始特质,指是否开局可选
 	species_potential_add = {
 		always = no
 	}
 	species_possible_remove = {
 		always = no
 	}
-	randomized = no#是否随机特质（指生成ai时是否会有此特性）
-	improves_leaders = yes#是否会影响领袖
-	advanced_trait= no#是否高级特质
+	randomized =no #是否随机特质（指生成ai时是否会有此特性）
+	improves_leaders = yes #是否会影响领袖
+	advanced_trait=no #是否高级特质
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_anger.dds"
 	allowed_archetypes = {NYTO}
 	modifier = {
@@ -335,17 +335,17 @@ trait_GF_nyto_anger= {
 #嫉妒
 trait_GF_nyto_envy= {
 	cost = 0
-	potential_crossbreeding_chance = 0#潜在杂交概率
-	initial = no#是否初始特质,指是否开局可选
+	potential_crossbreeding_chance = 0 #潜在杂交概率
+	initial =no #是否初始特质,指是否开局可选
 	species_potential_add = {
 		always = no
 	}
 	species_possible_remove = {
 		always = no
 	}
-	randomized = no#是否随机特质（指生成ai时是否会有此特性）
-	improves_leaders = yes#是否会影响领袖
-	advanced_trait= no#是否高级特质
+	randomized =no #是否随机特质（指生成ai时是否会有此特性）
+	improves_leaders = yes #是否会影响领袖
+	advanced_trait=no #是否高级特质
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_envy.dds"
 	allowed_archetypes = {NYTO}
 	modifier = {planet_jobs_unity_produces_mult=1}
@@ -358,11 +358,11 @@ trait_GF_nyto_envy= {
 #地底居者
 trait_GF_nyto_underground_dweller= {
 	cost = 2
-	potential_crossbreeding_chance = 0#潜在杂交概率
+	potential_crossbreeding_chance = 0 #潜在杂交概率
 	initial = yes #是否初始特质,指是否开局可选
 	randomized = yes #是否随机特质（指生成ai时是否会有此特性）
 	improves_leaders = yes #是否会影响领袖
-	advanced_trait= no#是否高级特质
+	advanced_trait= no #是否高级特质
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_underground_dweller.dds"
 	allowed_archetypes = {NYTO}
 	modifier = {
@@ -375,7 +375,7 @@ trait_GF_nyto_underground_dweller= {
 #抗逆药物
 trait_GF_nyto_anti_stress_drugs= {
 	cost = 2
-	potential_crossbreeding_chance = 0#潜在杂交概率
+	potential_crossbreeding_chance = 0 #潜在杂交概率
 	initial = yes #是否初始特质,指是否开局可选
 	randomized = yes #是否随机特质（指生成ai时是否会有此特性）
 	improves_leaders = yes #是否会影响领袖
@@ -391,11 +391,11 @@ trait_GF_nyto_anti_stress_drugs= {
 #细胞重生
 trait_GF_nyto_cell_regeneration= {
 	cost = 2
-	potential_crossbreeding_chance = 0#潜在杂交概率
-	initial = yes#是否初始特质,指是否开局可选
-	randomized = yes#是否随机特质（指生成ai时是否会有此特性）
-	improves_leaders = yes#是否会影响领袖
-	advanced_trait= no#是否高级特质
+	potential_crossbreeding_chance = 0 #潜在杂交概率
+	initial = yes #是否初始特质,指是否开局可选
+	randomized = yes #是否随机特质（指生成ai时是否会有此特性）
+	improves_leaders = yes #是否会影响领袖
+	advanced_trait=no #是否高级特质
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_cell_regeneration.dds"
 	allowed_archetypes = {NYTO}
 	modifier = {
@@ -409,11 +409,11 @@ trait_GF_nyto_cell_regeneration= {
 #硅化表皮
 trait_GF_nyto_silicified_epidermis= {
 	cost = 3
-	potential_crossbreeding_chance = 0#潜在杂交概率
-	initial = yes#是否初始特质,指是否开局可选
-	randomized = yes#是否随机特质（指生成ai时是否会有此特性）
-	improves_leaders = yes#是否会影响领袖
-	advanced_trait= no#是否高级特质
+	potential_crossbreeding_chance = 0 #潜在杂交概率
+	initial = yes #是否初始特质,指是否开局可选
+	randomized = yes #是否随机特质（指生成ai时是否会有此特性）
+	improves_leaders = yes #是否会影响领袖
+	advanced_trait=no #是否高级特质
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_silicified_epidermis.dds"
 	allowed_archetypes = {NYTO}
 	modifier = {
@@ -433,13 +433,13 @@ trait_GF_nyto_ingenious = {
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_ingenious.dds"
 	allowed_archetypes = {NYTO}
 	modifier = { 
-		planet_pops_alloys_upkeep_mult = 0.1 
+		planet_pops_robotics_alloys_upkeep_mult = 0.1
 		army_damage_mult = 0.15
 		army_health = 0.15
 		planet_jobs_minerals_produces_mult = 0.15
 	}
 	growing_modifier = {
-		planet_pop_assembly_organic_mult = -0.25
+		planet_pop_assembly_mult = 0.1
 	}
 	slave_cost = {energy = 50}
 	opposites = {
@@ -570,7 +570,7 @@ trait_GF_nyto_Simple_structure ={
 		habitability_ceil_add = -0.1
 	}
 	growing_modifier = {
-		planet_pop_assembly_organic_mult = 0.15 
+		planet_pop_assembly_mult = 0.15
 	}
 }
 
@@ -726,7 +726,7 @@ trait_GF_nyto_Life_life_automata = {
 		planet_building_build_speed_mult = 0.5
 	}
 	assembling_modifier = {
-		planet_pop_assembly_organic_add = 5
+		planet_pop_assembly_add = 5
 	}
 	opposites = {
 		trait_GF_nyto_Low_local_storage
