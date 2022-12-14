@@ -161,6 +161,7 @@ weapon_component_template = {
 	ai_weight = {
 		weight = 100
 	}
+	size_damage_factor = 0.5
 }
 
 #T 终末辉光
@@ -697,10 +698,10 @@ weapon_component_template = {
 	}
 }
 
-#G 双蛇杖
+#双蛇杖
 weapon_component_template = {
 	key = "GF_Nyto_missile_g_weapon1"
-	size = torpedo
+	size = medium
 	type = instant
 	icon = "GFX_ship_part_g_weapons1"
 	icon_frame = 1
@@ -721,8 +722,8 @@ weapon_component_template = {
 		weapon_role_anti_armor
 	}
 	damage = {
-		min = 200
-		max = 200
+		min = 20
+		max = 40
 	}
 	windup = {
 		min = 2
@@ -752,10 +753,10 @@ weapon_component_template = {
 	}
 }
 
-#G阿尔忒弥斯
+#阿尔忒弥斯
 weapon_component_template = {
 	key = "GF_Nyto_missile_g_weapon2"
-	size = torpedo
+	size = small
 	type = point_defence
 	icon = "GFX_ship_part_g_weapons2"
 	icon_frame = 1
@@ -778,7 +779,7 @@ weapon_component_template = {
 		weapon_role_anti_hull
 	}
 	damage = {
-		min = 50
+		min = 5
 		max = 50
 	}
 	windup = {
@@ -787,7 +788,7 @@ weapon_component_template = {
 	}
 	total_fire_time = 0
 	prio_projectile = yes
-	range = 200
+	range = 40
 	accuracy = 1
 	tracking = 1
 	resources = {
@@ -805,6 +806,46 @@ weapon_component_template = {
 		weight = 50
 	}
 }
+
+
+
+#愚者
+weapon_component_template = {
+	size = torpedo
+	type = missile
+	key = "GF_nyto_fool_weapon"
+	icon = "GFX_GF_nyto_fool_weapon"
+	icon_frame = 1
+	prerequisites = {
+		tech_GFnyto_tansuo2
+	}
+	component_set = "GF_nyto_fool_weapon"
+	tags = {
+		weapon_type_explosive
+	}
+	ai_tags = {
+		weapon_role_anti_hull
+	}
+	damage = {
+		min = 65
+		max = 200
+	}
+	windup = {
+		min = 100
+		max = 200
+	}
+	total_fire_time = 120
+	min_range = 40
+	range = 200
+	missile_speed = 8
+	missile_armor = 120
+	missile_health = 69
+	missile_shield = 20
+	missile_evasion = 0.4
+	missile_retarget_range = 0
+	size_damage_factor = 2.26
+}
+
 
 #H 刻托级舰载无人机 
 strike_craft_component_template = {
@@ -1225,10 +1266,15 @@ weapon_component_template = {
 	}
 }
 
+
+
+
 #t1武器
 #脉冲激光
 #冰雹导弹阵列
-##dc##
+####################################################################
+#        下面是 给多彩的                                            #
+####################################################################
 #T 厌世者 粒子炮
 weapon_component_template = {
 	key = "GF_Nyto_T_weapon1_dc"
@@ -1892,7 +1938,7 @@ weapon_component_template = {
 		weapon_type_point_defense
 		weapon_type_fire_works
 	}
-	ai_tags = {
+	ai_tags = { 
 		weapon_role_point_defense
 		weapon_role_anti_hull
 	}

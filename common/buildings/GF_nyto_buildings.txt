@@ -12,7 +12,7 @@ building_GFnyto_collapse_exploit_plant_1 = {
 		trigger = {
 			check_variable = {
 				which = GFnyto_plante_wrlv
-				value > 1000
+				value > 200
 			}
 		}
 		text = "GF_nyto_plante_build_off"
@@ -21,11 +21,11 @@ building_GFnyto_collapse_exploit_plant_1 = {
 		potential = {
 			check_variable = {
 				which = GFnyto_plante_wrlv
-				value > 5
+				value > 10
 			}
 			check_variable = {
 				which = GFnyto_plante_wrlv
-				value < 1000
+				value < 200
 			}
 		}
 		job_GFnyto_collapse_particle_researcher_add = 2
@@ -36,6 +36,12 @@ building_GFnyto_collapse_exploit_plant_1 = {
 			minerals = 400
 		}
 		upkeep = {
+			trigger = {
+				check_variable = {
+					which = GFnyto_plante_wrlv
+					value < 200
+				}
+			}
 			energy = 4
 		}
 		upkeep = {
@@ -43,11 +49,11 @@ building_GFnyto_collapse_exploit_plant_1 = {
 				is_variable_set = GFnyto_plante_wrlv
 				check_variable = {
 					which = GFnyto_plante_wrlv
-					value > 100
+					value > 0
 				}
 				check_variable = {
 					which = GFnyto_plante_wrlv
-					value < 1000
+					value < 200
 				}
 			}
 			energy = 0.07
@@ -63,7 +69,7 @@ building_GFnyto_collapse_exploit_plant_1 = {
 	destroy_trigger = {
 		check_variable = {
 			which = GFnyto_plante_wrlv
-			value > 1200
+			value > 400
 		}
 	}
 	ai_resource_production = {
@@ -96,7 +102,7 @@ building_GFnyto_collapse_exploit_plant_2 = {
 		trigger = {
 			check_variable = {
 				which = GFnyto_plante_wrlv
-				value > 1200
+				value > 500
 			}
 		}
 		text = "GF_nyto_plante_build_off"
@@ -110,7 +116,7 @@ building_GFnyto_collapse_exploit_plant_2 = {
 			}
 			check_variable = {
 				which = GFnyto_plante_wrlv
-				value < 1200
+				value < 500
 			}
 		}
 		job_GFnyto_collapse_particle_researcher_add = 3
@@ -128,7 +134,7 @@ building_GFnyto_collapse_exploit_plant_2 = {
 				is_variable_set = GFnyto_plante_wrlv
 				check_variable = {
 					which = GFnyto_plante_wrlv
-					value > 1000
+					value > 500
 				}
 				years_passed > 50
 			}

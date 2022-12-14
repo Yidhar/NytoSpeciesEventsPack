@@ -270,3 +270,9 @@ GF_nyto_kill_tanhua ={
 	hide_from_country_list = yes
 	country_minerals_produces_mult = 0.3
 }
+#
+GF_nyto_static_pop ={
+	pop_growth_speed = -99999
+	planet_pop_assembly_add = 1
+	hide_from_country_list = yes
+}

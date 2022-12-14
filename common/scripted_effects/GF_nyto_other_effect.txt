@@ -65,6 +65,10 @@ GF_nyto_elid_attack = {
 					which = GFnyto_Eild_level
 					value >= 50
 				}
+				check_variable = { #否
+					which = GFnyto_Eild_level
+					value < 100
+				}
 			}
 			set_variable = {
 				which = GFnyto_Eild_level_rar
@@ -107,5 +111,16 @@ GF_nyto_elid_attack = {
 				}
 			}
 		}
+		# if = {
+		# 	limit = { 
+		# 		check_variable = { #elid boss
+		# 			which = GFnyto_Eild_level
+		# 			value > 50
+		# 		}
+		# 	}
+		# 	random = {
+		# 		chance = 10
+		# 	}
+		# }
 	}
 }

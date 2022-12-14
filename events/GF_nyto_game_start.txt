@@ -15,6 +15,8 @@ country_event = {
 			}
 			save_global_event_target_as = is_nyto_country	
 		}
+		set_built_species = owner_main_species
+		add_modifier = { modifier = GF_nyto_static_pop days = -1 }
 	}
 }
 

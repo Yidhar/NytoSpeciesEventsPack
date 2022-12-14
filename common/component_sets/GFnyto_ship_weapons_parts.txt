@@ -291,3 +291,8 @@ component_set = {
 	icon = GFX_ship_part_p_weapons2
 	icon_frame = 1
 }
+component_set = {
+	key = GF_nyto_fool_weapon
+	icon = GFX_GF_nyto_fool_weapon
+	icon_frame = 1
+}

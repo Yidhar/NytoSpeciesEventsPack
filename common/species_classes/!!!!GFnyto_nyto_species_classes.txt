@@ -20,10 +20,12 @@ nyto= {
 			GF_nyto_collapse_liquid = 0.1
 		}
 		produces = {
-			physics_research = 0.5
-			society_research = 0.5
-			engineering_research = 0.5
-			
+			trigger = {
+				has_trait = trait_GF_nyto_Self_directed_development
+			}
+			physics_research = 1
+			society_research = 1
+			engineering_research = 1		
 		}
 		produces = {
 			trigger = {
@@ -41,7 +43,9 @@ nyto= {
 		always = yes
 	}
 	modifier = {
-		pop_growth_speed = -999999
+		planet_pop_assembly_add = 3
+		pop_assembly_speed = 2
+		
 	}
 	trait = "trait_GF_nyto_ogas_agreement"
 }

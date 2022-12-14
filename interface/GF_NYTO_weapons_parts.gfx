@@ -213,4 +213,8 @@ spriteTypes = {
 		name = GFX_nyto_weapon_beacon_sop
 		textureFile = "gfx/interface/icons/ship_parts/GF_nyto_weapon_Beacon.dds"
 	}
+	spriteType ={
+		name = GFX_GF_nyto_fool_weapon
+		textureFile = "gfx/interface/icons/ship_parts/GFnyto_fool_weapon.dds"
+	}
 }
