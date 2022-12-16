@@ -785,7 +785,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = -20
 	ship_modifier = {
-		ship_engagement_range_mult = 10
+		ship_fire_rate_mult = 0.3
+		ship_base_speed_mult = -0.3
 	}
 	class_restriction = {
 		shipclass_military
@@ -793,14 +794,12 @@ utility_component_template = {
 	component_set = "combat_computers"
 	resources = {
 		category = ship_components
-		cost = {
-			
+		cost = {			
 			alloys = 20
 			GF_nyto_new_fire_control_unit = 5
 			GF_nyto_collapse_liquid = 0.2
 		}
-		upkeep = {
-			
+		upkeep = {			
 			GF_nyto_new_fire_control_unit = 1
 		}
 	}
@@ -825,7 +824,9 @@ utility_component_template = {
 	icon_frame = 1
 	power = -30
 	ship_modifier = {
-		ship_engagement_range_mult = 10
+		ship_weapon_damage = 0.3
+		ship_fire_rate_mult = -0.3
+		ship_weapon_range_mult = 0.3
 	}
 	class_restriction = {
 		shipclass_military
@@ -856,7 +857,47 @@ utility_component_template = {
 		}
 	}
 }
-
+#附加运算模块-冲锋
+utility_component_template = {
+	key = "GFnyto_additional_arithmetic_module1"
+	size = small
+	icon = "GFX_ship_part_GFnyto_additional_arithmetic_module3"
+	icon_frame = 1
+	power = -30
+	ship_modifier = {
+		ship_base_speed_mult = 0.3
+		ship_evasion_mult = 0.3
+		ship_fire_rate_mult = 0.3
+	}
+	class_restriction = {
+		shipclass_military
+	}
+	component_set = "combat_computers"
+	resources = {
+		category = ship_components
+		cost = {			
+			alloys = 30
+			GF_nyto_new_fire_control_unit = 5
+			GF_nyto_collapse_liquid = 0.3
+		}
+		upkeep = {
+			
+			GF_nyto_new_fire_control_unit = 1
+		}
+	}
+	ship_behavior = "GFnyto_ship_behaviors1"
+	prerequisites = {
+		"tech_GFnyto_additional_arithmetic_module"
+	}
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 60
+			is_ship_size = battleship
+		}
+	}
+}
+#附加运算模块-冲锋
 
 ###########盾舰专用亚光速
 utility_component_template = {

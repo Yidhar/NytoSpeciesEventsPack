@@ -44,9 +44,9 @@ GFnyto_collapse_particle_researcher = {
 					is_variable_set = GFnyto_plante_wrlv
 				}
 			}
-			physics_research = 0.005
-			society_research = 0.005
-			engineering_research = 0.005
+			physics_research = 0.035
+			society_research = 0.035
+			engineering_research = 0.035
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 		produces = {
@@ -385,7 +385,7 @@ GFnyto_collapse_particle_rar = {
 			}
 			alloys = 1
 			minerals = 1
-			consumer_goods = 0.2
+			consumer_goods = 0.5
 			multiplier = planet.trigger:has_planetary_ascension_tier
 		}
 		produces = {

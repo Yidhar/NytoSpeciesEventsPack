@@ -158,3 +158,13 @@ tech_alicen_shiled ={
 # 	}
 # 	weight = 20
 # }
+# tech_GF_nyto_pop_assemb_1 = {
+# 	icon = building_job_GFnyto_collapse_changer
+# 	cost = 2000
+# 	area =physics
+# 	tier = 1
+# 	category = { particles }
+# 	potential = {
+# 		has_authority = auth_GF_paradeus
+# 	}
+# }

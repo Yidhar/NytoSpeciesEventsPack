@@ -1003,6 +1003,44 @@ country_event = {
 					value = 10
 				}
 			}
+			#壁垒提供的净化
+			if = {
+				limit = {
+					has_building = GF_nyto_Recoil_decay_barrier
+					is_variable_set = GFnyto_plante_wrlv
+				}
+				export_trigger_value_to_variable = {
+					trigger = num_buildings
+					parameters = {
+						type = GF_nyto_Recoil_decay_barrier
+					}
+					variable = has_GF_nyto_Recoil_decay_barrier_num
+				}
+				set_variable = {
+					which = Recoil_decay_barrier_center_purify
+					value = has_GF_nyto_Recoil_decay_barrier_num
+				}
+				set_variable = {
+					which = GF_nyto_Recoil_decay_barrier_num_buffer
+					value = has_GF_nyto_Recoil_decay_barrier_num
+				}
+				multiply_variable = {
+					which = GF_nyto_Recoil_decay_barrier_num_buffer
+					value = 0.1
+				}
+				set_variable = {
+					which = Recoil_decay_barrier_center_purify_buffer
+					value = 50
+				}
+				change_variable = {
+					which = Recoil_decay_barrier_center_purify_buffer
+					value = GF_nyto_Recoil_decay_barrier_num_buffer
+				}
+				multiply_variable = {
+					which = Recoil_decay_barrier_center_purify
+					value = Recoil_decay_barrier_center_purify_buffer
+				}
+			}
 			#计算污染度				
 			change_variable = {
 				which = GFnyto_plante_wrlv
@@ -1056,10 +1094,17 @@ country_event = {
 			#中和塔不会将污染度降低到-5以下				
 			if = {
 				limit = {
-					check_variable_arithmetic = {
-						subtract = affluence_center_purify
-						which = GFnyto_plante_wrlv
-						value < -5
+					OR = {
+						check_variable_arithmetic = {
+							subtract = affluence_center_purify
+							which = GFnyto_plante_wrlv
+							value < -5
+						}
+						check_variable_arithmetic = {
+							subtract = Recoil_decay_barrier_center_purify
+							which = GFnyto_plante_wrlv
+							value < -5
+						}
 					}
 				}
 				set_variable = {
@@ -1071,6 +1116,10 @@ country_event = {
 				subtract_variable = {
 					which = GFnyto_plante_wrlv
 					value = affluence_center_purify
+				}
+				subtract_variable = {
+					which = GFnyto_plante_wrlv
+					value = Recoil_decay_barrier_center_purify
 				}
 			}
 			#设置最大值

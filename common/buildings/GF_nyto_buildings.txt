@@ -21,7 +21,7 @@ building_GFnyto_collapse_exploit_plant_1 = {
 		potential = {
 			check_variable = {
 				which = GFnyto_plante_wrlv
-				value > 10
+				value > 0
 			}
 			check_variable = {
 				which = GFnyto_plante_wrlv
@@ -127,6 +127,13 @@ building_GFnyto_collapse_exploit_plant_2 = {
 			minerals = 600
 		}
 		upkeep = {
+			trigger = {
+				is_variable_set = GFnyto_plante_wrlv
+				check_variable = {
+					which = GFnyto_plante_wrlv
+					value < 500
+				}
+			}
 			energy = 6
 		}
 		upkeep = {
@@ -134,16 +141,12 @@ building_GFnyto_collapse_exploit_plant_2 = {
 				is_variable_set = GFnyto_plante_wrlv
 				check_variable = {
 					which = GFnyto_plante_wrlv
-					value > 500
+					value < 500
 				}
-				years_passed > 50
-			}
-			energy = 0.1
-			multiplier = planet.GFnyto_plante_wrlv
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
+				check_variable = {
+					which = GFnyto_plante_wrlv
+					value > 10
+				}
 			}
 			energy = 0.05
 			multiplier = planet.GFnyto_plante_wrlv
@@ -182,7 +185,10 @@ building_GFnyto_collapse_change_center = {
 		has_upgraded_capital = yes
 	}
 	planet_modifier = {
-		planet_pop_assembly_add = 5
+		
+	}
+	triggered_planet_modifier = {
+		planet_pop_assembly_add = 2
 	}
 	ai_resource_production = {
 		trigger = {
@@ -201,27 +207,8 @@ building_GFnyto_collapse_change_center = {
 		}
 		upkeep = {
 			energy = 5
-			alloys = 15
-			food = 20
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-				check_variable = {
-					which = GFnyto_plante_wrlv
-					value > 1000
-				}
-				years_passed > 50
-			}
-			energy = 0.1
-			multiplier = planet.GFnyto_plante_wrlv
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-			}
-			energy = 0.05
-			multiplier = planet.GFnyto_plante_wrlv
+			alloys = 2
+			food = 5
 		}
 	}
 	ai_weight = {
@@ -377,18 +364,6 @@ building_GFnyto_transportation_hub = {
 		upkeep = {
 			trigger = {
 				is_variable_set = GFnyto_plante_wrlv
-				check_variable = {
-					which = GFnyto_plante_wrlv
-					value > 1000
-				}
-				years_passed > 50
-			}
-			energy = 0.1
-			multiplier = planet.GFnyto_plante_wrlv
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
 			}
 			energy = 0.05
 			multiplier = planet.GFnyto_plante_wrlv
@@ -430,7 +405,23 @@ building_GFnyto_heritage_department = {
 		is_capital = yes
 	}
 	base_cap_amount = 1
-	planet_modifier = {
+	triggered_desc = {
+		trigger = {
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value > 400
+			}
+		}
+		text = "GF_nyto_plante_build_off"
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_variable_set = GFnyto_plante_wrlv
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value < 400
+			}
+		}
 		job_culture_worker_add = 5
 	}
 	resources = {
@@ -505,20 +496,12 @@ building_GFnyto_algorithm = {
 					which = GFnyto_plante_wrlv
 					value > 500
 				}
-				check_variable = {
-					wich = GFnyto_plante_wrlv
-					value < 200
-				}
 			}
 		}
 		text = "GF_nyto_plante_build_off"
 	}
 	triggered_planet_modifier = {
 		potential = {
-			check_variable = {
-				which = GFnyto_plante_wrlv
-				value > 200
-			}
 			check_variable = {
 				which = GFnyto_plante_wrlv
 				value < 500
@@ -535,18 +518,6 @@ building_GFnyto_algorithm = {
 		upkeep = {
 			energy = 10
 			exotic_gases = 1
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-				check_variable = {
-					which = GFnyto_plante_wrlv
-					value > 1000
-				}
-				years_passed > 50
-			}
-			energy = 0.1
-			multiplier = planet.GFnyto_plante_wrlv
 		}
 		upkeep = {
 			trigger = {
@@ -575,7 +546,24 @@ building_GFnytp_framework_core = {
 			has_authority = auth_GF_paradeus
 		}
 	}
-	planet_modifier = {
+	triggered_desc = {
+		trigger = {
+			or = {
+				check_variable = {
+					which = GFnyto_plante_wrlv
+					value > 500
+				}
+			}
+		}
+		text = "GF_nyto_plante_build_off"
+	}
+	triggered_planet_modifier = {
+		potential = {
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value < 500
+			}
+		}
 		job_GFnyto_framework_add = 2
 	}
 	resources = {
@@ -587,18 +575,6 @@ building_GFnytp_framework_core = {
 		upkeep = {
 			energy = 20
 			rare_crystals = 5
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-				check_variable = {
-					which = GFnyto_plante_wrlv
-					value > 1000
-				}
-				years_passed > 50
-			}
-			energy = 0.1
-			multiplier = planet.GFnyto_plante_wrlv
 		}
 		upkeep = {
 			trigger = {
@@ -629,7 +605,24 @@ building_GFnytp_framework_core2 = {
 			has_authority = auth_GF_paradeus
 		}
 	}
-	planet_modifier = {
+	triggered_desc = {
+		trigger = {
+			or = {
+				check_variable = {
+					which = GFnyto_plante_wrlv
+					value > 400
+				}
+			}
+		}
+		text = "GF_nyto_plante_build_off"
+	}
+	triggered_planet_modifier = {
+		potential = {
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value < 400
+			}
+		}
 		job_GFnyto_framework_add = 4
 	}
 	resources = {
@@ -694,25 +687,32 @@ building_GFnyto_nourishment_center = {
 		upkeep = {
 			trigger = {
 				is_variable_set = GFnyto_plante_wrlv
-				check_variable = {
-					which = GFnyto_plante_wrlv
-					value > 1000
-				}
-				years_passed > 50
-			}
-			energy = 0.1
-			multiplier = planet.GFnyto_plante_wrlv
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
 			}
 			energy = 0.05
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
-	planet_modifier = {
-		job_GFnyto_collapse_particle_zip_add = 4
+	triggered_desc = {
+		trigger = {
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value > 600
+			}
+		}
+		text = "GF_nyto_plante_build_off"
+	}
+	triggered_planet_modifier = {
+		potential = {
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value > 0
+			}
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value < 600
+			}
+		}
+		job_GFnyto_collapse_particle_zip_add = 2
 	}
 	prerequisites = {
 		"tech_GFnyto_tansuo"
@@ -745,25 +745,32 @@ building_GFnyto_nourishment_center2 = {
 		upkeep = {
 			trigger = {
 				is_variable_set = GFnyto_plante_wrlv
-				check_variable = {
-					which = GFnyto_plante_wrlv
-					value > 1000
-				}
-				years_passed > 50
-			}
-			energy = 0.1
-			multiplier = planet.GFnyto_plante_wrlv
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
 			}
 			energy = 0.05
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
-	planet_modifier = {
-		job_GFnyto_collapse_particle_zip_add = 6
+	triggered_desc = {
+		trigger = {
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value > 600
+			}
+		}
+		text = "GF_nyto_plante_build_off"
+	}
+	triggered_planet_modifier = {
+		potential = {
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value > 0
+			}
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value < 600
+			}
+		}
+		job_GFnyto_collapse_particle_zip_add = 4
 	}
 	prerequisites = {
 		"tech_GFnyto_tansuo2"
@@ -805,27 +812,33 @@ building_GFnyto_dimensional_fabricator = {
 		}
 		upkeep = {
 			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-				check_variable = {
-					which = GFnyto_plante_wrlv
-					value > 1000
-				}
-				years_passed > 50
-				owner = { is_ai = no }	
-			}
-			energy = 0.1
-			multiplier = planet.GFnyto_plante_wrlv
-		}
-		upkeep = {
-			trigger = {
 				is_variable_set = GFnyto_plante_wrlv			
 			}
 			energy = 0.05
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
-	planet_modifier = {
-		job_GFnyto_collapse_particle_rar_add = 4
+	triggered_desc = {
+		trigger = {
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value > 600
+			}
+		}
+		text = "GF_nyto_plante_build_off"
+	}
+	triggered_planet_modifier = {
+		potential = {
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value > 0
+			}
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value < 600
+			}
+		}
+		job_GFnyto_collapse_particle_rar_add = 2
 	}
 	prerequisites = {
 		"tech_GFnyto_tansuo"
@@ -883,8 +896,27 @@ building_GFnyto_dimensional_fabricator2 = {
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
-	planet_modifier = {
-		job_GFnyto_collapse_particle_rar_add = 6
+	triggered_desc = {
+		trigger = {
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value > 600
+			}
+		}
+		text = "GF_nyto_plante_build_off"
+	}
+	triggered_planet_modifier = {
+		potential = {
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value > 0
+			}
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value < 600
+			}
+		}
+		job_GFnyto_collapse_particle_rar_add = 4
 	}
 	prerequisites = {
 		"tech_GFnyto_tansuo2"
@@ -1435,5 +1467,32 @@ GF_nyto_holding_sacrificial_shrine = {
 			exists = planet.owner
 		}
 		job_overlord_Epiphyllum_add  = 2
+	}
+}
+
+#反冲式衰变壁垒
+GF_nyto_Recoil_decay_barrier ={
+	base_buildtime = @b3_time
+	can_build = yes
+	can_demolish = yes
+	potential = {
+		owner = {
+			OR = {
+				has_authority = auth_GF_paradeus
+				has_country_flag = has_nyto_technology
+			}		
+		}
+	}
+	category = manufacturing
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+			alloys = 50
+		}
+		upkeep = {
+			energy = 0.5
+			multiplier = planet.GFnyto_plante_wrlv
+		}
 	}
 }
