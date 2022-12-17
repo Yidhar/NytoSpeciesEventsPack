@@ -17,9 +17,9 @@ GFnyto_collapse_particle_researcher = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			physics_research = 3
-			society_research = 3
-			engineering_research = 3
+			physics_research = 5
+			society_research = 5
+			engineering_research = 5
 		}
 		upkeep = {
 			GF_nyto_collapse_liquid = 1
@@ -34,9 +34,9 @@ GFnyto_collapse_particle_researcher = {
 					}
 				}
 			}
-			physics_research = 3
-			society_research = 3
-			engineering_research = 3
+			physics_research = 5
+			society_research = 5
+			engineering_research = 5
 		}
 		produces = {
 			trigger = {
@@ -76,14 +76,6 @@ GFnyto_collapse_particle_researcher = {
 				}
 			}
 			consumer_goods = 0.002
-			multiplier = planet.GFnyto_plante_wrlv
-		}
-		upkeep = {
-			trigger = {
-				planet = {
-					is_variable_set = GFnyto_plante_wrlv
-				}
-			}
 			GF_nyto_collapse_liquid = 0.025
 			multiplier = planet.GFnyto_plante_wrlv
 		}
@@ -402,7 +394,7 @@ GFnyto_collapse_particle_rar = {
 			GF_nyto_collapse_liquid = 10
 		}
 		upkeep = {
-			GF_nyto_collapse_liquid = 0.5
+			GF_nyto_collapse_liquid = 0.1
 			multiplier = planet.trigger:has_planetary_ascension_tier
 		}
 		upkeep = {
@@ -445,7 +437,7 @@ GFnyto_collapse_particle_zip = {
 			multiplier = planet.trigger:has_planetary_ascension_tier
 		}
 		produces = {
-			GF_nyto_collapse_liquid = 0.05
+			GF_nyto_collapse_liquid = 0.1
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 		upkeep = {
@@ -465,8 +457,8 @@ GFnyto_collapse_particle_zip = {
 			multiplier = planet.trigger:has_planetary_ascension_tier
 		}
 		upkeep = {
-			energy = 0.1
-			consumer_goods = 0.01
+			energy = 0.05
+			consumer_goods = 0.003
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}

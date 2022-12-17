@@ -1488,7 +1488,7 @@ GF_nyto_Recoil_decay_barrier ={
 		category = planet_buildings
 		cost = {
 			minerals = 1000
-			alloys = 50
+			alloys = 200
 		}
 		upkeep = {
 			energy = 0.5
