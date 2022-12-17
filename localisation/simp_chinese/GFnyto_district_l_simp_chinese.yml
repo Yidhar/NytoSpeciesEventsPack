@@ -14,7 +14,7 @@ district_GF_nyto_pc_toxic_underground_research_institute_plural:0 "地下研究�
 district_GF_nyto_pc_toxic_administration:0 "行政管理区划"
 district_GF_nyto_pc_toxic_administration_desc:0 "这座巨型空间站是政府部门的集中地,包含官僚部门,处理行星的各类规划及日常事务。"
 district_GF_nyto_pc_toxic_alloy:0 "逆向坍塌区划"
-district_GF_nyto_pc_toxic_alloy_desc:0 "整片区域皆是一个巨大的逆向坍塌工业反应堆,工人整日于坍塌辐射相伴"
+district_GF_nyto_pc_toxic_alloy_desc:0 "整片区域皆是一个巨大的逆向坍塌工业反应堆,工人整日于坍塌辐射相伴§R\n该区划工作在0~700污染度之间§!§W\n区划不提供岗位，而是根据存在的相位技师岗位数量提供产出§!"
 mod_planet_district_GF_nyto_pc_toxic_alloy_build_speed_mult:0 "逆向坍塌区划建造速度"
 district_GF_nyto_pc_toxic_consumer_good:0 "民用工业区划"
 district_GF_nyto_pc_toxic_consumer_good_desc:0 "这座巨型空间站区划的阶层街道两侧布满了工匠作坊和民用工厂。"
@@ -32,7 +32,7 @@ district_GF_nyto_pc_toxic_mineral_desc:0 "尽管巨型空间站本身并没有�
 district_GF_nyto_pc_toxic_refine:0 "战略资源精炼区划"
 district_GF_nyto_pc_toxic_refine_desc:0 "这座巨型空间能够生产各类帝国所需要的战略资源。"
 district_GF_nyto_pc_toxic_science:0 "科学研究区划"
-district_GF_nyto_pc_toxic_science_desc:0 "这座巨型空间站充满了各类研究设施。"
+district_GF_nyto_pc_toxic_science_desc:0 "这座巨型空间站充满了各类研究设施。§R\n该区划工作在0~700污染度之间§!§W\n区划不提供岗位，而是根据存在的相位技师岗位数量提供产出§!"
 district_GF_nyto_pc_toxic_trade:0 "地面指挥中心"
 district_GF_nyto_pc_toxic_trade_desc:0 "整篇区域只为一个功能而建设,而那就是对帝国军队的指挥调度"
 
