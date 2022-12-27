@@ -34,7 +34,7 @@ building_GFnyto_dimensional_fabricator_desc:0 "坍塌物质在吸收同频率光
 building_GFnyto_affluence_center:0 "坍塌粒子中和塔"
 building_GFnyto_affluence_center_desc:0 "可以中和空气中的坍塌粒子,虽然对于星球整体来说,聊胜于无,但却是上个世代下人类生存的关键建筑\n每个中和塔提供10污染净化"
 building_GFnyto_class_4_singularity:0 "诺亚反应堆"
-building_GFnyto_class_4_singularity_desc:0 "在漫长的岁月里,这座巨型坍塌反应堆依旧在稳定运作"
+building_GFnyto_class_4_singularity_desc:0 "在漫长的岁月里,这座巨型坍塌反应堆依旧在稳定运作。\n该建筑无法在大于500污染度的环境下运行"
 building_GFnyto_fe_dome:0 "Сетунь_Ω计算机中枢"
 building_GFnyto_fe_dome_desc:0 ""
 building_GFnyto_fe_dome2:0 "来自上一个时代的三进制计算机集群,已经完全启动并与配套设施完成连接。上一个世代没有完成的计划在我们手中绽放"

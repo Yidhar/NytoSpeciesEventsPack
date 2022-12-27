@@ -80,4 +80,5 @@ GF_nyto_drp_modifer ={
 		add = modifier:planet_jobs_$researchers3$_produces_mult
 		add = modifier:planet_jobs_physics_research_produces_mult
 	]
+	add = planet.trigger:has_planetary_ascension_tier
 }

@@ -1,23 +1,73 @@
-#逆向坍塌工业星球
+#工业区划
+#综合工业星球 （全产
 col_GF_nyto_pc_toxic_alloy_plural = {
 	icon = GFX_colony_type_foundry
 	potential = {
 		OR = {
 			is_planet_class = pc_GF_nyto_embers_gloomy
 			is_planet_class = pc_GF_nyto_devil_furnace
+			is_planet_class = pc_GFnytp_habitis
 		}
 	}
 	planet_modifier = {
 		planet_district_GF_nyto_pc_toxic_alloy_build_speed_mult = 0.25
-		planet_metallurgists_upkeep_mult = -0.2
 		pc_GF_nyto_embers_gloomy_habitability = 1	
 	}
+	weight_modifier = {
+		add = 1000
+		modifier = {
+			num_free_districts = {
+				type = district_GF_nyto_pc_toxic_alloy
+				value > 1
+			}
+		}
+	}
+
+}
+
+#战略资源中枢 （稀有
+col_Gf_nyto_xiyou_rss = {
+	icon = GFX_colony_type_refinery
+	potential = {
+		OR = {
+			is_planet_class = pc_GF_nyto_embers_gloomy
+			is_planet_class = pc_GF_nyto_devil_furnace
+			is_planet_class = pc_GFnytp_habitis
+		}		
+	}
+	planet_modifier = {
+		planet_district_GF_nyto_pc_toxic_alloy_build_speed_mult = 0.25
+		pc_GF_nyto_embers_gloomy_habitability = 1	
+	}
+	weight_modifier = {
+		add = 20
+		modifier = {
+			is_planet_class = pc_habitat
+		}
+	}
+}
+
+#军工产业星球 (矿物/合金
+col_GF_nyto_general_planet = {
+	icon = GFX_colony_type_foundry
+	potential = {
+		OR = {
+			is_planet_class = pc_GF_nyto_embers_gloomy
+			is_planet_class = pc_GF_nyto_devil_furnace
+			is_planet_class = pc_GFnytp_habitis
+		}
+	}
+	planet_modifier = {
+		planet_district_GF_nyto_pc_toxic_alloy_build_speed_mult = 0.25
+		pc_GF_nyto_embers_gloomy_habitability = 1	
+	}
+	#妈的 权重要重做
 	weight_modifier = {
 		add = 10
 		modifier = {
 			num_free_districts = {
 				type = district_GF_nyto_pc_toxic_alloy
-				value > 3
+				value > 1
 			}
 		}
 	}
@@ -30,6 +80,28 @@ col_GF_nyto_pc_toxic_alloy_plural = {
 		}
 	}
 }
+
+# 民用产业  食物/消费
+col_GF_nyto_food_planet ={
+	icon = GFX_colony_type_farm
+	potential = {
+		OR = {
+			is_planet_class = pc_GF_nyto_embers_gloomy
+			is_planet_class = pc_GF_nyto_devil_furnace
+			is_planet_class = pc_GFnytp_habitis
+		}
+	}
+	planet_modifier = {
+		planet_district_GF_nyto_pc_toxic_alloy_build_speed_mult = 0.25
+		pc_GF_nyto_embers_gloomy_habitability = 1	
+	}
+}
+
+
+
+
+
+
 
 #坍塌工业星球
 col_GF_nyto_pc_toxic_consumer_good_plural = {
@@ -101,27 +173,7 @@ col_GF_nyto_speed_planet_wrlv ={
 
 }
 
-#战略资源中枢
-col_Gf_nyto_xiyou_rss = {
-	icon = GFX_colony_type_refinery
-	potential = {
-		OR = {
-			is_planet_class = pc_GF_nyto_embers_gloomy
-			is_planet_class = pc_GF_nyto_devil_furnace
-		}		
-	}
-	planet_modifier = {
-		planet_refiners_produces_mult = 0.2
-		planet_chemists_produces_mult = 0.2
-		planet_translucers_produces_mult = 0.2
-	}
-	weight_modifier = {
-		add = 20
-		modifier = {
-			is_planet_class = pc_habitat
-		}
-	}
-}
+
 
 #指挥中心
 col_GF_nyto_nv_fleet ={

@@ -845,7 +845,7 @@ country_event = {
 		OR = {
 			num_assigned_jobs = { job = GFnyto_collapse_particle_rar value > 0 }
 			num_assigned_jobs = { job = GFnyto_collapse_particle_zip value > 0 }
-			num_assigned_jobs = { job = GFnyto_collapse_particle_researcher value > 0 }
+			num_assigned_jobs = { job = GFnyto_collapse_particle_researcher value > 0 }			
 		}
 	}
 	immediate = {
@@ -855,6 +855,7 @@ country_event = {
 					num_assigned_jobs = { job = GFnyto_collapse_particle_rar value > 0 }
 					num_assigned_jobs = { job = GFnyto_collapse_particle_zip value > 0 }
 					num_assigned_jobs = { job = GFnyto_collapse_particle_researcher value > 0 }
+					num_buildings = { type = GF_nyto_Recoil_decay_barrier value > 0 }
 					is_variable_set = GFnyto_plante_wrlv
 				}
 			}
@@ -1098,18 +1099,18 @@ country_event = {
 						check_variable_arithmetic = {
 							subtract = affluence_center_purify
 							which = GFnyto_plante_wrlv
-							value < -5
+							value < 0
 						}
 						check_variable_arithmetic = {
 							subtract = Recoil_decay_barrier_center_purify
 							which = GFnyto_plante_wrlv
-							value < -5
+							value < 0
 						}
 					}
 				}
 				set_variable = {
 					which = GFnyto_plante_wrlv
-					value = -5
+					value = 0
 				}
 			}
 			else = {

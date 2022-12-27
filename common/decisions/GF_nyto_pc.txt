@@ -35,70 +35,15 @@ decision_pc_GF_nyto_embers_gloomy_project = {
 		custom_tooltip = decision_pc_GF_nyto_embers_gloomy_project_effects
 		hidden_effect = {
 			add_district = district_GF_nyto_pc_toxic_house
-			add_district = district_GF_nyto_pc_toxic_mineral
-			add_district = district_GF_nyto_pc_toxic_food
-			change_planet_size = 5
+			add_district = district_GF_nyto_pc_toxic_alloy
+			add_district = district_GF_nyto_pc_toxic_energy
+			change_planet_size = 10
 			save_event_target_as = set_pc_GF_nyto_embers_gloomy
 			add_deposit = d_GFnyto_black_zone
 			set_planet_entity = {
 				entity = "GFnyto_planet03_entity"
 			}
 			set_planet_flag = GFnyto_Spring_wakes_up
-			set_update_modifiers_batch = begin
-			if = {
-				limit = {  
-					owner = {
-						is_ai = yes
-					}
-				}
-				change_planet_size = 5								
-				random_list = {
-					4 = {
-						set_planet_flag = GFnyto_district_science
-						set_planet_flag = GFnyto_district_alloy
-						add_district = district_GF_nyto_pc_toxic_alloy
-						add_district = district_GF_nyto_pc_toxic_alloy
-						add_district = district_GF_nyto_pc_toxic_science
-						add_district = district_GF_nyto_pc_toxic_science	
-						add_district = district_GF_nyto_pc_toxic_house
-					}
-					4 ={
-						set_planet_flag = GFnyto_district_science
-						set_planet_flag = GFnyto_district_consumer_good
-						add_district = district_GF_nyto_pc_toxic_consumer_good
-						add_district = district_GF_nyto_pc_toxic_consumer_good
-						add_district = district_GF_nyto_pc_toxic_science
-						add_district = district_GF_nyto_pc_toxic_science
-						add_district = district_GF_nyto_pc_toxic_house
-					}		
-					2 ={
-						modifier = {
-							factor = 0
-							owner = {
-								used_naval_capacity_percent < 0.8
-							}
-						}
-						set_planet_flag = GFnyto_district_consumer_good
-						set_planet_flag = GFnyto_district_trade
-						add_district = district_GF_nyto_pc_toxic_house
-						add_district = district_GF_nyto_pc_toxic_trade
-						add_district = district_GF_nyto_pc_toxic_trade
-						add_district = district_GF_nyto_pc_toxic_consumer_good
-						add_district = district_GF_nyto_pc_toxic_consumer_good
-					}											
-				}
-			}
-			if = {
-				limit = {  owner = { is_ai = no } }
-				if = { limit = { is_homeworld = no }
-					planet_event = { id = GFnytopctoxic.20 }
-					if = {
-						limit = { planet_size > 20 is_homeworld = no }
-						planet_event = { id = GFnytopctoxic.20 }
-					}
-				}
-			}
-			set_update_modifiers_batch = end
 		}
 	}
 	ai_weight = {

@@ -88,6 +88,15 @@ building_GFnyto_class_4_singularity = {
 	planet_modifier = {
 		job_GFnyto_phase_technician_add = 3
 	}
+	triggered_planet_modifier = {
+		potential = {
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value < 500
+			}
+		}
+		job_GFnyto_phase_technician_add = 3
+	}
 	prerequisites = {
 		"tech_GF_nyto_storage_of_ancient_technology"
 	}
