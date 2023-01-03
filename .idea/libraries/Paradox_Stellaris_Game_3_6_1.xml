@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Paradox/Stellaris Game@3.6.1" type="paradox">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../../../../SteamLibrary/steamapps/common/Stellaris" />
+    </SOURCES>
+  </library>
+</component>

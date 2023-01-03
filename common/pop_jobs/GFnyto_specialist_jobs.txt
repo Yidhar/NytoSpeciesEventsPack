@@ -436,10 +436,6 @@ GFnyto_collapse_particle_zip = {
 			GF_nyto_collapse_liquid = 1
 			multiplier = planet.trigger:has_planetary_ascension_tier
 		}
-		produces = {
-			GF_nyto_collapse_liquid = 0.1
-			multiplier = planet.GFnyto_plante_wrlv
-		}
 		upkeep = {
 			energy = 10
 			minerals = 5

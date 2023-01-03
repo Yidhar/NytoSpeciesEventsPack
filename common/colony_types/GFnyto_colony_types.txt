@@ -110,6 +110,7 @@ col_GF_nyto_pc_toxic_consumer_good_plural = {
 		OR = {
 			is_planet_class = pc_GF_nyto_embers_gloomy
 			is_planet_class = pc_GF_nyto_devil_furnace
+			is_planet_class = pc_GFnytp_habitis
 		}
 	}
 	planet_modifier = {
@@ -128,13 +129,15 @@ col_GF_nyto_pc_toxic_consumer_good_plural = {
 	}
 }
 
-#密钥基地
+
+#高精业复合中心
 col_GF_nyto_pc_toxic_energy_plural = {
 	icon = GFX_colony_type_research
 	potential = {
 		OR = {
 			is_planet_class = pc_GF_nyto_embers_gloomy
 			is_planet_class = pc_GF_nyto_devil_furnace
+			is_planet_class = pc_GFnytp_habitis
 		}
 	}
 	planet_modifier = {
@@ -196,7 +199,8 @@ col_GF_nyto_science ={
 		OR = {
 			is_planet_class = pc_GF_nyto_embers_gloomy
 			is_planet_class = pc_GF_nyto_devil_furnace
-		}	
+			is_planet_class = pc_GFnytp_habitis
+		}
 	}
 	planet_modifier = {
 		planet_jobs_physics_research_produces_mult = 0.2

@@ -294,6 +294,8 @@ GFnyto_stions_fortress_base ={
 			}
 			alloys = 2500
 			unity = 500
+			GF_nyto_new_fire_control_unit = 300
+			GF_nyto_collapse_liquid = 1000
 		}
 		cost = {
 			trigger = {
