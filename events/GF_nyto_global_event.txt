@@ -406,7 +406,6 @@ leader_event = {
 		portrait = owner
 		room = enclave_curator_room
 	}
-	title = test
 	immediate = {
 		export_trigger_value_to_variable = {
 			trigger = has_skill
@@ -856,6 +855,10 @@ country_event = {
 					num_assigned_jobs = { job = GFnyto_collapse_particle_zip value > 0 }
 					num_assigned_jobs = { job = GFnyto_collapse_particle_researcher value > 0 }
 					num_buildings = { type = GF_nyto_Recoil_decay_barrier value > 0 }
+					num_districts = { type = district_GF_nyto_pc_toxic_energy value > 0  }
+					num_districts = { type = district_GF_nyto_pc_toxic_leisure value > 0  }
+					num_districts = { type = district_GF_nyto_pc_toxic_science value > 0  }
+					num_districts = { type = district_GF_nyto_pc_toxic_alloy value > 0  }
 					is_variable_set = GFnyto_plante_wrlv
 				}
 			}
@@ -954,6 +957,50 @@ country_event = {
 					value = 2
 				}		
 			}
+			#区划提供的污染度产出
+			if = {
+				limit = {
+					has_planet_flag = GFnyto_Spring_wakes_up
+				}
+				export_trigger_value_to_variable = {
+					parameters = { type = district_GF_nyto_pc_toxic_alloy }
+					trigger = num_districts
+					variable = district_GF_nyto_pc_toxic_alloy_num
+				}
+				export_trigger_value_to_variable = {
+					parameters = { type = district_GF_nyto_pc_toxic_energy }
+					trigger = num_districts
+					variable = district_GF_nyto_pc_toxic_energy_num
+				}
+				export_trigger_value_to_variable = {
+					parameters = { type = district_GF_nyto_pc_toxic_leisure }
+					trigger = num_districts
+					variable = district_GF_nyto_pc_toxic_leisure_num
+				}
+				export_trigger_value_to_variable = {
+					parameters = {
+						type = district_GF_nyto_pc_toxic_science
+					}
+					trigger = num_districts
+					variable = district_GF_nyto_pc_toxic_science_num
+				}
+				multiply_variable = {
+					which = district_GF_nyto_pc_toxic_alloy_num
+					value = 10
+				}
+				multiply_variable = {
+					which = district_GF_nyto_pc_toxic_energy_num
+					value = 10
+				}
+				multiply_variable = {
+					which = district_GF_nyto_pc_toxic_leisure_num
+					value = 10
+				}
+				multiply_variable = {
+					which = district_GF_nyto_pc_toxic_science_num
+					value = 10
+				}
+				
 			# 星球恢复力衰减
 			if = {
 				limit = {

@@ -544,7 +544,10 @@ GFnyto_habitat_02 ={
 				size = 4
 				has_ring = yes
 				init_effect = {
-					set_name = "HABITAT_PLANET_NAME"
+					set_name = {
+						key = HABITAT_PLANET_NAME
+						variable_string = "[FROM.from.planet.GetName]"
+					}
 					set_planet_entity = {
 						entity = "habitat_phase_01_entity"
 						graphical_culture = fromfrom

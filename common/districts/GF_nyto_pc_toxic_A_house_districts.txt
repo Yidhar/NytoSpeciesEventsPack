@@ -402,7 +402,6 @@ district_GF_nyto_pc_toxic_alloy = {
 			energy = 60
 			GF_nyto_training_key = 2
 			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_framework|districts|district_GF_nyto_pc_toxic_alloy|category|specialist|rss_category|planet_jobs_productive|
-			
 		}
 	}
 	planet_modifier = {
