@@ -2,9 +2,9 @@
 #鶸
 GF_nyto_eild_army_1 = {
 	defensive = yes
-	damage = 2.0
+	damage = 1.0
 	morale_damage = 1.0
-	health = 2.0
+	health = 1.0
 	has_morale = no
 	icon = GFX_army_type_xenomorph
 	has_species = no
@@ -16,9 +16,9 @@ GF_nyto_eild_army_1 = {
 #中
 GF_nyto_eild_army_2 = {
 	defensive = yes
-	damage = 4.0
+	damage = 3.0
 	morale_damage = 1.5
-	health = 4.0
+	health = 3.0
 	has_morale = no
 	icon = GFX_army_type_xenomorph
 	has_species = no
@@ -32,7 +32,7 @@ GF_nyto_eild_army_3 = {
 	defensive = yes
 	damage = 6.0
 	morale_damage = 1.0
-	health = 12.0
+	health = 10.0
 	has_morale = no
 	icon = GFX_army_type_xenomorph
 	has_species = no
@@ -43,7 +43,7 @@ GF_nyto_eild_army_3 = {
 }
 #头目
 GF_nyto_eild_army_4 ={
-	defensive = yes
+	defensive = no
 	damage = 30
 	morale = 10
 	health = 60

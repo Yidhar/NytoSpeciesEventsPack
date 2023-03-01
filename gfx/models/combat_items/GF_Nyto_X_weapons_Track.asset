@@ -172,10 +172,11 @@ entity = {
 #导弹
 entity = {
 	name = "GF_torpedo_03_large_entity"
-	pdxmesh = "arthropoid_01_missile_mesh"
+	#pdxmesh = "arthropoid_01_missile_mesh"
 	
 	default_state = idle
 	state = { name = "idle" animation = "idle"
+		event = { time = 0 node = exhaust particle = "GF_nyto_G_weapon" keep_particle = yes }
 		event = { time = 0 node = exhaust particle = "large_torpedo_idle_particle" keep_particle = yes }
 		event = { time = 0 node = exhaust particle = "large_torpedo_03_idle_flame_particle" keep_particle = yes }
 		event = { time = 0 node = exhaust particle = "large_torpedo_idle_particle" keep_particle = yes }

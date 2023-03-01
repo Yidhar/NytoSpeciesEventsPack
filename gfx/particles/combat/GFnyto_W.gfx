@@ -73,4 +73,9 @@ objectTypes={
 		type = GF_nyto_Laser_weapon
 		scale = 1.0
 	}
+	pdxparticle ={
+		name = GF_nyto_G_weapon
+		type = GF_nyto_G_weapon
+		scale = 1.0
+	}
 }

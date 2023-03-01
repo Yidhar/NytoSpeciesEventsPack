@@ -20,11 +20,11 @@
 # # 	}
 # # # }
 # # should_planetary_automate = {
-# # 	OR = { 
-# # 		free_district_slots > 0 
-# # 		free_building_slots > 0 
-# # 		free_jobs < 3 
-# # 		num_unemployed > 0 
+# # 	OR = {
+# # 		free_district_slots > 0
+# # 		free_building_slots > 0
+# # 		free_jobs < 3
+# # 		num_unemployed > 0
 # # 	}
 # # 	has_building_construction = no
 # # }
@@ -69,7 +69,7 @@
 # 							has_building = building_clone_army_clone_vat
 # 							NOT = { check_variable = { which = clone_pops_missing value = 0 } }
 # 						}
-# 					} 
+# 					}
 # 					else_if = {
 # 						limit = {
 # 							root.owner = {
