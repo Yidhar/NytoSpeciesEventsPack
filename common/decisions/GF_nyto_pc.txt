@@ -458,7 +458,9 @@ decision_GFnyto_Emergency_pollution_control = {
 	sound = event_administrative_work
 	icon = decision_pc_GF_nyto_embers_gloomy_project
 	potential = {
-		has_technology = tech_climate_restoration
+		onwer ={
+			has_technology = tech_climate_restoration
+		}	
 	}
 	allow = {
 		check_variable = {
