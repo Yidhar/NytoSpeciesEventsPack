@@ -27,17 +27,6 @@ nyto= {
 			society_research = 1
 			engineering_research = 1		
 		}
-		produces = {
-			trigger = {
-				planet = { has_modifier = planet_population_control }
-				owner = { is_ai = no }				
-			}
-			GF_nyto_dark_star_core = 0.01
-		}
-		produces = {
-			trigger = { owner = { is_ai = yes } }
-			GF_nyto_dark_star_core = 0.01
-		}
 	}
 	playable = {
 		always = yes
