@@ -579,9 +579,9 @@ district_GF_nyto_pc_toxic_science = {
 					}
 				}
 			}
-			physics_research = 50
-			society_research = 50
-			engineering_research = 50
+			physics_research = 25
+			society_research = 25
+			engineering_research = 25
 			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_collapse_particle_researcher|districts|district_GF_nyto_pc_toxic_science|researchers0|researchers|researchers1|physics_research|researchers2|society_research|researchers3|engineering_research|category|worker|rss_category|planet_metallurgists|
 
 		}

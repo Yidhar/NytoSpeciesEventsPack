@@ -45,9 +45,9 @@ GFnyto_collapse_particle_researcher = {
 					is_variable_set = GFnyto_plante_wrlv
 				}
 			}
-			physics_research = 0.035
-			society_research = 0.035
-			engineering_research = 0.035
+			physics_research = 0.0035
+			society_research = 0.0035
+			engineering_research = 0.0035
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 		produces = {
