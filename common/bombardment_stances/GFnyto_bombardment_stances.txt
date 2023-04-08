@@ -1,7 +1,7 @@
 gfnyto_collapse_liquid= {
 	trigger = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 			OR = {
 				has_technology = tech_GF_nyto_collapse_stability_bomb
 				has_civic = civic_GF_nyto_heart_of_suffering
@@ -21,7 +21,7 @@ gfnyto_collapse_liquid= {
 gfnyto_marine_corps= {
 	trigger = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 			has_technology = tech_GFnyto_war_theory_a1
 		}
 	}
@@ -38,7 +38,7 @@ gfnyto_marine_corps= {
 gfnyto_trade_blockade= {
 	trigger = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 			OR = {
 				has_technology = tech_GFnyto_war_theory_e2
 				has_civic = civic_GF_nyto_heart_of_suffering

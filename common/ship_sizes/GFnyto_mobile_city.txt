@@ -123,7 +123,7 @@ GFnyto_shiled_ship ={
 	class = shipclass_military
 	construction_type = starbase_shipyard
 	possible_country = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	potential_construction = {
 		OR = {

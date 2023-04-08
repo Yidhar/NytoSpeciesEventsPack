@@ -5,7 +5,7 @@ building_GFnyto_collapse_exploit_plant_1 = {
 	category = research
 	potential = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 		}
 	}
 	triggered_desc = {
@@ -112,7 +112,7 @@ building_GFnyto_collapse_exploit_plant_1 = {
 	ai_resource_production = {
 		trigger = {
 			owner = {
-				has_authority = auth_GF_paradeus
+				is_nyto_country =yes
 			}
 		}
 		physics_research = 999
@@ -129,7 +129,7 @@ building_GFnyto_collapse_exploit_plant_2 = {
 	category = research
 	potential = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 		}
 	}
 	allow = {
@@ -237,7 +237,7 @@ building_GFnyto_collapse_exploit_plant_2 = {
 	ai_resource_production = {
 		trigger = {
 			owner = {
-				has_authority = auth_GF_paradeus
+				is_nyto_country =yes
 			}
 		}
 		physics_research = 999
@@ -254,7 +254,7 @@ building_GFnyto_collapse_change_center = {
 	base_cap_amount = 1
 	potential = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 			NOT = {
 				has_ascension_perk = ap_GF_nyto_conquer_hell
 			}
@@ -311,22 +311,13 @@ building_GFnyto_forward_base = {
 	base_cap_amount = 1
 	can_build = no
 	potential = {
-		owner = {
-			has_authority = auth_GF_paradeus
-			has_civic = civic_GF_nyto_forward_base
-		}
+		is_capital = no
 	}
 	triggered_desc = {
 		trigger = {
 			is_capital = no
 		}
 		text = building_GFnyto_forward_base_desc1
-	}
-	triggered_desc = {
-		trigger = {
-			is_capital = yes
-		}
-		text = building_GFnyto_forward_base_desc2
 	}
 	planet_modifier = {
 		job_GFnyto_explorer_add = 5
@@ -364,10 +355,7 @@ building_GFnyto_forward_base2 = {
 	base_cap_amount = 1
 	can_build = no
 	potential = {
-		owner = {
-			has_authority = auth_GF_paradeus
-			has_civic = civic_GF_nyto_forward_base
-		}
+		is_capital = no
 	}
 	triggered_desc = {
 		trigger = {
@@ -375,12 +363,7 @@ building_GFnyto_forward_base2 = {
 		}
 		text = building_GFnyto_forward_base_desc1
 	}
-	triggered_desc = {
-		trigger = {
-			is_capital = yes
-		}
-		text = building_GFnyto_forward_base_desc2
-	}
+
 	planet_modifier = {
 		job_GFnyto_explorer_add = 5
 		planet_housing_add = 10
@@ -420,7 +403,7 @@ building_GFnyto_transportation_hub = {
 	category = manufacturing
 	potential = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 		}
 	}
 	base_cap_amount = 1
@@ -475,7 +458,8 @@ building_GFnyto_heritage_department = {
 	category = manufacturing
 	potential = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
+			has_country_flag = GFnyto_heritage_department_build
 			check_variable = {
 				which = GFnyto_heritage_department_build_count
 				value = 1
@@ -536,22 +520,6 @@ building_GFnyto_heritage_department = {
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
-	on_queued = {
-		owner = {
-			subtract_variable = {
-				which = GFnyto_heritage_department_build_count
-				value = 1
-			}
-		}
-	}
-	on_unqueued = {
-		owner = {
-			change_variable = {
-				which = GFnyto_heritage_department_build_count
-				value = 1
-			}
-		}
-	}
 	ai_weight = {
 		weight = 500
 	}
@@ -565,7 +533,7 @@ building_GFnyto_algorithm = {
 	category = research
 	potential = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 		}
 	}
 	triggered_desc = {
@@ -593,9 +561,23 @@ building_GFnyto_algorithm = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			check_variable = {
-				which = GFnyto_plante_wrlv
-				value < 500
+			or = {
+				and = {
+					check_variable = {
+						which = GFnyto_plante_wrlv
+						value < 500
+					}
+					not = {
+						has_district = district_GF_nyto_pc_toxic_science
+					}
+				}
+				and = {
+					check_variable = {
+						which = GFnyto_plante_wrlv
+						value < 700
+					}
+					has_district = district_GF_nyto_pc_toxic_science
+				}
 			}
 		}
 		job_GFnyto_algorithm_add = 2
@@ -634,7 +616,7 @@ building_GFnytp_framework_core = {
 	category = research
 	potential = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 		}
 	}
 	triggered_desc = {
@@ -719,7 +701,7 @@ building_GFnytp_framework_core2 = {
 	category = research
 	potential = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 		}
 	}
 	triggered_desc = {
@@ -813,7 +795,7 @@ building_GFnyto_nourishment_center = {
 	can_demolish = yes
 	potential = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 		}
 	}
 	category = resource
@@ -895,7 +877,7 @@ building_GFnyto_nourishment_center2 = {
 	can_demolish = yes
 	potential = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 		}
 	}
 	category = resource
@@ -987,7 +969,7 @@ building_GFnyto_dimensional_fabricator = {
 	can_demolish = yes
 	potential = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 		}
 	}
 	category = resource
@@ -1076,7 +1058,7 @@ building_GFnyto_dimensional_fabricator2 = {
 	can_demolish = yes
 	potential = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 		}
 	}
 	category = resource
@@ -1559,7 +1541,7 @@ building_GFnyto_collapse_exploit_plant_1_dc = {
 	ai_resource_production = {
 		trigger = {
 			owner = {
-				has_authority = auth_GF_paradeus
+				is_nyto_country =yes
 			}
 		}
 		physics_research = 999
@@ -1614,7 +1596,7 @@ building_GFnyto_collapse_exploit_plant_2_dc = {
 	ai_resource_production = {
 		trigger = {
 			owner = {
-				has_authority = auth_GF_paradeus
+				is_nyto_country =yes
 			}
 		}
 		physics_research = 999
@@ -1717,7 +1699,7 @@ GF_nyto_Recoil_decay_barrier ={
 	potential = {
 		owner = {
 			OR = {
-				has_authority = auth_GF_paradeus
+				is_nyto_country =yes
 				has_country_flag = has_nyto_technology
 			}		
 		}

@@ -7,7 +7,7 @@ tech_GF_nyto_EILD_brain_wave = {
 	tier = 5
 	is_rare = yes
 	weight = 5
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {is_nyto_country =yes}
 	ai_weight = {factor = 0}
 	
 }
@@ -21,7 +21,7 @@ tech_GF_nyto_war_nuns = {
 	is_rare = yes
 	prerequisites = { "tech_GF_nyto_biomechanics" }
 	weight = 5
-	potential = {has_authority = auth_GF_paradeus}	
+	potential = {is_nyto_country =yes}	
 	ai_weight = {factor = 3}
 }
 # Biomechanics巨型战体
@@ -34,7 +34,7 @@ tech_GF_nyto_biomechanics = {
 	is_rare = no
 	prerequisites = { "tech_GF_nyto_robomodding_points_2" }
 	weight = 5
-	potential = {has_authority = auth_GF_paradeus}	
+	potential = {is_nyto_country =yes}	
 	ai_weight = {factor = 3}
 }
 # Adaptive Combat Algorithms机械战甲
@@ -47,7 +47,7 @@ tech_GF_nyto_adaptive_combat_algorithms = {
 	category = { biology }	
 	prerequisites = { "tech_GF_nyto_robomodding_points_1" }
 	weight = 5
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {is_nyto_country =yes}
 	ai_weight = {factor = 3}
 }
 #Gene Tailoring基因裁剪
@@ -62,7 +62,7 @@ tech_GF_nyto_gene_tailoring = {
 	prerequisites = { "tech_GF_nyto_robomodding_points_1" }
 	weight = 5
 	modifier = {NYTO_species_trait_points_add = 3}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {is_nyto_country =yes}
 	ai_weight = {factor = 3}
 }
 #Targeted Gene Expressions基因定向表达
@@ -77,6 +77,6 @@ tech_GF_nyto_gene_expressions = {
 	prerequisites = { "tech_GF_nyto_robomodding_points_2" }
 	weight = 5
 	modifier = {NYTO_species_trait_points_add = 3}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {is_nyto_country =yes}
 	ai_weight = {factor = 3}
 }

@@ -12,7 +12,7 @@ GFnyto_basic_economy_plan = {
 	potential = {
 		or = {
 			is_cg_country = yes				
-			has_authority = auth_GF_paradeus					
+			is_nyto_country =yes					
 		}				
 	}
 	#一产

@@ -554,7 +554,7 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	immediate = {
 		if = {
@@ -575,7 +575,7 @@ country_event = {
 		#花期
 		if = {
 			limit = {
-				has_authority = auth_GF_paradeus
+				is_nyto_country =yes
 			}
 			country_event = {
 				id = GFnyto_global.16
@@ -1204,7 +1204,7 @@ event = {
 	hide_window = yes
 	trigger = {
 		this = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 			has_edict = GF_nyto_auto_habitat
 		}		
 	}

@@ -10,7 +10,7 @@ tech_GF_nyto_collapse_stability= {
 	weight = 65
 	modifier = {}
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	weight_modifier = {factor = 4}
 	ai_weight = {weight = 2}
@@ -27,7 +27,7 @@ tech_GF_nyto_collapse_stability_2= {
 	weight = 95
 	modifier = {}
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	ai_weight = {weight = 2}
 }
@@ -43,7 +43,7 @@ tech_GF_nyto_Inverse_collapse_1= {
 	weight = 100
 	modifier = {planet_jobs_produces_mult = 0.1}
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	prereqfor_desc = {
 		custom = {
@@ -65,7 +65,7 @@ tech_GF_nyto_Inverse_collapse_2 = {
 	weight = 85
 	modifier = {planet_jobs_produces_mult = 0.1}
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	prereqfor_desc = {
 		custom = {
@@ -87,7 +87,7 @@ tech_GF_nyto_Stabiliz={
 	weight = 50
 	modifier = {planet_jobs_produces_mult = 0.1}
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	ai_weight = {weight = 999}
 }
@@ -102,7 +102,7 @@ tech_GF_nyto_storage_of_ancient_technology = {
 	prerequisites = {}
 	weight = 0
 	modifier = {}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {is_nyto_country =yes}
 	ai_weight = {weight = 5}
 }
 #宏观物质微观化
@@ -117,7 +117,7 @@ tech_GF_nyto_RAR = {
 	weight = 50
 	modifier = {planet_jobs_produces_mult = 0.1}
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	weight_modifier = {
 		modifier = {
@@ -135,7 +135,7 @@ tech_alicen_shiled ={
 	tier = 4
 	category = {field_manipulation}
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	prerequisites = { tech_battleships }
 	weight = 50
@@ -149,7 +149,7 @@ tech_alicen_shiled ={
 # 		field_manipulation
 # 	}
 # 	potential = {
-# 		has_authority = auth_GF_paradeus
+# 		is_nyto_country =yes
 # 	}
 # 	prerequisites = {
 # 		tech_template_GFnyto_Command_ship
@@ -165,6 +165,6 @@ tech_alicen_shiled ={
 # 	tier = 1
 # 	category = { particles }
 # 	potential = {
-# 		has_authority = auth_GF_paradeus
+# 		is_nyto_country =yes
 # 	}
 # }

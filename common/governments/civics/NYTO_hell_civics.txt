@@ -3,7 +3,7 @@
 civic_GF_nyto_see_angel= {
 	icon="gfx/interface/icons/governments/civics/civic_GF_nyto_see_angel.dds"
 	potential = {authority = {value =auth_GF_paradeus}}
-	possible = {species = {value=nyto}}
+	possible = {species_archetype = { value = NYTO}}
 	pickable_at_start=no
 	modification= no
 	modifier={
@@ -17,7 +17,7 @@ civic_GF_nyto_see_angel= {
 civic_GF_nyto_famine= {
 	icon="gfx/interface/icons/governments/civics/GF_nyto_famine.dds"
 	potential = {authority = {value =auth_GF_paradeus}}
-	possible = {species = {value=nyto}}
+	possible = {species_archetype = { value = NYTO}}
 	pickable_at_start=no
 	modification= no
 	modifier={}
@@ -28,7 +28,7 @@ civic_GF_nyto_famine= {
 civic_GF_nyto_war= {
 	icon="gfx/interface/icons/governments/civics/GF_nyto_war.dds"
 	potential = {authority = {value =auth_GF_paradeus}}
-	possible = {species = {value=nyto}}
+	possible = {species_archetype = { value = NYTO}}
 	pickable_at_start=no
 	modification= no
 	modifier={}
@@ -39,7 +39,7 @@ civic_GF_nyto_war= {
 civic_GF_nyto_plague= {
 	icon="gfx/interface/icons/governments/civics/GF_nyto_plague.dds"
 	potential = {authority = {value =auth_GF_paradeus}}
-	possible = {species = {value=nyto}}
+	possible = {species_archetype = { value = NYTO}}
 	pickable_at_start=no
 	modification= no
 	modifier={}
@@ -50,7 +50,7 @@ civic_GF_nyto_plague= {
 civic_GF_nyto_death= {
 	icon="gfx/interface/icons/governments/civics/GF_nyto_death.dds"
 	potential = {authority = {value =auth_GF_paradeus}}
-	possible = {species = {value=nyto}}
+	possible = {species_archetype = { value = NYTO}}
 	pickable_at_start=no
 	modification= no
 	modifier={}

@@ -1,30 +1,3 @@
-#花之锁
-GFnyto_flags = {
-	formation_priority =  @corvette_formation_priority
-	max_speed = 20
-	acceleration = 0
-	rotation_speed = 0
-	collision_radius = @corvette_formation_priority
-	max_hitpoints = 3000
-	size_multiplier = 1
-	fleet_slot_size = 1
-	section_slots = {
-		"core" = { locator = "part1" }
-	}
-	ship_modifier = {
-		ship_engagement_range_mult = 100
-	}
-	num_target_locators = 3
-	is_space_station = no
-	icon_frame = 2
-	can_have_federation_design = no
-	enable_default_design = no
-	default_behavior = GFnyto_ship_behaviors2
-	combat_disengage_chance = 0
-	class = shipclass_military	
-	is_designable = no
-}
-
 #母舰
 GFnyto_mather_ship ={
 	formation_priority =  @corvette_formation_priority
@@ -77,11 +50,11 @@ GFnyto_Command_ship={
 	acceleration = 0.2
 	rotation_speed = 0.05
 	collision_radius = @corvette_formation_priority
-	max_hitpoints = 500000
+	max_hitpoints = 700000
 	modifier = {
 		ship_evasion_add = -0.5
 		ship_armor_add = 70000
-		ship_shield_add = 20000
+		ship_shield_add = 200000
 	}
 	section_slots = {
 		"bow" = { locator = part2 }
@@ -91,6 +64,7 @@ GFnyto_Command_ship={
 	}
 	size_multiplier = 64
 	fleet_slot_size = 0
+	combat_size_multiplier = 0
 	class = shipclass_military
 	base_buildtime = 3600
 	can_have_federation_design = no
@@ -171,7 +145,9 @@ GFnyto_Command_ship={
 	resources = {
 		category = ship_sections
 		cost = {
-			alloys = 1000
+			alloys = 3000
+			GF_nyto_new_fire_control_unit = 100
+			GF_nyto_collapse_liquid = 500
 		}
 		upkeep = {
 			energy = 100
@@ -243,6 +219,8 @@ GF_nyto_super_battelship ={
 		category = ship_sections
 		cost = {
 			alloys = 1000
+			GF_nyto_new_fire_control_unit = 50
+			GF_nyto_collapse_liquid = 200
 		}
 		upkeep = {
 			energy = 100
@@ -278,10 +256,10 @@ GFnyto_stions_fortress ={
 	enable_default_design = yes
 	combat_disengage_chance = -1
 	possible_country = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	potential_country = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	num_target_locators = 8
 	prerequisites = {

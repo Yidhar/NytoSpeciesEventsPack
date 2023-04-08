@@ -17,7 +17,7 @@ tech_GFnyto_accelerating_coil1= {
 		}
 	}
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	ai_weight = {weight = 5}
 }
@@ -35,7 +35,7 @@ tech_GFnyto_power={
 	modifier = {}
 	potential = {
 		OR = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 			has_country_flag = has_nyto_technology
 		}	
 	}
@@ -60,7 +60,7 @@ tech_GFnyto_power_lv2 ={
 	gateway = power_generation
 	potential = {
 		OR = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 			has_country_flag = has_nyto_technology
 		}		
 	}
@@ -112,7 +112,7 @@ tech_GFnyto_power_lv1 = {
 	ai_update_type = all
 	potential = {
 		OR = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 			has_country_flag = has_nyto_technology
 		}	
 	}
@@ -137,7 +137,7 @@ tech_GFnyto_additional_arithmetic_module= {
 	prerequisites = { "tech_combat_computers_3" }
 	weight = 5
 	modifier = {}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {is_nyto_country =yes}
 	ai_weight = {weight = 5}
 }
 #伤害控制小组
@@ -151,7 +151,7 @@ tech_GF_nyto_injury_control_team= {
 	prerequisites = { "tech_space_defense_station_improvement" }
 	weight = 5
 	modifier = {}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {is_nyto_country =yes}
 	weight_modifier = {factor = 4}
 	ai_weight = {weight = 2}
 }
@@ -166,7 +166,7 @@ tech_GFnyto_body_armor1= {
 	prerequisites = { "tech_GF_nyto_Inverse_collapse_1" }
 	weight = 75
 	modifier = {}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {is_nyto_country =yes}
 	ai_weight = {weight = 5}
 }
 tech_GFnyto_body_armor2= {
@@ -179,7 +179,7 @@ tech_GFnyto_body_armor2= {
 	prerequisites = { "tech_GFnyto_body_armor1" }
 	weight = 89
 	modifier = {}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {is_nyto_country =yes}
 	ai_weight = {weight = 5}
 }
 tech_GFnyto_body_armor3= {
@@ -192,7 +192,7 @@ tech_GFnyto_body_armor3= {
 	prerequisites = { "tech_GFnyto_body_armor2" }
 	weight = 65
 	modifier = {}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {is_nyto_country =yes}
 	ai_weight = {weight = 5}
 }
 #力场盾
@@ -208,7 +208,7 @@ tech_GFnyto_force_shield1= {
 	modifier = {ship_shield_regen_add_perc = 0.01}
 	potential = {
 		OR = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 			has_country_flag = has_nyto_technology
 		}	
 	}
@@ -226,7 +226,7 @@ tech_GFnyto_force_shield2= {
 	modifier = {ship_shield_regen_add_perc = 0.01}
 	potential = {
 		OR = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 			has_country_flag = has_nyto_technology
 		}	
 	}
@@ -244,7 +244,7 @@ tech_GFnyto_force_shield3= {
 	modifier = {ship_shield_regen_add_perc = 0.01}
 	potential = {
 		OR = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 			has_country_flag = has_nyto_technology
 		}	
 	}
@@ -260,7 +260,7 @@ tech_GF_nyto_high_explosive_bomb = {
 	prerequisites = { "tech_arc_emitter_1" }
 	weight = 45
 	modifier = {}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {is_nyto_country =yes}
 	ai_weight = {weight = 2}
 }
 #穿甲弹
@@ -273,7 +273,7 @@ tech_GF_nyto_armor_piercing_bullet = {
 	prerequisites = { "tech_arc_emitter_2" }
 	weight = 45
 	modifier = {}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {is_nyto_country =yes}
 	ai_weight = {weight = 2}
 }
 #侦察机
@@ -288,7 +288,7 @@ tech_GF_nyto_reconnaissance_aircraft= {
 	weight = 0
 	modifier = {}
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	weight_modifier = {factor = 4}
 	ai_weight = {weight = 2}
@@ -305,7 +305,7 @@ tech_GF_nyto_Deep_space={
 	weight = 0
 	is_dangerous = yes
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	ai_weight = {weight = 0}
 }
@@ -320,7 +320,7 @@ tech_GF_nyto_light_thruster={
 	weight = 0
 	is_dangerous = yes
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	ai_weight = {weight = 0}
 }
@@ -335,7 +335,7 @@ tech_GF_nyto_bright_poetry ={
 	weight = 0
 	is_dangerous = yes
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	ai_weight = {weight = 0}
 }
@@ -350,7 +350,7 @@ tech_GF_nyto_Beacon={
 	weight = 0
 	is_dangerous = yes
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	ai_weight = {weight = 0}
 }
@@ -365,7 +365,7 @@ tech_GF_nyto_godenergy={
 	weight = 0
 	is_dangerous = yes
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	ai_weight = {weight = 0}
 }
@@ -382,7 +382,7 @@ tech_GF_nyto_x ={
 	is_rare = yes
 	prerequisites ={ tech_GF_nyto_RAR tech_GFnyto_framework }
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	ai_weight = {weight =  50}
 }
@@ -398,7 +398,7 @@ tech_GF_nyto_H ={
 	category = { voidcraft }
 	prerequisites ={ tech_GF_nyto_RAR tech_GFnyto_framework}
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	ai_weight = {weight =  50}
 }
@@ -415,7 +415,7 @@ tech_GF_nyto_P ={
 	category = { voidcraft }
 	prerequisites ={ tech_GF_nyto_RAR tech_GFnyto_framework}
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	modifier = {
 		weapon_type_point_defense_weapon_fire_rate_mult = 0.5
@@ -435,7 +435,7 @@ tech_GF_nyto_G ={
 	category = { voidcraft }
 	prerequisites ={ tech_GF_nyto_RAR tech_GFnyto_framework}
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	modifier = {
 		weapon_type_explosive_weapon_fire_rate_mult = 0.5
@@ -455,7 +455,7 @@ tech_GF_nyto_sm ={
 	category = { voidcraft }
 	prerequisites ={ tech_GF_nyto_Inverse_collapse_1 tech_GFnyto_framework}
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	ai_weight = {weight =  50}
 }

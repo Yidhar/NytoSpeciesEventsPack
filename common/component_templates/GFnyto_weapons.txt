@@ -1,6 +1,7 @@
 #浮游炮
 strike_craft_component_template = {
 	size = large
+	weapon_type = instant
 	key = "tech_GFnyto_accelerating_coil1"
 	entity = "bomber_entity"
 	icon = "GFX_ship_part_GFnyto_accelerating_coi2"
@@ -44,13 +45,13 @@ strike_craft_component_template = {
 		category = ship_components
 		cost = {
 			alloys = 170
-			GF_nyto_new_fire_control_unit = 2
-			GF_nyto_collapse_liquid = 20
+			GF_nyto_new_fire_control_unit = 10
+			GF_nyto_collapse_liquid = 100
 		}
 		upkeep = {
 			energy = 0.5
 			alloys = 0.5
-			GF_nyto_new_fire_control_unit = 0.05
+			GF_nyto_new_fire_control_unit = 0.25
 			GF_nyto_collapse_liquid = 0.2
 		}
 	}
@@ -149,13 +150,13 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = 200
-			GF_nyto_new_fire_control_unit = 30
-			GF_nyto_collapse_liquid = 60
+			GF_nyto_new_fire_control_unit = 150
+			GF_nyto_collapse_liquid = 300
 		}
 		upkeep = {
 			alloys = 1.2
-			GF_nyto_new_fire_control_unit = 1
-			GF_nyto_collapse_liquid = 0.1
+			GF_nyto_new_fire_control_unit = 5
+			GF_nyto_collapse_liquid = 0.5
 		}
 	}
 	ai_weight = {
@@ -207,13 +208,13 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = 200
-			GF_nyto_new_fire_control_unit = 15
-			GF_nyto_collapse_liquid = 60
+			GF_nyto_new_fire_control_unit = 75
+			GF_nyto_collapse_liquid = 300
 		}
 		upkeep = {
 			alloys = 1.2
 			GF_nyto_new_fire_control_unit = 5
-			GF_nyto_collapse_liquid = 0.1
+			GF_nyto_collapse_liquid = 3
 		}
 		upkeep = {
 			trigger = {
@@ -270,13 +271,13 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = 200
-			GF_nyto_new_fire_control_unit = 5
+			GF_nyto_new_fire_control_unit = 25
 			GF_nyto_collapse_liquid = 60
 		}
 		upkeep = {
 			alloys = 1.2
-			GF_nyto_new_fire_control_unit = 0.1
-			GF_nyto_collapse_liquid = 0.1
+			GF_nyto_new_fire_control_unit = 0.5
+			GF_nyto_collapse_liquid = 0.5
 		}
 	}
 	ai_weight = {
@@ -326,13 +327,13 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = 200
-			GF_nyto_new_fire_control_unit = 6
+			GF_nyto_new_fire_control_unit = 30
 			GF_nyto_collapse_liquid = 60
 		}
 		upkeep = {
 			alloys = 1.2
-			GF_nyto_new_fire_control_unit = 0.12
-			GF_nyto_collapse_liquid = 0.1
+			GF_nyto_new_fire_control_unit = 0.6
+			GF_nyto_collapse_liquid = 0.5
 		}
 	}
 	ai_weight = {
@@ -380,14 +381,14 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 200
-			GF_nyto_new_fire_control_unit = 3
+			alloys = 300
+			GF_nyto_new_fire_control_unit = 15
 			GF_nyto_collapse_liquid = 100
 		}
 		upkeep = {
 			alloys = 1.2
-			GF_nyto_new_fire_control_unit = 0.1
-			GF_nyto_collapse_liquid = 0.1
+			GF_nyto_new_fire_control_unit = 0.5
+			GF_nyto_collapse_liquid = 1
 		}
 	}
 	ai_weight = {
@@ -436,14 +437,14 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 200
-			GF_nyto_new_fire_control_unit = 2
+			alloys = 400
+			GF_nyto_new_fire_control_unit = 10
 			GF_nyto_collapse_liquid = 80
 		}
 		upkeep = {
-			alloys = 1.2
-			GF_nyto_new_fire_control_unit = 0.05
-			GF_nyto_collapse_liquid = 0.1
+			alloys = 7
+			GF_nyto_new_fire_control_unit = 0.25
+			GF_nyto_collapse_liquid = 1
 		}
 		upkeep = {
 			trigger = {
@@ -501,13 +502,13 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = 120
-			GF_nyto_new_fire_control_unit = 2
+			GF_nyto_new_fire_control_unit = 10
 			GF_nyto_collapse_liquid = 60
 		}
 		upkeep = {
 			alloys = 0.75
-			GF_nyto_new_fire_control_unit = 0.1
-			GF_nyto_collapse_liquid = 0.1
+			GF_nyto_new_fire_control_unit = 1
+			GF_nyto_collapse_liquid = 1
 		}
 		upkeep = {
 			energy = 1
@@ -561,13 +562,13 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = 120
-			GF_nyto_new_fire_control_unit = 1
+			GF_nyto_new_fire_control_unit = 5
 			GF_nyto_collapse_liquid = 40
 		}
 		upkeep = {
 			alloys = 0.5
-			GF_nyto_new_fire_control_unit = 0.05
-			GF_nyto_collapse_liquid = 0.1
+			GF_nyto_new_fire_control_unit = 0.25
+			GF_nyto_collapse_liquid = 0.5
 		}
 	}
 	ai_weight = {
@@ -713,7 +714,6 @@ weapon_component_template = {
 	projectile_gfx = "GF_large_torpedo_03"
 	tags = {
 		weapon_type_explosive
-		weapon_type_fireworks
 	}
 	ai_tags = {
 		weapon_role_anti_armor
@@ -738,7 +738,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = 120
-			GF_nyto_new_fire_control_unit = 0.5
+			GF_nyto_new_fire_control_unit = 2.5
 			GF_nyto_collapse_liquid = 10
 		}
 		upkeep = {
@@ -762,16 +762,12 @@ weapon_component_template = {
 	prerequisites = {
 		"tech_GF_nyto_G"
 	}
-	ship_modifier = {
-		custom_tooltip = "GF_Nyto_missile_g_weapon1_modif"
-	}
 	point_defence_targets = { "missile" "strike_craft" }
 	component_set = "GF_Nyto_g_weapon2"
 	projectile_gfx = "GF_large_torpedo_03"
 	tags = {
 		weapon_type_explosive
 		weapon_type_point_defense
-		weapon_type_fireworks
 	}
 	ai_tags = {
 		weapon_role_point_defense
@@ -805,6 +801,7 @@ weapon_component_template = {
 	ai_weight = {
 		weight = 50
 	}
+	size_damage_factor = 1
 }
 
 
@@ -843,7 +840,7 @@ weapon_component_template = {
 	missile_shield = 20
 	missile_evasion = 0.4
 	missile_retarget_range = 0
-	size_damage_factor = 2.26
+	size_damage_factor = 3.26
 }
 
 

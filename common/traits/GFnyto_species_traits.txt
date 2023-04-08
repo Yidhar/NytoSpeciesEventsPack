@@ -39,7 +39,7 @@ trait_GF_nyto_ogas_agreement= {
 		always = no
 	}
 	species_possible_merge_remove = {
-		owner = {
+		from = {
 			has_ascension_perk = ap_GF_nyto_noussphere
 		}
 		
@@ -109,6 +109,11 @@ trait_GF_nyto_noussphere = {
 	}
 	species_potential_add = {
 		always = no
+	}
+	species_possible_merge_add = {
+		from ={
+			has_ascension_perk = ap_GF_nyto_noussphere
+		}
 	}
 	modifier = {
 		planet_jobs_produces_mult = 0.15

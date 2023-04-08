@@ -16,6 +16,7 @@ decision_pc_GF_nyto_embers_gloomy_project = {
 			alloys = 1000
 		}
 	}
+
 	potential = {
 		is_planet_class = pc_GF_nyto_embers_gloomy
 		habitable_structure = no
@@ -110,7 +111,7 @@ decision_GFnyto_planetary_defense = {
 			has_modifier = GFnyto_planetary_defense_ready
 		}
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 		}
 		habitable_structure = no
 		exists = owner
@@ -152,7 +153,7 @@ decision_GFnyto_planetary_defense = {
 # 	}
 # 	potential = {
 # 		owner = {
-# 			has_authority = auth_GF_paradeus
+# 			is_nyto_country =yes
 # 			NOT = {
 # 				has_civic = civic_GF_nyto_Vengeance_Crusade
 # 			}
@@ -223,7 +224,7 @@ decision_GFnyto_boom = {
 	icon = decision_GFnyto_boom
 	potential = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 		}
 		solar_system = {
 			has_megastructure = GFnyto_megastructure_collapse_reactor_restored
@@ -247,7 +248,7 @@ decision_GFnyto_boom = {
 					fire_on_action = {
 						on_action = on_ship_destroyed_perp
 						scopes = {
-							This = root.owner
+							#This = root.owner
 							from = this.onwer
 							fromfrom = solar_system.starbase
 							FromFromFrom =this
@@ -273,7 +274,7 @@ decision_GFnyto_yaosai = {
 	icon = decision_GFnyto_planetary_defense
 	potential = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 		}
 		OR = {
 			NOT = {
@@ -407,7 +408,7 @@ decision_GFnyto_autopops = {
 		}
 	}
 	potential = {
-		owner = { has_authority = auth_GF_paradeus }
+		owner = { is_nyto_country =yes }
 		NOT = { has_planet_flag =gfnyto_select_thi_planet }
 	}
 	effect = { 
@@ -438,7 +439,7 @@ decision_GFnyto_autopops_2 ={
 		}
 	}
 	potential = {
-		owner = { has_authority = auth_GF_paradeus }
+		owner = { is_nyto_country =yes }
 		exists = event_target:GFnyto_select_planet
 		num_pops < 100
 	}
@@ -458,9 +459,9 @@ decision_GFnyto_Emergency_pollution_control = {
 	sound = event_administrative_work
 	icon = decision_pc_GF_nyto_embers_gloomy_project
 	potential = {
-		onwer ={
+		owner ={
 			has_technology = tech_climate_restoration
-		}	
+		}
 	}
 	allow = {
 		check_variable = {

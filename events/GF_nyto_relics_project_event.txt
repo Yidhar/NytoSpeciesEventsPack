@@ -10,10 +10,7 @@ planet_event = {
 	is_triggered_only = yes
 	immediate = {
 		solar_system.space_owner = {
-			change_variable = {
-				which = GFnyto_heritage_department_build_count
-				value = 1
-			}
+			set_country_flag = GFnyto_heritage_department_build
 		}
 	}
 	option = {

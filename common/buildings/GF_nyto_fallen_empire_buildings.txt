@@ -6,7 +6,7 @@ building_GFnyto_affluence_center = {
 	potential = {
 		owner = {
 			OR = {
-				has_authority = auth_GF_paradeus
+				is_nyto_country =yes
 				has_country_flag = has_nyto_technology
 			}		
 		}
@@ -63,7 +63,7 @@ building_GFnyto_class_4_singularity = {
 	can_demolish = yes
 	potential = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 		}
 	}
 	category = resource
@@ -122,7 +122,7 @@ building_GFnyto_nano_forge = {
 	can_demolish = yes
 	potential = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 		}
 	}
 	base_cap_amount = 1
@@ -170,7 +170,7 @@ building_GFnyto_fe_dome = {
 	can_build = yes
 	potential = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 		}
 		is_capital = yes
 	}
@@ -241,7 +241,7 @@ building_GFnyto_fe_stronghold = {
 	can_build = yes
 	potential = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 		}
 	}
 	category = army

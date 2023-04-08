@@ -1,0 +1,9 @@
+entropy ={
+    use_for_ai_budget = no
+    generate_mult_modifiers = {
+        produces
+        upkeep
+    }
+    parent = country
+    modifier_category = ship #it applies to the planet
+}

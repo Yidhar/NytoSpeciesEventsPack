@@ -401,7 +401,8 @@ utility_component_template = {
 		"tech_GFnyto_power_lv2"
 	}
 	component_set = "power_core"
-	size_restriction = {  GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship GFnyto_mobile_city }
+	size_restriction = {  GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship GFnyto_mobile_city
+		GFnyto_stions_fortress }
 	#	upgrades_to = "BATTLESHIP_DARK_MATTER_REACTOR"
 	class_restriction = {
 		shipclass_military
@@ -427,9 +428,22 @@ utility_component_template = {
 	icon_frame = 1
 	power = 100000
 	resources = {
-		category = ship_components
+		category = entropy
 		cost = {
-			GF_nyto_collapse_liquid = 2000
+			GF_nyto_collapse_liquid = -200
+			energy = -100
+			minerals = -100
+			alloys = -100
+			consumer_goods = -100
+			food = -100
+		}
+		produces = {
+			GF_nyto_collapse_liquid = 200
+			energy = 100
+			minerals = 100
+			alloys = 100
+			consumer_goods = 100
+			food = 100
 		}
 	}
 	prerequisites = {

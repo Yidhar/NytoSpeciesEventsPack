@@ -5,7 +5,7 @@ GFnyto_training_key = {
 		has_technology = tech_GF_nyto_algorithm
 	}
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 		has_technology = tech_GF_nyto_algorithm
 	}
 	effect = {
@@ -29,7 +29,7 @@ GFnyto_training_key = {
 # 		always = yes
 # 	}
 # 	potential = {
-# 		has_authority = auth_GF_paradeus
+# 		is_nyto_country =yes
 # 	}
 # 	effect = {
 # 		# owner = {
@@ -82,12 +82,12 @@ GF_nyto_auto_habitat = {
 		OR = {
 			AND = {
 				is_ai = no
-				has_authority = auth_GF_paradeus
+				is_nyto_country =yes
 				has_technology = tech_habitat_1
 			}
 			AND = {
 				is_ai = yes
-				has_authority = auth_GF_paradeus
+				is_nyto_country =yes
 				has_technology = tech_habitat_1
 				num_owned_planets < 50 	
 			}

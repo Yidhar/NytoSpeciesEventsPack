@@ -12,7 +12,7 @@
 # 	condition = {has_technology = "tech_climate_restoration"}	
 # 	potential = {
 # #		owner = {  
-# #			has_authority = auth_GF_paradeus 
+# #			is_nyto_country =yes 
 # #			has_ascension_perk = ap_GF_nyto_conquer_hell
 # #		}
 # 		always = no

@@ -18,7 +18,7 @@ tech_GFnyto_war_theory_a1 = {
 			desc = "4支海军陆战队从舰队出发登陆至目标行星。"
 		}
 	}
-	potential = {has_authority = auth_GF_paradeus}		
+	potential = {is_nyto_country =yes}		
 	ai_weight = {weight = 5}
 }
 #后发制人
@@ -34,7 +34,7 @@ tech_GFnyto_war_theory_a2 = {
 	modifier = {
 		ship_base_speed_mult = 1
 	}
-	potential = {has_authority = auth_GF_paradeus}		
+	potential = {is_nyto_country =yes}		
 	ai_weight = {weight = 5}
 }
 #现代闪电战
@@ -50,7 +50,7 @@ tech_GFnyto_war_theory_a3 = {
 	modifier = {
 		ship_ftl_jumpdrive_range_mult=1
 	}
-	potential = {has_authority = auth_GF_paradeus}		
+	potential = {is_nyto_country =yes}		
 	ai_weight = {weight = 5}
 }
 ###优势射程
@@ -67,7 +67,7 @@ tech_GFnyto_war_theory_b1 = {
 	modifier = {
 		ship_weapon_range_mult = 0.3
 	}
-	potential = {has_authority = auth_GF_paradeus}		
+	potential = {is_nyto_country =yes}		
 	ai_weight = {weight = 5}
 }
 #前沿重火力
@@ -83,7 +83,7 @@ tech_GFnyto_war_theory_b2 = {
 	modifier = {
 		ship_weapon_damage = 0.3
 	}
-	potential = {has_authority = auth_GF_paradeus}		
+	potential = {is_nyto_country =yes}		
 	ai_weight = {weight = 5}
 }
 #威慑行动
@@ -99,7 +99,7 @@ tech_GFnyto_war_theory_b3 = {
 	modifier = {
 		ship_fire_rate_mult = 0.5
 	}
-	potential = {has_authority = auth_GF_paradeus}		
+	potential = {is_nyto_country =yes}		
 	ai_weight = {weight = 5}
 }
 ###决战兵器
@@ -122,7 +122,7 @@ tech_GFnyto_war_theory_c1 = {
 			desc = "移动城市可以安装20个X槽位的武器,代价是不能安装资源生产类部件。"
 		}
 	}
-	potential = {has_authority = auth_GF_paradeus}		
+	potential = {is_nyto_country =yes}		
 	ai_weight = {weight = 5}
 }
 #强袭突破
@@ -138,7 +138,7 @@ tech_GFnyto_war_theory_c2 = {
 	modifier = {
 		ship_shield_mult = 1
 	}
-	potential = {has_authority = auth_GF_paradeus}		
+	potential = {is_nyto_country =yes}		
 	ai_weight = {weight = 5}
 }
 #集中计划
@@ -154,7 +154,7 @@ tech_GFnyto_war_theory_c3 = {
 	modifier = {
 		ship_hull_mult = 1
 	}
-	potential = {has_authority = auth_GF_paradeus}		
+	potential = {is_nyto_country =yes}		
 	ai_weight = {weight = 5}
 }
 ###舰海突击
@@ -177,25 +177,25 @@ tech_GFnyto_war_theory_c3 = {
 # 			desc = "护卫舰可以安装1个X槽位的武器。"
 # 		}
 # 	}
-# 	potential = {has_authority = auth_GF_paradeus}		
+# 	potential = {is_nyto_country =yes}		
 # 	ai_weight = {weight = 5}
 # }
 #优先突破
-tech_GFnyto_war_theory_d2 = {
-	icon = tech_GFnyto_war_theory_d2
-	cost = 30000
-	area = society
-	tier = 3
-	is_rare = no
-	category = { military_theory }	
-	prerequisites = { "tech_GFnyto_war_theory_d1" }
-	weight = 5
-	modifier = {
-		country_command_limit_mult = 1
-	}
-	potential = {has_authority = auth_GF_paradeus}		
-	ai_weight = {weight = 5}
-}
+#tech_GFnyto_war_theory_d2 = {
+#	icon = tech_GFnyto_war_theory_d2
+#	cost = 30000
+#	area = society
+#	tier = 3
+#	is_rare = no
+#	category = { military_theory }
+#	prerequisites = { "tech_GFnyto_war_theory_d1" }
+#	weight = 5
+#	modifier = {
+#		country_command_limit_mult = 1
+#	}
+#	potential = {is_nyto_country =yes}
+#	ai_weight = {weight = 5}
+#}
 #持久攻势
 tech_GFnyto_war_theory_d3 = {
 	icon = tech_GFnyto_war_theory_d3
@@ -209,7 +209,7 @@ tech_GFnyto_war_theory_d3 = {
 	modifier = {
 		ship_hull_regen_add_perc = 1
 	}
-	potential = {has_authority = auth_GF_paradeus}		
+	potential = {is_nyto_country =yes}		
 	ai_weight = {weight = 5}
 }
 ###海军
@@ -227,7 +227,7 @@ tech_GFnyto_war_theory_e1 = {
 		ships_upkeep_mult = -0.5
 		country_naval_cap_mult = 1
 	}
-	potential = {has_authority = auth_GF_paradeus}		
+	potential = {is_nyto_country =yes}		
 	ai_weight = {weight = 5}
 }
 #联合突袭行动
@@ -249,7 +249,7 @@ tech_GFnyto_war_theory_e2 = {
 			desc = "使目标行星人口、岗位维护费大大增加。"
 		}
 	}
-	potential = {has_authority = auth_GF_paradeus}		
+	potential = {is_nyto_country =yes}		
 	ai_weight = {weight = 5}
 }
 #航母战斗群
@@ -272,6 +272,6 @@ tech_GFnyto_war_theory_e3 = {
 			desc = "泰坦核心区段和泰坦舰尾区段可以安装h槽位的武器,而且浮游炮只能安装在泰坦。"
 		}
 	}
-	potential = {has_authority = auth_GF_paradeus}		
+	potential = {is_nyto_country =yes}		
 	ai_weight = {weight = 5}
 }

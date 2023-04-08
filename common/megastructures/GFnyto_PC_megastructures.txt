@@ -410,7 +410,7 @@ GFnyto_habitat_01 ={
 	entity_offset = { x = -7 y = -7 }
 	potential = {
 		owner = {
-			has_authority = auth_GF_paradeus
+			is_nyto_country =yes
 		}
 	}
 	placement_rules = {
@@ -471,7 +471,7 @@ GFnyto_habitat_01 ={
 	resources = {
 		category = megastructures_habitat
 		cost = {
-			alloys = 5000
+			alloys = 15000
 		}
 	}
 	on_build_complete = {
@@ -533,7 +533,7 @@ GFnyto_habitat_02 ={
 	on_build_complete = {
 		if = {
 			limit = {
-				owner = { 	NOT = { has_authority = auth_GF_paradeus } }
+				owner = { 	NOT = { is_nyto_country =yes } }
 			}
 			spawn_planet = {
 				class = "pc_habitat"
@@ -854,7 +854,7 @@ GFnyto_habitat_02 ={
 			}
 		}
 		if = {
-			limit = { owner = { NOT = { has_authority = auth_GF_paradeus } } }
+			limit = { owner = { NOT = { is_nyto_country =yes } } }
 			remove_megastructure = fromfrom		
 		}		
 	}

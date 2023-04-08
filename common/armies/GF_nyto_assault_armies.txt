@@ -15,7 +15,7 @@ GF_nyto_machine_assault_2 = {
 		cost = {minerals = 200}
 		upkeep = {energy = 2}
 	}
-	potential = {owner = {has_authority = auth_GF_paradeus}}	
+	potential = {owner = {is_nyto_country =yes}}	
 	prerequisites = { "tech_GF_nyto_adaptive_combat_algorithms" }
 }
 #巨型战体
@@ -35,7 +35,7 @@ GF_nyto_machine_assault_3 = {
 		cost = {minerals = 300}
 		upkeep = {energy = 3}
 	}
-	potential = {owner = {has_authority = auth_GF_paradeus}}
+	potential = {owner = {is_nyto_country =yes}}
 	prerequisites = { "tech_GF_nyto_biomechanics" }
 }
 #白骑士
@@ -55,7 +55,7 @@ GF_nyto_white_knight= {
 		cost = {minerals = 200}
 		upkeep = {energy = 1}
 	}
-	potential = {owner = {has_authority = auth_GF_paradeus}}
+	potential = {owner = {is_nyto_country =yes}}
 }
 GF_nyto_white_knight2= {
 	damage = 3.0
@@ -70,7 +70,7 @@ GF_nyto_white_knight2= {
 	spawn_chance = {
 		factor = 1
 	}
-	potential = {owner = {has_authority = auth_GF_paradeus has_civic = civic_GF_nyto_special_operations_command  }}
+	potential = {owner = {is_nyto_country =yes has_civic = civic_GF_nyto_special_operations_command  }}
 }
 
 #战争修女
@@ -89,7 +89,7 @@ GF_nyto_war_nuns= {
 		cost = {minerals = 200}
 		upkeep = {energy = 2}
 	}
-	potential = {owner = {has_authority = auth_GF_paradeus}}
+	potential = {owner = {is_nyto_country =yes}}
 	prerequisites = { "tech_GF_nyto_war_nuns" }
 }
 #受洗者
@@ -114,7 +114,7 @@ GF_nyto_eild_army= {
 			GF_nyto_collapse_liquid=0.1
 		}
 	}
-	potential = {owner = {has_authority = auth_GF_paradeus}}
+	potential = {owner = {is_nyto_country =yes}}
 	prerequisites = { "tech_GF_nyto_EILD_brain_wave" }
 }
 #装甲列车
@@ -142,7 +142,7 @@ GF_nyto_armor_train= {
 		}
 	}
 	potential = {
-		owner = {has_authority = auth_GF_paradeus}
+		owner = {is_nyto_country =yes}
 		planet = {has_building = building_GFnyto_transportation_hub}
 	}
 }

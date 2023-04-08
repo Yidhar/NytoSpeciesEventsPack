@@ -9,7 +9,7 @@ tech_GF_nyto_marine_corps = {
 	prerequisites = { "tech_GF_nyto_Inverse_collapse_2" }
 	weight = 0
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 		has_ascension_perk = ap_GF_nyto_resurrection
 		always = no
 	}	
@@ -27,7 +27,7 @@ tech_GF_nyto_collapse_stability_bomb = {
 	weight = 80
 	modifier = {planet_jobs_GF_nyto_collapse_liquid_produces_mult = 1}
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}		
 	ai_weight = {weight = 100}
 }

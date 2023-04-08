@@ -9,7 +9,7 @@ tech_GF_nyto_robomodding_points_1= {
 	prerequisites = { "tech_GF_nyto_EILD_brain_wave" }
 	weight = 5
 	modifier = {NYTO_species_trait_points_add = 2 EILD_species_trait_points_add = 2 }
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {is_nyto_country =yes}
 	ai_weight = {weight = 2}
 }
 #升级2
@@ -23,7 +23,7 @@ tech_GF_nyto_robomodding_points_2 = {
 	prerequisites = { "tech_GF_nyto_robomodding_points_1" }
 	weight = 5
 	modifier = {NYTO_species_trait_points_add = 2 EILD_species_trait_points_add = 2 }
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {is_nyto_country =yes}
 	ai_weight = {weight = 2}
 }
 #移动城市LV1
@@ -36,7 +36,7 @@ tech_GF_nyto_mobile_city_1= {
 	prerequisites = { "tech_mega_engineering" }
 	weight = 5
 	modifier = {}
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {is_nyto_country =yes}
 	ai_weight = {weight = 2}
 }
 #算法工程
@@ -46,7 +46,7 @@ tech_GF_nyto_algorithm ={
 	category = { biology }
 	tier = 3
 	weight = 999
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {is_nyto_country =yes}
 	ai_weight = {weight = 2}
 	prerequisites = {
 		tech_exotic_gases
@@ -59,7 +59,7 @@ tech_GFnyto_framework ={
 	category = { voidcraft }
 	tier = 3
 	weight = 999
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {is_nyto_country =yes}
 	ai_weight = {weight = 2}
 	prerequisites = {
 		tech_rare_crystals
@@ -73,7 +73,7 @@ tech_GFnyto_framework2={
 	category = { voidcraft }
 	tier = 3
 	weight = 50
-	potential = {has_authority = auth_GF_paradeus}
+	potential = {is_nyto_country =yes}
 	ai_weight = {weight = 2}
 	prerequisites = {
 		tech_GFnyto_framework
@@ -88,7 +88,7 @@ tech_GFnyto_tansuo={
 	tier = 4
 	weight = 50
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	ai_weight = {weight = 2}
 	prerequisites = {
@@ -110,7 +110,7 @@ tech_GFnyto_tansuo2={
 	tier = 5
 	weight = 50
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	ai_weight = {weight = 2}
 	prerequisites = {
@@ -128,7 +128,7 @@ tech_GFnyto_star_tasuo={
 	tier = 5
 	weight = 50
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	ai_weight = {weight = 200}
 	prerequisites = {
@@ -152,7 +152,7 @@ tech_template_GFnyto_Command_ship ={
 		weight = 50
 	}
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	prerequisites = {
 		tech_template_GFnyto_cv_batellship
@@ -171,7 +171,7 @@ tech_template_GFnyto_cv_batellship ={
 		weight = 50
 	}
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	prerequisites = {
 		tech_titans
@@ -190,7 +190,7 @@ tech_template_stions_fortress ={
 		weight = 50
 	}
 	potential = {
-		has_authority = auth_GF_paradeus
+		is_nyto_country =yes
 	}
 	prerequisites = {
 		tech_mega_engineering
@@ -204,7 +204,7 @@ tech_template_GF_nyto_orbit_stions ={
 	tier = 5
 	weight = 20
 	ai_weight = { weight = 50 	}
-	potential = { has_authority = auth_GF_paradeus 	}
+	potential = { is_nyto_country =yes 	}
 	prerequisites = { tech_habitat_1 }	
 	modifier = {
 		custom_tooltip = "tech_template_GF_nyto_orbit_stions_desc"
