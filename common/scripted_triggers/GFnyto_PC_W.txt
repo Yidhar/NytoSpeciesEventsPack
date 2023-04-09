@@ -44,7 +44,7 @@ is_cg_country ={
 }
 
 is_nyto_country ={
-	or = {
+	OR = {
 		has_country_flag = has_nyto_technology
 		has_authority = auth_GF_paradeus
 	}

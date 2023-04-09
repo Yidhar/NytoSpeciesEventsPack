@@ -249,7 +249,7 @@ decision_GFnyto_boom = {
 						on_action = on_ship_destroyed_perp
 						scopes = {
 							#This = root.owner
-							from = this.onwer
+							from = this.owner
 							fromfrom = solar_system.starbase
 							FromFromFrom =this
 						}
@@ -328,73 +328,73 @@ decision_GFnyto_EILD_hunting = {
 	}
 }
 
-#停止人口组装
-decision_GFnyto_enact_population_control = {
-	owned_planets_only = yes
-	sound = event_administrative_work
-	icon = decision_politics
-
-	resources = {
-		category = decisions
-		cost = {
-			unity = 250
-		}
-	}
-
-	potential = {
-		owner = {
-			NOT = { has_policy_flag = population_controls_not_allowed }
-			is_regular_empire = yes
-		}
-		NOT = { has_modifier = planet_population_control }
-	}
-
-	effect = {
-		add_modifier = { modifier = "planet_population_control" days = -1 }
-		IF = {
-			limit = {
-				has_modifier = planet_food_boost
-			}
-			remove_modifier = planet_food_boost
-		}
-	}
-
-	ai_weight = {
-		weight = 0
-		modifier = { # don't enable if you have free housing and no city districts left to build
-			factor = 0
-			OR = {
-				free_housing > 0
-				num_free_districts = {
-					type = any
-					value > 0
-				}
-				has_building_construction = yes #Added since they're probably building housing
-			}
-		}
-	}
-}
-#恢复人口组装
-decision_GFnyto_end_population_control ={
-	owned_planets_only = yes
-	sound = event_administrative_work
-	icon = decision_politics
-
-	resources = {
-		category = decisions
-	}
-
-	potential = {
-		has_modifier = planet_population_control
-	}
-
-	effect = {
-		remove_modifier = "planet_population_control"
-	}
-	ai_weight = {
-		weight = 0
-	}
-}
+##停止人口组装
+#decision_GFnyto_enact_population_control = {
+#	owned_planets_only = yes
+#	sound = event_administrative_work
+#	icon = decision_politics
+#
+#	resources = {
+#		category = decisions
+#		cost = {
+#			unity = 250
+#		}
+#	}
+#
+#	potential = {
+#		owner = {
+#			NOT = { has_policy_flag = population_controls_not_allowed }
+#			is_regular_empire = yes
+#		}
+#		NOT = { has_modifier = planet_population_control }
+#	}
+#
+#	effect = {
+#		add_modifier = { modifier = "planet_population_control" days = -1 }
+#		IF = {
+#			limit = {
+#				has_modifier = planet_food_boost
+#			}
+#			remove_modifier = planet_food_boost
+#		}
+#	}
+#
+#	ai_weight = {
+#		weight = 0
+#		modifier = { # don't enable if you have free housing and no city districts left to build
+#			factor = 0
+#			OR = {
+#				free_housing > 0
+#				num_free_districts = {
+#					type = any
+#					value > 0
+#				}
+#				has_building_construction = yes #Added since they're probably building housing
+#			}
+#		}
+#	}
+#}
+##恢复人口组装
+#decision_GFnyto_end_population_control ={
+#	owned_planets_only = yes
+#	sound = event_administrative_work
+#	icon = decision_politics
+#
+#	resources = {
+#		category = decisions
+#	}
+#
+#	potential = {
+#		has_modifier = planet_population_control
+#	}
+#
+#	effect = {
+#		remove_modifier = "planet_population_control"
+#	}
+#	ai_weight = {
+#		weight = 0
+#	}
+#}
 
 #定向人口迁徙 接收
 decision_GFnyto_autopops = {
@@ -461,12 +461,16 @@ decision_GFnyto_Emergency_pollution_control = {
 	potential = {
 		owner ={
 			has_technology = tech_climate_restoration
+			is_nyto_country = yes
 		}
 	}
 	allow = {
-		check_variable = {
-			which = GFnyto_plante_wrlv
-			value > 700
+		hidden_trigger = {
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value > 700
+			}
+			custom_tooltip = "污染度不小于700"
 		}
 	}
 	resources = {
@@ -488,9 +492,12 @@ decision_GFnyto_Emergency_pollution_control = {
 		}
 	}
 	effect = {
-		set_variable = {
-			which = GFnyto_plante_wrlv
-			value = 50
+		hidden_effect = {
+			set_variable = {
+				which = GFnyto_plante_wrlv
+				value = 50
+			}
+			custom_tooltip = "将污染度清理至50"
 		}
 	}
 }
