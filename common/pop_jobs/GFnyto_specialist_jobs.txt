@@ -266,7 +266,7 @@ GFnyto_algorithm = {
 		is_being_assimilated = no
 	}
 	possible = {
-		is_species_class = nyto
+		is_same_species_class = this
 	}
 	resources = {
 		category = buffer
@@ -345,7 +345,7 @@ GFnyto_framework = {
 		}
 	}
 	possible = {
-		is_species_class = nyto
+		is_same_species_class = this
 	}
 	weight = {
 		weight = 5

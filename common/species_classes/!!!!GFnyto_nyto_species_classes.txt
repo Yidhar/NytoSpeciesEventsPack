@@ -33,8 +33,6 @@ nyto= {
 	}
 	modifier = {
 		planet_pop_assembly_add = 3
-		pop_assembly_speed = 2
-		
 	}
 	trait = "trait_GF_nyto_ogas_agreement"
 }

@@ -561,10 +561,6 @@ country_event = {
 			limit = {
 				any_owned_planet = {
 					has_building = building_GFnyto_Elids
-					num_assigned_jobs = {
-						job = GFnyto_collapse_changer
-						value > 0
-					}
 				}
 			}
 			country_event = {
@@ -669,7 +665,7 @@ country_event = {
 			which = kill_pops_Epiphyllum
 			value = 10
 		}
-		round_variable_to_closes= {
+		round_variable_to_closest= {
 			which = kill_pops_Epiphyllum
 			value = 0.1
 		}
@@ -717,10 +713,7 @@ country_event = {
 			which = kill_pops_Epiphyllum
 			value = 10
 		}
-		round_variable_to_closes= {
-			which = kill_pops_Epiphyllum
-			value = 0.1
-		}
+		round_variable_to_closest = { which = kill_pops_Epiphyllum value = 0.1 }
 		hidden_effect ={
 			remove_modifier = GF_nyto_kill_tanhua
 		}

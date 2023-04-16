@@ -28,6 +28,7 @@ strike_craft_component_template = {
 	#伤害
 	cooldown = 1.5	#冷却
 	range = 230	#射程,指舰载机的本身射程
+	engagement_range = 400
 	accuracy = 1
 	health = 75	#舰载机本身的结构血量
 	armor = 75	#装甲
@@ -846,6 +847,7 @@ weapon_component_template = {
 
 #H 刻托级舰载无人机 
 strike_craft_component_template = {
+	weapon_type = instant
 	size = large
 	key = "GF_Nyto_h_weapon1"
 	entity = "bomber_entity"
@@ -874,6 +876,8 @@ strike_craft_component_template = {
 	#伤害
 	cooldown = 2	#冷却
 	range = 20	#射程,指舰载机的本身射程
+	engagement_range = 160
+	attack_range = 140
 	accuracy = 1
 	health = 200	#舰载机本身的结构血量
 	armor = 100	#装甲
@@ -942,6 +946,7 @@ strike_craft_component_template = {
 	#伤害
 	cooldown = 1	#冷却
 	range = 40	#射程,指舰载机的本身射程
+	engagement_range = 220
 	accuracy = 1
 	health = 200	#舰载机本身的结构血量
 	armor = 100	#装甲
@@ -1367,6 +1372,17 @@ weapon_component_template = {
 		weight = 0
 	}
 	prio_projectile = yes
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 90
+			GF_nyto_collapse_liquid = 20
+		}
+		upkeep = {
+			alloys = 0.9
+			GF_nyto_collapse_liquid = 0.0
+		}
+	}
 }
 weapon_component_template = {
 	key = GF_nyto_star_laser_m
@@ -1402,6 +1418,17 @@ weapon_component_template = {
 		weight = 0
 	}
 	prio_projectile = yes
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 180
+			GF_nyto_collapse_liquid = 40
+		}
+		upkeep = {
+			alloys = 1.8
+			GF_nyto_collapse_liquid = 0.4
+		}
+	}
 }
 weapon_component_template = {
 	key = GF_nyto_star_laser_l
@@ -1435,6 +1462,17 @@ weapon_component_template = {
 	firing_arc = 1
 	ai_weight = {
 		weight = 0
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 300
+			GF_nyto_collapse_liquid = 60
+		}
+		upkeep = {
+			alloys = 3
+			GF_nyto_collapse_liquid = 0.6
+		}
 	}
 	prio_projectile = yes
 }

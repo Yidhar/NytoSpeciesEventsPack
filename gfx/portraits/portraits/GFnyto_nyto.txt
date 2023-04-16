@@ -271,29 +271,21 @@ leader = { #scientists, generals, admirals, governor
 					}
 			}		
 
-}
-#leader scope
-ruler = {
-	add = {
-	portraits = {
-		GFnyto_nyto_basic    		
-		GFnyto_nyto_lsomer_basic
-		GFnyto_nyto_nimogen  
-		GFnyto_nyto_silver
-		GFnyto_nyto_deadline     	
-		GFnyto_nyto_Isomer_white   
-		GFnyto_nyto_Isomer_shadow
-		GFnyto_nyto_Tie
+		}
+		#leader scope
+		ruler = {
+			add = {
+			portraits = {
+				GFnyto_nyto_basic
+				GFnyto_nyto_lsomer_basic
+				GFnyto_nyto_nimogen
+				GFnyto_nyto_silver
+				GFnyto_nyto_deadline
+				GFnyto_nyto_Isomer_white
+				GFnyto_nyto_Isomer_shadow
+				GFnyto_nyto_Tie
+				}
+			}
 		}
 	}
-}
-upgrader = {
-	add = {
-		portraits = {
-			GFnyto_nyto_basic    		
-			GFnyto_nyto_lsomer_basic
-		}
-	}
-}
-}
 }
