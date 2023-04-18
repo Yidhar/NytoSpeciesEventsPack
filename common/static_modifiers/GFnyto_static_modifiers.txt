@@ -272,7 +272,7 @@ GF_nyto_kill_tanhua ={
 }
 #
 GF_nyto_static_pop ={
-	pop_growth_speed = -99999
+	pop_growth_speed = -999999
 	planet_pop_assembly_add = 1
 	hide_from_country_list = yes
 }

@@ -137,10 +137,9 @@ GF_cg_food_expenditure_decisions = {
 	weight = {
 		weight = 0.1
 	}
-
-	static_min = {
+	desired_min = {
 		base = 10
-	}	
+	}
 }
 #电
 GF_cg_energy_expenditure_decisions = {
@@ -183,7 +182,7 @@ GF_cg_holylight_crystal_expenditure_decisions = {
 		weight = 0.5
 	}
 
-	static_min = {
+	desired_min = {
 		base = 100
 	}	
 }
@@ -201,7 +200,7 @@ GF_cg_sr_beauty_expenditure_decisions = {
 		weight = 0.2
 	}
 
-	static_min = {
+	desired_min = {
 		base = 100
 	}	
 }
