@@ -59,6 +59,7 @@ strike_craft_component_template = {
 	ai_weight = {
 		weight = 50
 	}
+
 }
 
 #瓦解射线
@@ -1362,10 +1363,10 @@ weapon_component_template = {
 		max = 600
 	}
 	windup = {
-		min = 250
-		max = 350
+		min = 0
+		max = 15
 	}
-	total_fire_time = 15
+	total_fire_time = 700
 	range = 120
 	firing_arc = 1
 	ai_weight = {
@@ -1408,10 +1409,10 @@ weapon_component_template = {
 		max = 1100
 	}
 	windup = {
-		min = 250
-		max = 350
+		min = 0
+		max = 15
 	}
-	total_fire_time = 15
+	total_fire_time = 800
 	range = 220
 	firing_arc = 1
 	ai_weight = {
@@ -1454,10 +1455,10 @@ weapon_component_template = {
 		max = 2000
 	}
 	windup = {
-		min = 250
-		max = 350
+		min = 0
+		max = 15
 	}
-	total_fire_time = 15
+	total_fire_time = 900
 	range = 400
 	firing_arc = 1
 	ai_weight = {

@@ -72,12 +72,8 @@ GFnyto_mobile_city = {
 			}
 		}
 	}
-	possible_country = {
-		check_variable = {
-			which = GFnyto_mobile_city_num
-			value <= 3
-		}
-		custom_tooltip = check_GFnyto_mobile_city_num
+	ship_modifier = {
+		ship_weapon_damage = -9999
 	}
 	combat_disengage_chance = 10
 	num_target_locators = 21

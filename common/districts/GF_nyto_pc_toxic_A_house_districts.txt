@@ -9,12 +9,6 @@ district_GF_nyto_pc_toxic_house = {
 		has_planet_flag = GFnyto_Spring_wakes_up
 	}
 	exempt_from_ai_planet_specialization = yes
-	conversion_ratio = 1
-	convert_to = {
-		district_city
-		district_nexus
-		district_hive
-	}
 	resources = {
 		category = planet_districts
 		cost = {
@@ -28,6 +22,9 @@ district_GF_nyto_pc_toxic_house = {
 	conversion_ratio = 0.5
 	convert_to = {
 		district_GF_nyto_pc_toxic_underground_shelters
+		district_city
+		district_nexus
+		district_hive
 	}
 	planet_modifier = {
 		planet_housing_add = 30
@@ -88,7 +85,7 @@ district_GF_nyto_pc_toxic_energy = {
 					}
 				}
 			}
-			energy = 60
+			energy = 50
 			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_phase_technician|districts|district_GF_nyto_pc_toxic_energy|rss|energy|category|specialist|rss_category|planet_technician|
 		}
 		produces = {
@@ -115,9 +112,10 @@ district_GF_nyto_pc_toxic_energy = {
 				}
 			}
 			GF_nyto_collapse_liquid = 25
-			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_phase_technician|districts|district_GF_nyto_pc_toxic_energy|rss|energy|category|specialist|rss_category|planet_technician|
+			consumer_goods = 10
+			GF_nyto_training_key = 0.1
+			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_phase_technician|districts|district_GF_nyto_pc_toxic_energy|rss|energy|category|specialist|rss_category|planet_technician|modifier|planet_jobs_upkeep_mult|wrlv|GFnyto_plante_wrlv|
 		}
-
 	}
 	triggered_desc = {
 		trigger = {
@@ -265,6 +263,23 @@ district_GF_nyto_pc_toxic_alloy = {
 		}
 		text = "GF_nyto_null_planet_type"
 	}
+	triggered_desc = {
+		trigger = {
+			planet ={
+				colony_type = col_GF_nyto_pc_toxic_energy_plural }
+			}
+		text = "district_GF_nyto_pc_toxic_alloy_2"
+	}
+	triggered_desc = {
+		trigger = {
+			planet ={
+				not = {
+					colony_type = col_GF_nyto_pc_toxic_energy_plural
+				}
+			}
+		}
+		text = "district_GF_nyto_pc_toxic_alloy_desc1"
+	}
 	resources = {
 		category = planet_districts
 		cost = {
@@ -279,7 +294,7 @@ district_GF_nyto_pc_toxic_alloy = {
 						which = GFnyto_plante_wrlv
 						value < 700
 					}
-					is_homeworld = yes
+					is_capital = yes
 				}
 			}
 			alloys = 5
@@ -302,10 +317,10 @@ district_GF_nyto_pc_toxic_alloy = {
 					colony_type = col_GF_nyto_general_planet
 				}
 			}
-			alloys = 3
-			minerals = 6
-			consumer_goods = 3
-			food = 6
+			alloys = 4
+			minerals = 4
+			consumer_goods = 4
+			food = 4
 			exotic_gases = 0.3
 			rare_crystals = 0.3
 			volatile_motes = 0.3
@@ -323,8 +338,8 @@ district_GF_nyto_pc_toxic_alloy = {
 					colony_type = col_GF_nyto_pc_toxic_alloy_plural
 				}
 			}
-			alloys = 10
-			minerals = 10
+			alloys = 20
+			minerals = 20
 			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_collapse_particle_rar|districts|district_GF_nyto_pc_toxic_alloy|rss|minerals|category|worker|rss_category|planet_metallurgists|
 		}
 		#民用工业
@@ -339,10 +354,10 @@ district_GF_nyto_pc_toxic_alloy = {
 				}
 			}
 			food = 20
-			consumer_goods = 10
+			consumer_goods = 20
 			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_collapse_particle_rar|districts|district_GF_nyto_pc_toxic_alloy|rss|food|category|worker|rss_category|planet_metallurgists|
 		}
-		#消费品
+		#稀有
 		produces = {
 			trigger = {
 				planet = {
@@ -377,21 +392,9 @@ district_GF_nyto_pc_toxic_alloy = {
 					}
 				}
 			}
-			GF_nyto_collapse_liquid = 10
-			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_collapse_particle_rar|districts|district_GF_nyto_pc_toxic_alloy|rss|alloys|category|worker|rss_category|planet_metallurgists|
-		}
-		#污染维护
-		upkeep = {
-			trigger = {
-				planet = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 700
-					}
-				}
-			}
-			energy = 1
-			multiplier = planet.GFnyto_plante_wrlv	
+			GF_nyto_collapse_liquid = 20
+			GF_nyto_training_key = 0.1
+			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_collapse_particle_rar|districts|district_GF_nyto_pc_toxic_alloy|rss|alloys|category|worker|rss_category|planet_metallurgists|modifier|planet_jobs_upkeep_mult|wrlv|GFnyto_plante_wrlv|
 		}
 		#高科
 		produces = {
@@ -418,10 +421,10 @@ district_GF_nyto_pc_toxic_alloy = {
 					colony_type = col_GF_nyto_pc_toxic_energy_plural
 				}
 			}
-			alloys = 60
-			energy = 60
-			GF_nyto_training_key = 2
-			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_framework|districts|district_GF_nyto_pc_toxic_alloy|category|specialist|rss_category|planet_jobs_productive|
+			alloys = 30
+			energy = 30
+			GF_nyto_training_key = 5
+			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_framework|districts|district_GF_nyto_pc_toxic_alloy|category|specialist|rss_category|planet_jobs_productive|modifier|planet_jobs_upkeep_mult|wrlv|GFnyto_plante_wrlv|
 		}
 	}
 	planet_modifier = {
@@ -494,7 +497,8 @@ district_GF_nyto_pc_toxic_leisure = {
 			energy = 10
 			minerals = 5
 			alloys = 1
-			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_collapse_particle_zip|districts|district_GF_nyto_pc_toxic_leisure|rss|GF_nyto_collapse_liquid|category|worker|rss_category|planet_researchers|
+			GF_nyto_training_key = 0.1
+			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_collapse_particle_zip|districts|district_GF_nyto_pc_toxic_leisure|rss|GF_nyto_collapse_liquid|category|worker|rss_category|planet_researchers|modifier|planet_jobs_upkeep_mult|
 		}
 	}
 	planet_modifier = {
@@ -540,6 +544,22 @@ district_GF_nyto_pc_toxic_science = {
 		}
 		text = "GF_nyto_plante_build_off"
 	}
+	triggered_desc = {
+		trigger = {
+			planet ={
+				colony_type = col_GF_nyto_pc_toxic_energy_plural
+			}
+		}
+		text = "district_GF_nyto_pc_toxic_science_2"
+	}
+	triggered_desc = {
+		trigger = {
+			planet ={
+				not = { colony_type = col_GF_nyto_pc_toxic_energy_plural }
+			}
+		}
+		text = "district_GF_nyto_pc_toxic_science_desc1"
+	}
 	resources = {
 		category = planet_districts
 		cost = {
@@ -565,10 +585,14 @@ district_GF_nyto_pc_toxic_science = {
 						which = GFnyto_plante_wrlv
 						value < 700
 					}
+					not = {
+						colony_type = col_GF_nyto_pc_toxic_energy_plural
+					}
 				}
 			}
 			GF_nyto_collapse_liquid = 10
-			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_collapse_particle_researcher|districts|district_GF_nyto_pc_toxic_science|researchers0|researchers|researchers1|physics_research|researchers2|society_research|researchers3|engineering_research|category|worker|rss_category|planet_metallurgists|
+			consumer_goods = 10
+			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_collapse_particle_researcher|districts|district_GF_nyto_pc_toxic_science|researchers0|researchers|researchers1|physics_research|researchers2|society_research|researchers3|engineering_research|category|worker|rss_category|planet_metallurgists|modifier|planet_jobs_upkeep_mult|
 		}
 		produces = {
 			trigger = {
@@ -577,18 +601,21 @@ district_GF_nyto_pc_toxic_science = {
 						which = GFnyto_plante_wrlv
 						value < 700
 					}
+					not = {
+						colony_type = col_GF_nyto_pc_toxic_energy_plural
+					}
 				}
 			}
-			physics_research = 25
-			society_research = 25
-			engineering_research = 25
+			physics_research = 20
+			society_research = 20
+			engineering_research = 20
 			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_collapse_particle_researcher|districts|district_GF_nyto_pc_toxic_science|researchers0|researchers|researchers1|physics_research|researchers2|society_research|researchers3|engineering_research|category|worker|rss_category|planet_metallurgists|
 
 		}
 		produces = {
 			trigger = {
-				OR = {
-					planet = {
+				planet = {
+					or = {
 						has_building = building_GFnyto_collapse_exploit_plant_2
 						has_building = building_GFnyto_algorithm
 					}
@@ -598,21 +625,49 @@ district_GF_nyto_pc_toxic_science = {
 						which = GFnyto_plante_wrlv
 						value < 700
 					}
+					not = {
+						colony_type = col_GF_nyto_pc_toxic_energy_plural
+					}
 				}
 			}
-			physics_research = 45
-			society_research = 45
-			engineering_research = 45
+			physics_research = 40
+			society_research = 40
+			engineering_research = 40
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					or = {
+						has_building = building_GFnyto_collapse_exploit_plant_2
+						has_building = building_GFnyto_algorithm
+					}
+				}
+				planet = {
+					check_variable = {
+						which = GFnyto_plante_wrlv
+						value < 700
+					}
+					not = {
+						colony_type = col_GF_nyto_pc_toxic_energy_plural
+					}
+				}
+			}
+			consumer_goods = 20
+			GF_nyto_training_key = 2
+			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_collapse_particle_researcher|districts|district_GF_nyto_pc_toxic_science|modifier|planet_jobs_upkeep_mult|
 		}
 		produces = {
 			trigger = {
 				planet = {
 					is_variable_set = GFnyto_plante_wrlv
+					not = {
+						colony_type = col_GF_nyto_pc_toxic_energy_plural
+					}
 				}
 			}
-			physics_research = 0.35
-			society_research = 0.35
-			engineering_research = 0.35
+			physics_research = 0.035
+			society_research = 0.035
+			engineering_research = 0.035
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 		#为高精尖复合体星球类型时生产训练密钥
@@ -622,9 +677,18 @@ district_GF_nyto_pc_toxic_science = {
 					colony_type = col_GF_nyto_pc_toxic_energy_plural
 				}
 			}
-			GF_nyto_training_key = 20
+			GF_nyto_training_key = 2
 			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_algorithm|districts|district_GF_nyto_pc_toxic_science|
 			
+		}
+		produces = {
+			trigger = {
+				planet = {
+					colony_type = col_GF_nyto_pc_toxic_energy_plural
+				}
+			}
+			GF_nyto_training_key = 0.5
+			mult = planet.trigger:has_planetary_ascension_tier
 		}
 		upkeep = {
 			trigger = {
@@ -632,9 +696,9 @@ district_GF_nyto_pc_toxic_science = {
 					colony_type = col_GF_nyto_pc_toxic_energy_plural
 				}
 			}
-			consumer_goods = 40			#5矿
-			rare_crystals = 20			#15
-			exotic_gases = 20			#15
+			consumer_goods = 10
+			rare_crystals = 1.5			#15
+			exotic_gases = 1.5	#15
 			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_algorithm|districts|district_GF_nyto_pc_toxic_science|
 		}
 	}

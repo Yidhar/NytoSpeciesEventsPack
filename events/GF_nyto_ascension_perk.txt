@@ -650,41 +650,41 @@ country_event = {
 #复制战败国科技
 #This = destroyed country
 #From = optional, destroyer (country)
-country_event = {
-	id = GFnyto_ascension_perk.130
-	is_triggered_only = yes
-	hide_window = yes
-	immediate = {
-		set_update_modifiers_batch = begin
-		this = {
-			save_global_event_target_as = Gfnyto_war_destroyed
-		}
-		from = {
-			save_global_event_target_as = Gfnyto_war_murderer
-		}
-		every_war = {
-			if = {
-				limit = {
-					using_war_goal = {
-						type = wg_GFnyto_assimilation
-						owner = event_target:Gfnyto_war_murderer
-					}
-				}
-				event_target:Gfnyto_war_murderer = {
-					copy_techs_from = {
-						target = event_target:Gfnyto_war_destroyed
-					}
-				}
-				event_target:Gfnyto_war_destroyed = {
-					copy_techs_from = {
-						target = event_target:Gfnyto_war_murderer
-					}
-				}
-			}
-		}
-		set_update_modifiers_batch = end
-	}
-}
+#country_event = {
+#	id = GFnyto_ascension_perk.130
+#	is_triggered_only = yes
+#	hide_window = yes
+#	immediate = {
+#		set_update_modifiers_batch = begin
+#		this = {
+#			save_global_event_target_as = Gfnyto_war_destroyed
+#		}
+#		from = {
+#			save_global_event_target_as = Gfnyto_war_murderer
+#		}
+#		every_war = {
+#			if = {
+#				limit = {
+#					using_war_goal = {
+#						type = wg_GFnyto_assimilation
+#						owner = event_target:Gfnyto_war_murderer
+#					}
+#				}
+#				event_target:Gfnyto_war_murderer = {
+#					copy_techs_from = {
+#						target = event_target:Gfnyto_war_destroyed
+#					}
+#				}
+#				event_target:Gfnyto_war_destroyed = {
+#					copy_techs_from = {
+#						target = event_target:Gfnyto_war_murderer
+#					}
+#				}
+#			}
+#		}
+#		set_update_modifiers_batch = end
+#	}
+#}
 
 #一飞替换特质
 country_event = {

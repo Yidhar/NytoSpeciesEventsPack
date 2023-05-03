@@ -36,7 +36,7 @@ civic_GF_nyoto_armor_train_desc:0 "人是没有安全感的生物,无论什么�
 mod_armies_energy_upkeep_mult:0 "陆军$energy$维护费用:"
 
  civic_Gf_nyto_tanhua_pluse:0 "昙花共生"
- civic_Gf_nyto_tanhua_pluse_desc:0 "妖艳的花朵在人们的身上肆意绽放\n昙花种植区将额外提供1$job_GFnyto_Epiphyllum_job$"
+ civic_Gf_nyto_tanhua_pluse_desc:0 "妖艳的花朵在人们的身上肆意绽放\n昙花种植区将额外提供1$job_GFnyto_Epiphyllum_job$\n每次花期时人们将会死亡并提供额外buff"
 
 civic_GF_nyto_reup:0 "高效回收"
 civic_GF_nyto_reup_desc:0 "我们必须利用好我们手头上的每一份资源,才有可能迎来曙光\n§R成功防御ELID入侵将获得额外资源§!"

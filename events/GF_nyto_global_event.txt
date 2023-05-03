@@ -766,6 +766,7 @@ planet_event = {
 				kill_pop = yes
 			}
 		}
+		
 	}
 
 }
@@ -816,7 +817,7 @@ country_event = {
 				}
 				random_list = {
 					50 ={
-						change_species = event_target:GFnyto_ELID_infected		
+						change_species = event_target:GFnyto_ELID_infected@root
 					}
 					50={
 						kill_pop = yes
@@ -955,7 +956,10 @@ country_event = {
 			#区划提供的污染度产出
 			if = {
 				limit = {
-					has_planet_flag = GFnyto_Spring_wakes_up
+					or = {
+						has_planet_flag = GFnyto_Spring_wakes_up
+						is_planet_class = pc_GFnytp_habitis
+					}
 				}
 				export_trigger_value_to_variable = {
 					trigger = num_districts
@@ -1297,41 +1301,41 @@ country_event = {
 }
 
 #限制造船数量
-ship_event = {
-	id = GFnyto_global.19
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		OR = {
-			is_ship_size = GFnyto_Command_ship
-			is_ship_size = GFnyto_mobile_city
-		}	
-	}
-	immediate = {
-		if = {
-			limit = {
-				is_ship_size = GFnyto_mobile_city
-			}
-			owner = {
-				change_variable = {
-					which = GFnyto_mobile_city_num
-					value = 1
-				}			
-			}
-		}
-		if = {
-			limit = {
-				is_ship_size = GFnyto_Command_ship
-			}
-			owner = {
-				change_variable = {
-					which = GFnyto_Command_ship_num
-					value = 1
-				}			
-			}
-		}
-	}
-}
+#ship_event = {
+#	id = GFnyto_global.19
+#	hide_window = yes
+#	is_triggered_only = yes
+#	trigger = {
+#		OR = {
+#			is_ship_size = GFnyto_Command_ship
+#			is_ship_size = GFnyto_mobile_city
+#		}
+#	}
+#	immediate = {
+#		if = {
+#			limit = {
+#				is_ship_size = GFnyto_mobile_city
+#			}
+#			owner = {
+#				change_variable = {
+#					which = GFnyto_mobile_city_num
+#					value = 1
+#				}
+#			}
+#		}
+#		if = {
+#			limit = {
+#				is_ship_size = GFnyto_Command_ship
+#			}
+#			owner = {
+#				change_variable = {
+#					which = GFnyto_Command_ship_num
+#					value = 1
+#				}
+#			}
+#		}
+#	}
+#}
 
 #借贷清算 开始
 country_event = {

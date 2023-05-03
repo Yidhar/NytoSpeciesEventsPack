@@ -460,10 +460,6 @@ building_GFnyto_heritage_department = {
 		owner = {
 			is_nyto_country =yes
 			has_country_flag = GFnyto_heritage_department_build
-			check_variable = {
-				which = GFnyto_heritage_department_build_count
-				value = 1
-			}
 		}
 		is_capital = yes
 	}

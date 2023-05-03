@@ -1,89 +1,89 @@
 namespace = GFnyto_war_theory
 # this = country
 #这又是什么事件
-country_event = {
-	id = GFnyto_war_theory.1
-	title = "GFnyto_war_theory.1.name"
-	desc = "GFnyto_war_theory.1.desc"
-	picture = GFX_GFnyto_war_theory
-	show_sound = event_alien_signal
-	hide_window = no
-	is_triggered_only = yes
-
-	trigger = {
-		has_authority = auth_GF_paradeus
-		owner = {
-			has_authority = auth_GF_paradeus
-		}
-	}
-	immediate = {}
-	option = {
-		name = "GFnyto_war_theory.1.a"
-		owner = {
-			if = {
-				limit = {NOT = {has_tech_option = tech_GFnyto_war_theory_a1}}
-				add_research_option = tech_GFnyto_war_theory_a1
-			}
-			add_tech_progress = {
-				tech = tech_GFnyto_war_theory_a1
-				progress = 0.10
-			}
-		}
-	}
-	option = {
-		name = "GFnyto_war_theory.1.b"
-		owner = {
-			if = {
-				limit = {NOT = {has_tech_option = tech_GFnyto_war_theory_b1}}
-				add_research_option = tech_GFnyto_war_theory_b1
-			}
-			add_tech_progress = {
-				tech = tech_GFnyto_war_theory_b1
-				progress = 0.10
-			}
-		}
-	}
-	option = {
-		name = "GFnyto_war_theory.1.c"
-		owner = {
-			if = {
-				limit = {NOT = {has_tech_option = tech_GFnyto_war_theory_c1}}
-				add_research_option = tech_GFnyto_war_theory_c1
-			}
-			add_tech_progress = {
-				tech = tech_GFnyto_war_theory_c1
-				progress = 0.10
-			}
-		}
-	}
-	option = {
-		name = "GFnyto_war_theory.1.d"
-		owner = {
-			if = {
-				limit = {NOT = {has_tech_option = tech_GFnyto_war_theory_d1}}
-				add_research_option = tech_GFnyto_war_theory_d1
-			}
-			add_tech_progress = {
-				tech = tech_GFnyto_war_theory_d1
-				progress = 0.10
-			}
-		}
-
-	}
-	option = {
-		name = "GFnyto_war_theory.1.e"
-		owner = {
-			if = {
-				limit = {NOT = {has_tech_option = tech_GFnyto_war_theory_e1}}
-				add_research_option = tech_GFnyto_war_theory_e1
-			}
-			add_tech_progress = {
-				tech = tech_GFnyto_war_theory_e1
-				progress = 0.10
-			}
-		}
-	}
-}
+#country_event = {
+#	id = GFnyto_war_theory.1
+#	title = "GFnyto_war_theory.1.name"
+#	desc = "GFnyto_war_theory.1.desc"
+#	picture = GFX_GFnyto_war_theory
+#	show_sound = event_alien_signal
+#	hide_window = no
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		has_authority = auth_GF_paradeus
+#		owner = {
+#			has_authority = auth_GF_paradeus
+#		}
+#	}
+#	immediate = {}
+#	option = {
+#		name = "GFnyto_war_theory.1.a"
+#		owner = {
+#			if = {
+#				limit = {NOT = {has_tech_option = tech_GFnyto_war_theory_a1}}
+#				add_research_option = tech_GFnyto_war_theory_a1
+#			}
+#			add_tech_progress = {
+#				tech = tech_GFnyto_war_theory_a1
+#				progress = 0.10
+#			}
+#		}
+#	}
+#	option = {
+#		name = "GFnyto_war_theory.1.b"
+#		owner = {
+#			if = {
+#				limit = {NOT = {has_tech_option = tech_GFnyto_war_theory_b1}}
+#				add_research_option = tech_GFnyto_war_theory_b1
+#			}
+#			add_tech_progress = {
+#				tech = tech_GFnyto_war_theory_b1
+#				progress = 0.10
+#			}
+#		}
+#	}
+#	option = {
+#		name = "GFnyto_war_theory.1.c"
+#		owner = {
+#			if = {
+#				limit = {NOT = {has_tech_option = tech_GFnyto_war_theory_c1}}
+#				add_research_option = tech_GFnyto_war_theory_c1
+#			}
+#			add_tech_progress = {
+#				tech = tech_GFnyto_war_theory_c1
+#				progress = 0.10
+#			}
+#		}
+#	}
+#	option = {
+#		name = "GFnyto_war_theory.1.d"
+#		owner = {
+#			if = {
+#				limit = {NOT = {has_tech_option = tech_GFnyto_war_theory_d1}}
+#				add_research_option = tech_GFnyto_war_theory_d1
+#			}
+#			add_tech_progress = {
+#				tech = tech_GFnyto_war_theory_d1
+#				progress = 0.10
+#			}
+#		}
+#
+#	}
+#	option = {
+#		name = "GFnyto_war_theory.1.e"
+#		owner = {
+#			if = {
+#				limit = {NOT = {has_tech_option = tech_GFnyto_war_theory_e1}}
+#				add_research_option = tech_GFnyto_war_theory_e1
+#			}
+#			add_tech_progress = {
+#				tech = tech_GFnyto_war_theory_e1
+#				progress = 0.10
+#			}
+#		}
+#	}
+#}
 planet_event = {
 	id = GFnyto_war_theory.2
 	hide_window = yes
@@ -166,14 +166,14 @@ planet_event = {
 			while = {
 				count = planet_has_pops
 				random_owned_pop = {
-					change_species = event_target:GFnyto_ELID_infected
+					change_species = event_target:GFnyto_ELID_infected@root
 				}
 			}
 		}
 		if = { limit = { from = {  has_civic = civic_GF_nyto_Vengeance_Crusade  } }
 		#planet
 			every_owned_pop = {
-				change_species = event_target:GFnyto_ELID_infected
+				change_species = event_target:GFnyto_ELID_infected@root
 				random = {
 					chance = 10
 					planet = {

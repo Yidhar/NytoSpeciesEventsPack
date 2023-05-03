@@ -18,40 +18,40 @@ gfnyto_collapse_liquid= {
 	ai_weight = {weight = 999}
 }
 
-gfnyto_marine_corps= {
-	trigger = {
-		owner = {
-			is_nyto_country =yes
-			has_technology = tech_GFnyto_war_theory_a1
-		}
-	}
-	default = yes
-	stop_when_armies_dead = no
-	abduct_pops = no
-	planet_damage = 0
-	army_damage = 0
-	kill_pop_chance = {base = 0}
-	min_pops_to_kill_pop = 0
-	ai_weight = {weight = 5}
-}
-#贸易封锁
-gfnyto_trade_blockade= {
-	trigger = {
-		owner = {
-			is_nyto_country =yes
-			OR = {
-				has_technology = tech_GFnyto_war_theory_e2
-				has_civic = civic_GF_nyto_heart_of_suffering
-			}			
-		}
-	}
-
-	default = yes
-	stop_when_armies_dead = no
-	abduct_pops = no
-	planet_damage = 0
-	army_damage = 0
-	kill_pop_chance = {base = 0}
-	min_pops_to_kill_pop = 0
-	ai_weight = {weight = 5}
-}
+#gfnyto_marine_corps= {
+#	trigger = {
+#		owner = {
+#			is_nyto_country =yes
+#			has_technology = tech_GFnyto_war_theory_a1
+#		}
+#	}
+#	default = yes
+#	stop_when_armies_dead = no
+#	abduct_pops = no
+#	planet_damage = 0
+#	army_damage = 0
+#	kill_pop_chance = {base = 0}
+#	min_pops_to_kill_pop = 0
+#	ai_weight = {weight = 5}
+#}
+##贸易封锁
+#gfnyto_trade_blockade= {
+#	trigger = {
+#		owner = {
+#			is_nyto_country =yes
+#			OR = {
+#				has_technology = tech_GFnyto_war_theory_e2
+#				has_civic = civic_GF_nyto_heart_of_suffering
+#			}
+#		}
+#	}
+#
+#	default = yes
+#	stop_when_armies_dead = no
+#	abduct_pops = no
+#	planet_damage = 0
+#	army_damage = 0
+#	kill_pop_chance = {base = 0}
+#	min_pops_to_kill_pop = 0
+#	ai_weight = {weight = 5}
+#}

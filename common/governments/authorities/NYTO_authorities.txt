@@ -23,10 +23,10 @@ auth_GF_paradeus = {
 	random_weight = {modifier = {factor = 0}}
 	country_modifier = {
 		pop_demotion_time_mult = -1
-		planet_stability_add = 50
-		planet_max_buildings_add = 4
-		num_tech_alternatives_add = 3
-		planet_pops_consumer_goods_upkeep_mult = -0.2	
+		envoys_add = 2
+		intel_decryption_add = 2
+		SPY_NETWORK_DAILY_VALUE_ADD = 0.5
+		planet_stability_add = 20
 	}
 	
 	traits = {

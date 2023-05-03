@@ -10,11 +10,11 @@ GFnyto_L_cruiser_argo_puppis:0 "船尾座"
 GFnyto_X_corvette:0 "装甲猎人"
 
 GFnyto_mobile_city:0 "移动城市"
-GFnyto_mobile_city_desc:0 "一座可以移动的巨型城市。既可以装载生产模块,也可以进行战斗改装。"
+GFnyto_mobile_city_desc:0 "巨型的移动工业中枢，是工业舰队中的旗舰级，庞大的舰体可以搭载无数工业设施，但代价是几乎没有武装能力"
 GFnyto_mobile_city_1:0 "中型工业区段"
 GFnyto_mobile_city_2:0 "大型工业中枢"
 GFnyto_mobile_city_3:0 "居住混合区段"
-GFnyto_mobile_city_4:0 "防御区段"
+
 
  GFnyto_mather_ship:0 "深空母舰"
  GFnyto_mather_ship_plural:0 "遗迹中的未知舰船"

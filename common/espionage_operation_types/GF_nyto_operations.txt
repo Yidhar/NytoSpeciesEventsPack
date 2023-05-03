@@ -10,14 +10,14 @@ operation_nyto_pop = {
 	resources = {
 		category = operations
 		cost = {
-			influence = 45
+			influence = 15
 		}
 		upkeep = {
 			energy = 10
 		}
 	}
 	stages = 3
-	spy_power_cost = 30
+	spy_power_cost = 20
 	potential = {
 		has_nemesis = yes
 
@@ -39,17 +39,17 @@ operation_nyto_pop = {
 		}
 	}
 	stage = {
-		difficulty = 5
+		difficulty = 3
 		icon = "GFX_espionage_chapter_icon_surveillance"
 		event = operation.1000 
 	}
 	stage = {
-		difficulty = 7
+		difficulty = 3
 		icon = "GFX_espionage_chapter_icon_surveillance"
 		event = operation.1001 
 	}
 	stage = {
-		difficulty = 9
+		difficulty = 6
 		icon = "GFX_espionage_chapter_icon_surveillance"
 		event = GF_nyto_operation.01
 	}
@@ -70,7 +70,7 @@ operation_nyto_pop2 = {
 	}
 	picture = GFX_evt_acquire_asset
 	desc = operation_nyto_pop2_desc
-	target = country
+	target = none
 	resources = {
 		category = operations
 		cost = {
@@ -97,18 +97,6 @@ operation_nyto_pop2 = {
 		custom_tooltip = {
 			is_running_espionage_operation = no
 			fail_text = operation_one_at_a_time
-		}
-	}
-	target_allow = {
-		is_country_type = default
-		any_owned_pop = {
-			has_pop_flag = operation_nyto_pop
-		}
-	}
-	target_potential = {
-		is_country_type = default
-		any_owned_pop = {
-			has_pop_flag = operation_nyto_pop
 		}
 	}
 	stage = {

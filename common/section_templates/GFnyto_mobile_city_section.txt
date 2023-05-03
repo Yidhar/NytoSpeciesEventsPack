@@ -367,65 +367,7 @@ ship_section_template = {
 	}
 }
 
-ship_section_template = {
-	key = "GFnyto_mobile_city_4"
-	ship_size = GFnyto_mobile_city
-	fits_on_slot = weapon
-	should_draw_components = yes
-	entity = homeship_entity_loctor_mesh_entity
-	icon = "GFX_ship_part_core_bow"
-	icon_frame = 1
-	component_slot = {
-		name = "L061"
-		template = invisible_missile_turret
-		locatorname = "L061"
-	}
-	component_slot = {
-		name = "L062"
-		template = invisible_missile_turret
-		locatorname = "L062"
-	}
-	component_slot = {
-		name = "L063"
-		template = invisible_missile_turret
-		locatorname = "L063"
-	}
-	component_slot = {
-		name = "L064"
-		template = invisible_missile_turret
-		locatorname = "L064"
-	}
-	component_slot = {
-		name = "L065"
-		template = invisible_missile_turret
-		locatorname = "L065"
-	}
-	component_slot = {
-		name = "L066"
-		template = invisible_missile_turret
-		locatorname = "L066"
-	}
-	component_slot = {
-		name = "L067"
-		template = invisible_missile_turret
-		locatorname = "L067"
-	}
-	component_slot = {
-		name = "L068"
-		template = invisible_missile_turret
-		locatorname = "L068"
-	}
-	component_slot = {
-		name = "L069"
-		template = invisible_missile_turret
-		locatorname = "L069"
-	}
-	large_utility_slots = 15
-	aux_utility_slots = 3
-	prerequisites = {
-		"tech_GF_nyto_mobile_city_1"
-	}
-}
+
 
 #母舰核心
 ship_section_template = {

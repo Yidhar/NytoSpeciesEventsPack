@@ -1,42 +1,42 @@
 ###机动偷家
 #战场救火队
-tech_GFnyto_war_theory_a1 = {
-	icon = tech_GFnyto_war_theory_a1
-	cost = 10000
-	area = society
-	tier = 1
-	is_rare = no
-	category = { military_theory }	
-	prerequisites = { "tech_GF_nyto_EILD_brain_wave" }
-	weight = 5
-	modifier = {
-		army_health = 1
-	}
-	prereqfor_desc = {
-		custom = {
-			title = "解锁轨道轰炸类型：两栖进攻"
-			desc = "4支海军陆战队从舰队出发登陆至目标行星。"
-		}
-	}
-	potential = {is_nyto_country =yes}		
-	ai_weight = {weight = 5}
-}
+#tech_GFnyto_war_theory_a1 = {
+#	icon = tech_GFnyto_war_theory_a1
+#	cost = 10000
+#	area = society
+#	tier = 1
+#	is_rare = no
+#	category = { military_theory }
+#	prerequisites = { "tech_GF_nyto_EILD_brain_wave" }
+#	weight = 5
+#	modifier = {
+#		army_health = 1
+#	}
+#	prereqfor_desc = {
+#		custom = {
+#			title = "解锁轨道轰炸类型：两栖进攻"
+#			desc = "4支海军陆战队从舰队出发登陆至目标行星。"
+#		}
+#	}
+#	potential = {is_nyto_country =yes}
+#	ai_weight = {weight = 5}
+#}
 #后发制人
-tech_GFnyto_war_theory_a2 = {
-	icon = tech_GFnyto_war_theory_a2
-	cost = 30000
-	area = society
-	tier = 3
-	is_rare = no
-	category = { military_theory }	
-	prerequisites = { "tech_GFnyto_war_theory_a1" }
-	weight = 5
-	modifier = {
-		ship_base_speed_mult = 1
-	}
-	potential = {is_nyto_country =yes}		
-	ai_weight = {weight = 5}
-}
+#tech_GFnyto_war_theory_a2 = {
+#	icon = tech_GFnyto_war_theory_a2
+#	cost = 30000
+#	area = society
+#	tier = 3
+#	is_rare = no
+#	category = { military_theory }
+#	prerequisites = { "tech_GFnyto_war_theory_a1" }
+#	weight = 5
+#	modifier = {
+#		ship_base_speed_mult = 0.15
+#	}
+#	potential = {is_nyto_country =yes}
+#	ai_weight = {weight = 5}
+#}
 #现代闪电战
 tech_GFnyto_war_theory_a3 = {
 	icon = tech_GFnyto_war_theory_a3
@@ -48,7 +48,7 @@ tech_GFnyto_war_theory_a3 = {
 	prerequisites = { "tech_GF_nyto_Inverse_collapse_2" }
 	weight = 40
 	modifier = {
-		ship_ftl_jumpdrive_range_mult=1
+		ship_ftl_jumpdrive_range_mult=0.3
 	}
 	potential = {is_nyto_country =yes}		
 	ai_weight = {weight = 5}
@@ -81,7 +81,7 @@ tech_GFnyto_war_theory_b2 = {
 	prerequisites = { "tech_GFnyto_war_theory_b1" }
 	weight = 75
 	modifier = {
-		ship_weapon_damage = 0.3
+		ship_weapon_damage = 0.1
 	}
 	potential = {is_nyto_country =yes}		
 	ai_weight = {weight = 5}
@@ -91,13 +91,13 @@ tech_GFnyto_war_theory_b3 = {
 	icon = tech_GFnyto_war_theory_b3
 	cost = 50000
 	area = society
-	tier = 60
+	tier = 3
 	is_rare = yes
 	category = { military_theory }	
 	prerequisites = { "tech_GFnyto_war_theory_b2" }
 	weight = 5
 	modifier = {
-		ship_fire_rate_mult = 0.5
+		ship_fire_rate_mult = 0.05
 	}
 	potential = {is_nyto_country =yes}		
 	ai_weight = {weight = 5}
@@ -114,7 +114,7 @@ tech_GFnyto_war_theory_c1 = {
 	prerequisites = { "tech_GF_nyto_EILD_brain_wave" }
 	weight = 5
 	modifier = {
-		ship_armor_mult = 1
+		ship_speed_mult = 0.1
 	}
 	prereqfor_desc = {
 		custom = {
@@ -136,7 +136,7 @@ tech_GFnyto_war_theory_c2 = {
 	prerequisites = { "tech_GFnyto_war_theory_c1" }
 	weight = 5
 	modifier = {
-		ship_shield_mult = 1
+		ship_shield_hardening_add = 0.05
 	}
 	potential = {is_nyto_country =yes}		
 	ai_weight = {weight = 5}
@@ -152,7 +152,7 @@ tech_GFnyto_war_theory_c3 = {
 	prerequisites = { "tech_GFnyto_war_theory_c2" }
 	weight = 5
 	modifier = {
-		ship_hull_mult = 1
+		ship_hull_mult = 0.05
 	}
 	potential = {is_nyto_country =yes}		
 	ai_weight = {weight = 5}
@@ -214,22 +214,22 @@ tech_GFnyto_war_theory_d3 = {
 }
 ###海军
 #大作战舰队
-tech_GFnyto_war_theory_e1 = {
-	icon = tech_GFnyto_war_theory_e1
-	cost = 10000
-	area = society
-	tier = 1
-	is_rare = no
-	category = { military_theory }	
-	prerequisites = { "tech_GF_nyto_EILD_brain_wave" }
-	weight = 5
-	modifier = {
-		ships_upkeep_mult = -0.5
-		country_naval_cap_mult = 1
-	}
-	potential = {is_nyto_country =yes}		
-	ai_weight = {weight = 5}
-}
+#tech_GFnyto_war_theory_e1 = {
+#	icon = tech_GFnyto_war_theory_e1
+#	cost = 10000
+#	area = society
+#	tier = 1
+#	is_rare = no
+#	category = { military_theory }
+#	prerequisites = { "tech_GF_nyto_EILD_brain_wave" }
+#	weight = 5
+#	modifier = {
+#		ships_upkeep_mult = -0.5
+#		country_naval_cap_mult = 1
+#	}
+#	potential = {is_nyto_country =yes}
+#	ai_weight = {weight = 5}
+#}
 #联合突袭行动
 tech_GFnyto_war_theory_e2 = {
 	icon = tech_GFnyto_war_theory_e2

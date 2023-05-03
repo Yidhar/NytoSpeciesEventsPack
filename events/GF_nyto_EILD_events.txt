@@ -391,25 +391,25 @@ planet_event = {
 				trait = trait_nerve_stapled
 			}
 			effect = {
-				save_global_event_target_as = GFnyto_ELID_infected
+				save_global_event_target_as = GFnyto_ELID_infected@root.owner
 			}
 		}
 		create_pop = {
-			species = event_target:GFnyto_ELID_infected
+			species = event_target:GFnyto_ELID_infected@root.owner
 		}
 		create_pop = {
-			species = event_target:GFnyto_ELID_infected
+			species = event_target:GFnyto_ELID_infected@root.owner
 		}
 		create_pop = {
-			species = event_target:GFnyto_ELID_infected
+			species = event_target:GFnyto_ELID_infected@root.owner
 		}
 		create_pop = {
-			species = event_target:GFnyto_ELID_infected
+			species = event_target:GFnyto_ELID_infected@root.owner
 		}
 		create_pop = {
-			species = event_target:GFnyto_ELID_infected
+			species = event_target:GFnyto_ELID_infected@root.owner
 		}
-		event_target:GFnyto_ELID_infected = {
+		event_target:GFnyto_ELID_infected@root.owner = {
 			set_citizenship_type = {
 				type = citizenship_limited
 				country = root.owner
@@ -1112,41 +1112,29 @@ event = {
 					has_civic = civic_GF_nyto_reup
 				}
 				add_resource = {
-					minerals = 300
-					mult = fromfrom.GFnyto_Eild_level
-				}
-				add_resource = {
 					GF_nyto_collapse_liquid = 20
 					mult = fromfrom.GFnyto_Eild_level
 				}
 				add_resource = {
-					unity = 100
+					unity = 10
 					mult = fromfrom.GFnyto_Eild_level
 				}
 				add_resource = {
-					energy = 100
-					mult = fromfrom.GFnyto_Eild_level
-				}
-				add_resource = {
-					alloys = 20
+					alloys = 8
 					mult = fromfrom.GFnyto_Eild_level
 				}
 			}
 			else = {
 				add_resource = {
-					minerals = 100
-					mult = fromfrom.GFnyto_Eild_level
-				}
-				add_resource = {
 					GF_nyto_collapse_liquid = 20
 					mult = fromfrom.GFnyto_Eild_level
 				}
 				add_resource = {
-					unity = 50
+					unity = 10
 					mult = fromfrom.GFnyto_Eild_level
 				}
 				add_resource = {
-					alloys = 10
+					alloys = 2
 					mult = fromfrom.GFnyto_Eild_level
 				}
 			}
@@ -1458,33 +1446,29 @@ event = {
 					has_civic = civic_GF_nyto_reup
 				}
 				add_resource = {
-					minerals = 300
+					GF_nyto_collapse_liquid = 10
 					mult = fromfrom.GFnyto_Eild_level
 				}
 				add_resource = {
-					GF_nyto_collapse_liquid = 20
+					unity = 10
 					mult = fromfrom.GFnyto_Eild_level
 				}
 				add_resource = {
-					unity = 200
-					mult = fromfrom.GFnyto_Eild_level
-				}
-				add_resource = {
-					energy = 50
+					alloys = 4
 					mult = fromfrom.GFnyto_Eild_level
 				}
 			}
 			else = {
 				add_resource = {
-					minerals = 150
+					GF_nyto_collapse_liquid = 5
 					mult = fromfrom.GFnyto_Eild_level
 				}
 				add_resource = {
-					GF_nyto_collapse_liquid = 10
+					unity = 4
 					mult = fromfrom.GFnyto_Eild_level
 				}
 				add_resource = {
-					unity = 100
+					alloys = 2
 					mult = fromfrom.GFnyto_Eild_level
 				}
 			}

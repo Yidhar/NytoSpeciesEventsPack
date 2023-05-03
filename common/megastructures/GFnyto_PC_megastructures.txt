@@ -295,7 +295,7 @@ GFnyto_stions_fortress_base ={
 	}
 	construction_blocks_and_blocked_by = none
 	potential = {
-		has_technology = tech_gateway_construction
+		has_technology = tech_template_stions_fortress
 	}
 
 	possible = {

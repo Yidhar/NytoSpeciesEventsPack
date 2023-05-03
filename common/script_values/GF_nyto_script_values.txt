@@ -41,12 +41,13 @@ Gf_nyto_habitat_cost ={
 GF_nyto_drp_modifer ={
 	base = 0
 	complex_trigger_modifier = {
+		trigger_scope = planet
 		trigger = num_districts
 		parameters = {
 			type = $districts$
 		}
-		mode = mult
-		mult = 0.5
+		mode = add
+		mult = 0.1
 	}
 	[[rss]
 		add = modifier:planet_jobs_$rss$_produces_mult
@@ -73,7 +74,7 @@ GF_nyto_drp_modifer ={
 		add = modifier:planet_researchers_$researchers3$_produces_mult
 		add = modifier:planet_jobs_$researchers3$_produces_mult
 	]
-	add = planet.trigger:has_planetary_ascension_tier
+	add = modifier:planet_jobs_upkeep_mult
 	complex_trigger_modifier = {
 		trigger = count_owned_pop
 		parameters = {
@@ -82,8 +83,26 @@ GF_nyto_drp_modifer ={
 			}
 		}
 		mode = mult
-		mult = 1
+		mult = 0.15
 	}
+	[[modifier]
+	complex_trigger_modifier = {
+		trigger = check_modifier_value
+		parameters = {
+			modifier = $modifier$
+		}
+		mode = add
+		mult = -1
+	} ]
+	[[wrlv]
+	complex_trigger_modifier = {
+		trigger = check_variable
+		parameters = {
+			which = $wrlv$
+		}
+		mode = add
+		mult = 0.1
+	} ]
 }
 
 
