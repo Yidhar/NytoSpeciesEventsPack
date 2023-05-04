@@ -220,9 +220,6 @@ country_event = {
 			add_modifier = {
 				modifier = GFnyto_set_up_heritage_department
 			}
-			give_technology = {
-				tech = tech_GF_nyto_super_ai_o
-			}
 			random_owned_planet = {
 				planet_event = {
 					id = gfnytorelics.1
