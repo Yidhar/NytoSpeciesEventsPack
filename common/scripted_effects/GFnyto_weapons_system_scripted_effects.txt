@@ -177,52 +177,29 @@ GF_nyto_weapons_system ={
 			limit = { 
 				OR = {
 					has_component = GF_Nyto_m_weapon2
-					has_component = GF_Nyto_m_weapon2_dc 
 					has_component = GF_Nyto_s_weapon2
-					has_component = GF_Nyto_s_weapon2_dc 
 				}				
 			} #夜空引领者
 			fleet = { set_fleet_flag = GF_Nyto_m_weapon2_flag }
 		}#夜空引领者
 		if = {
-			limit = { 
-				OR = {
-					has_component = GF_Nyto_h_weapon2 
-					has_component = GF_Nyto_h_weapon2_dc
-				}				
+			limit = {
+				has_component = GF_Nyto_h_weapon2
 			} #戈耳工干扰无人机
 			fromfromfrom = { set_fleet_flag = GF_Nyto_h_weapon2_flag }
 		}#戈耳工干扰无人机
 		if = {
-			limit = { 
-				OR = {
-					has_component = GF_Nyto_p_weapon1 
-					has_component = GF_Nyto_p_weapon1_dc
-				}				
-			} #光影帷幕
+			limit = { has_component = GF_Nyto_p_weapon1 } #光影帷幕
 			set_ship_flag = GF_Nyto_p_weapon1_flag
 		}#光影帷幕
 		if = {
 			limit = { 
-				OR = {
-					has_component = GF_Nyto_p_weapon1 
-					has_component = GF_Nyto_p_weapon1_dc
-				}				
+				OR = { has_component = GF_Nyto_p_weapon1 }
 			} #花之锁
 			fromfromfrom = { set_fleet_flag = GF_Nyto_p_weapon1_flag }
 		}#花之锁
 		if = {
-			limit = { 
-				OR = {
-					AND = {
-						has_component = GF_Nyto_x_weapon2 has_component = GF_Nyto_l_weapon1  
-					}
-					AND = {
-						has_component = GF_Nyto_x_weapon2_dc has_component = GF_Nyto_l_weapon1_dc  
-					}
-				}
-				
-			} #灵蛇权杖&阿克索之皿
+			limit = { AND = { has_component = GF_Nyto_x_weapon2 has_component = GF_Nyto_l_weapon1 } } #灵蛇权杖&阿克索之皿
 			export_modifier_to_variable = { modifier = weapon_type_energy_weapon_fire_rate_mult variable = gf_nyto_fire_rate }
 			export_modifier_to_variable = { modifier = weapon_type_energy_weapon_damage_mult variable = gf_nyto_damg }
 			add_modifier = { modifier = gfnyto_x_weapon2_fire_rate_modifer multiplier = gf_nyto_fire_rate }
@@ -232,20 +209,14 @@ GF_nyto_weapons_system ={
 			clear_variable = gf_nyto_fire_rate
 		}#灵蛇权杖&阿克索之皿
 		if = {
-			limit = { 
-				OR = {
-					has_component = GF_Nyto_l_weapon2 
-					has_component = GF_Nyto_l_weapon2_dc
-				}				
+			limit = {
+				has_component = GF_Nyto_l_weapon2
 			} #圣歌风琴
 			set_ship_flag = GF_Nyto_l_weapon2_flag
 		}#圣歌风琴
 		if = {
 			limit = { 
-				OR = {
-					has_component = GF_Nyto_T_weapon2 
-					has_component = GF_Nyto_T_weapon2_dc
-				}
+				has_component = GF_Nyto_T_weapon2
 			}
 			set_ship_flag = GF_Nyto_T_weapon2_flag
 		}#终末辉光
@@ -254,8 +225,6 @@ GF_nyto_weapons_system ={
 				OR = {
 					has_component = GF_Nyto_missile_g_weapon1 
 					has_component = GF_Nyto_missile_g_weapon2
-					has_component = GF_Nyto_missile_g_weapon1_dc
-					has_component = GF_Nyto_missile_g_weapon2_dc
 				}			
 			}
 			export_modifier_to_variable = {
@@ -268,10 +237,7 @@ GF_nyto_weapons_system ={
 		}#导弹武器
 		if = {
 			limit = {
-				OR = {
 					has_component = GF_Nyto_T_weapon1
-					has_component = GF_Nyto_T_weapon1_dc
-				}			
 			}
 			fleet = {
 				set_fleet_flag = GF_Nyto_T_weapon1_flag
@@ -297,9 +263,6 @@ GF_nyto_weapons_system ={
 	 				has_component = GFnyto_force_shield_L_3
 	 				has_component = GFnyto_force_shield_M_3
 	 				has_component = GFnyto_force_shield_S_3
-	 				has_component = GFnyto_force_shield_L_3_dc
-	 				has_component = GFnyto_force_shield_M_3_dc
-	 				has_component = GFnyto_force_shield_S_3_dc
 	 			}
 	 		}
 	 		fromfromfrom = { NOT = { has_fleet_flag = GF_nyto_shield_lv3_flag } }
@@ -312,9 +275,6 @@ GF_nyto_weapons_system ={
 	 				has_component = GFnyto_force_shield_L_2
 	 				has_component = GFnyto_force_shield_M_2
 	 				has_component = GFnyto_force_shield_S_2
-	 				has_component = GFnyto_force_shield_L_2_dc
-	 				has_component = GFnyto_force_shield_M_2_dc
-	 				has_component = GFnyto_force_shield_S_2_dc
 	 			}
 	 		}
 	 		fromfromfrom = { NOT = { has_fleet_flag = GF_nyto_shield_lv2_flag } }
@@ -327,9 +287,6 @@ GF_nyto_weapons_system ={
 	 				has_component = GFnyto_force_shield_L_1
 	 				has_component = GFnyto_force_shield_M_1
 	 				has_component = GFnyto_force_shield_S_1
-	 				has_component = GFnyto_force_shield_L_1_dc
-	 				has_component = GFnyto_force_shield_M_1_dc
-	 				has_component = GFnyto_force_shield_S_1_dc
 	 			}
 	 		}
 	 		fromfromfrom = { NOT = { has_fleet_flag = GF_nyto_shield_lv2_flag } }
@@ -339,12 +296,7 @@ GF_nyto_weapons_system ={
 	random_controlled_ship = {
 		#配件
 		if = {
-			limit = {
-				OR = {
-					has_component = GF_Nyto_h_weapon1 
-					has_component = GF_Nyto_h_weapon1_dc
-				}
-			}
+			limit = { has_component = GF_Nyto_h_weapon1}
 			GF_nyto_in_system_weapon = yes 
 		}#刻托级舰载无人机
 		#舰船
@@ -383,21 +335,12 @@ GF_nyto_in_system_weapon = {
 	optimize_memory
 	#this = ship	
 	if = {
-		limit = {  
-			OR = {
-				has_component = GF_Nyto_h_weapon1
-				has_component = GF_Nyto_h_weapon1_dc
-			}
-		}
+		limit = { has_component = GF_Nyto_h_weapon1 }
 		solar_system = {
 			every_ship_in_system = {
 				limit = {
 					is_owned_by = prevprev.owner
-					OR = {
-						has_component = GF_Nyto_h_weapon1
-						has_component = GF_Nyto_h_weapon1_dc
-					}					
-				}
+					has_component = GF_Nyto_h_weapon1}
 				prevprev.fleet = {
 					change_variable = {
 						which = GF_nyto_h_weapon_num
