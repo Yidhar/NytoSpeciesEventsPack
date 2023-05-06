@@ -241,12 +241,6 @@ GF_nyto_T_weapon2_damgabuff = {
 # 	weapon_type_aoe_weapon_fire_rate_mult = 999999999999999999
 # }
 #双蛇仗
-GF_nyto_missle_1_buff ={
-	weapon_type_fireworks_weapon_fire_rate_mult = 999999999999999999
-}
-GF_nyto_missle_1_debuff ={
-	weapon_type_fireworks_weapon_fire_rate_mult = -1
-}
 #恐慌
 GF_nyto_end_years ={
 	ship_weapon_damage = -0.5

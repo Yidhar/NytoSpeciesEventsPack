@@ -1,23 +1,23 @@
 namespace = GFnyto_Griffin_cross_dimensional
-country_event = {
-	id = GFnyto_Griffin_cross_dimensional.1
-	title = "GFnyto_Griffin_cross_dimensional.1.name"
-	desc = "GFnyto_Griffin_cross_dimensional.1.desc"
-	picture = GFX_evt_nyto_ap
-	show_sound = event_engineered_evolution
-	hide_window = no
-	is_triggered_only = yes
-	immediate = {
-#		shift_ethic = "ethic_paradeus_antecedentnyto"
-#		country_add_ethic = "ethic_paradeus_antecedentnyto"
-		set_country_flag = GFnyto_ascension_perk_done
-	}
-	option = {
-		name = "GF_ascension_perk.1.a"
-#		shift_ethic = "ethic_paradeus_antecedentnyto"
-#		country_add_ethic = "ethic_paradeus_antecedentnyto"
-	}
-}
+#country_event = {
+#	id = GFnyto_Griffin_cross_dimensional.1
+#	title = "GFnyto_Griffin_cross_dimensional.1.name"
+#	desc = "GFnyto_Griffin_cross_dimensional.1.desc"
+#	picture = GFX_evt_nyto_ap
+#	show_sound = event_engineered_evolution
+#	hide_window = no
+#	is_triggered_only = yes
+#	immediate = {
+##		shift_ethic = "ethic_paradeus_antecedentnyto"
+##		country_add_ethic = "ethic_paradeus_antecedentnyto"
+#		set_country_flag = GFnyto_ascension_perk_done
+#	}
+#	option = {
+#		name = "GF_ascension_perk.1.a"
+##		shift_ethic = "ethic_paradeus_antecedentnyto"
+##		country_add_ethic = "ethic_paradeus_antecedentnyto"
+#	}
+#}
 country_event = {
 	id = GFnyto_ascension_perk.2
 	title = "GF_ascension_perk.2.name"
@@ -34,7 +34,6 @@ country_event = {
 		change_government = {
 			civics = {
 				civic = civic_GF_nyto_see_angel
-				civic = civic_GF_nyto_90wish
 			}
 		}
 		add_modifier = {modifier = GFnyto_crisis_see_angel}		
