@@ -4,19 +4,14 @@ country_event = {
 	id = GFnytostart.0
 	hide_window = yes
 	is_triggered_only = yes
-	trigger = {		
-		has_origin = origin_GF_nyto_the_last_light	
+	trigger = {
+		owner_main_species ={
+			is_species_class = nyto
+		}
 	}
 	immediate = {	
 		set_global_flag = has_NYTO_mod
-		#if = {
-		#	limit = {
-		#		is_ai = no
-		#	}
-		#	save_global_event_target_as = is_nyto_country
-		#}
 		set_built_species = owner_main_species
-		add_modifier = { modifier = GF_nyto_static_pop days = -1 }
 	}
 }
 
@@ -100,61 +95,6 @@ country_event = {
 				}
 			}
 		}
-		#every_system = {
-		#	limit = {
-		#		if = {
-		#			limit = {
-		#				prev = {
-		#					is_ai = no
-		#				}
-		#			}
-		#			distance = {
-		#				source = event_target:GFnyto_scope
-		#				max_jumps = 1
-		#			}
-		#		}
-		#		if = {
-		#			limit = {
-		#				prev = {
-		#					is_ai = yes
-		#				}
-		#			}
-		#			distance = {
-		#				source = event_target:GFnyto_scope
-		#				max_jumps = 3
-		#			}
-		#		}
-		#	}
-		#	random_system_planet = {
-		#		limit = {
-		#			OR = {
-		#				is_planet_class = pc_desert
-		#				is_planet_class = pc_arid
-		#				is_planet_class = pc_savannah
-		#				is_planet_class = pc_tundra
-		#				is_planet_class = pc_alpine
-		#				is_planet_class = pc_continental
-		#				is_planet_class = pc_tropical
-		#				is_planet_class = pc_ocean
-		#				is_planet_class = pc_arctic
-		#				is_planet_class = pc_barren
-		#			}
-		#		}
-		#		if = {
-		#			limit = {
-		#				prevprev = {
-		#					is_cg_country = yes
-		#				}
-		#			}
-		#			change_pc = pc_gaia
-		#		}
-		#		else = {
-		#			change_pc = pc_nuked
-		#		}
-		#		change_planet_size = 10
-		#		reroll_deposits = yes
-		#	}
-		#}
 		home_planet = {
 			planet_event = {
 				id = GFnytoeild.1
@@ -189,6 +129,8 @@ country_event = {
 			add_district = district_GF_nyto_pc_toxic_underground_shelters
 			add_district = district_GF_nyto_pc_toxic_underground_shelters
 			add_district = district_GF_nyto_pc_toxic_underground_shelters
+			add_district = district_GF_nyto_pc_toxic_underground_shelters
+			add_district = district_GF_nyto_pc_toxic_underground_industrial_area
 			add_district = district_GF_nyto_pc_toxic_underground_industrial_area
 			add_district = district_GF_nyto_pc_toxic_underground_research_institute
 			add_deposit = d_GFnyto_ancient_city_zone
@@ -219,9 +161,6 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = GFnyto_set_up_heritage_department
-			}
-			give_technology = {
-				tech = tech_GF_nyto_super_ai_o
 			}
 			random_owned_planet = {
 				planet_event = {
@@ -336,13 +275,13 @@ country_event = {
 					}
 					effect = {
 						set_species_homeworld = prev
-						save_global_event_target_as = GFnyto_ELID_infected@root
+						save_global_event_target_as = GFnyto_ELID_infected
 					}
 				}
 				while = {
 					count = 10
 					create_pop = {
-						species = event_target:GFnyto_ELID_infected@root
+						species = event_target:GFnyto_ELID_infected
 					}
 				}
 			}

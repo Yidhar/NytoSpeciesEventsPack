@@ -391,25 +391,25 @@ planet_event = {
 				trait = trait_nerve_stapled
 			}
 			effect = {
-				save_global_event_target_as = GFnyto_ELID_infected@root.owner
+				save_global_event_target_as = GFnyto_ELID_infected
 			}
 		}
 		create_pop = {
-			species = event_target:GFnyto_ELID_infected@root.owner
+			species = event_target:GFnyto_ELID_infected
 		}
 		create_pop = {
-			species = event_target:GFnyto_ELID_infected@root.owner
+			species = event_target:GFnyto_ELID_infected
 		}
 		create_pop = {
-			species = event_target:GFnyto_ELID_infected@root.owner
+			species = event_target:GFnyto_ELID_infected
 		}
 		create_pop = {
-			species = event_target:GFnyto_ELID_infected@root.owner
+			species = event_target:GFnyto_ELID_infected
 		}
 		create_pop = {
-			species = event_target:GFnyto_ELID_infected@root.owner
+			species = event_target:GFnyto_ELID_infected
 		}
-		event_target:GFnyto_ELID_infected@root.owner = {
+		event_target:GFnyto_ELID_infected = {
 			set_citizenship_type = {
 				type = citizenship_limited
 				country = root.owner

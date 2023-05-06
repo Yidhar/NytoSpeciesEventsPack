@@ -817,7 +817,7 @@ country_event = {
 				}
 				random_list = {
 					50 ={
-						change_species = event_target:GFnyto_ELID_infected@root
+						change_species = event_target:GFnyto_ELID_infected
 					}
 					50={
 						kill_pop = yes

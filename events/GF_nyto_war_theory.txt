@@ -126,7 +126,7 @@ planet_event = {
 						NOT = { is_planet_class = pc_ringworld_tech }
 					}
 					random = {
-						chance = 0.05
+						chance = 10
 						change_pc = pc_GF_nyto_devil_furnace
 						set_planet_flag = GFnyto_Spring_wakes_up
 					}								
@@ -154,26 +154,31 @@ planet_event = {
 		}
 	}
 	immediate = {
+		from ={
+			every_owned_species = {
+				limit = {
+					is_species_class = eild
+				}
+			}
+			save_event_target_as = eild_species
+		}
 		if = { limit = { from = { NOT = { has_civic = civic_GF_nyto_Vengeance_Crusade } } }
-			export_trigger_value_to_variable = {
-				trigger = num_pops
-				variable = planet_has_pops
-			}
-			multiply_variable = {
-				which = planet_has_pops
-				value = 0.5
-			}
-			while = {
-				count = planet_has_pops
-				random_owned_pop = {
-					change_species = event_target:GFnyto_ELID_infected@root
+			every_owned_pop = {
+				limit = {
+					not = {
+						is_species_class = nyto
+					}
+				}
+				random = {
+					chance = 50
+					change_species = event_target:eild_species
 				}
 			}
 		}
 		if = { limit = { from = {  has_civic = civic_GF_nyto_Vengeance_Crusade  } }
 		#planet
 			every_owned_pop = {
-				change_species = event_target:GFnyto_ELID_infected@root
+				change_species = event_target:eild_species
 				random = {
 					chance = 10
 					planet = {
