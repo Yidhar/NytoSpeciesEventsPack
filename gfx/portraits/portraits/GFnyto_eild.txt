@@ -9,9 +9,9 @@ portrait_groups = {
 			game_setup = {
 				add = {
 					portraits = { 	
-							GFnyto_EILD_big    
-							GFnyto_EILD_middle  
-							GFnyto_EILD_small  
+						GFnyto_EILD_big
+						GFnyto_EILD_middle
+						GFnyto_EILD_small
 					}
 				}
 			}		
@@ -38,54 +38,10 @@ pop = { #for a specific pop
 #leader scope
 leader = { #scientists, generals, admirals, governor
 		add = {
-			trigger = {leader_class = scientist}
-				portraits = {
-					GFnyto_EILD_big    
-					GFnyto_EILD_middle  
-					GFnyto_EILD_small 
-					}
-		}
-		add = {
-			trigger = {leader_class = general}
-				portraits = {
-					GFnyto_EILD_big    
-					GFnyto_EILD_middle  
-					GFnyto_EILD_small 
-					}
-		}
-		add = {
-			trigger = {leader_class = admiral}
-				portraits = {
-					GFnyto_EILD_big    
-					GFnyto_EILD_middle  
-					GFnyto_EILD_small 
-					}
-		}
-		add = {
-			trigger = {leader_class = governor}
-				portraits = {
-					GFnyto_EILD_big    
-					GFnyto_EILD_middle  
-					GFnyto_EILD_small 
-					}
-		}
-		add = {
-			trigger = {leader_class = ruler}
-				portraits = {
-					GFnyto_EILD_big    
-					GFnyto_EILD_middle  
-					GFnyto_EILD_small 
-					}
+			portraits = {
+				GFnyto_lmz
 			}
-		add = {
-			trigger = {leader_class = envoy}
-				portraits = {
-					GFnyto_EILD_big    
-					GFnyto_EILD_middle  
-					GFnyto_EILD_small 
-					}
-			}		
-
+		}
 }
 #leader scope
 ruler = {
@@ -94,15 +50,6 @@ ruler = {
 		GFnyto_EILD_big    
 		GFnyto_EILD_middle  
 		GFnyto_EILD_small 
-		}
-	}
-}
-upgrader = {
-	add = {
-		portraits = {
-			GFnyto_EILD_big    
-			GFnyto_EILD_middle  
-			GFnyto_EILD_small 
 		}
 	}
 }

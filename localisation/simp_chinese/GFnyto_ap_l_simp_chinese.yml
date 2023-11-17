@@ -1,13 +1,13 @@
 ﻿l_simp_chinese:
  ap_GF_nyto_noussphere:0 "§YNoussphere§!"
-ap_GF_nyto_noussphere_desc2:0 "Quod est inferius est sicut quod est superius, et quod est superius est sicut quod est inferius, ad perpetranda miracula rei unius."
- ap_GF_nyto_noussphere_desc:0 "Its force is above all force, for it vanquishes every subtile thing & penetrates every solid thing.\nSo was ye world created.\From this are & do come admirable adaptations whereof ye process is here in this."
+ap_GF_nyto_noussphere_desc2:0 "§TQuod est inferius est sicut quod est superius, et quod est superius est sicut quod est inferius, ad perpetranda miracula rei unius.§!\n§v时踏此明而去,时沿彼暗而来,不知此明与彼暗,究竟何者真何者幻。§!"
+ ap_GF_nyto_noussphere_desc:0 "§vIts force is above all force, for it vanquishes every subtile thing & penetrates every solid thing.\nSo was ye world created.\From this are & do come admirable adaptations whereof ye process is here in this.§!\n§T如今生命陷入迷狂,双眸紧闭,现实,思想交错难以自拔。舞姿生风却难以决定方向,所追之境或明或暗,难辨真实§!"
 ap_GF_nyto_resurrection:0 "§Y起死回骸§!"
-ap_GF_nyto_resurrection_desc:0 "§Y号角吹响,死者将以完整之身站立起来。已腐烂的东西完好如初,已死亡的东西将变成不朽。§!"
+ap_GF_nyto_resurrection_desc:0 "§v谁知行路之人是人是影,谁知归途之人是人是鬼。§!\n§V来时知是人来梦里,去时知是人去梦外。§!\n§T不知其中生者为人为械,死者为人为梦。§!\n开启深入锡安事件链"
 ap_GF_nyto_conquer_hell:0 "§R征服地狱§!"
-ap_GF_nyto_conquer_hell_desc:0 "§R我见证到了比战争更为灵异的可怕事件,现在所追随的线索可能会直接引导我走向这一切的源头,我必须继续努力才行。§!"
-ap_GF_nyto_resurrection_text:0 "允许将死寂星球环境改造§Y余烬黯然星球§!,允许建造舰船§Y移动城市§!,解锁轨道轰炸姿态§Y海军陆战队登陆§!,以及解锁更多内容( ‘-ωก̀ )说实话我也忘了具体还有那些东西被加上了此飞升限定。"
-ap_GF_nyto_conquer_hell_text:0 "§R警告：此飞升具有挑战性!你需要持续不断地灭亡其他国家,否则你会输掉游戏！详细信息请看飞升后创建的事件链。§!\n\n允许将死寂星球环境改造§R恶魔熔炉星球§!,允许建造舰船§Y移动城市§!,解锁轨道轰炸姿态§Y坍缩液轨道抛射§!,配合§R化身天灾§!飞升游戏体验更佳。以及解锁更多内容。§R该飞升与锡安降临飞升是分支飞升,二选一 谨慎选择§!"
+ap_GF_nyto_conquer_hell_desc:0 "§R明镜已变得昏暗不清,生命之舟漂泊在海上;去往天堂的道路荒芜难行,下入地狱的小路充斥杂草。§!"
+ap_GF_nyto_resurrection_text:0 "§T来时知是人来梦里,去时知是人去梦外。§!"
+ap_GF_nyto_conquer_hell_text:0 "§V我们注定要么迷失花园,要么堕入深渊;要么在梦中追寻太阳,要么在现实中追逃阴影。花开花落皆梦境,生命未曾真实。§!\n§RThis is 'paradise'!§!\n§R警告：此飞升具有挑战性!你需要持续不断地灭亡其他国家,否则你会输掉游戏！详细信息请看飞升后创建的事件链。§!"
 
 GF_ascension_perk.1.name:0 "重建锡安"
 GF_ascension_perk.1.desc:0 "我们应该继续遗迹文明未竟的事业——重建锡安。现在,我们可以把意识上传至锡安了。这样一来,哪怕在现实世界里被抹去存在,我们仍然可以在锡安中永远地存在,不会有任何人能打搅我们。"
@@ -18,8 +18,8 @@ ap_GF_nyto_imba_desc:0 "现在我们就是永恒本身"
  ap_GF_nyto_imba_limit:0 "需要完成一定程度的现实修改工程才可选择此飞升"
 
 GF_ascension_perk.2.name:0 "§R征服地狱§!"
-GF_ascension_perk.2.desc:0 "§R我见证到了更为灵异的可怕事件,现在所追随的线索可能会直接引导我走向这一切的源头。§!"
-GF_ascension_perk.2.a:0 "我必须继续努力才行。"
+GF_ascension_perk.2.desc:0 "§R我们窥见未来却无力回天,光明里透着黑暗,希望里透着绝望。我们在追逐太阳的同时被阴影笼罩。生命的乐园里埋着地狱的种子,天堂之门后是永劫。§!"
+GF_ascension_perk.2.a:0 "我们唤醒春日的战栗,点燃星辰间的烈焰。我们将追逐死亡,直至生命尽头。\n不过一场空梦。 "
 
 Failed_to_complete_the_capital_ruins:1 "需要完成首都遗迹事件链才可以选择这个飞升天赋。"
 

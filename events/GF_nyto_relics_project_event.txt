@@ -88,7 +88,7 @@ planet_event = {
 	is_triggered_only = yes
 	option = {
 		name = "gfnytorelics.5.a"
-		custom_tooltip = txt_gfnytorelics5_a
+		#custom_tooltip = txt_gfnytorelics5_a
 		hidden_effect ={
 			solar_system.space_owner= {
 				home_planet = {
@@ -175,36 +175,36 @@ country_event = {
 					leader_class = admiral
 				}
 				add_trait = leader_admiral_trait_GF_nyto_ogas_agreement_plus
-				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
+				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
 			}
 			if = {
 				limit = {
 					leader_class = general
 				}
 				add_trait = leader_general_trait_GF_nyto_ogas_agreement_plus
-				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
+				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
 			}
 			if = {
 				limit = {
 					leader_class = governor
 				}
 				add_trait = leader_governor_trait_GF_nyto_ogas_agreement_plus
-				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
+				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
 			}
 			if = {
 				limit = {
 					leader_class = scientist
 				}
 				add_trait = leader_scientist_trait_GF_nyto_ogas_agreement_plus
-				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
+				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
 			}
-			if = {
-				limit = {
-					leader_class = ruler
-				}
-				add_trait = leader_trait_GF_nyto_ogas_agreement_plus
-				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
-			}
+			#if = {
+			#	limit = {
+			#		leader_class = ruler
+			#	}
+			#	add_trait = leader_trait_GF_nyto_ogas_agreement_plus
+			#	#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
+			#}
 		}
 		every_pool_leader = {
 			limit = {
@@ -215,14 +215,14 @@ country_event = {
 					leader_class = admiral
 				}
 				add_trait = leader_admiral_trait_GF_nyto_ogas_agreement_plus
-				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
+				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
 			}
 			if = {
 				limit = {
 					leader_class = general
 				}
 				add_trait = leader_general_trait_GF_nyto_ogas_agreement_plus
-				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
+				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
 			}
 			if = {
 				limit = {
@@ -236,7 +236,7 @@ country_event = {
 					leader_class = scientist
 				}
 				add_trait = leader_scientist_trait_GF_nyto_ogas_agreement_plus
-				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
+				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
 			}
 			if = {
 				limit = {
@@ -244,7 +244,7 @@ country_event = {
 				}
 				remove_trait = leader_trait_GF_nyto_ogas_agreement
 				add_trait = leader_trait_GF_nyto_ogas_agreement_plus
-				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
+				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
 			}
 		}
 	}

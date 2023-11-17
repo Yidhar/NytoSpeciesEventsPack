@@ -19,7 +19,7 @@ strike_craft_component_template = {
 		weapon_role_point_defense
 	}
 	count = 3	#舰载机初始数量
-	regeneration_per_day = 0.1	#每天生产的舰载机数量
+	regeneration_per_day = 1	#每天生产的舰载机数量
 	launch_time = 3	#装填时间
 	damage = {
 		min = 50
@@ -198,6 +198,7 @@ weapon_component_template = {
 	tags = {
 		weapon_type_energy
 		weapon_type_prism
+		t_slot
 	}
 	ai_tags = {
 		weapon_role_anti_hull
@@ -264,6 +265,7 @@ weapon_component_template = {
 	tags = {
 		weapon_type_energy
 		weapon_type_explosive
+		x_slot
 	}
 	ai_tags = {
 		weapon_role_anti_armor
@@ -320,6 +322,7 @@ weapon_component_template = {
 	tags = {
 		weapon_type_energy
 		weapon_type_Akso
+		x_slot
 	}
 	ai_tags = {
 		weapon_role_anti_hull
@@ -373,6 +376,7 @@ weapon_component_template = {
 	tags = {
 		weapon_type_energy
 		weapon_type_LsScepter
+		l_slot
 	}
 	ai_tags = {
 		weapon_role_anti_armor
@@ -407,7 +411,7 @@ weapon_component_template = {
 	icon_frame = 1
 	damage = {
 		min = 200
-		max = 300
+		max = 400
 	}
 	windup = {
 		min = 0
@@ -432,6 +436,7 @@ weapon_component_template = {
 	tags = {
 		weapon_type_energy
 		weapon_type_son
+		l_slot
 	}
 	ai_tags = {
 		weapon_role_anti_hull
@@ -465,6 +470,7 @@ weapon_component_template = {
 #m
 weapon_component_template = {
 	key = "GF_Nyto_m_weapon1"
+	type = instant
 	size = medium
 	icon = "GFX_ship_part_m_weapons1"
 	icon_frame = 1
@@ -478,6 +484,7 @@ weapon_component_template = {
 	tags = {
 		weapon_type_energy
 		weapon_type_nytowith
+		m_slot
 	}
 	ai_tags = {
 		weapon_role_artillery
@@ -494,7 +501,7 @@ weapon_component_template = {
 		max = 25
 	}
 	total_fire_time = 3
-	range = 150
+	range = 70
 	accuracy = 1
 	tracking = 0.2
 	armor_penetration = 0.35
@@ -526,6 +533,7 @@ weapon_component_template = {
 weapon_component_template = {
 	key = "GF_Nyto_s_weapon1"
 	size = small
+	type = instant
 	icon = "GFX_ship_part_s_weapons1"
 	icon_frame = 1
 	power = -10
@@ -541,6 +549,7 @@ weapon_component_template = {
 	tags = {
 		weapon_type_energy
 		weapon_type_nytowith
+		s_slot
 	}
 	ai_tags = {
 		weapon_role_artillery
@@ -554,7 +563,7 @@ weapon_component_template = {
 		max = 25
 	}
 	total_fire_time = 1.5
-	range = 150
+	range = 60
 	accuracy = 1
 	tracking = 0.2
 	armor_penetration = 0.75
@@ -581,6 +590,7 @@ weapon_component_template = {
 #M 夜空引领者 接站时给全队提供10点追踪20%命中持续3天
 weapon_component_template = {
 	key = "GF_Nyto_m_weapon2"
+	type = instant
 	size = medium
 	icon = "GFX_ship_part_m_weapons2"
 	icon_frame = 1
@@ -596,6 +606,7 @@ weapon_component_template = {
 	}
 	tags = {
 		weapon_type_energy
+		m_slot
 	}
 	ai_tags = {
 		weapon_role_anti_shield
@@ -659,6 +670,7 @@ weapon_component_template = {
 	projectile_gfx = "GFnyto_auto_cannons_sm2"
 	tags = {
 		weapon_type_energy
+		s_slot
 	}
 	ai_tags = {
 		weapon_role_artillery
@@ -672,7 +684,7 @@ weapon_component_template = {
 		max = 20
 	}
 	total_fire_time = 1.5
-	range = 130
+	range = 90
 	accuracy = 1
 	tracking = 0.2
 	shield_damage = 1
@@ -716,6 +728,7 @@ weapon_component_template = {
 	projectile_gfx = "GF_large_torpedo_03"
 	tags = {
 		weapon_type_explosive
+		m_slot
 	}
 	ai_tags = {
 		weapon_role_anti_armor
@@ -770,6 +783,7 @@ weapon_component_template = {
 	tags = {
 		weapon_type_explosive
 		weapon_type_point_defense
+		s_slot
 	}
 	ai_tags = {
 		weapon_role_point_defense
@@ -821,6 +835,7 @@ weapon_component_template = {
 	component_set = "GF_nyto_fool_weapon"
 	tags = {
 		weapon_type_explosive
+		g_slot
 	}
 	ai_tags = {
 		weapon_role_anti_hull
@@ -1140,7 +1155,7 @@ weapon_component_template = {
 	total_fire_time = 10
 	ship_modifier = {
 		weapon_type_Electronic_weapon_damage_mult = 1
-		custom_tooltip = ""
+		custom_tooltip = "GF_nyto_Electronic_desc"
 	}
 	range = 500
 	accuracy = 1
@@ -1148,12 +1163,11 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 10
-			GF_nyto_new_fire_control_unit = 5
+			alloys = @cloak_s_t3_cost_alloys
 		}
 		upkeep = {
-			alloys = 0.1
-			GF_nyto_new_fire_control_unit = 0.05
+			alloys = @cloak_m_t3_upkeep_alloys
+			energy = 4
 		}
 		upkeep = {
 			trigger = {
@@ -1164,7 +1178,10 @@ weapon_component_template = {
 			energy = 1
 		}
 	}
-	hidden = yes
+	hidden = no
+	prerequisites = {
+		tech_GF_nyto_Electronic
+	}
 	ai_weight = {
 		weight = 0
 	}
@@ -1196,7 +1213,7 @@ weapon_component_template = {
 	total_fire_time = 20
 	ship_modifier = {
 		weapon_type_Electronic_weapon_damage_mult = 2
-		custom_tooltip = ""
+		custom_tooltip = "GF_nyto_Electronic_m_desc"
 	}
 	range = 500
 	accuracy = 1
@@ -1204,12 +1221,11 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 10
-			GF_nyto_new_fire_control_unit = 5
+			alloys = @cloak_m_t3_cost_alloys
 		}
 		upkeep = {
-			alloys = 0.1
-			GF_nyto_new_fire_control_unit = 0.05
+			alloys =  @cloak_m_t3_upkeep_alloys
+			energy = 2
 		}
 		upkeep = {
 			trigger = {
@@ -1220,7 +1236,10 @@ weapon_component_template = {
 			energy = 1
 		}
 	}
-	hidden = yes
+	hidden = no
+	prerequisites = {
+		tech_GF_nyto_Electronic
+	}
 	ai_weight = {
 		weight = 0
 	}
@@ -1251,8 +1270,8 @@ weapon_component_template = {
 	}
 	total_fire_time = 30
 	ship_modifier = {
-		weapon_type_Electronic_weapon_damage_mult = 3
-		custom_tooltip = ""
+		weapon_type_Electronic_weapon_damage_mult = 4
+		custom_tooltip = "GF_nyto_Electronic_l_desc"
 	}
 	range = 500
 	accuracy = 1
@@ -1260,16 +1279,17 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 10
-			GF_nyto_new_fire_control_unit = 5
+			alloys = @cloak_l_t3_cost_alloys
 		}
 		upkeep = {
-			alloys = 0.1
-			GF_nyto_new_fire_control_unit = 0.05
+			alloys = @cloak_l_t3_upkeep_alloys
 			energy = 1
 		}
 	}
-	hidden = yes
+	prerequisites = {
+		tech_GF_nyto_Electronic
+	}
+	hidden = no
 	ai_weight = {
 		weight = 0
 	}

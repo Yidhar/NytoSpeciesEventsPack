@@ -30,21 +30,21 @@ component_set = {
 	icon = "GFX_ship_part_GFnyto_force_shield3"
 	icon_frame = 1	
 }
-component_set = {
-	key = "GFnyto_force_shield_1_dc"
-	icon = "GFX_ship_part_GFnyto_force_shield1"
-	icon_frame = 1	
-}
-component_set = {
-	key = "GFnyto_force_shield_2_dc"
-	icon = "GFX_ship_part_GFnyto_force_shield2"
-	icon_frame = 1	
-}
-component_set = {
-	key = "GFnyto_force_shield_3_dc"
-	icon = "GFX_ship_part_GFnyto_force_shield3"
-	icon_frame = 1	
-}
+# component_set = {
+# 	key = "GFnyto_force_shield_1_dc"
+# 	icon = "GFX_ship_part_GFnyto_force_shield1"
+# 	icon_frame = 1	
+# }
+# component_set = {
+# 	key = "GFnyto_force_shield_2_dc"
+# 	icon = "GFX_ship_part_GFnyto_force_shield2"
+# 	icon_frame = 1	
+# }
+# component_set = {
+# 	key = "GFnyto_force_shield_3_dc"
+# 	icon = "GFX_ship_part_GFnyto_force_shield3"
+# 	icon_frame = 1	
+# }
 #H武器
 component_set = {
 	key = "GFnyto_accelerating_coil1"

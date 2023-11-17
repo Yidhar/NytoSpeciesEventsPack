@@ -65,6 +65,9 @@ col_GF_nyto_speed_planet_wrlv_desc:0 "为了快速将星球转变为污染星球
  col_GF_nyto_nv_fleet_desc:0 "以为舰队提供支持为主的行星"
  col_GF_nyto_science:0 "研发中枢"
  col_GF_nyto_science_desc:0 "以科研为主的行星"
+ col_GF_nyto_capital:0 "阿佛纳斯"
+ col_GF_nyto_capital_desc:0 "§g地狱的入口§!,§P生命覆没之所.§!/n当星球类型为阿佛纳斯时，该星球上的所有建筑不会因为污染度超过阈值而停止工作。并根据污染度提供额外的buff"
+
 
  district_GF_nyto_pc_portal_house:0 "创造之柱"
  district_GF_nyto_pc_portal_house_desc:0 "起源之地"

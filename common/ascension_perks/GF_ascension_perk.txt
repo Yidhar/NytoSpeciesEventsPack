@@ -1,9 +1,5 @@
 #复活
 ap_GF_nyto_resurrection= {
-	on_enabled = {
-		custom_tooltip = "ap_GF_nyto_resurrection_text"
-		hidden_effect = {country_event = { id = GFnyto_ascension_perk.1 }}
-	}
 	modifier = {}
 	potential = {
 		has_origin =origin_GF_nyto_the_last_light
@@ -19,32 +15,34 @@ ap_GF_nyto_resurrection= {
 	}
 	
 	on_enabled = {
-		#hidden_effect = {
-		#	if = {
-		#		limit = { is_ai = no }
-		#		country_event = {
-		#			id = GFnyto_ascension_perk.3
-		#		}
-		#	}
-		#	if = {
-		#		limit = { is_ai = yes }
-		#		give_technology = {
-		#			tech = "tech_GF_nyto_Deep_space"
-		#		}
-		#		give_technology = {
-		#			tech = tech_GF_nyto_light_thruster
-		#		}
-		#		give_technology = {
-		#			tech = tech_GF_nyto_Beacon
-		#		}
-		#		give_technology = {
-		#			tech = tech_GF_nyto_bright_poetry
-		#		}
-		#		give_technology = {
-		#			tech = tech_GF_nyto_godenergy
-		#		}
-		#	}
-		#}
+		custom_tooltip = "ap_GF_nyto_resurrection_text"
+		hidden_effect = {
+			if = {
+				limit = { is_ai = no }
+				country_event = {
+					id = GFnyto_ascension_perk.3
+				}
+			}
+			if = {
+				limit = { is_ai = yes }
+				give_technology = {
+					tech = "tech_GF_nyto_Deep_space"
+				}
+				give_technology = {
+					tech = tech_GF_nyto_light_thruster
+				}
+				give_technology = {
+					tech = tech_GF_nyto_Beacon
+				}
+				give_technology = {
+					tech = tech_GF_nyto_bright_poetry
+				}
+				give_technology = {
+					tech = tech_GF_nyto_godenergy
+				}
+			}
+		}
+		hidden_effect = {country_event = { id = GFnyto_ascension_perk.1 }}
 	}
 	ai_weight = {factor = 500}
 }
@@ -54,22 +52,30 @@ ap_GF_nyto_conquer_hell= {
 	on_enabled = {
 		custom_tooltip = "ap_GF_nyto_conquer_hell_text"
 		hidden_effect = {country_event = { id = GFnyto_ascension_perk.2 }}
+		hidden_effect = { set_ai_personality = became_the_crisis }
+		activate_crisis_progression = yes
 	}
 	modifier = {
-		starbase_shipyard_build_speed_mult = 2		
-		# ship_shield_penetration_mult = 0.3 #护盾穿透
-		# ship_armor_penetration_mult= 0.3 #护甲穿透
+		starbase_shipyard_build_speed_mult = 2
 		ship_weapon_damage = 0.5
-		ship_tracking_add=1 #追踪	
-		ship_orbital_bombardment_mult = 0.5	
-		country_war_exhaustion_mult = -1	
+		ship_tracking_add=5 #追踪
+		ship_orbital_bombardment_mult = 0.5
 	}
 	potential = {
-		has_ascension_perk = ap_GF_nyto_resurrection
-		NOT = { has_ascension_perk = ap_GF_nyto_imba }
-		NOT = {has_ascension_perk = ap_GF_nyto_conquer_hell}
-		NOT = {any_playable_country = {has_ascension_perk = ap_GF_nyto_conquer_hell}}
-	}	
+		or = {
+			and = {
+				has_ascension_perk = ap_GF_nyto_resurrection
+				NOT = {has_ascension_perk = ap_GF_nyto_conquer_hell}
+				#NOT = {any_playable_country = {has_ascension_perk = ap_GF_nyto_conquer_hell}}
+			}
+			and = {
+				has_civic = civic_GF_nyto_Vengeance_Crusade
+				years_passed > 15
+			}
+
+		}
+
+	}
 	ai_weight = {factor = 0}
 }
 ##锡安降临

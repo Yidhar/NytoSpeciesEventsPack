@@ -20,8 +20,11 @@ civic_GF_nyto_famine= {
 	possible = {species_archetype = { value = NYTO}}
 	pickable_at_start=no
 	modification= no
-	modifier={}
+	modifier={
+		country_food_produces_mult = -0.1
+	}
 #	description = "civic_GF_nyto_famine"
+
 	random_weight = {base = 0}
 }
 #战争

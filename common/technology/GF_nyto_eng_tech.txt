@@ -84,19 +84,19 @@ tech_GFnyto_framework2={
 tech_GFnyto_tansuo={
 	cost = 30000
 	area = engineering
-	category = { voidcraft }
-	tier = 4
-	weight = 50
+	category = { particles }
+	tier = 3
+	weight = 80
 	potential = {
 		is_nyto_country =yes
 	}
-	ai_weight = {weight = 2}
+	ai_weight = {weight = 100}
 	prerequisites = {
 		tech_GF_nyto_Inverse_collapse_1
 	}
 	weight_modifier = {
 		modifier = {
-			factor = 10
+			factor = 20
 			has_technology = tech_climate_restoration
 		}
 	}
@@ -106,8 +106,8 @@ tech_GFnyto_tansuo={
 tech_GFnyto_tansuo2={
 	cost = 30000
 	area = engineering
-	category = { voidcraft }
-	tier = 5
+	category = { particles }
+	tier = 4
 	weight = 50
 	potential = {
 		is_nyto_country =yes
@@ -151,6 +151,9 @@ tech_template_GFnyto_Command_ship ={
 	ai_weight = {
 		weight = 50
 	}
+	modifier = {
+		command_limit_add = 100
+	}
 	potential = {
 		is_nyto_country =yes
 	}
@@ -169,6 +172,9 @@ tech_template_GFnyto_cv_batellship ={
 	weight = 20
 	ai_weight = {
 		weight = 50
+	}
+	modifier = {
+		command_limit_add = 50
 	}
 	potential = {
 		is_nyto_country =yes
@@ -207,6 +213,8 @@ tech_template_GF_nyto_orbit_stions ={
 	potential = { is_nyto_country =yes 	}
 	prerequisites = { tech_habitat_1 }	
 	modifier = {
+		planet_building_build_speed_mult = 0.5
+		planet_colony_development_speed_mult = 1
 		custom_tooltip = "tech_template_GF_nyto_orbit_stions_desc"
 	}
 }

@@ -49,6 +49,14 @@ GF_nyto_drp_modifer ={
 		mode = add
 		mult = 0.1
 	}
+	complex_trigger_modifier = {
+		trigger_scope = planet
+		trigger = num_buildings
+		parameters = {
+			type = any
+		}
+		mode = mult
+	}
 	[[rss]
 		add = modifier:planet_jobs_$rss$_produces_mult
 	]
@@ -76,6 +84,8 @@ GF_nyto_drp_modifer ={
 	]
 	add = modifier:planet_jobs_upkeep_mult
 	complex_trigger_modifier = {
+		trigger_scope = planet
+		potential = { planet ={ not = { is_variable_set = PR_factor_plnt_MAN_job_$JOB$ } } }
 		trigger = count_owned_pop
 		parameters = {
 			limit ={
@@ -83,7 +93,16 @@ GF_nyto_drp_modifer ={
 			}
 		}
 		mode = mult
-		mult = 0.15
+		mult = $jobsup|0.15$
+	}
+	modifier = {
+		planet={
+			is_variable_set = PR_factor_plnt_MAN_job_$JOB$
+			any_owned_pop = {
+				has_job = job_PR_job_CONVERT_$JOB$
+			}
+		}
+		mult = value:GF_nyto_PR_var_drp_count|job_count|planet.PR_factor_plnt_MAN_job_$JOB$|jobsup|$jobsup$|
 	}
 	[[modifier]
 	complex_trigger_modifier = {
@@ -101,11 +120,21 @@ GF_nyto_drp_modifer ={
 			which = $wrlv$
 		}
 		mode = add
-		mult = 0.1
+		mult = 0.3
 	} ]
+	complex_trigger_modifier = {
+		trigger_scope = planet
+		trigger =has_planetary_ascension_tier
+		mode = add
+		mult = 0.1
+	}
 }
 
-
+GF_nyto_PR_var_drp_count={
+	base = 0
+	add = $job_count$
+	mult = $jobsup|0.15$
+}
 
 GFnyto_Emergency_pollution_control_res ={
 	base = 1
@@ -116,6 +145,74 @@ GFnyto_Emergency_pollution_control_res ={
 			resource = $res$
 		}
 		mode = add
-		mult = 6
+		mult = 3
 	}
+}
+
+Gfnyto_planet_wrlv_proudcu ={
+	base = 1
+	add = planet.GFnyto_plante_wrlv
+	mult = 0.1
+	pow = 2
+	complex_trigger_modifier = {
+		potential = {
+			planet={
+				has_planetary_ascension_tier > 1
+				has_planetary_ascension_tier < 11
+			}
+		}
+		trigger_scope = planet
+		trigger =has_planetary_ascension_tier
+		mode = add
+		mult = 0.01
+	}
+	modifier = {
+		has_planetary_ascension_tier > 10
+		add = 1
+	}
+}
+Gfnyto_planet_wrlv_proudcu2={
+	base = 0
+	add = value:Gfnyto_planet_wrlv_proudcu
+	mult = value:Gfnyto_planet_wrlv_proudcu
+	divide = planet.GFnyto_plante_wrlv
+	divide = 200
+	round = yes
+}
+
+
+GF_nyto_sv2={
+	base = 1
+	mult = $sv$
+}
+
+
+
+
+Gfnyto_planet_wrlv_upkeep ={
+	base = 1
+	add = planet.GFnyto_plante_wrlv
+	mult = 0.1
+	pow = 2
+}
+Gfnyto_planet_wrlv_upkeep2 ={
+	base= 0
+	modifier = {
+		has_modifier = GF_nyto_Radiation
+		add = value:Gfnyto_planet_wrlv_upkeep3
+	}
+
+	modifier = {
+		has_modifier = GF_nyto_Radiation2
+		add = value:Gfnyto_planet_wrlv_upkeep3
+	}
+	mult = -0.1
+	mult = value:Gfnyto_planet_wrlv_upkeep
+	divide = planet.GFnyto_plante_wrlv
+}
+Gfnyto_planet_wrlv_upkeep3 ={
+	base = 0
+	add = planet.GFnyto_plante_wrlv
+	divide = 0.02
+	mult = -0.1
 }

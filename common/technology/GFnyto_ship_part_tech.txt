@@ -26,7 +26,7 @@ tech_GFnyto_power={
 	icon = tech_GFnyto_power
 	cost = 50000
 	area = physics
-	tier = 5
+	tier = 4
 	is_rare = yes
 	gateway = power_generation
 	category = {particles}
@@ -47,7 +47,12 @@ tech_GFnyto_power={
 			desc = "tech_GFnyto_power_desc"
 		}
 	}
-	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			has_technology = tech_zero_point_power
+		}
+	}
 }
 #能源核心 lv2
 tech_GFnyto_power_lv2 ={

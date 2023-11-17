@@ -109,7 +109,7 @@ planet_event = {
 				}
 				add_building = building_GFnyto_forward_base
 				planet_event = {
-					id = GFnyto_war_theory.2.a
+					id = GFnyto_war_theory.2001
 					days = 1800
 				}
 			}
@@ -126,9 +126,14 @@ planet_event = {
 						NOT = { is_planet_class = pc_ringworld_tech }
 					}
 					random = {
-						chance = 10
+						chance = 5
 						change_pc = pc_GF_nyto_devil_furnace
 						set_planet_flag = GFnyto_Spring_wakes_up
+						remove_all_buildings = yes
+						add_building = building_GFnyto_dimensional_fabricator2
+						add_building = building_GFnyto_dimensional_fabricator2
+						add_building = building_GFnyto_algorithm
+						add_building = building_GFnyto_class_4_singularity
 					}								
 				}
 			}			
@@ -136,7 +141,7 @@ planet_event = {
 	}
 }
 planet_event = {
-	id = GFnyto_war_theory.2.a
+	id = GFnyto_war_theory.2001
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
@@ -159,8 +164,9 @@ planet_event = {
 				limit = {
 					is_species_class = eild
 				}
+				save_event_target_as = eild_species
 			}
-			save_event_target_as = eild_species
+
 		}
 		if = { limit = { from = { NOT = { has_civic = civic_GF_nyto_Vengeance_Crusade } } }
 			every_owned_pop = {
@@ -178,6 +184,12 @@ planet_event = {
 		if = { limit = { from = {  has_civic = civic_GF_nyto_Vengeance_Crusade  } }
 		#planet
 			every_owned_pop = {
+				from ={
+					add_resource = {
+						unity = 100
+						multiplier = trigger:years_passed
+					}
+				}
 				change_species = event_target:eild_species
 				random = {
 					chance = 10

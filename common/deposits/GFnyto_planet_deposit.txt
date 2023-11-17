@@ -117,7 +117,7 @@ d_GFnyto_planetary_surface_defense_zone = {
 	planet_modifier = {
 		job_soldier_add = 2
 		planet_housing_add = 10
-		army_health = 0.2	
+		army_health = 0.2
 	}
 	drop_weight = {weight = 0}
 }
@@ -182,4 +182,70 @@ d_GFnyto_tanhua ={
 		}
 	}
 	drop_weight = {weight = 0}
+}
+#坍塌污染地区
+d_GFnyto_Radiation ={
+	is_for_colonizable = no
+	icon = d_GFnyto_black_zone
+	category = deposit_cat_rare
+	triggered_planet_modifier = {
+		potential = {
+			is_variable_set = GFnyto_plante_wrlv
+		}
+		modifier ={
+			planet_buildings_energy_upkeep_add = 0.1
+		}
+		mult = value:Gfnyto_planet_wrlv_upkeep2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_variable_set = GFnyto_plante_wrlv
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value > 300
+			}
+		}
+		modifier ={
+			planet_buildings_energy_upkeep_add = 0.2
+		}
+		mult =value:Gfnyto_planet_wrlv_upkeep2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_variable_set = GFnyto_plante_wrlv
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value > 600
+			}
+		}
+		modifier = {
+			planet_buildings_alloys_upkeep_add = 0.05
+		}
+		mult =value:Gfnyto_planet_wrlv_upkeep2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_variable_set = GFnyto_plante_wrlv
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value > 1000
+			}
+		}
+		modifier = {
+			planet_building_build_speed_mult = -0.01
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_variable_set = GFnyto_plante_wrlv
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value > 1500
+			}
+		}
+		modifier = {
+			planet_buildings_GF_nyto_training_key_upkeep_add = 0.005
+		}
+	}
+	drop_weight = { weight = 0 }
 }

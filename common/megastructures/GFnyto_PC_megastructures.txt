@@ -150,111 +150,37 @@ GFnyto_lgate_base = {
 }
 
 
-# #部署远程火力基点
-# GFnyto_beacon_weapon_01 ={
-# 	entity_offset = { x = -7 y = -7 }
-# 	entity = "construction_platform_entity"
-# 	construction_entity = "construction_platform_entity"
-# 	build_time = 1800
-# 	resources = {
-# 		category = megastructures
-# 		cost = {
-# 			alloys = 5000
-# 		}
-# 		upkeep = {
-# 			energy = 10
-# 		}
-# 	}
-# 	possible = {
-# 		exists = starbase
-# 		custom_tooltip = {
-# 			fail_text = "requires_inside_border"
-# 			is_inside_border = from
-# 		}
-# 		custom_tooltip = {
-# 			fail_text = "requires_surveyed_system"
-# 			NOT = {
-# 				any_system_planet = {
-# 					is_surveyed = {
-# 						who = prev.from
-# 						status = no
-# 					}
-# 				}
-# 			}
-# 		}
-# 		custom_tooltip = {
-# 			fail_text = "requires_no_binary_trinary"
-# 			NOR = {
-# 				is_star_class = sc_binary_1
-# 				is_star_class = sc_binary_2
-# 				is_star_class = sc_binary_3
-# 				is_star_class = sc_binary_4
-# 				is_star_class = sc_binary_5
-# 				is_star_class = sc_binary_6
-# 				is_star_class = sc_binary_7
-# 				is_star_class = sc_binary_8
-# 				is_star_class = sc_binary_9
-# 				is_star_class = sc_binary_10
-# 				is_star_class = sc_trinary_1
-# 				is_star_class = sc_trinary_2
-# 				is_star_class = sc_trinary_3
-# 				is_star_class = sc_trinary_4
-# 			}
-# 		}
-# 		solar_system = {
-# 			custom_tooltip = {
-# 				fail_text = "requires_no_black_hole_or_dyson_sphere"
-# 				NOR = {
-# 					is_star_class = sc_black_hole
-# 					has_megastructure = dyson_sphere_3
-# 					has_megastructure = dyson_sphere_4
-# 					has_megastructure = dyson_sphere_5
-# 				}
-# 			}
-# 		}
-# 	}
-# 	placement_rules = {
-# 		planet_possible = {
-# 			custom_tooltip = {
-# 				fail_text = "must_build_around_star"
-# 				is_star = yes
-# 			}
-# 			custom_tooltip = {
-# 				fail_text = "requires_no_existing_megastructure"
-# 				NOT = {
-# 					has_any_megastructure = yes
-# 				}
-# 			}
-# 		}
-# 	}
-# 	potential = {
-# 		has_technology = tech_GFnyto_star_tasuo
-# 	}
-# 	show_prereqs = yes
-# 	prerequisites = {
-# 		"tech_template_beacon_weapon"
-# 	}
-# }
+ #部署远程火力基点
+ #GFnyto_beacon_weapon_01 ={
+ #	entity = "weapons_entity"
+ #	construction_entity = "weapons_entity"
+ #	build_time = 1800
+ #
+ #	possible = {
+ #		always = no
+ #	}
+ #
+ #}
 
-# #超视界支援系统 ：待机
-# GFnyto_beacon_weapon_02 = {
-# 	entity = ps_en_1
-# 	construction_entity = error_entity
-# 	build_time = 3600	
-# 	resources = {
-# 		category = megastructures
-# 		cost = {
-# 			alloys = 5000
-# 		}
-# 		upkeep = {
-# 			energy = 10
-# 		}
-# 	}
-# 	upgrade_from = {
-# 		GFnyto_beacon_weapon_01
-# 	}
-# 	upgrade_desc = "部署超视界系统节点"
-# }
+ #超视界支援系统 ：待机
+ #GFnyto_beacon_weapon_02 = {
+ #	entity = ps_en_1
+ #	construction_entity = error_entity
+ #	build_time = 3600
+ #	resources = {
+ #		category = megastructures
+ #		cost = {
+ #			alloys = 5000
+ #		}
+ #		upkeep = {
+ #			energy = 10
+ #		}
+ #	}
+ #	upgrade_from = {
+ #		GFnyto_beacon_weapon_01
+ #	}
+ #	upgrade_desc = "部署超视界系统节点"
+ #}
 # #超视界支援系统: 开火
 # GFnyto_beacon_weapon_03 ={
 # 	entity = "ps_en_2"
@@ -297,7 +223,6 @@ GFnyto_stions_fortress_base ={
 	potential = {
 		has_technology = tech_template_stions_fortress
 	}
-
 	possible = {
 		exists = starbase
 		custom_tooltip = {
@@ -319,54 +244,15 @@ GFnyto_stions_fortress_base ={
 			from = { has_technology = tech_template_stions_fortress }
 		}
 	}
-	upgrade_desc = "建造永恒要塞"
 	prerequisites = {
 		"tech_template_stions_fortress"
 	}
-}
-
-GFnyto_stions_fortress_up={
-	entity = stions_entity
-	construction_entity = stions_entity
-	build_time = 2080
-	resources = {
-		category = megastructures
-		cost = {
-			trigger = {
-				from = {
-					is_ai = no	
-					NOT = {
-						 has_civic = civic_GF_nyoto_armor_train
-					}			
-				}
-			}
-			alloys = 10000
-		}
-		cost = {
-			trigger = {
-				from = {
-					is_ai = no	
-					has_civic = civic_GF_nyoto_armor_train						
-				}
-			}
-			alloys = 5000
-		}
-
-		cost = {
-			trigger = {
-				from = {
-					is_ai = yes
-				}
-			}
-			alloys = 2000
-		}
-	}
-	upgrade_from = {
-		GFnyto_stions_fortress_base
-	}
 	on_build_complete = {
+		fromfrom ={
+			remove_modifier = GF_nyto_mega_spped
+		}
 		create_fleet = {
-			effect = {				
+			effect = {
 				set_owner = from
 				set_location = fromfrom
 				create_ship = {
@@ -374,23 +260,77 @@ GFnyto_stions_fortress_up={
 					random_existing_design = GFnyto_stions_fortress
 				}
 			}
-		}	
+		}
 		delete_megastructure = fromfrom
 	}
-	ai_weight = {
-		weight = 1
-		modifier = {
-			factor = 100
-			owner = {
-				has_country_resource = {
-					type = alloys
-					amount > 10000
-				}
-			}
-			
-		}
-	}
 }
+
+#GFnyto_stions_fortress_up={
+#	entity = stions_entity
+#	construction_entity = stions_entity
+#	build_time = 2080
+#	resources = {
+#		category = megastructures
+#		cost = {
+#			trigger = {
+#				from = {
+#					is_ai = no
+#					NOT = {
+#						 has_civic = civic_GF_nyoto_armor_train
+#					}
+#				}
+#			}
+#			alloys = 10000
+#		}
+#		cost = {
+#			trigger = {
+#				from = {
+#					is_ai = no
+#					has_civic = civic_GF_nyoto_armor_train
+#				}
+#			}
+#			alloys = 5000
+#		}
+#
+#		cost = {
+#			trigger = {
+#				from = {
+#					is_ai = yes
+#				}
+#			}
+#			alloys = 2000
+#		}
+#	}
+#	upgrade_from = {
+#		GFnyto_stions_fortress_base
+#	}
+#	on_build_complete = {
+#		create_fleet = {
+#			effect = {
+#				set_owner = from
+#				set_location = fromfrom
+#				create_ship = {
+#					name = "永恒要塞"
+#					random_existing_design = GFnyto_stions_fortress
+#				}
+#			}
+#		}
+#		delete_megastructure = fromfrom
+#	}
+#	ai_weight = {
+#		weight = 1
+#		modifier = {
+#			factor = 100
+#			owner = {
+#				has_country_resource = {
+#					type = alloys
+#					amount > 10000
+#				}
+#			}
+#
+#		}
+#	}
+#}
 
 GFnyto_habitat_01 ={
 	entity = "construction_platform_entity"

@@ -1,25 +1,25 @@
-# #90wish,建筑、职业、事件
-# civic_GF_nyto_90wish = {
-# 	icon = "gfx/interface/icons/governments/civics/GF_nyto_90wish.dds"
-# 	potential = {
-# 		authority = {
-# 			value = auth_GF_paradeus
-# 		}
-# 	}
-# 	possible = {
-# 		species_class = {
-# 			value = nyto
-# 		}
-# 	}
-# 	modifier = {
-# 		all_technology_research_speed = 0.2
-# 		country_trade_fee = -0.2
-# 	}
-# 	modification = yes
-# 	random_weight = {
-# 		base = 5
-# 	}
-# }
+ #90wish,建筑、职业、事件
+ civic_GF_nyto_90wish = {
+ 	icon = "gfx/interface/icons/governments/civics/GF_nyto_90wish.dds"
+ 	potential = {
+ 		authority = {
+ 			value = auth_GF_paradeus
+ 		}
+ 	}
+ 	possible = {
+ 		species_class = {
+ 			value = nyto
+ 		}
+ 	}
+ 	modifier = {
+ 		all_technology_research_speed = 0.2
+		num_tech_alternatives_add = 2
+ 	}
+ 	modification = yes
+ 	random_weight = {
+ 		base = 5
+ 	}
+ }
 
 #相位技师,建筑、职业、事件
 # civic_GF_nyto_phase_technician = {

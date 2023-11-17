@@ -168,3 +168,48 @@ tech_alicen_shiled ={
 # 		is_nyto_country =yes
 # 	}
 # }
+#tech_bio_reactor = {
+#	cost = 0
+#	area = physics
+#	tier = 0
+#	category = { particles }
+#	start_tech = yes
+#
+#	potential = {
+#		OR = {
+#			is_machine_empire = yes
+#			is_mechanical_empire = yes
+#			is_lithoid_empire = yes
+#			is_nyto_country = yes
+#		}
+#	}
+#}
+tech_GF_nyto_Electronic ={
+	icon = tech_GF_nyto_selected_lineages
+	cost = @tier0cost3
+	tier = 3
+	category = { computing }
+	start_tech = no
+	potential = {
+		always = yes
+	}
+	weight = @tier3weight2
+	area = physics
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			or = {
+				has_technology = "tech_sapient_ai"
+				has_technology = "tech_positronic_implants"
+			}
+		}
+		modifier = {
+			factor = 5
+			or = {
+				has_technology = tech_combat_computers_3
+				has_technology = tech_combat_computers_autonomous
+			}
+		}
+	}
+
+}

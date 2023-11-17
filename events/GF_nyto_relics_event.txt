@@ -163,184 +163,29 @@ fleet_event = {
 	}
 }
 
-fleet_event = {
-	id = gfnytoparadeusancrel.301
-	title = "gfnytoparadeusancrel.301.name"
-	desc = "gfnytoparadeusancrel.301.desc"
-	picture = GFX_evt_nyto_unknown_civilization_202055_5
-	show_sound = event_structural_collapse
-	location = from
-	archaeology = yes
-	is_triggered_only = yes
-	immediate = {
-		from = {
-			set_site_progress_locked = yes
-		}
-	}
-	option = {
-		name = gfnytoparadeusancrel.301.a
-		owner = {
-			country_event = {
-				id = gfnytoparadeusancrel.30102
-			}
-		}
-	}
-}
-
-country_event = {
-	id = gfnytoparadeusancrel.30102
-	title = "gfnytoparadeusancrel.30102.name"
-	desc = "gfnytoparadeusancrel.30102.desc"
-	is_triggered_only = yes
-	diplomatic = yes
-	custom_gui = NEW_GUI
-	picture_event_data = {
-		room = no_room
-		portrait = owner
-	}
-	immediate = {
-		set_country_flag = GUI_BG_1
-		set_country_flag = Gf_nyto_portrait_02_Lost
-		set_country_flag = small_painting_effct_hide
-		hidden_effect = {
-			clear_variable = GF_nyto_TXT
-			remove_country_flag = Gf_nyto_portrait_02
-		}
-	}
-	option = {
-		allow = {
-			NOR = {
-				has_country_flag = GF_nyto_opt01
-				has_country_flag = GF_nyto_opt02
-				has_country_flag = GF_nyto_opt03
-				has_country_flag = GF_nyto_opt04
-			}
-		}
-		name = gfnytoparadeusancrel.30102.a
-		response_text = gfnytoparadeusancrel.30102.a.response
-		is_dialog_only = yes
-		custom_gui = inv_OPTION
-		hidden_effect = {
-			remove_country_flag = small_painting_effct_hide
-			change_variable = {which = GF_nyto_TXT value = 1 }
-			if = {
-				limit = { 
-					check_variable = {
-						which = GF_nyto_TXT
-						value = 1
-					}
-				}
-				remove_country_flag = Gf_nyto_portrait_02_Lost
-				set_country_flag = Gf_nyto_portrait_02
-				remove_country_flag = small_painting_effct_hide
-				set_country_flag = small_painting_effct2_hide
-			}
-			if = {
-				limit = {
-					check_variable = {
-						which = GF_nyto_TXT
-						value = 3
-					}
-				}
-				set_country_flag = Gf_nyto_portrait_02_Lost
-				remove_country_flag = Gf_nyto_portrait_02
-				set_country_flag = small_painting_effct_hide
-				remove_country_flag = small_painting_effct2_hide
-			}
-			if = {
-				limit = {
-					check_variable = {
-						which = GF_nyto_TXT
-						value = 4
-					}
-				}
-				solar_system = { set_star_class = sc_neutron_star }
-				remove_country_flag = Gf_nyto_portrait_02_Lost
-				set_country_flag = Gf_nyto_portrait_02
-				remove_country_flag = small_patinting_window_hide
-				set_country_flag = small_painting_effct2_hide				
-			}
-			if = {
-				limit = {
-					check_variable = {
-						which = GF_nyto_TXT
-						value = 5
-					}
-				}
-				# remove_country_flag = GUI_BG_1
-				# set_country_flag = GUI_BG_2
-				set_country_flag = GF_nyto_opt01
-				set_country_flag = GF_nyto_opt02
-				set_country_flag = GF_nyto_opt03
-				set_country_flag = GF_nyto_opt04
-				set_country_flag = GF_nyto_opt_01_01
-				set_country_flag = GF_nyto_opt_02_01
-				set_country_flag = GF_nyto_opt_03_01
-				set_country_flag = GF_nyto_opt_04_01
-			}
-			if = {
-				limit = {
-					check_variable = {
-						which = GF_nyto_TXT
-						value = 7
-					}
-					NOT = {
-						has_country_flag = GF_nyto_ui_y
-					}
-				}
-				subtract_variable = {
-					which = GF_nyto_TXT
-					value = 2
-				}
-				remove_country_flag = GUI_BG_1
-				set_country_flag = GF_nyto_opt01
-				set_country_flag = GF_nyto_opt02
-				set_country_flag = GF_nyto_opt03
-				set_country_flag = GF_nyto_opt04
-			}
-		}
-	}
-	option = {
-		custom_gui = "NEW_OPTION"
-		name = degultopt
-		default_hide_option = yes
-		country_event = {
-			id = gfnytoparadeusancrel.30103
-		}
-		remove_country_flag = GUI_BG_1
-		remove_country_flag = GF_nyto_opt01
-		remove_country_flag = GF_nyto_opt02
-		remove_country_flag = GF_nyto_opt03
-		remove_country_flag = GF_nyto_opt04
-		remove_country_flag = small_painting_effct2_hide
-	}
-}
-
-country_event = {
-	id = gfnytoparadeusancrel.30103
-	title = gfnytoparadeusancrel.30103.name
-	desc = gfnytoparadeusancrel.30103.desc
-	is_triggered_only = yes
-	hide_window = no
-	diplomatic = yes
-	picture_event_data = {
-		portrait = owner
-		room = owner
-	}
-	option = {
-		name = gfnytoparadeusancrel.30103.a
-		response_text = "gfnytoparadeusancrel.30103.a.response"
-		set_country_flag = GFnyto_event_flag
-		is_dialog_only = yes
-	}
-	option = {
-		allow = {
-			has_country_flag = GFnyto_event_flag
-		}
-		name = gfnytoparadeusancrel.30103.b
-		response_text = gfnytoparadeusancrel.30103.b.response
-	}
-}
+#fleet_event = {
+#	id = gfnytoparadeusancrel.301
+#	title = "gfnytoparadeusancrel.301.name"
+#	desc = "gfnytoparadeusancrel.301.desc"
+#	picture = GFX_evt_nyto_unknown_civilization_202055_5
+#	show_sound = event_structural_collapse
+#	location = from
+#	archaeology = yes
+#	is_triggered_only = yes
+#	immediate = {
+#		from = {
+#			set_site_progress_locked = yes
+#		}
+#	}
+#	option = {
+#		name = gfnytoparadeusancrel.301.a
+#		#owner = {
+#		#	country_event = {
+#		#		id = gfnytoparadeusancrel.30102
+#		#	}
+#		#}
+#	}
+#}
 
 fleet_event = {
 	id = gfnytoparadeusancrel.302
@@ -410,7 +255,7 @@ event = {
 		any_playable_country = {
 			is_cg_country = yes
 			NOT = {
-				has_authority = auth_GF_paradeus
+				has_origin = origin_GF_nyto_the_last_light
 			}
 		}
 	}
@@ -421,7 +266,7 @@ event = {
 				is_cg_country = yes
 				is_ai = no	
 				NOT = { has_country_flag = hid_dc_nyto_evt }
-				NOT = { has_authority = auth_GF_paradeus}
+				NOT = { has_origin = origin_GF_nyto_the_last_light}
 			}
 			country_event = {
 				id = gfnytoparadeusancrel.4002
@@ -580,7 +425,7 @@ fleet_event = {
 					variable = Gf_res
 				}
 				add_resource = {
-					energy = -1
+					energy = -0.5
 					multiplier = Gf_res
 				}
 			}

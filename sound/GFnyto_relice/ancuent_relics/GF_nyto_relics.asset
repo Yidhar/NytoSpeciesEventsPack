@@ -31,7 +31,7 @@ soundeffect = {
 sound = {
 	name = "GFnyto_relics_sound"
 	file = "GFnyto_relics_sound.wav"
-	volume = 1
+	volume = 0.5
 }
 
 sound = {
@@ -42,7 +42,7 @@ sound = {
 sound = {
 	name =  "GFnyto_ELid_win_sound"
 	file = "GF_nyto_twilight.wav"
-	volume = 1
+	volume = 0.5
 }
 soundeffect = {
 	name = "GFnyto_ELid_win_sound"

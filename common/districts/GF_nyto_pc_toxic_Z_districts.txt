@@ -52,7 +52,7 @@ district_GF_nyto_pc_toxic_underground_industrial_area= {
 	}
 	conversion_ratio = 0.5
 	convert_to = {
-		district_GF_nyto_pc_toxic_consumer_good
+		district_GF_nyto_pc_toxic_alloy
 		district_GF_nyto_pc_toxic_leisure
 	}
 	resources = {

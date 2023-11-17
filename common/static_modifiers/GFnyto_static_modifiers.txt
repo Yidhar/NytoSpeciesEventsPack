@@ -141,8 +141,7 @@ gfnyto_ms_weapons2={
 	ship_accuracy_mult = 0.2
 }
 gfnyto_ms_weapons1={
-	weapon_type_nytowith_weapon_damage_mult = 0.05
-	weapon_type_nytowith_weapon_fire_rate_mult = 0.05
+	weapon_type_nytowith_weapon_damage_mult = 0.015
 }
 gfnyto_hudun={
 	ship_shield_penetration_mult = -1
@@ -171,8 +170,9 @@ gf_nyto_commind_weapon_buff ={
 }
 #缺少训练密钥
 GF_nyto_training_key_deficit ={
-	planet_jobs_physics_research_produces_mult = -0.7
-	planet_jobs_society_research_produces_mult = -0.7
+	planet_jobs_physics_research_produces_mult = -1.5
+	planet_jobs_society_research_produces_mult = -1.5
+	planet_jobs_engineering_research_produces_mult = -1.5
 	planet_jobs_physics_research_upkeep_mult = -0.7
 	planet_jobs_GF_nyto_collapse_liquid_produces_mult = -0.6
 }
@@ -200,7 +200,6 @@ GF_nyto_forward_base ={
 #额外护盾
 GF_nyoto_shield_ship ={
 	ship_shield_add = 87600
-	
 }
 #护盾恢复
 GF_nyto_shield_ship_regen ={
@@ -208,9 +207,8 @@ GF_nyto_shield_ship_regen ={
 }
 #沉默
 GF_nyto_p_weapon_system={
-	ship_accuracy_mult = -999999
+	ship_accuracy_mult = -9999999
 	ship_tracking_add = -99999999
-	ship_weapon_damage = -999999999999
 }
 #ai保护
 GF_nyto_ai_rbq ={
@@ -245,6 +243,7 @@ GF_nyto_T_weapon2_damgabuff = {
 GF_nyto_end_years ={
 	ship_weapon_damage = -0.5
 	ship_fire_rate_mult = 0.1
+	hide_from_country_list = yes
 }
 #游行
 GF_nyto_oper_pop ={
@@ -255,8 +254,8 @@ GF_nyto_oper_pop ={
 }
 #火炮
 GF_nyto_t_weapon = {
-	weapon_type_kinetic_weapon_damage_mult = 0.1
-	weapon_type_kinetic_weapon_fire_rate_mult = 0.1
+	weapon_type_kinetic_weapon_damage_mult = 0.3
+	weapon_type_kinetic_weapon_fire_rate_mult = 0.3
 }
 #献祭
 GF_nyto_kill_tanhua ={
@@ -266,7 +265,25 @@ GF_nyto_kill_tanhua ={
 }
 #
 GF_nyto_static_pop ={
-	pop_growth_speed = -999999
 	planet_pop_assembly_add = 1
 	hide_from_country_list = yes
+}
+#电子战正面buff
+GF_nyto_Electronic_pwlv_up ={
+	weapon_type_Electronic_weapon_damage_mult = 0.1
+	ship_shield_damage_mult = 0.005
+	ship_armor_damage_mult = 0.005
+	ship_accuracy_mult = 0.05
+	ship_evasion_mult = 0.05
+}
+#电子战负面buff
+GF_nyto_Electronic_pwlv_dwn ={
+	ship_shield_damage_mult = 0.0001
+	ship_hull_damage_mult = 0.0001
+	ship_shield_mult = 0.001
+	ship_armor_mult = 0.001
+}
+#巨构建造速度
+GF_nyto_mega_spped ={
+	megastructure_build_speed_add = 2
 }

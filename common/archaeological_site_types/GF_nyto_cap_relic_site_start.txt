@@ -95,7 +95,8 @@ site_nyto_unknown_civilization_3 ={
 		}
 	}
 }
-
+#阿弗纳斯遗迹
+#西伯利亚生命线
 #联动坟
 site_nyto_unknown_civilization_dc_nyto = {
 	desc = "site_nyto_unknown_civilization_dc_nyto_desc"

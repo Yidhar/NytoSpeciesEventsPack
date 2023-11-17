@@ -7,3 +7,16 @@ entropy ={
     parent = country
     modifier_category = ship #it applies to the planet
 }
+planet_buildings = {
+    parent = planet_structures
+
+    generate_mult_modifiers = {
+        cost
+        upkeep
+    }
+    generate_add_modifiers = {
+        upkeep
+        cost
+    }
+    modifier_category = planet
+}

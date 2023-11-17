@@ -6,7 +6,7 @@ GFnyto_mobile_city = {
 	rotation_speed = 0.1
 	collision_radius = @juggernaut_collision_radius
 	max_hitpoints = 150000
-	base_buildtime = 1800
+	base_buildtime = 7200
 	resources = {
 		category = ships
 		upkeep = {
@@ -21,7 +21,6 @@ GFnyto_mobile_city = {
 		"core" = { locator = "part2" }
 		"meidm" = { locator = "part2" }
 		"end" ={ locator = "part2" }
-		"weapon" = { locator = "part2" }
 	}
 	potential_construction = {
 		OR = {

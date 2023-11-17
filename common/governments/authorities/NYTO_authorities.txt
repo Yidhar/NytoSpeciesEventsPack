@@ -28,7 +28,8 @@ auth_GF_paradeus = {
 		SPY_NETWORK_DAILY_VALUE_ADD = 0.5
 		planet_stability_add = 20
 	}
-	
+	ruler_council_position = councilor_ruler_democratic
+
 	traits = {
 		trait = trait_GF_nyto_collapse_radiation_adaptation
 	}

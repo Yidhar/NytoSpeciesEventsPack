@@ -171,7 +171,10 @@ GF_nyto_weapons_system ={
 	every_controlled_ship = {
 		limit = { NOT = { has_ship_flag = GF_nyto_weapons_system_loding } }
 		set_ship_flag = GF_nyto_weapons_system_loding		
-
+		set_variable = {
+			which = GF_ship_Electronic_pwlv
+			value = trigger:is_ship_size
+		}
 		#增益武器效果
 		if = {
 			limit = { 
@@ -182,12 +185,6 @@ GF_nyto_weapons_system ={
 			} #夜空引领者
 			fleet = { set_fleet_flag = GF_Nyto_m_weapon2_flag }
 		}#夜空引领者
-		if = {
-			limit = {
-				has_component = GF_Nyto_h_weapon2
-			} #戈耳工干扰无人机
-			fromfromfrom = { set_fleet_flag = GF_Nyto_h_weapon2_flag }
-		}#戈耳工干扰无人机
 		if = {
 			limit = { has_component = GF_Nyto_p_weapon1 } #光影帷幕
 			set_ship_flag = GF_Nyto_p_weapon1_flag
@@ -221,21 +218,6 @@ GF_nyto_weapons_system ={
 			set_ship_flag = GF_Nyto_T_weapon2_flag
 		}#终末辉光
 		if = {
-			limit = { 
-				OR = {
-					has_component = GF_Nyto_missile_g_weapon1 
-					has_component = GF_Nyto_missile_g_weapon2
-				}			
-			}
-			export_modifier_to_variable = {
-				modifier = weapon_type_explosive_weapon_fire_rate_mult
-				variable = GF_nyto_explosive_fire_rate_mult
-			}
-			change_variable = { which = GF_nyto_explosive_fire_rate_mult value = 0.8 }
-			add_modifier = { modifier = GF_nyto_missle_1_buff days = 5 }
-			add_modifier = { modifier = GF_nyto_missle_1_debuff days = 25 multiplier = GF_nyto_explosive_fire_rate_mult }
-		}#导弹武器
-		if = {
 			limit = {
 					has_component = GF_Nyto_T_weapon1
 			}
@@ -254,9 +236,41 @@ GF_nyto_weapons_system ={
 				add_modifier = { modifier = GF_nyoto_shield_ship multiplier = prev.GF_shield_mult days = 2 }
 			}
 		}
+		#开始电子战计算
+		if ={
+			limit = {
+				or = {
+					has_component = GF_nyto_Electronic_Warfare
+					has_component = GF_nyto_Electronic_Warfare_m
+					has_component = GF_nyto_Electronic_Warfare_L
+				}
+			}
+			export_modifier_to_variable = {
+				modifier = weapon_type_Electronic_weapon_damage_mult
+				variable = GF_ship_Electronic_pwlv
+			}
+			multiply_variable = {
+				which = GF_ship_Electronic_pwlv
+				value = owner.modifier:intel_decryption_add
+			}
+			divide_variable = {
+				which = GF_ship_Electronic_pwlv
+				value = prev.fromfromfrom.owner.modifier:intel_encryption_add
+			}
+			multiply_variable = {
+				which = GF_ship_Electronic_pwlv
+				value = 0.01
+			}
+			fleet ={
+				change_variable = {
+					which = GF_fleet_Electronic_pwlv
+					value = prev.GF_ship_Electronic_pwlv
+				}
+			}
+		}
 	}
-	 #护盾效果
-	 if = {
+	#护盾效果
+	if = {
 	 	limit = {
 	 		any_owned_ship = {
 	 			OR = {
@@ -291,8 +305,8 @@ GF_nyto_weapons_system ={
 	 		}
 	 		fromfromfrom = { NOT = { has_fleet_flag = GF_nyto_shield_lv2_flag } }
 	 	}
-	 	fromfromfrom = { set_fleet_flag = GF_nyto_shield_lv1 }
-	 }
+		fromfromfrom = { set_fleet_flag = GF_nyto_shield_lv1 }
+	}
 	random_controlled_ship = {
 		#配件
 		if = {
@@ -300,6 +314,21 @@ GF_nyto_weapons_system ={
 			GF_nyto_in_system_weapon = yes 
 		}#刻托级舰载无人机
 		#舰船
+	}
+	#电子站buff
+	if = {
+		limit = {
+			check_variable = {
+				which = GF_fleet_Electronic_pwlv
+				value > 0
+			}
+		}
+		fromfromfrom ={
+			subtract_variable = {
+				which = GF_fleet_Electronic_pwlv
+				value = prev.GF_fleet_Electronic_pwlv
+			}
+		}
 	}
 	set_update_modifiers_batch = end
 }
@@ -424,6 +453,6 @@ GF_nyto_remove_effect ={
 	# 	clear_variable = has_GFnyto_beacon_weapon_02
 	# 	clear_variable = GF_nyto_damag
 	# }
-
-	remove_modifier = GF_nyto_missle_1_debuff
+	#
+	#remove_modifier = GF_nyto_missle_1_debuff
 }

@@ -55,6 +55,8 @@ tech_GF_nyto_godenergy_desc:0 "来自锡安的远古技术"
  tech_alicen_shiled_desc:0 "§W立场支援舰§!:交战时根据护盾循环层数*基数提供全舰队的额外护盾"
 tech_template_beacon_weapon:0 "超视界武器"
 tech_template_beacon_weapon_desc:0 "对超远程巨炮的热爱，最终让我们制造出了基于恒星能量运转的超视界武器。她能为我们的舰队，提供跨星系的火力支援。"
+ tech_GF_nyto_Electronic:0 "电子对抗计算机"
+ tech_GF_nyto_Electronic_desc:0 "先进的电子对抗系统能够让我们在战场上取得显著优势"
 #工程
 tech_GF_nyto_robomodding_points_1:0 "OGAS兼容"
 tech_GF_nyto_robomodding_points_1_desc:0 "在不损伤宿主大脑的情况下进一步解放欧加斯算力。"

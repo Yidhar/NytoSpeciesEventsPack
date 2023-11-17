@@ -18,7 +18,7 @@ country_event = {
 					leader_class = admiral
 				}
 				add_trait = leader_admiral_trait_GF_nyto_ogas_agreement
-				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement
+				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement
 				break = yes
 			}
 			if = {
@@ -26,7 +26,7 @@ country_event = {
 					leader_class = general
 				}
 				add_trait = leader_general_trait_GF_nyto_ogas_agreement
-				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement
+				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement
 				break = yes
 			}
 			if = {
@@ -34,7 +34,7 @@ country_event = {
 					leader_class = governor
 				}
 				add_trait = leader_governor_trait_GF_nyto_ogas_agreement
-				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement
+				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement
 				break = yes
 			}
 			if = {
@@ -42,17 +42,17 @@ country_event = {
 					leader_class = scientist
 				}
 				add_trait = leader_scientist_trait_GF_nyto_ogas_agreement
-				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement
+				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement
 				break = yes
 			}
-			if = {
-				limit = {
-					leader_class = ruler
-				}
-				add_trait = leader_trait_GF_nyto_ogas_agreement
-				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement
-				break = yes
-			}
+			#if = {
+			#	limit = {
+			#		leader_class = ruler
+			#	}
+			#	add_trait = leader_trait_GF_nyto_ogas_agreement
+			#	#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement
+			#	break = yes
+			#}
 		}
 	}
 }
@@ -76,7 +76,7 @@ country_event = {
 					leader_class = admiral
 				}
 				add_trait = leader_admiral_trait_GF_nyto_ogas_agreement_plus
-				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
+				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
 				break = yes
 			}
 			if = {
@@ -84,7 +84,7 @@ country_event = {
 					leader_class = general
 				}
 				add_trait = leader_general_trait_GF_nyto_ogas_agreement_plus
-				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
+				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
 				break = yes
 			}
 			if = {
@@ -92,7 +92,7 @@ country_event = {
 					leader_class = governor
 				}
 				add_trait = leader_governor_trait_GF_nyto_ogas_agreement_plus
-				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
+				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
 				break = yes
 			}
 			if = {
@@ -100,17 +100,17 @@ country_event = {
 					leader_class = scientist
 				}
 				add_trait = leader_scientist_trait_GF_nyto_ogas_agreement_plus
-				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
+				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
 				break = yes
 			}
-			if = {
-				limit = {
-					leader_class = ruler
-				}
-				add_trait = leader_trait_GF_nyto_ogas_agreement_plus
-				add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
-				break = yes
-			}
+			#if = {
+			#	limit = {
+			#		leader_class = ruler
+			#	}
+			#	add_trait = leader_trait_GF_nyto_ogas_agreement_plus
+			#	#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
+			#	break = yes
+			#}
 		}
 	}
 }
@@ -134,7 +134,7 @@ country_event = {
 					leader_class = admiral
 				}
 				add_trait = leader_admiral_trait_GF_nyto_noussphere
-				add_ruler_trait = leader_trait_GF_nyto_noussphere
+				#add_ruler_trait = leader_trait_GF_nyto_noussphere
 				break = yes
 			}
 			if = {
@@ -142,7 +142,7 @@ country_event = {
 					leader_class = general
 				}
 				add_trait = leader_general_trait_GF_nyto_noussphere
-				add_ruler_trait = leader_trait_GF_nyto_noussphere
+				#add_ruler_trait = leader_trait_GF_nyto_noussphere
 				break = yes
 			}
 			if = {
@@ -150,7 +150,7 @@ country_event = {
 					leader_class = governor
 				}
 				add_trait = leader_governor_trait_GF_nyto_noussphere
-				add_ruler_trait = leader_trait_GF_nyto_noussphere
+				#add_ruler_trait = leader_trait_GF_nyto_noussphere
 				break = yes
 			}
 			if = {
@@ -158,17 +158,17 @@ country_event = {
 					leader_class = scientist
 				}
 				add_trait = leader_scientist_trait_GF_nyto_noussphere
-				add_ruler_trait = leader_trait_GF_nyto_noussphere
+				#add_ruler_trait = leader_trait_GF_nyto_noussphere
 				break = yes
 			}
-			if = {
-				limit = {
-					leader_class = ruler
-				}
-				add_trait = leader_trait_GF_nyto_noussphere
-				add_ruler_trait = leader_trait_GF_nyto_noussphere
-				break = yes
-			}
+			#if = {
+			#	limit = {
+			#		leader_class = ruler
+			#	}
+			#	add_trait = leader_trait_GF_nyto_noussphere
+			#	#add_ruler_trait = leader_trait_GF_nyto_noussphere
+			#	break = yes
+			#}
 		}
 	}
 }
@@ -176,6 +176,7 @@ country_event = {
 #选择领袖类别
 country_event = {
 	id = GFnyto_global.21
+	title = GFnyto_global.21.desc
 	desc = GFnyto_global.21.desc
 	is_triggered_only = yes
 	diplomatic = yes
@@ -244,6 +245,7 @@ country_event = {
 #领袖选择器
 country_event = {
 	id = GFnyto_global.22
+	title =  GFnyto_global.21.desc
 	desc = GFnyto_global.21.desc
 	is_triggered_only = yes
 	diplomatic = yes
@@ -290,14 +292,14 @@ country_event = {
 				leader_class = governor
 			}
 		}
-		else_if = {
-			limit = {
-				has_country_flag = has_rule_leader
-			}
-			random_6_leader = {
-				leader_class = ruler
-			}
-		}
+		#else_if = {
+		#	limit = {
+		#		has_country_flag = has_rule_leader
+		#	}
+		#	random_6_leader = {
+		#		leader_class = ruler
+		#	}
+		#}
 	}
 	option = {
 		trigger = {
@@ -399,6 +401,7 @@ country_event = {
 #添加经验
 leader_event = {
 	id = GFnyto_global.23
+	title = GFnyto_global.21.desc
 	desc = GFnyto_global.23.desc
 	is_triggered_only = yes
 	diplomatic = yes
@@ -483,16 +486,16 @@ leader_event = {
 			owner = {
 				has_country_resource = {
 					type = GF_nyto_training_key
-					amount > 200
+					amount > 2000
 				}
 			}
 		}
 		owner = {
 			add_resource = {
-				GF_nyto_training_key = -200
+				GF_nyto_training_key = -2000
 			}
 		}
-		add_experience = 2000
+		add_experience = 20000
 		name = GFnyto_global.23.d
 		hidden_effect = {
 			leader_event = {
@@ -620,6 +623,7 @@ country_event = {
 				has_planet_flag = GF_nyto_eild_attack_begin
 			}
 		}
+		is_ai = no
 	}
 	immediate = {
 		if = {
@@ -840,8 +844,8 @@ country_event = {
 			num_assigned_jobs = { job = GFnyto_collapse_particle_zip value > 0 }
 			num_assigned_jobs = { job = GFnyto_collapse_particle_researcher value > 0 }		
 			any_owned_planet = { is_variable_set = GFnyto_plante_wrlv }
-			
 		}
+		is_ai = no
 	}
 	immediate = {
 		every_owned_planet = {
@@ -1036,6 +1040,7 @@ country_event = {
 					trigger = num_buildings
 					parameters = {
 						type = building_GFnyto_affluence_center
+						disabled = no
 					}
 					variable = has_affluence_num
 				}
@@ -1066,6 +1071,7 @@ country_event = {
 					trigger = num_buildings
 					parameters = {
 						type = GF_nyto_Recoil_decay_barrier
+						disabled = no
 					}
 					variable = has_GF_nyto_Recoil_decay_barrier_num
 				}
@@ -1300,83 +1306,287 @@ country_event = {
 	}
 }
 
-#限制造船数量
-#ship_event = {
-#	id = GFnyto_global.19
-#	hide_window = yes
-#	is_triggered_only = yes
-#	trigger = {
-#		OR = {
-#			is_ship_size = GFnyto_Command_ship
-#			is_ship_size = GFnyto_mobile_city
-#		}
-#	}
-#	immediate = {
-#		if = {
-#			limit = {
-#				is_ship_size = GFnyto_mobile_city
-#			}
-#			owner = {
-#				change_variable = {
-#					which = GFnyto_mobile_city_num
-#					value = 1
-#				}
-#			}
-#		}
-#		if = {
-#			limit = {
-#				is_ship_size = GFnyto_Command_ship
-#			}
-#			owner = {
-#				change_variable = {
-#					which = GFnyto_Command_ship_num
-#					value = 1
-#				}
-#			}
-#		}
-#	}
-#}
-
-#借贷清算 开始
-country_event = {
-	id = GFnyto_global.20
+#计数器
+# A ship has been built
+# Root = Ship
+# From = Planet
+ship_event = {
+	id = GFnyto_global.19
 	hide_window = yes
-	trigger = {		
-		NOT = {
-			has_country_flag = GF_end_star
-		}
-		end_game_years_passed >= 0	
-		any_owned_ship = { has_component = GFnyto_power_lv3 }
-	}
 	is_triggered_only = yes
-	immediate = {		
-		set_country_flag = GF_end_star
-		every_controlled_ship = {
-			limit = {
-				has_component = GFnyto_power_lv3
+	trigger = {
+		has_component = GFnyto_power_lv3
+	}
+	immediate = {
+		#广播
+		owner = {
+			if = {
+				limit = { check_variable = { which = GF_has_end_num value < 1 } 	}
+				every_playable_country = {
+					limit = {
+						not ={ is_country = prev }
+						not = { is_variable_set = GF_has_end_num }
+					}
+					country_event = {
+						id = GFnyto_global.24
+						days = 30
+					}
+				}
 			}
-			prev ={
+			if = {
+				limit = {
+					check_variable = {
+						which = GF_has_end_num
+						value > 50
+					}
+				}
+				every_playable_country = {
+					limit = {
+						not = {
+							is_country = this
+							is_variable_set = GF_has_end_num
+						}
+					}
+					country_event = {
+						id = GFnyto_global.241
+						days = 30
+					}
+				}
+			}
+			#计数
+			change_variable = {
+				which = GF_has_end_num
+				value = 1
+			}
+			event_target:global_event_country = {
 				change_variable = {
 					which = GF_has_end_num
 					value = 1
 				}
 			}
+			#当国家计数不为0
+			if = {
+				limit = {
+					not = { has_country_flag = GF_end_star }
+				}
+				set_country_flag = GF_end_star
+				country_event = {
+					id = GFnyto_global.20
+					days = 200
+				}
+			}
+			#当全局计数>国家*50时开启全银河事件
+			if ={
+				limit= {
+					event_target:global_event_country ={
+						check_variable = {
+							which = GF_has_end_num
+							value > 4000
+						}
+					}
+				}
+				owner ={
+					country_event = {
+						id = GFnyto_global.292
+						days = 5
+					}
+				}
+			}
 		}
-		divide_variable = {
-			which = GF_has_end_num
-			value = 10
+	}
+}
+
+country_event = {
+	id = GFnyto_global.24
+	title = GFnyto_global.24.name
+	desc = GFnyto_global.24.desc
+	picture = GFX_evt_star_chart
+	hide_window = no
+	is_triggered_only = yes
+	immediate = {
+
+	}
+	option = {
+		name = GFnyto_global.24.a
+	}
+}
+
+country_event = {
+	id = GFnyto_global.241
+	title = GFnyto_global.241.name
+	desc = GFnyto_global.241.desc
+	picture = GFX_evt_star_chart
+	hide_window = no
+	is_triggered_only = yes
+	immediate = {
+
+	}
+	option = {
+		name = GFnyto_global.241.a
+	}
+	option = {
+		name = GFnyto_global.241.b
+	}
+}
+
+country_event = {
+	id = GFnyto_global.242
+	title = GFnyto_global.242.name
+	desc = GFnyto_global.242.desc
+	picture = GFX_evt_GF_nyto_end_years
+	hide_window = no
+	is_triggered_only = yes
+	immediate = {
+
+	}
+	option = {
+		name = GFnyto_global.242.a
+	}
+}
+
+#波及到他人
+country_event = {
+	id = GFnyto_global.243
+	title = GFnyto_global.243.name
+	desc = GFnyto_global.243.desc
+	picture = GFX_evt_GF_nyto_end_years_2
+	hide_window = no
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = GFnyto_global.243.a
+	}
+}
+
+
+
+##借贷清算 运行
+country_event = {
+	id = GFnyto_global.20
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		not = {
+			has_country_flag = GF_end_ending
 		}
-		random_controlled_ship = {
+	}
+	immediate = {
+		if = {
+			limit ={
+				not = {
+					has_country_flag = GF_end_ending
+				}
+			}
+			country_event = {
+				id =GFnyto_global.20
+				days = 360
+			}
+		} #自循环
+		if = {
 			limit = {
-				has_component = GFnyto_power_lv3
+				has_country_flag = GF_end_1
+				check_variable = { which = GF_has_end_num value > 50 }
 			}
-			ship_event = {
-				id = GFnyto_global.25
+			every_owned_fleet = {
+				random = {
+					chance = prev.GF_has_end_num
+					fleet_event = { id =GFnyto_global.26 days = 5 }
+				}
+			}
+			set_country_flag = GF_end_2
+		}
+		if = {
+			limit = {
+				not = { has_country_flag = GF_end_2 }
+				check_variable = { which = GF_has_end_num value >=20 }
+			}
+			every_owned_ship = {
+				limit = { is_ship_class = shipclass_military }
+				random = {
+					chance =  prev.GF_has_end_num
+					ship_event = { 	id = GFnyto_global.25 days = 3 }
+				}
+			}
+			if = {
+				limit = { not = { has_country_flag = GF_end_1 } }
+				every_playable_country = {
+					limit = {
+						not = {
+							is_country = root
+						}
+					}
+					country_event = {
+						id = GFnyto_global.242
+						days = 15
+					}
+				}
+				set_country_flag = GF_end_1
+			}#广播
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = GF_has_end_num
+					value >= 100
+				}
+				not = {
+					has_country_flag = GF_end_midm
+				}
+			}
+			random = {
+				chance = 25
+				country_event = {
+					id = GFnyto_global.27
+					days = 31
+				}
+			}
+			random = {
+				chance = 2
+				country_event = {
+					id =GFnyto_global.30
+					days = 40
+				}
 			}
 		}
-		country_event = {
-			id = GFnyto_global.26
-			days = 500
+		if = {
+			limit = {
+				check_variable = {
+					which = GF_has_end_num
+					value >= 500
+				}
+				has_country_flag = GF_end_midm
+				not = {
+					has_country_flag = GF_end_midm2
+				}
+			}
+			random = {
+				chance = 20
+				country_event = {
+					id = GFnyto_global.28
+					days = 32
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = GF_end_midm
+				has_country_flag = GF_end_midm2
+			}
+			random = {
+				chance = 25
+				country_event = {
+					id =GFnyto_global.31
+					days = 40
+				}
+			}
+			random = {
+				chance = 10
+				country_event = {
+					id =GFnyto_global.30
+					days = 40
+				}
+			}
 		}
 	}
 }
@@ -1388,7 +1598,9 @@ ship_event = {
 	desc = GFnyto_global.25.desc
 	picture = GFX_evt_GF_nyto_end_years 
 	location = from 
-	is_triggered_only = yes 
+	is_triggered_only = yes
+	immediate = {
+	}
 	option = {
 		name = GFnyto_global.25.a
 		hidden_effect ={
@@ -1398,70 +1610,35 @@ ship_event = {
 }
 
 #重复触发
-country_event = {
+fleet_event = {
 	id = GFnyto_global.26
 	title = GFnyto_global.26.name
 	desc = GFnyto_global.26.desc
 	picture = GFX_evt_GF_nyto_end_years_2 
-	is_triggered_only = yes 
-	trigger ={
-		end_game_years_passed >= 1	
-		end_game_years_passed <= 10
-		any_owned_ship = { has_component = GFnyto_power_lv3 }
-		NOT = {
-			has_country_flag = GF_end_ending
-		}		
-		check_variable ={ which = GF_has_end_num value > 10 }
-	}		
+	is_triggered_only = yes
+	trigger = {
+
+	}
 	immediate = {
-		every_controlled_ship ={
-			limit = { has_component = GFnyto_power_lv3 }
-			random = {
-				chance = root.GF_has_end_num
-				delete_ship = this
-			}
-		}
-		country_event = {
-			id = GFnyto_global.26
-			days = 380
-			random = 100
-		}
+
 	}
 	option = {
 		name = GFnyto_global.26.a
-		every_owned_fleet = {
+		owner ={
 			add_modifier = {
 				modifier = GF_nyto_end_years
-				days = 180
+				days = 120
 			}
 		}
-		if = {
-			limit = { 
-				end_game_years_passed >= 5
-				NOT = {
-					has_country_flag = GF_end_midm
-				}
-			}
-			country_event = {
-				id = GFnyto_global.27
-				days = 180
-			}
-		}
-		if = {
-			limit = {
-				end_game_years_passed >= 7
-			}
-			country_event = {
-				id = GFnyto_global.28
-				days = 180
-				random = 180
-			}
+		destroy_fleet = {
+			target = this
+			kill_leader = yes
+			Destroy_template =yes
 		}
 	}
-
 }
 
-#>5年时熄灭数量/10个星系的恒星
+#>熄灭恒星 仅触发一次
 country_event = {
 	id = GFnyto_global.27
 	title = GFnyto_global.27.name
@@ -1469,31 +1646,20 @@ country_event = {
 	picture = GFX_evt_GF_nyto_end_years_3 #a name of a picture to display
 	is_triggered_only = yes 
 	trigger = {
-		has_country_flag = GF_end_star
-		NOT = {
-			has_country_flag = GF_end_midm
-		}
-		check_variable ={ which = GF_has_end_num value > 10 }
+
 	}
 	immediate = {
 		set_country_flag = GF_end_midm
 		every_system_within_border = {
-			random = {
-				chance = root.GF_has_end_num
-				set_star_class = sc_GF_endler
-				every_system_planet = {
-					limit = {
-						is_star = yes
-					}
-					if = {
-						limit = { has_orbital_station = yes }
-						orbital_station = {
-							dismantle = yes
-						}
-					}
+			set_star_class = sc_GF_endler
+			every_system_planet = {
+				limit = { is_star = yes }
+				if = {
+					limit = { has_orbital_station = yes }
+					orbital_station = { dismantle = yes }
 					clear_deposits = yes
 				}
-			}			
+			}
 		}
 	}
 	option = {
@@ -1501,7 +1667,7 @@ country_event = {
 	}
 }
 
-#>7年时随机崩碎星球
+#>崩碎除首都外所有星球
 country_event = {
 	id = GFnyto_global.28
 	title = GFnyto_global.28.name
@@ -1509,48 +1675,104 @@ country_event = {
 	picture = GFX_evt_GF_nyto_end_years_5 #a name of a picture to display
 	is_triggered_only = yes 
 	trigger = {
-		NOT = {
-			has_country_flag = GF_end_midm2
-		}
-		check_variable ={ which = GF_has_end_num value > 10 }
 	}
 	immediate = {
 		set_country_flag = GF_end_midm2
-		every_system_within_border = {			
+		every_system_within_border = {
+			set_star_class = sc_GF_endler
 			every_system_planet = {
 				limit = {
-					NOT = {
-						is_capital = yes
-					}
+					is_capital = no
 				}
-				random = {
-					chance = root.GF_has_end_num
-					solar_system = {
-						set_star_class = sc_GF_endler
-					}
-					change_pc = pc_GF_nyto_endles
-					destroy_colony = yes
-					remove_all_buildings = yes
-					clear_deposits = yes
-					clear_blockers = yes
-					orbital_station = {
-						dismantle = yes
+				change_pc = pc_GF_nyto_endles
+				destroy_colony = yes
+				remove_all_buildings = yes
+				clear_deposits = yes
+				clear_blockers = yes
+				orbital_station = { dismantle = yes }
+				set_planet_size = 0
+				set_planet_name = ""
+			}
+		}
+
+	}
+	option = {
+		name = GFnyto_global.28.a
+	}
+}
+
+#幸存
+country_event = {
+	id = GFnyto_global.30
+	title = GFnyto_global.30.name
+	desc = GFnyto_global.30.desc
+	picture = GFX_evt_GF_nyto_end_years_6 #a name of a picture to display
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = GF_end_ending
+	}
+	option = {
+		name = GFnyto_global.30.a
+	}
+}
+
+#寄！
+country_event = {
+	id = GFnyto_global.31
+	title = GFnyto_global.31.name
+	desc = GFnyto_global.31.desc
+	picture = GFX_evt_GF_nyto_end_years_7 #a name of a picture to display
+	is_triggered_only = yes
+	option = {
+		name = GFnyto_global.31.a
+		home_planet = {
+			solar_system = {
+				create_ambient_object = {
+					type = GF_nyto_aoe_object
+				}
+				create_nebula = {
+					radius = 50
+					name = "落日余辉"
+					effect = {
+						set_star_flag = salvager_nebula
 					}
 				}
 			}
 		}
-	}
-	option = {
-		name = GFnyto_global.28.a
-		country_event = {
-			id = GFnyto_global.29
-			days = 360
-			random = 180
-		}		
+		event_target:global_event_country ={
+			subtract_variable = {
+				which = GF_has_end_num
+				value = root.GF_has_end_num
+			}
+		}
+		destroy_country = yes
 	}
 }
 
-#> 变量>1000 则开启终焉事件
+
+#初始化全银河事件
+country_event = {
+	id = GFnyto_global.292
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		every_playable_country = {
+			country_event = {
+				id	= GFnyto_global.243
+				days = 3
+			}
+			if = {
+				limit = {
+					is_variable_set = GF_has_end_num
+				}
+				country_event = { id = GFnyto_global.29 }
+			}
+		}
+	}
+}
+
+#> 全银河事件
 country_event = {
 	id = GFnyto_global.29
 	title = GFnyto_global.29.name
@@ -1558,13 +1780,8 @@ country_event = {
 	picture = GFX_evt_GF_nyto_end_years_4 #a name of a picture to display
 	is_triggered_only = yes 
 	trigger = {
-		NOT = {
-			has_country_flag = GF_end_ending
-		}
-		check_variable ={ which = GF_has_end_num value > 10 }
 	}
 	immediate = {
-		set_country_flag = GF_end_ending
 		every_system = {
 			random = {
 				chance = 50
@@ -1604,83 +1821,13 @@ country_event = {
 					clear_blockers = yes
 					set_planet_name =  ""
 				}
-			}			
-
-		}
-		if = {
-			limit = {
-				check_variable_arithmetic ={
-					multiply = 10
-					which = GF_has_end_num
-					value >= 1000
-				}
-			}
-			country_event = {
-				id = GFnyto_global.31
-				days = 31
-			}
-		}
-		else_if = {
-			limit = { 
-				check_variable_arithmetic ={
-					multiply = 10
-					which = GF_has_end_num
-					value <= 1000
-				}
-			}
-			country_event = {
-				id = GFnyto_global.30
-				days = 180
 			}
 		}
 	}
 }
 
-#>10 变量<1000 安然度过
-country_event = {
-	id = GFnyto_global.30
-	title = GFnyto_global.30.name
-	desc = GFnyto_global.30.desc
-	picture = GFX_evt_GF_nyto_end_years_6 #a name of a picture to display
-	is_triggered_only = yes 
-	option = {
-		name = GFnyto_global.30.a
-	}
-}
 
-#寄！
-country_event = {
-	id = GFnyto_global.31
-	title = GFnyto_global.31.name
-	desc = GFnyto_global.31.desc
-	picture = GFX_evt_GF_nyto_end_years_7 #a name of a picture to display
-	is_triggered_only = yes 
-	option = {
-		name = GFnyto_global.31.a
-		home_planet = {
-			solar_system = {
-				create_nebula = {
-					radius = 50
-					name = "应许之地"
-					effect = {
-						set_star_flag = salvager_nebula
-					}
-				}
-			}
-		}
-		every_controlled_ship = {
-			limit = {
-				has_component = GF_Nyto_l_weapon1
-				has_component = GF_Nyto_x_weapon2
-			}
-			export_modifier_to_variable = {
-				modifier = weapon_type_LsScepter_weapon_damage_mult
-				variable = LsScepter_weapon_num
-			}
-		}
-		destroy_country = yes
-	}
-}
+
 
 #开局时检测是否存在多彩帝国
 

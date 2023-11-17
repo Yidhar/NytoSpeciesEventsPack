@@ -13,39 +13,33 @@ can_destroy_planet_with_tech_GFnyto_accelerating_coil3= {
 	}
 }
 
-is_kuat_fallen_empire = {
-	OR = {
-		is_country_type = kuat_fallen_empire
-		is_country_type = kuat_awakened_fallen_empire
-		is_country_type = awakened_return_kuat_empire
-		is_country_type = kuat_shipyard
-		is_country_type = kuat_support
-		is_country_type = kuat_fleet
-		is_country_type = kuat_fleet_hostile
-		is_country_type = kuat_fire_base
-		is_country_type = kuat_fire_base_hositle
-		is_country_type = ag_kae_ge_invasion_country
-		is_country_type = ag_kae_e_area_guardian
-	}
-}
+
 is_invisable_faction ={
 	always = no
-}
-
-
-is_cg_country ={
-	OR = {
-		has_country_flag = carnalism_flag
-		has_country_flag = asceticism_flag
-		has_country_flag = parasite_mind_flag
-		has_country_flag = lust_skynet_flag
-		has_country_flag = abstinence_flag
-	}
 }
 
 is_nyto_country ={
 	OR = {
 		has_country_flag = has_nyto_technology
-		has_authority = auth_GF_paradeus
+		has_origin = origin_GF_nyto_the_last_light
+	}
+}
+
+is_planet_district_wlv ={
+	planet = {
+		or = {
+			check_variable = {
+				which = GFnyto_plante_wrlv
+				value < 700
+			}
+			colony_type = col_GF_nyto_capital
+		}
+	}
+}
+is_mechanical_empire = {
+	OR = {
+		owner_species = { has_trait = trait_mechanical }
+		has_country_flag = synthetic_empire
+		is_nyto_country = yes
 	}
 }

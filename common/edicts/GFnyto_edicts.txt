@@ -1,5 +1,5 @@
 GFnyto_training_key = {
-	length = 0
+	length = 1
 	icon = GFX_edict_fund
 	show_tech_unlock_if = {
 		has_technology = tech_GF_nyto_algorithm
@@ -143,5 +143,15 @@ GF_nyto_auto_habitat = {
 			factor = 0 
 			has_country_flag = has_GF_nyto_auto_habitat
 		}
+	}
+}
+
+#停止所有人口增长
+GF_nyto_no_pops ={
+	icon = "GFX_edict_type_time"
+	length = -1
+	modifier = {
+		pop_growth_speed = -99999
+		planet_pop_assembly_mult = -9999
 	}
 }

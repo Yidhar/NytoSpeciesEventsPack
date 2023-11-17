@@ -1,7 +1,11 @@
 ﻿l_simp_chinese:
 
 civic_GF_nyto_90wish:0 "90wish"
-civic_GF_nyto_90wish_desc:0 "隶属于国防部的科研组织,通常情况下其他国家禁止的实验项目在90wish都是被允许进行的。允许建造具有§PX§!槽的护卫舰."
+civic_GF_nyto_90wish_desc:0 "隶属于国防部的科研组织,允许进行非人道的极端试验"
+ councilor_90wish:0 "国防科技大臣"
+ councilor_90wish_desc:0 "隶属于国防部的直属科技部门"
+ councilor_armor_train:0 "城市化推进者"
+ councilor_armor_train_desc:0 "热衷于堡垒化建设,设计出超出常规的冗余设计"
 #civic_GF_nyto_90wish_text:0 ""
 
 civic_GF_nyto_forward_base:0 "星河远征"

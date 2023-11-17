@@ -27,8 +27,8 @@ GF_nyto_elid_attack = {
 					50 = {
 						create_army = {
 							name = "EILD"
-							owner = event_target:EILD_country
-							species = event_target:ELID_species
+							owner = event_target:EILD_country@root
+							species = event_target:ELID_species@root
 							type = "GF_nyto_eild_army_1"
 						}
 						modifier = {
@@ -38,8 +38,8 @@ GF_nyto_elid_attack = {
 					50 = {
 						create_army = {
 							name = "EILD"
-							owner = event_target:EILD_country
-							species = event_target:ELID_species
+							owner = event_target:EILD_country@root
+							species = event_target:ELID_species@root
 							type = "GF_nyto_eild_army_2"
 						}
 						modifier = {
@@ -49,8 +49,8 @@ GF_nyto_elid_attack = {
 					1 = {
 						create_army = {
 							name = "EILD"
-							owner = event_target:EILD_country
-							species = event_target:ELID_species
+							owner = event_target:EILD_country@root
+							species = event_target:ELID_species@root
 							type = "GF_nyto_eild_army_3"
 						}
 						modifier = {
@@ -81,7 +81,7 @@ GF_nyto_elid_attack = {
 				which = GFnyto_Eild_level_rar
 				value = 0.5
 			}
-			event_target:EILD_country = {
+			event_target:EILD_country@root = {
 				add_modifier = {
 					modifier = GF_nyto_Elid_level
 					multiplier = prev.GFnyto_Eild_level_rar
@@ -91,8 +91,8 @@ GF_nyto_elid_attack = {
 				count = GFnyto_Eild_level_rar
 				create_army = {
 					name = "EILD"
-					owner = event_target:EILD_country
-					species = event_target:ELID_species
+					owner = event_target:EILD_country@root
+					species = event_target:ELID_species@root
 					type = "GF_nyto_eild_army_3"
 				}
 			}
@@ -105,7 +105,7 @@ GF_nyto_elid_attack = {
 					value >= 100
 				}
 			}
-			event_target:EILD_country = {
+			event_target:EILD_country@root = {
 				add_modifier = {
 					modifier = GF_nyto_Elid_level2
 					multiplier = prev.GFnyto_Eild_level_rar
@@ -115,8 +115,8 @@ GF_nyto_elid_attack = {
 				count = GFnyto_Eild_level_rar
 				create_army = {
 					name = "EILD"
-					owner = event_target:EILD_country
-					species = event_target:ELID_species
+					owner = event_target:EILD_country@root
+					species = event_target:ELID_species@root
 					type = "GF_nyto_eild_army_3"
 				}
 			}

@@ -6,7 +6,7 @@ GF_nyto_asset_bureaucrat = {
         name_generation_method = random_person
         portrait_generation_method = random_person
     }
-    passive = { spy_network_levels_add = @asset_spy_network_max }
+    passive = { spy_network_levels_add = @asset_spy_network_max spy_network_daily_value_mult = 0.15 ADD_BASE_COUNTRY_INTEL = 1}
     active = {
         op_cat_subterfuge_skill_add = @category_mod
         op_cat_government_skill_add = @category_mod
@@ -22,7 +22,11 @@ GF_nyto_asset_clerk = {
         portrait_generation_method = random_person
     }
 
-    passive = { spy_network_levels_add = @asset_spy_network_max }
+    passive = {
+        spy_network_levels_add = @asset_spy_network_max
+        spy_network_daily_value_mult = 0.15
+        ADD_BASE_COUNTRY_INTEL = 1
+    }
     active = {
         op_cat_subterfuge_skill_add = @category_mod
         op_cat_diplomacy_skill_add = @category_mod
@@ -38,7 +42,7 @@ GF_nyto_asset_economist = {
         portrait_generation_method = random_person
     }
 
-    passive = { spy_network_levels_add = @asset_spy_network_max }
+    passive = { spy_network_levels_add = @asset_spy_network_max spy_network_daily_value_mult = 0.15 ADD_BASE_COUNTRY_INTEL = 1}
     active = {
         op_cat_subterfuge_skill_add = @category_mod
         op_cat_economy_skill_add = @category_mod
@@ -53,7 +57,7 @@ GF_nyto_asset_scientist = {
         name_generation_method = random_person
         portrait_generation_method = random_person
     }
-    passive = { spy_network_levels_add = @asset_spy_network_max }
+    passive = { spy_network_levels_add = @asset_spy_network_max spy_network_daily_value_mult = 0.15 ADD_BASE_COUNTRY_INTEL = 1}
     active = {
         op_cat_subterfuge_skill_add = @category_mod
         op_cat_technology_skill_add = @category_mod
@@ -68,7 +72,7 @@ GF_nyto_asset_officer = {
         name_generation_method = random_person
         portrait_generation_method = random_person
     }
-    passive = { spy_network_levels_add = @asset_spy_network_max }
+    passive = { spy_network_levels_add = @asset_spy_network_max  spy_network_daily_value_mult = 0.15 ADD_BASE_COUNTRY_INTEL = 1}
     active = {
         op_cat_subterfuge_skill_add = @category_mod
         op_cat_military_skill_add = @category_mod

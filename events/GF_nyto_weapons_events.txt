@@ -11,12 +11,7 @@ country_event = {
 		fromfrom = { owner = { is_invisable_faction = no } }
 	}
 	immediate = {
-		fromfrom = { 
-			if ={
-				limit = {
-					owner =  {is_invisable_faction = no }
-				}
-			}
+		fromfrom = { 			
 			GF_nyto_weapons_system = yes 
 		}
 		#脚本初始化
@@ -37,12 +32,10 @@ country_event = {
 	}
 	is_triggered_only = yes
 	immediate = {
-		fromfrom = {		
-			fleet = {
-				remove_modifier = gfnyto_ms_weapons1
-				change_variable = { which = GF_nyto_kill_num value = 1 }
-				add_modifier = { modifier = gfnyto_ms_weapons1 multiplier = GF_nyto_kill_num days = -1}
-			}		
+		fromfrom.fleet = {
+			remove_modifier = gfnyto_ms_weapons1
+			change_variable = { which = GF_nyto_kill_num value = 1 }
+			add_modifier = { modifier = gfnyto_ms_weapons1 multiplier = GF_nyto_kill_num days = -1}
 		}
 	}
 }
@@ -93,6 +86,10 @@ fleet_event = {
 		if = { limit = { is_in_combat = yes }
 			set_update_modifiers_batch = begin
 			every_owned_ship = {
+				set_variable = {
+					which = GF_fleet_Electronic_pwlv
+					value = fleet.GF_fleet_Electronic_pwlv
+				}
 				change_variable = { which = GF_nyto_combat_days value = 1 }
 				fleet = {
 					if = {
@@ -292,12 +289,70 @@ fleet_event = {
 				# }#指挥舰
 				##威廉的预留位
 			}
+			change_variable = { which = GF_nyto_combat_days value = 1 }
+			if = {
+				limit = {
+					check_variable = {
+						which = GF_fleet_Electronic_pwlv
+						value > 0
+					}
+					check_modifier_value = {
+						modifier = weapon_type_Electronic_weapon_damage_mult
+						value < 100000
+					}
+				}
+				set_variable = {
+					which = GF_fleet_Electronic_BUFF_lv
+					value = GF_fleet_Electronic_pwlv
+				}
+				multiply_variable = {
+					which = GF_fleet_Electronic_BUFF_lv
+					value = GF_nyto_combat_days
+				}
+				remove_modifier = GF_nyto_Electronic_pwlv_up
+				add_modifier = {
+					modifier = GF_nyto_Electronic_pwlv_up
+					multiplier = GF_fleet_Electronic_BUFF_lv
+					days = 10
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = GF_fleet_Electronic_pwlv
+						value < 0
+					}
+					check_modifier_value = {
+						modifier = ship_shield_damage_mult
+						value > -100000
+					}
+				}
+				set_variable = {
+					which = GF_fleet_Electronic_BUFF_lv
+					value = GF_fleet_Electronic_pwlv
+				}
+				multiply_variable = {
+					which = GF_fleet_Electronic_BUFF_lv
+					value = GF_nyto_combat_days
+				}
+				remove_modifier = GF_nyto_Electronic_pwlv_dwn
+				add_modifier = {
+					modifier = GF_nyto_Electronic_pwlv_dwn
+					multiplier = GF_fleet_Electronic_BUFF_lv
+					days = 10
+				}
+
+			}
 			set_update_modifiers_batch = end
 			fleet_event = { id = gf_nyto_weapons.8001 days = 1 }
 		} 
 		
 		if = { limit = { is_in_combat = no }
 			set_update_modifiers_batch = begin
+			clear_variable = GF_nyto_combat_days
+			clear_variable = GF_fleet_Electronic_BUFF_lv
+			clear_variable = GF_fleet_Electronic_pwlv
+			remove_modifier = GF_nyto_Electronic_pwlv_up
 			every_controlled_ship = {
 				GF_nyto_remove_effect = yes
 			}

@@ -12,6 +12,10 @@ country_event = {
 	immediate = {	
 		set_global_flag = has_NYTO_mod
 		set_built_species = owner_main_species
+		add_modifier = {
+			modifier = GF_nyto_static_pop
+			days = -1
+		}
 	}
 }
 
@@ -122,10 +126,6 @@ country_event = {
 			remove_building = building_foundry_1
 			remove_building = building_factory_1
 			remove_building = building_research_lab_1
-			if = {
-				limit ={ owner ={ is_ai = no } }
-				add_building = building_GFnyto_collapse_tower
-			}			
 			add_district = district_GF_nyto_pc_toxic_underground_shelters
 			add_district = district_GF_nyto_pc_toxic_underground_shelters
 			add_district = district_GF_nyto_pc_toxic_underground_shelters
@@ -135,6 +135,11 @@ country_event = {
 			add_district = district_GF_nyto_pc_toxic_underground_research_institute
 			add_deposit = d_GFnyto_ancient_city_zone
 			add_deposit = d_GFnyto_ancient_industry_zone
+
+			if = {
+				limit ={ owner ={ is_ai = no } }
+				add_building = building_GFnyto_collapse_tower
+			}
 			while = {
 				count = 10
 				create_pop = {
@@ -211,7 +216,7 @@ country_event = {
 					}
 				}
 				while = {
-					count = 8
+					count = 6
 					create_army = {
 						name = "远征军"
 						owner = root
@@ -233,6 +238,7 @@ country_event = {
 						owner = root
 						species = root
 						type = GF_nyto_armor_train
+						land_army = yes
 					}
 				}
 				root = {
@@ -255,7 +261,7 @@ country_event = {
 				force_add_civic = civic_GF_nyto_Vengeance_Crusade
 				every_owned_fleet = {
 					while = {
-						count = 17
+						count = 2
 						create_ship = {
 							name = random
 							random_existing_design = corvette
@@ -275,17 +281,17 @@ country_event = {
 					}
 					effect = {
 						set_species_homeworld = prev
-						save_global_event_target_as = GFnyto_ELID_infected
+						save_global_event_target_as = GFnyto_ELID_infected@root
 					}
 				}
 				while = {
 					count = 10
 					create_pop = {
-						species = event_target:GFnyto_ELID_infected
+						species = event_target:GFnyto_ELID_infected@root
 					}
 				}
 			}
-			event_target:GFnyto_ELID_infected = { set_citizenship_type = { type = citizenship_limited country = root } }		
+			event_target:GFnyto_ELID_infected@root = { set_citizenship_type = { type = citizenship_limited country = root } }
 		}
 		if = {
 			limit = { has_civic = civic_GF_nyto_forward_base }

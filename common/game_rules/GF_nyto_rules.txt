@@ -1,91 +1,170 @@
-# # Checks whether the game should try and build a building or district on a planet via scripts in common/colony_automation
-# # Does not apply to "crisis building" (colony_automation_exceptions) or sector automation (sector_focuses)
-# # this = planet
-# # should_planetary_automate = {
-# # 	OR = {
-# # 		AND = {
-# # 			OR = { free_jobs < 3 num_unemployed > 0 }
-# # 			has_building_construction = no
-# # 		}
-# # 		AND = {
-# # 			owner = { has_authority = auth_starshipgirls }
-# # 			OR = { free_district_slots > 0 free_building_slots > 0 free_jobs < 3 num_unemployed > 0 }
-# # 			has_building_construction = no
-# # 		}
-# # 		AND = {
-# # 			owner = { has_authority = auth_GF_paradeus }
-# # 			OR = { free_district_slots > 0 free_building_slots > 0 free_jobs < 3 num_unemployed > 0 }
-# # 			has_building_construction = no
-# # 		}
-# # 	}
-# # # }
-# # should_planetary_automate = {
-# # 	OR = {
-# # 		free_district_slots > 0
-# # 		free_building_slots > 0
-# # 		free_jobs < 3
-# # 		num_unemployed > 0
-# # 	}
-# # 	has_building_construction = no
-# # }
+## # Checks whether the game should try and build a building or district on a planet via scripts in common/colony_automation
+## # Does not apply to "crisis building" (colony_automation_exceptions) or sector automation (sector_focuses)
+## # this = planet
+## # should_planetary_automate = {
+## # 	OR = {
+## # 		AND = {
+## # 			OR = { free_jobs < 3 num_unemployed > 0 }
+## # 			has_building_construction = no
+## # 		}
+## # 		AND = {
+## # 			owner = { has_authority = auth_starshipgirls }
+## # 			OR = { free_district_slots > 0 free_building_slots > 0 free_jobs < 3 num_unemployed > 0 }
+## # 			has_building_construction = no
+## # 		}
+## # 		AND = {
+## # 			owner = { has_authority = auth_GF_paradeus }
+## # 			OR = { free_district_slots > 0 free_building_slots > 0 free_jobs < 3 num_unemployed > 0 }
+## # 			has_building_construction = no
+## # 		}
+## # 	}
+## # # }
+## # should_planetary_automate = {
+## # 	OR = {
+## # 		free_district_slots > 0
+## # 		free_building_slots > 0
+## # 		free_jobs < 3
+## # 		num_unemployed > 0
+## # 	}
+## # 	has_building_construction = no
+## # }
+#
+## can_species_be_assembled = {
+## 	OR = {
+## 		is_archetype = WARSHIPGIRL
+## 		is_archetype = SHENHAI
+## 		is_archetype = UNITED_FLEET
+## 		is_archetype = STARSHIPGIRLS
+## 		is_archetype = KANMUSU
+## 		is_archetype = DATEALIVE
+## 		is_archetype = NANITES_CROP
+## 		is_archetype = Dolls
+## 		is_archetype = NYTO
+## 		AND = {
+## 			is_sapient = yes
+## 			OR = {
+## 				AND = {
+## 					is_robotic = yes
+## 					root = { check_modifier_value = { modifier = planet_pop_assembly_add value > 0 } }
+## 				}
+## 				AND = {
+## 					is_organic_species = yes
+## 					if = {
+## 						limit = { root.owner = { is_hive_empire = yes } }
+## 						has_trait = trait_hive_mind
+## 					}
+## 					else_if = {
+## 						limit = { has_trait = trait_plantoid_budding }
+## 						root = { any_owned_species = { is_exact_same_species = prevprev } }
+## 					}
+## 					else_if = {
+## 						limit = {
+## 							OR = {
+## 								has_trait = trait_clone_soldier_infertile
+## 								has_trait = trait_clone_soldier_infertile_full_potential
+## 							}
+## 						}
+## 						root = {
+## 							# Event 'clones.3' should cover this, but extra safety check.
+## 							has_building = building_clone_army_clone_vat
+## 							NOT = { check_variable = { which = clone_pops_missing value = 0 } }
+## 						}
+## 					}
+## 					else_if = {
+## 						limit = {
+## 							root.owner = {
+## 								OR = {
+## 									has_valid_civic = civic_nirvana_empire_dragon
+## 									has_valid_civic = civic_nirvana_empire_council
+## 								}
+## 							}
+## 							is_same_species = root.owner
+## 						}
+## 						root = { check_modifier_value = { modifier = planet_pop_assembly_organic_add value > 0 } }
+## 					}
+## 					else = { root = { has_building = building_clone_vats } }
+## 				}
+## 			}
+## 		}
+## 	}
+## 	has_population_control = { type = no country = root.owner }
+## }
+#can_purge_pop_manually = {
+#
+#    custom_tooltip = {
+#        fail_text = "ALREADY_BEING_PURGED"
+#        NOT = { has_citizenship_type = { type = citizenship_purge country = owner } }
+#    }
+#    custom_tooltip = {
+#        fail_text = "ACTION_CANNOT_PURGE_CITIZEN"
+#        exists = owner
+#        OR = {
+#            is_robot_pop = yes
+#            is_sapient = no
+#            owner = { has_authority = auth_hive_mind }
+#            has_citizenship_type = { type = citizenship_slavery country = owner }
+#            has_citizenship_type = { type = citizenship_full_machine country = owner }
+#        }
+#    }
+#    custom_tooltip = {
+#        fail_text = "ACTION_CANNOT_PURGE_POLICY"
+#        exists = owner
+#        OR = {
+#            is_robot_pop = yes
+#            AND = {
+#                is_sapient = no
+#                owner = { NOT = { has_policy_flag = pre_sapients_protect } }
+#            }
+#            owner = { has_ethic = ethic_gestalt_consciousness }
+#            owner = { has_policy_flag = purge_allowed }
+#        }
+#    }
+#    custom_tooltip = {
+#        fail_text = "ACTION_DISASSEMBLE_SYNTHETICS"
+#        exists = owner
+#        OR = {
+#            is_robot_pop = no
+#            owner = { has_authority = auth_hive_mind }
+#            NAND = {
+#                has_trait = trait_mechanical
+#                owner = { has_policy_flag = ai_full_rights }
+#            }
+#        }
+#    }
+#}
+should_force_decline_species = {
+    # Infertile Clone Army pops should decline if in Country that can't have Vats, or there is a Vat shortage.
+    or = {
+        custom_tooltip = {
+            success_text = CLONE_ARMY_FORCE_DECLINE
+            OR = {
+                has_trait = trait_clone_soldier_infertile
+                has_trait = trait_clone_soldier_infertile_full_potential
+            }
+            from = {
+                OR = {
+                    # Check if country is unable to build Vats for this species.
+                    AND = {
+                        exists = owner
+                        owner = {
+                            OR = {
+                                NOT = { has_origin = origin_clone_army }					# Can't have Vats.
+                                has_country_flag = clone_army_fertility_unlocked			# Can't have Vats anymore.
+                                NOT = { owner_main_species = { is_same_species = root } }	# Our Vats can't build this species.
+                            }
+                        }
+                    }
+                    # Vats check out, but are there more pops than Vats support?
+                    check_variable = { which = clone_pops_missing value < 0 }
+                }
+            }
+        }
+        custom_tooltip ={
+            success_text = "GF_nyto_decline"
+            from ={
+                colony_type = col_GF_nyto_capital
+            }
+        }
+    }
 
-# can_species_be_assembled = {
-# 	OR = {
-# 		is_archetype = WARSHIPGIRL
-# 		is_archetype = SHENHAI
-# 		is_archetype = UNITED_FLEET
-# 		is_archetype = STARSHIPGIRLS
-# 		is_archetype = KANMUSU
-# 		is_archetype = DATEALIVE
-# 		is_archetype = NANITES_CROP
-# 		is_archetype = Dolls
-# 		is_archetype = NYTO
-# 		AND = {
-# 			is_sapient = yes
-# 			OR = {
-# 				AND = {
-# 					is_robotic = yes
-# 					root = { check_modifier_value = { modifier = planet_pop_assembly_add value > 0 } }
-# 				}
-# 				AND = {
-# 					is_organic_species = yes
-# 					if = {
-# 						limit = { root.owner = { is_hive_empire = yes } }
-# 						has_trait = trait_hive_mind
-# 					}
-# 					else_if = {
-# 						limit = { has_trait = trait_plantoid_budding }
-# 						root = { any_owned_species = { is_exact_same_species = prevprev } }
-# 					}
-# 					else_if = {
-# 						limit = {
-# 							OR = {
-# 								has_trait = trait_clone_soldier_infertile
-# 								has_trait = trait_clone_soldier_infertile_full_potential
-# 							}
-# 						}
-# 						root = {
-# 							# Event 'clones.3' should cover this, but extra safety check.
-# 							has_building = building_clone_army_clone_vat
-# 							NOT = { check_variable = { which = clone_pops_missing value = 0 } }
-# 						}
-# 					}
-# 					else_if = {
-# 						limit = {
-# 							root.owner = {
-# 								OR = {
-# 									has_valid_civic = civic_nirvana_empire_dragon
-# 									has_valid_civic = civic_nirvana_empire_council
-# 								}
-# 							}
-# 							is_same_species = root.owner
-# 						}
-# 						root = { check_modifier_value = { modifier = planet_pop_assembly_organic_add value > 0 } }
-# 					}
-# 					else = { root = { has_building = building_clone_vats } }
-# 				}
-# 			}
-# 		}
-# 	}
-# 	has_population_control = { type = no country = root.owner }
-# }
+}

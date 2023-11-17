@@ -386,7 +386,7 @@ utility_component_template = {
 	size = small
 	icon = "GFX_ship_part_GFnyto_power_lv2"
 	icon_frame = 1
-	power = 10000
+	power = 15000
 	resources = {
 		category = ship_components
 		cost = {
@@ -402,7 +402,44 @@ utility_component_template = {
 	}
 	component_set = "power_core"
 	size_restriction = {  GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship GFnyto_mobile_city
-		GFnyto_stions_fortress }
+		 }
+	#	upgrades_to = "BATTLESHIP_DARK_MATTER_REACTOR"
+	class_restriction = {
+		shipclass_military
+		shipclass_constructor
+		shipclass_colonizer
+		shipclass_science_ship
+		shipclass_transport
+		shipclass_military_special
+		shipclass_starbase
+		shipclass_military_station
+	}
+	ai_weight = {
+		weight = 500
+	}
+	upgrades_to = GF_nyto_godenergy
+}
+utility_component_template = {
+	key = "GFnyto_power_lv2_6"
+	size = small
+	icon = "GFX_ship_part_GFnyto_power_lv2"
+	icon_frame = 1
+	power = 50000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1400
+			GF_nyto_collapse_liquid = 200
+		}
+		upkeep = {
+			GF_nyto_collapse_liquid = 20
+		}
+	}
+	prerequisites = {
+		"tech_GFnyto_power_lv2"
+	}
+	component_set = "power_core"
+	size_restriction = {GFnyto_stions_fortress GFnyto_mobile_city}
 	#	upgrades_to = "BATTLESHIP_DARK_MATTER_REACTOR"
 	class_restriction = {
 		shipclass_military
@@ -426,7 +463,7 @@ utility_component_template = {
 	size = small
 	icon = "GFX_ship_part_GFnyto_power_lv3"
 	icon_frame = 1
-	power = 100000
+	power = 1000000
 	resources = {
 		category = entropy
 		cost = {
@@ -444,6 +481,9 @@ utility_component_template = {
 			alloys = 100
 			consumer_goods = 100
 			food = 100
+			engineering_research = 100
+			physics_research = 100
+			society_research = 100
 		}
 	}
 	prerequisites = {
@@ -466,7 +506,7 @@ utility_component_template = {
 	ai_weight = {
 		weight = 0
 	}
-	upgrades_to = GF_nyto_godenergy
+
 }
 
 #穿梭引擎
@@ -487,8 +527,6 @@ utility_component_template = {
 	ftl = yes
 	jumpdrive = yes
 	ship_modifier = {
-		#		ship_windup_mult = -1
-		#		ship_winddown_mult = -1
 		ship_jumpdrive_cooldown_mult = -0.8
 		ship_windup_mult = -0.8
 		ship_ftl_jumpdrive_range_mult = 1
@@ -1123,5 +1161,72 @@ utility_component_template = {
 
 	ai_weight = {
 		weight = 4
+	}
+}
+
+## 光环
+utility_component_template = {
+	key = "GF_SHIP_AURA_Trap_SHIP_AURA"
+	size = medium
+	icon = "GFX_ship_part_aura_strike_craft"
+	icon_frame = 1
+	power = -3000
+	component_set = ship_aura_components
+	size_restriction = { GFnyto_Command_ship }
+	friendly_aura = {
+		name ="算力核心"
+		system_wide = no
+		stack_info = {
+			id = "GF_command_aura"
+			priority = 1
+		}
+		modifier = {
+			custom_tooltip = "GF_nyto_Trap_desc"
+			#weapon_type_Electronic_weapon_damage_mult = 2
+		}
+	}
+	ftl_inhibitor = yes
+}
+
+utility_component_template = {
+	key = "GF_SHIP_AURA_STRIKE_CRAFT"
+	size = medium
+	icon = "GFX_ship_part_aura_strike_craft"
+	icon_frame = 1
+	power = -3000
+	size_restriction = { GFnyto_Command_ship }
+	component_set = "ship_aura_components"
+
+	friendly_aura = {
+		name = "算力核心"
+		system_wide = no
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = GF_friendly_command_ship_aura
+			priority = 1
+		}
+		modifier = {
+			custom_tooltip = "GF_nyto_Electronic_m_desc"
+			show_only_custom_tooltip = yes
+			weapon_type_Electronic_weapon_damage_mult = 2
+
+		}
+		graphics = {
+			area_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 2
+			is_ai = yes
+			is_preferred_weapons = weapon_type_energy
+		}
 	}
 }

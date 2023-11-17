@@ -12,7 +12,7 @@ wg_GFnyto_assimilation = {
 		demand_surrender
 	}
 	threat_multiplier = 10
-	surrender_acceptance = -100
+	surrender_acceptance = -50
 	potential = {owner={has_origin = origin_GF_nyto_the_last_light}}
 	possible = {always = yes}
 	ai_weight = {weight = 100}
@@ -33,10 +33,21 @@ wg_GFnyto_assimilation = {
 			every_owned_starbase = {
 				set_owner = prevprev
 			}
-			every_owned_leader = {
-				change_species = prevprev.owner_main_species
-				set_owner =prevprev
+			if = {
+				limit = {
+					not = {
+						has_ethic = ethic_gestalt_consciousness
+					}
+				}
+				every_owned_leader = {
+					random = {
+						chance = 50
+						change_species = prevprev.owner_main_species
+						set_owner =prevprev
+					}
+				}
 			}
+
 		}
 	}
 	#on_wargoal_set = {

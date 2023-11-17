@@ -69,9 +69,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = -10
 	modifier = {
-		ship_hull_regen_add_perc = 1
-		ship_shield_regen_add_perc = 1
-		ship_armor_regen_add_perc = 1
+		ship_hull_regen_add_perc = 0.1
+		ship_armor_regen_add_perc = 0.2
 	}	
 	component_set = "GF_nyto_injury_control_team"
 	resources = {

@@ -18,6 +18,7 @@ building_GFnyto_collapse_exploit_plant_1 = {
 					}
 					not = {
 						has_district = district_GF_nyto_pc_toxic_science
+						colony_type = col_GF_nyto_capital
 					}
 				}
 				and = {
@@ -26,7 +27,9 @@ building_GFnyto_collapse_exploit_plant_1 = {
 						value > 700
 					}
 					has_district = district_GF_nyto_pc_toxic_science
+					not = { colony_type = col_GF_nyto_capital }
 				}
+
 			}
 		}
 		text = "GF_nyto_plante_build_off"
@@ -50,6 +53,7 @@ building_GFnyto_collapse_exploit_plant_1 = {
 					}
 					has_district = district_GF_nyto_pc_toxic_science
 				}
+				colony_type = col_GF_nyto_capital
 			}
 		}
 		job_GFnyto_collapse_particle_researcher_add = 2
@@ -73,6 +77,7 @@ building_GFnyto_collapse_exploit_plant_1 = {
 						}
 						has_district = district_GF_nyto_pc_toxic_science
 					}
+					colony_type = col_GF_nyto_capital
 				}
 			}
 			energy = 4
@@ -97,6 +102,7 @@ building_GFnyto_collapse_exploit_plant_1 = {
 						has_district = district_GF_nyto_pc_toxic_science
 					}
 				}
+				colony_type = col_GF_nyto_capital
 
 			}
 			energy = 0.07
@@ -144,6 +150,7 @@ building_GFnyto_collapse_exploit_plant_2 = {
 						value > 500
 					}
 					not = {
+						colony_type = col_GF_nyto_capital
 						has_district = district_GF_nyto_pc_toxic_science
 					}
 				}
@@ -153,6 +160,9 @@ building_GFnyto_collapse_exploit_plant_2 = {
 						value > 700
 					}
 					has_district = district_GF_nyto_pc_toxic_science
+					not = {
+						colony_type = col_GF_nyto_capital
+					}
 				}
 			}
 		}
@@ -178,7 +188,9 @@ building_GFnyto_collapse_exploit_plant_2 = {
 					}
 					has_district = district_GF_nyto_pc_toxic_science
 				}
+				colony_type = col_GF_nyto_capital
 			}
+
 		}
 		job_GFnyto_collapse_particle_researcher_add = 3
 	}
@@ -202,7 +214,9 @@ building_GFnyto_collapse_exploit_plant_2 = {
 						}
 						has_district = district_GF_nyto_pc_toxic_science
 					}
+					colony_type = col_GF_nyto_capital
 				}
+
 			}
 			energy = 6
 		}
@@ -225,6 +239,7 @@ building_GFnyto_collapse_exploit_plant_2 = {
 						}
 						has_district = district_GF_nyto_pc_toxic_science
 					}
+					colony_type = col_GF_nyto_capital
 				}
 			}
 			energy = 0.05
@@ -260,13 +275,7 @@ building_GFnyto_collapse_change_center = {
 			}
 		}
 	}
-	allow = {
-		has_upgraded_capital = yes
-	}
 	planet_modifier = {
-		
-	}
-	triggered_planet_modifier = {
 		planet_pop_assembly_add = 2
 	}
 	ai_resource_production = {
@@ -542,6 +551,7 @@ building_GFnyto_algorithm = {
 					}
 					not = {
 						has_district = district_GF_nyto_pc_toxic_science
+						colony_type = col_GF_nyto_capital
 					}
 				}
 				and = {
@@ -550,6 +560,9 @@ building_GFnyto_algorithm = {
 						value > 700
 					}
 					has_district = district_GF_nyto_pc_toxic_science
+					not = {
+						colony_type = col_GF_nyto_capital
+					}
 				}
 			}
 		}
@@ -574,12 +587,13 @@ building_GFnyto_algorithm = {
 					}
 					has_district = district_GF_nyto_pc_toxic_science
 				}
+				colony_type = col_GF_nyto_capital
 			}
 		}
 		job_GFnyto_algorithm_add = 2
 	}
 	resources = {
-		category = research_agreements
+		category = planet_buildings
 		cost = {
 			minerals = 500
 			GF_nyto_collapse_liquid = 20
@@ -624,6 +638,7 @@ building_GFnytp_framework_core = {
 						value > 500
 					}
 					not = {
+						colony_type = col_GF_nyto_capital
 						has_district = district_GF_nyto_pc_toxic_alloy
 					}
 				}
@@ -633,6 +648,9 @@ building_GFnytp_framework_core = {
 						value > 700
 					}
 					has_district = district_GF_nyto_pc_toxic_alloy
+					not = {
+						colony_type = col_GF_nyto_capital
+					}
 				}
 			}
 		}
@@ -657,6 +675,7 @@ building_GFnytp_framework_core = {
 					}
 					has_district = district_GF_nyto_pc_toxic_alloy
 				}
+				colony_type = col_GF_nyto_capital
 			}
 		}
 		job_GFnyto_framework_add = 2
@@ -709,6 +728,7 @@ building_GFnytp_framework_core2 = {
 						value > 400
 					}
 					not = {
+						colony_type = col_GF_nyto_capital
 						has_district = district_GF_nyto_pc_toxic_alloy
 					}
 				}
@@ -718,6 +738,9 @@ building_GFnytp_framework_core2 = {
 						value > 700
 					}
 					has_district = district_GF_nyto_pc_toxic_alloy
+					not = {
+						colony_type = col_GF_nyto_capital
+					}
 				}
 			}
 		}
@@ -742,6 +765,7 @@ building_GFnytp_framework_core2 = {
 					}
 					has_district = district_GF_nyto_pc_toxic_alloy
 				}
+				colony_type = col_GF_nyto_capital
 			}
 		}
 		job_GFnyto_framework_add = 4
@@ -822,6 +846,7 @@ building_GFnyto_nourishment_center = {
 						value > 600
 					}
 					not = {
+						colony_type = col_GF_nyto_capital
 						has_district = district_GF_nyto_pc_toxic_alloy
 					}
 				}
@@ -831,6 +856,9 @@ building_GFnyto_nourishment_center = {
 						value > 700
 					}
 					has_district = district_GF_nyto_pc_toxic_alloy
+					not = {
+						colony_type = col_GF_nyto_capital
+					}
 				}
 			}
 		}
@@ -855,6 +883,7 @@ building_GFnyto_nourishment_center = {
 					}
 					has_district = district_GF_nyto_pc_toxic_alloy
 				}
+				colony_type = col_GF_nyto_capital
 			}
 		}
 		job_GFnyto_collapse_particle_zip_add = 2
@@ -905,6 +934,7 @@ building_GFnyto_nourishment_center2 = {
 					}
 					not = {
 						has_district = district_GF_nyto_pc_toxic_leisure
+						colony_type = col_GF_nyto_capital
 					}
 				}
 				and = {
@@ -913,6 +943,9 @@ building_GFnyto_nourishment_center2 = {
 						value > 700
 					}
 					has_district = district_GF_nyto_pc_toxic_leisure
+					not = {
+						colony_type = col_GF_nyto_capital
+					}
 				}
 			}
 		}
@@ -937,6 +970,7 @@ building_GFnyto_nourishment_center2 = {
 					}
 					has_district = district_GF_nyto_pc_toxic_leisure
 				}
+				colony_type = col_GF_nyto_capital
 			}
 		}
 		job_GFnyto_collapse_particle_zip_add = 4
@@ -997,6 +1031,7 @@ building_GFnyto_dimensional_fabricator = {
 					}
 					not = {
 						has_district = district_GF_nyto_pc_toxic_alloy
+						colony_type = col_GF_nyto_capital
 					}
 				}
 				and = {
@@ -1005,6 +1040,9 @@ building_GFnyto_dimensional_fabricator = {
 						value > 700
 					}
 					has_district = district_GF_nyto_pc_toxic_alloy
+					not = {
+						colony_type = col_GF_nyto_capital
+					}
 				}
 			}
 		}
@@ -1029,6 +1067,7 @@ building_GFnyto_dimensional_fabricator = {
 					}
 					has_district = district_GF_nyto_pc_toxic_alloy
 				}
+				colony_type = col_GF_nyto_capital
 			}
 		}
 		job_GFnyto_collapse_particle_rar_add = 2
@@ -1099,6 +1138,7 @@ building_GFnyto_dimensional_fabricator2 = {
 					}
 					not = {
 						has_district = district_GF_nyto_pc_toxic_leisure
+						colony_type = col_GF_nyto_capital
 					}
 				}
 				and = {
@@ -1107,7 +1147,9 @@ building_GFnyto_dimensional_fabricator2 = {
 						value > 700
 					}
 					has_district = district_GF_nyto_pc_toxic_leisure
+					not = { colony_type = col_GF_nyto_capital }
 				}
+
 			}
 		}
 		text = "GF_nyto_plante_build_off"
@@ -1131,6 +1173,7 @@ building_GFnyto_dimensional_fabricator2 = {
 					}
 					has_district = district_GF_nyto_pc_toxic_leisure
 				}
+				colony_type = col_GF_nyto_capital
 			}
 		}
 		job_GFnyto_collapse_particle_rar_add = 4
@@ -1340,6 +1383,52 @@ GF_nyto_Recoil_decay_barrier ={
 			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
+	on_queued = {
+
+	}
 }
 
 #
+#
+#building_bio_reactor = {
+#	base_buildtime = 240
+#
+#	category = resource
+#
+#	potential = {
+#		exists = owner
+#		owner = {
+#			OR = {
+#				is_machine_empire = yes
+#				is_mechanical_empire = yes
+#				is_lithoid_empire = yes
+#				is_nyto_country = yes
+#			}
+#			OR = {
+#				owner = { is_ai = no }
+#				owner = { country_uses_food = no }
+#			}
+#		}
+#	}
+#
+#	resources = {
+#		category = planet_buildings
+#		cost = {
+#			minerals = 200
+#		}
+#		produces = {
+#			trigger = {
+#				exists = owner
+#				owner = { NOT = { has_deficit = food } }
+#			}
+#			energy = 20
+#		}
+#		upkeep = {
+#			food = 25
+#		}
+#	}
+#
+#	prerequisites = {
+#		"tech_bio_reactor"
+#	}
+#}

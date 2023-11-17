@@ -85,13 +85,10 @@ building_GFnyto_class_4_singularity = {
 			energy = 0.1
 		}
 	}
-	planet_modifier = {
-		job_GFnyto_phase_technician_add = 3
-	}
 	triggered_planet_modifier = {
 		potential = {
 			check_variable = {
-				which = GFnyto_plante_wrlv
+				which = planet.GFnyto_plante_wrlv
 				value < 500
 			}
 		}
@@ -140,10 +137,9 @@ building_GFnyto_nano_forge = {
 		}
 	}
 	country_modifier = {
-		tradition_cost_empire_size_mult = -0.4
-		tech_cost_empire_size_mult = -0.4
-		country_starbase_capacity_add = 10
-		starbases_upkeep_mult = -0.1
+		country_starbase_capacity_add = 4
+		country_naval_cap_add = 50
+		country_leader_cap_add = 0.5
 	}
 	prerequisites = {
 		"tech_GF_nyto_storage_of_ancient_technology"

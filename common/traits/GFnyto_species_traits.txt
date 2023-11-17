@@ -12,6 +12,7 @@ trait_GF_nyto_the_last_light= {
 	species_potential_add = {
 		always = no
 	}
+	INFERTILE = yes
 	immortal_leaders = no
 	improves_leaders = yes #是否会影响领袖
 	advanced_trait=no #是否高级特质
@@ -194,9 +195,8 @@ trait_GF_nyto_loyal_ELID_infected= {
 		pc_GF_nyto_devil_furnace_habitability = 11
 		pc_GF_nyto_embers_gloomy_habitability = 11
 		pc_nuked_habitability = 1
-		# planet_jobs_worker_produces_mult = 1
 		planet_jobs_produces_mult = 0.15
-		planet_jobs_consumer_goods_upkeep_mult = -0.2
+		planet_jobs_consumer_goods_upkeep_mult = -0.3
 		army_health = 2
 	}
 }
@@ -525,7 +525,7 @@ trait_GF_nyto_natural_physicists = {
 	allowed_archetypes = {NYTO}
 	modifier = {
 		planet_jobs_food_produces_mult = 0.1
-		planet_pops_minerals_upkeep_add = 0.05
+		#planet_pops_minerals_upkeep_add = 0.05
 		army_health = -0.1
 		pop_housing_usage_mult = -0.15
 		country_trust_growth = 0.25		
@@ -608,7 +608,7 @@ trait_GF_nyto_adaptive_interface = {
 		planet_jobs_worker_produces_mult = 0.15
 	}
 	opposites = {
-		trait_GF_NYTO_Abstract_interface
+		trait_GF_nyto_Abstract_interface
 	}
 }
 

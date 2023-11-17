@@ -6,7 +6,7 @@ nyto= {
 	portrait_modding = no	
 	possible = {authority = {value = auth_GF_paradeus}}
 	portraits = {"GFnyto_nyto"}
-	custom_portraits = {portraits = {"GFnyto_nyto"}}
+	#custom_portraits = {portraits = {"GFnyto_nyto"}}
 	leader_age_min = 5
 	leader_age_max = 50
 	graphical_culture = GF_nyto_02
@@ -17,6 +17,14 @@ nyto= {
 			energy = 0.2
 			food = 0.1
 			alloys = 0.05
+
+		}
+		upkeep = {
+			trigger = {
+				owner ={
+					has_origin = origin_GF_nyto_the_last_light
+				}
+			}
 			GF_nyto_collapse_liquid = 0.1
 		}
 		produces = {
@@ -31,16 +39,13 @@ nyto= {
 	playable = {
 		always = yes
 	}
-	modifier = {
-		planet_pop_assembly_add = 3
-	}
 	trait = "trait_GF_nyto_ogas_agreement"
 }
 #机械
 nyto_machine= {
 	archetype = MACHINE
 	randomized = {NOT = { has_global_flag = game_started }}
-	possible = { authority = { OR = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_USE_MACHINE_INTELLIGENCE } } }
+	possible = { authority = { OR = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_USE_MACHINE_INTELLIGENCE }  } }
 	possible_secondary = { always = no text = SECONDARY_SPECIES_CLASS_INVALID }
 	gender = no
 	use_climate_preference = no

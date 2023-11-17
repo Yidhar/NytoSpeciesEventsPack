@@ -140,8 +140,8 @@ special_project = {
 	event_scope = country_event
 	days_to_research = 720
 	on_success = { 
-		country_event = {
-			id = GFnyto_ascension_perk.668
-		}
+		#country_event = {
+		#	id = GFnyto_ascension_perk.668
+		#}
 	}
 }

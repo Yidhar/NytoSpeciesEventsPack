@@ -31,31 +31,43 @@ country_event = {
 	show_sound = event_engineered_evolution
 	hide_window = no
 	is_triggered_only = yes
-	trigger = {
-		owner = { has_ascension_perk = ap_GF_nyto_conquer_hell }
-	}
+	trigger = { owner = { has_ascension_perk = ap_GF_nyto_conquer_hell } }
 	immediate = {
-		#		shift_ethic = "ethic_paradeus_antecedentnyto"
-		#		country_add_ethic =  "ethic_paradeus_antecedentnyto"
 		set_country_flag = GFnyto_ascension_perk_done
-		change_government = {
-			civics = {
-				civic = civic_GF_nyto_see_angel
+		force_add_civic = civic_GF_nyto_see_angel
+		add_modifier = { modifier = GFnyto_crisis_see_angel }
+		set_country_flag = GFnyto_crisis_system
+		every_country = {
+			limit = { not = { is_country = prev } }
+			country_event = {
+				id = GFnytobloodywar.2
+				days = 1
+			}
+			if = {
+				limit = {
+					is_country_type = fallen_empire
+					not = {
+						has_authority = auth_machine_intelligence
+					}
+				}
+				country_event = { id =fallen_empires_awakening.3 }
+				change_government = {
+					civics = {
+						civic = civic_revanchist_fervor
+						civic = civic_ancient_caches_of_technology
+					}
+				}
+				save_global_event_target_as = GFnyto_awake_leader
 			}
 		}
-		add_modifier = {
-			modifier = GFnyto_crisis_see_angel
-		}
-		set_country_flag = GFnyto_crisis_system
+
 	}
 	option = {
 		name = "GF_ascension_perk.2.a"
-		begin_event_chain = {
-			event_chain = GFnyto_crisis_chain
-		}
-		every_country = {
-			limit = {
-				has_event_chain = "GFnyto_crisis_chain"
+		custom_tooltip = "GFnytobloodywar.2.desc"
+		hidden_effect = {
+			begin_event_chain = {
+				event_chain = GFnyto_crisis_chain
 			}
 			add_event_chain_counter = {
 				event_chain = "GFnyto_crisis_chain"
@@ -66,10 +78,38 @@ country_event = {
 				which = "GFnyto_empire_maintenance"
 				value = 1000
 			}
-			#			enable_special_project = {name = "GFnyto_crisis_attack_project"}
 		}
-		#		shift_ethic = "ethic_paradeus_antecedentnyto"
-		#		country_add_ethic = "ethic_paradeus_antecedentnyto"
+	}
+	after = {
+		if = {
+			limit = {
+				not = {
+					exists = event_target:GFnyto_awake_leader
+				}
+
+			}
+			random_playable_country = {
+				save_global_event_target_as = GFnyto_awake_leader
+			}
+		}
+		declare_war = {
+			target = event_target:GFnyto_awake_leader
+			name = "极夜"
+			attacker_war_goal = "wg_declared_crisis"
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+					is_country_type = fallen_empire
+				}
+				not = {
+					has_authority = auth_machine_intelligence
+				}
+			}
+			join_war = event_target:GFnyto_awake_leader
+		}
 	}
 }
 
@@ -252,18 +292,18 @@ country_event = {
 		}
 	}
 	immediate = {
-		add_tech_progress = {
-			tech = tech_GF_nyto_repeatable_phys_100
-			progress = 0.1
-		}
-		add_tech_progress = {
-			tech = tech_GF_nyto_repeatable_soc_100
-			progress = 0.1
-		}
-		add_tech_progress = {
-			tech = tech_GF_nyto_repeatable_eng_100
-			progress = 0.1
-		}
+		#add_tech_progress = {
+		#	tech = tech_GF_nyto_repeatable_phys_100
+		#	progress = 0.1
+		#}
+		#add_tech_progress = {
+		#	tech = tech_GF_nyto_repeatable_soc_100
+		#	progress = 0.1
+		#}
+		#add_tech_progress = {
+		#	tech = tech_GF_nyto_repeatable_eng_100
+		#	progress = 0.1
+		#}
 	}
 	option = {
 		name = GFnyto_ascension_perk.8.a
@@ -272,111 +312,111 @@ country_event = {
 }
 
 #解锁飞升
-country_event = {
-	id = GFnyto_ascension_perk.999
-	is_triggered_only = yes
-	hide_window = yes
-	trigger = {
-		has_country_flag = has_nyto_Prp_flag
-		has_country_flag = has_nyto_ftl_flag
-		has_country_flag = has_nyto_ai_flag
-		has_country_flag = has_nyto_Ex_shield_flag
-	}
-	after = {
-		country_event = {
-			id = GFnyto_ascension_perk.9999
-			days = 1
-		}
-	}
-}
+#country_event = {
+#	id = GFnyto_ascension_perk.999
+#	is_triggered_only = yes
+#	hide_window = yes
+#	trigger = {
+#		has_country_flag = has_nyto_Prp_flag
+#		has_country_flag = has_nyto_ftl_flag
+#		has_country_flag = has_nyto_ai_flag
+#		has_country_flag = has_nyto_Ex_shield_flag
+#	}
+#	after = {
+#		country_event = {
+#			id = GFnyto_ascension_perk.9999
+#			days = 1
+#		}
+#	}
+#}
 
-country_event = {
-	id = GFnyto_ascension_perk.9999
-	is_triggered_only = yes
-	hide_window = yes
-	trigger = {
-		has_country_flag = has_nyto_Prp_flag
-		has_country_flag = has_nyto_ftl_flag
-		has_country_flag = has_nyto_ai_flag
-		has_country_flag = has_nyto_Ex_shield_flag
-	}
-	immediate = {
-		if = {
-			limit = {
-				last_increased_tech = tech_GF_nyto_repeatable_phys_100
-			}
-			change_variable = {
-				which = techmult
-				value = 1
-			}
-		}
-		if = {
-			limit = {
-				last_increased_tech = tech_GF_nyto_repeatable_soc_100
-			}
-			change_variable = {
-				which = techmult
-				value = 1
-			}
-		}
-		if = {
-			limit = {
-				last_increased_tech = tech_GF_nyto_repeatable_eng_100
-			}
-			change_variable = {
-				which = techmult
-				value = 1
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_country_flag = GF_nyto_complete_research
-				}
-				check_variable = {
-					which = techmult
-					value > 30
-				}
-			}
-			set_country_flag = GF_nyto_complete_research
-		}
-	}
-}
+#country_event = {
+#	id = GFnyto_ascension_perk.9999
+#	is_triggered_only = yes
+#	hide_window = yes
+#	trigger = {
+#		has_country_flag = has_nyto_Prp_flag
+#		has_country_flag = has_nyto_ftl_flag
+#		has_country_flag = has_nyto_ai_flag
+#		has_country_flag = has_nyto_Ex_shield_flag
+#	}
+#	immediate = {
+#		if = {
+#			limit = {
+#				last_increased_tech = tech_GF_nyto_repeatable_phys_100
+#			}
+#			change_variable = {
+#				which = techmult
+#				value = 1
+#			}
+#		}
+#		if = {
+#			limit = {
+#				last_increased_tech = tech_GF_nyto_repeatable_soc_100
+#			}
+#			change_variable = {
+#				which = techmult
+#				value = 1
+#			}
+#		}
+#		if = {
+#			limit = {
+#				last_increased_tech = tech_GF_nyto_repeatable_eng_100
+#			}
+#			change_variable = {
+#				which = techmult
+#				value = 1
+#			}
+#		}
+#		if = {
+#			limit = {
+#				NOT = {
+#					has_country_flag = GF_nyto_complete_research
+#				}
+#				check_variable = {
+#					which = techmult
+#					value > 30
+#				}
+#			}
+#			set_country_flag = GF_nyto_complete_research
+#		}
+#	}
+#}
 
 #开幕雷击
-country_event = {
-	id = GFnyto_ascension_perk.666
-	is_triggered_only = yes
-	hide_window = yes
-	immediate = {
-		fromfrom = {
-			every_controlled_ship = {
-				if = {
-					limit = {
-						NOT = {
-							has_ship_flag = gfnyto_ship_combat_ing
-						}
-						has_ship_flag = is_Lamentations_ship
-					}
-					add_modifier = {
-						modifier = gfnyto_ship_start_buff
-						days = 3
-					}
-					set_timed_ship_flag = {
-						flag = gfnyto_ship_combat_ing
-						days = 1
-					}
-					fromfromfrom = {
-						add_modifier = {
-							modifier = gfnyto_ship_start_debuff
-							days = 5
-						}
-					}
-				}
-			}
-		}
-	}
-}
+#country_event = {
+#	id = GFnyto_ascension_perk.666
+#	is_triggered_only = yes
+#	hide_window = yes
+#	immediate = {
+#		fromfrom = {
+#			every_controlled_ship = {
+#				if = {
+#					limit = {
+#						NOT = {
+#							has_ship_flag = gfnyto_ship_combat_ing
+#						}
+#						has_ship_flag = is_Lamentations_ship
+#					}
+#					add_modifier = {
+#						modifier = gfnyto_ship_start_buff
+#						days = 3
+#					}
+#					set_timed_ship_flag = {
+#						flag = gfnyto_ship_combat_ing
+#						days = 1
+#					}
+#					fromfromfrom = {
+#						add_modifier = {
+#							modifier = gfnyto_ship_start_debuff
+#							days = 5
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#}
 
 #创建特殊项目
 country_event = {
@@ -730,7 +770,7 @@ country_event = {
 				}
 				remove_trait = leader_admiral_trait_GF_nyto_ogas_agreement
 				add_trait = leader_admiral_trait_GF_nyto_noussphere
-				add_ruler_trait = leader_trait_GF_nyto_noussphere
+				#add_ruler_trait = leader_trait_GF_nyto_noussphere
 			}
 			if = {
 				limit = {
@@ -738,7 +778,7 @@ country_event = {
 				}
 				remove_trait = leader_general_trait_GF_nyto_ogas_agreement
 				add_trait = leader_general_trait_GF_nyto_noussphere
-				add_ruler_trait = leader_trait_GF_nyto_noussphere
+				#add_ruler_trait = leader_trait_GF_nyto_noussphere
 			}
 			if = {
 				limit = {
@@ -746,7 +786,7 @@ country_event = {
 				}
 				remove_trait = leader_governor_trait_GF_nyto_ogas_agreement
 				add_trait = leader_governor_trait_GF_nyto_noussphere
-				add_ruler_trait = leader_trait_GF_nyto_noussphere
+				#add_ruler_trait = leader_trait_GF_nyto_noussphere
 			}
 			if = {
 				limit = {
@@ -754,16 +794,16 @@ country_event = {
 				}
 				remove_trait = leader_scientist_trait_GF_nyto_ogas_agreement
 				add_trait = leader_scientist_trait_GF_nyto_noussphere
-				add_ruler_trait = leader_trait_GF_nyto_noussphere
+				#add_ruler_trait = leader_trait_GF_nyto_noussphere
 			}
-			if = {
-				limit = {
-					leader_class = ruler
-				}
-				remove_trait = leader_trait_GF_nyto_ogas_agreement
-				add_trait = leader_trait_GF_nyto_noussphere
-				add_ruler_trait = leader_trait_GF_nyto_noussphere
-			}
+			#if = {
+			#	limit = {
+			#		leader_class = ruler
+			#	}
+			#	remove_trait = leader_trait_GF_nyto_ogas_agreement
+			#	add_trait = leader_trait_GF_nyto_noussphere
+			#	#add_ruler_trait = leader_trait_GF_nyto_noussphere
+			#}
 		}
 		every_pool_leader = {
 			limit = {
@@ -782,7 +822,7 @@ country_event = {
 				}
 				remove_trait = leader_admiral_trait_GF_nyto_ogas_agreement
 				add_trait = leader_admiral_trait_GF_nyto_noussphere
-				add_ruler_trait = leader_trait_GF_nyto_noussphere
+				#add_ruler_trait = leader_trait_GF_nyto_noussphere
 			}
 			if = {
 				limit = {
@@ -790,7 +830,7 @@ country_event = {
 				}
 				remove_trait = leader_general_trait_GF_nyto_ogas_agreement
 				add_trait = leader_general_trait_GF_nyto_noussphere
-				add_ruler_trait = leader_trait_GF_nyto_noussphere
+				#add_ruler_trait = leader_trait_GF_nyto_noussphere
 			}
 			if = {
 				limit = {
@@ -805,16 +845,16 @@ country_event = {
 				}
 				remove_trait = leader_scientist_trait_GF_nyto_ogas_agreement
 				add_trait = leader_scientist_trait_GF_nyto_noussphere
-				add_ruler_trait = leader_trait_GF_nyto_noussphere
+				#add_ruler_trait = leader_trait_GF_nyto_noussphere
 			}
-			if = {
-				limit = {
-					leader_class = ruler
-				}
-				remove_trait = leader_trait_GF_nyto_ogas_agreement
-				add_trait = leader_trait_GF_nyto_noussphere
-				add_ruler_trait = leader_trait_GF_nyto_noussphere
-			}
+			#if = {
+			#	limit = {
+			#		leader_class = ruler
+			#	}
+			#	remove_trait = leader_trait_GF_nyto_ogas_agreement
+			#	add_trait = leader_trait_GF_nyto_noussphere
+			#	add_ruler_trait = leader_trait_GF_nyto_noussphere
+			#}
 		}
 	}
 }

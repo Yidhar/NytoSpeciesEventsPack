@@ -79,8 +79,11 @@ country_event = {
 		custom_tooltip = bombed_to_tomb_world
 		hidden_effect ={
 			if = {
-				limit = { 
-					has_ascension_perk = ap_become_the_crisis
+				limit = {
+					or = {
+						has_ascension_perk = ap_become_the_crisis
+						has_ascension_perk = ap_GF_nyto_conquer_hell
+					}
 				}
 				add_resource ={ 
 					menace = 350
@@ -90,29 +93,54 @@ country_event = {
 	}
 }
 #行星轨道防御系统
+#被轰炸
 planet_event = {
-	id = gfnytoaction.4
+	id = gfnytoaction.10
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		OR = {
-			has_deposit = d_GFnyto_planetary_orbit_defense_zone
-			has_planet_flag = has_GFnyto_planetary_defense
-		}
-	}	
+		colony_type = col_GF_nyto_capital
+	}
 	immediate = {
-		every_fleet_in_orbit = {
-			every_controlled_ship = {
-				reduce_hp_percent = 0.5
-			}			
-			owner = {
-				country_event = {
-					id = gfnytoaction.6					
+		if = {
+			limit ={
+				check_modifier_value = {
+					modifier = planet_orbital_bombardment_damage
+					value > 1000
 				}
-			}			
-		}		
+			}
+			set_update_modifiers_batch = begin
+			every_owned_pop = {
+				kill_pop = yes
+			}
+			destroy_colony = yes
+			set_update_modifiers_batch = end
+		}
 	}
 }
+#planet_event = {
+#	id = gfnytoaction.4
+#	hide_window = yes
+#	is_triggered_only = yes
+#	trigger = {
+#		OR = {
+#			has_deposit = d_GFnyto_planetary_orbit_defense_zone
+#			has_planet_flag = has_GFnyto_planetary_defense
+#		}
+#	}
+#	immediate = {
+#		every_fleet_in_orbit = {
+#			every_controlled_ship = {
+#				reduce_hp_percent = 0.5
+#			}
+#			owner = {
+#				country_event = {
+#					id = gfnytoaction.6
+#				}
+#			}
+#		}
+#	}
+#}
 country_event = {
 	id = gfnytoaction.6
 	title = "gfnytoaction.6.name"
@@ -124,92 +152,92 @@ country_event = {
 	is_triggered_only = yes
 	option = {name = UNDERSTOOD}
 }
-#海军陆战队刷出
-planet_event = {
-	id = gfnytoaction.10
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		has_orbital_bombardment_stance = gfnyto_marine_corps
-	#		fromfrom = {has_component = tech_GF_nyto_marine_corps}
-	#		from = {has_component = tech_GF_nyto_marine_corps}
-		from = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		habitable_planet = yes
-	}	
-	immediate = {
-		create_army = {
-			name = "海军陆战队"
-			owner = FROM
-			species = FROM
-			type = "GF_nyto_marine_corps"
-		}
-		create_army = {
-			name = "海军陆战队"
-			owner = FROM
-			species = FROM
-			type = "GF_nyto_marine_corps"
-		}
-		create_army = {
-			name = "海军陆战队"
-			owner = FROM
-			species = FROM
-			type = "GF_nyto_marine_corps"
-		}
-		create_army = {
-			name = "海军陆战队"
-			owner = FROM
-			species = FROM
-			type = "GF_nyto_marine_corps"
-		}
-	}
-}
-#贸易封锁
-planet_event = {
-	id = gfnytoaction.20
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		has_orbital_bombardment_stance = gfnyto_trade_blockade
-	}	
-	immediate = {	
-		add_modifier = {
-			modifier = gfnyto_trade_blockade
-			days = 1
-		}
-	}
-}
-#海军陆战队刷撤退
-country_event = {
-	id = gfnytoaction.11
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		FromFrom = {
-			habitable_planet = yes
-			has_ground_combat = no
-		}
-	}
-	immediate = {FromFrom = {planet_event = {id = gfnytoaction.12}}}
-}
-#海军陆战队刷撤退(行星)
-planet_event = {
-	id = gfnytoaction.12
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		habitable_planet = yes
-		has_ground_combat = no
-	}
-	immediate = {
-		every_planet_army = {
-			limit = {army_type = GF_nyto_marine_corps}
-			remove_army = yes
-		}
-	}
-}
+##海军陆战队刷出
+#planet_event = {
+#	id = gfnytoaction.10
+#	hide_window = yes
+#	is_triggered_only = yes
+#	trigger = {
+#		has_orbital_bombardment_stance = gfnyto_marine_corps
+#	#		fromfrom = {has_component = tech_GF_nyto_marine_corps}
+#	#		from = {has_component = tech_GF_nyto_marine_corps}
+#		from = {
+#			OR = {
+#				is_country_type = default
+#				is_country_type = fallen_empire
+#				is_country_type = awakened_fallen_empire
+#			}
+#		}
+#		habitable_planet = yes
+#	}
+#	immediate = {
+#		create_army = {
+#			name = "海军陆战队"
+#			owner = FROM
+#			species = FROM
+#			type = "GF_nyto_marine_corps"
+#		}
+#		create_army = {
+#			name = "海军陆战队"
+#			owner = FROM
+#			species = FROM
+#			type = "GF_nyto_marine_corps"
+#		}
+#		create_army = {
+#			name = "海军陆战队"
+#			owner = FROM
+#			species = FROM
+#			type = "GF_nyto_marine_corps"
+#		}
+#		create_army = {
+#			name = "海军陆战队"
+#			owner = FROM
+#			species = FROM
+#			type = "GF_nyto_marine_corps"
+#		}
+#	}
+#}
+##贸易封锁
+#planet_event = {
+#	id = gfnytoaction.20
+#	hide_window = yes
+#	is_triggered_only = yes
+#	trigger = {
+#		has_orbital_bombardment_stance = gfnyto_trade_blockade
+#	}
+#	immediate = {
+#		add_modifier = {
+#			modifier = gfnyto_trade_blockade
+#			days = 1
+#		}
+#	}
+#}
+##海军陆战队刷撤退
+#country_event = {
+#	id = gfnytoaction.11
+#	hide_window = yes
+#	is_triggered_only = yes
+#	trigger = {
+#		FromFrom = {
+#			habitable_planet = yes
+#			has_ground_combat = no
+#		}
+#	}
+#	immediate = {FromFrom = {planet_event = {id = gfnytoaction.12}}}
+#}
+##海军陆战队刷撤退(行星)
+#planet_event = {
+#	id = gfnytoaction.12
+#	hide_window = yes
+#	is_triggered_only = yes
+#	trigger = {
+#		habitable_planet = yes
+#		has_ground_combat = no
+#	}
+#	immediate = {
+#		every_planet_army = {
+#			limit = {army_type = GF_nyto_marine_corps}
+#			remove_army = yes
+#		}
+#	}
+#}

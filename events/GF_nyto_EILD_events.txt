@@ -39,6 +39,7 @@ planet_event = {
 			owner = ROOT
 			type = GF_nyto_armor_train
 			species = ROOT
+			land_army = yes
 		}
 	}
 	option = {
@@ -130,12 +131,14 @@ planet_event = {
 				owner = owner
 				species = owner_main_species
 				type = GF_nyto_Land_base_station
+				land_army = yes
 			}
 			create_army = {
 				name = "城防巨炮"
 				owner = owner
 				species = owner_main_species
 				type = GF_nyto_Land_base_station
+				land_army = yes
 			}
 			set_variable = {
 				which = has_Land_base_station
@@ -249,12 +252,14 @@ planet_event = {
 				owner = owner
 				species = owner_main_species
 				type = GF_nyto_Land_base_station
+				land_army = yes
 			}
 			create_army = {
 				name = "城防巨炮"
 				owner = owner
 				species = owner_main_species
 				type = GF_nyto_Land_base_station
+				land_army = yes
 			}
 			set_variable = {
 				which = has_Land_base_station
@@ -329,7 +334,11 @@ planet_event = {
 					days = 999
 					target = prev
 				}
+				event_target:EILD_country@root={
+					destroy_country = yes
+				}
 			}
+
 		}
 	}
 	option = {
@@ -339,7 +348,7 @@ planet_event = {
 		if = {
 			limit = {
 				controller = {
-					is_country = event_target:EILD_country
+					is_country = event_target:EILD_country@root
 				}
 			}
 			set_controller = root
@@ -391,25 +400,17 @@ planet_event = {
 				trait = trait_nerve_stapled
 			}
 			effect = {
-				save_global_event_target_as = GFnyto_ELID_infected
+				save_global_event_target_as = GFnyto_ELID_infected@root.owner
+				set_species_homeworld = root
 			}
 		}
-		create_pop = {
-			species = event_target:GFnyto_ELID_infected
+		while = {
+			count = 10
+			create_pop = {
+				species = event_target:GFnyto_ELID_infected@root.owner
+			}
 		}
-		create_pop = {
-			species = event_target:GFnyto_ELID_infected
-		}
-		create_pop = {
-			species = event_target:GFnyto_ELID_infected
-		}
-		create_pop = {
-			species = event_target:GFnyto_ELID_infected
-		}
-		create_pop = {
-			species = event_target:GFnyto_ELID_infected
-		}
-		event_target:GFnyto_ELID_infected = {
+		event_target:GFnyto_ELID_infected@root.owner = {
 			set_citizenship_type = {
 				type = citizenship_limited
 				country = root.owner
@@ -539,47 +540,6 @@ country_event = {
 					value = 1.1
 				}
 			}
-			# if = {
-			# 	limit = {
-			# 		check_variable = {
-			# 			which = GFnyto_Eild_level
-			# 			value > 5
-			# 		}
-			# 		check_variable = {
-			# 			which = GFnyto_Eild_level
-			# 			value < 100
-			# 		}
-			# 	}
-			# 	multiply_variable = {
-			# 		which = GFnyto_Eild_level
-			# 		value = 1.3
-			# 	}
-			# 	round_variable = GFnyto_Eild_level
-			# }
-			# else_if = {
-			# 	limit = {
-			# 		check_variable = {
-			# 			which = GFnyto_Eild_level
-			# 			value <= 50
-			# 		}
-			# 	}
-			# 	change_variable = {
-			# 		which = GFnyto_Eild_level
-			# 		value = 10
-			# 	}
-			# }
-			# else_if = {
-			# 	limit = {
-			# 		check_variable = {
-			# 			which = GFnyto_Eild_level
-			# 			value >= 100
-			# 		}
-			# 	}
-			# 	multiply_variable = {
-			# 		which = GFnyto_Eild_level
-			# 		value = 1.1
-			# 	}
-			# }
 			planet_event ={
 				id = GFnyto_global.5
 			}
@@ -779,47 +739,6 @@ country_event = {
 					value = 1.1
 				}
 			}
-			# if = {
-			# 	limit = {
-			# 		check_variable = {
-			# 			which = GFnyto_Eild_level
-			# 			value > 5
-			# 		}
-			# 		check_variable = {
-			# 			which = GFnyto_Eild_level
-			# 			value < 100
-			# 		}
-			# 	}
-			# 	multiply_variable = {
-			# 		which = GFnyto_Eild_level
-			# 		value = 1.3
-			# 	}
-			# 	round_variable = GFnyto_Eild_level
-			# }
-			# else_if = {
-			# 	limit = {
-			# 		check_variable = {
-			# 			which = GFnyto_Eild_level
-			# 			value <= 50
-			# 		}
-			# 	}
-			# 	change_variable = {
-			# 		which = GFnyto_Eild_level
-			# 		value = 10
-			# 	}
-			# }
-			# else_if = {
-			# 	limit = {
-			# 		check_variable = {
-			# 			which = GFnyto_Eild_level
-			# 			value >= 100
-			# 		}
-			# 	}
-			# 	multiply_variable = {
-			# 		which = GFnyto_Eild_level
-			# 		value = 1.1
-			# 	}
-			# }
 			planet_event ={
 				id = GFnyto_global.5
 			}
@@ -932,7 +851,7 @@ planet_event = {
 	immediate = {
 		set_planet_flag = GF_nyto_eild_attack_begin
 		planet_event = {
-			id = GFnytoeild.44
+			id = GFnytoeild.49
 			days = 720
 		}
 		create_country = {
@@ -945,23 +864,24 @@ planet_event = {
 					who = root.owner
 					location = root.solar_system
 				}
-				save_global_event_target_as = EILD_country
+				save_global_event_target_as = EILD_country@root
 				create_species = {
 					name = "EILD"
 					class = eild
 					portrait = random
 					traits = random
 					effect = {
-						save_global_event_target_as = ELID_species
+						save_global_event_target_as = ELID_species@root
 					}
 				}
 			}
 		}
 		create_army = {
 			name = "EILD"
-			owner = event_target:EILD_country
-			species = event_target:ELID_species
+			owner = event_target:EILD_country@root
+			species = event_target:ELID_species@root
 			type = "GF_nyto_eild_army_1"
+			land_army = yes
 		}
 	}
 	option = {
@@ -970,17 +890,46 @@ planet_event = {
 }
 
 #EIlD头目
-planet_event={
-	id = GFnytoeild.48
-	title = "GFnytoeild.48.nam"
-	desc = "GFnytoeild.48.desc"
-	picture = "xx"
+#planet_event={
+#	id = GFnytoeild.48
+#	title = "GFnytoeild.48.nam"
+#	desc = "GFnytoeild.48.desc"
+#	picture = "xx"
+#	is_triggered_only = yes
+#	immediate = {
+#		#创建头
+#	}
+#}
+
+
+#入侵判定
+planet_event = {
+	id = GFnytoeild.49
+	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		#创建头
+		if = {
+			limit = {
+				or = {
+					has_planet_flag = GF_nyto_eild_attack_begin
+					has_planet_flag = GFnyto_colony_eild_attack_begin
+				}
+				not = {
+					has_planet_flag = GFnyto_EIld_aatack_GG
+				}
+				is_owned_by = controller
+			}
+			planet_event = {
+				id = GFnytoeild.44
+			}
+		}
+		planet_event = {
+			id = GFnytoeild.49
+			days = 720
+			random = 120
+		}
 	}
 }
-
 
 #依据危险度循环进攻阶段
 planet_event = {
@@ -1001,7 +950,7 @@ planet_event = {
 			limit ={
 				exists = owner
 			}
-			event_target:EILD_country = {
+			event_target:EILD_country@root = {
 				if = {
 					limit = {
 						prev = {
@@ -1010,15 +959,6 @@ planet_event = {
 						NOT = {
 							has_country_flag = GF_nyto_elid_attack_damge_colodown
 						}
-					}
-					if = {
-						limit = {
-							count_country = {
-								count > 1
-								limit = { has_authority = auth_GF_paradeus }
-							}
-						}
-						set_country_flag = GF_nyto_elid_attack_damge_colodown
 					}
 					change_variable = {
 						which = Elidlevel
@@ -1043,7 +983,7 @@ planet_event = {
 							planet_event = {
 								id = GFnytoeild.59
 							}
-							event_target:EILD_country = {
+							event_target:EILD_country@root = {
 								every_owned_army = {
 									remove_army = yes
 								}
@@ -1051,25 +991,20 @@ planet_event = {
 						}
 					}
 				}
-				if = {
-					limit = {
-						has_country_flag = GF_nyto_elid_attack_damge_colodown
-					}
-					remove_country_flag = GF_nyto_elid_attack_damge_colodown
-				}			
 			}
 			GF_nyto_elid_attack = yes
 		}
-		#每3年检测一次
-		planet_event = {
-			id = GFnytoeild.44
-			days = 720
-			random = 120
-		}
+	}
+	option = {
+		name = "ok"
 	}
 }
 
 #每次胜利获得资源  危险度下降0.2  给与陆军将领难度系数的经验
+# Triggers country_event for the defender upon victory
+# Root = country, planet owner
+# From = country, attack leader
+# FromFrom = planet
 event = {
 	id = GFnytoeild.441
 	title = "GFnytoeild.44a.name"
@@ -1082,7 +1017,7 @@ event = {
 			has_authority = auth_GF_paradeus
 		}
 		from = {
-			is_country = event_target:EILD_country
+			is_country = event_target:EILD_country@fromfrom
 			NOT = {
 				has_country_flag = GFnyto_Eild_hunting_S
 				has_country_flag = GFnyto_Eild_hunting_M
@@ -1116,11 +1051,11 @@ event = {
 					mult = fromfrom.GFnyto_Eild_level
 				}
 				add_resource = {
-					unity = 10
+					unity = 200
 					mult = fromfrom.GFnyto_Eild_level
 				}
 				add_resource = {
-					alloys = 8
+					alloys = 20
 					mult = fromfrom.GFnyto_Eild_level
 				}
 			}
@@ -1130,11 +1065,11 @@ event = {
 					mult = fromfrom.GFnyto_Eild_level
 				}
 				add_resource = {
-					unity = 10
+					unity = 150
 					mult = fromfrom.GFnyto_Eild_level
 				}
 				add_resource = {
-					alloys = 2
+					alloys = 15
 					mult = fromfrom.GFnyto_Eild_level
 				}
 			}
@@ -1230,7 +1165,7 @@ planet_event = {
 	picture = GFX_evt_GFnyto_eild_attack_begin
 	is_triggered_only = yes
 	immediate = {
-		event_target:EILD_country = {
+		event_target:EILD_country@root = {
 			set_country_flag = GFnyto_Eild_hunting_S
 		}
 		while = {
@@ -1238,16 +1173,18 @@ planet_event = {
 			random_list = {
 				70 = {
 					create_army = {
-						owner = event_target:EILD_country
+						owner = event_target:EILD_country@root
 						type = GF_nyto_eild_army_1
-						species = event_target:ELID_species
+						species = event_target:ELID_species@root
+						land_army = yes
 					}
 				}
 				20 = {
 					create_army = {
-						owner = event_target:EILD_country
+						owner = event_target:EILD_country@root
 						type = GF_nyto_eild_army_2
-						species = event_target:ELID_species
+						species = event_target:ELID_species@root
+						land_army = yes
 					}
 				}
 				10 = {
@@ -1269,7 +1206,7 @@ planet_event = {
 	picture = GFX_evt_GFnyto_eild_attack_begin
 	is_triggered_only = yes
 	immediate = {
-		event_target:EILD_country = {
+		event_target:EILD_country@root = {
 			set_country_flag = GFnyto_Eild_hunting_M
 		}
 		while = {
@@ -1277,23 +1214,26 @@ planet_event = {
 			random_list = {
 				50 = {
 					create_army = {
-						owner = event_target:EILD_country
+						owner = event_target:EILD_country@root
 						type = GF_nyto_eild_army_1
-						species = event_target:ELID_species
+						species = event_target:ELID_species@root
+						land_army = yes
 					}
 				}
 				40 = {
 					create_army = {
-						owner = event_target:EILD_country
+						owner = event_target:EILD_country@root
 						type = GF_nyto_eild_army_2
-						species = event_target:ELID_species
+						species = event_target:ELID_species@root
+						land_army = yes
 					}
 				}
 				10 = {
 					create_army = {
-						owner = event_target:EILD_country
+						owner = event_target:EILD_country@root
 						type = GF_nyto_eild_army_3
-						species = event_target:ELID_species
+						species = event_target:ELID_species@root
+						land_army = yes
 					}
 				}
 			}
@@ -1312,7 +1252,7 @@ planet_event = {
 	picture = GFX_evt_GFnyto_eild_attack_begin
 	is_triggered_only = yes
 	immediate = {
-		event_target:EILD_country = {
+		event_target:EILD_country@root = {
 			set_country_flag = GFnyto_Eild_hunting_L
 		}
 		while = {
@@ -1320,23 +1260,26 @@ planet_event = {
 			random_list = {
 				20 = {
 					create_army = {
-						owner = event_target:EILD_country
+						owner = event_target:EILD_country@root
 						type = GF_nyto_eild_army_1
-						species = event_target:ELID_species
+						species = event_target:ELID_species@root
+						land_army = yes
 					}
 				}
 				50 = {
 					create_army = {
-						owner = event_target:EILD_country
+						owner = event_target:EILD_country@root
 						type = GF_nyto_eild_army_2
-						species = event_target:ELID_species
+						species = event_target:ELID_species@root
+						land_army = yes
 					}
 				}
 				30 = {
 					create_army = {
-						owner = event_target:EILD_country
+						owner = event_target:EILD_country@root
 						type = GF_nyto_eild_army_3
-						species = event_target:ELID_species
+						species = event_target:ELID_species@root
+						land_army = yes
 					}
 				}
 			}
@@ -1356,7 +1299,7 @@ event = {
 	is_triggered_only = yes
 	trigger = {
 		from = {
-			is_country = event_target:EILD_country
+			is_country = event_target:EILD_country@fromfrom
 			OR = {
 				has_country_flag = GFnyto_Eild_hunting_S
 				has_country_flag = GFnyto_Eild_hunting_M
@@ -1432,7 +1375,7 @@ event = {
 				}
 			}
 		}
-		event_target:EILD_country = {
+		event_target:EILD_country@fromfrom = {
 			remove_country_flag = GFnyto_Eild_hunting_S
 			remove_country_flag = GFnyto_Eild_hunting_M
 			remove_country_flag = GFnyto_Eild_hunting_L
@@ -1450,7 +1393,7 @@ event = {
 					mult = fromfrom.GFnyto_Eild_level
 				}
 				add_resource = {
-					unity = 10
+					unity = 80
 					mult = fromfrom.GFnyto_Eild_level
 				}
 				add_resource = {
@@ -1464,7 +1407,7 @@ event = {
 					mult = fromfrom.GFnyto_Eild_level
 				}
 				add_resource = {
-					unity = 4
+					unity = 40
 					mult = fromfrom.GFnyto_Eild_level
 				}
 				add_resource = {
@@ -1502,11 +1445,10 @@ planet_event = {
 	picture = GFX_evt_GFnyto_eild_attack_begin
 	title = GFnytoeild.59.name
 	desc = GFnytoeild.59.desc
-	message_desc = GFnytoeild.59.message
 	is_triggered_only = yes
 	hide_window = no
 	immediate = {
-		event_target:EILD_country = {
+		event_target:EILD_country@root = {
 			remove_country_flag = GFnyto_Eild_hunting_S
 			remove_country_flag = GFnyto_Eild_hunting_M
 			remove_country_flag = GFnyto_Eild_hunting_L
@@ -1523,7 +1465,7 @@ event = {
 	title = "GFnytoeild.45.name"
 	desc = "GFnytoeild.45.desc"
 	picture = GFX_evt_GFnyto_Elid_attack_lose
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 	trigger = {
 		fromfrom = {
@@ -1546,7 +1488,7 @@ event = {
 			limit = {
 				fromfrom = {
 					controller = {
-						is_country = event_target:EILD_country
+						is_country = event_target:EILD_country@fromfrom
 					}
 					NOT = {
 						has_planet_flag = GF_nyto_GG
@@ -1601,14 +1543,6 @@ event = {
 				kill_pop = yes
 			}
 			set_planet_name = "寄了"
-			owner = {
-				create_message = {
-					type = GF_nyto_music_1
-					localization = "MESSAGE_GF_nyto_music_1"
-					days =999
-					target = prev
-				}
-			}
 		}
 	}
 	option = {
@@ -1629,7 +1563,7 @@ planet_event = {
 	}
 	trigger = {
 		controller = {
-			is_country = event_target:EILD_country
+			is_country = event_target:EILD_country@root
 		}
 	}
 	immediate = {
@@ -1643,6 +1577,25 @@ planet_event = {
 			count = 10
 			random_owned_pop = {
 				kill_pop = yes
+			}
+			create_message = {
+				type = GF_nyto_popd
+				localization = "MESSAGE_GF_nyto_popd"
+				days = 30
+				target = prev
+			}
+		}
+		owner = {
+			create_message = {
+				type = GF_nyto_music_1
+				localization = "MESSAGE_GF_nyto_music_1"
+				days =999
+				target = prev
+			}
+		}
+		leader ={
+			kill_leader = {
+				show_notification = yes
 			}
 		}
 		while = {
@@ -1695,7 +1648,7 @@ planet_event = {
 			days = -1
 		}
 		planet_event = {
-			id = GFnytoeild.44
+			id = GFnytoeild.49
 			days = 360
 			random = 80
 		}

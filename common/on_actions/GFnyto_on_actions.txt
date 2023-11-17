@@ -19,9 +19,9 @@ on_planet_zero_pops = {
 on_planet_bombarded = {
 	events = {
 		gfnytoaction.1
-		gfnytoaction.4
+		#gfnytoaction.4
 		gfnytoaction.10
-		gfnytoaction.20
+		#gfnytoaction.20
 	}
 }
 on_colonized = {
@@ -37,7 +37,7 @@ on_yearly_pulse = {
 on_yearly_pulse_country = {
 	events = {
 		GFnyto_global.9999
-		GFnyto_global.20
+		#GFnyto_global.20
 	}
 }
 on_five_year_pulse = {
@@ -72,7 +72,7 @@ on_colony_1_year_old = {
 }
 on_mid_game_pulse_country = {
 	events = {
-		GFnyto_war_theory.1
+		#GFnyto_war_theory.1
 	}
 }
 ###涅托灾飞###
@@ -87,20 +87,17 @@ on_ship_destroyed_perp = {
 		gf_nyto_weapons.10001
 	}
 }
-on_planet_attackers_win = {
-	events = {
-		gfnytoaction.11
-		GFnytocrisis.2#行星沦陷
-		GFnytocrisis.3#行星占领
-	}
-}
+#on_planet_attackers_win = {
+#	events = {
+#		GFnytocrisis.2#行星沦陷
+#		GFnytocrisis.3#行星占领
+#	}
+#}
 #This = destroyed country
 #From = optional, destroyer (country)
 on_country_destroyed = {
 	events = {
-		GFnytobloodywar.3
 		GFnytocrisis.1#毁灭国家
-		GFnyto_ascension_perk.130
 	}
 }
 on_starbase_destroyed = {
@@ -118,7 +115,7 @@ on_monthly_pulse_country = {
 }
 on_tech_increased ={ #科研完成触发器
 	events = {
-		GFnyto_ascension_perk.999
+		#GFnyto_ascension_perk.999
 	}
 }
 # This = owner of fleet 1
@@ -127,7 +124,7 @@ on_tech_increased ={ #科研完成触发器
 # FromFromFrom = fleet 2
 on_entering_battle ={ #舰队交站触发器
 	events = {
-		GFnyto_ascension_perk.666
+		#GFnyto_ascension_perk.666
 		gf_nyto_weapons.0		
 	}
 }
@@ -192,6 +189,7 @@ on_army_killed_in_combat ={
 #This = Planet scope
 on_planet_transfer ={
 	events = {
+		GFnytocrisis.3
 		GFnyto_global.4
 		GFnyto_global.15
 	}
