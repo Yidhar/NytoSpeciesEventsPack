@@ -26,6 +26,10 @@ spriteTypes = {
 		name = "GFX_ship_part_GFnyto_force_shield3"
 		texturefile = "gfx/interface/icons/ship_parts/GFX_ship_part_GFnyto_force_shield3.dds"
 	}
+	spriteType = {
+		name = "GFX_nyto_trait_ogas_agreement"
+		textureFile = "gfx/interface/icons/traits/nyto/trait_GF_nyto_ogas_agreement_plus.dds"
+	}
 	#H武器
 	spriteType = {
 		name = "GFX_ship_part_GFnyto_accelerating_coil"

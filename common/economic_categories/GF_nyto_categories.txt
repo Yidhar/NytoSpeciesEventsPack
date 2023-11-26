@@ -20,3 +20,13 @@ planet_buildings = {
     }
     modifier_category = planet
 }
+planet_districts = {
+    parent = planet_structures
+
+    generate_mult_modifiers = {
+        produces
+        cost
+        upkeep
+    }
+    modifier_category = planet
+}

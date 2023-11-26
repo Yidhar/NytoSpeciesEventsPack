@@ -1,204 +1,215 @@
-###上将###
-#OGAS_1
-leader_admiral_trait_GF_nyto_ogas_agreement = {
-	cost = 0
-	requires_traits={trait_GF_nyto_ogas_agreement}
-	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_ogas_agreement_plus.dds"
-	modifier = {
-		ship_fire_rate_mult = 0.2
-		ship_evasion_mult = 0.2
-	}
-	#leader_trait = { admiral }
-	leader_class = { admiral }
-	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
-	opposites = {"leader_admiral_trait_GF_nyto_ogas_agreement"}
-	#notify_on_gained = no
-	notify_on_gained = no
-}
-#心识领域
-leader_admiral_trait_GF_nyto_noussphere={
-	cost = 0
-	randomized = no
-	requires_traits={trait_GF_nyto_noussphere}
-	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_noussphere.dds"
-	modifier = {
-		ship_fire_rate_mult = 0.3
-		ship_evasion_mult = 0.3
-	}
-	leader_trait = { admiral }
-	leader_class = { admiral }
-	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
-	opposites = {"leader_admiral_trait_GF_nyto_ogas_agreement"}
-	notify_on_gained = no
-}
-#OGAS_2
-leader_admiral_trait_GF_nyto_ogas_agreement_plus= {
-	cost = 0
-	randomized = no
-	requires_traits={trait_GF_nyto_ogas_agreement_plus}
-	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_OGAS_system.dds"	
-	modifier = {
-		ship_fire_rate_mult = 0.4
-		ship_evasion_mult = 0.4
-	}
-	leader_trait = { admiral }
-	leader_class = { admiral }
-	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
-	opposites = {"leader_admiral_trait_GF_nyto_ogas_agreement_plus"}
-	notify_on_gained = no
-}
-###将军###
-#OGAS_1
-leader_general_trait_GF_nyto_ogas_agreement= {
-	cost = 0
-	requires_traits={trait_GF_nyto_ogas_agreement}
-	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_ogas_agreement_plus.dds"
-	modifier = {
-		army_attack_morale_mult = 0.2
-		army_morale = 0.2
-		army_attack_damage_mult = 0.2
-	}
-	leader_trait = { general }
-	leader_class = { general }
-	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
-	opposites = {"leader_general_trait_GF_nyto_ogas_agreement_plus"}
-	notify_on_gained = no
-}
-leader_general_trait_GF_nyto_noussphere={
-	cost = 0
-	randomized = no
-	requires_traits={trait_GF_nyto_noussphere}
-	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_noussphere.dds"
-	modifier = {
-		army_attack_morale_mult = 0.3
-		army_morale = 0.3
-		army_attack_damage_mult = 0.3
-	}
-	leader_trait = { general }
-	leader_class = { general }
-	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
-	opposites = {"leader_admiral_trait_GF_nyto_ogas_agreement"}
-	notify_on_gained = no
-}
-#OGAS_2
-leader_general_trait_GF_nyto_ogas_agreement_plus= {
-	cost = 0
-	randomized = no
-	requires_traits={trait_GF_nyto_ogas_agreement_plus}
-	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_OGAS_system.dds"
-	modifier = {
-		army_attack_morale_mult = 0.4
-		army_morale = 0.4
-		army_attack_damage_mult = 0.4
-	}
-	leader_trait = { general }
-	leader_class = { general }
-	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
-	opposites = {"leader_general_trait_GF_nyto_ogas_agreement"}
-	notify_on_gained = no
-}
-###科学家###
-#OGAS_1
-leader_scientist_trait_GF_nyto_ogas_agreement= {
-	cost = 0
-	requires_traits={trait_GF_nyto_ogas_agreement}
-	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_ogas_agreement_plus.dds"
-	modifier = {
-		all_technology_research_speed = 0.1
-		science_ship_survey_speed = 0.2
-		ship_anomaly_research_speed_mult = 0.2
-	}
-	leader_trait = { scientist }
-	leader_class = { scientist }
-	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
-	opposites = {"leader_scientist_trait_GF_nyto_ogas_agreement_plus"}
-	notify_on_gained = no
-}
-leader_scientist_trait_GF_nyto_noussphere={
-	cost = 0
-	randomized = no
-	requires_traits={ trait_GF_nyto_noussphere }
-	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_noussphere.dds"
-	modifier = {
-		all_technology_research_speed = 0.2
-		science_ship_survey_speed = 0.3
-		ship_anomaly_research_speed_mult = 0.3
-	}
-	leader_trait = { scientist }
-	leader_class = { scientist }
-	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
-	opposites = {"leader_admiral_trait_GF_nyto_ogas_agreement"}
-	notify_on_gained = no
-}
-#OGAS_2
-leader_scientist_trait_GF_nyto_ogas_agreement_plus= {
-	cost = 0
-	randomized = no
-	requires_traits={trait_GF_nyto_ogas_agreement_plus} #拥有哪个特质的人口可以生成带有这个特质的领袖 
-	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_OGAS_system.dds"
-	modifier = {
-		all_technology_research_speed = 0.2
-		science_ship_survey_speed = 0.4
-		ship_anomaly_research_speed_mult = 0.4
-	}
-	leader_trait = { scientist }
-	leader_class = { scientist }
-	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
-	opposites = {"leader_scientist_trait_GF_nyto_ogas_agreement"} #互斥
-	notify_on_gained = no
-}
-###总督###
-#OGAS_1
-leader_governor_trait_GF_nyto_ogas_agreement= {
-	cost = 0
-	requires_traits={ trait_GF_nyto_ogas_agreement } #拥有哪个特质的人口可以生成带有这个特质的领袖 
-	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_ogas_agreement_plus.dds"
-	modifier = {
-		planet_crime_add = -20
-		planet_jobs_produces_mult = 0.1
-		planet_building_build_speed_mult = 0.2
-	}
-	leader_trait = { governor }
-	leader_class = { governor }
-	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
-	opposites = {"leader_governor_trait_GF_nyto_ogas_agreement_plus"}
-	notify_on_gained = no
-}
-
-leader_governor_trait_GF_nyto_noussphere={
-	cost = 0
-	randomized = no
-	requires_traits={trait_GF_nyto_noussphere}
-	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_noussphere.dds"
-	modifier = {
-		planet_crime_add = -50
-		planet_jobs_produces_mult = 0.1
-		planet_building_build_speed_mult = 0.4
-	}
-	leader_trait = { governor }
-	leader_class = { governor }
-	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
-	opposites = {"leader_admiral_trait_GF_nyto_ogas_agreement"}
-	notify_on_gained = no
-}
-
-#OGAS_2
-leader_governor_trait_GF_nyto_ogas_agreement_plus= {
-	cost = 0
-	randomized = no
-	requires_traits={trait_GF_nyto_ogas_agreement_plus} #拥有哪个特质的人口可以生成带有这个特质的领袖 
-	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_OGAS_system.dds"
-	modifier = {
-		planet_crime_add = -40
-		planet_jobs_produces_mult = 0.2
-		planet_building_build_speed_mult = 0.4
-	}
-	leader_trait = { governor }
-	leader_class = { governor }
-	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
-	opposites = {"leader_governor_trait_GF_nyto_ogas_agreement"}
-	notify_on_gained = no
-}
+####上将###
+##OGAS_1
+#leader_admiral_trait_GF_nyto_ogas_agreement = {
+#	cost = 0
+#	requires_traits={trait_GF_nyto_ogas_agreement}
+#	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_ogas_agreement_plus.dds"
+#	#modifier = {
+#	#	ship_fire_rate_mult = 0.2
+#	#	ship_evasion_mult = 0.2
+#	#}
+#	#fleet_specialization_tag = {}
+#	#leader_trait = { admiral }
+#	#can
+#	leader_class = { admiral }
+#	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
+#	opposites = {"leader_admiral_trait_GF_nyto_ogas_agreement"}
+#	#notify_on_gained = no
+#	notify_on_gained = no
+#}
+##心识领域
+#leader_admiral_trait_GF_nyto_noussphere={
+#	cost = 0
+#	randomized = no
+#	requires_traits={trait_GF_nyto_noussphere}
+#	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_noussphere.dds"
+#	modifier = {
+#		ship_fire_rate_mult = 0.3
+#		ship_evasion_mult = 0.3
+#	}
+#	#leader_trait = { admiral }
+#	leader_class = { admiral }
+#	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
+#	opposites = {"leader_admiral_trait_GF_nyto_ogas_agreement"}
+#	notify_on_gained = no
+#}
+##OGAS_2
+#leader_admiral_trait_GF_nyto_ogas_agreement_plus= {
+#	cost = 0
+#	randomized = no
+#	requires_traits={trait_GF_nyto_ogas_agreement_plus}
+#	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_OGAS_system.dds"
+#	modifier = {
+#		ship_fire_rate_mult = 0.4
+#		ship_evasion_mult = 0.4
+#	}
+#	#leader_trait = { admiral }
+#	leader_class = { admiral }
+#	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
+#	opposites = {"leader_admiral_trait_GF_nyto_ogas_agreement_plus"}
+#	notify_on_gained = no
+#}
+####将军###
+##OGAS_1
+#leader_general_trait_GF_nyto_ogas_agreement= {
+#	cost = 0
+#	requires_traits={trait_GF_nyto_ogas_agreement}
+#	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_ogas_agreement_plus.dds"
+#	modifier = {
+#		army_attack_morale_mult = 0.2
+#		army_morale = 0.2
+#		army_attack_damage_mult = 0.2
+#	}
+#	#leader_trait = { general }
+#	leader_class = { general }
+#	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
+#	opposites = {"leader_general_trait_GF_nyto_ogas_agreement_plus"}
+#	notify_on_gained = no
+#}
+#leader_general_trait_GF_nyto_noussphere={
+#	cost = 0
+#	randomized = no
+#	requires_traits={trait_GF_nyto_noussphere}
+#	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_noussphere.dds"
+#	modifier = {
+#		army_attack_morale_mult = 0.3
+#		army_morale = 0.3
+#		army_attack_damage_mult = 0.3
+#	}
+#	#leader_trait = { general }
+#	leader_class = { general }
+#	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
+#	opposites = {"leader_admiral_trait_GF_nyto_ogas_agreement"}
+#	notify_on_gained = no
+#}
+##OGAS_2
+#leader_general_trait_GF_nyto_ogas_agreement_plus= {
+#	cost = 0
+#	randomized = no
+#	requires_traits={trait_GF_nyto_ogas_agreement_plus}
+#	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_OGAS_system.dds"
+#	modifier = {
+#		army_attack_morale_mult = 0.4
+#		army_morale = 0.4
+#		army_attack_damage_mult = 0.4
+#	}
+#	#leader_trait = { general }
+#	leader_class = { general }
+#	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
+#	opposites = {"leader_general_trait_GF_nyto_ogas_agreement"}
+#	notify_on_gained = no
+#}
+####科学家###
+##OGAS_1
+#leader_scientist_trait_GF_nyto_ogas_agreement= {
+#	cost = 0
+#	requires_traits={trait_GF_nyto_ogas_agreement}
+#	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_ogas_agreement_plus.dds"
+#	modifier = {
+#		all_technology_research_speed = 0.1
+#		science_ship_survey_speed = 0.2
+#		ship_anomaly_research_speed_mult = 0.2
+#	}
+#	#leader_trait = { scientist }
+#	leader_class = { scientist }
+#	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
+#	opposites = {"leader_scientist_trait_GF_nyto_ogas_agreement_plus"}
+#	notify_on_gained = no
+#}
+#leader_scientist_trait_GF_nyto_noussphere={
+#	cost = 0
+#	randomized = no
+#	requires_traits={ trait_GF_nyto_noussphere }
+#	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_noussphere.dds"
+#	modifier = {
+#		all_technology_research_speed = 0.2
+#		science_ship_survey_speed = 0.3
+#		ship_anomaly_research_speed_mult = 0.3
+#	}
+#	#leader_trait = { scientist }
+#	leader_class = { scientist }
+#	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
+#	opposites = {"leader_admiral_trait_GF_nyto_ogas_agreement"}
+#	notify_on_gained = no
+#}
+##OGAS_2
+#leader_scientist_trait_GF_nyto_ogas_agreement_plus= {
+#	cost = 0
+#	randomized = no
+#	requires_traits={trait_GF_nyto_ogas_agreement_plus} #拥有哪个特质的人口可以生成带有这个特质的领袖
+#	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_OGAS_system.dds"
+#	modifier = {
+#		all_technology_research_speed = 0.2
+#		science_ship_survey_speed = 0.4
+#		ship_anomaly_research_speed_mult = 0.4
+#	}
+#	#leader_trait = { scientist }
+#	leader_class = { scientist }
+#	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
+#	opposites = {"leader_scientist_trait_GF_nyto_ogas_agreement"} #互斥
+#	notify_on_gained = no
+#}
+####总督###
+##OGAS_1
+#leader_governor_trait_GF_nyto_ogas_agreement= {
+#	cost = 0
+#	requires_traits={ trait_GF_nyto_ogas_agreement } #拥有哪个特质的人口可以生成带有这个特质的领袖
+#	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_ogas_agreement_plus.dds"
+#	modifier = {
+#		planet_crime_add = -20
+#		planet_jobs_produces_mult = 0.1
+#		planet_building_build_speed_mult = 0.2
+#	}
+#	assist_triggered_system_modifier = {
+#		planet_jobs_produces_mult = 0.1
+#	}
+#	assist_research_planet_modifier = {
+#		planet_jobs_produces_mult = 0.1
+#	}
+#	#system_modifier = {
+#	#	planet_jobs_produces_mult = 0.1
+#	#}
+#	#leader_trait = { governor }
+#	leader_class = { governor }
+#	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
+#	opposites = {"leader_governor_trait_GF_nyto_ogas_agreement_plus"}
+#	notify_on_gained = no
+#}
+#
+#leader_governor_trait_GF_nyto_noussphere={
+#	cost = 0
+#	randomized = no
+#	requires_traits={trait_GF_nyto_noussphere}
+#	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_noussphere.dds"
+#	modifier = {
+#		planet_crime_add = -50
+#		planet_jobs_produces_mult = 0.1
+#		planet_building_build_speed_mult = 0.4
+#	}
+#	#leader_trait = { governor }
+#	leader_class = { governor }
+#	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
+#	opposites = {"leader_admiral_trait_GF_nyto_ogas_agreement"}
+#	notify_on_gained = no
+#}
+#
+##OGAS_2
+#leader_governor_trait_GF_nyto_ogas_agreement_plus= {
+#	cost = 0
+#	randomized = no
+#	requires_traits={trait_GF_nyto_ogas_agreement_plus} #拥有哪个特质的人口可以生成带有这个特质的领袖
+#	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_OGAS_system.dds"
+#	modifier = {
+#		planet_crime_add = -40
+#		planet_jobs_produces_mult = 0.2
+#		planet_building_build_speed_mult = 0.4
+#	}
+#	#leader_trait = { governor }
+#	leader_class = { governor }
+#	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
+#	opposites = {"leader_governor_trait_GF_nyto_ogas_agreement"}
+#	notify_on_gained = no
+#}
 
 
 
@@ -206,12 +217,36 @@ leader_governor_trait_GF_nyto_ogas_agreement_plus= {
 #OGAS_1
 leader_trait_GF_nyto_ogas_agreement = {
 	cost = 0
+	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_ogas_agreement_plus.dds"
 	randomized = no
 	requires_traits={trait_GF_nyto_ogas_agreement}
-	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_ogas_agreement_plus.dds"
-	modifier = {planet_jobs_produces_mult = 0.1   }
-	#leader_trait = { ruler }
-	leader_class = { ruler }
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.05
+		planet_building_build_speed_mult = 0.1
+		planet_jobs_unity_produces_mult = -0.1
+		planet_amenities_mult = -0.2
+
+	}
+	leader_potential_add ={ always = no	 }
+	fleet_modifier ={
+		ship_fire_rate_mult = 0.1
+		ship_evasion_mult = 0.05
+		ship_accuracy_mult = -0.05
+		ship_disengage_chance_reduction = 0.3
+	}
+	sector_modifier={
+		planet_army_build_speed_mult = 0.15
+		armies_upkeep_mult = -0.1
+		planet_pops_upkeep_mult = -0.05
+		planet_buildings_upkeep_mult = 0.03
+	}
+	councilor_modifier ={
+		planet_decision_enact_speed_mult = 0.1
+		negative_traits_leader = 1
+		edicts_upkeep_mult = 0.075
+	}
+	##leader_trait = { ruler }
+	leader_class = all
 	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
 	opposites = {"leader_trait_GF_nyto_ogas_agreement_plus"}
 	notify_on_gained = no
@@ -221,11 +256,29 @@ leader_trait_GF_nyto_noussphere={
 	randomized = no
 	requires_traits={trait_GF_nyto_noussphere}
 	icon = "gfx/interface/icons/traits/nyto/trait_GF_nyto_noussphere.dds"
-	modifier = {planet_jobs_produces_mult = 0.15   }
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.05
+		planet_building_build_speed_mult = 0.1
+
+	}
+	leader_potential_add ={ always = no	 }
+	fleet_modifier ={
+		ship_fire_rate_mult = 0.1
+		ship_evasion_mult = 0.05
+		ship_disengage_chance_reduction = 0.3
+	}
+	sector_modifier={
+		planet_army_build_speed_mult = 0.15
+		armies_upkeep_mult = -0.1
+		planet_pops_upkeep_mult = -0.05
+	}
+	councilor_modifier ={
+		planet_decision_enact_speed_mult = 0.1
+	}
 	#leader_trait = { ruler }
-	leader_class = { ruler }
+	leader_class = all
 	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
-	opposites = {"leader_admiral_trait_GF_nyto_ogas_agreement"}
+	opposites = {"leader_trait_GF_nyto_ogas_agreement"}
 	notify_on_gained = no
 }
 #OGAS_2
@@ -236,7 +289,25 @@ leader_trait_GF_nyto_ogas_agreement_plus= {
 	icon="gfx/interface/icons/traits/nyto/trait_GF_nyto_OGAS_system.dds"
 	modifier = {planet_jobs_produces_mult = 0.2}
 	#leader_trait = { ruler }
-	leader_class = { ruler }
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.2
+		planet_building_build_speed_mult = 0.3
+
+	}
+	leader_potential_add ={ always = no	 }
+	fleet_modifier ={
+		ship_fire_rate_mult = 0.3
+		ship_evasion_mult = 0.3
+	}
+	sector_modifier={
+		planet_army_build_speed_mult = 0.3
+		armies_upkeep_mult = -0.2
+		planet_pops_upkeep_mult = -0.1
+	}
+	councilor_modifier ={
+		planet_decision_enact_speed_mult = 0.3
+	}
+	leader_class = all
 	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
 	opposites = {"leader_trait_GF_nyto_ogas_agreement"}
 	notify_on_gained = no
@@ -410,3 +481,34 @@ leader_trait_GF_nyto_ogas_agreement_plus= {
 #		ruler
 #	}
 #}
+leader_trait_urbanist = {
+	destiny_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_urbanist"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_official_governor
+	}
+	planet_modifier = {
+		empire_size_districts_mult = -0.75
+		planet_buildings_upkeep_mult = -0.5
+		planet_districts_upkeep_mult = -0.5
+	}
+	sector_modifier = {
+		empire_size_districts_mult = -0.375
+		planet_buildings_upkeep_mult = -0.25
+		planet_districts_upkeep_mult = -0.25
+	}
+	leader_class = { official }
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}

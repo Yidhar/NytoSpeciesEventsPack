@@ -8,54 +8,7 @@ building_GFnyto_collapse_exploit_plant_1 = {
 			is_nyto_country =yes
 		}
 	}
-	triggered_desc = {
-		trigger = {
-			or = {
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value > 200
-					}
-					not = {
-						has_district = district_GF_nyto_pc_toxic_science
-						colony_type = col_GF_nyto_capital
-					}
-				}
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value > 700
-					}
-					has_district = district_GF_nyto_pc_toxic_science
-					not = { colony_type = col_GF_nyto_capital }
-				}
-
-			}
-		}
-		text = "GF_nyto_plante_build_off"
-	}
-	triggered_planet_modifier = {
-		potential = {
-			or = {
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 200
-					}
-					not = {
-						has_district = district_GF_nyto_pc_toxic_science
-					}
-				}
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 700
-					}
-					has_district = district_GF_nyto_pc_toxic_science
-				}
-				colony_type = col_GF_nyto_capital
-			}
-		}
+	planet_modifier = {
 		job_GFnyto_collapse_particle_researcher_add = 2
 	}
 	resources = {
@@ -64,49 +17,7 @@ building_GFnyto_collapse_exploit_plant_1 = {
 			minerals = 400
 		}
 		upkeep = {
-			trigger = {
-				or = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 200
-					}
-					and = {
-						check_variable = {
-							which = GFnyto_plante_wrlv
-							value < 700
-						}
-						has_district = district_GF_nyto_pc_toxic_science
-					}
-					colony_type = col_GF_nyto_capital
-				}
-			}
 			energy = 4
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-				check_variable = {
-					which = GFnyto_plante_wrlv
-					value > 0
-				}
-				or = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 200
-					}
-					and = {
-						check_variable = {
-							which = GFnyto_plante_wrlv
-							value < 700
-						}
-						has_district = district_GF_nyto_pc_toxic_science
-					}
-				}
-				colony_type = col_GF_nyto_capital
-
-			}
-			energy = 0.07
-			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
 	upgrades = {
@@ -141,109 +52,17 @@ building_GFnyto_collapse_exploit_plant_2 = {
 	allow = {
 		has_upgraded_capital = yes
 	}
-	triggered_desc = {
-		trigger = {
-			or = {
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value > 500
-					}
-					not = {
-						colony_type = col_GF_nyto_capital
-						has_district = district_GF_nyto_pc_toxic_science
-					}
-				}
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value > 700
-					}
-					has_district = district_GF_nyto_pc_toxic_science
-					not = {
-						colony_type = col_GF_nyto_capital
-					}
-				}
-			}
-		}
-		text = "GF_nyto_plante_build_off"
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			or = {
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 500
-					}
-					not = {
-						has_district = district_GF_nyto_pc_toxic_science
-					}
-				}
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 700
-					}
-					has_district = district_GF_nyto_pc_toxic_science
-				}
-				colony_type = col_GF_nyto_capital
-			}
-
-		}
+	planet_modifier = {
 		job_GFnyto_collapse_particle_researcher_add = 3
 	}
+
 	resources = {
 		category = planet_buildings
 		cost = {
 			minerals = 600
 		}
 		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-				or = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 500
-					}
-					and = {
-						check_variable = {
-							which = GFnyto_plante_wrlv
-							value < 700
-						}
-						has_district = district_GF_nyto_pc_toxic_science
-					}
-					colony_type = col_GF_nyto_capital
-				}
-
-			}
 			energy = 6
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-				check_variable = {
-					which = GFnyto_plante_wrlv
-					value > 10
-				}
-				or = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 500
-					}
-					and = {
-						check_variable = {
-							which = GFnyto_plante_wrlv
-							value < 700
-						}
-						has_district = district_GF_nyto_pc_toxic_science
-					}
-					colony_type = col_GF_nyto_capital
-				}
-			}
-			energy = 0.05
-			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
 	prerequisites = {
@@ -417,7 +236,6 @@ building_GFnyto_transportation_hub = {
 	}
 	base_cap_amount = 1
 	planet_modifier = {
-		job_bureaucrat_add = 4
 		job_GFnyto_white_knight_add = 2
 		planet_jobs_produces_mult = 0.1
 		army_health = 0.2
@@ -431,13 +249,6 @@ building_GFnyto_transportation_hub = {
 		}
 		upkeep = {
 			energy = 6
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-			}
-			energy = 0.05
-			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
 	ai_weight = {
@@ -473,25 +284,8 @@ building_GFnyto_heritage_department = {
 		is_capital = yes
 	}
 	base_cap_amount = 1
-	triggered_desc = {
-		trigger = {
-			check_variable = {
-				which = GFnyto_plante_wrlv
-				value > 400
-			}
-		}
-		text = "GF_nyto_plante_build_off"
-	}
-	triggered_planet_modifier = {
-		potential = {
-			is_variable_set = GFnyto_plante_wrlv
-			check_variable = {
-				which = GFnyto_plante_wrlv
-				value < 400
-			}
-		}
-		job_culture_worker_add = 5
-	}
+	planet_modifier = { job_culture_worker_add = 5 }
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -504,25 +298,6 @@ building_GFnyto_heritage_department = {
 			energy = 8
 			alloys = 2
 			minerals = 2
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-				check_variable = {
-					which = GFnyto_plante_wrlv
-					value > 1000
-				}
-				years_passed > 50
-			}
-			energy = 0.1
-			multiplier = planet.GFnyto_plante_wrlv
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-			}
-			energy = 0.05
-			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
 	ai_weight = {
@@ -541,55 +316,7 @@ building_GFnyto_algorithm = {
 			is_nyto_country =yes
 		}
 	}
-	triggered_desc = {
-		trigger = {
-			or = {
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value > 500
-					}
-					not = {
-						has_district = district_GF_nyto_pc_toxic_science
-						colony_type = col_GF_nyto_capital
-					}
-				}
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value > 700
-					}
-					has_district = district_GF_nyto_pc_toxic_science
-					not = {
-						colony_type = col_GF_nyto_capital
-					}
-				}
-			}
-		}
-		text = "GF_nyto_plante_build_off"
-	}
-	triggered_planet_modifier = {
-		potential = {
-			or = {
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 500
-					}
-					not = {
-						has_district = district_GF_nyto_pc_toxic_science
-					}
-				}
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 700
-					}
-					has_district = district_GF_nyto_pc_toxic_science
-				}
-				colony_type = col_GF_nyto_capital
-			}
-		}
+	planet_modifier = {
 		job_GFnyto_algorithm_add = 2
 	}
 	resources = {
@@ -601,13 +328,6 @@ building_GFnyto_algorithm = {
 		upkeep = {
 			energy = 10
 			exotic_gases = 1
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-			}
-			energy = 0.05
-			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
 	prerequisites = {
@@ -629,57 +349,7 @@ building_GFnytp_framework_core = {
 			is_nyto_country =yes
 		}
 	}
-	triggered_desc = {
-		trigger = {
-			or = {
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value > 500
-					}
-					not = {
-						colony_type = col_GF_nyto_capital
-						has_district = district_GF_nyto_pc_toxic_alloy
-					}
-				}
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value > 700
-					}
-					has_district = district_GF_nyto_pc_toxic_alloy
-					not = {
-						colony_type = col_GF_nyto_capital
-					}
-				}
-			}
-		}
-		text = "GF_nyto_plante_build_off"
-	}
-	triggered_planet_modifier = {
-		potential = {
-			or = {
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 500
-					}
-					not = {
-						has_district = district_GF_nyto_pc_toxic_alloy
-					}
-				}
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 700
-					}
-					has_district = district_GF_nyto_pc_toxic_alloy
-				}
-				colony_type = col_GF_nyto_capital
-			}
-		}
-		job_GFnyto_framework_add = 2
-	}
+	planet_modifier = { job_GFnyto_framework_add = 2 }
 	resources = {
 		category = research_agreements
 		cost = {
@@ -688,14 +358,7 @@ building_GFnytp_framework_core = {
 		}
 		upkeep = {
 			energy = 20
-			rare_crystals = 5
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-			}
-			energy = 0.05
-			multiplier = planet.GFnyto_plante_wrlv
+			rare_crystals = 0.75
 		}
 	}
 	ai_weight = {
@@ -719,57 +382,7 @@ building_GFnytp_framework_core2 = {
 			is_nyto_country =yes
 		}
 	}
-	triggered_desc = {
-		trigger = {
-			or = {
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value > 400
-					}
-					not = {
-						colony_type = col_GF_nyto_capital
-						has_district = district_GF_nyto_pc_toxic_alloy
-					}
-				}
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value > 700
-					}
-					has_district = district_GF_nyto_pc_toxic_alloy
-					not = {
-						colony_type = col_GF_nyto_capital
-					}
-				}
-			}
-		}
-		text = "GF_nyto_plante_build_off"
-	}
-	triggered_planet_modifier = {
-		potential = {
-			or = {
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 400
-					}
-					not = {
-						has_district = district_GF_nyto_pc_toxic_alloy
-					}
-				}
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 700
-					}
-					has_district = district_GF_nyto_pc_toxic_alloy
-				}
-				colony_type = col_GF_nyto_capital
-			}
-		}
-		job_GFnyto_framework_add = 4
-	}
+	planet_modifier = {job_GFnyto_framework_add = 4}
 	resources = {
 		category = research_agreements
 		cost = {
@@ -778,26 +391,7 @@ building_GFnytp_framework_core2 = {
 		}
 		upkeep = {
 			energy = 20
-			rare_crystals = 10
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-				check_variable = {
-					which = GFnyto_plante_wrlv
-					value > 1000
-				}
-				years_passed > 50
-			}
-			energy = 0.1
-			multiplier = planet.GFnyto_plante_wrlv
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-			}
-			energy = 0.05
-			multiplier = planet.GFnyto_plante_wrlv
+			rare_crystals = 1.5
 		}
 	}
 	ai_weight = {
@@ -829,63 +423,9 @@ building_GFnyto_nourishment_center = {
 			energy = 10
 			GF_nyto_collapse_liquid = 5
 		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-			}
-			energy = 0.05
-			multiplier = planet.GFnyto_plante_wrlv
-		}
 	}
-	triggered_desc = {
-		trigger = {
-			or = {
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value > 600
-					}
-					not = {
-						colony_type = col_GF_nyto_capital
-						has_district = district_GF_nyto_pc_toxic_alloy
-					}
-				}
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value > 700
-					}
-					has_district = district_GF_nyto_pc_toxic_alloy
-					not = {
-						colony_type = col_GF_nyto_capital
-					}
-				}
-			}
-		}
-		text = "GF_nyto_plante_build_off"
-	}
-	triggered_planet_modifier = {
-		potential = {
-			or = {
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 600
-					}
-					not = {
-						has_district = district_GF_nyto_pc_toxic_alloy
-					}
-				}
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 700
-					}
-					has_district = district_GF_nyto_pc_toxic_alloy
-				}
-				colony_type = col_GF_nyto_capital
-			}
-		}
+
+	planet_modifier = {job_GFnyto_collapse_particle_zip_add = 2
 		job_GFnyto_collapse_particle_zip_add = 2
 	}
 	prerequisites = {
@@ -916,65 +456,9 @@ building_GFnyto_nourishment_center2 = {
 			energy = 10
 			GF_nyto_collapse_liquid = 6
 		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-			}
-			energy = 0.05
-			multiplier = planet.GFnyto_plante_wrlv
-		}
 	}
-	triggered_desc = {
-		trigger = {
-			or = {
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value > 600
-					}
-					not = {
-						has_district = district_GF_nyto_pc_toxic_leisure
-						colony_type = col_GF_nyto_capital
-					}
-				}
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value > 700
-					}
-					has_district = district_GF_nyto_pc_toxic_leisure
-					not = {
-						colony_type = col_GF_nyto_capital
-					}
-				}
-			}
-		}
-		text = "GF_nyto_plante_build_off"
-	}
-	triggered_planet_modifier = {
-		potential = {
-			or = {
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 600
-					}
-					not = {
-						has_district = district_GF_nyto_pc_toxic_leisure
-					}
-				}
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 700
-					}
-					has_district = district_GF_nyto_pc_toxic_leisure
-				}
-				colony_type = col_GF_nyto_capital
-			}
-		}
-		job_GFnyto_collapse_particle_zip_add = 4
-	}
+
+	planet_modifier = {job_GFnyto_collapse_particle_zip_add=4}
 	prerequisites = {
 		"tech_GFnyto_tansuo2"
 	}
@@ -1013,65 +497,11 @@ building_GFnyto_dimensional_fabricator = {
 			energy = 10
 			GF_nyto_collapse_liquid = 5
 		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv			
-			}
-			energy = 0.05
-			multiplier = planet.GFnyto_plante_wrlv
-		}
 	}
-	triggered_desc = {
-		trigger = {
-			or = {
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value > 600
-					}
-					not = {
-						has_district = district_GF_nyto_pc_toxic_alloy
-						colony_type = col_GF_nyto_capital
-					}
-				}
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value > 700
-					}
-					has_district = district_GF_nyto_pc_toxic_alloy
-					not = {
-						colony_type = col_GF_nyto_capital
-					}
-				}
-			}
-		}
-		text = "GF_nyto_plante_build_off"
-	}
-	triggered_planet_modifier = {
-		potential = {
-			or = {
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 600
-					}
-					not = {
-						has_district = district_GF_nyto_pc_toxic_alloy
-					}
-				}
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 700
-					}
-					has_district = district_GF_nyto_pc_toxic_alloy
-				}
-				colony_type = col_GF_nyto_capital
-			}
-		}
+	planet_modifier = {
 		job_GFnyto_collapse_particle_rar_add = 2
 	}
+
 	prerequisites = {
 		"tech_GFnyto_tansuo"
 	}
@@ -1107,77 +537,8 @@ building_GFnyto_dimensional_fabricator2 = {
 			energy = 10
 			GF_nyto_collapse_liquid = 5
 		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-				check_variable = {
-					which = GFnyto_plante_wrlv
-					value > 1000
-				}
-				years_passed > 50
-				owner = { is_ai = no }	
-			}
-			energy = 0.1
-			multiplier = planet.GFnyto_plante_wrlv
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-			}
-			energy = 0.05
-			multiplier = planet.GFnyto_plante_wrlv
-		}
 	}
-	triggered_desc = {
-		trigger = {
-			or = {
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value > 600
-					}
-					not = {
-						has_district = district_GF_nyto_pc_toxic_leisure
-						colony_type = col_GF_nyto_capital
-					}
-				}
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value > 700
-					}
-					has_district = district_GF_nyto_pc_toxic_leisure
-					not = { colony_type = col_GF_nyto_capital }
-				}
-
-			}
-		}
-		text = "GF_nyto_plante_build_off"
-	}
-	triggered_planet_modifier = {
-		potential = {
-			or = {
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 600
-					}
-					not = {
-						has_district = district_GF_nyto_pc_toxic_leisure
-					}
-				}
-				and = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value < 700
-					}
-					has_district = district_GF_nyto_pc_toxic_leisure
-				}
-				colony_type = col_GF_nyto_capital
-			}
-		}
-		job_GFnyto_collapse_particle_rar_add = 4
-	}
+	planet_modifier = {job_GFnyto_collapse_particle_rar_add = 4}
 	prerequisites = {
 		"tech_GFnyto_tansuo2"
 	}
@@ -1211,25 +572,6 @@ building_GFnyto_Elids = {
 		upkeep = {
 			energy = 5
 			GF_nyto_collapse_liquid = 3
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-				check_variable = {
-					which = GFnyto_plante_wrlv
-					value > 1000
-				}
-				years_passed > 50
-			}
-			energy = 0.1
-			multiplier = planet.GFnyto_plante_wrlv
-		}
-		upkeep = {
-			trigger = {
-				is_variable_set = GFnyto_plante_wrlv
-			}
-			energy = 0.05
-			multiplier = planet.GFnyto_plante_wrlv
 		}
 	}
 	prerequisites = {
@@ -1300,10 +642,6 @@ building_GFnyto_collapse_tower = {
 			GF_nyto_collapse_liquid = 0.05
 			multiplier = planet.GFnyto_plante_wrlv
 		}
-		upkeep = {
-			energy = 0.25
-			multiplier = planet.GFnyto_plante_wrlv
-		}
 	}
 	potential = {
 		owner = {
@@ -1358,6 +696,64 @@ GF_nyto_holding_sacrificial_shrine = {
 	}
 }
 
+#电离净化塔
+building_GFnyto_affluence_center = {
+	base_buildtime = @b2_time
+	can_build = yes
+	can_demolish = yes
+	potential = {
+		owner = {
+			OR = {
+				is_nyto_country =yes
+				has_country_flag = has_nyto_technology
+			}
+		}
+	}
+	category = manufacturing
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			trigger ={
+				check_variable = {
+					which = GFnyto_plante_wrlv
+					value < 100
+				}
+			}
+			GF_nyto_collapse_liquid = 1
+			multiplier = planet.GFnyto_plante_wrlv
+		}
+		produces = {
+			trigger = {
+				check_variable = {
+					which = GFnyto_plante_wrlv
+					value > 100
+				}
+			}
+			GF_nyto_collapse_liquid = 100
+		}
+		produces = {
+			trigger = {
+				check_variable = {
+					which = GFnyto_plante_wrlv
+					value > 100
+				}
+			}
+			GF_nyto_collapse_liquid = 0.05
+			multiplier = planet.GFnyto_plante_wrlv
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+	planet_modifier = {
+		pop_environment_tolerance = 0.05
+	}
+}
+
+
 #反冲式衰变壁垒
 GF_nyto_Recoil_decay_barrier ={
 	base_buildtime = @b3_time
@@ -1379,12 +775,11 @@ GF_nyto_Recoil_decay_barrier ={
 			alloys = 200
 		}
 		upkeep = {
-			energy = 0.5
-			multiplier = planet.GFnyto_plante_wrlv
+			energy = 50
 		}
 	}
-	on_queued = {
-
+	planet_modifier = {
+		pop_environment_tolerance = 0.1
 	}
 }
 

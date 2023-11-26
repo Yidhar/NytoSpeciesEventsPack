@@ -735,10 +735,7 @@ country_event = {
 		every_owned_pop = {
 			limit = {
 				is_same_species = root
-				OR = {
-					has_trait = trait_GF_nyto_ogas_agreement
-					has_trait = trait_GF_nyto_ogas_agreement_plus
-				}				
+				has_trait = trait_GF_nyto_ogas_agreement
 			}
 			modify_species = {
 				species = this
@@ -756,105 +753,22 @@ country_event = {
 		every_owned_leader = {
 			limit = {
 				is_same_species = root
-				NOR = {
-					has_trait = leader_admiral_trait_GF_nyto_noussphere
-					has_trait = leader_general_trait_GF_nyto_noussphere
-					has_trait = leader_governor_trait_GF_nyto_noussphere
-					has_trait = leader_scientist_trait_GF_nyto_noussphere
+				not = {
 					has_trait = leader_trait_GF_nyto_noussphere
 				}
 			}
-			if = {
-				limit = {
-					leader_class = admiral
-				}
-				remove_trait = leader_admiral_trait_GF_nyto_ogas_agreement
-				add_trait = leader_admiral_trait_GF_nyto_noussphere
-				#add_ruler_trait = leader_trait_GF_nyto_noussphere
-			}
-			if = {
-				limit = {
-					leader_class = general
-				}
-				remove_trait = leader_general_trait_GF_nyto_ogas_agreement
-				add_trait = leader_general_trait_GF_nyto_noussphere
-				#add_ruler_trait = leader_trait_GF_nyto_noussphere
-			}
-			if = {
-				limit = {
-					leader_class = governor
-				}
-				remove_trait = leader_governor_trait_GF_nyto_ogas_agreement
-				add_trait = leader_governor_trait_GF_nyto_noussphere
-				#add_ruler_trait = leader_trait_GF_nyto_noussphere
-			}
-			if = {
-				limit = {
-					leader_class = scientist
-				}
-				remove_trait = leader_scientist_trait_GF_nyto_ogas_agreement
-				add_trait = leader_scientist_trait_GF_nyto_noussphere
-				#add_ruler_trait = leader_trait_GF_nyto_noussphere
-			}
-			#if = {
-			#	limit = {
-			#		leader_class = ruler
-			#	}
-			#	remove_trait = leader_trait_GF_nyto_ogas_agreement
-			#	add_trait = leader_trait_GF_nyto_noussphere
-			#	#add_ruler_trait = leader_trait_GF_nyto_noussphere
-			#}
+			remove_trait = leader_trait_GF_nyto_ogas_agreement
+			add_trait = leader_trait_GF_nyto_noussphere
 		}
 		every_pool_leader = {
 			limit = {
 				is_same_species = root
-				NOR = {
-					has_trait = leader_admiral_trait_GF_nyto_noussphere
-					has_trait = leader_general_trait_GF_nyto_noussphere
-					has_trait = leader_governor_trait_GF_nyto_noussphere
-					has_trait = leader_scientist_trait_GF_nyto_noussphere
+				NOT = {
 					has_trait = leader_trait_GF_nyto_noussphere
 				}
 			}
-			if = {
-				limit = {
-					leader_class = admiral
-				}
-				remove_trait = leader_admiral_trait_GF_nyto_ogas_agreement
-				add_trait = leader_admiral_trait_GF_nyto_noussphere
-				#add_ruler_trait = leader_trait_GF_nyto_noussphere
-			}
-			if = {
-				limit = {
-					leader_class = general
-				}
-				remove_trait = leader_general_trait_GF_nyto_ogas_agreement
-				add_trait = leader_general_trait_GF_nyto_noussphere
-				#add_ruler_trait = leader_trait_GF_nyto_noussphere
-			}
-			if = {
-				limit = {
-					leader_class = governor
-				}
-				remove_trait = leader_governor_trait_GF_nyto_ogas_agreement
-				add_trait = leader_governor_trait_GF_nyto_noussphere
-			}
-			if = {
-				limit = {
-					leader_class = scientist
-				}
-				remove_trait = leader_scientist_trait_GF_nyto_ogas_agreement
-				add_trait = leader_scientist_trait_GF_nyto_noussphere
-				#add_ruler_trait = leader_trait_GF_nyto_noussphere
-			}
-			#if = {
-			#	limit = {
-			#		leader_class = ruler
-			#	}
-			#	remove_trait = leader_trait_GF_nyto_ogas_agreement
-			#	add_trait = leader_trait_GF_nyto_noussphere
-			#	add_ruler_trait = leader_trait_GF_nyto_noussphere
-			#}
+			remove_trait = leader_trait_GF_nyto_ogas_agreement
+			add_trait = leader_trait_GF_nyto_noussphere
 		}
 	}
 }

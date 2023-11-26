@@ -590,6 +590,14 @@ country_event = {
 						modifier = GF_nyto_Radiation
 						multiplier = GFnyto_plante_wrlv
 					}
+					if = {
+						limit = {
+							not = {
+								has_deposit = d_GFnyto_Radiation
+							}
+						}
+						add_deposit = d_GFnyto_Radiation
+					}
 				}
 				else_if = {
 					limit = {
@@ -599,6 +607,14 @@ country_event = {
 					add_modifier = {
 						modifier = GF_nyto_Radiation2
 						multiplier = GFnyto_plante_wrlv
+					}
+					if = {
+						limit = {
+							not = {
+								has_deposit = d_GFnyto_Radiation
+							}
+						}
+						add_deposit = d_GFnyto_Radiation
 					}
 				}
 			}

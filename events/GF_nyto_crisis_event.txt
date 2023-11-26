@@ -167,7 +167,6 @@ country_event = {
 			which = GFnyto_empire_maintenance
 			value < 0
 		}
-
 	}
 	option = {
 		name = GFnytocrisis.4.a
@@ -197,4 +196,12 @@ event = {
 #瘟疫 随存在时间殖民地瘟疫扩散
 
 #饥荒 大幅食物减产并在玩家食物赤字阶段获得无敌,解除无敌后赤字越大伤害越高
+
+#神的离去 清楚所有增益buff
+
+#神不在的第一天 不再出现新的人口
+
+#神不在的第二天 人口不会死亡
+
+#神不在的第三天
 

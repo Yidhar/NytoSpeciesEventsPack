@@ -113,21 +113,15 @@ GF_nyto_drp_modifer ={
 		mode = add
 		mult = -1
 	} ]
-	[[wrlv]
-	complex_trigger_modifier = {
-		trigger = check_variable
-		parameters = {
-			which = $wrlv$
-		}
-		mode = add
-		mult = 0.3
-	} ]
+	mult = value:Gfnyto_planet_wrlv_proudcu2
+	mult = 0.001
 	complex_trigger_modifier = {
 		trigger_scope = planet
 		trigger =has_planetary_ascension_tier
 		mode = add
 		mult = 0.1
 	}
+	#divide = 3
 }
 
 GF_nyto_PR_var_drp_count={
@@ -174,20 +168,12 @@ Gfnyto_planet_wrlv_proudcu ={
 Gfnyto_planet_wrlv_proudcu2={
 	base = 0
 	add = value:Gfnyto_planet_wrlv_proudcu
-	mult = value:Gfnyto_planet_wrlv_proudcu
+	pow = 2
 	divide = planet.GFnyto_plante_wrlv
 	divide = 200
 	round = yes
+	abs = yes
 }
-
-
-GF_nyto_sv2={
-	base = 1
-	mult = $sv$
-}
-
-
-
 
 Gfnyto_planet_wrlv_upkeep ={
 	base = 1

@@ -1168,23 +1168,12 @@ utility_component_template = {
 utility_component_template = {
 	key = "GF_SHIP_AURA_Trap_SHIP_AURA"
 	size = medium
-	icon = "GFX_ship_part_aura_strike_craft"
+	icon = "GFX_ship_part_aura_bombardment"
 	icon_frame = 1
 	power = -3000
 	component_set = ship_aura_components
 	size_restriction = { GFnyto_Command_ship }
-	friendly_aura = {
-		name ="算力核心"
-		system_wide = no
-		stack_info = {
-			id = "GF_command_aura"
-			priority = 1
-		}
-		modifier = {
-			custom_tooltip = "GF_nyto_Trap_desc"
-			#weapon_type_Electronic_weapon_damage_mult = 2
-		}
-	}
+	ftl_magnet = yes
 	ftl_inhibitor = yes
 }
 

@@ -15,48 +15,16 @@ country_event = {
 		from = {
 			if = {
 				limit = {
-					leader_class = admiral
+					not = {
+						has_trait = leader_trait_GF_nyto_ogas_agreement
+					}
 				}
-				add_trait = leader_admiral_trait_GF_nyto_ogas_agreement
-				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement
-				break = yes
+				#add_trait = leader_trait_GF_nyto_ogas_agreement
+				add_trait_no_notify = leader_trait_GF_nyto_ogas_agreement
 			}
-			if = {
-				limit = {
-					leader_class = general
-				}
-				add_trait = leader_general_trait_GF_nyto_ogas_agreement
-				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement
-				break = yes
-			}
-			if = {
-				limit = {
-					leader_class = governor
-				}
-				add_trait = leader_governor_trait_GF_nyto_ogas_agreement
-				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement
-				break = yes
-			}
-			if = {
-				limit = {
-					leader_class = scientist
-				}
-				add_trait = leader_scientist_trait_GF_nyto_ogas_agreement
-				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement
-				break = yes
-			}
-			#if = {
-			#	limit = {
-			#		leader_class = ruler
-			#	}
-			#	add_trait = leader_trait_GF_nyto_ogas_agreement
-			#	#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement
-			#	break = yes
-			#}
 		}
 	}
 }
-
 #领袖招募1
 country_event = {
 	id = GFnyto_global.11
@@ -73,44 +41,13 @@ country_event = {
 		from = {
 			if = {
 				limit = {
-					leader_class = admiral
+					not = {
+						has_trait = leader_trait_GF_nyto_ogas_agreement_plus
+					}
 				}
-				add_trait = leader_admiral_trait_GF_nyto_ogas_agreement_plus
-				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
-				break = yes
+				#add_trait = leader_trait_GF_nyto_ogas_agreement
+				add_trait_no_notify = leader_trait_GF_nyto_ogas_agreement_plus
 			}
-			if = {
-				limit = {
-					leader_class = general
-				}
-				add_trait = leader_general_trait_GF_nyto_ogas_agreement_plus
-				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
-				break = yes
-			}
-			if = {
-				limit = {
-					leader_class = governor
-				}
-				add_trait = leader_governor_trait_GF_nyto_ogas_agreement_plus
-				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
-				break = yes
-			}
-			if = {
-				limit = {
-					leader_class = scientist
-				}
-				add_trait = leader_scientist_trait_GF_nyto_ogas_agreement_plus
-				#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
-				break = yes
-			}
-			#if = {
-			#	limit = {
-			#		leader_class = ruler
-			#	}
-			#	add_trait = leader_trait_GF_nyto_ogas_agreement_plus
-			#	#add_ruler_trait = leader_trait_GF_nyto_ogas_agreement_plus
-			#	break = yes
-			#}
 		}
 	}
 }
@@ -131,44 +68,12 @@ country_event = {
 		from = {
 			if = {
 				limit = {
-					leader_class = admiral
+					not = {
+						has_trait = leader_trait_GF_nyto_noussphere
+					}
 				}
-				add_trait = leader_admiral_trait_GF_nyto_noussphere
-				#add_ruler_trait = leader_trait_GF_nyto_noussphere
-				break = yes
+				add_trait_no_notify = leader_trait_GF_nyto_noussphere
 			}
-			if = {
-				limit = {
-					leader_class = general
-				}
-				add_trait = leader_general_trait_GF_nyto_noussphere
-				#add_ruler_trait = leader_trait_GF_nyto_noussphere
-				break = yes
-			}
-			if = {
-				limit = {
-					leader_class = governor
-				}
-				add_trait = leader_governor_trait_GF_nyto_noussphere
-				#add_ruler_trait = leader_trait_GF_nyto_noussphere
-				break = yes
-			}
-			if = {
-				limit = {
-					leader_class = scientist
-				}
-				add_trait = leader_scientist_trait_GF_nyto_noussphere
-				#add_ruler_trait = leader_trait_GF_nyto_noussphere
-				break = yes
-			}
-			#if = {
-			#	limit = {
-			#		leader_class = ruler
-			#	}
-			#	add_trait = leader_trait_GF_nyto_noussphere
-			#	#add_ruler_trait = leader_trait_GF_nyto_noussphere
-			#	break = yes
-			#}
 		}
 	}
 }
@@ -544,6 +449,20 @@ planet_event = {
 		}
 		owner_main_species = {
 			has_trait = trait_GFnyto_tanhua
+		}
+	}
+	immediate = {
+		add_deposit = d_GFnyto_tanhua
+	}
+}
+planet_event = {
+	id = GFnyto_global.7
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		or = {
+			has_modifier = GF_nyto_Radiation
+			has_modifier = GF_nyto_Radiation2
 		}
 	}
 	immediate = {
@@ -1118,6 +1037,14 @@ country_event = {
 					modifier = GF_nyto_Radiation2
 					multiplier = GFnyto_plante_wrlv
 				}
+				if = {
+					limit = {
+						not = {
+							has_deposit = d_GFnyto_Radiation
+						}
+					}
+					add_deposit = d_GFnyto_Radiation
+				}
 			}
 			else_if = {
 				limit = {
@@ -1131,6 +1058,14 @@ country_event = {
 				add_modifier = {
 					modifier = GF_nyto_Radiation
 					multiplier = GFnyto_plante_wrlv
+				}
+				if = {
+					limit = {
+						not = {
+							has_deposit = d_GFnyto_Radiation
+						}
+					}
+					add_deposit = d_GFnyto_Radiation
 				}
 			}
 			#非坍塌星球 污染度到底200时 转变为坍塌星球
@@ -1189,10 +1124,7 @@ planet_event = {
 		}
 	}
 	immediate = {
-		set_variable = {
-			which = GFnyto_plante_wrlv
-			value = 50
-		}
+		set_variable = { which = GFnyto_plante_wrlv value = 50 }
 		add_modifier = {
 			modifier = GF_nyto_Radiation2
 			multiplier = GFnyto_plante_wrlv

@@ -25,12 +25,13 @@ is_nyto_country ={
 	}
 }
 
+##关停判定
 is_planet_district_wlv ={
 	planet = {
 		or = {
 			check_variable = {
 				which = GFnyto_plante_wrlv
-				value < 700
+				value < $max_wrlv$
 			}
 			colony_type = col_GF_nyto_capital
 		}

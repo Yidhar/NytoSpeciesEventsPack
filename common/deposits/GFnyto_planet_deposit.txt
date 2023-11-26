@@ -219,7 +219,7 @@ d_GFnyto_Radiation ={
 			}
 		}
 		modifier = {
-			planet_buildings_alloys_upkeep_add = 0.05
+			planet_buildings_minerals_upkeep_add = 0.05
 		}
 		mult =value:Gfnyto_planet_wrlv_upkeep2
 	}
@@ -232,8 +232,9 @@ d_GFnyto_Radiation ={
 			}
 		}
 		modifier = {
-			planet_building_build_speed_mult = -0.01
+			planet_buildings_alloys_upkeep_add = 0.01
 		}
+		mult =value:Gfnyto_planet_wrlv_upkeep2
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -244,8 +245,25 @@ d_GFnyto_Radiation ={
 			}
 		}
 		modifier = {
-			planet_buildings_GF_nyto_training_key_upkeep_add = 0.005
+			planet_buildings_GF_nyto_training_key_upkeep_add = 0.0003
 		}
+		mult =value:Gfnyto_planet_wrlv_upkeep2
 	}
+	triggered_planet_modifier = {
+		modifier = {
+			#planet_building_build_speed_mult = -0.01
+			planet_districts_upkeep_mult = 0.013
+			building_time_mult = 0.001
+			planet_buildings_cost_mult = 0.0005
+			planet_districts_cost_mult = 0.0005
+		}
+		mult =value:Gfnyto_planet_wrlv_upkeep2
+	}
+	#triggered_planet_modifier = {
+	#	modifier = {
+	#		planet_districts_produces_mult = 0.01
+	#	}
+	#	mult=value:Gfnyto_planet_wrlv_proudcu2
+	#}
 	drop_weight = { weight = 0 }
-}
+}x
