@@ -96,7 +96,7 @@ MESSAGE_GF_nyto_popd:0 "§R[this.GetName]上有§Y1§!£pops£人口死亡。§!
 
 mod_planet_pops_robotics_alloys_upkeep_mult:0 "机械人口合金£alloys£维护费用增加"
  entropy:0 "熵能逆轉"
- GF_nyto_decline:0 "地狱轰鸣作响,"
+ GF_nyto_decline:0 "熔炉正在运转"
 mod_planet_buildings_energy_upkeep_add:0 "建筑能量币£energy£维护费用增加"
 mod_planet_buildings_minerals_upkeep_add:0 "建筑矿物£minerals£维护费用增加"
 mod_planet_buildings_GF_nyto_training_key_upkeep_add:0 "建筑密钥£GF_nyto_training_key£维护费用增加"
