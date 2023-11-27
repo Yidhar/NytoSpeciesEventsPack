@@ -476,19 +476,13 @@ decision_GFnyto_Emergency_pollution_control = {
 	resources = {
 		category = decisions
 		cost = {
-			unity = 1
-			multiplier = value:GFnyto_Emergency_pollution_control_res|res|unity|
+			unity = 5
+			minerals = 10
+			energy = 10
+			multiplier = value:GFnyto_Emergency_pollution_control_res
 		}
 		cost = {
 			influence = 100
-		}
-		cost = {
-			minerals = 1
-			multiplier = value:GFnyto_Emergency_pollution_control_res|res|minerals|
-		}
-		cost = {
-			energy = 1
-			multiplier = value:GFnyto_Emergency_pollution_control_res|res|energy|
 		}
 	}
 	effect = {
