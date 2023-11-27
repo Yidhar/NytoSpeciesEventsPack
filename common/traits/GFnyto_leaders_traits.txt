@@ -240,6 +240,11 @@ leader_trait_GF_nyto_ogas_agreement = {
 		planet_pops_upkeep_mult = -0.05
 		planet_buildings_upkeep_mult = 0.03
 	}
+	army_modifier = {
+		army_damage_taken_mult = -0.05
+		army_damage_mult = 0.1
+		army_disengage_chance_mult = -0.3
+	}
 	councilor_modifier ={
 		planet_decision_enact_speed_mult = 0.1
 		negative_traits_leader = 1
@@ -275,6 +280,10 @@ leader_trait_GF_nyto_noussphere={
 	councilor_modifier ={
 		planet_decision_enact_speed_mult = 0.1
 	}
+	army_modifier = {
+		army_damage_taken_mult = -0.05
+		army_damage_mult = 0.15
+	}
 	#leader_trait = { ruler }
 	leader_class = all
 	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
@@ -306,6 +315,10 @@ leader_trait_GF_nyto_ogas_agreement_plus= {
 	}
 	councilor_modifier ={
 		planet_decision_enact_speed_mult = 0.3
+	}
+	army_modifier = {
+		army_damage_taken_mult = -0.1
+		army_damage_mult = 0.2
 	}
 	leader_class = all
 	leader_potential_add = {from = { has_authority = auth_GF_paradeus }}
