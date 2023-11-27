@@ -1,3 +1,5 @@
+@min_buff = 1000
+
 Gf_nyto_habitat_cost ={
 	base = 0
 	complex_trigger_modifier={
@@ -115,12 +117,19 @@ GF_nyto_drp_modifer ={
 	} ]
 	modifier = {
 		check_variable = {
-			which = value:Gfnyto_planet_wrlv_proudcu2
-			value > 1
+			which = 100
+			value < value:Gfnyto_planet_wrlv_proudcu2
 		}
+		mult = value:Gfnyto_planet_wrlv_proudcu2
 	}
-	mult = value:Gfnyto_planet_wrlv_proudcu2
-	mult = 0.001
+	modifier = {
+		check_variable = {
+			which = 100
+			value < value:Gfnyto_planet_wrlv_proudcu2
+		}
+		mult = 0.003
+	}
+
 	complex_trigger_modifier = {
 		trigger_scope = planet
 		trigger =has_planetary_ascension_tier
@@ -138,15 +147,10 @@ GF_nyto_PR_var_drp_count={
 
 GFnyto_Emergency_pollution_control_res ={
 	base = 1
-	complex_trigger_modifier = {
-		trigger = resource_revenue_compare
-		trigger_scope = owner
-		parameters = {
-			resource = $res$
-		}
-		mode = add
-		mult = 3
-	}
+	add = trigger:planet_size
+	multiply = planet.GFnyto_plante_wrlv
+	#divide = 10
+	round = yes
 }
 
 Gfnyto_planet_wrlv_proudcu ={
