@@ -212,14 +212,14 @@ GFnyto_planet_wrlv_numpy = {
 			value = planet_size_cleanse
 		}
 	}
-	#设置最大值
-	if = {
-		limit = { check_variable = { which = GFnyto_plante_wrlv value > 1000 } }
-		set_variable = {
-			which = GFnyto_plante_wrlv
-			value = 1000
-		}
-	}
+	##设置最大值
+	#if = {
+	#	limit = { check_variable = { which = GFnyto_plante_wrlv value > 1000 } }
+	#	set_variable = {
+	#		which = GFnyto_plante_wrlv
+	#		value = 1000
+	#	}
+	#}
 	#设置最小值
 	if = {
 		limit = {
