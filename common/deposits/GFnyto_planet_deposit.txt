@@ -266,4 +266,4 @@ d_GFnyto_Radiation ={
 	#	mult=value:Gfnyto_planet_wrlv_proudcu2
 	#}
 	drop_weight = { weight = 0 }
-}x
+}
