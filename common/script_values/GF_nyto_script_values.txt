@@ -113,6 +113,12 @@ GF_nyto_drp_modifer ={
 		mode = add
 		mult = -1
 	} ]
+	modifier = {
+		check_variable = {
+			which = value:Gfnyto_planet_wrlv_proudcu2
+			value > 1
+		}
+	}
 	mult = value:Gfnyto_planet_wrlv_proudcu2
 	mult = 0.001
 	complex_trigger_modifier = {
