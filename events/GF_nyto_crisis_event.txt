@@ -174,18 +174,180 @@ country_event = {
 	}
 }
 
-#战争 出生时伴随全殖民地叛乱 只要存在被占领的星球则
+#战争 随机开启战争 每有一个国家增加1计数每有一场战争增加1 每计数提供100%增幅和1日无敌 每次次舰队刷出数量+1
 event = {
 	id = GFnytocrisis.10
 	hide_window = yes
+	is_triggered_only = yes
 	immediate = {
 		create_country = {
 			name = "GFnytocrisis_country_name"
-			type = crystal
+			type = Revelation
+			auto_delete = no
+			day_zero_contact = no
+			flag = {
+				icon={
+					category="GFnyto"
+					file="flag_GFnyto_crisis_flags.dds"
+				}
+				background={
+					category="backgrounds"
+					file="00_solid.dds"
+				}
+				colors={
+					"grey"
+					"black"
+					"black"
+					"null"
+				}
+			}
+			effect = {
+				save_global_event_target_as = This_is_GF_nyto_crisis_country
+
+			}
 		}
 		every_playable_country = {
+			#创建描述页面
+			while = {
+				count = 5
+				random_playable_country = {
+					declare_war ={
+						target = prev
+						attacker_war_goal = wg_declared_crisis
+						effect = {
+							prev={
+								random = {
+									chance = 50
+									join_war_on_side = { war = prev side = defenders }
+								}
+								random = {
+									chance = 50
+									join_war_on_side = { war = prev side = attackers  }
+								}
+							}
+						}
+					}
+				}
+				reroll_random = yes
+			}
+			event_target:This_is_GF_nyto_crisis_country={
+				change_variable = { which = pc_num value = 1 } #国家计数
+			}
+			random_system_within_border = {
+				set_star_flag = swarm_revelation_target_1
+				#刷船
+				while = {
+					count = event_target:This_is_GF_nyto_crisis_country.pc_num
+					creat_battleship_revelation_fleet = yes
+
+						create_fleet = {
+							effect = {
+								set_owner = event_target:This_is_GF_nyto_crisis_country
+								set_location = prev
+								while = {
+									count = 20
+									create_army_transport = {
+										graphical_culture = GF_nyto_02
+										army_type = GF_nyto_machine_assault_3
+										ship_name = "KCCO"
+										army_name = "KCCO"
+										species = event_target:This_is_GF_nyto_crisis_country
+									}
+									set_fleet_stance = aggressive
+								}
+							}
+						}
+
+				}
+			}
+		}
+		event_target:This_is_GF_nyto_crisis_country={
+			add_modifier = {
+				modifier = GF_nyto_crisis_batte
+				multiplier = event_target:This_is_GF_nyto_crisis_country.pc_num
+				days = -1
+			}
+		}
+	}
+}
+
+#开始时每存在一个国家多刷一支舰队 每次补充时 每存在一场战斗额外补充一支舰队 每发生一次战斗提高天数的电子站算力和
+system_event = {
+	id = GFnytocrisis.101
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		no_scope ={
+			every_playable_country = {
+				every_war = {
+					limit = {
+						attacker_war_exhaustion = wg_declared_crisis
+					}
+					event_target:This_is_GF_nyto_crisis_country={
+						change_variable = {
+							which = GF_nyto_crisis_war_num
+							value = 1
+						}
+					}
+				}
+
+			}
+		}
+		while = {
+			count = event_target:This_is_GF_nyto_crisis_country.GF_nyto_crisis_war_num
+			creat_battleship_revelation_fleet = yes
+		}
+		system_event = {
+			id = GFnytocrisis.101
+			days = 90
+		}
+	}
+}
+
+#被战争拿下的星球
+# Triggers country_event for the attacker upon defeat
+# This = country, attack leader
+# From = country, planet owner
+# FromFrom = planet
+#on_planet_defenders_los
+event = {
+	id = GFnytocrisis.102
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		or = {
+			is_country = event_target:This_is_GF_nyto_crisis_country
+			from ={
+				is_country = event_target:This_is_GF_nyto_crisis_country
+			}
+		}
+	}
+	immediate = {
+		if = {
 			limit = {
-				is_ai = no
+				is_country = event_target:This_is_GF_nyto_crisis_country
+			}
+			fromfrom ={
+				set_owner = event_target:This_is_GF_nyto_crisis_country
+			}
+			event_target:This_is_GF_nyto_crisis_country={
+				add_modifier = {
+					modifier = GF_nyto_crisis_batte_planet_buff
+					days = -1
+				}
+			}
+		}
+		if = {
+			limit = {
+				from ={
+					is_country = event_target:This_is_GF_nyto_crisis_country
+				}
+			}
+			fromfrom ={
+				set_owner = root.This
+			}
+			event_target:This_is_GF_nyto_crisis_country={
+				remove_modifier = GF_nyto_crisis_batte_planet_buff
 			}
 		}
 	}

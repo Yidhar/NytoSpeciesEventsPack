@@ -277,6 +277,9 @@ ship_section_template = {
 		cost = {
 			alloys = 1000
 		}
+		upkeep = {
+			energy = 100
+		}
 	}
 	large_utility_slots = 4
 }
@@ -421,6 +424,9 @@ ship_section_template = {
 		category = ship_sections
 		cost = {
 			alloys = 1000
+		}
+		upkeep = {
+			energy = 50
 		}
 	}
 }
@@ -675,6 +681,12 @@ ship_section_template = {
 	# 	locatorname = "missile_048"
 	# }
 	large_utility_slots = 6
+	resources = {
+		category = ship_sections
+		upkeep = {
+			energy = 100
+		}
+	}
 }
 
 #舰尾
@@ -765,6 +777,9 @@ ship_section_template = {
 		category = ship_sections
 		cost = {
 			alloys = 1000
+		}
+		upkeep = {
+			energy = 100
 		}
 	}
 	large_utility_slots = 4
@@ -1509,4 +1524,20 @@ ship_section_template = {
 	}
 	large_utility_slots = 4
 	aux_utility_slots = 1
+}
+
+#
+ship_section_template ={
+	key = battleship_revelation_mid
+	ship_size = battleship_revelation
+	fits_on_slot = mid
+	should_draw_components = yes
+	entity = tifeng_entity
+	icon = GFX_ship_part_core_bow
+	icon_frame = 1
+	component_slot = {
+		name = "T01"
+		template = invisible_titanic_fixed
+		locatorname = "t_gun01"
+	}
 }

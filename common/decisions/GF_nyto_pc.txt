@@ -169,13 +169,7 @@ decision_GFnyto_planetary_defense = {
 # 						is_ai = no
 # 					}
 # 				}
-# 				while = {
-# 					count = 10
-# 					create_pop = {
-# 						species = owner_main_species
-# 						ethos = root.owner
-# 					}
-# 				}
+				# while = { count = 10 create_pop = { species = owner_main_species ethos = root.owner } }
 # 			}
 # 			if = {
 # 				limit = {
@@ -464,15 +458,15 @@ decision_GFnyto_Emergency_pollution_control = {
 			is_nyto_country = yes
 		}
 	}
-	allow = {
-		hidden_trigger = {
-			check_variable = {
-				which = GFnyto_plante_wrlv
-				value > 700
-			}
-			custom_tooltip = "污染度不小于700"
-		}
-	}
+	#allow = {
+	#	hidden_trigger = {
+	#		check_variable = {
+	#			which = GFnyto_plante_wrlv
+	#			value > 700
+	#		}
+	#		custom_tooltip = "污染度不小于700"
+	#	}
+	#}
 	resources = {
 		category = decisions
 		cost = {
@@ -528,3 +522,29 @@ decision_GFnyto_autopops_3 = {
 		weight = 0
 	}
 }
+
+
+##恒定最低限度净化策略
+#decision_GF_nyto_low_cleanse ={
+#	owned_planets_only = yes
+#	sound = event_administrative_work
+#	icon = decision_pc_GF_nyto_embers_gloomy_project
+#	potential = {
+#		owner = { is_nyto_country =yes }
+#		check_variable_arithmetic = {
+#			which = base
+#			add = value:GFnyto_plante_wrlv_cleanse
+#			value >= value:GFnyto_plante_wrlv_contaminate
+#		}
+#		not = {
+#			has_planet_flag = GF_nyto_low_cleanse
+#		}
+#	}
+#	resources = {  }
+#	effect = {
+#		set_planet_flag = GF_nyto_low_cleanse
+#	}
+#	ai_weight = {
+#		weight = 100
+#	}
+#}

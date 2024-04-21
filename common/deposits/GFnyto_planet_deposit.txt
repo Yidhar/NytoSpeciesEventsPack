@@ -252,10 +252,10 @@ d_GFnyto_Radiation ={
 	triggered_planet_modifier = {
 		modifier = {
 			#planet_building_build_speed_mult = -0.01
-			planet_districts_upkeep_mult = 0.013
-			building_time_mult = 0.001
-			planet_buildings_cost_mult = 0.0005
-			planet_districts_cost_mult = 0.0005
+			planet_districts_upkeep_mult = 0.001
+			building_time_mult = 0.0025
+			planet_buildings_cost_mult = 0.0025
+			planet_districts_cost_mult = 0.005
 		}
 		mult =value:Gfnyto_planet_wrlv_upkeep2
 	}

@@ -1,5 +1,6 @@
 auth_GF_paradeus = {
-	machine_empire = yes #是否是机械帝国
+	#machine_empire =  #是否是机械帝国
+	synthetic_empire
 	has_heir = no #继承人
 	uses_mandates= no #是否使用承诺
 	max_election_candidates=4 #最大候选人槽位

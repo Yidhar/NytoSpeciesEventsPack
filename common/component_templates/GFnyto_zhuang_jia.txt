@@ -15,10 +15,9 @@ utility_component_template = {
 		category = ship_components
 		cost = {		
 			alloys = 112
-			GF_nyto_collapse_liquid = 11.2
 		}
-		upkeep = {			
-			GF_nyto_collapse_liquid = 0.224
+		upkeep = {
+			alloys = 1.2
 		}
 	}
 	prerequisites = {
@@ -44,11 +43,10 @@ utility_component_template = {
 		category = ship_components
 		cost = {			
 			alloys = 172
-			GF_nyto_collapse_liquid = 17.2
+			#GF_nyto_collapse_liquid = 17.2
 		}
 		upkeep = {
-			
-			GF_nyto_collapse_liquid = 0.342
+			alloys = 1.72
 		}
 	}
 	prerequisites = {
@@ -75,11 +73,9 @@ utility_component_template = {
 		cost = {
 			
 			alloys = 248
-			GF_nyto_collapse_liquid = 24.8
 		}
 		upkeep = {
-			
-			GF_nyto_collapse_liquid = 0.496
+			alloys = 2.48
 		}
 	}
 	prerequisites = {
@@ -103,13 +99,10 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			
 			alloys = 56
-			GF_nyto_collapse_liquid = 5.6
 		}
 		upkeep = {
-			
-			GF_nyto_collapse_liquid = 0.112
+			alloys = 0.56
 		}
 	}
 	prerequisites = {
@@ -133,13 +126,10 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			
 			alloys = 86
-			GF_nyto_collapse_liquid = 8.6
 		}
 		upkeep = {
-			
-			GF_nyto_collapse_liquid = 0.172
+			alloys = 0.86
 		}
 	}
 	prerequisites = {
@@ -157,19 +147,15 @@ utility_component_template = {
 	power = 0
 	modifier = {
 		ship_hull_add = 1265
-		#		ship_base_speed_mult = 0.8
 	}
 	component_set = "GFnyto_body_armor_3"
 	resources = {
 		category = ship_components
 		cost = {
-			
 			alloys = 124
-			GF_nyto_collapse_liquid = 12.4
 		}
 		upkeep = {
-			
-			GF_nyto_collapse_liquid = 0.248
+			alloys = 1.24
 		}
 	}
 	prerequisites = {
@@ -192,13 +178,10 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			
 			alloys = 28
-			GF_nyto_collapse_liquid = 2.8
 		}
 		upkeep = {
-			
-			GF_nyto_collapse_liquid = 0.056
+			alloys = 0.28
 		}
 	}
 	prerequisites = {
@@ -223,11 +206,9 @@ utility_component_template = {
 		cost = {
 			
 			alloys = 43
-			GF_nyto_collapse_liquid = 4.3
 		}
 		upkeep = {
-			
-			GF_nyto_collapse_liquid = 0.086
+			alloys = 0.43
 		}
 	}
 	prerequisites = {
@@ -250,13 +231,10 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			
 			alloys = 62
-			GF_nyto_collapse_liquid = 6.2
 		}
 		upkeep = {
-			
-			GF_nyto_collapse_liquid = 0.124
+			alloys = 0.62
 		}
 	}
 	prerequisites = {

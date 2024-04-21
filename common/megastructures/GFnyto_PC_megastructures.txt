@@ -788,3 +788,18 @@ GFnyto_habitat_02 ={
 		}		
 	}
 }
+
+#GF_nyto_star ={
+#	entity = ""
+#	construction_entity = ""
+#	portrait = "GFX_megastructure_construction_background"
+#	build_time = 1800
+#	on_build_complete = {
+#		hidden_effect = {
+#			every_system_planet = {
+#				destroy_colony = yes
+#				change_pc = pc_GF_nyto_endles
+#			}
+#		}
+#	}
+#}

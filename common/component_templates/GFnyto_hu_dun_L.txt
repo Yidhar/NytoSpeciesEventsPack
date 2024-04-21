@@ -18,10 +18,11 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = 70
-			GF_nyto_collapse_liquid = 35
+			GF_nyto_collapse_liquid = 70
 		}
 		upkeep = {
-			GF_nyto_collapse_liquid = 1.28
+			GF_nyto_collapse_liquid = 7
+			energy = 7
 		}
 	}
 	prerequisites = {
@@ -49,10 +50,11 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = 96
-			GF_nyto_collapse_liquid = 48
+			GF_nyto_collapse_liquid = 96
 		}
 		upkeep = {
-			GF_nyto_collapse_liquid = 1.88
+			GF_nyto_collapse_liquid = 9.6
+			energy = 9.6
 		}
 	}
 	prerequisites = {
@@ -81,10 +83,11 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = 122
-			GF_nyto_collapse_liquid = 61
+			GF_nyto_collapse_liquid = 122
 		}
 		upkeep = {
-			GF_nyto_collapse_liquid = 2.64
+			GF_nyto_collapse_liquid =12.2
+			energy = 12.2
 		}
 	}
 	prerequisites = {
@@ -113,10 +116,11 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = 38
-			GF_nyto_collapse_liquid = 18
+			GF_nyto_collapse_liquid = 38
 		}
 		upkeep = {
-			GF_nyto_collapse_liquid = 0.76
+			GF_nyto_collapse_liquid = 3.8
+			energy = 3.8
 		}
 	}
 	prerequisites = {
@@ -145,10 +149,11 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = 62
-			GF_nyto_collapse_liquid = 31
+			GF_nyto_collapse_liquid = 62
 		}
 		upkeep = {
-			GF_nyto_collapse_liquid = 1.24
+			GF_nyto_collapse_liquid = 6.2
+			energy = 6.2
 		}
 	}
 	prerequisites = {
@@ -177,10 +182,11 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = 94
-			GF_nyto_collapse_liquid = 47
+			GF_nyto_collapse_liquid = 94
 		}
 		upkeep = {
-			GF_nyto_collapse_liquid = 1.88
+			GF_nyto_collapse_liquid = 9.4
+			energy = 9.4
 		}
 	}
 	prerequisites = {
@@ -209,10 +215,11 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = 21
-			GF_nyto_collapse_liquid = 10.5
+			GF_nyto_collapse_liquid = 21
 		}
 		upkeep = {
-			GF_nyto_collapse_liquid = 0.42
+			GF_nyto_collapse_liquid = 2.1
+			energy = 2.1
 		}
 	}
 	prerequisites = {
@@ -241,10 +248,11 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = 34
-			GF_nyto_collapse_liquid = 17
+			GF_nyto_collapse_liquid = 34
 		}
 		upkeep = {
-			GF_nyto_collapse_liquid = 0.68
+			GF_nyto_collapse_liquid = 3.4
+			energy = 3.4
 		}
 	}
 	prerequisites = {
@@ -272,10 +280,11 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = 51
-			GF_nyto_collapse_liquid = 25.5
+			GF_nyto_collapse_liquid = 51
 		}
 		upkeep = {
-			GF_nyto_collapse_liquid = 1.02
+			GF_nyto_collapse_liquid = 5.1
+			energy = 5.1
 		}
 	}
 	prerequisites = {

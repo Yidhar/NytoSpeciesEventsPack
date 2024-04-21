@@ -12,7 +12,7 @@ GF_nyto_training_key_deficit_desc:0 "训练密钥匮乏,我们的科研止步不
 GF_nyto_new_fire_control_unit_deficit:0"缺少火控核心"
 GF_nyto_new_fire_control_unit_deficit_desc:0 "由于缺少火控核心,我们的武器现在宛如板砖"
 GFnyto_flower_period:0 "花期开放"
-GFnyto_flower_period_desc:0 "这些特别的昙花在平时会吸收坍缩粒子,但是在花期会将坍缩粒子完全释放,使周边地区的辐射浓度急剧升高。"
+GFnyto_flower_period_desc:0 "这些特别的昙花在平时会吸收坍缩粒子,但是在花期会将坍缩粒子完全释放,使周边地区的辐射浓度急剧升高。\n每次花期增长§R[Epiphyllum_flower_period]§!点污染度"
 GFnyto_PC:0 "坍缩反应堆"
 GFnyto_PC_desc:0 "这颗星球遭受了坍缩液的严重侵蚀,气候恶劣且无法复苏。"
 GFnyto_PC_damage:0 "毁坏的坍缩反应堆"

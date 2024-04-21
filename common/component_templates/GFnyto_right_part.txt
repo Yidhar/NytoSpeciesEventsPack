@@ -949,7 +949,29 @@ utility_component_template = {
 		}
 	}
 }
-#附加运算模块-冲锋
+#附加运算模块-发呆
+utility_component_template = {
+	key = "GFnyto_additional_arithmetic_module4"
+	size = small
+	icon = "GFX_ship_part_GFnyto_additional_arithmetic_module2"
+	icon_frame = 1
+	power = -20
+	hidden = yes
+
+	class_restriction = {
+		shipclass_military
+	}
+	size_restriction = {
+		battleship_revelation
+	}
+	component_set = "combat_computers"
+	resources = {
+		category = ship_components
+
+	}
+	ship_behavior = "GFnyto_ship_behaviors5"
+
+}
 
 ###########盾舰专用亚光速
 utility_component_template = {

@@ -135,102 +135,134 @@ GF_nyto_elid_attack = {
 	}
 }
 
-GFnyto_planet_wrlv_numpy = {
-	#污染初始化
-	set_variable = {
-		which = GFnyto_plante_wrlv_contaminate
-		value = 0
-	}
-	#净化初始
-	set_variable = {
-		which = GFnyto_plante_wrlv_cleanse
-		value = 0
-	}
-	#######污染	
-	###岗位
-	change_variable = {
-		which = GFnyto_plante_wrlv_contaminate
-		value = collapse_particle_zip_num
-	}
-	change_variable = {
-		which = GFnyto_plante_wrlv_contaminate
-		value = collapse_particle_rar_num
-	}
-	change_variable = {
-		which = GFnyto_plante_wrlv_contaminate
-		value = Epiphyllum_job_num
-	}
-	change_variable = {
-		which = GFnyto_plante_wrlv_contaminate
-		value = GFnyto_collapse_particle_researcher_num
-	}
-	###区划
-	change_variable = {
-		which = GFnyto_plante_wrlv_contaminate
-		value = district_GF_nyto_pc_toxic_alloy_num
-	}
-	change_variable = {
-		which = GFnyto_plante_wrlv_contaminate
-		value = district_GF_nyto_pc_toxic_energy_num
-	}
-	change_variable = {
-		which = GFnyto_plante_wrlv_contaminate
-		value = district_GF_nyto_pc_toxic_leisure_num
-	}
-	change_variable = {
-		which = GFnyto_plante_wrlv_contaminate
-		value = district_GF_nyto_pc_toxic_science_num
-	}
-	######净化	
-	change_variable = {
-		which = GFnyto_plante_wrlv_cleanse
-		value = affluence_center_purify
-	}
-	change_variable = {
-		which = GFnyto_plante_wrlv_cleanse
-		value = Recoil_decay_barrier_center_purify
-	}
-	######结算
-	change_variable = {
-		which = GFnyto_plante_wrlv
-		value = GFnyto_plante_wrlv_contaminate
-	}
-	subtract_variable = {
-		which = GFnyto_plante_wrlv
-		value = GFnyto_plante_wrlv_cleanse
-	}
-	if = {
-		limit = {
-			not = {
-				is_planet_class = pc_GFnytp_habitis
-				is_planet_class = pc_GF_nyto_devil_furnace
-				is_planet_class = pc_GF_nyto_embers_gloomy
+#GFnyto_planet_wrlv_numpy = {
+#	#污染初始化
+#	set_variable = {
+#		which = GFnyto_plante_wrlv_contaminate
+#		value = 0
+#	}
+#	#净化初始
+#	set_variable = {
+#		which = GFnyto_plante_wrlv_cleanse
+#		value = 0
+#	}
+#	#######污染
+#	###岗位
+#	change_variable = {
+#		which = GFnyto_plante_wrlv_contaminate
+#		value = collapse_particle_zip_num
+#	}
+#	change_variable = {
+#		which = GFnyto_plante_wrlv_contaminate
+#		value = collapse_particle_rar_num
+#	}
+#	change_variable = {
+#		which = GFnyto_plante_wrlv_contaminate
+#		value = Epiphyllum_job_num
+#	}
+#	change_variable = {
+#		which = GFnyto_plante_wrlv_contaminate
+#		value = GFnyto_collapse_particle_researcher_num
+#	}
+#	###区划
+#	change_variable = {
+#		which = GFnyto_plante_wrlv_contaminate
+#		value = district_GF_nyto_pc_toxic_alloy_num
+#	}
+#	change_variable = {
+#		which = GFnyto_plante_wrlv_contaminate
+#		value = district_GF_nyto_pc_toxic_energy_num
+#	}
+#	change_variable = {
+#		which = GFnyto_plante_wrlv_contaminate
+#		value = district_GF_nyto_pc_toxic_leisure_num
+#	}
+#	change_variable = {
+#		which = GFnyto_plante_wrlv_contaminate
+#		value = district_GF_nyto_pc_toxic_science_num
+#	}
+#	######净化
+#	change_variable = {
+#		which = GFnyto_plante_wrlv_cleanse
+#		value = affluence_center_purify
+#	}
+#	change_variable = {
+#		which = GFnyto_plante_wrlv_cleanse
+#		value = Recoil_decay_barrier_center_purify
+#	}
+#	######结算
+#	change_variable = {
+#		which = GFnyto_plante_wrlv
+#		value = GFnyto_plante_wrlv_contaminate
+#	}
+#	subtract_variable = {
+#		which = GFnyto_plante_wrlv
+#		value = GFnyto_plante_wrlv_cleanse
+#	}
+#	if = {
+#		limit = {
+#			not = {
+#				is_planet_class = pc_GFnytp_habitis
+#				is_planet_class = pc_GF_nyto_devil_furnace
+#				is_planet_class = pc_GF_nyto_embers_gloomy
+#			}
+#		}
+#		subtract_variable = {
+#			which = GFnyto_plante_wrlv
+#			value = planet_size_cleanse
+#		}
+#	}
+#	##设置最大值
+#	#if = {
+#	#	limit = { check_variable = { which = GFnyto_plante_wrlv value > 1000 } }
+#	#	set_variable = {
+#	#		which = GFnyto_plante_wrlv
+#	#		value = 1000
+#	#	}
+#	#}
+#	#设置最小值
+#	if = {
+#		limit = {
+#			check_variable = {
+#				which = GFnyto_plante_wrlv
+#				value < 0
+#			}
+#		}
+#		set_variable = {
+#			which = GFnyto_plante_wrlv
+#			value = 0
+#		}
+#	}
+#}
+
+creat_battleship_revelation_fleet ={
+	optimize_memory
+	create_fleet = {
+		name = "battleship_revelation_fleet_name"
+		settings = {
+			can_upgrade = no
+			can_change_composition = no
+			can_change_leader = no
+			uses_naval_capacity = no
+			spawn_debris = no
+			is_boss = yes
+			can_disband = no
+		}
+		effect = {
+			set_owner = event_target:This_is_GF_nyto_crisis_country
+			#set_leader =
+			while = {
+				count = 28
+				create_ship = {
+					name = "x"
+					prefix = no
+					upgradable = no
+					design = battleship_revelation
+				}
 			}
-		}
-		subtract_variable = {
-			which = GFnyto_plante_wrlv
-			value = planet_size_cleanse
-		}
-	}
-	##设置最大值
-	#if = {
-	#	limit = { check_variable = { which = GFnyto_plante_wrlv value > 1000 } }
-	#	set_variable = {
-	#		which = GFnyto_plante_wrlv
-	#		value = 1000
-	#	}
-	#}
-	#设置最小值
-	if = {
-		limit = {
-			check_variable = {
-				which = GFnyto_plante_wrlv
-				value < 0
-			}
-		}
-		set_variable = {
-			which = GFnyto_plante_wrlv
-			value = 0
+			set_fleet_stance = aggressive
+			set_fleet_bombardment_stance = gfnyto_collapse_liquid
+			set_location = prev
 		}
 	}
 }

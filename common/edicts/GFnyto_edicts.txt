@@ -83,12 +83,12 @@ GF_nyto_auto_habitat = {
 			AND = {
 				is_ai = no
 				is_nyto_country =yes
-				has_technology = tech_habitat_1
+				has_technology = tech_template_GF_nyto_orbit_stions
 			}
 			AND = {
 				is_ai = yes
 				is_nyto_country =yes
-				has_technology = tech_habitat_1
+				has_technology = tech_template_GF_nyto_orbit_stions
 				num_owned_planets < 50 	
 			}
 		}		

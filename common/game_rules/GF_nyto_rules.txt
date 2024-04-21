@@ -166,5 +166,4 @@ should_force_decline_species = {
             }
         }
     }
-
 }

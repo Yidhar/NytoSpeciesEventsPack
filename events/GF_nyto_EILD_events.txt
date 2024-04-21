@@ -555,29 +555,9 @@ country_event = {
 						value > 0
 					}
 				}
-				export_trigger_value_to_variable = {
-					trigger = num_assigned_jobs
-					parameters = {
-						job = GFnyto_Epiphyllum_job
-					}
-					variable = Epiphyllum_job_num
-				}
-				if = {
-					limit = { 
-						is_variable_set = PR_FACTOR_plnt_JOB_GFnyto_Epiphyllum
-					}
-					change_variable = {
-						which = Epiphyllum_job_num
-						value = PR_FACTOR_plnt_JOB_GFnyto_Epiphyllum
-					}
-				}
-				multiply_variable = {
-					which = Epiphyllum_job_num
-					value = 5
-				}
 				change_variable = {
 					which = GFnyto_plante_wrlv
-					value = Epiphyllum_job_num
+					value = value:Epiphyllum_flower_period
 				}
 				if = {
 					limit = {

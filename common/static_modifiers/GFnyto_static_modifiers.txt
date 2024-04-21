@@ -170,10 +170,9 @@ gf_nyto_commind_weapon_buff ={
 }
 #缺少训练密钥
 GF_nyto_training_key_deficit ={
-	planet_jobs_physics_research_produces_mult = -1.5
-	planet_jobs_society_research_produces_mult = -1.5
-	planet_jobs_engineering_research_produces_mult = -1.5
-	planet_jobs_physics_research_upkeep_mult = -0.7
+	planet_researchers_physics_research_produces_add = -3
+	planet_researchers_society_research_produces_add = -3
+	planet_researchers_engineering_research_produces_add = -3
 	planet_jobs_GF_nyto_collapse_liquid_produces_mult = -0.6
 }
 #火控核心匮乏
@@ -199,11 +198,11 @@ GF_nyto_forward_base ={
 }
 #额外护盾
 GF_nyoto_shield_ship ={
-	ship_shield_add = 87600
+	ship_shield_add = 175200
 }
 #护盾恢复
 GF_nyto_shield_ship_regen ={
-	ship_shield_regen_add_static = 87600
+	ship_shield_regen_add_static = 175200
 }
 #沉默
 GF_nyto_p_weapon_system={
@@ -286,4 +285,17 @@ GF_nyto_Electronic_pwlv_dwn ={
 #巨构建造速度
 GF_nyto_mega_spped ={
 	megastructure_build_speed_add = 2
+}
+#战争
+GF_nyto_crisis_batte ={
+	army_health = 1
+	army_damage_mult = 1
+	army_morale = 1
+	army_morale_damage_mult = 1
+	army_damage_taken_mult = -0.01
+	weapon_type_energy_weapon_fire_rate_mult = 1
+}
+GF_nyto_crisis_batte_planet_buff ={
+	weapon_type_Electronic_weapon_damage_mult = 5
+	damage_vs_country_type_default_mult = 1
 }

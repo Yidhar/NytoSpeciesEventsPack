@@ -228,7 +228,7 @@ building_GFnyto_forward_base2 = {
 building_GFnyto_transportation_hub = {
 	icon = building_GFnyto_transportation_hub
 	base_buildtime = 360
-	category = manufacturing
+	category = government
 	potential = {
 		owner = {
 			is_nyto_country =yes
@@ -767,7 +767,7 @@ GF_nyto_Recoil_decay_barrier ={
 			}		
 		}
 	}
-	category = manufacturing
+	category = government
 	resources = {
 		category = planet_buildings
 		cost = {

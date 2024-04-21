@@ -204,14 +204,14 @@ tech_template_stions_fortress ={
 }
 #轨道卫星城
 tech_template_GF_nyto_orbit_stions ={
-	cost = 50000
+	cost = @tier1cost3
 	area = engineering
 	category = { voidcraft }
-	tier = 5
-	weight = 20
-	ai_weight = { weight = 50 	}
+	tier = 3
+	weight = @tier3weight1
+	ai_weight = { weight = 100 	}
 	potential = { is_nyto_country =yes 	}
-	prerequisites = { tech_habitat_1 }	
+	prerequisites = { tech_habitat_1 tech_GF_nyto_algorithm tech_GFnyto_tansuo  }
 	modifier = {
 		planet_building_build_speed_mult = 0.5
 		planet_colony_development_speed_mult = 1

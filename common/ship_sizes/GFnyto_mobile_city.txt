@@ -102,7 +102,7 @@ GFnyto_shiled_ship ={
 	modifier = {
 		ship_shield_mult = 1
 	}
-	size_multiplier = 20
+	size_multiplier = 24
 	fleet_slot_size = 500
 	section_slots = {
 		"mid" = { locator = root }

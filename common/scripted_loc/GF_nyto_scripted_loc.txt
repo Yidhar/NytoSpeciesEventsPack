@@ -197,3 +197,41 @@ defind_txt={
 		localization_key = GF_nyto_opt_04_01
 	}
 }
+
+#污染
+defined_text = {
+	name = GFnyto_plante_wrlv_contaminate
+	value = value:GFnyto_plante_wrlv_contaminate
+}
+#星球自净
+defined_text = {
+	name = GF_nyto_planet_size_cleanse
+	text = {
+		trigger = {
+			not = {
+				is_planet_class = pc_GFnytp_habitis
+				is_planet_class = pc_GF_nyto_devil_furnace
+				is_planet_class = pc_GF_nyto_embers_gloomy
+			}
+		}
+		localization_key = GF_nyto_planet_size_cleanse_text
+	}
+	default = GF_nyto_planet_size_cleanse_text_2
+	#value = value:GF_nyto_planet_size_cleanse
+}
+defined_text = {
+	name = GF_nyto_planet_size_cleanse2
+	value = value:GF_nyto_planet_size_cleanse
+}
+
+#净化塔
+defined_text = {
+	name = GFnyto_plante_wrlv_cleanse
+	value = value:GFnyto_plante_wrlv_cleanse
+}
+
+#花旗
+defined_text = {
+	name = Epiphyllum_flower_period
+	value = value:Epiphyllum_flower_period
+}

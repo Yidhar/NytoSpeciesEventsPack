@@ -100,3 +100,6 @@ mod_planet_pops_robotics_alloys_upkeep_mult:0 "机械人口合金£alloys£维�
 mod_planet_buildings_energy_upkeep_add:0 "建筑能量币£energy£维护费用增加"
 mod_planet_buildings_minerals_upkeep_add:0 "建筑矿物£minerals£维护费用增加"
 mod_planet_buildings_GF_nyto_training_key_upkeep_add:0 "建筑密钥£GF_nyto_training_key£维护费用增加"
+ GF_nyto_planet_size_cleanse_text:0 "[GF_nyto_planet_size_cleanse2]"
+ GF_nyto_planet_size_cleanse_text_2:0 "§R该星球没有自净能力§!"
+ GF_nyto_planet:0 "[This.GetName]上发生污染失控"

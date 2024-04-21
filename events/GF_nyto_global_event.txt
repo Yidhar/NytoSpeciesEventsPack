@@ -781,246 +781,81 @@ country_event = {
 					is_variable_set = GFnyto_plante_wrlv
 				}
 			}
-			#初始星球恢复力
-			set_variable = { which = planet_size_cleanse value = trigger:planet_size }
-			#岗位污染度产出
-			if = {
-				limit = {
-					OR = {
-						any_owned_pop = {
-							OR = {
-								has_job = GFnyto_collapse_particle_rar
-								has_job = GFnyto_collapse_particle_zip
-								has_job = GFnyto_collapse_particle_researcher
-							}
-						}
-						is_variable_set = GFnyto_plante_wrlv
-					}
-				}				
-				export_trigger_value_to_variable = {
-					trigger = num_assigned_jobs
-					parameters = { job = GFnyto_Epiphyllum_job }
-					variable = Epiphyllum_job_num
-				}
-				export_trigger_value_to_variable = {
-					trigger = num_assigned_jobs
-					parameters = { job = GFnyto_collapse_particle_rar }
-					variable = collapse_particle_rar_num
-				}
-				export_trigger_value_to_variable = {
-					trigger = num_assigned_jobs
-					parameters = { job = GFnyto_collapse_particle_zip }
-					variable = collapse_particle_zip_num
-				}
-				export_trigger_value_to_variable = {
-					trigger = num_assigned_jobs
-					parameters = {
-						job = GFnyto_collapse_particle_researcher
-					}
-					variable = GFnyto_collapse_particle_researcher_num
-				}
-				#产业革命地块产出
-				if = {
-					limit = {
-						has_global_flag = PR_flg_glbl_ASCENDED
-						has_planet_flag = PR_flg_plnt_ASCENDED 
-						
-					}
-					if = {
-						limit = { 
-							is_variable_set = PR_FACTOR_plnt_JOB_GFnyto_collapse_particle_researcher
-						}
-						change_variable = {
-							which = GFnyto_collapse_particle_researcher_num
-							value = PR_FACTOR_plnt_JOB_GFnyto_collapse_particle_researcher
-						}
-					} #研究员
-					if = {
-						limit = { 
-							is_variable_set = PR_FACTOR_plnt_JOB_GFnyto_collapse_particle_zip
-						}
-						change_variable = {
-							which = collapse_particle_zip_num
-							value = PR_FACTOR_plnt_JOB_GFnyto_collapse_particle_zip
-						}
-					} #压缩
-					if = {
-						limit = {
-							is_variable_set = PR_FACTOR_plnt_JOB_GFnyto_collapse_particle_rar
-						}
-						change_variable = {
-							which = GFnyto_collapse_particle_researcher_num
-							value = PR_FACTOR_plnt_JOB_GFnyto_collapse_particle_rar
-						}
-					}#解压
-					if = {
-						limit = {
-							is_variable_set = PR_FACTOR_plnt_JOB_GFnyto_Epiphyllum
-						}
-						change_variable = {
-							which = Epiphyllum_job_num
-							value = PR_FACTOR_plnt_JOB_GFnyto_Epiphyllum
-						}
-					}	#昙花	
-				}		
-				multiply_variable = {
-					which = Epiphyllum_job_num
-					value = -0.25
-				}
-				multiply_variable = {
-					which = collapse_particle_rar_num
-					value = 2
-				}
-				multiply_variable = {
-					which = collapse_particle_zip_num
-					value = 2
-				}		
+			#增加污染
+			change_variable = {
+				which = GFnyto_plante_wrlv
+				value = value:GFnyto_plante_wrlv_contaminate
 			}
-			#区划提供的污染度产出
+			#星球自净
 			if = {
 				limit = {
-					or = {
-						has_planet_flag = GFnyto_Spring_wakes_up
+					not = {
 						is_planet_class = pc_GFnytp_habitis
+						is_planet_class = pc_GF_nyto_devil_furnace
+						is_planet_class = pc_GF_nyto_embers_gloomy
 					}
 				}
-				export_trigger_value_to_variable = {
-					trigger = num_districts
-					parameters = { type = district_GF_nyto_pc_toxic_alloy }
-					variable = district_GF_nyto_pc_toxic_alloy_num
-				}
-				export_trigger_value_to_variable = {
-					trigger = num_districts
-					parameters = { type = district_GF_nyto_pc_toxic_energy }
-					variable = district_GF_nyto_pc_toxic_energy_num
-				}
-				export_trigger_value_to_variable = {
-					trigger = num_districts
-					parameters = { type = district_GF_nyto_pc_toxic_leisure }
-					variable = district_GF_nyto_pc_toxic_leisure_num
-				}
-				export_trigger_value_to_variable = {
-					trigger = num_districts
-					parameters = { type = district_GF_nyto_pc_toxic_science }
-					variable = district_GF_nyto_pc_toxic_science_num
-				}
-				multiply_variable = {
-					which = district_GF_nyto_pc_toxic_alloy_num
-					value = 10
-				}
-				multiply_variable = {
-					which = district_GF_nyto_pc_toxic_energy_num
-					value = 10
-				}
-				multiply_variable = {
-					which = district_GF_nyto_pc_toxic_leisure_num
-					value = 10
-				}
-				multiply_variable = {
-					which = district_GF_nyto_pc_toxic_science_num
-					value = 10
-				}
-			}	
-			# 星球恢复力衰减
-			if = {
-				limit = {
-					check_variable = {
-						which = GFnyto_plante_wrlv
-						value >= 30
-					}
-				}
-				set_variable = {
-					which = planet_size_down
-					value = GFnyto_plante_wrlv
-				}
-				change_variable = {
-					which = planet_size_down
-					value = -100
-				}
-				multiply_variable = {
-					which = planet_size_down
-					value = -0.015
-				}
-				multiply_variable = {
-					which = planet_size_cleanse
-					value = planet_size_down
-				}
-			}
-			#中和塔提供的净化力
-			if = {
-				limit = {
-					OR = {
-						has_building = building_GFnyto_affluence_center
-						is_variable_set = has_affluence_num
-					}
-					
-				}
-				export_trigger_value_to_variable = {
-					trigger = num_buildings
-					parameters = {
-						type = building_GFnyto_affluence_center
-						disabled = no
-					}
-					variable = has_affluence_num
-				}
-				set_variable = {
-					which = affluence_center_purify
-					value = has_affluence_num
-				}
-				multiply_variable = {
-					which = affluence_center_purify
-					value = 10
-				}
-			}
-			#壁垒提供的净化
-			if = {
-				limit = {
-					OR = {
-						has_building = GF_nyto_Recoil_decay_barrier
-						is_variable_set = GFnyto_plante_wrlv
-					}
-				}
-				#设置基础净化值
-				set_variable = {
-					which = Recoil_decay_barrier_center_purify_buffer
-					value = 50
-				}
-				#导出建筑数量
-				export_trigger_value_to_variable = {
-					trigger = num_buildings
-					parameters = {
-						type = GF_nyto_Recoil_decay_barrier
-						disabled = no
-					}
-					variable = has_GF_nyto_Recoil_decay_barrier_num
-				}
-				#计算加成
 				if = {
 					limit = {
-						check_variable = {
-							which = has_GF_nyto_Recoil_decay_barrier_num
-							value > 1
-						}		
-					}
-					 while = {
-						count = has_GF_nyto_Recoil_decay_barrier_num
-						multiply_variable = {
-							which = Recoil_decay_barrier_center_purify_buffer
-							value = 1.1
+						check_variable_arithmetic = {
+							which = GFnyto_plante_wrlv
+							subtract = value:GF_nyto_planet_size_cleanse
+							value < 0
 						}
 					}
+					set_variable = {
+						which = GFnyto_plante_wrlv
+						value = 0
+					}
+				} else = {
+					subtract_variable = {
+						which = GFnyto_plante_wrlv
+						value =value:GF_nyto_planet_size_cleanse
+					}
 				}
-				#计算总净化			
+
+			}
+			#净化器
+
+			if = {
+				limit = {
+					check_variable_arithmetic = {
+						which = GFnyto_plante_wrlv
+						subtract = value:GFnyto_plante_wrlv_cleanse
+						value < 0
+					}
+				}
 				set_variable = {
-					which = Recoil_decay_barrier_center_purify
-					value = has_GF_nyto_Recoil_decay_barrier_num
+					which = GFnyto_plante_wrlv
+					value = 0
 				}
-				multiply_variable = {
-					which = Recoil_decay_barrier_center_purify
-					value = Recoil_decay_barrier_center_purify_buffer
+			} else = {
+				subtract_variable = {
+					which = GFnyto_plante_wrlv
+					value = value:GFnyto_plante_wrlv_cleanse
 				}
 			}
-			GFnyto_planet_wrlv_numpy = yes
+
+
+			#解除最低最低限度
+			#if ={
+			#	limit = {
+			#			check_variable_arithmetic = {
+			#				which = base
+			#				add = value:GFnyto_plante_wrlv_cleanse
+			#				value >= value:GFnyto_plante_wrlv_contaminate
+			#			}
+			#	}
+			#	remove_planet_flag = GF_nyto_low_cleanse
+			#	#并创建消息
+			#	create_message = {
+			#		type = EVENT_MESSAGE_TYPE
+			#		localization = GF_nyto_planet
+			#		days = 5
+			#		target = this
+			#	}
+			#}
+			#GFnyto_planet_wrlv_numpy = yes
 			#刷新buff
 			if = {
 				limit = {

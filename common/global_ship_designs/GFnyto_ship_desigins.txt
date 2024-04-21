@@ -205,15 +205,21 @@ ship_design = {
 	required_component = bright_poetry_template
 	required_component = light_thruster
 }
-# ship_design = {
-# 	name = "花之锁"
-# 	ship_size = GFnyto_flags
-# 	section = {
-# 		template = GFnyto_flag_ship_core
-# 		slot = core
-# 		component = {
-# 			slot = EXTRA_LARGE_01
-# 			template = GF_Nyto_p_weapon3
-# 		}
-# 	}
-# }
+ ship_design = {
+ 	name = "battleship_revelation"
+ 	ship_size = battleship_revelation
+ 	section = {
+ 		template = battleship_revelation_mid
+ 		slot = mid
+ 		component = {
+ 			slot = T01
+ 			template = GF_nyto_crisis_laser
+ 		}
+ 	}
+	 required_component = GFnyto_power_lv2_6
+	 required_component = GF_nyto_shuttle_engine
+	 required_component = TITAN_SHIP_THRUSTER_5
+	 required_component = SENSOR_4
+	 required_component = GFnyto_additional_arithmetic_module4
+	 #required_component = light_thruster
+ }

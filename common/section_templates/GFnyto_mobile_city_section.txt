@@ -655,7 +655,7 @@ ship_section_template = {
 			minerals = 2000
 		}
 		upkeep = {
-			energy = 200
+			energy = 500
 		}
 		upkeep = {
 			trigger = {
@@ -663,7 +663,7 @@ ship_section_template = {
 					is_in_combat = yes
 				}
 			}
-			energy = 800
+			energy = 2000
 		}
 	}
 	large_utility_slots = 20

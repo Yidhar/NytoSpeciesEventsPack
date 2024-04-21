@@ -1,161 +1,161 @@
 @Nyto_h_weapons_buff_level = 0
-GF_nyto_beacon_weapon_damage_lock ={
-	optimize_memory
-	set_variable = {
-		which = GF_nyto_beacon_damag_lv
-		value = has_GFnyto_beacon_weapon_02
-	}
-	export_modifier_to_variable = {
-		modifier = ship_weapon_damage
-		variable = GF_nyto_damag
-	}
-	if = {
-		limit = { 
-			check_variable = {
-				which = GF_nyto_damag
-				value < 0
-			}
-			check_variable = {
-				which = GF_nyto_damag
-				value > -1
-			}
-		}
-		change_variable = {
-			which = GF_nyto_damag
-			value = 1
-		}
-	}
-	else_if = {
-		limit = { 
-			check_variable = {
-				which = GF_nyto_damag
-				value < -1
-			}
-		}
-		set_variable = {
-			which = GF_nyto_damag
-			value = 1
-		}
-	}
-	divide_variable = {
-		which = GF_nyto_beacon_damag_lv
-		value = GF_nyto_damag
-	}
-	export_modifier_to_variable = {
-		modifier = ship_shield_damage_mult
-		variable = GF_nyto_damag
-	}
-	if = {
-		limit = { 
-			check_variable = {
-				which = GF_nyto_damag
-				value < 0
-			}
-			check_variable = {
-				which = GF_nyto_damag
-				value > -1
-			}
-		}
-		change_variable = {
-			which = GF_nyto_damag
-			value = -1
-		}
-	}
-	else_if = {
-		limit = { 
-			check_variable = {
-				which = GF_nyto_damag
-				value < -1
-			}
-		}
-		set_variable = {
-			which = GF_nyto_damag
-			value = 1
-		}
-	}
-	divide_variable = {
-		which = GF_nyto_beacon_damag_lv
-		value = GF_nyto_damag
-	}
-	export_modifier_to_variable = {
-		modifier = ship_hull_damage_mult
-		variable = GF_nyto_damag
-	}
-	if = {
-		limit = { 
-			check_variable = {
-				which = GF_nyto_damag
-				value < 0
-			}
-			check_variable = {
-				which = GF_nyto_damag
-				value > -1
-			}
-		}
-		change_variable = {
-			which = GF_nyto_damag
-			value = 1
-		}
-	}
-	else_if = {
-		limit = { 
-			check_variable = {
-				which = GF_nyto_damag
-				value < -1
-			}
-		}
-		set_variable = {
-			which = GF_nyto_damag
-			value = 1
-		}
-	}
-	divide_variable = {
-		which = GF_nyto_beacon_damag_lv
-		value = GF_nyto_damag
-	}
-	export_modifier_to_variable = {
-		modifier = ship_armor_damage_mult
-		variable = GF_nyto_damag
-	}
-	if = {
-		limit = { 
-			check_variable = { which = GF_nyto_damag value < 0 }
-			check_variable = { which = GF_nyto_damag value > -1 }
-		}
-		change_variable = {
-			which = GF_nyto_damag
-			value = 1
-		}		
-	}
-	else_if = {
-		limit = { 
-			check_variable = {
-				which = GF_nyto_damag
-				value < -1
-			}
-		}
-		set_variable = {
-			which = GF_nyto_damag
-			value = 1
-		}
-	}
-	divide_variable = {
-		which = GF_nyto_beacon_damag_lv
-		value = GF_nyto_damag
-	}
-	if = {
-		limit = { 
-			check_variable = {
-				which = GF_nyto_beacon_damag_lv
-				value < 0
-			}
-		}
-		 multiply_variable = {
-			which = GF_nyto_beacon_damag_lv
-			value = -1
-		}
-	}
-}#信标伤害固定
+#GF_nyto_beacon_weapon_damage_lock ={
+#	optimize_memory
+#	set_variable = {
+#		which = GF_nyto_beacon_damag_lv
+#		value = has_GFnyto_beacon_weapon_02
+#	}
+#	export_modifier_to_variable = {
+#		modifier = ship_weapon_damage
+#		variable = GF_nyto_damag
+#	}
+#	if = {
+#		limit = {
+#			check_variable = {
+#				which = GF_nyto_damag
+#				value < 0
+#			}
+#			check_variable = {
+#				which = GF_nyto_damag
+#				value > -1
+#			}
+#		}
+#		change_variable = {
+#			which = GF_nyto_damag
+#			value = 1
+#		}
+#	}
+#	else_if = {
+#		limit = {
+#			check_variable = {
+#				which = GF_nyto_damag
+#				value < -1
+#			}
+#		}
+#		set_variable = {
+#			which = GF_nyto_damag
+#			value = 1
+#		}
+#	}
+#	divide_variable = {
+#		which = GF_nyto_beacon_damag_lv
+#		value = GF_nyto_damag
+#	}
+#	export_modifier_to_variable = {
+#		modifier = ship_shield_damage_mult
+#		variable = GF_nyto_damag
+#	}
+#	if = {
+#		limit = {
+#			check_variable = {
+#				which = GF_nyto_damag
+#				value < 0
+#			}
+#			check_variable = {
+#				which = GF_nyto_damag
+#				value > -1
+#			}
+#		}
+#		change_variable = {
+#			which = GF_nyto_damag
+#			value = -1
+#		}
+#	}
+#	else_if = {
+#		limit = {
+#			check_variable = {
+#				which = GF_nyto_damag
+#				value < -1
+#			}
+#		}
+#		set_variable = {
+#			which = GF_nyto_damag
+#			value = 1
+#		}
+#	}
+#	divide_variable = {
+#		which = GF_nyto_beacon_damag_lv
+#		value = GF_nyto_damag
+#	}
+#	export_modifier_to_variable = {
+#		modifier = ship_hull_damage_mult
+#		variable = GF_nyto_damag
+#	}
+#	if = {
+#		limit = {
+#			check_variable = {
+#				which = GF_nyto_damag
+#				value < 0
+#			}
+#			check_variable = {
+#				which = GF_nyto_damag
+#				value > -1
+#			}
+#		}
+#		change_variable = {
+#			which = GF_nyto_damag
+#			value = 1
+#		}
+#	}
+#	else_if = {
+#		limit = {
+#			check_variable = {
+#				which = GF_nyto_damag
+#				value < -1
+#			}
+#		}
+#		set_variable = {
+#			which = GF_nyto_damag
+#			value = 1
+#		}
+#	}
+#	divide_variable = {
+#		which = GF_nyto_beacon_damag_lv
+#		value = GF_nyto_damag
+#	}
+#	export_modifier_to_variable = {
+#		modifier = ship_armor_damage_mult
+#		variable = GF_nyto_damag
+#	}
+#	if = {
+#		limit = {
+#			check_variable = { which = GF_nyto_damag value < 0 }
+#			check_variable = { which = GF_nyto_damag value > -1 }
+#		}
+#		change_variable = {
+#			which = GF_nyto_damag
+#			value = 1
+#		}
+#	}
+#	else_if = {
+#		limit = {
+#			check_variable = {
+#				which = GF_nyto_damag
+#				value < -1
+#			}
+#		}
+#		set_variable = {
+#			which = GF_nyto_damag
+#			value = 1
+#		}
+#	}
+#	divide_variable = {
+#		which = GF_nyto_beacon_damag_lv
+#		value = GF_nyto_damag
+#	}
+#	if = {
+#		limit = {
+#			check_variable = {
+#				which = GF_nyto_beacon_damag_lv
+#				value < 0
+#			}
+#		}
+#		 multiply_variable = {
+#			which = GF_nyto_beacon_damag_lv
+#			value = -1
+#		}
+#	}
+#}#信标伤害固定
 
 
 GF_nyto_weapons_system ={
@@ -394,13 +394,13 @@ GF_nyto_remove_effect ={
 	optimize_memory
 	fleet = {
 		if = { limit = { has_fleet_flag = GF_Nyto_m_weapon2_flag }  remove_modifier = gfnyto_ms_weapons2 }
-		if = { limit = { has_fleet_flag = GF_Nyto_h_weapon2_flag }  remove_fleet_flag = GF_Nyto_h_weapon2_flag }
+		if = { limit = { has_fleet_flag = GF_Nyto_h_weapon2_flag }  remove_fleet_flag = GF_Nyto_h_weapon2_flag remove_modifier = gfnyto_h_weapons2 }
 		if = { limit = { has_fleet_flag = GF_Nyto_p_weapon1_flag } remove_fleet_flag = GF_Nyto_p_weapon1_flah }
 		if = { limit = { has_fleet_flag = GF_nyto_weapons_system_loding } remove_fleet_flag = GF_nyto_weapons_system_loding }
 		if = { limit = { has_fleet_flag = GF_nyto_shield_lv1 } remove_fleet_flag = GF_nyto_shield_lv1 }
 		if = { limit = { has_fleet_flag = GF_nyto_shield_lv2 } remove_fleet_flag = GF_nyto_shield_lv2 }
 		if = { limit = { has_fleet_flag = GF_nyto_shield_lv3 } remove_fleet_flag = GF_nyto_shield_lv3 }
-		if = { limit = { has_fleet_flag = GF_Nyto_T_weapon1_flag } remove_fleet_flag = GF_Nyto_T_weapon1_flag remove_modifier = GF_nyto_t_weapon clear_variable = GF_nyto_t_weapon_dsnm }
+		#if = { limit = { has_fleet_flag = GF_Nyto_T_weapon1_flag } remove_fleet_flag = GF_Nyto_T_weapon1_flag remove_modifier = GF_nyto_t_weapon clear_variable = GF_nyto_t_weapon_dsnm }
 	}
 	if = { limit = { is_variable_set = GF_nyto_combat_days } clear_variable = GF_nyto_combat_days }
 	if = { limit = { has_ship_flag =GF_Nyto_p_weapon1_flag } remove_ship_flag = GF_Nyto_p_weapon1_flag } 
@@ -445,6 +445,7 @@ GF_nyto_remove_effect ={
 		limit = {  has_ship_flag = GF_nyto_weapons_system_loding }
 		remove_ship_flag = GF_nyto_weapons_system_loding
 	}
+
 	# if = {
 	# 	limit = { has_ship_flag = is_Command_ship }
 	# 	remove_modifier = GF_nyto_beacon_count_buff
