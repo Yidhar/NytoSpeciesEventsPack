@@ -17,3 +17,10 @@ GFnyto_crisis_see_angel:0 "看见天使"
  GFnytocrisis_country_name: "§RRevelation§!"
  mod_damage_vs_country_type_Revelation_mult:0 "对启示录造成的伤害增加"
  starbase_revelation:0 ""
+
+
+ GFnytocrisis.101.name:0 "启示论"
+ GFnytocrisis.101.desc:0 "它们来了,从地狱中升起，从天堂坠落。从我们的过去重反未来.启示之日即是今日."
+
+
+ GFnytocrisis.102.name:0 "异象论"

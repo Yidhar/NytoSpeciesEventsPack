@@ -174,6 +174,20 @@ country_event = {
 	}
 }
 
+#开幕
+country_event = {
+	id = GFnytocrisis.101
+	title = "GFnytocrisis.101.name"
+	desc = "GFnytocrisis.101.desc"
+	hide_window = no
+	is_triggered_only = yes
+	immediate = {
+
+	}
+}
+
+
+
 #战争 随机开启战争 每有一个国家增加1计数每有一场战争增加1 每计数提供100%增幅和1日无敌 每次次舰队刷出数量+1
 event = {
 	id = GFnytocrisis.10
@@ -224,7 +238,9 @@ event = {
 									chance = 50
 									join_war_on_side = { war = prev side = attackers  }
 								}
+								creat_battleship_revelation_fleet = yes
 							}
+
 						}
 					}
 				}
@@ -233,33 +249,33 @@ event = {
 			event_target:This_is_GF_nyto_crisis_country={
 				change_variable = { which = pc_num value = 1 } #国家计数
 			}
-			random_system_within_border = {
-				set_star_flag = swarm_revelation_target_1
-				#刷船
-				while = {
-					count = event_target:This_is_GF_nyto_crisis_country.pc_num
-					creat_battleship_revelation_fleet = yes
-
-						create_fleet = {
-							effect = {
-								set_owner = event_target:This_is_GF_nyto_crisis_country
-								set_location = prev
-								while = {
-									count = 20
-									create_army_transport = {
-										graphical_culture = GF_nyto_02
-										army_type = GF_nyto_machine_assault_3
-										ship_name = "KCCO"
-										army_name = "KCCO"
-										species = event_target:This_is_GF_nyto_crisis_country
-									}
-									set_fleet_stance = aggressive
-								}
-							}
-						}
-
-				}
-			}
+			#random_system_within_border = {
+			#	set_star_flag = swarm_revelation_target_1
+			#	#刷船
+			#	while = {
+			#		count = event_target:This_is_GF_nyto_crisis_country.pc_num
+			#		creat_battleship_revelation_fleet = yes
+			#
+			#			create_fleet = {
+			#				effect = {
+			#					set_owner = event_target:This_is_GF_nyto_crisis_country
+			#					set_location = prev
+			#					while = {
+			#						count = 20
+			#						create_army_transport = {
+			#							graphical_culture = GF_nyto_02
+			#							army_type = GF_nyto_machine_assault_3
+			#							ship_name = "KCCO"
+			#							army_name = "KCCO"
+			#							species = event_target:This_is_GF_nyto_crisis_country
+			#						}
+			#						set_fleet_stance = aggressive
+			#					}
+			#				}
+			#			}
+			#
+			#	}
+			#}
 		}
 		event_target:This_is_GF_nyto_crisis_country={
 			add_modifier = {

@@ -220,7 +220,7 @@ GF_nyto_elid_attack = {
 #	#		value = 1000
 #	#	}
 #	#}
-#	#设置最小值
+#	#设置最小值d
 #	if = {
 #		limit = {
 #			check_variable = {
@@ -249,7 +249,7 @@ creat_battleship_revelation_fleet ={
 			can_disband = no
 		}
 		effect = {
-			set_owner = event_target:This_is_GF_nyto_crisis_country
+			set_owner = prev
 			#set_leader =
 			while = {
 				count = 28
@@ -262,7 +262,7 @@ creat_battleship_revelation_fleet ={
 			}
 			set_fleet_stance = aggressive
 			set_fleet_bombardment_stance = gfnyto_collapse_liquid
-			set_location = prev
+			set_location = prev.home_planet
 		}
 	}
 }

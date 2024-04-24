@@ -196,7 +196,7 @@ Gfnyto_planet_wrlv_proudcu2={
 Gfnyto_planet_wrlv_proudcu_pops ={
 	base = 0
 	add = trigger:num_pops
-	mult = 0.1
+	mult = 0.01
 	add = 1
 }
 
