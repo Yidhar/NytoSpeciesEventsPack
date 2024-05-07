@@ -189,7 +189,7 @@ country_event = {
 
 
 #战争 随机开启战争 每有一个国家增加1计数每有一场战争增加1 每计数提供100%增幅和1日无敌 每次次舰队刷出数量+1
-event = {
+country_event = {
 	id = GFnytocrisis.10
 	hide_window = yes
 	is_triggered_only = yes
@@ -215,30 +215,91 @@ event = {
 					"null"
 				}
 			}
-			effect = {
-				save_global_event_target_as = This_is_GF_nyto_crisis_country
 
+			effect = {
+				export_trigger_value_to_variable = {
+					trigger = count_country
+					parameters = {
+						limit = {
+							is_ai = yes
+							is_country_type = default
+						}
+					}
+					variable = GF_nyto_crisis_goble_country_count
+				}
+				save_global_event_target_as = This_is_GF_nyto_crisis_country
+				set_faction_hostility ={
+					set_hostile = no
+					set_friendly = yes
+					set_neutral = no
+
+				}
+				#OPEN_BORDERS
+				set_hostile = root
 			}
 		}
+		random_playable_country = {
+			limit = {
+				exists = this
+				is_country_type = default
+				is_ai = yes
+			}
+			save_event_target_as = This_is_GF_nyto_crisis_country@this
+			random_playable_country = {
+				limit = {
+					exists = this
+					not = {
+						is_at_war_with = prev
+					}
+				}
+			}
+			#every_playable_country = {
+			#	limit = {
+			#		exists = this
+			#		is_country_type = default
+			#		is_ai = yes
+			#		not = { is_at_war_with = root }
+			#	}
+			#	save_event_target_as = This_is_GF_nyto_crisis_country@this
+			#	random_list = {
+			#		50 ={
+			#			join_war_on_side = { war = event_target:This_is_GF_nyto_crisis_country@this side = defenders }
+			#		}
+			#		50={ }
+			#	}
+			#}
+		}
+
+
+
 		every_playable_country = {
-			#创建描述页面
+			if = {
+				limit = { is_ai = yes }
+			}
+			#set_friendl
+			#创建混乱战场和初始舰队
 			while = {
-				count = 5
+				count = event_target:This_is_GF_nyto_crisis_country.GF_nyto_crisis_goble_country_count
 				random_playable_country = {
 					declare_war ={
 						target = prev
 						attacker_war_goal = wg_declared_crisis
 						effect = {
-							prev={
-								random = {
-									chance = 50
-									join_war_on_side = { war = prev side = defenders }
+							prev = {
+								random_list = {
+									50 ={
+										join_war_on_side = { war = prev side = defenders }
+										if = { limit = { not = { is_country = root  } }
+											creat_battleship_revelation_fleet = { defines = yes}
+										}
+									}
+									50 ={
+										join_war_on_side = { war = prev side = attackers  }
+										if = { limit = { not = { is_country = root } }
+											creat_battleship_revelation_fleet = { attatk = yes }
+										}
+									}
 								}
-								random = {
-									chance = 50
-									join_war_on_side = { war = prev side = attackers  }
-								}
-								creat_battleship_revelation_fleet = yes
 							}
 
 						}
@@ -246,36 +307,15 @@ event = {
 				}
 				reroll_random = yes
 			}
+			add_modifier = {
+				modifier =GF_nyto_crisis_batte
+				multiplier = trigger:count_war
+				days = -1
+			}
 			event_target:This_is_GF_nyto_crisis_country={
 				change_variable = { which = pc_num value = 1 } #国家计数
 			}
-			#random_system_within_border = {
-			#	set_star_flag = swarm_revelation_target_1
-			#	#刷船
-			#	while = {
-			#		count = event_target:This_is_GF_nyto_crisis_country.pc_num
-			#		creat_battleship_revelation_fleet = yes
-			#
-			#			create_fleet = {
-			#				effect = {
-			#					set_owner = event_target:This_is_GF_nyto_crisis_country
-			#					set_location = prev
-			#					while = {
-			#						count = 20
-			#						create_army_transport = {
-			#							graphical_culture = GF_nyto_02
-			#							army_type = GF_nyto_machine_assault_3
-			#							ship_name = "KCCO"
-			#							army_name = "KCCO"
-			#							species = event_target:This_is_GF_nyto_crisis_country
-			#						}
-			#						set_fleet_stance = aggressive
-			#					}
-			#				}
-			#			}
-			#
-			#	}
-			#}
+
 		}
 		event_target:This_is_GF_nyto_crisis_country={
 			add_modifier = {
@@ -286,6 +326,18 @@ event = {
 		}
 	}
 }
+
+
+country_event = {
+	id = GFnytocrisis.101
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		exists = this
+		exists = event_target:This_is_GF_nyto_crisis_country@from
+	}
+}
+
 
 #开始时每存在一个国家多刷一支舰队 每次补充时 每存在一场战斗额外补充一支舰队 每发生一次战斗提高天数的电子站算力和
 system_event = {
@@ -383,3 +435,92 @@ event = {
 
 #神不在的第三天
 
+
+
+#战争寻路
+#状态机  寻路中 已找到目标 移动中 无法移动到目标 轨道轰炸中
+fleet_event ={
+	id = GFnytocrisis.777
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		exists = this
+	}
+	immediate = {
+		queue_actions = {
+			repeat = {
+				effect = {
+					id =  GF_nyto_crisi_fleet.jump
+					if = {
+						limit = {
+							count_system = {
+								limit = {
+									check_variable = { which = GF_nyto_crisis_need_fleet_num value < 0 }
+									not = { has_star_flag = GF_nyto_crisis_need_fleet@root.owner } }
+								count = all
+							}
+						}
+						every_system = {
+							set_variable = { which = GF_nyto_crisis_need_fleet_num value = 1 }
+							set_star_flag = GF_nyto_crisis_need_fleet@root.owner
+						}
+					} #无任何目标时 初始话地图权重
+					if = {
+						limit = { has_fleet_flag = GF_nyto_crisis_find_path  }
+						random_system = {
+							limit = {
+								check_variable = { which = GF_nyto_crisis_fleet_id value > 0 }
+								or = {
+									any_system_planet = { or = { is_colony = yes is_colonizable = yes } owner= { is_hostile = root.owner} }
+									any_fleet_in_system = {
+										exists = owner
+										owner = { is_hostile = root.owner }
+									}
+								}
+							}
+							closest_system = {
+								min_steps = 1
+								system_star = {
+									root ={
+										set_location = {
+											target = prev
+											distance = 5
+											angle = random
+										}
+									}
+								}
+							}
+						}
+						set_timed_fleet_flag = { flag = GF_nyto_crisis_fleet_jump_cooldown days = 90 }
+						remove_fleet_flag = GF_nyto_crisis_find_path
+					} #当存在目标时每90进行一次折跃到附件星系
+				}
+				find_closest_system = {
+					trigger = {
+						id = GF_nyto_crisis_fleet.find1
+						or = {
+							any_fleet_in_system = { exists = owner owner = { is_hostile = root.owner } }
+							any_system_planet = {
+								or = { is_colony = yes	is_colonizable = yes  }
+								not = { any_fleet_in_orbit = { exists = controller is_ship_class = shipclass_military controller ={ is_same_value = root.owner } }
+								}
+							}
+						}
+						distance = { source = root type = hyperlane max_jumps = 10 }
+						root = { can_access_system = prev }
+						check_variable = { which = GF_nyto_crisis_need_fleet_num  value > 0 }
+						has_star_flag = GF_nyto_crisis_need_fleet@root.owner
+					}
+					found_system = {
+						effect = {
+							id = GF_nyto_crisis_fleet.movin1
+							set_variable = { which = GF_nyto_crisis_fleet_id value = root.fleet_id }
+						}
+					}
+
+				}
+			}
+
+		}
+	}
+}

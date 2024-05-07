@@ -1,0 +1,10 @@
+nyto ={
+    species_class = nyto
+    portraits ={
+        "GFnyto_nyto"
+    }
+    randomizable = no
+    conditional_portraits ={
+        "GFnyto_nyto"
+    }
+}

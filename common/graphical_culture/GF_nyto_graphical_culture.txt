@@ -38,7 +38,7 @@ GF_nyto_02 ={
 	selectable = {
 		always = yes
 	}
-	ship_color = yes
+	ship_color = no
 	fallback = GF_nyto_01
 	ship_lighting = {
 		cam_light_1_dir = { 0.6 -0.2 0.1 }

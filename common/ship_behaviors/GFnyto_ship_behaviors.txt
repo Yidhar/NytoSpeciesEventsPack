@@ -38,19 +38,17 @@ ship_behavior = {
 #支援
 ship_behavior = {
 	name = "GFnyto_ship_behaviors3"
-	preferred_attack_range = max		#max/min/median/12/412..这是攻击时飞船想要保持的目标距离
-	
-	formation_distance = median			#当进港/跟船时,尽量保持这一距离到指定位置
-	return_to_formation_distance = 300	#攻击时,如果到指定位置的距离大于此值,飞船将切换到被动模式
-
-	collision_awareness = 0.75
-	collision_radius = 1
-	collision_strafe = 2.5
-	
+	preferred_attack_range = max
+	formation_distance = max
+	return_to_formation_distance = max
+	source_target_anchor_factor = 1.0
 	combat_target_anchor = root
 
-	attack_move_pattern = stay_at_range
-	passive_move_pattern = stationary
+	collision_awareness = 0.0
+	collision_radius = 0	#collision_radius is a multiplier on the radius specified in the ship size
+	collision_strafe = 0	#collision_strafe allows the ship to move in any direction while colliding with another
+	attack_move_pattern = stationary
+	passive_move_pattern = stay_at_range
 	
 	desc = "GFnyto_ship_behaviors3_desc"
 }

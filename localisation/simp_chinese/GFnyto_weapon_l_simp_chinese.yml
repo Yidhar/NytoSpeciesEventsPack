@@ -63,7 +63,7 @@ GFnyto_field_generator_desc:0 "力场发生器可以不断增加舰船周围的�
 GFnyto_additional_arithmetic_module_desc:0 "为舰船战斗提供巨额运算能力。"
 GFnyto_ship_behaviors1_desc:0 "舰船会进行冲锋,直接撞向敌人。"
 GFnyto_ship_behaviors2_desc:0 "巡洋舰会停靠在空母周围并为其护航。"
-GFnyto_ship_behaviors3_desc:0 "空母会停靠在后方并派出浮游炮支援。"
+GFnyto_ship_behaviors3_desc:0 "舰船将会停留在原地应对各种局势"
 #武器描述
 GFnyto_force_shield_1_DESC:0 "覆盖舰船周围的反作用力场,不仅可以抵消来自敌人的动能攻击,而且可以为己方实弹攻击加速。"
 GFnyto_force_shield_modif3:0 "§Y力场护盾将会完全屏蔽敌方护盾穿透并降低90%的动能武器伤害§!§R此特殊效果无法叠加§!"

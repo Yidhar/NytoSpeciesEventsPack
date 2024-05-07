@@ -1517,6 +1517,7 @@ weapon_component_template = {
 		min = 10
 		max = 10
 	}
+
 	size_restriction = {
 		battleship_revelation
 	}

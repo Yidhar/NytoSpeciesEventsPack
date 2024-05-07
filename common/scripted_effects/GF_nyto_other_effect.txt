@@ -237,32 +237,92 @@ GF_nyto_elid_attack = {
 
 creat_battleship_revelation_fleet ={
 	optimize_memory
-	create_fleet = {
-		name = "battleship_revelation_fleet_name"
-		settings = {
-			can_upgrade = no
-			can_change_composition = no
-			can_change_leader = no
-			uses_naval_capacity = no
-			spawn_debris = no
-			is_boss = yes
-			can_disband = no
-		}
-		effect = {
-			set_owner = prev
-			#set_leader =
-			while = {
-				count = 28
-				create_ship = {
-					name = "x"
-					prefix = no
-					upgradable = no
-					design = battleship_revelation
-				}
+	[[attatk]
+		create_fleet = {
+			name = "battleship_revelation_attack_fleet_name"
+			settings = {
+				can_upgrade = no
+				can_change_composition = no
+				can_change_leader = no
+				uses_naval_capacity = no
+				spawn_debris = no
+				is_boss = yes
+				can_disband = no
 			}
-			set_fleet_stance = aggressive
-			set_fleet_bombardment_stance = gfnyto_collapse_liquid
-			set_location = prev.home_planet
+			effect = {
+				add_modifier = {
+					modifier = GF_nyto_crisis_ship_upkeep
+					days = -1
+				}
+				set_owner = prev
+				prev ={
+					change_variable = {
+						which = GF_nyto_crisis_country_has_fleet_num
+						value = 1
+					}
+				}
+				set_variable = {
+					which = GF_nyto_crisis_fleet_id
+					value = prev.GF_nyto_crisis_country_has_fleet_num
+				}
+				#set_leader =
+				while = {
+					count = 28
+					create_ship = {
+						name = "x"
+						prefix = no
+						upgradable = no
+						design = battleship_revelation
+					}
+				}
+				set_fleet_stance = aggressive
+				set_fleet_bombardment_stance = gfnyto_collapse_liquid
+				set_location = prev.home_planet
+			}
 		}
-	}
+	]
+	[[defines]
+		create_fleet = {
+			name = "battleship_revelation_defines_fleet_name"
+			settings = {
+				can_upgrade = no
+				can_change_composition = no
+				can_change_leader = no
+				uses_naval_capacity = no
+				spawn_debris = no
+				is_boss = yes
+				can_disband = no
+			}
+			effect = {
+				add_modifier = {
+					modifier = GF_nyto_crisis_ship_upkeep
+					days = -1
+				}
+				set_owner = event_target:This_is_GF_nyto_crisis_country
+				prev ={
+					change_variable = {
+						which = GF_nyto_crisis_country_has_fleet_num
+						value = 1
+					}
+				}
+				set_variable = {
+					which = GF_nyto_crisis_fleet_id
+					value = prev.GF_nyto_crisis_country_has_fleet_num
+				}
+				#set_leader =
+				while = {
+					count = 28
+					create_ship = {
+						name = "x"
+						prefix = no
+						upgradable = no
+						design = battleship_revelation
+					}
+				}
+				set_fleet_stance = aggressive
+				set_fleet_bombardment_stance = gfnyto_collapse_liquid
+				set_location = prev.home_planet
+			}
+		}
+	]
 }

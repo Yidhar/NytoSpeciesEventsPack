@@ -28,7 +28,9 @@ country_event = {
 			has_origin = origin_GF_nyto_the_last_light
 		}
 	}
-	immediate = {		
+	immediate = {
+		set_country_flag = no_machine_uprising
+		set_country_flag = synth_detector
 		if = {
 			limit = { 
 				has_ethic = ethic_gestalt_consciousness		

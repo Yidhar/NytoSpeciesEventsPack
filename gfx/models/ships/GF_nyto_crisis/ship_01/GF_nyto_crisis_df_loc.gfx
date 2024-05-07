@@ -1,0 +1,6 @@
+objectTypes = {
+	pdxmesh = {
+		name = "GF_nyto_crisis_df_loc_mesh"
+		file = "gfx/models/ships/GFnyto_test/GF_nyto_crisis_df_loc.mesh"
+	}
+}

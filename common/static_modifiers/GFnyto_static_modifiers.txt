@@ -294,8 +294,15 @@ GF_nyto_crisis_batte ={
 	army_morale_damage_mult = 1
 	army_damage_taken_mult = -0.01
 	weapon_type_energy_weapon_fire_rate_mult = 1
-}
-GF_nyto_crisis_batte_planet_buff ={
 	weapon_type_Electronic_weapon_damage_mult = 5
 	damage_vs_country_type_default_mult = 1
+}
+GF_nyto_crisis_default_country_buff ={
+	weapon_type_Electronic_weapon_damage_mult = 2
+	damage_vs_country_type_default_mult = 0.2
+	ship_weapon_damage = 0.1
+	ship_hull_add = 10000
+}
+GF_nyto_crisis_ship_upkeep ={
+	ships_upkeep_mult = -1000
 }

@@ -103,3 +103,4 @@ mod_planet_buildings_GF_nyto_training_key_upkeep_add:0 "建筑密钥£GF_nyto_tr
  GF_nyto_planet_size_cleanse_text:0 "[GF_nyto_planet_size_cleanse2]"
  GF_nyto_planet_size_cleanse_text_2:0 "§R该星球没有自净能力§!"
  GF_nyto_planet:0 "[This.GetName]上发生污染失控"
+ planet_districts_energy_produces_mult:0 "区划£energy£能量币维护上升"

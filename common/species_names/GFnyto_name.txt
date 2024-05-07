@@ -1,12 +1,12 @@
-﻿nyto = {
-	nyto = {
-		name = "nyto"
-		plural = "nyto_plural"
-		home_planet = "nyto_planet"
-		home_system = "nyto_system"
-		name_list = "GFNYTO01"
-	}
-}
+﻿#nyto = {
+#	nyto = {
+#		name = "nyto"
+#		plural = "nyto_plural"
+#		home_planet = "nyto_planet"
+#		home_system = "nyto_system"
+#		name_list = "GFNYTO01"
+#	}
+#}
 
 eild = {
 	eild = {
@@ -15,5 +15,15 @@ eild = {
 		home_planet = "nyto_planet"
 		home_system = "nyto_planet"
 		name_list = "GFNYTO02"
+	}
+}
+
+nyto ={
+	nyto ={
+		name = "nyto"
+		plural = "nyto_plural"
+		home_planet = "nyto_planet"
+		home_system = "nyto_system"
+		name_list = "GFNYTO01"
 	}
 }

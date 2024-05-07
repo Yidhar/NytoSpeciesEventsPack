@@ -84,7 +84,7 @@ district_GF_nyto_pc_toxic_energy = {
 
 			}
 			GF_nyto_collapse_liquid = 25
-			consumer_goods = 10
+			#consumer_goods = 10
 			GF_nyto_training_key = 0.1
 			multiplier = value:GF_nyto_drp_modifer|districts|district_GF_nyto_pc_toxic_energy|rss|energy|category|specialist|rss_category|planet_technician|
 		}
@@ -369,13 +369,15 @@ district_GF_nyto_pc_toxic_alloy = {
 					}
 				}
 			}
-			volatile_motes = 2
-			GF_nyto_collapse_liquid = 2
 			GF_nyto_collapse_liquid = 20
 			GF_nyto_training_key = 1
 			multiplier = value:GF_nyto_drp_modifer|districts|district_GF_nyto_pc_toxic_alloy|
 		}
+		upkeep = {
+			volatile_motes = 20
+		}
 	}
+
 	planet_modifier = {
 		planet_housing_add = 10
 	}
@@ -417,7 +419,7 @@ district_GF_nyto_pc_toxic_leisure = {
 
 		}
 		upkeep = {
-			exotic_gases = 2
+			exotic_gases = 20
 			GF_nyto_collapse_liquid = 2
 		}
 		upkeep = {
@@ -590,7 +592,7 @@ district_GF_nyto_pc_toxic_science = {
 					}
 				}
 			}
-			exotic_gases = 2
+			rare_crystals = 2
 			GF_nyto_collapse_liquid = 2
 			GF_nyto_collapse_liquid = 20
 			GF_nyto_training_key = 1
