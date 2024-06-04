@@ -17,6 +17,17 @@ objectTypes={
 		scale = 20
 	}
 	pdxparticle = {
+		name = "GF_nyto_T101_weapon_hit_effect"
+		type = "GF_nyto_T101_weapon_file"
+		scale = 0.5
+	}
+	pdxparticle = {
+		name = "GF_nyto_T102_weapon_hit_effect"
+		type = "GF_nyto_T102_weapon_file"
+		scale = 0.2
+	}
+
+	pdxparticle = {
 		name = "GF_nyto_T_weapon_shield_hit_effect"
 		type = "projectile_shield_hit_effect"
 		

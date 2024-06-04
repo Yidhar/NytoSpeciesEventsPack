@@ -104,6 +104,7 @@ country_event = {
 		every_owned_leader = {
 			remove_leader_flag = GFnyot_leader_select
 		}
+
 	}
 	option = {
 		#科学家

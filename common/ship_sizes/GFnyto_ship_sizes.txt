@@ -279,3 +279,38 @@ GFnyto_stions_fortress ={
 		tech_template_stions_fortress
 	}
 }
+
+#技能效果载体
+GF_nyto_skill_ship={
+	formation_priority =  @corvette_formation_priority
+	icon = ship_size_military_16
+	entity =  GF_null_entity
+	max_speed = 20
+	acceleration = 0.1
+	rotation_speed = 0.1
+	collision_radius = @corvette_formation_priority
+	max_hitpoints = 100000
+	size_multiplier = 0
+	fleet_slot_size = 1
+	section_slots = {
+		"core" = { locator = "part1" }
+	}
+	is_space_station = no
+	icon_frame = 2
+	base_buildtime = 9999999
+	can_have_federation_design = no
+	enable_default_design = no
+	default_behavior = GFnyto_ship_behaviors3
+	combat_disengage_chance = -0.9
+	class = shipclass_military_station
+	possible_country = {
+		always = no
+	}
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+	required_component_set = "ship_aura_components"
+	num_target_locators = 1
+}

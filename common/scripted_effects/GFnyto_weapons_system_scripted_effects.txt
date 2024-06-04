@@ -221,9 +221,12 @@ GF_nyto_weapons_system ={
 			limit = {
 					has_component = GF_Nyto_T_weapon1
 			}
-			fleet = {
-				set_fleet_flag = GF_Nyto_T_weapon1_flag
+			export_modifier_to_variable = {
+				modifier = weapon_GF_ship_skill_01_weapon_damage_mult
+				variable = GF_Nyto_T_weapon1_num
 			}
+			set_ship_flag =  GF_Nyto_T_weapon1_flag
+
 		} #厌世者
 		#特殊舰船
 		if = {
@@ -444,6 +447,13 @@ GF_nyto_remove_effect ={
 	if = {
 		limit = {  has_ship_flag = GF_nyto_weapons_system_loding }
 		remove_ship_flag = GF_nyto_weapons_system_loding
+	}
+	if = {
+		limit = {
+			has_ship_flag = GF_Nyto_T_weapon1_flag
+		}
+		remove_fleet_flag = GF_Nyto_T_weapon1_flag
+		clear_variable =GF_Nyto_T_weapon1_num
 	}
 
 	# if = {

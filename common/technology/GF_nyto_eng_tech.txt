@@ -218,3 +218,21 @@ tech_template_GF_nyto_orbit_stions ={
 		custom_tooltip = "tech_template_GF_nyto_orbit_stions_desc"
 	}
 }
+
+#坍缩共相性
+tech_template_GF_nyto_universalism ={
+	icon =tech_GFnyto_tansuo
+	cost = 80000
+	area = physics
+	is_rare = yes
+	tier = 5
+	category = { particles }
+	weight = 50
+	potential = {  is_nyto_country = yes  }
+	prerequisites = { tech_GFnyto_star_tasuo  }
+	mod_weight_if_group_picked = {  }
+	modifier = {
+		megastructure_build_speed_mult = 0.5
+		custom_tooltip ="tech_template_GF_nyto_universalism_titl"
+	}
+}

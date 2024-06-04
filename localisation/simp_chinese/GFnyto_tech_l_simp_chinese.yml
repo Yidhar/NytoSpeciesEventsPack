@@ -87,6 +87,9 @@ tech_template_GFnyto_cv_batellship_desc: "帝国在原有的主力舰基础上�
 GFnyto_stions_fortress:0 "永恒要塞"
 tech_template_GF_nyto_orbit_stions:0 "轨道卫星城建设"
 tech_template_GF_nyto_orbit_stions_desc:0 "§H解锁巨型结构：§!轨道卫星城"
+ tech_template_GF_nyto_universalism:0 "坍缩共相性"
+ tech_template_GF_nyto_universalism_desc: "在基于逆向坍塌的的信息重构理论上，我们提出了新的理论来解释坍塌粒子能够对信息熵进行复制甚至放大的特性"
+ tech_template_GF_nyto_universalism_titl:0 "坍缩共相性认为，坍塌粒子在和某种信息高度处于高度同频时会和其发生共频。但是同时会大幅加速其载体的损耗。\n\n也许我们能基于该技术来为我们的一些设施进行增幅"
 #生物
 tech_GF_nyto_collapse_stability_bomb:0 "坍缩液稳定技术"
 tech_GF_nyto_collapse_stability_bomb_desc:0 "坍塌液晶格是一种稳定的磁-光囚禁阱装置。最外层为两端金属遮罩及透明材质的外壳,中层在人形眼中为空且围绕内层外侧存在一圈长条状细杆,内层为透明材质的隔离层并有着分别位于其上下两端的共八条呈辐射对称的外延管状物。中层和内层实际上是旋转磁场装置,使得囚禁阱的中心电磁场始终难以为零。"

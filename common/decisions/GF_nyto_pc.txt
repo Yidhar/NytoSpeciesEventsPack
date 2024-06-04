@@ -503,12 +503,17 @@ decision_GFnyto_autopops_3 = {
 	}
 	potential = {
 		owner = { is_nyto_country =yes }
-		NOT = { has_planet_flag =gfnyto_select_thi_planet }
+		#NOT = { has_planet_flag =gfnyto_select_thi_planet }
 	}
 	effect = {
 		owner ={
 			every_owned_pop = {
 				limit = {
+					planet ={
+						not = {
+							is_planet = root
+						}
+					}
 					has_job = no
 				}
 				resettle_pop = {
@@ -523,6 +528,41 @@ decision_GFnyto_autopops_3 = {
 	}
 }
 
+
+#把所有失业人口送往突出凝练机
+decision_GFnyto_autopops_4 ={
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_politics
+	resources = {
+		category = decisions
+		cost = {
+			unity = 250
+		}
+	}
+	potential = {
+		owner = { is_nyto_country =yes  any_owned_planet = { is_planet_class = pc_cosmogenesis_world } }
+	}
+	effect = {
+		owner ={
+			every_owned_planet = {
+				limit = {
+					is_planet_class = pc_cosmogenesis_world
+				}
+				save_event_target_as = pc_cosmogenesis_world
+			}
+			every_owned_pop = {
+				limit = {
+					has_job = no
+				}
+				resettle_pop = {
+					pop = this
+					planet = event_target:pc_cosmogenesis_world
+				}
+			}
+		}
+	}
+}
 
 ##恒定最低限度净化策略
 #decision_GF_nyto_low_cleanse ={

@@ -11,5 +11,5 @@ tags={
 }
 name="【少女前线GirlsFrontline】涅托种族事件包NytoSpeciesEventsPack"
 picture="thumbnail.png"
-supported_version="3.11.*"
+supported_version="3.12.*"
 remote_file_id="2070082709"

@@ -565,121 +565,6 @@ ship_section_template = {
 		template = invisible_missile_fixed
 		locatorname = "missile_025"
 	}
-	# component_slot = {
-	# 	name = "missle_026"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_026"
-	# }
-	# component_slot = {
-	# 	name = "missle_027"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_027"
-	# }
-	# component_slot = {
-	# 	name = "missle_028"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_028"
-	# }
-	# component_slot = {
-	# 	name = "missle_029"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_029"
-	# }
-	# component_slot = {
-	# 	name = "missle_030"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_030"
-	# }
-	# component_slot = {
-	# 	name = "missle_031"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_031"
-	# }
-	# component_slot = {
-	# 	name = "missle_032"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_032"
-	# }
-	# component_slot = {
-	# 	name = "missle_033"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_033"
-	# }
-	# component_slot = {
-	# 	name = "missle_034"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_034"
-	# }
-	# component_slot = {
-	# 	name = "missle_035"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_035"
-	# }
-	# component_slot = {
-	# 	name = "missle_036"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_036"
-	# }
-	# component_slot = {
-	# 	name = "missle_037"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_037"
-	# }
-	# component_slot = {
-	# 	name = "missle_038"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_038"
-	# }
-	# component_slot = {
-	# 	name = "missle_039"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_039"
-	# }
-	# component_slot = {
-	# 	name = "missle_040"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_040"
-	# }
-	# component_slot = {
-	# 	name = "missle_041"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_041"
-	# }
-	# component_slot = {
-	# 	name = "missle_42"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_042"
-	# }
-	# component_slot = {
-	# 	name = "missle_043"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_043"
-	# }
-	# component_slot = {
-	# 	name = "missle_044"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_044"
-	# }
-	# component_slot = {
-	# 	name = "missle_045"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_045"
-	# }
-	# component_slot = {
-	# 	name = "missle_046"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_046"
-	# }
-	# component_slot = {
-	# 	name = "missle_047"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_047"
-	# }
-	# component_slot = {
-	# 	name = "missle_048"
-	# 	template = invisible_missile_fixed
-	# 	locatorname = "missile_048"
-	# }
 	large_utility_slots = 6
 	resources = {
 		category = ship_sections
@@ -751,7 +636,7 @@ ship_section_template = {
 	component_slot = {
 		name = "T01"
 		template = invisible_titanic_fixed
-		locatorname = "T_01"
+		locatorname = "t01"
 	}
 	component_slot = {
 		name = s025
@@ -1528,16 +1413,16 @@ ship_section_template = {
 
 #
 ship_section_template ={
-	key = battleship_revelation_mid
-	ship_size = battleship_revelation
-	fits_on_slot = mid
-	should_draw_components = yes
-	entity = tifeng_entity
+	key = GF_nyto_skill_ship_template
+	ship_size = GF_nyto_skill_ship
+	fits_on_slot = core
+	should_draw_components = no
+	entity = SANGVIS_FERRI_locator_entity
 	icon = GFX_ship_part_core_bow
 	icon_frame = 1
 	component_slot = {
 		name = "T01"
 		template = invisible_titanic_fixed
-		locatorname = "t_gun01"
+		locatorname = "t01"
 	}
 }

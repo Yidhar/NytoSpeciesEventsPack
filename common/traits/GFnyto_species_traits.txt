@@ -81,7 +81,9 @@ trait_GF_nyto_ogas_agreement_plus= {
 		}
 	}
 	species_potential_add = {
-		always = no
+		from ={
+			has_ascension_perk = ap_GF_nyto_resurrection
+		}
 	}
 	immortal_leaders = no
 	improves_leaders = yes #是否会影响领袖
@@ -111,7 +113,9 @@ trait_GF_nyto_noussphere = {
 		always = no
 	}
 	species_potential_add = {
-		always = no
+		from ={
+			has_ascension_perk = ap_GF_nyto_resurrection
+		}
 	}
 	species_possible_merge_add = {
 		from ={

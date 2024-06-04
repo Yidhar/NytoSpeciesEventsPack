@@ -185,10 +185,12 @@ GF_nyto_new_fire_control_unit_deficit ={
 GF_nyto_Elid_level ={
 	army_damage_mult = 0.05
 	army_health = 0.05
+	army_damage_taken_mult = -0.001
 }
 GF_nyto_Elid_level2 ={
 	army_damage_mult = 0.25
 	army_health = 0.25
+	army_damage_taken_mult = -0.005
 }
 GF_nyto_forward_base ={
 	icon = "gfx/interface/icons/modifiers/GFnyto_gestalt.dds"
@@ -230,6 +232,7 @@ GF_nyto_l_weapon2_soon ={
 GF_nyto_T_weapon2_damgabuff = {
 	weapon_type_prism_weapon_damage_mult = 1	
 }
+
 # GF_nyto_beacon_count_buff ={
 # 	weapon_type_beacon_weapon_damage_mult = 10000
 # }
@@ -252,9 +255,12 @@ GF_nyto_oper_pop ={
 	planet_jobs_produces_mult = -0.5
 }
 #火炮
-GF_nyto_t_weapon = {
-	weapon_type_kinetic_weapon_damage_mult = 0.3
-	weapon_type_kinetic_weapon_fire_rate_mult = 0.3
+GF_nyto_t_weapon1_damage = {
+	weapon_GF_ship_skill_01_weapon_damage_mult =1
+}
+GF_nyto_t_weapon1_ds ={
+	weapon_GF_ship_skill_01_weapon_damage_mult = 1
+	weapon_GF_ship_skill_01_weapon_fire_rate_mult = 1
 }
 #献祭
 GF_nyto_kill_tanhua ={

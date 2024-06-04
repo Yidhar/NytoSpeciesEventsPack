@@ -225,52 +225,52 @@ entity = {
 		entity_1 = error_entity_fire
 	}
 }
-
-entity = {
-	name = testpop_entity
-	scale = 100
-	locator = {
-		name = entity_1
-		position = {
-			0 0 -100
-		}
-		rotation = {
-			0 -90 0
-		}
-	}
-	default_state = idle
-	state = {  name = idle next_state = idle2
-		event = {
-			time = 0 node = "entity_1" particle = testpop_particle keep_particle = yes 
-		}
-	}
-	state = { name = idle2 next_state = idle
-		event = {
-			time = 0 node = "entity_1" particle = testpop_particle keep_particle = yes 
-		}
-	}
-}
-entity = {
-	name = testpop_entity2
-	scale = 100
-	locator = {
-		name = entity_1
-		position = {
-			0 0 -100
-		}
-		rotation = {
-			0 -90 0
-		}
-	}
-	default_state = idle
-	state = {  name = idle looping = yes
-		event = {
-			time = 0 node = "root" particle = testpop_particle keep_particle = yes 
-		}
-	}
-}
-
-#空模型
+#
+#entity = {
+#	name = testpop_entity
+#	scale = 100
+#	locator = {
+#		name = entity_1
+#		position = {
+#			0 0 -100
+#		}
+#		rotation = {
+#			0 -90 0
+#		}
+#	}
+#	default_state = idle
+#	state = {  name = idle next_state = idle2
+#		event = {
+#			time = 0 node = "entity_1" particle = testpop_particle keep_particle = yes
+#		}
+#	}
+#	state = { name = idle2 next_state = idle
+#		event = {
+#			time = 0 node = "entity_1" particle = testpop_particle keep_particle = yes
+#		}
+#	}
+#}
+#entity = {
+#	name = testpop_entity2
+#	scale = 100
+#	locator = {
+#		name = entity_1
+#		position = {
+#			0 0 -100
+#		}
+#		rotation = {
+#			0 -90 0
+#		}
+#	}
+#	default_state = idle
+#	state = {  name = idle looping = yes
+#		event = {
+#			time = 0 node = "root" particle = testpop_particle keep_particle = yes
+#		}
+#	}
+#}
+#
+##空模型
 entity = {
 	name =  GF_null_entity
 }

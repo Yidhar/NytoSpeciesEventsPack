@@ -136,6 +136,7 @@ weapon_component_template = {
 	}
 	ship_modifier = {
 		custom_tooltip = "GF_Nyto_T_weapon1_modif"
+		weapon_GF_ship_skill_01_weapon_damage_mult = 1
 	}
 	hull_damage = 1.7
 	component_set = "GF_Nyto_T_weapon1"
@@ -147,7 +148,6 @@ weapon_component_template = {
 		weapon_role_anti_armor
 		weapon_role_anti_shield
 	}
-	hull_damage = 1.5
 	resources = {
 		category = ship_components
 		cost = {
@@ -160,6 +160,55 @@ weapon_component_template = {
 			energy = 4
 			GF_nyto_new_fire_control_unit = 5
 			GF_nyto_collapse_liquid = 0.5
+		}
+	}
+	ai_weight = {
+		weight = 100
+	}
+	size_damage_factor = 0.5
+}
+#skill
+weapon_component_template = {
+	key = "GF_Nyto_T_weapon101"
+	size = titanic
+	type = instant
+	icon = "GFX_ship_part_T_weapons1"
+	icon_frame = 1
+	damage = {
+		min = 78000
+		max = 228000
+	}
+	windup = {
+		min = 1
+		max = 1
+	}
+	total_fire_time = 10
+	range = 275
+	accuracy = 1
+	firing_arc = 360
+	tracking = 1
+	power = 0	#耗能
+	hidden = yes
+	use_ship_kill_target = yes
+	hull_damage = 1.7
+	#component_set = "GF_Nyto_T_weapon1"
+	projectile_gfx = "nyto_T_weapon_skill_1"
+	tags = {
+		weapon_GF_ship_skill
+	}
+	ai_tags = {
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 200
+			GF_nyto_new_fire_control_unit = 150
+			GF_nyto_collapse_liquid = 300
+		}
+		upkeep = {
+
 		}
 	}
 	ai_weight = {
@@ -254,7 +303,6 @@ weapon_component_template = {
 	prerequisites = {
 		"tech_GF_nyto_Stabiliz"
 	}
-	firing_arc = 15
 	shield_damage = 1.5
 	armor_penetration = 0.75
 	hull_damage = 0.6
@@ -854,6 +902,17 @@ weapon_component_template = {
 	missile_evasion = 0.4
 	missile_retarget_range = 0
 	size_damage_factor = 3.26
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 30
+			GF_nyto_collapse_liquid = 3
+		}
+		upkeep = {
+			alloys = 0.1
+			GF_nyto_collapse_liquid = 0.1
+		}
+	}
 }
 
 

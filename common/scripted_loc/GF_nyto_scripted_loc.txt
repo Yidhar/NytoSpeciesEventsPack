@@ -235,3 +235,38 @@ defined_text = {
 	name = Epiphyllum_flower_period
 	value = value:Epiphyllum_flower_period
 }
+
+#宇宙创生文本替换
+defined_text = {
+	name = GF_nyto_Crisis_7516_desc
+	text = {
+		trigger = {
+			has_authority = auth_GF_paradeus
+			event_target:cosmo_ending_system={
+				OR = {
+					has_star_flag = horizonsignal_system
+					has_star_flag = worm_black_hole
+				}
+			}
+		}
+		localization_key = GF_nyto_Crisis.7516.desc.paradeus
+	}
+	default = GF_nyto_crisis.7516.desc.paperclips
+}
+
+defined_text ={
+	name = GF_nyto_Crisis_7516_opt
+	text = {
+		trigger = {
+			has_authority = auth_GF_paradeus
+			event_target:cosmo_ending_system={
+				OR = {
+					has_star_flag = horizonsignal_system
+					has_star_flag = worm_black_hole
+				}
+			}
+		}
+		localization_key = GF_nyto_crisis.7516.paradeus
+	}
+	default = GF_nyto_crisis.7516.a
+}

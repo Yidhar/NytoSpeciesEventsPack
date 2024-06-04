@@ -141,8 +141,12 @@ GF_nyto_drp_modifer ={
 		trigger_scope = planet
 		trigger =has_planetary_ascension_tier
 		mode = add
-		mult = 0.1
+		mult = $planet_tier|10$
+		potential ={
+			has_planetary_ascension_tier > 0
+		}
 	}
+
 	#divide = 3
 }
 
@@ -419,4 +423,37 @@ GF_Nyto_T_weapon2_pow = {
 	pow = 2
 	min = 1
 	max = 200
+}
+
+#巨构
+GF_nyto_meaga_pr_lv= {
+	base = 1
+	complex_trigger_modifier = {
+		trigger = count_megastructure
+		trigger_scope =contact_country
+		parameters = {
+			limit = {
+				solar_system ={
+					not = {
+						is_same_value = root.solar_system
+					}
+				}
+				is_megastructure_type = GFnyto_megastructure_collapse_reactor_restored
+			}
+		}
+		mode = add
+		mult = 0.3
+	}
+	complex_trigger_modifier = {
+		trigger = count_system_megastructure
+		trigger_scope = solar_system
+		parameters = {
+			limit = {
+				not = { is_same_value = root }
+				is_megastructure_type = GFnyto_megastructure_collapse_reactor_restored
+			}
+		}
+		mode = add
+		mult = 5
+	}
 }

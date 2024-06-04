@@ -1,0 +1,69 @@
+particle=
+{
+    name="GF_nyto_T102_weapon_file"
+    subsystem=
+    {
+        name="Force"
+        max_amount=10000
+        slave_particles=0
+        sort="age"
+        emitter_type="point"
+        invert=no
+        trail=no
+        spritesheet_animation=yes
+        spritesheet_animation_loop=1.000000
+        local_space=yes
+        billboard=yes
+        hide=no
+        texture=
+        {
+            file="gfx/particles/waepons_skill_102.dds"
+            x=3
+            y=3
+            shader="ParticleAlphaBlend"
+        }
+        color=
+        {
+            alpha=255
+        }
+        position=
+        {
+        }
+        life=2
+        emission=100
+        size=10
+        force=0
+    }
+    animation=
+    {
+        name="x_ani"
+        start=0
+        duration=1
+        repeat=no
+        minValue=0
+        maxValue=255
+        curve=
+        {
+            0 0 0.13235 0.95313 0.17941 0.08594 0.28235 0.91406 0.37941 0.0625 0.47353 0.92969 0.54412 0.03125 0.7 0.89844 0.9 0.14063 1 1
+        }
+        op="ADD"
+        time="system"
+    }
+    force=
+    {
+        type="planar"
+        name="force0"
+        position=
+        {
+            0 0 0
+        }
+        direction=
+        {
+            0 1 0
+        }
+        local_force=yes
+        yaw=0
+        division=16
+        amount=5
+    }
+}

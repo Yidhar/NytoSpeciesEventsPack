@@ -186,8 +186,8 @@ GF_Nyto_X_Track_DESC:0 "口径即是正义,真理只在射程之中"
 ##############NEW#######################
 #T 
 GF_Nyto_T_weapon1:0 "厌世者"
-GF_Nyto_T_weapon1_DESC:0 "§R眷恋:§!§Y交战时舰队中每损失一条舰船获得10%动能武器伤害和射速加成§!"
-GF_Nyto_T_weapon1_modif:0 "§R眷恋:§!§Y交战时舰队中每损失一条舰船获得10%动能武器伤害和射速加成§!"
+GF_Nyto_T_weapon1_DESC:0 "§R毁灭:§!§Y每天有15%的概率造成一次10倍伤害的特殊打击§!"
+GF_Nyto_T_weapon1_modif:0 "§R毁灭:§!§Y每天有15%的概率造成一次10倍伤害的特殊打击§!"
 #T 终末辉光
 GF_Nyto_T_weapon2:0 "终末辉光"
 weapon_type_prism:0 "§R终末§!"

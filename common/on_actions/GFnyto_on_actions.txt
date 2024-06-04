@@ -84,7 +84,6 @@ on_ship_destroyed_perp = {
 	events = {
 		GFnytocrisis.4#摧毁舰船
 		gf_nyto_weapons.1
-		gf_nyto_weapons.10001
 	}
 }
 #on_planet_attackers_win = {

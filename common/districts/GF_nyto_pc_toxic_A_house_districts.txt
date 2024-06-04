@@ -495,16 +495,7 @@ district_GF_nyto_pc_toxic_science = {
 				}
 			}
 			GF_nyto_training_key = 2
-			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_algorithm|districts|district_GF_nyto_pc_toxic_science|jobsup|0.18|
-		}
-		produces = {
-			trigger = {
-				planet = {
-					colony_type = col_GF_nyto_pc_toxic_energy_plural
-				}
-			}
-			GF_nyto_training_key = 1.5
-			mult = planet.trigger:has_planetary_ascension_tier
+			multiplier = value:GF_nyto_drp_modifer|JOB|GFnyto_algorithm|districts|district_GF_nyto_pc_toxic_science|jobsup|0.18|planet_tier|17.5|
 		}
 		#高精
 		upkeep = {

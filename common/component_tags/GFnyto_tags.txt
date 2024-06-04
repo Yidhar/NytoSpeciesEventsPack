@@ -14,3 +14,4 @@ weapon_type_Electronic
 weapon_type_beacon
 weapon_type_aoe
 weapon_type_fireworks
+weapon_GF_ship_skill_01

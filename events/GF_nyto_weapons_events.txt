@@ -40,40 +40,16 @@ country_event = {
 	}
 }
 
-#浴血
-country_event = {
-	id = gf_nyto_weapons.10001
-	hide_window = yes
-	trigger = {
-		fromfromfrom.fleet= {
-			has_fleet_flag = GF_Nyto_T_weapon1_flag
-		}
-	}
-	is_triggered_only = yes
-	immediate = {
-		fromfromfrom.fleet = {
-			change_variable = {
-				which = GF_nyto_t_weapon_dsnm
-				value = 1
-			}
-			remove_modifier = GF_nyto_t_weapon
-			add_modifier = {
-				modifier = GF_nyto_t_weapon
-				multiplier = GF_nyto_t_weapon_dsnm
-			}
-		}
-	}
-}
 
-###############克莱因
-fleet_event = {
-	id = gf_nyto_weapons.11
-	is_triggered_only = yes
-	hide_window = yes
-	immediate = {
-		
-	}
-}
+################克莱因
+#fleet_event = {
+#	id = gf_nyto_weapons.11
+#	is_triggered_only = yes
+#	hide_window = yes
+#	immediate = {
+#
+#	}
+#}
 
 fleet_event = {
 	id = gf_nyto_weapons.8001
@@ -278,6 +254,22 @@ fleet_event = {
 						add_modifier = { modifier = GF_nyto_shield_ship_regen multiplier = prev.GF_shield_regen_mult days = 2 }
 					}
 				}#立场支援舰
+				if = {
+					limit = {
+						has_ship_flag = GF_Nyto_T_weapon1_flag
+					}
+					random_list = {
+						15 ={
+							ship_event = {
+								id = gf_nyto_weapons.2
+							}
+						}
+						85 ={
+
+						}
+					}
+
+				}
 				# if = {
 				# 	limit = {
 				# 		has_ship_flag = is_Command_ship
@@ -359,4 +351,62 @@ fleet_event = {
 			set_update_modifiers_batch = end
 		}	
 	}
+}
+
+
+ship_event = {
+	id = gf_nyto_weapons.2
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		fleet={
+			create_ship = {
+				design = GF_nyto_skill_ship
+				effect = {
+					set_name = "GF_nyto_skill_ship_object"
+					ship_event = {
+						id = gf_nyto_weapons.2002
+						days = 1
+					}
+					add_modifier = {
+						modifier = GF_nyto_t_weapon1_damage
+						mult = modifier:weapon_type_kinetic_weapon_damage_mult
+						days = -1
+					}
+					add_modifier = {
+						modifier = GF_nyto_t_weapon1_ds
+						mult = GF_Nyto_T_weapon1_num
+						days = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = gf_nyto_weapons.2002
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		exists = this
+	}
+	immediate = {
+		destroy_ship = this
+	}
+}
+
+system_event = {
+	id = gf_nyto_weapons
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		count_system_megastructure = {
+			limit = {
+				is_megastructure_type = GFnyto_megastructure_collapse_reactor_restored
+			}
+			count > 1
+		}
+	}
+	immediate = {  }
 }

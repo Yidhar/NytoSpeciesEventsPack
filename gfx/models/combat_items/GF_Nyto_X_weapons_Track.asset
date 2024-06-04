@@ -64,6 +64,17 @@ entity = {
 }
 
 entity = {
+	name = "GF_nyto_T_weapon_skill_1"
+	cull_radius = 1
+
+	state = { name = "explode_med_hp" state_time = 0 looping = no
+		event = { time = 0.0 particle = "GF_nyto_T101_weapon_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
 	name = "GF_nyto_T_weapon_shield_hit_entity"
 	cull_radius = 1
 	

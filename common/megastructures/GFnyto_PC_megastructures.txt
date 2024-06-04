@@ -30,25 +30,25 @@ GFnyto_megastructure_collapse_reactor_ruined = {
 				}
 			}
 		}
-		custom_tooltip = {
-			fail_text = "requires_no_binary_trinary"
-			NOR = {
-				is_star_class = sc_binary_1
-				is_star_class = sc_binary_2
-				is_star_class = sc_binary_3
-				is_star_class = sc_binary_4
-				is_star_class = sc_binary_5
-				is_star_class = sc_binary_6
-				is_star_class = sc_binary_7
-				is_star_class = sc_binary_8
-				is_star_class = sc_binary_9
-				is_star_class = sc_binary_10
-				is_star_class = sc_trinary_1
-				is_star_class = sc_trinary_2
-				is_star_class = sc_trinary_3
-				is_star_class = sc_trinary_4
-			}
-		}
+		#custom_tooltip = {
+		#	fail_text = "requires_no_binary_trinary"
+		#	NOR = {
+		#		is_star_class = sc_binary_1
+		#		is_star_class = sc_binary_2
+		#		is_star_class = sc_binary_3
+		#		is_star_class = sc_binary_4
+		#		is_star_class = sc_binary_5
+		#		is_star_class = sc_binary_6
+		#		is_star_class = sc_binary_7
+		#		is_star_class = sc_binary_8
+		#		is_star_class = sc_binary_9
+		#		is_star_class = sc_binary_10
+		#		is_star_class = sc_trinary_1
+		#		is_star_class = sc_trinary_2
+		#		is_star_class = sc_trinary_3
+		#		is_star_class = sc_trinary_4
+		#	}
+		#}
 		solar_system = {
 			custom_tooltip = {
 				fail_text = "requires_no_black_hole_or_dyson_sphere"
@@ -96,13 +96,35 @@ GFnyto_megastructure_collapse_reactor_restored = {
 			alloys = 10000
 		}
 		produces = {
+			GF_nyto_collapse_liquid = 2000
+			physics_research = 1000
+			society_research = 1000
+			engineering_research = 1000
+
+		}
+		produces = {
+			trigger = {
+				owner ={
+					has_technology = tech_template_GF_nyto_universalism
+				}
+			}
 			GF_nyto_collapse_liquid = 4000
 			physics_research = 1000
 			society_research = 1000
 			engineering_research = 1000
+			multiplier = value:GF_nyto_meaga_pr_lv
 		}
 		upkeep = {
 			energy = 1000
+		}
+		upkeep ={
+			trigger = {
+				owner ={
+					has_technology = tech_template_GF_nyto_universalism
+				}
+			}
+			energy = 1500
+			multiplier = value:GF_nyto_meaga_pr_lv
 		}
 	}
 	upgrade_from = {
@@ -114,9 +136,13 @@ GFnyto_megastructure_collapse_reactor_restored = {
 			has_technology = tech_GF_nyto_collapse_stability_2
 		}
 	}
+	country_modifier = {
+		country_resource_max_add = 500000
+	}
 	on_build_complete = {
 		fromfrom.planet = {
 			set_planet_size = 12
+			change_pc = pc_black_hole
 		}
 		solar_system = {
 			set_star_class = sc_black_hole

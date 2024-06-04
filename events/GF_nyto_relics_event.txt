@@ -574,6 +574,7 @@ country_event = {
 		name = gfnytoparadeusancrel.410.a
 		hidden_effect ={
 			set_country_flag = has_nyto_technology
+			add_tech_progress = { tech = tech_GF_nyto_storage_of_ancient_technology progress = 0.1 }
 			country_event = {
 				id = gfnytoparadeusancrel.411
 				days = 15

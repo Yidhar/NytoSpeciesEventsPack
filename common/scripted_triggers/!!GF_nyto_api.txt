@@ -23,4 +23,10 @@ is_cg_country ={
     }
 }
 
+GF_allow_doll_leaders_military = {
+    OR = {
+        has_policy_flag = GF_doll_right_full
+        has_policy_flag = GF_doll_right_limited
+    }
+}
 

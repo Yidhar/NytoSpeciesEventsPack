@@ -29,6 +29,7 @@ country_event = {
 		}
 	}
 	immediate = {
+
 		set_country_flag = no_machine_uprising
 		set_country_flag = synth_detector
 		if = {
@@ -234,12 +235,12 @@ country_event = {
 					}
 				}
 				while = {
-					count = 2
+					count = 1
 					create_army = {
-						name = "装甲列车"
+						name = "要塞枢纽"
 						owner = root
 						species = root
-						type = GF_nyto_armor_train
+						type = GF_nyto_yaosai
 						land_army = yes
 					}
 				}
