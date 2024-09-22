@@ -189,7 +189,7 @@ GF_Nyto_T_weapon1_DESC:0 ""
 #T 终末辉光
 GF_Nyto_T_weapon2:0 "Terminal Radiance"
 weapon_type_prism:0 "§RTerminate§!"
-GF_Nyto_T_weapon2_DESC:0 "§RTernimalのRadiance：§!§YEvery time it fires, gain damage multiplier bonus to the exponent of the number of fires§!Maximum of 200 times"
+GF_Nyto_T_weapon2_DESC:0 "§RTernimalのRadiance：§!§YEvery time it fires, gain damage multiplier bonus to the exponent of the number of fires§!Maximum of 200 times\nMeanwhile, this weapon also increases the £energy£$energy$ and £GF_nyto_collapse_liquid£$GF_nyto_collapse_liquid$ maintenance cost of §I0.1 * Number of Fires Squared§!"
 GF_Nyto_T_weapon2_modif:0 "$GF_Nyto_T_weapon2_DESC$"
 mod_weapon_type_prism_weapon_damage_mult:"$weapon_type_prism$"
 	#厄琉息斯秘仪 X

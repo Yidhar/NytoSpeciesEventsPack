@@ -415,6 +415,9 @@ weapon_component_template = {
 	}
 	shield_damage = 0.5
 	armor_damage = 1.6
+	modifier = {
+		custom_tooltip = GF_Nyto_l_weapon1_modif
+	}
 	component_set = "GF_Nyto_l_weapon1"
 	projectile_gfx = "GFnyto_auto_cannons_L"
 	tags = {
@@ -1091,6 +1094,9 @@ weapon_component_template = {
 	tracking = 0.2
 	hull_damage = 1.2
 	armor_damage = 0.7
+	modifier = {
+		custom_tooltip = GF_Nyto_p_weapon1_modif
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -1153,6 +1159,9 @@ weapon_component_template = {
 	tracking = 0.4
 	shield_damage = 1
 	armor_damage = 0.7
+	modifier = {
+		custom_tooltip = GF_Nyto_p_weapon2_modif
+	}
 	resources = {
 		category = ship_components
 		cost = {
