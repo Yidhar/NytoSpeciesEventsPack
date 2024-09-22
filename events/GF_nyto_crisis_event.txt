@@ -439,88 +439,119 @@ event = {
 
 #战争寻路
 #状态机  寻路中 已找到目标 移动中 无法移动到目标 轨道轰炸中
-fleet_event ={
-	id = GFnytocrisis.777
+
+fleet_event = {
+	id = GFnytocrisis.700
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
 		exists = this
+		owner =xxx
 	}
 	immediate = {
 		queue_actions = {
 			repeat = {
 				effect = {
-					id =  GF_nyto_crisi_fleet.jump
+					id = GF_nyto_crisis_country_1_defult_fleet.effect
 					if = {
+						limit = { count_system = {
+							limit = { check_variable = { which = GF_nyto_crisis_country_1_fleet_id value > 0 } }
+							count = all
+						} }
+						#初始化权重
+						every_system = {
+							clear_variable = GF_nyto_crisis_country_1_fleet_id
+						}
+					}
+					if = {
+						#无路径可用时跃迁
 						limit = {
-							count_system = {
-								limit = {
-									check_variable = { which = GF_nyto_crisis_need_fleet_num value < 0 }
-									not = { has_star_flag = GF_nyto_crisis_need_fleet@root.owner } }
-								count = all
+							has_fleet_flag = GF_nyto_crisis_fleet_find_path
+							any_system = {
+								or = {
+									AND = { exists = starbase starbase= { owner ={ is_hostile = root.owner }  } }
+									any_system_planet = { owner ={ is_hostile = root.owner}  }
+									any_fleet_in_system = { owner = { is_hostile = root.owner }  is_disabled = no }
+								}
 							}
 						}
-						every_system = {
-							set_variable = { which = GF_nyto_crisis_need_fleet_num value = 1 }
-							set_star_flag = GF_nyto_crisis_need_fleet@root.owner
-						}
-					} #无任何目标时 初始话地图权重
-					if = {
-						limit = { has_fleet_flag = GF_nyto_crisis_find_path  }
 						random_system = {
 							limit = {
-								check_variable = { which = GF_nyto_crisis_fleet_id value > 0 }
 								or = {
-									any_system_planet = { or = { is_colony = yes is_colonizable = yes } owner= { is_hostile = root.owner} }
-									any_fleet_in_system = {
-										exists = owner
-										owner = { is_hostile = root.owner }
+									AND = { exists = starbase starbase = { owner = { is_hostile = root.owner } } }
+									any_system_planet = { owner = { is_hostile = root.owner } }
+									any_fleet_in_system = { owner = { is_hostile = root.owner }  is_disabled = no }
+								}
+							}
+							if = {
+								limit = {
+									or = {
+										AND = { exists = starbase starbase = { owner = { is_hostile = root.owner } } }
+										any_system_planet = { owner = { is_hostile = root.owner } }
+									}
+								}
+								root ={
+									set_location = {
+										target = prev
+										direction = out_system
+										distance = 3
+										angle = random
 									}
 								}
 							}
-							closest_system = {
-								min_steps = 1
-								system_star = {
-									root ={
-										set_location = {
-											target = prev
-											distance = 5
-											angle = random
-										}
+							else_if = {
+								limit = {
+									any_fleet_in_system = {
+										owner = { is_hostile = root.owner }
+										is_disabled = no
+										is_ship_class != shipclass_starbase
+									}
+								}
+								root ={
+									set_location = {
+										target = prev
+										distance = 50
+										angle = random
 									}
 								}
 							}
 						}
-						set_timed_fleet_flag = { flag = GF_nyto_crisis_fleet_jump_cooldown days = 90 }
-						remove_fleet_flag = GF_nyto_crisis_find_path
-					} #当存在目标时每90进行一次折跃到附件星系
+					}
+					else_if = {
+						#停止
+						limit = {
+							not = {
+								any_system = {
+									or = {
+										AND = { exists = starbase starbase= { owner ={ is_hostile = root.owner }  } }
+										any_system_planet = { owner ={ is_hostile = root.owner}  }
+										any_fleet_in_system = { owner = { is_hostile = root.owner }  is_disabled = no }
+									}
+								}
+							}
+						}
+						clear_orders = yes
+						clear_fleet_actions = this
+					}
 				}
 				find_closest_system = {
 					trigger = {
-						id = GF_nyto_crisis_fleet.find1
-						or = {
-							any_fleet_in_system = { exists = owner owner = { is_hostile = root.owner } }
-							any_system_planet = {
-								or = { is_colony = yes	is_colonizable = yes  }
-								not = { any_fleet_in_orbit = { exists = controller is_ship_class = shipclass_military controller ={ is_same_value = root.owner } }
-								}
-							}
-						}
-						distance = { source = root type = hyperlane max_jumps = 10 }
-						root = { can_access_system = prev }
-						check_variable = { which = GF_nyto_crisis_need_fleet_num  value > 0 }
-						has_star_flag = GF_nyto_crisis_need_fleet@root.owner
+						id =GF_nyto_crisis_country_1_fleet.find_find_player_colony
+						any_system_planet = { owner = { AND = { is_ai = no is_hostile = root.owner } } }
+						ROOT = { can_access_system = prev }
+						check_variable = {  which = GF_nyto_crisis_country_1_fleet_id value < 1}
 					}
 					found_system = {
-						effect = {
-							id = GF_nyto_crisis_fleet.movin1
-							set_variable = { which = GF_nyto_crisis_fleet_id value = root.fleet_id }
-						}
-					}
+						#先打军工
 
+						#再打民生
+						#最后摧毁遗迹星系
+					}
 				}
 			}
-
 		}
 	}
 }
+#随机寻路系统
+
+#军方势力特殊单位  在固定星系部署火炮  将对周围星系添加flag  任何在该星系交战的舰队都会额外被火炮打击

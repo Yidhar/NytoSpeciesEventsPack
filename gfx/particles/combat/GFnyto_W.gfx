@@ -22,9 +22,9 @@ objectTypes={
 		scale = 0.5
 	}
 	pdxparticle = {
-		name = "GF_nyto_T102_weapon_hit_effect"
-		type = "GF_nyto_T102_weapon_file"
-		scale = 0.2
+		name = "GF_nyto_Elius_weapon_hit_effect"
+		type = "GF_nyto_Elius_weapon_hit"
+		scale = 5
 	}
 
 	pdxparticle = {

@@ -270,3 +270,33 @@ defined_text ={
 	}
 	default = GF_nyto_crisis.7516.a
 }
+
+defined_text = {
+	name = GF_nyto_the_four_seasons
+	text = {
+		trigger = {
+			is_spring = yes
+		}
+		localization_key = "spring"
+	}
+	text = {
+		trigger = {
+			is_summer = yes
+		}
+		localization_key = "summer"
+	}
+	text = {
+		trigger = {
+			is_autumn = yes
+		}
+		localization_key = "autumn"
+	}
+	text = {
+		trigger = {
+			is_winter = yes
+		}
+		localization_key = "winter"
+	}
+	default = GF_nyto_the_four_seasons_titl
+
+}

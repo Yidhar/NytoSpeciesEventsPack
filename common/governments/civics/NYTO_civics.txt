@@ -170,7 +170,7 @@ civic_GF_nyoto_armor_train={
 	random_weight = {
 		base = 5
 	}
-	modification = no
+	modification = yes
 }
 
 #昙花共生

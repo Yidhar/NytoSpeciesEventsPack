@@ -258,9 +258,8 @@ GF_nyto_oper_pop ={
 GF_nyto_t_weapon1_damage = {
 	weapon_GF_ship_skill_01_weapon_damage_mult =1
 }
-GF_nyto_t_weapon1_ds ={
-	weapon_GF_ship_skill_01_weapon_damage_mult = 1
-	weapon_GF_ship_skill_01_weapon_fire_rate_mult = 1
+GF_nyto_ship_damage ={
+	ship_weapon_damage = 1
 }
 #献祭
 GF_nyto_kill_tanhua ={
@@ -278,8 +277,8 @@ GF_nyto_Electronic_pwlv_up ={
 	weapon_type_Electronic_weapon_damage_mult = 0.1
 	ship_shield_damage_mult = 0.005
 	ship_armor_damage_mult = 0.005
-	ship_accuracy_mult = 0.05
-	ship_evasion_mult = 0.05
+	ship_accuracy_mult = 0.1
+	ship_evasion_mult = 0.1
 }
 #电子战负面buff
 GF_nyto_Electronic_pwlv_dwn ={
@@ -311,4 +310,25 @@ GF_nyto_crisis_default_country_buff ={
 }
 GF_nyto_crisis_ship_upkeep ={
 	ships_upkeep_mult = -1000
+}
+GF_nyto_elius_modifier_spring={
+	ship_hull_regen_add_static = 1000
+	s_slot_weapon_damage_mult = 1.5
+	m_slot_weapon_damage_mult = 1.2
+	t_slot_weapon_damage_mult = -0.5
+}
+GF_nyto_elius_modifier_summer ={
+	weapon_type_Elius_weapon_damage_mult = 1.75
+	ships_upkeep_mult = 0.5
+}
+GF_nyto_elius_modifier_autumn ={
+	ship_shield_damage_mult = 0.4
+	ship_armor_damage_mult = 0.4
+	ship_fire_rate_mult = -0.2
+	ship_shield_mult = -0.075
+}
+GF_nyto_elius_modifier_winter ={
+	ship_shield_add = 100000
+	ship_shield_mult = -0.4
+	ship_speed_mult = -0.2
 }

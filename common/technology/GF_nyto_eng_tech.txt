@@ -236,3 +236,7 @@ tech_template_GF_nyto_universalism ={
 		custom_tooltip ="tech_template_GF_nyto_universalism_titl"
 	}
 }
+
+# 堡垒强度
+
+#堡垒附属粒子炮

@@ -375,20 +375,49 @@ GF_nyto_planet_size_cleanse ={
 		trigger = planet_size
 		mode = add
 	}
-	modifier = {
-		check_variable = {
-			which = 30
-			value <= value:GFnyto_plante_wrlv_contaminate
-		}
-		mult = value:GF_nyto_planet_size_cleanse_down
-	}
+	mult = value:GF_nyto_planet_size_cleanse_down
 }
 
 GF_nyto_planet_size_cleanse_down ={
 	base = 0
 	add = planet.GFnyto_plante_wrlv
-	subtract = -100
-	mult = -0.015
+	mult = 0.01
+	modifier = {
+		is_planet_class = pc_gaia
+		mult = 2
+	}
+	modifier = {
+		check_variable_arithmetic = {
+			which = 0
+			add = value:GFnyto_plante_wrlv_contaminate
+			value > 30
+		}
+		mult = 0.9
+	}
+	modifier = {
+		check_variable_arithmetic = {
+			which = 0
+			add = value:GFnyto_plante_wrlv_contaminate
+			value > 50
+		}
+		mult = 0.5
+	}
+	modifier = {
+		check_variable_arithmetic = {
+			which = 0
+			add = value:GFnyto_plante_wrlv_contaminate
+			value > 75
+		}
+		mult = 0.1
+	}
+	modifier = {
+		check_variable_arithmetic = {
+			which = 0
+			add = value:GFnyto_plante_wrlv_contaminate
+			value > 80
+		}
+		mult = -0.9
+	}
 }
 
 #花期
@@ -406,23 +435,17 @@ Epiphyllum_flower_period ={
 #终末辉光倍率
 GF_Nyto_T_weapon2_pow = {
 	base = 0
+	add = GF_nyto_t_fire_num
+	pow = 2
 	complex_trigger_modifier = {
 		trigger = check_modifier_value
 		parameters = {
 			modifier = weapon_type_energy_weapon_damage_mult
 		}
-		mode = add
+		mode = mult
 	}
-	complex_trigger_modifier = {
-		trigger = check_modifier_value
-		parameters = {
-			modifier = weapon_type_prism_weapon_damage_mult
-		}
-		mode = add
-	}
-	pow = 2
 	min = 1
-	max = 200
+	max = 10000000
 }
 
 #巨构
@@ -446,7 +469,7 @@ GF_nyto_meaga_pr_lv= {
 	}
 	complex_trigger_modifier = {
 		trigger = count_system_megastructure
-		trigger_scope = solar_system
+		#trigger_scope = solar_system
 		parameters = {
 			limit = {
 				not = { is_same_value = root }
@@ -455,5 +478,19 @@ GF_nyto_meaga_pr_lv= {
 		}
 		mode = add
 		mult = 5
+	}
+}
+
+#月时计
+GF_nyto_get_game_time_month ={
+	base = 0
+	add = trigger:days_passed
+	divide = 30
+	floor = yes
+	modulo = 12
+	add = 1
+	complex_trigger_modifier = {
+		trigger = has_tradition
+		mode = add
 	}
 }

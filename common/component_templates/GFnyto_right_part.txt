@@ -656,6 +656,7 @@ utility_component_template = {
 	}
 	size_restriction = {
 		titan
+
 	}
 	ship_behavior = "GFnyto_ship_behaviors5"
 	prerequisites = {
@@ -789,7 +790,7 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			
+
 			alloys = 30
 			GF_nyto_new_fire_control_unit = 20
 			GF_nyto_collapse_liquid = 200
@@ -1195,6 +1196,9 @@ utility_component_template = {
 	power = -3000
 	component_set = ship_aura_components
 	size_restriction = { GFnyto_Command_ship }
+	ship_modifier = {
+		custom_tooltip = "GF_SHIP_AURA_Trap_SHIP_AURA_desc"
+	}
 	ftl_magnet = yes
 	ftl_inhibitor = yes
 }

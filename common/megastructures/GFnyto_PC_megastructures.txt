@@ -1,6 +1,8 @@
 #恒星坍塌器基址
 GFnyto_megastructure_collapse_reactor_ruined = {
 	entity = "construction_platform_entity"
+	place_entity_on_planet_plane = no
+	construction_blocks_and_blocked_by = self_type
 	entity_offset = { x = -7 y = -7 }
 	construction_entity = "construction_platform_entity"
 	build_time = 1800
@@ -78,6 +80,7 @@ GFnyto_megastructure_collapse_reactor_ruined = {
 	potential = {
 		has_technology = tech_GFnyto_star_tasuo
 	}
+
 	show_prereqs = yes
 	prerequisites = {
 		"tech_GFnyto_star_tasuo"
@@ -284,10 +287,58 @@ GFnyto_stions_fortress_base ={
 				create_ship = {
 					name = "永恒要塞"
 					random_existing_design = GFnyto_stions_fortress
+					effect = {
+						if = {
+							limit = {
+								prevprev.from ={
+									has_civic = civic_GF_nyoto_armor_train
+								}
+							}
+							set_ship_flag = GF_nyto_stions_fortres_super
+							change_variable = {
+								which = GF_nyto_stions_fortes_has_hp
+								value = 10
+							}
+							set_disable_at_health = 0.1
+						}
+					}
+				}
+				while = {
+					count = 10
+					create_ship = {
+						name = random
+						random_existing_design = ion_cannon
+						effect = {
+							if = {
+								limit = {
+									prevprev.from ={
+										has_civic = civic_GF_nyoto_armor_train
+									}
+								}
+								set_ship_flag = GF_nyto_stions_fortres_super
+								set_disable_at_health = 0.1
+							}
+						}
+					}
 				}
 			}
 		}
 		delete_megastructure = fromfrom
+	}
+	on_build_queued = {
+		if = {
+			limit = {
+				from ={
+					has_civic = civic_GF_nyoto_armor_train
+				}
+			}
+			fromfrom ={
+				add_modifier = {
+					modifier = GF_nyto_mega_spped
+					days = -1
+				}
+			}
+		}
 	}
 }
 
@@ -362,6 +413,7 @@ GFnyto_habitat_01 ={
 	entity = "construction_platform_entity"
 	construction_entity = "construction_platform_entity"
 	show_galactic_map_icon = no
+	show_in_outliner =no
 	entity_offset = { x = -7 y = -7 }
 	potential = {
 		owner = {
@@ -449,6 +501,7 @@ GFnyto_habitat_01 ={
 
 GFnyto_habitat_02 ={
 	entity = ""
+	show_in_outliner = no
 	show_galactic_map_icon = yes
 	construction_entity = "habitat_phase_01_entity"
 	portrait = "GFX_GFnyto_megastructure_habitat"

@@ -15,10 +15,10 @@ triggered_GFnyto_disaster = {
 	}
 	opinion = {base = -1000}
 }
-triggered_GFnyto_disaster2 = {
-	trigger = {
-		has_origin = origin_GF_nyto_the_beginning_of_exile
-		FROM = { has_authority = auth_GF_paradeus}
-	}
-	opinion = {base = -1000}
-}
+#triggered_GFnyto_disaster2 = {
+#	trigger = {
+#		has_origin = origin_GF_nyto_the_beginning_of_exile
+#		FROM = { has_authority = auth_GF_paradeus}
+#	}
+#	opinion = {base = -1000}
+#}

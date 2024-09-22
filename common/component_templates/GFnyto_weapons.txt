@@ -18,29 +18,29 @@ strike_craft_component_template = {
 	ai_tags = {
 		weapon_role_point_defense
 	}
-	count = 3	#舰载机初始数量
-	regeneration_per_day = 1	#每天生产的舰载机数量
+	count = 1	#舰载机初始数量
+	regeneration_per_day = 7	#每天生产的舰载机数量
 	launch_time = 3	#装填时间
 	damage = {
 		min = 50
-		max = 50
+		max = 200
 	}
 	#伤害
-	cooldown = 1.5	#冷却
-	range = 230	#射程,指舰载机的本身射程
+	cooldown = 10	#冷却
+	range = 500	#射程,指舰载机的本身射程
 	engagement_range = 400
 	accuracy = 1
 	health = 75	#舰载机本身的结构血量
 	armor = 75	#装甲
 	shield = 20	#护盾
 	tracking = 1
-	speed = 1000	#舰载机速度
+	speed = 10	#舰载机速度
 	rotation_speed = 0.1	#转弯速度
 	acceleration = 1	#加速度
 	evasion = 0	#闪避
 	armor_damage = 1
 	shield_damage = 1
-	ship_behavior = "bombers_behavior"	#舰载机的作战 AI
+	ship_behavior = "GFnyto_ship_behaviors3"	#舰载机的作战 AI//
 	power = -50
 	resources = {
 		category = ship_components
@@ -179,8 +179,8 @@ weapon_component_template = {
 		max = 228000
 	}
 	windup = {
-		min = 1
-		max = 1
+		min = 0
+		max = 0
 	}
 	total_fire_time = 10
 	range = 275
@@ -190,26 +190,16 @@ weapon_component_template = {
 	power = 0	#耗能
 	hidden = yes
 	use_ship_kill_target = yes
+	prio_projectile = yes
 	hull_damage = 1.7
 	#component_set = "GF_Nyto_T_weapon1"
 	projectile_gfx = "nyto_T_weapon_skill_1"
 	tags = {
-		weapon_GF_ship_skill
+		weapon_GF_ship_skill_01
 	}
 	ai_tags = {
-		weapon_role_anti_armor
-		weapon_role_anti_shield
-	}
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = 200
-			GF_nyto_new_fire_control_unit = 150
-			GF_nyto_collapse_liquid = 300
-		}
-		upkeep = {
-
-		}
+		weapon_role_artillery
+		artillery
 	}
 	ai_weight = {
 		weight = 100
@@ -232,6 +222,7 @@ weapon_component_template = {
 		min = 0
 		max = 0
 	}
+	use_ship_kill_target = yes
 	total_fire_time = 50
 	range = 300
 	accuracy = 0.8
@@ -270,8 +261,9 @@ weapon_component_template = {
 			GF_nyto_collapse_liquid = 3
 		}
 		upkeep = {
-			energy = 1
-			multiplier = GF_nyto_t_damage
+			energy = 0.1
+			GF_nyto_collapse_liquid = 0.1
+			multiplier = value:GF_Nyto_T_weapon2_pow
 		}
 	}
 	ai_weight = {
@@ -303,14 +295,19 @@ weapon_component_template = {
 	prerequisites = {
 		"tech_GF_nyto_Stabiliz"
 	}
+	ship_modifier = {
+		custom_tooltip = "GF_Nyto_x_weapon1_modif"
+		weapon_type_Elius_nums_weapon_damage_mult = 1
+	}
 	shield_damage = 1.5
 	armor_penetration = 0.75
 	hull_damage = 0.6
 	component_set = "GF_Nyto_x_weapon1"
-	projectile_gfx = "GF_nyto_x_laser"	#remake 能量束
+	projectile_gfx = "GF_nyto_Elius_weapon_gfx"	#remake 能量束
 	tags = {
 		weapon_type_energy
 		weapon_type_explosive
+		weapon_type_Elius
 		x_slot
 	}
 	ai_tags = {
@@ -359,6 +356,7 @@ weapon_component_template = {
 	prerequisites = {
 		"tech_GF_nyto_x"
 	}
+	prio_projectile = yes
 	armor_damage = 0.75
 	ship_modifier = {
 		custom_tooltip = "GF_Nyto_x_weapon2_modif"
@@ -877,6 +875,7 @@ weapon_component_template = {
 		tech_GFnyto_tansuo2
 	}
 	component_set = "GF_nyto_fool_weapon"
+	projectile_gfx = GF_nyto_Elius_weapon_gfx
 	tags = {
 		weapon_type_explosive
 		g_slot
@@ -885,32 +884,36 @@ weapon_component_template = {
 		weapon_role_anti_hull
 	}
 	damage = {
-		min = 18
-		max = 40
+		min = 180
+		max = 400
 	}
 	windup = {
 		min = 0
 		max = 0
 	}
-	total_fire_time = 10
-	min_range = 5
+	total_fire_time = 320
+	min_range = 0
 	range = 20
-	missile_speed = 20
+	missile_speed = 38
 	missile_armor = 120
 	missile_health = 69
 	missile_shield = 20
 	missile_evasion = 0.4
-	missile_retarget_range = 0
-	size_damage_factor = 3.26
+	missile_retarget_range = 300
+	hull_damage = 1.63
+	accuracy = 10
+	tracking = 10
+	size_damage_factor = 15.13
+	#size_damage_factor = 9999999999
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 30
+			alloys = 50
 			GF_nyto_collapse_liquid = 3
 		}
 		upkeep = {
 			alloys = 0.1
-			GF_nyto_collapse_liquid = 0.1
+			GF_nyto_collapse_liquid = 0.3
 		}
 	}
 }
@@ -1561,7 +1564,7 @@ weapon_component_template = {
 	# projectile_gfx = "Electronic"
 	type = instant
 	projectile_gfx = "GF_nyto_crisis_laser"
-	component_set = "GF_nyto_weapon_beacon_sop"
+	#component_set = "GF_nyto_weapon_beacon_sop"
 	tags = {
 		weapon_type_energy
 	}

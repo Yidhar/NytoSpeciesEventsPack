@@ -36,7 +36,7 @@ civic_GF_nyto_death_desc:0 "§R所有国家人口增速-50%§!"
 GF_nyto_see_angel:0 "§R饥荒§! 人口停止增长 \n§R战争§! 和平不能维持 \n§R瘟疫§! 人口不能迁移 \n§R死亡§! 人口自动死亡"
 
  civic_GF_nyoto_armor_train:0 "永恒国度"
-civic_GF_nyoto_armor_train_desc:0 "人是没有安全感的生物,无论什么样的钢铁防线在这无边宇宙中都显得过于渺小\n§R允许无限制建造永固要塞§!"
+civic_GF_nyoto_armor_train_desc:0 "人是没有安全感的生物,无论什么样的钢铁防线在这无边宇宙中都显得过于渺小\n§G阵地构建§!:大幅度提高永恒要塞巨构建造速度\n§G永固防御§!:要塞在30天内不会被摧毁"
 mod_armies_energy_upkeep_mult:0 "陆军$energy$维护费用:"
 
  civic_Gf_nyto_tanhua_pluse:0 "昙花共生"

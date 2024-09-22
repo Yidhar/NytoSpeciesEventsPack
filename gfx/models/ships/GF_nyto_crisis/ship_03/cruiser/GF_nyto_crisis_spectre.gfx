@@ -1,7 +1,7 @@
 objectTypes = {
 	pdxmesh = {
 		name = "GF_nyto_crisis_spectre_mesh"
-		file = "gfx/models/ships/GFnyto_test/GF_nyto_crisis_spectre.mesh"
+		file = "gfx/models/ships/GF_nyto_crisis/ship_03/cruiser/GF_nyto_crisis_spectre.mesh"
 
 		meshsettings = {
 			name = "mod_1Shape"

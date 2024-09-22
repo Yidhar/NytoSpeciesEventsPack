@@ -243,6 +243,20 @@ on_entering_system_first_time = {
 		gfnytoparadeusancrel.4005
 	}
 }
+# A fleet has entered a system | See also: on_fleet_auto_move_arrival
+# Scope = Fleet
+# From = System
+on_entering_system_fleet = {
+	events = {
+		gf_nyto_weapons.3
+	}
+}
+
+on_ship_disabled = {
+	events = {
+		gf_nyto_weapons.30002
+	}
+}
 
 # A ship is done surveying the last unsurveyed planet in a system
 # Scope = ship

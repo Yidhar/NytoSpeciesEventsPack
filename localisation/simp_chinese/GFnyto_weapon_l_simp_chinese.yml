@@ -188,6 +188,7 @@ GF_Nyto_X_Track_DESC:0 "口径即是正义,真理只在射程之中"
 GF_Nyto_T_weapon1:0 "厌世者"
 GF_Nyto_T_weapon1_DESC:0 "§R毁灭:§!§Y每天有15%的概率造成一次10倍伤害的特殊打击§!"
 GF_Nyto_T_weapon1_modif:0 "§R毁灭:§!§Y每天有15%的概率造成一次10倍伤害的特殊打击§!"
+ GF_Nyto_T_weapon101:0 "厌世者"
 #T 终末辉光
 GF_Nyto_T_weapon2:0 "终末辉光"
 weapon_type_prism:0 "§R终末§!"
@@ -196,6 +197,10 @@ GF_Nyto_T_weapon2_modif:0 "$GF_Nyto_T_weapon2_DESC$"
 mod_weapon_type_prism_weapon_damage_mult:"$weapon_type_prism$"
 	#厄琉息斯秘仪 X
 GF_Nyto_x_weapon1:0 "厄琉息斯秘仪"
+ weapon_type_Elius:0 "厄琉息斯秘仪"
+ mod_weapon_type_Elius_weapon_damage_mult:0 "厄琉息斯秘仪武器伤害"
+ GF_Nyto_x_weapon1_DESC:0 "§v四季轮转§!:根据当前游戏月份所对应的季节拥有不同状态"
+ GF_Nyto_x_weapon1_modif:0 "$GF_Nyto_x_weapon1_DESC$\n[GF_nyto_the_four_seasons]:\n"
 	#阿克索之皿 X 若存在灵蛇权杖  获得灵蛇权杖50%的双循环加成 灵蛇权杖无法攻击
 GF_Nyto_x_weapon2:0 "阿克索之皿"
 GF_Nyto_x_weapon2_DESC:0 "能够发射等离子光束对目标进行攻击。§B在携带【灵蛇权杖】时,威力将有巨大提升。§!"
