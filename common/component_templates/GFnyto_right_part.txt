@@ -458,56 +458,55 @@ utility_component_template = {
 }
 
 #lv3 熵能借贷
-utility_component_template = {
-	key = "GFnyto_power_lv3"
-	size = small
-	icon = "GFX_ship_part_GFnyto_power_lv3"
-	icon_frame = 1
-	power = 1000000
-	resources = {
-		category = entropy
-		cost = {
-			GF_nyto_collapse_liquid = -200
-			energy = -100
-			minerals = -100
-			alloys = -100
-			consumer_goods = -100
-			food = -100
-		}
-		produces = {
-			GF_nyto_collapse_liquid = 200
-			energy = 100
-			minerals = 100
-			alloys = 100
-			consumer_goods = 100
-			food = 100
-			engineering_research = 100
-			physics_research = 100
-			society_research = 100
-		}
-	}
-	prerequisites = {
-		"tech_GFnyto_power"
-	}
-	ship_modifier = {
-		custom_tooltip = "GFnyto_power_lv3_modif"
-	}
-	component_set = "power_core"
-	class_restriction = {
-		shipclass_military
-		shipclass_constructor
-		shipclass_colonizer
-		shipclass_science_ship
-		shipclass_transport
-		shipclass_military_special
-		shipclass_starbase
-		shipclass_military_station
-	}
-	ai_weight = {
-		weight = 0
-	}
-
-}
+#utility_component_template = {
+#	key = "GFnyto_power_lv3"
+#	size = small
+#	icon = "GFX_ship_part_GFnyto_power_lv3"
+#	icon_frame = 1
+#	power = 1000000
+#	resources = {
+#		category = entropy
+#		cost = {
+#			GF_nyto_collapse_liquid = -200
+#			energy = -100
+#			minerals = -100
+#			alloys = -100
+#			consumer_goods = -100
+#			food = -100
+#		}
+#		produces = {
+#			GF_nyto_collapse_liquid = 200
+#			energy = 100
+#			minerals = 100
+#			alloys = 100
+#			consumer_goods = 100
+#			food = 100
+#			engineering_research = 100
+#			physics_research = 100
+#			society_research = 100
+#		}
+#	}
+#	prerequisites = {
+#		"tech_GFnyto_power"
+#	}
+#	ship_modifier = {
+#		custom_tooltip = "GFnyto_power_lv3_modif"
+#	}
+#	component_set = "power_core"
+#	class_restriction = {
+#		shipclass_military
+#		shipclass_constructor
+#		shipclass_colonizer
+#		shipclass_science_ship
+#		shipclass_transport
+#		shipclass_military_special
+#		shipclass_starbase
+#		shipclass_military_station
+#	}
+#	ai_weight = {
+#		weight = 0
+#	}
+#}
 
 #穿梭引擎
 utility_component_template = {

@@ -266,3 +266,12 @@ on_system_survey_ship = {
 		gfnytoparadeusancrel.4006
 	}
 }
+
+#from = ship
+#fromfrom= fleet
+#fromfromfrom = country
+on_GF_nyto_stions_update ={
+	events = {
+		gfnytoaction.2001.1
+	}
+}

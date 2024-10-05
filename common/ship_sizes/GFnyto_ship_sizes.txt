@@ -238,11 +238,12 @@ GF_nyto_super_battelship ={
 
 #要塞 
 GFnyto_stions_fortress ={
-	formation_priority =  @corvette_formation_priority
+	formation_priority = 100
 	entity = stions_frame
+	scales_with_planet = yes
 	max_speed = 0
 	max_hitpoints = 2000000
-	collision_radius = @corvette_formation_priority
+	collision_radius = 200
 	size_multiplier = 128
 	fleet_slot_size = 128
 	modifier = {

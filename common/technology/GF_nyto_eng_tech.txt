@@ -238,5 +238,44 @@ tech_template_GF_nyto_universalism ={
 }
 
 # 堡垒强度
+tech_template_GF_nyto_stions_fortress_HP = {
+	icon = tech_template_stions_fortress
+	cost = 50000
+	area = engineering
+	category = { military_theory }
+	levels = -1
+	tier = @repeatableTechTier
+	cost_per_level = 10000
+	weight = 50
+
+	potential = { is_nyto_country = yes }
+	prerequisites = {
+		tech_template_stions_fortress
+	}
+	modifier = {
+		GF_nyto_stions_HP_nums =1
+		#custom_tooltip ="tech_template_GF_nyto_stions_fortress_HP_titl"
+	}
+}
 
 #堡垒附属粒子炮
+tech_template_GF_nyto_stions_fortress_commn = {
+	icon = tech_template_stions_fortress
+	cost = 20000
+	area = engineering
+	cost_per_level = 20000
+	category = { military_theory }
+	levels = -1
+	tier = 5
+	weight = 50
+	potential = {
+		is_nyto_country = yes
+	}
+	prerequisites = {
+		tech_template_stions_fortress
+	}
+	modifier = {
+		GF_nyto_stions_weapon_nums = 1
+		#custom_tooltip="tech_template_GF_nyto_stions_fortress_commn_titl"
+	}
+}

@@ -36,7 +36,7 @@ country_event = {
 	}
 	is_triggered_only = yes
 	immediate = {
-
+		
 	}
 	option = {
 		name =GFnytobloodywar.2.a

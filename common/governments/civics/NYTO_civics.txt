@@ -165,6 +165,9 @@ civic_GF_nyoto_armor_train={
 		army_defense_health_mult = 1
 		army_attack_damage_mult = 0.5
 		SHIP_HOME_TERRITORY_FIRE_RATE_MULT = 0.5
+		GF_nyto_stions_HP_nums = 5
+		GF_nyto_stions_weapon_nums =3
+
 	}
 	
 	random_weight = {

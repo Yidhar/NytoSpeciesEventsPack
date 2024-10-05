@@ -1,0 +1,11 @@
+GF_nyto_boss_hp_bg ={
+    potential = {
+        # always = no
+    }
+    allow = {
+        # always = no
+    }
+    effect = {
+
+    }
+}

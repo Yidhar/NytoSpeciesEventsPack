@@ -32,25 +32,6 @@ GFnyto_megastructure_collapse_reactor_ruined = {
 				}
 			}
 		}
-		#custom_tooltip = {
-		#	fail_text = "requires_no_binary_trinary"
-		#	NOR = {
-		#		is_star_class = sc_binary_1
-		#		is_star_class = sc_binary_2
-		#		is_star_class = sc_binary_3
-		#		is_star_class = sc_binary_4
-		#		is_star_class = sc_binary_5
-		#		is_star_class = sc_binary_6
-		#		is_star_class = sc_binary_7
-		#		is_star_class = sc_binary_8
-		#		is_star_class = sc_binary_9
-		#		is_star_class = sc_binary_10
-		#		is_star_class = sc_trinary_1
-		#		is_star_class = sc_trinary_2
-		#		is_star_class = sc_trinary_3
-		#		is_star_class = sc_trinary_4
-		#	}
-		#}
 		solar_system = {
 			custom_tooltip = {
 				fail_text = "requires_no_black_hole_or_dyson_sphere"
@@ -237,7 +218,8 @@ GFnyto_stions_fortress_base ={
 	entity = "construction_platform_entity"
 	construction_entity = "construction_platform_entity"
 	place_entity_on_planet_plane = no
-	build_outside_gravity_well = yes
+	#build_outside_gravity_well = yes
+	entity_offset = { x = -100 y = 0  }
 	build_time = 1080
 	resources = {
 		category = megastructures
@@ -269,6 +251,7 @@ GFnyto_stions_fortress_base ={
 				}
 			}
 		}
+
 		custom_tooltip = {
 			from = { has_technology = tech_template_stions_fortress }
 		}
@@ -276,9 +259,26 @@ GFnyto_stions_fortress_base ={
 	prerequisites = {
 		"tech_template_stions_fortress"
 	}
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "must_build_around_star"
+				is_star = yes
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				NOT = {
+					has_any_megastructure = yes
+				}
+			}
+		}
+	}
 	on_build_complete = {
 		fromfrom ={
 			remove_modifier = GF_nyto_mega_spped
+			planet ={
+				set_planet_size = 12
+			}
 		}
 		create_fleet = {
 			effect = {
@@ -291,34 +291,35 @@ GFnyto_stions_fortress_base ={
 						if = {
 							limit = {
 								prevprev.from ={
-									has_civic = civic_GF_nyoto_armor_train
+									or = {
+										check_modifier_value = {
+											modifier = GF_nyto_stions_HP_nums
+											value > 1
+										}
+									}
 								}
 							}
 							set_ship_flag = GF_nyto_stions_fortres_super
-							change_variable = {
+							set_variable = {
 								which = GF_nyto_stions_fortes_has_hp
-								value = 10
+								value = owner.modifier:GF_nyto_stions_HP_nums
+							}
+							set_variable = {
+								which = GF_nyto_stions_weapon_nums
+								value = value:GF_nyto_stions_weapon_nums
 							}
 							set_disable_at_health = 0.1
+							ship_event = {
+								id = gfnytoaction.2001
+							}
 						}
 					}
 				}
 				while = {
-					count = 10
+					count = 400
 					create_ship = {
 						name = random
 						random_existing_design = ion_cannon
-						effect = {
-							if = {
-								limit = {
-									prevprev.from ={
-										has_civic = civic_GF_nyoto_armor_train
-									}
-								}
-								set_ship_flag = GF_nyto_stions_fortres_super
-								set_disable_at_health = 0.1
-							}
-						}
 					}
 				}
 			}
@@ -815,7 +816,7 @@ GFnyto_habitat_02 ={
 						limit = {
 							fromfrom.planet = { has_deposit = d_nanites_deposit }
 						}
-						add_deposit = d_hab_nanites_1
+						add_deposit = d_hab_harvester_nanites_1
 						set_planet_flag = research_habitat
 					}
 				}

@@ -494,3 +494,8 @@ GF_nyto_get_game_time_month ={
 		mode = add
 	}
 }
+
+GF_nyto_stions_weapon_nums ={
+	base = 3
+	add = modifier:GF_nyto_stions_weapon_nums
+}

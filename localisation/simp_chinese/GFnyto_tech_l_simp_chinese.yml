@@ -179,3 +179,13 @@ tech_GF_nyto_loser_fallen_empire_0:0 "这个是为了削弱堕落用的。"
 
 
 #遗迹科技树重做
+
+
+
+ #
+ tech_template_GF_nyto_stions_fortress_HP:0 "永固军事堡垒结构优化"
+ tech_template_GF_nyto_stions_fortress_HP_desc:0 "大幅强化永恒要塞的结构强度"
+ mod_GF_nyto_stions_HP_nums:0 "永恒要塞残机:"
+ tech_template_GF_nyto_stions_fortress_commn:0 "最小指挥单元扩展"
+ tech_template_GF_nyto_stions_fortress_commn_titl_desc:0 "允许永恒要塞在展开时部署更多的离子炮台"
+ mod_GF_nyto_stions_weapon_nums:0 "要塞附属离子炮:"
