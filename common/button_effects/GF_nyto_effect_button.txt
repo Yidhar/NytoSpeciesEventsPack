@@ -117,4 +117,4 @@ GF_nyto_boss_hp_bg_block_105 = { potential = { event_target:is_GF_nyto_Boss = { 
 GF_nyto_boss_hp_bg_block_106 = { potential = { event_target:is_GF_nyto_Boss = { has_hp_percentage > 0.972222 } } allow = {} effect = {} }
 GF_nyto_boss_hp_bg_block_107 = { potential = { event_target:is_GF_nyto_Boss = { has_hp_percentage > 0.981481 } } allow = {} effect = {} }
 GF_nyto_boss_hp_bg_block_108 = { potential = { event_target:is_GF_nyto_Boss = { has_hp_percentage > 0.990741 } } allow = {} effect = {} }
-GF_nyto_boss_hp_bg_block_109 = { potential = { event_target:is_GF_nyto_Boss = { has_hp_percentage > 1.000000 } } allow = {} effect = {} }
+GF_nyto_boss_hp_bg_block_109 = { potential = { event_target:is_GF_nyto_Boss = { has_hp_percentage >= 1.000000 } } allow = {} effect = {} }

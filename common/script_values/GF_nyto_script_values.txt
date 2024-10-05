@@ -499,3 +499,17 @@ GF_nyto_stions_weapon_nums ={
 	base = 3
 	add = modifier:GF_nyto_stions_weapon_nums
 }
+
+GF_nyto_is_boss_limt_hp ={
+	base = 0
+	add = event_target:is_GF_nyto_Boss.trigger:has_hp
+	add = trigger:has_shield_hp
+	add = trigger:has_hp
+	modifier = {
+		event_target:is_GF_nyto_Boss ={
+			is_variable_set = GF_nyto_is_boss_hp_mult
+
+		}
+		mult =  event_target:is_GF_nyto_Boss.GF_nyto_is_boss_hp_mult
+	}
+}
