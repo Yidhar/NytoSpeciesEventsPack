@@ -8,6 +8,7 @@ guiTypes = {
         size = { width = 1394 height = 794 }
         # position = { x=1394 y= 794 }
         clipping = no
+
         #背景
 
         background = {
@@ -23,7 +24,7 @@ guiTypes = {
             position = { x = 1000 	y = -100 }
             name = "HP_num_x"
             effect = GF_nyto_boss_hp_bg
-            text = "x100"
+            text = "GF_nyto_is_boss_limt_hp_nums"
             font = large_title_font
 
         }
@@ -264,6 +265,15 @@ guiTypes = {
 
         }
 
+        #buff栏
+        containerWindowType = {
+            name = "GF_nyto_boss_hp_buff_list"
+            #攻击力上升
+            #额外护盾
+            #攻速增加
+            #
+        }
+        #阶段技能.条？
         effectButtonType = {
             position = { x = 450 	y = -52 }
             name = "target_has_HP"

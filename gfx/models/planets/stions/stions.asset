@@ -7,7 +7,7 @@ entity = {
 	start_event = {trigger_once = yes sound = { soundeffect = "amb_battleship_hum" } }
 	start_event = { trigger_once = yes sound = { soundeffect = "amb_battleship_bass" } }
 	}
-	scale = 2
+	scale = 6
 	state = {
 		name = "death"
 		event={ time = 1.5 node = "l_weapon_01" particle = "avian_01_large_ship_explosion_particle" }
@@ -86,7 +86,7 @@ entity ={
 entity = {
 	name = "station_shield_entity"
 	pdxmesh = "station_shield_mesh"
-	scale = 1.0
+	scale = 6.0
 
 	game_data = {
 		emissive_recolor_crunch = 0

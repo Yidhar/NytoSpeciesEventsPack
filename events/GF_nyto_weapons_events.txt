@@ -122,28 +122,50 @@ ship_event = {
 				set_disable_at_health = -1
 				set_disabled = no
 			}
-			GF_nyto_stions_fortres_super ={
-				if = {
-					limit = {
-						check_variable = {
-							which = GF_nyto_stions_fortes_has_hp
-							value > 0
-						}
+			# GF_nyto_stions_fortres_super ={
+			# 	if = {
+			# 		limit = {
+			# 			check_variable = {
+			# 				which = GF_nyto_stions_fortes_has_hp
+			# 				value > 0
+			# 			}
+			# 		}
+			# 		repair_ship = yes
+			# 		set_disable_at_health = -1
+			# 		set_disabled = no
+			# 	} else_if = {
+			# 		limit = {
+			# 			check_variable = {
+			# 				which = GF_nyto_stions_fortes_has_hp
+			# 				value < 0
+			# 			}
+			# 		}
+			# 		repair_ship = yes
+			# 		set_disabled = no
+			# 	}
+			# 	repair_ship = yes
+			# 	set_disabled = no
+			# }
+		}
+		if = {
+			limit = {
+				is_ship = event_target:is_GF_nyto_Boss
+			}
+			repair_ship = yes
+			set_disabled = no
+			subtract_variable = {
+				which = GF_nyto_is_boss_hp_mult
+				value = 1
+			}
+			if = {
+				limit = {
+					check_variable_arithmetic = {
+						which = GF_nyto_is_boss_hp_mult
+						subtract = 1
+						value < 0
 					}
-					repair_ship = yes
-					set_disable_at_health = -1
-					set_disabled = no
-				} else_if = {
-					limit = {
-						check_variable = {
-							which = GF_nyto_stions_fortes_has_hp
-							value < 0
-						}
-					}
-					repair_ship = yes
-					set_disabled = no
 				}
-				repair_ship = yes
+				set_disable_at_health = -1
 				set_disabled = no
 			}
 		}

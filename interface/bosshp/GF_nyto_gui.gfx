@@ -18,10 +18,10 @@ spriteTypes = {
 
 
     }
-    spriteType = {
-        name = "GFX_GF_nyto_hp_mask"
-        texturefile = "interface/bosshp/hp_mask.dds"
-    }
+    # spriteType = {
+    #     name = "GFX_GF_nyto_hp_mask"
+    #     texturefile = "interface/bosshp/hp_mask.dds"
+    # }
 
     spriteType = {
         name = "GFX_GF_nyto_hp_block"

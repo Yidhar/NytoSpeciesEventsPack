@@ -28,3 +28,4 @@ GFnyto_crisis_see_angel:0 "看见天使"
 
  GF_nyto_is_boss_limt_hp:0 "[GF_nyto_boss_has_hp]"
  GF_nyto_boss_name:0 "[event_target:is_GF_nyto_Boss.GetName]"
+ GF_nyto_is_boss_limt_hp_nums:"x[GF_nyto_boss_has_hp_nums]"
