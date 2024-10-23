@@ -14,4 +14,10 @@ portraits = {
 	Lycoris = {
 		texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_nyto_Lycoris.png"
 	}
+	GFnyto_gray = {
+		texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_Gray_1.dds"
+	}
+	GFnyto_morridow = {
+		texturefile = "gfx/models/portraits/GFnyto_nyto/GFnyto_Gray_1.dds"
+	}
 }

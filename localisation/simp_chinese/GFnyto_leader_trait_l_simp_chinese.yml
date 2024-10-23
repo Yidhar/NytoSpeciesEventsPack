@@ -38,3 +38,6 @@ leader_trait_GF_nyto_ogas_agreement_plus_desc:0 "宿主拥有拓展的心智空�
  leader_trait_GF_nyto_noussphere_desc:0 "Quod est inferius est sicut quod est superius, et quod est superius est sicut quod est inferius, ad perpetranda miracula rei unius."
 trait_GFnyto_tanhua:0 "昙花种植者"
 trait_GFnyto_tanhua_desc:0 "该国家大面积的种植一种被改造的昙花,来获取食物和坍塌液\n农业区划将会不被允许建造,新增昙花种植区"
+
+ leader_trait_GF_nyto_gray: "灰夫人"
+ leader_trait_GF_nyto_gray_desc: "曾经身份是医学专家，擅长外科手术。正因如此这位高级涅托非常擅长生物学相关的研究。"

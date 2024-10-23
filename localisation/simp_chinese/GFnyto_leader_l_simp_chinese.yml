@@ -63,3 +63,10 @@ leader_trait_Lycoris_ruler1:0 "莱柯瑞斯_统治者1"
 leader_trait_Lycoris_ruler1_desc:0 "莱柯瑞斯_统治者1"
 leader_trait_Lycoris_ruler2:0 "莱柯瑞斯_统治者2"
 leader_trait_Lycoris_ruler2_desc:0 "莱柯瑞斯_统治者2"
+
+NAME_GFnyto_gray: "格雷"
+GFnyto_gray_background: "格雷女士，别名“灰夫人”，是珈拉提亚（Galatea）集团所属，格雷生物科技研究所的负责人。\n实际身份是用已死亡的格雷改造而成，取代了其身份的高级涅托。"
+job_GFnyto_sp_job_gray: "格雷生物科技研究所长"
+job_GFnyto_sp_job_gray_desc: "因为这里看不到，干脆摸了好了。"
+
+mod_planet_districts_society_research_produces_mult: "£district£区划产出的£society_research£$society_research$"
