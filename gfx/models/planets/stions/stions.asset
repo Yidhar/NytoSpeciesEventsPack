@@ -49,7 +49,7 @@ entity ={
 	start_event = {trigger_once = yes sound = { soundeffect = "amb_battleship_hum" } }
 	start_event = { trigger_once = yes sound = { soundeffect = "amb_battleship_bass" } }
 	}
-	scale = 6
+	# scale = 6
 	state = {
 		name = "death"
 		event={ time = 0 node = "target_locator_4" particle = "avian_01_large_ship_explosion_particle" }
