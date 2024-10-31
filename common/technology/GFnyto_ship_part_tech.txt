@@ -22,38 +22,38 @@ tech_GFnyto_accelerating_coil1= {
 	ai_weight = {weight = 5}
 }
 #能源核心 lv3
-tech_GFnyto_power={
-	icon = tech_GFnyto_power
-	cost = 50000
-	area = physics
-	tier = 4
-	is_rare = yes
-	gateway = power_generation
-	category = {particles}
-	prerequisites = {"tech_zero_point_power"}
-	weight = 5
-	modifier = {}
-	potential = {
-		OR = {
-			is_nyto_country =yes
-			has_country_flag = has_nyto_technology
-		}	
-	}
-	ai_weight = {weight = 5}
-	prereqfor_desc = {
-		hide_prereq_for_desc = component
-		custom = {
-			title = "tech_GFnyto_power_title"
-			desc = "tech_GFnyto_power_desc"
-		}
-	}
-	weight_modifier = {
-		modifier = {
-			factor = 100
-			has_technology = tech_zero_point_power
-		}
-	}
-}
+# tech_GFnyto_power={
+# 	icon = tech_GFnyto_power
+# 	cost = 50000
+# 	area = physics
+# 	tier = 4
+# 	is_rare = yes
+# 	gateway = power_generation
+# 	category = {particles}
+# 	prerequisites = {"tech_zero_point_power"}
+# 	weight = 5
+# 	modifier = {}
+# 	potential = {
+# 		OR = {
+# 			is_nyto_country =yes
+# 			has_country_flag = has_nyto_technology
+# 		}
+# 	}
+# 	ai_weight = {weight = 5}
+# 	prereqfor_desc = {
+# 		hide_prereq_for_desc = component
+# 		custom = {
+# 			title = "tech_GFnyto_power_title"
+# 			desc = "tech_GFnyto_power_desc"
+# 		}
+# 	}
+# 	weight_modifier = {
+# 		modifier = {
+# 			factor = 100
+# 			has_technology = tech_zero_point_power
+# 		}
+# 	}
+# }
 #能源核心 lv2
 tech_GFnyto_power_lv2 ={
 	area = physics

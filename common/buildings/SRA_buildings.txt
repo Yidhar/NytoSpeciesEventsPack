@@ -1,92 +1,92 @@
-#基础建筑 核心大电
-
-SRA_engery_building ={
-    icon = building_noble_estates
-    base_buildtime = 360
-    empire_limit = 1
-    category = resource
-    can_demolish = no
-    can_be_disabled = yes
-    can_build = yes
-    planet_modifier = {
-        #忘了
-    }
-    resources = {
-        category = buffer #不吃一些奇奇怪怪的循环和科技加成 你可以自己起一个category
-        produces = {
-            #base产出
-            energy = 10
-        }
-        produces = {
-            #消耗暗物质产出
-        }
-        produces = {
-            #消耗星界产出
-        }
-        upkeep = {
-            #基础维护
-        }
-        upkeep = {
-            #消耗暗物质维护
-        }
-        upkeep = {
-            #消耗星界维护
-        }
-        upkeep = {
-            #载荷维护
-        }
-        upkeep = {
-            #深渊维护
-        }
-        #每一个非自生建筑都会减少发电量 提高载荷  {载荷 ：额外维护费用 和星球buff}
-        #每一个发电区划都会增加发电量 减少载荷   {载荷越高 额外的建筑合金维护费用越高  提供的星球建设速度等buff越低}
-    }
-}
-
-#电转矿
-SRA_minier_building ={
-    icon = building_fe_mine_1
-    base_buildtime = 720
-    category = resources
-    resources = {
-        category = planet_buildings #或者新建一个
-        produces = {
-            minerals = 1
-        }
-        upkeep = {
-            energy = 1
-        }
-    }
-}
-
-#电转食物
-SRA_food_building ={
-    icon = building_fe_administration_1
-    base_buildtime = 720
-    category = resources
-    resources = {
-        category = planet_buildings
-        produces = {
-            food = 1
-        }
-        upkeep = {
-            energy = 1
-        }
-    }
-}
-
-#矿物转合金
-
-#矿+食物转消费品
-
-#电+合金转三稀有
-
-#电+合金+消费品转纳米机器人
-
-#电+合金+消费品转活性金属
-
-#消费品+稀有转高级科研
-
-#纳米机器人+电+稀有转星界
-
-#活性金属+易爆微粒+电 转暗物质
+# #基础建筑 核心大电
+#
+# SRA_engery_building ={
+#     icon = building_noble_estates
+#     base_buildtime = 360
+#     empire_limit = 1
+#     category = resource
+#     can_demolish = no
+#     can_be_disabled = yes
+#     can_build = yes
+#     planet_modifier = {
+#         #忘了
+#     }
+#     resources = {
+#         category = buffer #不吃一些奇奇怪怪的循环和科技加成 你可以自己起一个category
+#         produces = {
+#             #base产出
+#             energy = 10
+#         }
+#         produces = {
+#             #消耗暗物质产出
+#         }
+#         produces = {
+#             #消耗星界产出
+#         }
+#         upkeep = {
+#             #基础维护
+#         }
+#         upkeep = {
+#             #消耗暗物质维护
+#         }
+#         upkeep = {
+#             #消耗星界维护
+#         }
+#         upkeep = {
+#             #载荷维护
+#         }
+#         upkeep = {
+#             #深渊维护
+#         }
+#         #每一个非自生建筑都会减少发电量 提高载荷  {载荷 ：额外维护费用 和星球buff}
+#         #每一个发电区划都会增加发电量 减少载荷   {载荷越高 额外的建筑合金维护费用越高  提供的星球建设速度等buff越低}
+#     }
+# }
+#
+# #电转矿
+# SRA_minier_building ={
+#     icon = building_fe_mine_1
+#     base_buildtime = 720
+#     category = resources
+#     resources = {
+#         category = planet_buildings #或者新建一个
+#         produces = {
+#             minerals = 1
+#         }
+#         upkeep = {
+#             energy = 1
+#         }
+#     }
+# }
+#
+# #电转食物
+# SRA_food_building ={
+#     icon = building_fe_administration_1
+#     base_buildtime = 720
+#     category = resources
+#     resources = {
+#         category = planet_buildings
+#         produces = {
+#             food = 1
+#         }
+#         upkeep = {
+#             energy = 1
+#         }
+#     }
+# }
+#
+# #矿物转合金
+#
+# #矿+食物转消费品
+#
+# #电+合金转三稀有
+#
+# #电+合金+消费品转纳米机器人
+#
+# #电+合金+消费品转活性金属
+#
+# #消费品+稀有转高级科研
+#
+# #纳米机器人+电+稀有转星界
+#
+# #活性金属+易爆微粒+电 转暗物质

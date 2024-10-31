@@ -973,6 +973,61 @@ utility_component_template = {
 
 }
 
+#基础作战电脑
+utility_component_template ={
+	key = "GFnyto_additional_arithmetic_module_base"
+	size = small
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	power = 10
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+		}
+	}
+	ship_behavior = "swarm"
+	# is_default_component = yes
+
+	class_restriction = { shipclass_military }
+	size_restriction = { GFnyto_stions_fortress GFnyto_shiled_ship GFnyto_Command_ship GF_nyto_super_battelship}
+	component_set = "combat_computers"
+	upgrades_to = "COMBAT_COMPUTER_SWARM_BASIC"
+	ai_tags = { gunship }
+	ai_tag_weight = 0
+
+	ai_weight = {
+		weight = 1
+	}
+}
+#基础能源部件
+utility_component_template ={
+	key = GFnyto_power_lv0
+	size = small
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = 3850
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 560
+		}
+		upkeep = {
+			energy = 5.6
+			alloys = 0.56
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	component_set = "power_core"
+	size_restriction = { GFnyto_shiled_ship GFnyto_stions_fortress GFnyto_Command_ship GF_nyto_super_battelship}
+	# upgrades_to = "JUGGERNAUT_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
 ###########盾舰专用亚光速
 utility_component_template = {
 	key = "GFnyto_SHIP_THRUSTER_1"
