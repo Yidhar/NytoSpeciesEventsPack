@@ -2,13 +2,14 @@
 ship_behavior = {
 	name = "GFnyto_ship_behaviors1"
 	
-	preferred_attack_range = max		#max/min/median/12/412..这是攻击时飞船想要保持的目标距离																				                 							   
-	formation_distance = min 			#当环绕/跟随时,尽量保持这一距离到指定位置
-	return_to_formation_distance = min  #攻击时,如果到指定位置的距离大于此值,飞船将切换到被动模式
+	preferred_attack_range = 0		#max/min/median/12/412..这是攻击时飞船想要保持的目标距离
+	formation_distance = 0 			#当环绕/跟随时,尽量保持这一距离到指定位置
+	return_to_formation_distance = 1  #攻击时,如果到指定位置的距离大于此值,飞船将切换到被动模式
 
 	collision_awareness = 0.5			#我们有多想避开其他船只
 	collision_strafe = 1.0
 	collision_radius = 1.0
+	combat_target_anchor = parent
 	
 	attack_move_pattern = charge		#静止/充电/跟随/静止/无
 	passive_move_pattern = charge
@@ -19,35 +20,36 @@ ship_behavior = {
 #护航
 ship_behavior = {
 	name = "GFnyto_ship_behaviors2"
-	preferred_attack_range = min		#max/min/median/12/412..这是攻击时飞船想要保持的目标距离
+	preferred_attack_range = max		#max/min/median/12/412..这是攻击时飞船想要保持的目标距离
 	
-	formation_distance = 200			#当进港/跟船时,尽量保持这一距离到指定位置
-	return_to_formation_distance = 30	#攻击时,如果到指定位置的距离大于此值,飞船将切换到被动模式
+	formation_distance = 140			#当进港/跟船时,尽量保持这一距离到指定位置
+	return_to_formation_distance = 150	#攻击时,如果到指定位置的距离大于此值,飞船将切换到被动模式
 
 	collision_awareness = 0.2			#我们有多想避开其他船只
 	collision_radius = 1				#碰撞半径是船舶尺寸中指定半径的乘数
 	collision_strafe = 2.5
 	
-	combat_target_anchor = root
+	combat_target_anchor = parent #以领队为目标
 
 	attack_move_pattern = stationary
-	passive_move_pattern = charge
+	passive_move_pattern = maintain_distance
 	
 	desc = "GFnyto_ship_behaviors2_desc"
 }
+
 #支援
 ship_behavior = {
 	name = "GFnyto_ship_behaviors3"
-	preferred_attack_range = max
-	formation_distance = max
-	return_to_formation_distance = max
+	preferred_attack_range = 300  #基础交战距离
+	formation_distance = 300  #当环绕/跟随时,尽量保持这一距离到指定位置
+	return_to_formation_distance = 300  #攻击时,如果到指定位置的距离大于此值,飞船将切换到被动模式
 	source_target_anchor_factor = 1.0
 	combat_target_anchor = root
 
-	collision_awareness = 0.0
-	collision_radius = 0	#collision_radius is a multiplier on the radius specified in the ship size
-	collision_strafe = 0	#collision_strafe allows the ship to move in any direction while colliding with another
-	attack_move_pattern = stationary
+	collision_awareness = 1
+	collision_radius = 1	#collision_radius is a multiplier on the radius specified in the ship size
+	collision_strafe = 10	#collision_strafe allows the ship to move in any direction while colliding with another
+	attack_move_pattern = flee
 	passive_move_pattern = stay_at_range
 	
 	desc = "GFnyto_ship_behaviors3_desc"
