@@ -277,25 +277,25 @@ defined_text = {
 		trigger = {
 			is_spring = yes
 		}
-		localization_key = "spring"
+		localization_key = "GFnyto_spring_modifier"
 	}
 	text = {
 		trigger = {
 			is_summer = yes
 		}
-		localization_key = "summer"
+		localization_key = "GFnyto_summer_modifier"
 	}
 	text = {
 		trigger = {
 			is_autumn = yes
 		}
-		localization_key = "autumn"
+		localization_key = "GFnyto_autumn_modifier"
 	}
 	text = {
 		trigger = {
 			is_winter = yes
 		}
-		localization_key = "winter"
+		localization_key = "GFnyto_winter_modifier"
 	}
 	default = GF_nyto_the_four_seasons_titl
 
