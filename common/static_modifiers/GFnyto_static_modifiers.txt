@@ -258,8 +258,8 @@ GF_nyto_oper_pop ={
 GF_nyto_t_weapon1_damage = {
 	weapon_GF_ship_skill_01_weapon_damage_mult =1
 }
-GF_nyto_ship_damage ={
-	ship_weapon_damage = 1
+GF_nyto_t_weapon1_speed ={
+	ship_fire_rate_mult = -1
 }
 #献祭
 GF_nyto_kill_tanhua ={

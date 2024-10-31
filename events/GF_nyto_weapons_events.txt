@@ -520,8 +520,8 @@ ship_event = {
 							days = -1
 						}
 						add_modifier = {
-							modifier = GF_nyto_ship_damage
-							mult = root.modifier:ship_weapon_damage
+							modifier = GF_nyto_t_weapon1_speed
+							mult = root.modifier:ship_fire_rate_mult
 						}
 					}
 				}
@@ -575,4 +575,5 @@ ship_event = {
 	immediate = {
 		destroy_ship = this
 	}
+
 }
