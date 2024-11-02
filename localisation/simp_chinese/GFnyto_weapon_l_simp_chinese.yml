@@ -46,7 +46,7 @@ GFnyto_accelerating_coil1:0 "瓦解射线"
 GFnyto_additional_arithmetic_module:0 "附加运算模块"
 GFnyto_additional_arithmetic_module1:0 "附加运算模块-冲锋"
 GFnyto_additional_arithmetic_module2:0 "附加运算模块-护航"
-GFnyto_additional_arithmetic_module3:0 "附加运算模块-远距支援模型"
+GFnyto_additional_arithmetic_module3:0 "附加运算模块（航母）"
 #描述
 GFnyto_force_shield1_desc:0 "覆盖舰船周围的反作用力场,不仅可以减速敌人的炮火攻击,而且可以为己方实弹攻击加速。相比于普通护盾,力场盾在受到爆破类武器的攻击时更容易超载。"
 GFnyto_force_shield2_desc:0 "覆盖舰船周围的反作用力场,不仅可以减速敌人的炮火攻击,而且可以为己方实弹攻击加速。相比于普通护盾,力场盾在受到爆破类武器的攻击时更容易超载。"

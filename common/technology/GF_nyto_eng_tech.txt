@@ -44,7 +44,7 @@ tech_GF_nyto_algorithm ={
 	cost = 30000
 	area = engineering
 	category = { biology }
-	tier = 3
+	tier = 2
 	weight = 999
 	potential = {is_nyto_country =yes}
 	ai_weight = {weight = 2}

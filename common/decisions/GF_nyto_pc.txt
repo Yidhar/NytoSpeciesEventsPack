@@ -130,86 +130,50 @@ decision_GFnyto_planetary_defense = {
 	}
 }
 
-# #心智载入
-# decision_GFnyto_pop_load = {
-# 	enactment_time = 180
-# 	owned_planets_only = yes
-# 	sound = event_administrative_work
-# 	icon = decision_GFnyto_pop_load
-# 	resources = {
-# 		category = decisions
-# 		cost = {
-# 			GF_nyto_dark_star_core = 10
-# 		}
-# 		cost = {
-# 			trigger = {
-# 				owner = {
-# 					is_ai = no
-# 				}
-# 			}
-# 			alloys = 200
-# 			minerals = 500
-# 		}
-# 	}
-# 	potential = {
-# 		owner = {
-# 			is_nyto_country =yes
-# 			NOT = {
-# 				has_civic = civic_GF_nyto_Vengeance_Crusade
-# 			}
-# 			is_ai = yes
-# 		}
-# 	}
-# 	effect = {
-# 		custom_tooltip = decision_GFnyto_pop_load_effect
-# 		hidden_effect = {
-# 			if = {
-# 				limit = {
-# 					owner = {
-# 						is_ai = no
-# 					}
-# 				}
-				# while = { count = 10 create_pop = { species = owner_main_species ethos = root.owner } }
-# 			}
-# 			if = {
-# 				limit = {
-# 					owner = {
-# 						is_ai = yes
-# 					}
-# 				}
-# 				while = {
-# 					count = 5
-# 					create_pop = {
-# 						species = owner_main_species
-# 						ethos = root.owner
-# 					}
-# 				}
-# 			}
-
-# 		}
-# 	}
-# 	ai_weight = {
-# 		weight = 20
-# 		modifier = {
-# 			always = yes
-# 			has_planet_flag = PR_flg_plnt_ASCENDED
-# 		}
-# 		modifier = {
-# 			factor = 2.5
-# 			free_jobs >= 0
-# 		}
-# 		modifier = {
-# 			factor = 0
-# 			num_unemployed > 1
-# 		}
-# 		modifier = {
-# 			factor = 1
-# 			owner = {
-# 				has_country_flag = PR_flg_cntr_ASCENDED
-# 			}
-# 		}
-# 	}
-# }
+#心智载入
+decision_GFnyto_pop_load = {
+	enactment_time = 180
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_GFnyto_pop_load
+	resources = {
+		category = decisions
+	}
+	potential = {
+		owner = {
+			is_nyto_country =yes
+			is_ai = yes
+		}
+	}
+	effect = {
+		custom_tooltip = decision_GFnyto_pop_load_effect
+		hidden_effect = {
+			while = { count = 10 create_pop = { species = owner_main_species ethos = root.owner } }
+		}
+	}
+	ai_weight = {
+		weight = 20
+		modifier = {
+			always = yes
+			factor = 10
+			has_planet_flag = PR_flg_plnt_ASCENDED
+		}
+		modifier = {
+			factor = 2.5
+			free_jobs >= 0
+		}
+		modifier = {
+			factor = 0
+			num_unemployed > 1
+		}
+		modifier = {
+			factor = 1
+			owner = {
+				has_country_flag = PR_flg_cntr_ASCENDED
+			}
+		}
+	}
+}
 
 #坍缩堆超载
 decision_GFnyto_boom = {
