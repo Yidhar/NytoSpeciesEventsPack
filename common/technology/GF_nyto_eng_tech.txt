@@ -275,7 +275,7 @@ tech_template_GF_nyto_stions_fortress_commn = {
 		tech_template_stions_fortress
 	}
 	modifier = {
-		GF_nyto_stions_weapon_nums = 1
+		GF_nyto_stions_weapon_num = 1
 		#custom_tooltip="tech_template_GF_nyto_stions_fortress_commn_titl"
 	}
 }

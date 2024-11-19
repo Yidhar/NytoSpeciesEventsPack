@@ -316,7 +316,7 @@ GFnyto_stions_fortress_base ={
 					}
 				}
 				while = {
-					count = 400
+					count = value:GF_nyto_stions_weapon_nums
 					create_ship = {
 						name = random
 						random_existing_design = ion_cannon

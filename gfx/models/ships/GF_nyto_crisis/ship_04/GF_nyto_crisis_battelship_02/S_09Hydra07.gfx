@@ -1,7 +1,7 @@
 objectTypes = {
 	pdxmesh = {
 		name = "S_09Hydra07_mesh"
-		file = "gfx/models/ships/GF_nyto_crisis/ship_01/S_09Hydra07.mesh"
+		file = "gfx/models/ships/GF_nyto_crisis/ship_04/GF_nyto_crisis_battelship_02/S_09Hydra07.mesh"
 		scale = 100
 		animation = { id = "idle" type = "S_09Hydra07_idle_animation" }
 		meshsettings = {

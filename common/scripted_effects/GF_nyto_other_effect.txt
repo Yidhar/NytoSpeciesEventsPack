@@ -327,3 +327,23 @@ creat_battleship_revelation_fleet ={
 	]
 
 }
+
+
+test ={
+	random_system = {
+		limit = {
+			distance = {
+				max_jumps = 1
+			}
+		}
+		export_trigger_value_to_variable = {
+			trigger = distance
+			parameters = {
+				source = root.capital_scope.solar_system
+				type = euclidean
+				same_solar_system = yes
+			}
+			variable = test_system
+		}
+	}
+}

@@ -43,24 +43,7 @@ utility_component_template = {
 		weight = 50
 	}
 }
-#空投仓
-utility_component_template = {
-	key = "tech_GF_nyto_marine_corps"
-	size = aux
-	icon = "GFX_ship_part_GFnyto_marine_corps"
-	icon_frame = 1
-	power = -10
-	modifier = {ship_hull_add = 1000}	
-	component_set = "GF_nyto_marine_corps"
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = 100
-			GF_nyto_collapse_liquid=1
-		}		
-	}
-	prerequisites = {"tech_GF_nyto_marine_corps"}
-}
+
 #伤害控制小组
 utility_component_template = {
 	key = "tech_GF_nyto_injury_control_team"
@@ -93,7 +76,7 @@ utility_component_template = {
 		ship_weapon_range_mult = 0.1
 		ship_sensor_range_add = 1
 		ship_tracking_add = 15
-	}	
+	}
 	component_set = "GF_nyto_reconnaissance_aircraft"
 	resources = {
 		category = ship_components
@@ -110,6 +93,6 @@ utility_component_template = {
 	}
 	prerequisites = {"tech_GFnyto_war_theory_b1"}
 	ai_weight = {
-		weight = 100
+		weight = 1000
 	}
 }

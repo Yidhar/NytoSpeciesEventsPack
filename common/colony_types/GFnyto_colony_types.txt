@@ -47,7 +47,7 @@ col_Gf_nyto_xiyou_rss = {
 	}
 }
 
-#军工产业星球 (矿物/合金
+#通用产业星球 (矿物/合金
 col_GF_nyto_general_planet = {
 	icon = GFX_colony_type_foundry
 	potential = {
@@ -63,12 +63,9 @@ col_GF_nyto_general_planet = {
 	}
 	#妈的 权重要重做
 	weight_modifier = {
-		add = 10
+		add = 200
 		modifier = {
-			num_free_districts = {
-				type = district_GF_nyto_pc_toxic_alloy
-				value > 1
-			}
+			is_capital = yes
 			mult = 10
 		}
 	}

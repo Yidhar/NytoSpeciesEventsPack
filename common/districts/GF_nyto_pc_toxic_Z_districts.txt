@@ -37,6 +37,11 @@ district_GF_nyto_pc_toxic_underground_shelters= {
 			free_housing < 10
 		}
 	}
+	ai_resource_production ={
+		minerals = 100
+		food = 100
+		energy = 100
+	}
 }
 #地下工业区
 district_GF_nyto_pc_toxic_underground_industrial_area= {
@@ -72,20 +77,8 @@ district_GF_nyto_pc_toxic_underground_industrial_area= {
 		trigger = {
 			always = yes
 		}
-		alloys =  100
-		consumer_goods = 100
-	}
-	ai_weight = {
-		weight = 20
-		modifier = {
-			weight = 1000
-			owner = {
-				has_monthly_income = {
-					resource = alloys
-					value < 100
-				}
-			}
-		}
+		alloys =  1000
+		consumer_goods = 1000
 	}
 }
 #地下研究所
@@ -116,6 +109,12 @@ district_GF_nyto_pc_toxic_underground_research_institute = {
 	planet_modifier = {
 		job_GFnyto_collapse_particle_researcher_add = 4
 	}
+	ai_resource_production = {
+		engineering_research = 100
+		physics_research = 100
+		society_research = 100
+	}
+
 	ai_weight = {
 		weight = 10
 		modifier = {

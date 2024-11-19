@@ -147,45 +147,47 @@ tech_GF_nyto_loser_fallen_empire_0:0 "这个是为了削弱堕落用的。"
  tech_GFnyto_force_shield3:0 "力场盾MK.3"
  tech_GFnyto_force_shield3_desc:0 "覆盖舰船周围的反作用力场,不仅可以减速敌人的炮火攻击,而且可以为己方实弹攻击加速。相比于普通护盾,力场盾在受到爆破类武器的攻击时更容易超载。"
 
-#联动多彩
- tech_GF_nyto_collapse_stability_dc:0 "$tech_GF_nyto_collapse_stability$"
- tech_GF_nyto_collapse_stability_dc_desc:0 "$tech_GF_nyto_collapse_stability_desc$"
- tech_GF_nyto_collapse_stability_2_dc:0 "$tech_GF_nyto_collapse_stability_2$"
- tech_GF_nyto_collapse_stability_2_dc_desc:0 "$tech_GF_nyto_collapse_stability_2_desc$"
- tech_GF_nyto_Inverse_collapse_1_dc:0 "$tech_GF_nyto_Inverse_collapse_1$"
- tech_GF_nyto_Inverse_collapse_1_dc_desc:0 "$tech_GF_nyto_Inverse_collapse_1_desc$"
- tech_GF_nyto_Inverse_collapse_2_dc:0 "$tech_GF_nyto_Inverse_collapse_2$"
- tech_GF_nyto_Inverse_collapse_2_dc_desc:0 "$tech_GF_nyto_Inverse_collapse_2_desc$"
- tech_GF_nyto_Stabiliz_dc:0 "$tech_GF_nyto_Stabiliz$"
- tech_GF_nyto_Stabiliz_dc_desc:0 "$tech_GF_nyto_Stabiliz_desc$"
- tech_GF_nyto_RAR_dc:0 "$tech_GF_nyto_RAR$"
- tech_GF_nyto_RAR_dc_desc:0 "$tech_GF_nyto_RAR_desc$"
- tech_GFnyto_tansuo_dc:0 "$tech_GFnyto_tansuo$"
- tech_GFnyto_tansuo_dc_desc:0 "$tech_GFnyto_tansuo_desc$"
- tech_GFnyto_tansuo2_dc:0 "$tech_GFnyto_tansuo2$"
- tech_GFnyto_tansuo2_dc_desc:0 "$tech_GFnyto_tansuo2_desc$"
- tech_GFnyto_star_tasuo_dc:0 "$tech_GFnyto_star_tasuo$"
- tech_GFnyto_star_tasuo_dc_desc:0 "$tech_GFnyto_star_tasuo_desc$"
- tech_GF_nyto_x_dc:0 "$tech_GF_nyto_x$"
- tech_GF_nyto_x_dc_desc:0 "$tech_GF_nyto_x_desc$"
- tech_GF_nyto_H_dc:0 "$tech_GF_nyto_H$"
- tech_GF_nyto_H_dc_desc:0 "$tech_GF_nyto_H_desc$"
- tech_GF_nyto_P_dc:0 "$tech_GF_nyto_P$"
- tech_GF_nyto_P_dc_desc:0 "$tech_GF_nyto_P_desc$"
- tech_GF_nyto_G_dc:0 "$tech_GF_nyto_G$"
- tech_GF_nyto_G_dc_desc:0 "$tech_GF_nyto_G_desc$"
- tech_GF_nyto_sm_dc:0 "$tech_GF_nyto_sm$"
- tech_GF_nyto_sm_dc_desc:0 "$tech_GF_nyto_sm_desc$"
 
 
 #遗迹科技树重做
 
 
 
- #
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ mod_GF_nyto_stions_weapon_num:0 "要塞附属离子炮" #
  tech_template_GF_nyto_stions_fortress_HP:0 "永固军事堡垒结构优化"
  tech_template_GF_nyto_stions_fortress_HP_desc:0 "大幅强化永恒要塞的结构强度"
- mod_GF_nyto_stions_HP_nums:0 "永恒要塞残机:"
+ mod_GF_nyto_stions_HP_nums:0 "永恒要塞结构强化"
  tech_template_GF_nyto_stions_fortress_commn:0 "最小指挥单元扩展"
- tech_template_GF_nyto_stions_fortress_commn_titl_desc:0 "允许永恒要塞在展开时部署更多的离子炮台"
- mod_GF_nyto_stions_weapon_nums:0 "要塞附属离子炮:"
+ tech_template_GF_nyto_stions_fortress_commn_desc:0 "允许永恒要塞在展开时部署更多的离子炮台"
+

@@ -136,22 +136,14 @@ ship_event = {
 	id = gfnytoaction.2001
 	hide_window = yes
 	is_triggered_only = yes
+	trigger = {
+		always = yes
+		or = {
+
+			check_modifier_value = { modifier = GF_nyto_stions_weapon_num value != GF_nyto_stions_weapon_nums }
+		}
+	}
 	immediate = {
-		if = {
-			limit = {
-				not = {
-					check_variable = {
-						which = GF_nyto_stions_fortes_has_hp
-						value = owner.modifier:GF_nyto_stions_HP_nums
-					}
-					is_in_combat = no
-				}
-			}
-			set_variable = {
-				which = GF_nyto_stions_fortes_has_hp
-				value = owner.modifier:GF_nyto_stions_HP_nums
-			}
-		}  #重置非战斗状态要塞的血条上限
 		#触发要塞更新触发器
 		fire_on_action = {
 			on_action = on_GF_nyto_stions_update
@@ -159,16 +151,17 @@ ship_event = {
 				from = this
 			}
 		}
+
 		owner ={
 			export_modifier_to_variable = {
 				modifier = GF_nyto_stions_HP_nums
-				variable = test
+				variable = GF_nyto_stions_HP_nums
 			}
 		}
 
 		ship_event = {
 			id = gfnytoaction.2001
-			days = 1
+			days = 33
 		}
 	}
 }
@@ -178,18 +171,71 @@ ship_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		is_in_combat = yes
+		exists = from
+		check_modifier_value = { modifier = GF_nyto_stions_HP_nums value != GF_nyto_stions_HP_nums }
 	}
 	immediate = {
 		#处于战斗状态的结算+1
-		change_variable = {
-			which = GF_nyto_stions_fortes_has_hp
-			value = 1
+		if = {
+			limit = {
+				is_in_combat = yes
+			}
+			change_variable = {
+				which = GF_nyto_stions_fortes_has_hp
+				value = 1
+			}
+			repair_ship = yes
 		}
-		repair_ship = yes
+		#非战斗时回复至满
+		else = {
+			set_variable = {
+				which = GF_nyto_stions_fortes_has_hp
+				value =  owner.modifier:GF_nyto_stions_HP_nums
+			}
+		}
+
 	}
 }
 
+#补充离子炮台
+ship_event = {
+	id = gfnytoaction.2003
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		exists = from
+		fleet ={
+			count_owned_ship = {
+				limit = {
+					is_ship_size = ion_cannon
+				}
+				count < owner.modifier:GF_nyto_stions_weapon_num
+			}
+		}
+		is_in_combat = no
+	}
+	immediate = {
+		fleet ={
+			while = {
+				limit = {
+					count_owned_ship = {
+						limit = {
+							is_ship_size = ion_cannon
+						}
+						count = owner.modifier:GF_nyto_stions_weapon_num
+					}
+				}
+				create_ship = {
+					name = random
+					random_existing_design = ion_cannon
+				}
+			}
+		}
+	}
+}
+
+
+#测试案例
 country_event = {
 	id = gfnytoaction.2003
 	title = "x"

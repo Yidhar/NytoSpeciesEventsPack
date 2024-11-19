@@ -108,7 +108,23 @@ GF_engery_expenditure_ship_upkeep = {
 		weight = 0.2
 	}
 }
-
+#关于星球
+GF_nyto_alloys_expenditure_plante_upkeep ={
+	resource = alloys
+	type = upkeep
+	category = planets
+	potential = {
+		has_authority = auth_GF_paradeus
+	}
+	weight = {
+		weight = 0.2
+	}
+}
+GF_nyto_minier_planet_upgrade_expenditure_planet_upgrade = {
+	resource = minerals
+	type = expenditure
+	category = planet_buildings
+}
 
 
 # 决议
@@ -217,3 +233,4 @@ GF_nyto__collapse_liquid_planets_cost ={
 		weight = 0.5
 	}
 }
+

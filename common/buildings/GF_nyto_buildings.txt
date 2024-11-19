@@ -73,10 +73,27 @@ building_GFnyto_collapse_exploit_plant_2 = {
 			owner = {
 				is_nyto_country =yes
 			}
+			not ={
+				colony_type != col_GF_nyto_general_planet
+			}
 		}
-		physics_research = 999
-		society_research = 999
-		engineering_research = 999
+		physics_research = 9999
+		society_research = 9999
+		engineering_research = 9999
+	}
+	ai_resource_production = {
+		trigger = {
+			owner = {
+				is_nyto_country =yes
+			}
+			colony_type = col_GF_nyto_general_planet
+		}
+		physics_research = -10
+		society_research = -10
+		engineering_research = -10
+	}
+	custom_storm_ai_weight = {
+
 	}
 }
 
@@ -514,6 +531,13 @@ building_GFnyto_dimensional_fabricator = {
 		}
 		alloys = 1000
 		minerals = 1000
+		consumer_goods = 1000
+		exotic_gases = 100
+		rare_crystals = 100
+		volatile_motes = 100
+	}
+	custom_storm_ai_weight = {
+		weight = 100
 	}
 }
 

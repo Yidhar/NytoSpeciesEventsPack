@@ -1,8 +1,9 @@
 GF_nyto_stions_HP_nums ={
     category = country
-    #hidden = yes
+    good = yes
 }
-GF_nyto_stions_weapon_nums ={
+
+GF_nyto_stions_weapon_num ={
     category = country
-    #hidden = yes
+    good = yes
 }

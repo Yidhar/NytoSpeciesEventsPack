@@ -25,7 +25,6 @@ strike_craft_component_template = {
 		min = 50
 		max = 200
 	}
-	#伤害
 	cooldown = 10	#冷却
 	range = 500	#射程,指舰载机的本身射程
 	engagement_range = 400
@@ -42,6 +41,9 @@ strike_craft_component_template = {
 	shield_damage = 1
 	ship_behavior = "GFnyto_ship_behaviors3"	#舰载机的作战 AI//
 	power = -50
+	ship_modifier ={
+		component_lifesteal_add = 1
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -884,7 +886,7 @@ weapon_component_template = {
 		g_slot
 	}
 	ai_tags = {
-		weapon_role_anti_hull
+		weapon_role_anti_shield explosive explosive_stealth
 	}
 	damage = {
 		min = 180
@@ -918,6 +920,9 @@ weapon_component_template = {
 			alloys = 0.1
 			GF_nyto_collapse_liquid = 0.3
 		}
+	}
+	ai_weight = {
+		weight = 50
 	}
 }
 

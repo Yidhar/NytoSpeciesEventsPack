@@ -272,6 +272,19 @@ on_system_survey_ship = {
 #fromfromfrom = country
 on_GF_nyto_stions_update ={
 	events = {
-		gfnytoaction.2001.1
+		gfnytoaction.2002
+		gfnytoaction.2003
+	}
+}
+
+on_damage_taken = {
+	events = {
+		GF_nyto_damage_taken_f.0
+	}
+}
+
+on_damage_taken_f ={
+	events = {
+		grand_archive.10096
 	}
 }

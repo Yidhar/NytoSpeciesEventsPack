@@ -1,6 +1,6 @@
 entity = {
-	name = "S_09Hydra02_1_entity"
-	pdxmesh = "S_09Hydra02_1_mesh"
+	name = "GF_nyto_crisis_battelship_02_entity"
+	pdxmesh = "S_09Hydra07_mesh"
 	default_state = "idle"
 	state = { name = "idle" animation = "idle"
 		start_event = { trigger_once = yes sound = { soundeffect = "spaceport_hum_idle" stop_on_state_change = yes } }
@@ -26,10 +26,10 @@ entity = {
 		event = { time = 3.0 node = "explosion_5" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
 		event = { time = 4.0 node = "explosion_2" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
 	}
-	scale = 1.0
 }
 
+
 animation = {
-	name = "S_09Hydra02_1_idle_animation"
-	file = "S_09Hydra02_1_idle.anim"
+	name = "S_09Hydra07_idle_animation"
+	file = "S_09Hydra07_idle.anim"
 }

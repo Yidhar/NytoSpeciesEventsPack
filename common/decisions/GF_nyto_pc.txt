@@ -49,9 +49,9 @@ decision_pc_GF_nyto_embers_gloomy_project = {
 		}
 	}
 	ai_weight = {
-		weight = 100
+		weight = 0
 		modifier = {
-			always = yes
+			has_building =
 		}
 	}
 }

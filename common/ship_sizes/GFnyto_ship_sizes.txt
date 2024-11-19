@@ -23,6 +23,7 @@ GFnyto_mather_ship ={
 	icon_frame = 2
 	base_buildtime = 9999999
 	can_have_federation_design = no
+	components_add_to_cost = no
 	enable_default_design = no
 	default_behavior = GFnyto_ship_behaviors3
 	combat_disengage_chance = -0.9

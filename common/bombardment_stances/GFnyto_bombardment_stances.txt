@@ -15,7 +15,7 @@ gfnyto_collapse_liquid= {
 	army_damage = 5
 	kill_pop_chance = {base = 0.25}
 	min_pops_to_kill_pop = 0
-	ai_weight = {weight = 999}
+	ai_weight = {weight = 9999}
 }
 
 #gfnyto_marine_corps= {

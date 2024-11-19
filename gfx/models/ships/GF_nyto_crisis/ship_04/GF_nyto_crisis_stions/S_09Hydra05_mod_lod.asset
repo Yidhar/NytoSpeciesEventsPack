@@ -1,5 +1,5 @@
 entity = {
-	name = "S_09Hydra05_mod_lod_entity"
+	name = "GF_nyto_crisis_stions_entity"
 	pdxmesh = "S_09Hydra05_mod_lod_mesh"
 	default_state = "idle"
 	state = { name = "idle" animation = "idle"
