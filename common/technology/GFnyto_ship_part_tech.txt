@@ -12,8 +12,8 @@ tech_GFnyto_accelerating_coil1= {
 	modifier = {}
 	prereqfor_desc = {
 		custom = {
-			title = "解锁泰坦舰首区段类型：空母舰首"
-			desc = "可以安装歼星武器,使泰坦能够进行对行星毁灭打击。"
+			title = "tech_GFnyto_accelerating_coil1_custom_title"
+			desc = "tech_GFnyto_accelerating_coil1_custom_desc"
 		}
 	}
 	potential = {

@@ -24,6 +24,8 @@ d_GFnyto_ancient_ruins_zone:0 "远古遗迹群"
 d_GFnyto_ancient_ruins_zone_desc:0 "这些遗迹群相当古老,每次围绕它进行的科考项目都会获得许多前所未闻的奇妙构思和惊人知识。"
  d_GFnyto_Radiation:0 "坍塌辐射污染"
  d_GFnyto_Radiation_desc:0 ""
+ d_GFnyto_tanhua: "昙花种植区"
+ d_GFnyto_tanhua_desc: ""
 
 d_GFnyto_potato_server_zone:0 "土豆服务器"
 d_GFnyto_potato_server_zone_desc:0 "这些由土豆组成的服务器尽管烂,但确实具备服务器应有的功能。"

@@ -80,7 +80,7 @@
 		postatomic_army = {  sequential_name = nyto_POSTATOMICARMYxx_SEQ}
 
 		GF_nyto_armor_train = {  sequential_name = nyto_xxPLANETARTRAIN1_ORD }	
-		GF_nyto_machine_assault_2 = {  sequential_name = nyto_xxPLANETARTRAIN2ORD }
+		GF_nyto_machine_assault_2 = {  sequential_name = nyto_xxPLANETARTRAIN2_ORD }
 		GF_nyto_machine_assault_3 = {  sequential_name = nyto_xxPLANETARTRAIN3_ORD }
 		GF_nyto_white_knight = {  sequential_name = nyto_xxPLANETARTRAIN4_ORD }
 		GF_nyto_war_nuns = {  sequential_name = nyto_xxPLANETARTRAIN5_ORD }

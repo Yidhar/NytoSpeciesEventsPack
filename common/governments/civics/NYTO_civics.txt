@@ -166,7 +166,7 @@ civic_GF_nyoto_armor_train={
 		army_attack_damage_mult = 0.5
 		SHIP_HOME_TERRITORY_FIRE_RATE_MULT = 0.5
 		GF_nyto_stions_HP_nums = 5
-		GF_nyto_stions_weapon_nums =3
+		GF_nyto_stions_weapon_num =3
 
 	}
 	
@@ -185,7 +185,8 @@ civic_Gf_nyto_tanhua_pluse ={
 	}
 	
 	modifier = {
-		leader_age = -20
+		leader_lifespan_add = -20
+		# leader_age = -20
 	}
 
 	random_weight = {

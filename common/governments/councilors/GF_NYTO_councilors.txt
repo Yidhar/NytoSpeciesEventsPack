@@ -1,8 +1,8 @@
 councilor_90wish = {
-    leader_class = { admiral scientist }
+    leader_class = { commander scientist }
     is_leader_possible = {
         OR = {
-            leader_class = admiral
+            leader_class = commander
             leader_class = scientist
         }
     }
@@ -17,10 +17,10 @@ councilor_90wish = {
 }
 councilor_armor_train = {
     leader_class = {
-        governor
+        official
     }
     is_leader_possible = {
-        leader_class = governor
+        leader_class = official
     }
     civic = civic_GF_nyoto_armor_train
     modifier = {

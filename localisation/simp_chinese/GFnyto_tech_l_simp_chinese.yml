@@ -132,6 +132,8 @@ tech_GF_nyto_loser_fallen_empire_0:0 "这个是为了削弱堕落用的。"
 #re武器
  tech_GFnyto_accelerating_coil1:0 "瓦解射线"
  tech_GFnyto_accelerating_coil1_desc:0 "这门歼星炮可以使目标行星坍缩,直到它变为黑洞。"
+ tech_GFnyto_accelerating_coil1_custom_title: "解锁泰坦舰首区段类型：空母舰首"
+ tech_GFnyto_accelerating_coil1_custom_desc: "可以安装歼星武器,使泰坦能够进行对行星毁灭打击。"
  tech_GFnyto_additional_arithmetic_module:0 "附加运算模块"
  tech_GFnyto_additional_arithmetic_module_desc:0 "为舰船战斗提供巨额运算能力。"
  tech_GFnyto_body_armor1:0 "浮动附加装甲MK.1"
