@@ -42,7 +42,7 @@
 	}
 	ruler={
 		gender=female
-		name="失格异构体"
+		name="EMPIRE_DESIGN_NYTO01_RULER"
 		portrait="GFnyto_nyto_Isomer_shadow"
 		texture=0
 		hair=0

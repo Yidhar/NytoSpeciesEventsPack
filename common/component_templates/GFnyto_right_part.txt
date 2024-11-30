@@ -575,7 +575,7 @@ utility_component_template = {
 	sensor_range = 10
 	hyperlane_range = 10
 	friendly_aura = {
-		name = "星空观测"
+		name = "utility_GF_nyto_Deep_space_aura_friendly"
 		system_wide = yes
 		stack_info = {
 			id = "GF_nyto_deep_space_aura"
@@ -586,7 +586,7 @@ utility_component_template = {
 		}
 	}
 	hostile_aura = {
-		name = "远方的凝视"
+		name = "utility_GF_nyto_Deep_space_aura_hostile"
 		system_wide = yes
 		stack_info = {
 			id = "GF_nyto_deep_space_aura2"
@@ -622,7 +622,7 @@ utility_component_template = {
 		ship_engagement_range_mult = 10
 	}
 	friendly_aura = {
-		name = "光明的礼赞"
+		name = "bright_poetry_template_aura_friendly"
 		system_wide = yes
 		stack_info = {
 			id = "GF_nyto_bright_aura"
@@ -634,7 +634,7 @@ utility_component_template = {
 		}
 	}
 	hostile_aura = {
-		name = "光明的深渊"
+		name = "bright_poetry_template_aura_hostile"
 		system_wide = yes
 		stack_info = {
 			id = "GF_nyto_bright_aura"
@@ -690,7 +690,7 @@ utility_component_template = {
 		ship_base_speed_mult = 2
 	}
 	hostile_aura = {
-		name = "绝望"
+		name = "light_thruster_aura_hostile"
 		system_wide = yes
 		stack_info = {
 			id = "light_thruster_aura"
@@ -754,7 +754,7 @@ utility_component_template = {
 	ftl = yes
 	jumpdrive = yes
 	friendly_aura = {
-		name = "信标"
+		name = "GF_nyto_Beacon"
 		system_wide = yes
 		stack_info = {
 			id = "GF_nyto_Beacon_aura"
@@ -821,7 +821,7 @@ utility_component_template = {
 		titan
 	}
 	hostile_aura = {
-		name = "能量潮汐"
+		name = "GF_nyto_godenergy_arua"
 		system_wide = yes
 		stack_info = {
 			id = "GF_nyto_godenergy_aura"
@@ -1277,7 +1277,7 @@ utility_component_template = {
 	component_set = "ship_aura_components"
 
 	friendly_aura = {
-		name = "算力核心"
+		name = "GF_SHIP_AURA_STRIKE_CRAFT_AURA"
 		system_wide = no
 		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
 			id = GF_friendly_command_ship_aura
