@@ -11,7 +11,7 @@ GFnyto_collapse_particle_researcher = {
 	possible = {
 		complex_specialist_job_check_trigger = yes
 		NOT = {
-			is_species_class = eild
+			is_species_class = EILD
 		}
 	}
 	resources = {
