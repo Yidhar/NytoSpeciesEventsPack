@@ -1,7 +1,7 @@
 entity = {
 	name = "battel_ship_cv_entity"
 	pdxmesh = "battel_ship_cv_mesh"
-	scale = 0.2
+	scale = 0.35
 	default_state = "idle"
 	state = { name = "idle"
 		start_event = { node = Engine_Large_01 particle = GFnyto_generic_1_exhaust_circle_long_moving keep_particle = yes trigger_once = yes }
