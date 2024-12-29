@@ -138,27 +138,15 @@ ship_event = {
 	is_triggered_only = yes
 	trigger = {
 		always = yes
-		or = {
-
-			check_modifier_value = { modifier = GF_nyto_stions_weapon_num value != GF_nyto_stions_weapon_nums }
-		}
 	}
 	immediate = {
 		#触发要塞更新触发器
 		fire_on_action = {
 			on_action = on_GF_nyto_stions_update
 			scopes = {
-				from = this
+				from = root
 			}
 		}
-
-		owner ={
-			export_modifier_to_variable = {
-				modifier = GF_nyto_stions_HP_nums
-				variable = GF_nyto_stions_HP_nums
-			}
-		}
-
 		ship_event = {
 			id = gfnytoaction.2001
 			days = 33
@@ -166,13 +154,16 @@ ship_event = {
 	}
 }
 
+#血条回复
 ship_event = {
 	id = gfnytoaction.2002
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
 		exists = from
-		check_modifier_value = { modifier = GF_nyto_stions_HP_nums value != GF_nyto_stions_HP_nums }
+		owner ={
+			check_modifier_value = { modifier = GF_nyto_stions_HP_nums value != from.GF_nyto_stions_HP_nums }
+		}
 	}
 	immediate = {
 		#处于战斗状态的结算+1
@@ -193,7 +184,6 @@ ship_event = {
 				value =  owner.modifier:GF_nyto_stions_HP_nums
 			}
 		}
-
 	}
 }
 
@@ -222,7 +212,7 @@ ship_event = {
 						limit = {
 							is_ship_size = ion_cannon
 						}
-						count = owner.modifier:GF_nyto_stions_weapon_num
+						count <= owner.modifier:GF_nyto_stions_weapon_num
 					}
 				}
 				create_ship = {
@@ -235,40 +225,40 @@ ship_event = {
 }
 
 
-#测试案例
-country_event = {
-	id = gfnytoaction.2003
-	title = "x"
-	hide_window = no
-	is_triggered_only = yes
-	diplomatic = yes
-	custom_gui = boss_hp_test
-	auto_opens = yes
-	major = yes
-	diplomatic_title = "GF_nyto_boss_name"
-	immediate = {
-		random_owned_ship = {
-			limit = {
-				is_ship_size = GFnyto_stions_fortress
-			}
-			save_global_event_target_as = is_GF_nyto_Boss
-			change_variable = {
-				which = GF_nyto_is_boss_hp_mult
-				value = 100
-			}
-			set_disable_at_health = 0.1
-		}
-	}
-	abort_trigger = {
-		not = {
-			exists = event_target:is_GF_nyto_Boss
-		}
-	}
-	after = {
-		if = {
-			limit = {
-				exists = event_target:is_GF_nyto_Boss
-			}
-		}
-	}
-}
+# #测试案例
+# country_event = {
+# 	id = gfnytoaction.2003
+# 	title = "x"
+# 	hide_window = no
+# 	is_triggered_only = yes
+# 	diplomatic = yes
+# 	custom_gui = boss_hp_test
+# 	auto_opens = yes
+# 	major = yes
+# 	diplomatic_title = "GF_nyto_boss_name"
+# 	immediate = {
+# 		random_owned_ship = {
+# 			limit = {
+# 				is_ship_size = GFnyto_stions_fortress
+# 			}
+# 			save_global_event_target_as = is_GF_nyto_Boss
+# 			change_variable = {
+# 				which = GF_nyto_is_boss_hp_mult
+# 				value = 100
+# 			}
+# 			set_disable_at_health = 0.1
+# 		}
+# 	}
+# 	abort_trigger = {
+# 		not = {
+# 			exists = event_target:is_GF_nyto_Boss
+# 		}
+# 	}
+# 	after = {
+# 		if = {
+# 			limit = {
+# 				exists = event_target:is_GF_nyto_Boss
+# 			}
+# 		}
+# 	}
+# }

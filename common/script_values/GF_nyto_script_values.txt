@@ -497,7 +497,7 @@ GF_nyto_get_game_time_month ={
 
 GF_nyto_stions_weapon_nums ={
 	base = 3
-	add = modifier:GF_nyto_stions_weapon_num
+	add = owner.modifier:GF_nyto_stions_weapon_num
 }
 
 GF_nyto_is_boss_limt_hp ={
