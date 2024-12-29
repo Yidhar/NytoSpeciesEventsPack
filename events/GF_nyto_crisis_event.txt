@@ -182,7 +182,25 @@ country_event = {
 	hide_window = no
 	is_triggered_only = yes
 	immediate = {
+		if = {
+			limit = {
+				count_country = {
+					limit = {
+						is_ai = yes
+						is_country_type = default
+					}
+					count > 4
+				}
+			}
+			#多国家路线
+			country_event = {
+				id = GFnytocrisis.10
+				days = 7
+			}
+		}
+		else = {
 
+		}
 	}
 }
 
@@ -427,14 +445,6 @@ event = {
 
 #饥荒 大幅食物减产并在玩家食物赤字阶段获得无敌,解除无敌后赤字越大伤害越高
 
-#神的离去 清楚所有增益buff
-
-#神不在的第一天 不再出现新的人口
-
-#神不在的第二天 人口不会死亡
-
-#神不在的第三天
-
 
 
 #战争寻路
@@ -563,3 +573,57 @@ fleet_event = {
 #命运之轮
 
 #遗迹核心
+
+
+#辉耀核 遗迹国家直接创立
+country_event = {
+	id = GFnytocrisis.20
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		create_country = {
+			name = "GFnytocrisis_country_name"
+			type = Revelation
+			auto_delete = no
+			day_zero_contact = no
+			flag = {
+				icon={
+					category="GFnyto"
+					file="flag_GFnyto_crisis_flags.dds"
+				}
+				background={
+					category="backgrounds"
+					file="00_solid.dds"
+				}
+				colors={
+					"grey"
+					"black"
+					"black"
+					"null"
+				}
+			}
+
+			effect = {
+				export_trigger_value_to_variable = {
+					trigger = count_country
+					parameters = {
+						limit = {
+							is_ai = yes
+							is_country_type = default
+						}
+					}
+					variable = GF_nyto_crisis_goble_country_count
+				}
+				save_global_event_target_as = This_is_GF_nyto_crisis_country
+				set_faction_hostility ={
+					set_hostile = yes
+					set_friendly = no
+					set_neutral = no
+
+				}
+				#OPEN_BORDERS
+				set_hostile = root
+			}
+		}
+	}
+}
