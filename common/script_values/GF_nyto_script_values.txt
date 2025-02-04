@@ -515,3 +515,5 @@ GF_nyto_is_boss_limt_hp_mult ={
 	base = 1
 	add = event_target:is_GF_nyto_Boss.GF_nyto_is_boss_hp_mult
 }
+
+

@@ -199,7 +199,10 @@ country_event = {
 			}
 		}
 		else = {
-
+			country_event = {
+				id =GFnytocrisis.20
+				days = 7
+			}
 		}
 	}
 }
@@ -623,6 +626,11 @@ country_event = {
 				}
 				#OPEN_BORDERS
 				set_hostile = root
+				random_system = {
+					star ={
+						set_owner = event_target:This_is_GF_nyto_crisis_country
+					}
+				}
 			}
 		}
 	}
