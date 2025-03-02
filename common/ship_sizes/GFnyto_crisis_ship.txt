@@ -101,3 +101,56 @@ battleship_revelation ={
 }
 
 #战争虚影
+
+
+
+
+
+#
+Aberrant_Core ={
+    formation_priority = @juggernaut_formation_priority
+    entity = GF_nyto_crisis_df_b_frame_entity
+    max_speed = 200
+    acceleration = 0.2
+    rotation_speed = 0.15
+    max_hitpoints = 246950000
+    collision_radius = 5
+
+    ship_modifier = {
+        ship_shield_add = 45394126
+        ship_armor_add = 1000000
+        ship_shield_hardening_add = 10
+        ships_upkeep_mult = -10
+    }
+    size_multiplier = 24
+    fleet_slot_size = 0
+    section_slots = {
+        "bow" = { locator = part2 }
+        "core" = { locator = part2 }
+        "stern"  = { locator = part2 }
+    }
+    modifier = {
+        ships_upkeep_mult = -10
+    }
+    num_target_locators = 11
+    is_space_station = no
+
+    icon_frame = 5
+    base_buildtime = 1800
+    can_have_federation_design = no
+    enable_default_design = no
+    components_add_to_cost = no
+    default_behavior = GFnyto_ship_behaviors5
+    combat_disengage_chance = 0
+    class = shipclass_military
+    construction_type = starbase_shipyard
+    possible_country = {
+        always = no
+    }
+    can_disable = yes
+    required_component_set = "power_core" #右侧的部件设定,下同
+    required_component_set = "ftl_components"
+    required_component_set = "thruster_components"
+    required_component_set = "sensor_components"
+    is_civilian = no
+}

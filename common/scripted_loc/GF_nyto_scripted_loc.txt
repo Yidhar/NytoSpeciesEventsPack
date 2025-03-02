@@ -310,3 +310,7 @@ defined_text = {
 	name = GF_nyto_boss_has_hp_nums
 	value = value:GF_nyto_is_boss_limt_hp_mult
 }
+defined_text = {
+	name = GF_nyto_armor_req_pows
+	value = value:GF_nyto_armor_req_pow
+}

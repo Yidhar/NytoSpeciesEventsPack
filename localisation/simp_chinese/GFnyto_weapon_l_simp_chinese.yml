@@ -40,6 +40,8 @@ GFnyto_body_armor_L_1:0 "浮动附加装甲MK.1"
 GFnyto_body_armor_L_2:0 "浮动附加装甲MK.2"
 GFnyto_body_armor_L_3:0 "浮动附加装甲MK.3"
 
+ GFnyto_body_armor_buff:0"§B临界坍塌效应§!:§G每块装甲在被击中时都会临时增加\[500*护甲循环\]点船体值§!\n§R在面对过于频繁的火力或者强大的攻击时装甲板会被过载或是直接损坏无法产生效果§!"
+
 GFnyto_accelerating_coil2:0 "浮游炮"
 GFnyto_accelerating_coil1:0 "瓦解射线"
 
@@ -194,7 +196,7 @@ GF_Nyto_X_Track_DESC:0 "口径即是正义,真理只在射程之中"
 GF_Nyto_T_weapon1:0 "厌世者"
 GF_Nyto_T_weapon1_DESC:0 "§R毁灭:§!\n$t$§Y每1£time£有15%的概率造成一次10倍伤害的特殊打击§!"
 GF_Nyto_T_weapon1_modif:0 "§R毁灭:§!\n$t$§Y每1£time£有15%的概率造成一次10倍伤害的特殊打击§!"
- GF_Nyto_T_weapon101:0 "厌世者"
+ GF_Nyto_T_weapon101:0 "§g厌世者§!"
 #T 终末辉光
 GF_Nyto_T_weapon2:0 "终末辉光"
 weapon_type_prism:0 "§R终末§!"

@@ -76,7 +76,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		custom_tooltip = "GFnyto_force_shield_modif3"
-		ship_shield_hardening_add = 0.6
+		ship_shield_hardening_add = 9999999999999
 	}
 	component_set = "GFnyto_force_shield_3"
 	resources = {
@@ -304,7 +304,11 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_hull_add = 1140
+		ship_hull_add = 2280
+	}
+	ship_modifier = {
+		custom_tooltip = "GFnyto_body_armor_buff"
+		GF_nyto_has_armor = 1
 	}
 	component_set = "GFnyto_body_armor_1"
 	resources = {
@@ -331,8 +335,12 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_hull_add = 1860
+		ship_hull_add = 3720
 		#		ship_base_speed_mult = 0.6
+	}
+	ship_modifier = {
+		custom_tooltip = "GFnyto_body_armor_buff"
+		GF_nyto_has_armor = 1
 	}
 	component_set = "GFnyto_body_armor_2"
 	resources = {
@@ -360,8 +368,12 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_hull_add = 2820
+		ship_hull_add = 5640
 		#		ship_base_speed_mult = 0.9
+	}
+	ship_modifier = {
+		custom_tooltip = "GFnyto_body_armor_buff"
+		GF_nyto_has_armor = 1
 	}
 	component_set = "GFnyto_body_armor_3"
 	resources = {
@@ -391,8 +403,12 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_hull_add = 485
+		ship_hull_add = 1070
 		#		ship_base_speed_mult = 0.2
+	}
+	ship_modifier = {
+		custom_tooltip = "GFnyto_body_armor_buff"
+		GF_nyto_has_armor = 1
 	}
 	component_set = "GFnyto_body_armor_1"
 	resources = {
@@ -418,8 +434,12 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_hull_add = 815
+		ship_hull_add = 1630
 		#		ship_base_speed_mult = 0.5
+	}
+	ship_modifier = {
+		custom_tooltip = "GFnyto_body_armor_buff"
+		GF_nyto_has_armor = 1
 	}
 	component_set = "GFnyto_body_armor_2"
 	resources = {
@@ -445,7 +465,11 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_hull_add = 1265
+		ship_hull_add = 2340
+	}
+	ship_modifier = {
+		custom_tooltip = "GFnyto_body_armor_buff"
+		GF_nyto_has_armor = 1
 	}
 	component_set = "GFnyto_body_armor_3"
 	resources = {
@@ -471,7 +495,11 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_hull_add = 190
+		ship_hull_add = 380
+	}
+	ship_modifier = {
+		custom_tooltip = "GFnyto_body_armor_buff"
+		GF_nyto_has_armor = 1
 	}
 	component_set = "GFnyto_body_armor_1"
 	resources = {
@@ -497,7 +525,11 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_hull_add = 310
+		ship_hull_add = 320
+	}
+	ship_modifier = {
+		custom_tooltip = "GFnyto_body_armor_buff"
+		GF_nyto_has_armor = 1
 	}
 	component_set = "GFnyto_body_armor_2"
 	resources = {
@@ -524,7 +556,11 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_hull_add = 470
+		ship_hull_add = 940
+	}
+	ship_modifier = {
+		custom_tooltip = "GFnyto_body_armor_buff"
+		GF_nyto_has_armor = 1
 	}
 	component_set = "GFnyto_body_armor_3"
 	resources = {

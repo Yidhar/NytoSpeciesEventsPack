@@ -160,7 +160,7 @@
 
 GF_nyto_weapons_system ={
 	optimize_memory
-	set_update_modifiers_batch = begin
+	# set_update_modifiers_batch = begin
 	#this = fleet
 	#敌对舰船 FromFromFrom
 	if = {
@@ -390,7 +390,7 @@ GF_nyto_weapons_system ={
 			}
 		}
 	}
-	set_update_modifiers_batch = end
+	# set_update_modifiers_batch = end
 }
 
 #盾舰effect

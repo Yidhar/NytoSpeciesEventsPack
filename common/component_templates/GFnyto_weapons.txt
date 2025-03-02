@@ -27,13 +27,13 @@ strike_craft_component_template = {
 	}
 	cooldown = 10	#冷却
 	range = 500	#射程,指舰载机的本身射程
-	engagement_range = 400
+	engagement_range = 1000
 	accuracy = 1
 	health = 75	#舰载机本身的结构血量
 	armor = 75	#装甲
 	shield = 20	#护盾
 	tracking = 1
-	speed = 10	#舰载机速度
+	speed = 1000	#舰载机速度
 	rotation_speed = 0.1	#转弯速度
 	acceleration = 1	#加速度
 	evasion = 0	#闪避
@@ -249,7 +249,22 @@ weapon_component_template = {
 	}
 	ship_modifier = {
 		custom_tooltip = "GF_Nyto_T_weapon2_modif"
+		GF_Nyto_T_weapon2_num = 1
 	}
+	triggered_ship_modifier = {
+		potential = {
+			is_in_combat = yes
+		}
+		weapon_type_prism_weapon_damage_mult = 1
+		mult = value:GF_Nyto_T_weapon2_damage_value
+	}
+	# triggered_ship_design_modifier = {
+	# 	potential = {
+	# 		always = yes
+	# 	}
+	# 	weapon_type_prism_weapon_damage_mult = 9999
+	# 	ship_weapon_damage = 99
+	# }
 	resources = {
 		category = ship_components
 		cost = {
@@ -263,9 +278,9 @@ weapon_component_template = {
 			GF_nyto_collapse_liquid = 3
 		}
 		upkeep = {
-			energy = 0.1
-			GF_nyto_collapse_liquid = 0.1
-			multiplier = value:GF_Nyto_T_weapon2_pow
+			energy = 0.01
+			GF_nyto_collapse_liquid = 0.01
+			multiplier = value:GF_Nyto_T_weapon2_damage_value
 		}
 	}
 	ai_weight = {
@@ -958,7 +973,7 @@ strike_craft_component_template = {
 	#伤害
 	cooldown = 2	#冷却
 	range = 20	#射程,指舰载机的本身射程
-	engagement_range = 160
+	engagement_range = 1600
 	attack_range = 140
 	accuracy = 1
 	health = 200	#舰载机本身的结构血量
@@ -1023,7 +1038,7 @@ strike_craft_component_template = {
 	#伤害
 	cooldown = 1	#冷却
 	range = 40	#射程,指舰载机的本身射程
-	engagement_range = 220
+	engagement_range = 1000
 	accuracy = 1
 	health = 200	#舰载机本身的结构血量
 	armor = 100	#装甲

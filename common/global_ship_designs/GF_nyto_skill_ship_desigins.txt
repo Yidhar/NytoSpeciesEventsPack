@@ -16,3 +16,19 @@ ship_design = {
     required_component = GFnyto_additional_arithmetic_module4
     #required_component = light_thruster
 }
+
+ship_design = {
+    name = "GF_nyto_skill_ship_2"
+    ship_size = GF_nyto_skill_ship_noftl
+    section = {
+        template = GF_nyto_skill_ship_template
+        slot = core
+        component = {
+            slot = T01
+            template = GF_Nyto_T_weapon101
+        }
+    }
+    required_component = GFnyto_power_lv2_6
+    required_component = SENSOR_4
+    required_component = GFnyto_additional_arithmetic_module4
+}

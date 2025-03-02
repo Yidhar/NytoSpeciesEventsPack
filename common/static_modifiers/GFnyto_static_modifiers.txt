@@ -204,7 +204,12 @@ GF_nyoto_shield_ship ={
 }
 #护盾恢复
 GF_nyto_shield_ship_regen ={
-	ship_shield_regen_add_static = 175200
+	ship_shield_regen_add_static = 75200
+
+}
+#护盾硬化
+GF_nyto_ship_shield_hardening ={
+	ship_shield_hardening_add = -1
 }
 #沉默
 GF_nyto_p_weapon_system={

@@ -131,6 +131,8 @@ country_event = {
 	option = {name = UNDERSTOOD}
 }
 
+
+
 #更新堡垒强度
 ship_event = {
 	id = gfnytoaction.2001
@@ -224,41 +226,22 @@ ship_event = {
 	}
 }
 
+###40xxxx 受击触发的玩家舰船配件####
 
-# #测试案例
-# country_event = {
-# 	id = gfnytoaction.2003
-# 	title = "x"
-# 	hide_window = no
-# 	is_triggered_only = yes
-# 	diplomatic = yes
-# 	custom_gui = boss_hp_test
-# 	auto_opens = yes
-# 	major = yes
-# 	diplomatic_title = "GF_nyto_boss_name"
-# 	immediate = {
-# 		random_owned_ship = {
-# 			limit = {
-# 				is_ship_size = GFnyto_stions_fortress
-# 			}
-# 			save_global_event_target_as = is_GF_nyto_Boss
-# 			change_variable = {
-# 				which = GF_nyto_is_boss_hp_mult
-# 				value = 100
-# 			}
-# 			set_disable_at_health = 0.1
-# 		}
-# 	}
-# 	abort_trigger = {
-# 		not = {
-# 			exists = event_target:is_GF_nyto_Boss
-# 		}
-# 	}
-# 	after = {
-# 		if = {
-# 			limit = {
-# 				exists = event_target:is_GF_nyto_Boss
-# 			}
-# 		}
-# 	}
-# }
+ship_event = {
+	id = gfnytoaction.401
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		check_modifier_value = {
+			modifier = GF_nyto_has_armor
+			value > 0
+		}
+		has_hp < 800000000
+	}
+	immediate = {
+
+		from ={ remove_ship_flag = GF_nyto_damage_taken_f_cd }
+		reduce_hp = value:GF_nyto_armor_req_pow
+	}
+}

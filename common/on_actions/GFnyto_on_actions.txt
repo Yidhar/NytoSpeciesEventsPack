@@ -277,14 +277,20 @@ on_GF_nyto_stions_update ={
 	}
 }
 
+# This = damaged ship
+# From = attacker ship
 on_damage_taken = {
 	events = {
 		GF_nyto_damage_taken_f.0
 	}
 }
 
+# This = damaged ship
+# From = attacker ship
 on_damage_taken_f ={
 	events = {
 		grand_archive.10096
+		gfnytoaction.401
+		GF_nyto_damage_taken_f.1
 	}
 }

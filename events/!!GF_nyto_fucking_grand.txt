@@ -40,15 +40,24 @@ ship_event = {
     id = GF_nyto_damage_taken_f.0
     hide_window = yes
     is_triggered_only = yes
-    trigger = {  from ={  not = {   has_ship_flag = cd } }  }
+    trigger = {  from ={  not = {   has_ship_flag = GF_nyto_damage_taken_f_cd } }  }
     immediate = {
-        from ={ set_ship_flag = cd }
+        from ={ set_timed_ship_flag = { flag = GF_nyto_damage_taken_f_cd days = 1 } }
+        set_update_modifiers_batch = begin
         fire_on_action = {
             on_action = on_damage_taken_f
             scopes = {
                 from = from
             }
         }
+        set_update_modifiers_batch = end
     }
 }
-
+ship_event = {
+    id = GF_nyto_damage_taken_f.1
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        remove_ship_flag = GF_nyto_damage_taken_f_cd
+    }
+}

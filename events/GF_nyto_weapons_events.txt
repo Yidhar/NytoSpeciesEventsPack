@@ -79,31 +79,31 @@ fleet_event = {
 						is_disabled = no
 					}
 					set_location = root
-					fleet_event = {
-						id	= gf_nyto_weapons.30001
-						days = 3
-					}
+					# fleet_event = {
+					# 	id	= gf_nyto_weapons.30001
+					# 	days = 3
+					# }
 				}
 			}
 		}
 	}
 }
 
-fleet_event = {
-	id = gf_nyto_weapons.30001
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		exists = this
-	}
-	immediate = {
-		set_location = {
-			target = this
-			distance = 1600
-			angle = random
-		}
-	}
-}
+# fleet_event = {
+# 	id = gf_nyto_weapons.30001
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		exists = this
+# 	}
+# 	immediate = {
+# 		set_location = {
+# 			target = this
+# 			distance = 1600
+# 			angle = random
+# 		}
+# 	}
+# }
 
 #from ship
 #通用停用检测
@@ -122,40 +122,20 @@ ship_event = {
 				set_disable_at_health = -1
 				set_disabled = no
 			}
-			# GF_nyto_stions_fortres_super ={
-			# 	if = {
-			# 		limit = {
-			# 			check_variable = {
-			# 				which = GF_nyto_stions_fortes_has_hp
-			# 				value > 0
-			# 			}
-			# 		}
-			# 		repair_ship = yes
-			# 		set_disable_at_health = -1
-			# 		set_disabled = no
-			# 	} else_if = {
-			# 		limit = {
-			# 			check_variable = {
-			# 				which = GF_nyto_stions_fortes_has_hp
-			# 				value < 0
-			# 			}
-			# 		}
-			# 		repair_ship = yes
-			# 		set_disabled = no
-			# 	}
-			# 	repair_ship = yes
-			# 	set_disabled = no
-			# }
+			GF_nyto_fleet_has_shiedl_ship ={
+				repair_ship = yes
+				set_disabled = no
+			}
 		}
 		if = {
 			limit = {
-				is_ship = event_target:is_GF_nyto_Boss
+				is_ship_size = GFnyto_stions_fortress
 			}
-			repair_ship = yes
-			set_disabled = no
-			subtract_variable = {
-				which = GF_nyto_is_boss_hp_mult
-				value = 1
+			fire_on_action = {
+				on_action = on_GF_nyto_stions_update
+				scopes = {
+					from = root
+				}
 			}
 			if = {
 				limit = {
@@ -167,6 +147,12 @@ ship_event = {
 				}
 				set_disable_at_health = -1
 				set_disabled = no
+			}
+			repair_ship = yes
+			set_disabled = no
+			subtract_variable = {
+				which = GF_nyto_is_boss_hp_mult
+				value = 1
 			}
 		}
 	}
@@ -208,6 +194,10 @@ fleet_event = {
 		if = { limit = { is_in_combat = yes }
 			set_update_modifiers_batch = begin
 			every_owned_ship = {
+				set_variable = {
+					which = added_pops
+					value = value:GF_nyto_armor_req_pow
+				}
 				set_variable = {
 					which = GF_fleet_Electronic_pwlv
 					value = fleet.GF_fleet_Electronic_pwlv
@@ -275,31 +265,6 @@ fleet_event = {
 					}
 					add_modifier = { modifier = GF_nyto_l_weapon2_soon 	multiplier = GF_nyto_son_frt_up }
 				} # 圣歌风琴
-				if = {
-					limit = { has_ship_flag = GF_Nyto_T_weapon2_flag }
-					set_variable = { which = prism_weapon_speed value = 5 } #基础间隔
-					export_modifier_to_variable = {
-						modifier = weapon_type_energy_weapon_fire_rate_mult
-						variable = prism_weapon_speed_mult
-					} #攻速变量
-					change_variable = { which = prism_weapon_speed_mult value = modifier:ship_fire_rate_mult } #攻速变量
-					change_variable = { which = prism_weapon_speed_mult value = 1 }
-					divide_variable = { which = prism_weapon_speed value = prism_weapon_speed_mult }
-					round_variable =prism_weapon_speed
-					if = { limit = { check_variable = { which = prism_weapon_speed value < 1 }  } set_variable = {  which = prism_weapon_speed  value = 1  } 	}
-					if = {
-						limit = { 
-							check_variable_arithmetic = {
-								modulo = prism_weapon_speed
-								which = GF_nyto_combat_days
-								value = 0
-							}
-						}
-						change_variable = { which = GF_nyto_t_fire_num value = 1 }
-						remove_modifier = GF_nyto_T_weapon2_damgabuff
-						add_modifier = { modifier = GF_nyto_T_weapon2_damgabuff multiplier = value:GF_Nyto_T_weapon2_pow  days = -1 }
-					}
-				}#终末辉光
 				 if = {
 				 	limit = {
 				 		fleet = { has_fleet_flag = GF_nyto_shield_lv3 }
@@ -391,11 +356,22 @@ fleet_event = {
 					export_modifier_to_variable = { modifier = ship_shield_mult 	variable = GF_shield_mult }
 					set_variable = { which = GF_shield_regen_mult value = GF_shield_mult }
 					multiply_variable = { which = GF_shield_regen_mult value = GF_shield_mult }
-					fleet = { 
+					# export_modifier_to_variable = { modifier = ship_shield_hardening_add variable = GF_nyto_ship_shield_hardening }
+					if = {
+						limit = {
+							check_variable = {
+								which = GF_nyto_combat_days
+								value = 1
+							}
+						}
+
+					}
+					fleet = {
+						# set_timed_fleet_flag = { flag = GF_nyto_has_shiedl_ship days = 2 }
 						remove_modifier = GF_nyoto_shield_ship
 						remove_modifier =GF_nyto_shield_ship_regen
 						add_modifier = { modifier = GF_nyoto_shield_ship multiplier = prev.GF_shield_mult days = 2 } 
-						add_modifier = { modifier = GF_nyto_shield_ship_regen multiplier = prev.GF_shield_regen_mult days = 2 }
+						# add_modifier = { modifier = GF_nyto_shield_ship_regen multiplier = prev.GF_shield_regen_mult days = 2 }
 					}
 				}#立场支援舰
 				if = {
@@ -506,10 +482,41 @@ ship_event = {
 		fleet = {
 			while = {
 				count = root.GF_Nyto_T_weapon1_num
+				if = {
+					limit = {
+						root ={
+							or = {
+								is_ship_size = GFnyto_stions_fortress
+								is_ship_size = ion_cannon
+							}
+
+						}
+					}
+					create_ship = {
+						design = GF_nyto_skill_ship_2
+						effect = {
+							set_name = "GF_nyto_skill_ship_object"
+							ship_event = {
+								id = gf_nyto_weapons.2002
+								days = 1
+							}
+							add_modifier = {
+								modifier = GF_nyto_t_weapon1_damage
+								mult = root.modifier:weapon_type_kinetic_weapon_damage_mult
+								days = -1
+							}
+							add_modifier = {
+								modifier = GF_nyto_t_weapon1_speed
+								mult = root.modifier:ship_fire_rate_mult
+							}
+						}
+					}
+				}
 				create_ship = {
 					design = GF_nyto_skill_ship
 					effect = {
 						set_name = "GF_nyto_skill_ship_object"
+
 						ship_event = {
 							id = gf_nyto_weapons.2002
 							days = 1

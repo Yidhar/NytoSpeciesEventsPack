@@ -411,7 +411,7 @@ utility_component_template = {
 		"tech_GFnyto_power_lv2"
 	}
 	component_set = "power_core"
-	size_restriction = {  GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship GFnyto_mobile_city
+	size_restriction = {  GFnyto_Command_ship GFnyto_shiled_ship GF_nyto_super_battelship GFnyto_mobile_city ic
 		 }
 	#	upgrades_to = "BATTLESHIP_DARK_MATTER_REACTOR"
 	class_restriction = {
@@ -449,7 +449,7 @@ utility_component_template = {
 		"tech_GFnyto_power_lv2"
 	}
 	component_set = "power_core"
-	size_restriction = {GFnyto_stions_fortress GFnyto_mobile_city}
+	size_restriction = {GFnyto_stions_fortress GFnyto_mobile_city ion_cannon}
 	#	upgrades_to = "BATTLESHIP_DARK_MATTER_REACTOR"
 	class_restriction = {
 		shipclass_military
