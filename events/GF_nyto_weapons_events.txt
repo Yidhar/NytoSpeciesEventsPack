@@ -195,10 +195,6 @@ fleet_event = {
 			set_update_modifiers_batch = begin
 			every_owned_ship = {
 				set_variable = {
-					which = added_pops
-					value = value:GF_nyto_armor_req_pow
-				}
-				set_variable = {
 					which = GF_fleet_Electronic_pwlv
 					value = fleet.GF_fleet_Electronic_pwlv
 				}
