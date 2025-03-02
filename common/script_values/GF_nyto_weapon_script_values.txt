@@ -54,7 +54,7 @@ GF_Nyto_T_weapon2_damage_value = {
 }
 
 GF_nyto_armor_req_pow = {
-    base = 500
+    base = 50
     mult = modifier:GF_nyto_has_armor
     mult = modifier:ship_armor_mult
     mult = -1
