@@ -1,8 +1,13 @@
 #坍缩粒子研究人员
 GFnyto_collapse_particle_researcher = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_job_GFnyto_collapse_particle_researcher
+	swappable_data = {
+		default = {
+			icon = GFnyto_collapse_particle_researcher
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_job_GFnyto_collapse_particle_researcher
+		}
+	}
 	possible_pre_triggers = {
 		has_owner = yes
 		is_being_purged = no
@@ -121,8 +126,13 @@ GFnyto_collapse_particle_researcher = {
 #白骑士
 GFnyto_white_knight = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_precinct_house
+	swappable_data = {
+		default = {
+			icon = GFnyto_white_knight
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_precinct_house
+		}
+	}
 	possible_pre_triggers = {
 		has_owner = yes
 		is_being_purged = no
@@ -131,12 +141,10 @@ GFnyto_white_knight = {
 	possible = {
 		complex_specialist_job_check_trigger = yes
 	}
-	pop_modifier = {
-		pop_defense_armies_add = 1
-	}
 	planet_modifier = {
 		planet_crime_add = -30
 		planet_stability_add = 5
+		defense_armies_add = 1
 	}
 	resources = {
 		category = planet_jobs
@@ -167,8 +175,13 @@ GFnyto_white_knight = {
 #相位技师
 GFnyto_phase_technician = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_power_plant
+	swappable_data = {
+		default = {
+			icon = GFnyto_phase_technician
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_power_plant
+		}
+	}
 	possible_pre_triggers = {
 		has_owner = yes
 		is_being_purged = no
@@ -195,8 +208,13 @@ GFnyto_phase_technician = {
 #科技牧师
 GFnyto_technology_minister = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_research_lab_1
+	swappable_data = {
+		default = {
+			icon = GFnyto_technology_minister
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_research_lab_1
+		}
+	}
 	possible_pre_triggers = {
 		has_owner = yes
 		is_being_purged = no
@@ -225,8 +243,13 @@ GFnyto_technology_minister = {
 #开拓者
 GFnyto_explorer = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_colony_shelter
+	swappable_data = {
+		default = {
+			icon = GFnyto_explorer
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_colony_shelter
+		}
+	}
 	possible_pre_triggers = {
 		has_owner = yes
 		is_being_purged = no
@@ -255,8 +278,13 @@ GFnyto_explorer = {
 #算法工程师
 GFnyto_algorithm = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_GFnyto_algorithm
+	swappable_data = {
+		default = {
+			icon = GFnyto_algorithm
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_GFnyto_algorithm
+		}
+	}
 	possible_pre_triggers = {
 		has_owner = yes
 		is_being_purged = no
@@ -305,8 +333,13 @@ GFnyto_algorithm = {
 #架构师
 GFnyto_framework = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_GFnytp_framework_core
+	swappable_data = {
+		default = {
+			icon = GFnyto_framework
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_GFnytp_framework_core
+		}
+	}
 	possible_pre_triggers = {
 		has_owner = yes
 		is_being_purged = no
@@ -352,8 +385,13 @@ GFnyto_framework = {
 #逆向坍塌操作员
 GFnyto_collapse_particle_rar = {
 	category = worker
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_GFnytp_framework_core
+	swappable_data = {
+		default = {
+			icon = GFnyto_collapse_particle_rar
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_GFnytp_framework_core
+		}
+	}
 	possible_pre_triggers = {
 		has_owner = yes
 		is_being_purged = no
@@ -397,8 +435,13 @@ GFnyto_collapse_particle_rar = {
 #物质压缩员
 GFnyto_collapse_particle_zip = {
 	category = worker
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_GFnytp_framework_core
+	swappable_data = {
+		default = {
+			icon = GFnyto_collapse_particle_zip
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_GFnytp_framework_core
+		}
+	}
 	possible_pre_triggers = {
 		has_owner = yes
 		is_being_purged = no
@@ -448,7 +491,12 @@ GFnyto_collapse_particle_zip = {
 #昙花种植者
 GFnyto_Epiphyllum_job = {
 	category = worker
-	condition_string = SPECIALIST_JOB_TRIGGER
+	swappable_data = {
+		default = {
+			icon = GFnyto_Epiphyllum_job
+			condition_string = SPECIALIST_JOB_TRIGGER
+		}
+	}
 	possible_pre_triggers = {
 		has_owner = yes
 		is_being_purged = no
@@ -501,7 +549,6 @@ overlord_Epiphyllum = {
 	category = worker
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	clothes_texture_index = 1
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no
