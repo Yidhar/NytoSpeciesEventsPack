@@ -317,7 +317,7 @@ leader_event = {
 	}
 	immediate = {
 		export_trigger_value_to_variable = {
-			trigger = has_skill
+			trigger = has_total_skill
 			variable = GFnyto_leader_lv
 		}
 	}
@@ -631,7 +631,7 @@ country_event = {
 		}
 		divide_variable = {
 			which = kill_pops_Epiphyllum
-			value = trigger:num_pops
+			value = value:GF_nyto_num_pops
 		}
 		multiply_variable ={
 			which = kill_pops_Epiphyllum
@@ -677,22 +677,18 @@ planet_event = {
 				}
 			}
 			save_event_target_as = GFnyto_random_plante
-			every_owned_pop = {
-				limit = {
-					has_job = GFnyto_Epiphyllum_job
-				}
-				owner ={
+			every_owned_pop_job = {
+				limit = { has_job_type = GFnyto_Epiphyllum_job }
+				prev.owner = {
 					change_variable = {
 						which = kill_pops_Epiphyllum
-						value = 1
+						value = prev.value:GF_nyto_num_pops_assigned_to_job
 					}
 				}
-				kill_pop = yes
+				kill_assigned_pop_amount = { percentage = 1 }
 			}
 		}
-		
 	}
-
 }
 
 # planet_event = {
@@ -732,21 +728,17 @@ country_event = {
 			limit = {
 				has_building = building_GFnyto_Elids
 			}
-			every_owned_pop = {
-				limit ={
+			every_owned_pop_group = {
+				limit = {
 					NOR = {
 						is_species_class = nyto
-						is_species_class = eild
+						is_species_class = EILD
 					}
 				}
 				random_list = {
-					50 ={
-						change_species = event_target:GFnyto_ELID_infected
-					}
-					50={
-						kill_pop = yes
-					}
-				}				
+					50 = { change_species = event_target:GFnyto_ELID_infected }
+					50 = { kill_all_pop = yes }
+				}
 			}
 		}
 	}

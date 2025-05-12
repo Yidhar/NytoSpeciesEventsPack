@@ -89,20 +89,16 @@ GF_nyto_drp_modifer ={
 	complex_trigger_modifier = {
 		trigger_scope = planet
 		potential = { planet ={ not = { is_variable_set = PR_factor_plnt_MAN_job_$JOB$ } } }
-		trigger = count_owned_pop
-		parameters = {
-			limit ={
-				has_job = $JOB$
-			}
-		}
+		trigger = num_assigned_jobs
+		parameters = { job = $JOB$ }
 		mode = mult
-		mult = $jobsup|0.15$
+		mult = $jobsup|0.0015$
 	}]
 	modifier = {
-		planet={
+		planet = {
 			is_variable_set = PR_factor_plnt_MAN_job_$JOB$
-			any_owned_pop = {
-				has_job = job_PR_job_CONVERT_$JOB$
+			any_owned_pop_job = {
+				has_job_type = job_PR_job_CONVERT_$JOB$
 			}
 		}
 		mult = value:GF_nyto_PR_var_drp_count|job_count|planet.PR_factor_plnt_MAN_job_$JOB$|jobsup|$jobsup$|
@@ -199,7 +195,8 @@ Gfnyto_planet_wrlv_proudcu2={
 }
 Gfnyto_planet_wrlv_proudcu_pops ={
 	base = 0
-	add = trigger:num_pops
+	add = trigger:pop_amount
+	divide = 100
 	mult = 0.01
 	add = 1
 }
@@ -340,27 +337,28 @@ GFnyto_plante_wrlv_contaminate ={
 		trigger = num_assigned_jobs
 		parameters = { job = GFnyto_Epiphyllum_job }
 		mode = add
-		mult = -0.25
+		mult = -0.0025
 	}
 	complex_trigger_modifier = {
 		trigger_scope = planet
 		trigger = num_assigned_jobs
 		parameters = { job = GFnyto_collapse_particle_rar }
 		mode = add
-		mult = 2
+		mult = 0.02
 	}
 	complex_trigger_modifier = {
 		trigger_scope = planet
 		trigger = num_assigned_jobs
 		parameters = { job = GFnyto_collapse_particle_zip }
 		mode = add
-		mult = 2
+		mult = 0.02
 	}
 	complex_trigger_modifier = {
 		trigger_scope = planet
 		trigger = num_assigned_jobs
 		parameters = { job = GFnyto_collapse_particle_researcher }
 		mode = add
+		mult = 0.01
 	}
 	#####
 
@@ -428,7 +426,7 @@ Epiphyllum_flower_period ={
 		trigger = num_assigned_jobs
 		parameters = { job = GFnyto_Epiphyllum_job }
 		mode = add
-		mult = 5
+		mult = 0.05
 	}
 }
 
@@ -500,6 +498,21 @@ GF_nyto_is_boss_limt_hp ={
 GF_nyto_is_boss_limt_hp_mult ={
 	base = 1
 	add = event_target:is_GF_nyto_Boss.GF_nyto_is_boss_hp_mult
+}
+GF_nyto_num_pops_assigned_to_job = {
+	base = 0
+	add = trigger:num_pops_assigned_to_job
+	mult = 0.01
+}
+GF_nyto_num_pops = {
+	base = 0
+	add = trigger:num_pops
+	mult = 0.01
+}
+GF_nyto_count_owned_pop = {
+	base = 0
+	add = trigger:count_owned_pop_amount
+	mult = 0.01
 }
 
 

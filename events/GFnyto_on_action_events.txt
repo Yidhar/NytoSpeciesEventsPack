@@ -40,7 +40,7 @@ planet_event = {
 			remove_modifier = "dangerous_wildlife"
 			set_planet_flag = gfnyto_collapse_liquid_nuked
 			set_planet_flag = armageddon_nuked
-			every_owned_pop={kill_pop=yes}
+			every_owned_pop_group = { kill_all_pop = yes }
 
 		}
 		set_update_modifiers_batch = end
@@ -110,9 +110,7 @@ planet_event = {
 				}
 			}
 			set_update_modifiers_batch = begin
-			every_owned_pop = {
-				kill_pop = yes
-			}
+			every_owned_pop_group = { kill_all_pop = yes }
 			destroy_colony = yes
 			set_update_modifiers_batch = end
 		}

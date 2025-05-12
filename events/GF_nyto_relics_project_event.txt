@@ -145,7 +145,7 @@ country_event = {
 			tech = tech_GF_nyto_robomodding_points_1
 			progress = 0.1
 		}
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				is_same_species = root
 				OR = {
@@ -157,9 +157,7 @@ country_event = {
 				species = this
 				remove_trait = trait_GF_nyto_ogas_agreement
 				add_trait = trait_GF_nyto_ogas_agreement_plus
-				effect = {
-					save_event_target_as = agreement_plus_specoes
-				}
+				effect = { save_event_target_as = agreement_plus_specoes }
 			}
 		}
 		change_dominant_species = {

@@ -88,8 +88,8 @@ operation_nyto_pop2 = {
 			is_species_class = nyto
 		}
 		target ={
-			any_owned_pop = {
-				has_pop_flag = operation_nyto_pop
+			any_owned_pop_group = {
+				has_pop_group_flag = operation_nyto_pop
 			}
 		}
 	}

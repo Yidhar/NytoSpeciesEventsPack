@@ -169,7 +169,7 @@ planet_event = {
 
 		}
 		if = { limit = { from = { NOT = { has_civic = civic_GF_nyto_Vengeance_Crusade } } }
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					not = {
 						is_species_class = nyto
@@ -183,7 +183,7 @@ planet_event = {
 		}
 		if = { limit = { from = {  has_civic = civic_GF_nyto_Vengeance_Crusade  } }
 		#planet
-			every_owned_pop = {
+			every_owned_pop_group = {
 				from ={
 					add_resource = {
 						unity = 100

@@ -133,7 +133,7 @@ random_6_leader = {
 			NOT = {
 				has_leader_flag = GFnyot_leader_select
 			}
-			has_skill < 10
+			has_total_skill < 10
 			leader_class = $leader_class$
 		}
 		set_leader_flag = GFnyot_leader_select
@@ -144,7 +144,7 @@ random_6_leader = {
 			NOT = {
 				has_leader_flag = GFnyot_leader_select
 			}
-			has_skill < 10
+			has_total_skill < 10
 			leader_class = $leader_class$
 		}
 		set_leader_flag = GFnyot_leader_select
@@ -155,7 +155,7 @@ random_6_leader = {
 			NOT = {
 				has_leader_flag = GFnyot_leader_select
 			}
-			has_skill < 10
+			has_total_skill < 10
 			leader_class = $leader_class$
 		}
 		set_leader_flag = GFnyot_leader_select
@@ -166,7 +166,7 @@ random_6_leader = {
 			NOT = {
 				has_leader_flag = GFnyot_leader_select
 			}
-			has_skill < 10
+			has_total_skill < 10
 			leader_class = $leader_class$
 		}
 		set_leader_flag = GFnyot_leader_select
@@ -177,7 +177,7 @@ random_6_leader = {
 			NOT = {
 				has_leader_flag = GFnyot_leader_select
 			}
-			has_skill < 10
+			has_total_skill < 10
 			leader_class = $leader_class$
 		}
 		set_leader_flag = GFnyot_leader_select
@@ -188,7 +188,7 @@ random_6_leader = {
 			NOT = {
 				has_leader_flag = GFnyot_leader_select
 			}
-			has_skill < 10
+			has_total_skill < 10
 			leader_class = $leader_class$
 		}
 		set_leader_flag = GFnyot_leader_select

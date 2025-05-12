@@ -459,24 +459,18 @@ country_event = {
 	}
 	immediate = {
 		every_subject = {
-			every_owned_pop = {
-				limit = {
-					has_job = overlord_Epiphyllum
-				}
+			every_owned_pop_job = {
+				limit = { has_job_type = overlord_Epiphyllum }
 				if = {
-					limit = {
-						root = {
-							has_civic = civic_Gf_nyto_tanhua_pluse
+					limit = { root = { has_civic = civic_Gf_nyto_tanhua_pluse } }
+					root = {
+						change_variable = {
+							which = kill_pops_Epiphyllum
+							value = value:GF_nyto_num_pops_assigned_to_job
 						}
+						set_country_flag = kill_pops_Epiphyllum_true
 					}
-					kill_pop = yes
-				}
-				root = {
-					change_variable = {
-						which = kill_pops_Epiphyllum
-						value = 1
-					}
-					set_country_flag = kill_pops_Epiphyllum_true
+					kill_assigned_pop_amount = { percentage = 1 }
 				}
 			}
 		}
@@ -657,24 +651,18 @@ country_event = {
 	immediate = {
 		set_update_modifiers_batch = begin
 		every_subject = {
-			every_owned_pop = {
-				limit = {
-					has_job = overlord_Epiphyllum
-				}
+			every_owned_pop_job = {
+				limit = { has_job_type = overlord_Epiphyllum }
 				if = {
-					limit = {
-						root = {
-							has_civic = civic_Gf_nyto_tanhua_pluse
+					limit = { root = { has_civic = civic_Gf_nyto_tanhua_pluse } }
+					root = {
+						change_variable = {
+							which = kill_pops_Epiphyllum
+							value = value:GF_nyto_num_pops_assigned_to_job
 						}
+						set_country_flag = kill_pops_Epiphyllum_true
 					}
-					kill_pop = yes
-				}
-				root = {
-					change_variable = {
-						which = kill_pops_Epiphyllum
-						value = 1
-					}
-					set_country_flag = kill_pops_Epiphyllum_true
+					kill_assigned_pop_amount = { percentage = 1 }
 				}
 			}
 		}
@@ -1550,9 +1538,7 @@ event = {
 	immediate = {
 		fromfrom = {
 			destroy_colony = yes
-			every_owned_pop = {
-				kill_pop = yes
-			}
+			every_owned_pop_group = { kill_all_pop = yes }
 			set_planet_name = "寄了"
 		}
 	}
